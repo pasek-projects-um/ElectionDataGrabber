@@ -1,0 +1,39 @@
+name: Nightly state source census
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * *'
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        state: [MI, OH]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: bootstrap-mi-ingest
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install
+        run: pip install -e '.[dev]'
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Run state census
+        run: python scripts/state_census.py --state ${{ matrix.state }} --output artifacts/${{ matrix.state }}
+
+      - name: Upload census artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: census-${{ matrix.state }}
+          path: artifacts/${{ matrix.state }}
+          if-no-files-found: error
