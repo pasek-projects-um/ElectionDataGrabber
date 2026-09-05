@@ -1,0 +1,25 @@
+name: National local reporting-source sweep
+on:
+  workflow_dispatch:
+  push:
+    branches: [national-local-reporting-source-census]
+    paths:
+      - "scripts/sweep_national_local_reporting_sources.py"
+      - ".github/workflows/national-local-source-sweep.yml"
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - run: python scripts/validate_national_source_registry.py
+      - run: python scripts/sweep_national_local_reporting_sources.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: national-local-reporting-source-sweep
+          path: audit/
