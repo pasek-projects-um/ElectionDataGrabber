@@ -1,0 +1,6 @@
+source,scope,shape,granularity,archive_depth,portability_class,notes
+Connecticut Election History,statewide,"interactive contest pages + CSV downloads","town/contest","1787-present",B,"Strong canonical historical layer; recent contest pages expose downloadable Results CSV."
+Connecticut Elections Management System,statewide,"electronic election results","town","2018-present",B,"Primary recent statewide results backbone."
+Statement of Vote,statewide,"official PDF statement of vote","town/state district","1922-present",B,"Official printed/tabular reconciliation source."
+Town voting-district filings,town,"statutorily required tabular official returns","voting district","current regular state elections",C,"For towns divided into voting districts, town clerk files district candidate totals, registry list and checked-as-voted counts with SOTS."
+Town sample ballots,statewide index,"town ballot PDFs","town/district","current elections",B,"Useful authoritative ballot-order/contest-layout source; do not infer order from results artifacts."
