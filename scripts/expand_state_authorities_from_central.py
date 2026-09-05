@@ -10,6 +10,7 @@ from urllib.parse import urljoin, urlparse
 
 import httpx
 from bs4 import BeautifulSoup
+from election_data_grabber.state_directory_profiles import structured_candidates, alaska_state_result_candidates
 
 RESULT_RE = re.compile(r"(election\s+results?|unofficial\s+results?|official\s+results?|election\s+night|statement\s+of\s+votes?|canvass|precinct\s+results?)", re.I)
 AUTH_RE = re.compile(r"(election|clerk|registrar|board|county|parish|town|city|borough|municipal|ward|district)", re.I)
@@ -78,6 +79,9 @@ def crawl_state(row: dict[str, str], max_candidates: int) -> list[dict]:
                 continue
             if AUTH_RE.search(label + " " + target):
                 candidates.append(target)
+        candidates.extend(structured_candidates(state, r.content, str(r.url)))
+        if state == "AK":
+            candidates.extend(alaska_state_result_candidates(r.content, str(r.url)))
         candidates = list(dict.fromkeys(candidates))[:max_candidates]
         out.append({"state": state, "central_authority_url": str(r.url), "authority_url": str(r.url), "authority_host": urlparse(str(r.url)).hostname or "", "result_links": "", "election_night_candidate": "", "smallest_observed_unit": "", "platform_family": platform(str(r.url), r.text), "status": f"central_reached:{len(candidates)}_candidates"})
         with ThreadPoolExecutor(max_workers=16) as ex:
