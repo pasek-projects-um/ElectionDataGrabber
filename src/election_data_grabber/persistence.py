@@ -4,7 +4,7 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from election_data_grabber.deltas import ResultDelta
+from election_data_grabber.diff import ResultDelta
 from election_data_grabber.reconcile import ReconciliationResult
 from election_data_grabber.washtenaw_ingest import WashtenawSummary
 
@@ -27,14 +27,18 @@ def write_integrity_outputs(
         "ballots_cast": summary.ballots_cast,
         "source_timestamp": summary.source_timestamp.isoformat() if summary.source_timestamp else None,
     }
-    (root / "summary.json").write_text(json.dumps(summary_payload, indent=2, sort_keys=True), encoding="utf-8")
+    (root / "summary.json").write_text(
+        json.dumps(summary_payload, indent=2, sort_keys=True), encoding="utf-8"
+    )
     rec = []
     for row in reconciliation:
         item = asdict(row)
         item["vote_mode"] = row.vote_mode.value
         item["reconciles"] = row.reconciles
         rec.append(item)
-    (root / "reconciliation.json").write_text(json.dumps(rec, indent=2, sort_keys=True), encoding="utf-8")
+    (root / "reconciliation.json").write_text(
+        json.dumps(rec, indent=2, sort_keys=True), encoding="utf-8"
+    )
     if deltas is not None:
         payload = []
         for row in deltas:
@@ -43,4 +47,6 @@ def write_integrity_outputs(
                 if hasattr(value, "value"):
                     item[key] = value.value
             payload.append(item)
-        (root / "deltas.json").write_text(json.dumps(payload, indent=2, sort_keys=True, default=str), encoding="utf-8")
+        (root / "deltas.json").write_text(
+            json.dumps(payload, indent=2, sort_keys=True, default=str), encoding="utf-8"
+        )
