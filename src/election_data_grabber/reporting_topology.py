@@ -11,19 +11,24 @@ class AdministrativePath:
     ward: str | None = None
     precinct: str | None = None
     reporting_unit: str | None = None
+    subunit: str | None = None
+
+
+def reconciliation_keys(path: AdministrativePath) -> list[tuple[str, str]]:
+    """Return every distinct aggregation key available on a reporting path."""
+    pairs=[
+        ("state",path.state),("county",path.county),("municipality",path.municipality),
+        ("ward",path.ward),("precinct",path.precinct),("reporting_unit",path.reporting_unit),
+        ("subunit",path.subunit),
+    ]
+    out=[]
+    seen=set()
+    for level,value in pairs:
+        if value and (level,value) not in seen:
+            out.append((level,value)); seen.add((level,value))
+    return out
 
 
 def maine_reconciliation_keys(path: AdministrativePath) -> list[tuple[str, str]]:
-    """Return aggregation keys available for Maine statewide/local reconciliation."""
-    keys=[("state",path.state)]
-    if path.county:
-        keys.append(("county",path.county))
-    if path.municipality:
-        keys.append(("municipality",path.municipality))
-    if path.ward:
-        keys.append(("ward",path.ward))
-    if path.precinct:
-        keys.append(("precinct",path.precinct))
-    if path.reporting_unit and path.reporting_unit not in {path.precinct,path.ward,path.municipality}:
-        keys.append(("reporting_unit",path.reporting_unit))
-    return keys
+    """Backward-compatible Maine alias."""
+    return reconciliation_keys(path)
