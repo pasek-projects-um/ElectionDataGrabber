@@ -1,0 +1,64 @@
+name: Maine locality portability smoke
+
+on:
+  pull_request:
+    paths:
+      - "registry/me_locality_authorities.csv"
+      - "registry/me_locality_capabilities.csv"
+      - "registry/me_statewide_sources.csv"
+      - "src/election_data_grabber/adapters/archive_discovery.py"
+      - "src/election_data_grabber/adapters/pdf_extract.py"
+      - "src/election_data_grabber/reporting_topology.py"
+      - "tests/test_archive_discovery.py"
+      - "tests/test_reporting_topology.py"
+      - "tests/test_me_locality_registry.py"
+      - ".github/workflows/me-locality-smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - name: Probe representative Maine municipal election pages
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import httpx
+          from election_data_grabber.adapters.archive_discovery import discover_election_artifacts
+
+          wanted={
+              "Portland","Lewiston","Bangor","Augusta","Farmington",
+              "Kittery","Bath","Skowhegan","Belfast","Ellsworth",
+              "Caribou","Houlton","Rumford","Bar Harbor","Millinocket"
+          }
+          with Path("registry/me_locality_authorities.csv").open() as f:
+              rows=[r for r in csv.DictReader(f) if r["locality"] in wanted]
+          assert len(rows) == len(wanted)
+          reached=[]
+          failures=[]
+          artifact_hits=[]
+          with httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent":"ElectionDataGrabber/0.1 (+research; smoke)"}) as client:
+              for row in rows:
+                  try:
+                      response=client.get(row["authority_url"])
+                      response.raise_for_status()
+                      reached.append(row["locality"])
+                      artifacts=discover_election_artifacts(response.content, str(response.url))
+                      if artifacts:
+                          artifact_hits.append(row["locality"])
+                      print(row["locality"], response.status_code, len(artifacts), [a.kind for a in artifacts[:5]])
+                  except Exception as exc:
+                      failures.append((row["locality"], type(exc).__name__))
+                      print("FAIL", row["locality"], type(exc).__name__)
+          print("SUMMARY", {"reached":len(reached), "artifact_hits":len(artifact_hits), "failures":len(failures)})
+          # Candidate authority URLs are expected to be noisy during census expansion.
+          # Keep CI focused on parser/test integrity while surfacing live reachability metrics.
+          assert reached, "No representative Maine authority page was reachable"
+          PY

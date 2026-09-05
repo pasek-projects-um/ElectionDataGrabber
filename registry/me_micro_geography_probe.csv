@@ -1,0 +1,13 @@
+locality,county,locality_type,target_floor,authority_status,artifact_status,notes
+Portland,Cumberland,city,ward/precinct,verified,pending,"High-resolution municipal benchmark"
+Lewiston,Androscoggin,city,ward/precinct,verified,pending,"Ward-level benchmark"
+Bangor,Penobscot,city,ward/precinct,verified,pending,"Urban northern benchmark"
+Augusta,Kennebec,city,ward/precinct,verified,pending,"Capital benchmark"
+Chebeague Island,Cumberland,island town,municipality,pending,pending,"Small/island floor test"
+Isle au Haut,Knox,island town,municipality,pending,pending,"Very small island floor test"
+Matinicus Isle,Knox,island plantation,plantation,pending,pending,"Plantation/island authority test"
+Winterville Plantation,Aroostook,plantation,plantation,pending,pending,"Northern plantation test"
+Allagash,Aroostook,town,municipality,pending,pending,"Remote small-town test"
+Upton,Oxford,town,municipality,pending,pending,"Very small western-town test"
+Beddington,Washington,town,municipality,pending,pending,"Very small eastern-town test"
+Frenchboro,Hancock,town,municipality,pending,pending,"Very small island/coastal test"

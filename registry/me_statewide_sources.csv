@@ -1,0 +1,3 @@
+source,scope,shape,granularity,notes
+Maine Secretary of State,statewide,"central election results + downloadable spreadsheets/reports","municipality","State results are centrally published by municipality rather than county reporting centers; use as statewide reconciliation/backfill layer."
+Municipal clerks,local,"municipal result documents/archives","municipality;ward;precinct","Local sources can preserve submunicipal topology and local contests absent from statewide aggregates."

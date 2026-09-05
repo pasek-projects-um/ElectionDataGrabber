@@ -83,3 +83,30 @@ def looks_like_ohio_precinct_report(text: str) -> bool:
 def pdf_needs_fallback(result: PdfExtractionResult) -> bool:
     """True when a richer extractor/OCR/manual parser should be attempted."""
     return result.confidence in {"none", "low"}
+
+
+def pdf_image_fallback_profile(body: bytes) -> dict[str, object]:
+    """Describe an image-heavy PDF so OCR/table recovery can be routed generically.
+
+    This does not pretend OCR succeeded. It records page/image evidence and returns
+    an explicit generic fallback family instead of treating the artifact as bespoke.
+    """
+    reader = PdfReader(BytesIO(body))
+    pages = len(reader.pages)
+    image_pages = 0
+    image_count = 0
+    for page in reader.pages:
+        try:
+            images = list(page.images)
+        except Exception:
+            images = []
+        if images:
+            image_pages += 1
+            image_count += len(images)
+    return {
+        "family": "image_pdf_ocr",
+        "pages": pages,
+        "image_pages": image_pages,
+        "image_count": image_count,
+        "ocr_candidate": bool(pages and image_pages),
+    }
