@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
 from election_data_grabber.adapters.washtenaw import WashtenawAdapter
-from election_data_grabber.models import Source, SourceKind, VoteMode
+from election_data_grabber.models import Format, Source, SourceKind, VoteMode
 from election_data_grabber.washtenaw_ingest import parse_summary
 
 
@@ -32,7 +32,16 @@ def test_summary_metadata_and_contest_totals():
 
 
 def test_adapter_parses_county_summary_modes():
-    source = Source(source_id="washtenaw", name="Washtenaw", url="https://example.test/results/", kind=SourceKind.HTML)
+    source = Source(
+        source_id="washtenaw",
+        jurisdiction="Washtenaw County",
+        state="MI",
+        url="https://example.test/results/",
+        kind=SourceKind.OFFICIAL_WEB,
+        format=Format.HTML,
+        official=True,
+        live_capable=True,
+    )
     adapter = WashtenawAdapter(source)
     rows = adapter.parse(HTML, fetched_at=datetime(2026, 8, 5, 2, 30, tzinfo=timezone.utc))
     totals = {(r.choice_name, r.vote_mode): r.votes for r in rows}
