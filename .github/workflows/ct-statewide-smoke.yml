@@ -1,0 +1,47 @@
+name: Connecticut statewide portability smoke
+
+on:
+  pull_request:
+    paths:
+      - "registry/ct_town_authorities.csv"
+      - "registry/ct_town_capabilities.csv"
+      - "registry/ct_statewide_sources.csv"
+      - "tests/test_ct_statewide_registry.py"
+      - ".github/workflows/ct-statewide-smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - name: Probe Connecticut state and representative town sources
+        run: |
+          python - <<'PY'
+          import httpx
+          urls = {
+            "state_results": "https://portal.ct.gov/sots/election-services/election-results/election-results",
+            "election_history": "https://electionhistory.ct.gov/contest/36252",
+            "sample_ballots": "https://portal.ct.gov/sots/election-services/town-ballots/2024-general-election-sample-ballots",
+            "Bridgeport": "https://www.bridgeportct.gov/government/departments/town-clerk/elections",
+            "New Haven": "https://www.newhavenct.gov/government/departments-divisions/city-town-clerk/elections",
+            "Hartford": "https://www.hartfordct.gov/Government/Departments/Town-and-City-Clerk/Elections",
+            "Salisbury": "https://www.salisburyct.us/town-clerk/elections",
+            "Union": "https://www.unionconnecticut.org/town-clerk/pages/elections",
+          }
+          reached=0
+          with httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent":"ElectionDataGrabber/0.1 (+research; smoke)"}) as client:
+              for name,url in urls.items():
+                  try:
+                      r=client.get(url)
+                      print(name,r.status_code,str(r.url),len(r.content))
+                      if r.is_success: reached += 1
+                  except Exception as exc:
+                      print("FAIL",name,type(exc).__name__)
+          assert reached >= 3
+          PY
