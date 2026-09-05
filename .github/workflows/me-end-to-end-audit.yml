@@ -35,6 +35,7 @@ jobs:
       - name: Show shard summary
         if: always()
         run: cat audit/maine-summary-${{ matrix.shard }}.json || true
+      - run: python scripts/triage_maine_pending.py || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
