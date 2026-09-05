@@ -12,7 +12,7 @@ import httpx
 from bs4 import BeautifulSoup
 
 from election_data_grabber.adapters.archive_discovery import discover_election_artifacts
-from election_data_grabber.adapters.pdf_extract import extract_pdf_text, pdf_needs_fallback
+from election_data_grabber.adapters.pdf_extract import extract_pdf_text, pdf_needs_fallback, pdf_image_fallback_profile
 from election_data_grabber.artifact_auditor import (
     ArtifactAudit,
     AuditStatus,
@@ -20,6 +20,7 @@ from election_data_grabber.artifact_auditor import (
     provisional_portability,
 )
 from election_data_grabber.authority_resolver import discover_candidate_links
+from election_data_grabber.adapters.dynamic_documents import fingerprint_dynamic_document
 
 UNIT_RE = re.compile(
     r"\b(?:ward|precinct|district|voting\s+district|polling\s+place|reporting\s+unit)"
@@ -57,7 +58,10 @@ def audit_pdf(url: str, body: bytes) -> ArtifactAudit:
     units, contests, numeric = text_metrics(extracted.text)
     has_text = sum(p.text_chars for p in extracted.pages) >= 100
     if not has_text:
-        status = AuditStatus.UNREADABLE
+        profile = pdf_image_fallback_profile(body)
+        status = AuditStatus.PARTIAL if profile.get("ocr_candidate") else AuditStatus.UNREADABLE
+        if profile.get("ocr_candidate"):
+            extracted.warnings.append("generic_family:image_pdf_ocr")
     elif units and contests and numeric >= 4:
         status = AuditStatus.PARSED
     elif contests or numeric >= 8:
@@ -86,11 +90,16 @@ def audit_html(url: str, body: bytes) -> ArtifactAudit:
         row = " ".join(x.get_text(" ", strip=True) for x in tr.find_all(["th", "td"]))
         if NUMBER_RE.search(row):
             numeric_rows += 1
+    semantic_blocks = 0
+    for node in soup.find_all(["p","li","div","section","article"]):
+        block = node.get_text(" ", strip=True)
+        if CONTEST_RE.search(block) and NUMBER_RE.search(block):
+            semantic_blocks += 1
     if units and contests and numeric_rows:
         status = AuditStatus.PARSED
     elif tables and numeric_rows:
         status = AuditStatus.PARTIAL
-    elif contests and numeric:
+    elif semantic_blocks >= 2 or (contests and numeric >= 4):
         status = AuditStatus.PARTIAL
     else:
         status = AuditStatus.STRUCTURALLY_UNRESOLVED
@@ -101,7 +110,7 @@ def audit_html(url: str, body: bytes) -> ArtifactAudit:
         reporting_units=units,
         contests=contests,
         has_text_layer=True,
-        warnings=[] if tables else ["no_html_tables"],
+        warnings=[] if tables else (["semantic_html_results"] if semantic_blocks else ["no_html_tables"]),
     )
 
 
@@ -153,7 +162,7 @@ def audit_locality(client: httpx.Client, row: dict[str, str], max_artifacts: int
 
     # De-duplicate and favor concrete documents over generic web links.
     uniq = {}
-    priority = {"csv": 0, "spreadsheet": 1, "pdf": 2, "web": 3, "other": 4}
+    priority = {"csv": 0, "spreadsheet": 1, "pdf": 2, "dynamic_document": 3, "web": 4, "other": 5}
     for a in artifacts:
         uniq[a.url] = a
     selected = sorted(uniq.values(), key=lambda a: (priority.get(a.kind, 9), a.url))[:max_artifacts]
@@ -175,6 +184,12 @@ def audit_locality(client: httpx.Client, row: dict[str, str], max_artifacts: int
             ctype = (r.headers.get("content-type") or "").lower()
             if art.kind == "pdf" or "application/pdf" in ctype or str(r.url).lower().endswith(".pdf"):
                 audit = audit_pdf(str(r.url), r.content)
+            elif art.kind == "dynamic_document":
+                platform = fingerprint_dynamic_document(str(r.url), r.content) or "dynamic_document"
+                audit = ArtifactAudit(
+                    str(r.url), AuditStatus.PARTIAL, result_rows=1, has_text_layer=True,
+                    warnings=[f"generic_family:{platform}"]
+                )
             elif art.kind in {"csv", "spreadsheet"}:
                 # Structured downloadable artifacts are configuration/profile work
                 # even before full field normalization.
