@@ -1,41 +1,49 @@
 name: Maine end-to-end portability audit
-# rerun after generic D-family routing
-
 on:
   pull_request:
     paths:
       - "registry/me_locality_authorities.csv"
       - "registry/me_locality_capabilities.csv"
-      - "src/election_data_grabber/authority_resolver.py"
-      - "src/election_data_grabber/artifact_auditor.py"
+      - "src/election_data_grabber/**"
       - "scripts/audit_maine_end_to_end.py"
+      - "scripts/triage_maine_pending.py"
       - "tests/test_maine_end_to_end_audit.py"
       - ".github/workflows/me-end-to-end-audit.yml"
   workflow_dispatch:
 
 jobs:
-  audit:
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [0, 1, 2, 3, 4, 5, 6]
+  validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
         with:
-          python-version: "3.11"
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q
-      - name: Audit Maine shard
-        run: |
-          mkdir -p audit
-          python scripts/audit_maine_end_to_end.py             --shard ${{ matrix.shard }}             --shards 7             --max-artifacts 2             --out audit/maine-audit-${{ matrix.shard }}.csv             --summary audit/maine-summary-${{ matrix.shard }}.json
-      - name: Show shard summary
-        if: always()
-        run: cat audit/maine-summary-${{ matrix.shard }}.json || true
-      - run: python scripts/triage_maine_pending.py || true
+      - run: pytest -q tests/test_maine_end_to_end_audit.py tests/test_artifact_auditor.py tests/test_authority_resolver.py tests/test_me_d_families.py
+
+  audit:
+    needs: validate
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6]
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e .
+      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
