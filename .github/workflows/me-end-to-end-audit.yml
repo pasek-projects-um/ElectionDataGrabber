@@ -1,0 +1,42 @@
+name: Maine end-to-end portability audit
+
+on:
+  pull_request:
+    paths:
+      - "registry/me_locality_authorities.csv"
+      - "registry/me_locality_capabilities.csv"
+      - "src/election_data_grabber/authority_resolver.py"
+      - "src/election_data_grabber/artifact_auditor.py"
+      - "scripts/audit_maine_end_to_end.py"
+      - "tests/test_maine_end_to_end_audit.py"
+      - ".github/workflows/me-end-to-end-audit.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6]
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - name: Audit Maine shard
+        run: |
+          mkdir -p audit
+          python scripts/audit_maine_end_to_end.py             --shard ${{ matrix.shard }}             --shards 7             --max-artifacts 2             --out audit/maine-audit-${{ matrix.shard }}.csv             --summary audit/maine-summary-${{ matrix.shard }}.json
+      - name: Show shard summary
+        if: always()
+        run: cat audit/maine-summary-${{ matrix.shard }}.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: maine-audit-${{ matrix.shard }}
+          path: audit/
+          if-no-files-found: warn
