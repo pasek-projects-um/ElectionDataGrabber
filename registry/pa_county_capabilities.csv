@@ -1,29 +1,29 @@
 county,platform_or_shape,state_bulk_results,county_results,precinct_level,vote_mode_detail,turnout_fields,download_formats,portability_class,notes
-Adams,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Allegheny,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Adams,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk guarantees normalized historical floor; county 2024 post-election report available.
+Allegheny,SOE reporting system + archive,true,true,true,unknown,unknown,interactive;PDF,C,Verified dedicated results system and archive; endpoint/report export fingerprinting needed.
 Armstrong,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Beaver,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Bedford,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Berks,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Berks,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk plus county post-election report.
 Blair,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Bradford,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Bucks,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Bucks,certified SOVC PDF + precinct archive,true,true,true,ED;MI;PR,true,PDF;web,B,"Verified 2024 Statement of Votes Cast by Geography exposes Election Day, Mail-In and Provisional candidate totals; precinct-certified archive available."
 Butler,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Cambria,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Cameron,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Carbon,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Centre,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Chester,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Centre,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk plus county post-election report.
+Chester,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk plus county post-election report.
 Clarion,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Clearfield,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Clinton,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Columbia,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Crawford,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Cumberland,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Dauphin,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Delaware,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Dauphin,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk plus county post-election report.
+Delaware,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk plus county post-election report.
 Elk,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Erie,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Erie,state bulk + county report archive,true,unknown,true,unknown,unknown,state bulk;PDF,B,State precinct bulk plus county post-election report.
 Fayette,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Forest,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Franklin,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
@@ -49,7 +49,7 @@ Montour,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide 
 Northampton,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Northumberland,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Perry,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
-Philadelphia,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
+Philadelphia,interactive SOE-style live results,true,true,true,polling place;mail;provisional,true,interactive;web,B,"Verified live portal exposes division-level turnout, registration, polling-place/mail/provisional counts, reporting status and timestamp."
 Pike,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Potter,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
 Schuylkill,pending,true,unknown,unknown,unknown,unknown,unknown,pending,"Statewide Pennsylvania census; use state bulk precinct layer first, then verify county source and finer artifacts."
