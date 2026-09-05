@@ -10,13 +10,16 @@ on:
 jobs:
   discover:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.11"}
-      - run: pip install -e '.[dev]'
-      - run: pytest -q
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e .
       - run: python scripts/mi_county_election_night_discovery.py
       - uses: actions/upload-artifact@v4
         if: always()
