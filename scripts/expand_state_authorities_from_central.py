@@ -128,11 +128,22 @@ def main() -> None:
     by_state = {}
     for state in sorted({r["state"] for r in all_rows}):
         srows = [r for r in all_rows if r["state"] == state]
+        reached = sum(r["status"] == "reached" for r in srows)
+        with_results = sum(bool(r["result_links"]) for r in srows)
+        if reached >= 3:
+            exposure = "direct"
+        elif reached >= 1:
+            exposure = "indirect"
+        elif any(r["status"].startswith("central_reached") for r in srows):
+            exposure = "state_only"
+        else:
+            exposure = "unresolved"
         by_state[state] = {
             "rows": len(srows),
-            "reached": sum(r["status"] == "reached" for r in srows),
-            "with_result_links": sum(bool(r["result_links"]) for r in srows),
+            "reached": reached,
+            "with_result_links": with_results,
             "election_night_candidates": sum(r["election_night_candidate"] == "true" for r in srows),
+            "local_site_exposure": exposure,
         }
     summary = {"states": len(rows), "rows": len(all_rows), "by_state": by_state}
     args.summary.write_text(json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8")
