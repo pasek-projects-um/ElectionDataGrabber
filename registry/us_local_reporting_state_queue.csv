@@ -1,0 +1,13 @@
+state,priority,authority_model,reason
+WI,1,municipal+county,"Municipal clerk topology; useful test of non-county source discovery"
+MA,1,municipal,"Municipal reporting is central; many city/town result surfaces"
+NH,1,town+ward,"Compact state with town and ward reporting"
+VT,1,town,"Compact heterogeneous town administration"
+NJ,1,county+municipal/election-district,"County election-night sources and historically complex local PDFs"
+VA,1,county+independent-city,"Tests county-equivalent independent cities"
+LA,1,parish,"Tests parish terminology and source topology"
+MN,2,state+county/local,"Strong state backbone useful for reconciliation"
+RI,2,state+municipal,"Compact full census"
+MD,2,county+independent-city,"County structure plus Baltimore City"
+MO,2,local-election-authority,"Election authorities can diverge from simple county model"
+AK,2,state/election-region,"Control case without ordinary county election administration"
