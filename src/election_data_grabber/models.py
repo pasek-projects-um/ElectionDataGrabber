@@ -123,6 +123,10 @@ class ResultObservation(BaseModel):
     choice_id: str | None = None
     choice_name: str
     ballot_order: int | None = None
+    # Some jurisdictions rotate candidate order by precinct.  Observation-level
+    # order is authoritative for a reporting unit; ContestChoice.ballot_order
+    # is only a contest-wide/default order when one exists.
+    ballot_order_scope: str | None = None
     party: str | None = None
     votes: int
     vote_mode: VoteMode = VoteMode.TOTAL
