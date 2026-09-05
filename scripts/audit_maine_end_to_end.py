@@ -59,9 +59,10 @@ def audit_pdf(url: str, body: bytes) -> ArtifactAudit:
     has_text = sum(p.text_chars for p in extracted.pages) >= 100
     if not has_text:
         profile = pdf_image_fallback_profile(body)
-        status = AuditStatus.PARTIAL if profile.get("ocr_candidate") else AuditStatus.UNREADABLE
+        status = AuditStatus.UNREADABLE
         if profile.get("ocr_candidate"):
-            extracted.warnings.append("generic_family:image_pdf_ocr")
+            extracted.warnings.append("ocr_required_unvalidated")
+            extracted.warnings.append("provisional_E_until_ocr_reconciles")
     elif units and contests and numeric >= 4:
         status = AuditStatus.PARSED
     elif contests or numeric >= 8:
