@@ -1,0 +1,7 @@
+source_id,jurisdiction,state,url,kind,format,platform,official,live_capable,precinct_level,vote_mode_detail,notes
+mi-washtenaw-live,Washtenaw County,MI,https://electionresults.ewashtenaw.org/,official_web,html,washtenaw_enr,true,true,true,true,Current county election-night reporting host; election-specific URLs are discovered beneath it.
+mi-washtenaw-archive,Washtenaw County,MI,https://electionarchive.washtenaw.org/,archive,html,washtenaw_archive,true,false,true,false,Official searchable historical archive with per-contest CSV downloads.
+mi-wayne-results,Wayne County,MI,https://www.waynecounty.com/elected/clerk/election-results.aspx,official_web,html,,true,false,true,,Official results index with precinct reports.
+mi-ingham-results,Ingham County,MI,https://docs.ingham.org/departments_and_officials/county_clerk/election_results.php,official_web,html,,true,true,true,,Official index links summary precinct and election-results websites.
+mi-jackson-archive,Jackson County,MI,https://www.mijackson.org/3158/Election-Results-Archive,archive,pdf,,true,false,true,,Official archive with precinct-by-precinct PDFs.
+mi-openelections-2024,State of Michigan,MI,https://github.com/openelections/openelections-data-mi/tree/master/2024/counties,open_data,csv,openelections,false,false,true,true,2024 general precinct files currently present for all 83 Michigan counties; use as benchmark/fallback not live authority.

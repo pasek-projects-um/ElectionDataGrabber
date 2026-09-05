@@ -1,0 +1,18 @@
+<Election>
+  <Precinct id="p1" name="Ward 1 Precinct 1">
+    <Contest name="President">
+      <Choice name="Alpha" party="DEM" order="1">
+        <Total mode="election_day" votes="50" />
+        <Total mode="early" votes="30" />
+        <Total mode="absentee" votes="40" />
+        <Total mode="total" votes="120" />
+      </Choice>
+      <Choice name="Beta" party="REP" order="2">
+        <Total mode="election_day" votes="45" />
+        <Total mode="early" votes="20" />
+        <Total mode="absentee" votes="35" />
+        <Total mode="total" votes="100" />
+      </Choice>
+    </Contest>
+  </Precinct>
+</Election>

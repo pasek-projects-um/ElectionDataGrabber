@@ -1,0 +1,3 @@
+county,precinct,office,district,party,candidate,votes,election_day,av_counting_boards,early_voting
+Example,City Ward 1 Precinct 1,President,,DEM,Alpha,120,50,40,30
+Example,City Ward 1 Precinct 1,President,,REP,Beta,100,45,35,20
