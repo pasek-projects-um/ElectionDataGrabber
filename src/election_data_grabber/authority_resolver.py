@@ -27,7 +27,9 @@ def election_link_score(url: str, text: str="") -> float:
     hay=(url+" "+text).lower()
     score=sum(1.0 for t in ELECTION_TERMS if t in hay)
     host=urlparse(url).hostname or ""
-    if host.endswith(".gov") or ".gov." in host: score += 2
+    official = host.endswith(".gov") or ".gov." in host
+    if official and score > 0:
+        score += 2
     return score
 
 def discover_candidate_links(base_url: str, html: str) -> list[SourceCandidate]:
