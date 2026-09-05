@@ -1,0 +1,23 @@
+name: Michigan top county election-night fingerprints
+on:
+  pull_request:
+    paths:
+      - "scripts/mi_top10_election_night_fingerprint.py"
+      - ".github/workflows/mi-top10-election-night.yml"
+  workflow_dispatch:
+jobs:
+  fingerprint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - run: python scripts/mi_top10_election_night_fingerprint.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mi-top10-election-night-fingerprints
+          path: audit/
