@@ -41,3 +41,23 @@ candidate
 Preserve line-level votes even when downstream products also expose candidate-combined totals. Never treat the same candidate on two lines as two different candidates merely because party labels differ.
 
 These requirements should propagate into historical normalization, election-night ingestion, reconciliation, and statistical modeling.
+
+## Louisiana: open/jungle primaries and runoffs
+
+Louisiana election stages must be represented explicitly. A "primary" can be an all-candidate contest in which candidates from multiple parties compete together, with a later runoff/general stage if no candidate satisfies the governing threshold.
+
+Do not infer nomination semantics from the word primary.
+
+Preserve at least:
+- election_stage: primary / runoff / general / special / other
+- nomination_system: top_two / majority_runoff / partisan_nomination / nonpartisan / other
+- threshold_rule: majority / plurality / top_n / statutory special rule
+- advances_to_election_id
+- predecessor_election_id
+- candidacy_id stable across stages where the same candidate advances
+- party/ballot label at each stage
+- contest continuity identifier linking primary and runoff versions of the same office
+
+A runoff should not be ingested as an unrelated contest merely because it occurs on a later election date.
+
+For election-night modeling, preserve the condition that determines whether a runoff is triggered and whether the result is mathematically clinched under the applicable threshold rule.
