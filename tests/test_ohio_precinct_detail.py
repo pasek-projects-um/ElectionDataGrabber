@@ -47,7 +47,15 @@ def test_discovers_standard_ohio_boe_report_family():
     <a href="/a.pdf">November 5, 2024 Cumulative Results</a>
     <a href="/p.pdf">November 5, 2024 Precinct Detail</a>
     <a href="/o.pdf">November 5, 2024 Overlap Results</a>
+    <a href="/g.pdf">November 5, 2024 Results by Groups</a>
     """
     reports=discover_ohio_boe_reports(page,"https://www.boe.ohio.gov/athens/results/")
-    assert [r["kind"] for r in reports] == ["cumulative","precinct_detail","overlap"]
+    assert [r["kind"] for r in reports] == ["cumulative","precinct_detail","overlap","group_detail"]
     assert reports[1]["url"] == "https://www.boe.ohio.gov/p.pdf"
+
+
+def test_standard_ohio_boe_urls():
+    from election_data_grabber.adapters.ohio_precinct_detail import ohio_boe_urls
+    urls=ohio_boe_urls("Greene")
+    assert urls["results"] == "https://www.boe.ohio.gov/greene/election-info/election-results/"
+    assert urls["precinct_polling"] == "https://lookup.boe.ohio.gov/vtrapp/greene/precandpoll.aspx"
