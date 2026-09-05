@@ -1,25 +1,25 @@
-state,expected_primary_units,known_units_with_source,known_units_missing_source,estimated_unknown_units,authority_model,estimate_basis,status
-AK,1,0,0,1,state/election-region,"state-administered; provisional",estimated
-HI,4,0,0,4,state+county,"four county election divisions",estimated
-LA,64,0,0,64,parish,"64 parishes",estimated
-MA,351,0,0,351,municipal,"351 cities and towns",estimated
-MD,24,0,0,24,county+independent-city,"23 counties plus Baltimore City",estimated
-MN,87,0,0,87,state+county/local,"87 counties; local layer may expand",estimated
-MO,116,0,0,116,local-election-authority,"provisional local authority count",estimated
-ND,53,0,0,53,county+state,"53 counties",estimated
-NH,234,0,0,234,town+ward,"municipal baseline; wards may expand",estimated
-NJ,21,0,0,21,county+municipal/election-district,"21 county primary authorities",estimated
-NM,33,0,0,33,county+state,"33 counties",estimated
-NY,58,0,0,58,county+board-of-elections,"county BOEs with multi-county NYC board; provisional",estimated
-OR,36,0,0,36,county,"36 counties",estimated
-RI,39,0,0,39,state+municipal,"39 municipalities",estimated
-SC,46,0,0,46,county+state,"46 counties",estimated
-VA,133,0,0,133,county+independent-city,"counties and independent cities; provisional",estimated
-VT,247,0,0,247,town,"town/city baseline; provisional",estimated
-WI,1850,0,0,1850,municipal+county,"state clerk-directory working estimate",estimated
-AL,67,0,0,67,county,"67 counties",estimated
-AZ,15,0,0,15,county,"15 counties",estimated
-GA,159,0,0,159,county,"159 counties",estimated
-IA,99,0,0,99,county,"99 county auditors",estimated
-KS,105,0,0,105,county,"105 counties",estimated
-KY,120,0,0,120,county,"120 counties",estimated
+state,expected_primary_units,known_final_only,known_election_night_only,known_both,known_units_missing_source,estimated_unknown_units,authority_model,estimate_basis,status
+AK,1,0,0,0,1,1,state/election-region,"state-administered; provisional",estimated
+HI,4,0,0,0,4,4,state+county,"four county election divisions",estimated
+LA,64,0,0,0,64,64,parish,"64 parishes",estimated
+MA,351,0,0,0,351,351,municipal,"351 cities and towns",estimated
+MD,24,0,0,0,24,24,county+independent-city,"23 counties plus Baltimore City",estimated
+MN,87,0,0,0,87,87,state+county/local,"87 counties; local layer may expand",estimated
+MO,116,0,0,0,116,116,local-election-authority,"provisional local authority count",estimated
+ND,53,0,0,0,53,53,county+state,"53 counties",estimated
+NH,234,0,0,0,234,234,town+ward,"municipal baseline; wards may expand",estimated
+NJ,21,0,0,0,21,21,county+municipal/election-district,"21 county primary authorities",estimated
+NM,33,0,0,0,33,33,county+state,"33 counties",estimated
+NY,58,0,0,0,58,58,county+board-of-elections,"county BOEs with multi-county NYC board; provisional",estimated
+OR,36,0,0,0,36,36,county,"36 counties",estimated
+RI,39,0,0,0,39,39,state+municipal,"39 municipalities",estimated
+SC,46,0,0,0,46,46,county+state,"46 counties",estimated
+VA,133,0,0,0,133,133,county+independent-city,"counties and independent cities; provisional",estimated
+VT,247,0,0,0,247,247,town,"town/city baseline; provisional",estimated
+WI,1850,0,0,0,1850,1850,municipal+county,"state clerk-directory working estimate",estimated
+AL,67,0,0,0,67,67,county,"67 counties",estimated
+AZ,15,0,0,0,15,15,county,"15 counties",estimated
+GA,159,0,0,0,159,159,county,"159 counties",estimated
+IA,99,0,0,0,99,99,county,"99 county auditors",estimated
+KS,105,0,0,0,105,105,county,"105 counties",estimated
+KY,120,0,0,0,120,120,county,"120 counties",estimated
