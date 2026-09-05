@@ -17,6 +17,7 @@ class FetchResult:
     status_code: int
     content_type: str | None
     fetched_at: datetime
+    url: str
 
 
 class Adapter(ABC):
@@ -25,18 +26,22 @@ class Adapter(ABC):
         self.timeout = timeout
 
     def fetch(self) -> FetchResult:
+        return self.fetch_url(str(self.source.url))
+
+    def fetch_url(self, url: str) -> FetchResult:
         with httpx.Client(
             timeout=self.timeout,
             follow_redirects=True,
             headers={"User-Agent": "ElectionDataGrabber/0.1 (+research; respectful polling)"},
         ) as client:
-            response = client.get(str(self.source.url))
+            response = client.get(url)
             response.raise_for_status()
         return FetchResult(
             body=response.content,
             status_code=response.status_code,
             content_type=response.headers.get("content-type"),
             fetched_at=datetime.now(timezone.utc),
+            url=str(response.url),
         )
 
     def snapshot(self, result: FetchResult, root: Path) -> Snapshot:
@@ -49,7 +54,7 @@ class Adapter(ABC):
         return Snapshot(
             source_id=self.source.source_id,
             fetched_at=result.fetched_at,
-            url=self.source.url,
+            url=result.url,
             http_status=result.status_code,
             content_type=result.content_type,
             sha256=digest,
