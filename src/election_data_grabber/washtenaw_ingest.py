@@ -21,6 +21,7 @@ class WashtenawSummary:
     registered_voters: int | None = None
     ballots_cast: int | None = None
     source_timestamp: datetime | None = None
+    contest_totals: list[ResultObservation] | None = None
 
 
 def parse_summary(html: bytes, election_url: str) -> WashtenawSummary:
@@ -44,6 +45,21 @@ def parse_summary(html: bytes, election_url: str) -> WashtenawSummary:
             seen.add(url)
             precinct_urls.append(url)
 
+    # The summary page uses the same contest table shape as precinct pages.
+    # Parse it through the canonical adapter so county aggregates retain ballot
+    # order and Early/Absentee/Election Day/Total dimensions.
+    summary_source = WashtenawAdapter._reporting_unit_name(soup)
+    summary_observations: list[ResultObservation] = []
+    try:
+        # parse() only needs fetched_at for provenance; source timestamp remains
+        # the page's own report timestamp.
+        from datetime import timezone
+        parsed_at = datetime.now(timezone.utc)
+        # parse_summary has no adapter instance, so contest parsing is completed
+        # by ingest_election below where the configured source is available.
+    except Exception:
+        parsed_at = None
+
     return WashtenawSummary(
         election_url=election_url,
         precinct_urls=sorted(precinct_urls),
@@ -53,6 +69,7 @@ def parse_summary(html: bytes, election_url: str) -> WashtenawSummary:
         registered_voters=labeled_int("Registered Voters"),
         ballots_cast=labeled_int("Ballots Cast"),
         source_timestamp=WashtenawAdapter._parse_report_timestamp(text),
+        contest_totals=summary_observations,
     )
 
 
@@ -65,6 +82,7 @@ def ingest_election(
     summary_fetch = adapter.fetch_url(election_url)
     summary_snapshot = adapter.snapshot(summary_fetch, snapshot_root)
     summary = parse_summary(summary_fetch.body, election_url)
+    summary.contest_totals = adapter.parse(summary_fetch.body, fetched_at=summary_fetch.fetched_at)
 
     snapshots = [summary_snapshot]
     observations: list[ResultObservation] = []
