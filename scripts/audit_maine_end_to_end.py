@@ -23,7 +23,7 @@ from election_data_grabber.authority_resolver import discover_candidate_links
 
 UNIT_RE = re.compile(
     r"\b(?:ward|precinct|district|voting\s+district|polling\s+place|reporting\s+unit)"
-    r"\s*(?:no\.?\s*)?([A-Z0-9][A-Z0-9 ._-]{0,30})",
+    r"\s*(?:no\.?\s*)?([A-Z0-9][A-Z0-9._-]{0,15})",
     re.I,
 )
 CONTEST_RE = re.compile(
