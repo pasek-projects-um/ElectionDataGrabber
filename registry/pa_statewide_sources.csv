@@ -1,0 +1,3 @@
+source,scope,role,granularity,portability_class,notes
+Pennsylvania Department of State,statewide,"official election returns/results backbone","state;county;precinct",B,"Use official statewide election-results/download products as canonical bulk/reconciliation layer."
+County election offices,county,"live/local result authority and richer local artifacts","county;precinct;reporting unit",pending,"Verify county-specific live systems, archives, vote-mode detail, turnout, and downloadable artifacts."
