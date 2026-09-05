@@ -16,3 +16,4 @@ OR,1,county,"Vote-by-mail state; useful for county reporting and vote-mode seman
 NM,1,county+state,"Western county topology and centralized/state reporting comparison"
 ND,1,county+state,"Small-population rural county coverage and reporting-unit stress test"
 SC,1,county+state,"County election commissions plus statewide reporting; useful Southeast coverage"
+NY,1,county+board-of-elections,"Fusion voting requires candidate identity separate from party/ballot line and line-specific vote totals"
