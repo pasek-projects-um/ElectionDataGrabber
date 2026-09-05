@@ -9,7 +9,10 @@ from election_data_grabber.models import ResultObservation, Source, VoteMode
 
 
 _INT = re.compile(r"[^0-9-]")
-RESULT_LINK = re.compile(r"(cumulative|precinct\s+detail|overlap)", re.I)
+RESULT_LINK = re.compile(
+    r"(cumulative|official results|precinct\s+detail|overlap|overlapping districts|results by groups)",
+    re.I,
+)
 
 
 def _integer(value: str) -> int:
@@ -28,7 +31,12 @@ def discover_ohio_boe_reports(body: bytes, base_url: str) -> list[dict[str, str]
         m = RESULT_LINK.search(label)
         if not m:
             continue
-        kind = m.group(1).lower().replace(" ", "_")
+        raw_kind = m.group(1).lower()
+        kind = {
+            "official results": "cumulative",
+            "overlapping districts": "overlap",
+            "results by groups": "group_detail",
+        }.get(raw_kind, raw_kind.replace(" ", "_"))
         out.append({"kind": kind, "label": label, "url": urljoin(base_url, a["href"])})
     return out
 
@@ -85,3 +93,12 @@ class OhioPrecinctDetailAdapter:
                     fetched_at=fetched_at,
                 ))
         return out
+
+
+def ohio_boe_urls(county_slug: str) -> dict[str, str]:
+    """Standard Ohio SOS-hosted BOE endpoints used by many counties."""
+    slug = county_slug.strip().lower().replace(" ", "-")
+    return {
+        "results": f"https://www.boe.ohio.gov/{slug}/election-info/election-results/",
+        "precinct_polling": f"https://lookup.boe.ohio.gov/vtrapp/{slug}/precandpoll.aspx",
+    }
