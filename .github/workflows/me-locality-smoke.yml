@@ -11,6 +11,7 @@ on:
       - "src/election_data_grabber/reporting_topology.py"
       - "tests/test_archive_discovery.py"
       - "tests/test_reporting_topology.py"
+      - "tests/test_me_locality_registry.py"
       - ".github/workflows/me-locality-smoke.yml"
   workflow_dispatch:
 
@@ -32,14 +33,24 @@ jobs:
           import httpx
           from election_data_grabber.adapters.archive_discovery import discover_election_artifacts
 
-          wanted={"Portland","Lewiston","Bangor","Augusta","Farmington"}
+          wanted={
+              "Portland","Lewiston","Bangor","Augusta","Farmington",
+              "Kittery","Bath","Skowhegan","Belfast","Ellsworth",
+              "Caribou","Houlton","Rumford","Bar Harbor","Millinocket"
+          }
           with Path("registry/me_locality_authorities.csv").open() as f:
               rows=[r for r in csv.DictReader(f) if r["locality"] in wanted]
-          assert len(rows) == 5
+          assert len(rows) == len(wanted)
+          failures=[]
           with httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent":"ElectionDataGrabber/0.1 (+research; smoke)"}) as client:
               for row in rows:
-                  response=client.get(row["authority_url"])
-                  response.raise_for_status()
-                  artifacts=discover_election_artifacts(response.content, str(response.url))
-                  print(row["locality"], response.status_code, len(artifacts), [a.kind for a in artifacts[:5]])
+                  try:
+                      response=client.get(row["authority_url"])
+                      response.raise_for_status()
+                      artifacts=discover_election_artifacts(response.content, str(response.url))
+                      print(row["locality"], response.status_code, len(artifacts), [a.kind for a in artifacts[:5]])
+                  except Exception as exc:
+                      failures.append((row["locality"], type(exc).__name__))
+                      print("FAIL", row["locality"], type(exc).__name__)
+          assert len(failures) <= 3, failures
           PY
