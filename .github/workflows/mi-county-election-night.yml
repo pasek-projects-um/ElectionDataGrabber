@@ -1,0 +1,28 @@
+name: Michigan county election-night discovery
+on:
+  pull_request:
+    paths:
+      - "registry/mi_election_night_units.csv"
+      - "registry/mi_county_authorities.csv"
+      - "scripts/mi_county_election_night_discovery.py"
+      - ".github/workflows/mi-county-election-night.yml"
+  workflow_dispatch:
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e .
+      - run: python scripts/mi_county_election_night_discovery.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mi-county-election-night-discovery
+          path: audit/mi-county-election-night-discovery.csv

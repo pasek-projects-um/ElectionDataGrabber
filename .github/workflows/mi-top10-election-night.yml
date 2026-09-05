@@ -1,0 +1,43 @@
+name: Michigan top county election-night fingerprints
+on:
+  pull_request:
+    paths:
+      - "scripts/mi_top10_election_night_fingerprint.py"
+      - "src/election_data_grabber/adapters/enhanced_voting.py"
+      - "src/election_data_grabber/adapters/clarity.py"
+      - "src/election_data_grabber/adapters/civicplus.py"
+      - "src/election_data_grabber/adapters/tabulator_reports.py"
+      - ".github/workflows/mi-top10-election-night.yml"
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e '.[dev]'
+      - run: pytest -q tests/test_platform_adapters.py tests/test_tabulator_reports.py
+  fingerprint:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e .
+      - run: python scripts/mi_top10_election_night_fingerprint.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mi-top10-election-night-fingerprints
+          path: audit/

@@ -1,0 +1,4 @@
+platform,role,parser_module,notes
+enhanced_voting,result_platform,election_data_grabber.adapters.enhanced_voting,"Public result shell plus embedded/underlying structured payloads; preserve source order separately from ballot order."
+clarity,result_platform,election_data_grabber.adapters.clarity,"Election Night Reporting family; discover canonical election root and downloadable precinct/detail artifacts."
+civicplus,authority_discovery,election_data_grabber.adapters.civicplus,"County/municipal CMS; usually delegates to Enhanced Voting, Clarity, PDFs or structured downloads rather than being the canonical result feed itself."
