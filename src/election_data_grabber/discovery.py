@@ -32,6 +32,16 @@ def fingerprint_platform(url: str, html: str = "") -> str | None:
         return "washtenaw_archive"
     if "scytl" in blob:
         return "scytl"
+    if "electionware" in blob or "essvote" in blob:
+        return "electionware"
+    if "dominionvoting" in blob or "dominion voting" in blob:
+        return "dominion"
+    if "enhancedvoting" in blob or "enhanced voting" in blob:
+        return "enhanced_voting"
+    if "knowink" in blob or "totalvote" in blob:
+        return "knowink_totalvote"
+    if "electionsource" in blob:
+        return "electionsource"
     return None
 
 
