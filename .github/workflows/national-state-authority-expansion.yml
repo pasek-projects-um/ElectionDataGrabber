@@ -1,0 +1,40 @@
+name: National state authority expansion
+on:
+  pull_request:
+    paths:
+      - "registry/us_state_central_authority_sources.csv"
+      - "scripts/expand_state_authorities_from_central.py"
+      - ".github/workflows/national-state-authority-expansion.yml"
+  workflow_dispatch:
+    inputs:
+      states:
+        description: "Space-separated state abbreviations; blank means all"
+        required: false
+        type: string
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e '.[dev]'
+      - run: pytest -q tests/test_state_directory_profiles.py
+      - name: Expand central state directories
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.states }}" ]; then
+            python scripts/expand_state_authorities_from_central.py --states ${{ inputs.states }}
+          else
+            python scripts/expand_state_authorities_from_central.py
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: national-state-authority-expansion
+          path: audit/
