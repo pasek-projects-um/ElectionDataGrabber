@@ -1,0 +1,11 @@
+county,platform_or_shape,live_results,archive,precinct_level,vote_mode_detail,turnout_fields,underovervotes,download_formats,reporting_topology_detail,audit_artifacts,notes
+Washtenaw,custom HTML electionreporting,true,true,true,"Early;Absentee;Election Day;Total",true,true,"HTML;CSV archive",true,unknown,"Current system exposes precinct pages and source timestamps; consolidated reporting-unit variants observed in 2025."
+Wayne,PDF-first official reports,true,true,true,"Early Voting;Election Day;Absentee;Pre-Process Absentee",true,unknown,PDF,true,unknown,"2024 official summary reports 912 precincts and mode-separated totals; extensive race-by-precinct PDFs."
+Oakland,county Election Reporting System,true,true,true,unknown,true,unknown,"web;turnout reports",unknown,unknown,"Past-results portal uses county Election Reporting System and separate voter-turnout reports; needs endpoint reverse engineering."
+Macomb,custom web reporting,true,true,true,"ED;AV",unknown,unknown,HTML,true,unknown,"Precinct Reporting Details records first report, 50% reported, and final timestamps separately for ED and AV by jurisdiction."
+Ingham,results website + summary/precinct exports,true,true,true,unknown,unknown,unknown,"summary;precinct;web",unknown,true,"County index consistently publishes summary, precinct, results website, candidate/local proposal, and audit artifacts."
+Kent,structured election database,true,true,true,unknown,true,true,"CSV;HTML;PDF",unknown,unknown,"Election database exposes contest-level precinct CSV downloads plus votes, undervotes, overvotes, total ballots cast, and registered voters."
+Genesee,unknown,unknown,true,true,unknown,unknown,unknown,unknown,unknown,unknown,"Authority seeded; system still needs detailed inspection."
+Ottawa,unknown,unknown,true,true,unknown,unknown,unknown,unknown,unknown,unknown,"Authority seeded; system still needs detailed inspection."
+Kalamazoo,county results archive/web,true,true,unknown,unknown,unknown,unknown,"web;PDF",unknown,true,"Current/past results portal and post-election audit links available; need inspect election-result endpoint for precinct/mode granularity."
+Jackson,PDF-first official reports,true,true,true,unknown,unknown,unknown,PDF,unknown,unknown,"Current results and archive publish summary and precinct-by-precinct PDFs; archive extends to 1993."
