@@ -27,7 +27,7 @@ def provisional_portability(a: ArtifactAudit) -> str:
     if a.status == AuditStatus.PARTIAL:
         return "C"
     if a.status == AuditStatus.UNREADABLE and a.has_text_layer is False:
-        return "D"
+        return "E"
     if a.status == AuditStatus.STRUCTURALLY_UNRESOLVED:
         return "D"
     return "C"
