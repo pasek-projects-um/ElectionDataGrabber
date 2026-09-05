@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict
 from pathlib import Path
 from urllib.parse import urlparse
@@ -236,15 +237,23 @@ def main():
     rows = [r for i, r in enumerate(all_rows) if i % args.shards == args.shard]
 
     audits = []
-    with httpx.Client(
-        timeout=httpx.Timeout(10.0, connect=6.0),
-        follow_redirects=True,
-        headers={"User-Agent": "ElectionDataGrabber/0.1 (+academic election research)"},
-    ) as client:
-        for i, row in enumerate(rows, 1):
-            result = audit_locality(client, row, args.max_artifacts)
+    def run_one(row):
+        with httpx.Client(
+            timeout=httpx.Timeout(8.0, connect=4.0),
+            follow_redirects=True,
+            headers={"User-Agent": "ElectionDataGrabber/0.1 (+academic election research)"},
+        ) as client:
+            return row["locality"], audit_locality(client, row, args.max_artifacts)
+
+    workers=min(12, max(1, len(rows)))
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futures={ex.submit(run_one,row): row for row in rows}
+        done=0
+        for fut in as_completed(futures):
+            locality,result=fut.result()
             audits.extend(result)
-            print(f"[{i}/{len(rows)}] {row['locality']} -> {[(x['audit_status'], x['provisional_portability']) for x in result]}")
+            done += 1
+            print(f"[{done}/{len(rows)}] {locality} -> {[(x['audit_status'], x['provisional_portability']) for x in result]}")
 
     fields = [
         "locality","county","authority_seed","resolved_authority","artifact_url","artifact_kind",
