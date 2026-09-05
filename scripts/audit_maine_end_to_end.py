@@ -133,7 +133,7 @@ def audit_locality(client: httpx.Client, row: dict[str, str], max_artifacts: int
             "resolved_authority": "", "artifact_url": "", "artifact_kind": "",
             "audit_status": "authority_unresolved", "result_rows": 0,
             "reporting_units": 0, "contests": 0, "has_text_layer": "",
-            "provisional_portability": "E", "needs_escalation": True,
+            "provisional_portability": "pending", "needs_escalation": True,
             "warnings": ";".join(warnings),
         }]
 
@@ -198,7 +198,7 @@ def audit_locality(client: httpx.Client, row: dict[str, str], max_artifacts: int
                 "resolved_authority": resolved, "artifact_url": art.url,
                 "artifact_kind": art.kind, "audit_status": "artifact_fetch_failed",
                 "result_rows": 0, "reporting_units": 0, "contests": 0,
-                "has_text_layer": "", "provisional_portability": "E",
+                "has_text_layer": "", "provisional_portability": "pending",
                 "needs_escalation": True,
                 "warnings": ";".join(warnings + [f"artifact_fail:{type(exc).__name__}"]),
             })
@@ -240,7 +240,7 @@ def main():
         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(audits)
 
     locality_best = {}
-    rank = {"A":0,"B":1,"C":2,"D":3,"E":4}
+    rank = {"A":0,"B":1,"C":2,"D":3,"E":4,"pending":9}
     for x in audits:
         cur = locality_best.get(x["locality"])
         if cur is None or rank.get(x["provisional_portability"],9) < rank.get(cur,9):
@@ -251,7 +251,7 @@ def main():
         "authority_resolved": len({x["locality"] for x in audits if x["resolved_authority"]}),
         "artifact_found": len({x["locality"] for x in audits if x["artifact_url"]}),
         "reporting_units_detected": sum(int(x["reporting_units"] or 0) for x in audits),
-        "portability": {k: sum(v == k for v in locality_best.values()) for k in ["A","B","C","D","E"]},
+        "portability": {k: sum(v == k for v in locality_best.values()) for k in ["A","B","C","D","E","pending"]},
         "escalations": sum(bool(x["needs_escalation"]) for x in audits),
     }
     args.summary.write_text(json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8")
