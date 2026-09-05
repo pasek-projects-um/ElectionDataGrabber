@@ -1,0 +1,25 @@
+name: Michigan county census smoke
+
+on:
+  pull_request:
+    paths:
+      - "registry/mi_county_authorities.csv"
+      - "registry/mi_county_capabilities.csv"
+      - "scripts/mi_county_platform_census.py"
+      - "src/election_data_grabber/discovery.py"
+      - "tests/test_mi_county_platform_census.py"
+      - ".github/workflows/mi-county-census-smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - name: Smoke first 3 county discoveries
+        run: python scripts/mi_county_platform_census.py --limit 3 --out /tmp/mi-census.csv
