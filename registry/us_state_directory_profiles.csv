@@ -1,0 +1,12 @@
+state,profile_type,expected_units,notes
+AK,state_results,40,"State-administered; enumerate election regions/districts and reporting units from statewide result products, not local authority links."
+LA,parish_directory,64,"Extract parish names and clerk/result targets from SOS directory/table/script payloads."
+MA,municipal_directory,351,"Extract city/town election offices from local-official lookup data rather than visible anchors only."
+MN,county_directory,87,"Extract county election offices; also retain statewide results backbone."
+ND,county_directory,53,"Extract county election officials from table/cards/script payloads; registration denominator is N/A."
+NM,county_directory,33,"Extract county clerk cards/table rows and clerk URLs."
+NY,county_board_directory,62,"Extract county BOE records and preserve NYC as a multi-county board authority."
+RI,municipal_directory,39,"Extract local boards of canvassers for cities/towns."
+SC,county_directory,46,"Extract county voter registration/election offices from cards/table payloads."
+VT,town_directory,247,"Enumerate town/city clerks using central clerk resources; preserve town reporting."
+WI,clerk_directory,1850,"Directory includes municipal and county clerks; extract structured directory/search payloads rather than anchors."
