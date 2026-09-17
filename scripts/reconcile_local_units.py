@@ -118,10 +118,14 @@ def main() -> None:
 
     for row in tracker:
         n=accepted_by_state.get(row["state"],0)
+        adjudicated=sum(int(row[k]) for k in ("known_final_only","known_election_night_only","known_both","known_units_missing_source"))
+        if adjudicated:
+            raise RuntimeError(
+                f"{row['state']}: aggregate capability counts already exist; "
+                "ID-level reconciliation is required before recomputing enumeration"
+            )
         row["enumerated_unresolved"]=str(n)
-        # Do not disturb adjudicated capability buckets.
-        accounted=n+sum(int(row[k]) for k in ("known_final_only","known_election_night_only","known_both","known_units_missing_source"))
-        row["estimated_unknown_units"]=str(max(0,int(row["expected_primary_units"])-accounted))
+        row["estimated_unknown_units"]=str(int(row["expected_primary_units"])-n)
         row["status"]="partially_enumerated" if n else row["status"]
 
     with args.tracker.open("w",newline="",encoding="utf-8") as f:
