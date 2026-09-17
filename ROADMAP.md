@@ -69,7 +69,7 @@ Current seeded planning denominator: approximately **4,054 primary local units a
 
 - [x] Define stable canonical jurisdiction/authority IDs. See `src/election_data_grabber/canonical_ids.py` and `docs/canonical_jurisdiction_identity.md`.
 - [x] Repair tracker invariant and distinguish enumerated-but-unresolved from genuinely unknown units. The tracker now enforces mutually exclusive accounting buckets and resets unreconciled states to estimated unknown.
-- [ ] Reconcile PR #11's 911 discovery observations to canonical jurisdictions.
+- [~] Reconcile PR #11's 911 discovery observations to canonical jurisdictions. Conservative URL-pattern reconciliation is now wired into the census workflow; only high-confidence locality matches are promoted, with the remainder retained for state-specific/manual reconciliation.
 - [ ] Classify each reconciled locality as final_only / election_night_only / both / known_missing_source.
 - [ ] Add evidence/provenance fields for every capability assignment.
 - [ ] Produce state and national scorecards: expected, enumerated, final-capable, election-night-capable, both, missing, unknown.
