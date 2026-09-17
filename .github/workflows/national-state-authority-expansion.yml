@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           if [ -n "${{ inputs.states }}" ]; then
-            python scripts/expand_state_authorities_from_central.py --states ${{ inputs.states }}
+            python scripts/expand_state_authorities_from_central.py\n          python scripts/reconcile_local_units.py --states ${{ inputs.states }}
           else
             python scripts/expand_state_authorities_from_central.py
           fi
