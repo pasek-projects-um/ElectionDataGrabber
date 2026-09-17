@@ -1,16 +1,19 @@
 # Local election source coverage tracker
 
-The tracker separates source discovery from source capability.
+The tracker separates **enumeration** from **source capability**.
 
-For each state's primary local units:
+Each expected primary local unit must be in exactly one mutually exclusive accounting bucket:
 
-- **known_final_only**: a usable historical/final/certified-results source is known, but no usable election-night source is yet known.
-- **known_election_night_only**: a usable election-night source is known, but we have not established a durable historical/final source.
-- **known_both**: both election-night and historical/final result sources are known for the unit.
-- **known_units_missing_source**: the canonical unit is known to exist, but neither useful source class has been established after investigation.
-- **estimated_unknown_units**: expected primary units not yet individually enumerated/adjudicated.
+- **enumerated_unresolved**: the canonical unit has been individually identified, but source capability has not yet been adjudicated.
+- **known_final_only**: historical/final/certified source established; election-night source not established.
+- **known_election_night_only**: election-night source established; durable historical/final source not established.
+- **known_both**: both source classes established.
+- **known_units_missing_source**: canonical unit is known and sufficiently investigated, but neither useful source class is established.
+- **estimated_unknown_units**: expected units not yet individually enumerated.
 
-Derived totals:
+Derived metrics:
+
+`enumerated = enumerated_unresolved + known_final_only + known_election_night_only + known_both + known_units_missing_source`
 
 `known_units_with_any_source = known_final_only + known_election_night_only + known_both`
 
@@ -18,10 +21,16 @@ Derived totals:
 
 `known_units_with_election_night = known_election_night_only + known_both`
 
-Planning invariant:
+Hard invariant:
 
-`expected_primary_units = known_final_only + known_election_night_only + known_both + known_units_missing_source + estimated_unknown_units`
+`expected_primary_units = enumerated + estimated_unknown_units`
 
-A failed crawl does not make a unit known-missing. Likewise, a certified precinct PDF does not imply election-night precinct reporting, and an election-night application does not imply that its historical files remain durably available.
+The updater and tests enforce this arithmetic. Counts cannot be negative.
 
-Primary units are source authorities, not precinct/reporting units. Secondary municipal sources may be tracked separately where they coexist with county authorities.
+## Transition rules
+
+Discovery does not itself establish a canonical unit. After reconciliation to a canonical jurisdiction ID, a unit moves from **estimated_unknown** to **enumerated_unresolved**. Evidence review then moves it into exactly one capability/missing bucket.
+
+A failed crawl never creates **known_missing_source**. A certified file never implies election-night capability, and an election-night application never implies durable historical/final capability.
+
+Primary units are source authorities, not precinct/reporting units. Raw discovery observations remain evidence and must not be counted as jurisdictions until reconciled.
