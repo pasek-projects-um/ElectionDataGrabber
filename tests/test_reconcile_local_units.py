@@ -10,3 +10,7 @@ def test_county_host_reconciles_high_confidence():
 def test_generic_state_page_does_not_reconcile():
     r={"state":"AZ","authority_url":"https://azsos.gov/elections/candidates","status":"reached"}
     assert infer(r,"county") is None
+
+def test_generic_result_url_without_county_marker_does_not_invent_identity():
+    r={"state":"IA","authority_url":"https://example.gov/elections/results","status":"reached"}
+    assert infer(r,"county") is None
