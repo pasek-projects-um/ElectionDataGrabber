@@ -27,7 +27,7 @@ COLUMN_ALIASES = {
     "contest": ("office", "contest", "race", "contest_name"),
     "candidate": ("candidate", "choice", "candidate_name", "option"),
     "party": ("party", "candidate_party"),
-    "ballot_order": ("ballot_order", "order", "position"),
+    # Generic result exports cannot establish voter-facing ballot position.\n    # Preserve order/position-like fields as source order unless a ballot-specific\n    # adapter supplies authoritative ballot_order evidence.\n    "source_order": ("source_order", "order", "position", "ballot_order"),
     "registered_voters": ("registered_voters", "registered", "registration"),
     "ballots_cast": ("ballots_cast", "total_ballots", "ballots"),
 }
@@ -75,7 +75,7 @@ def parse_generic_precinct_csv(
         contest = _first(raw, COLUMN_ALIASES["contest"])
         candidate = _first(raw, COLUMN_ALIASES["candidate"])
         party = _first(raw, COLUMN_ALIASES["party"])
-        ballot_order = _int(_first(raw, COLUMN_ALIASES["ballot_order"]))
+        source_order = _int(_first(raw, COLUMN_ALIASES["source_order"]))
         registered_voters = _int(_first(raw, COLUMN_ALIASES["registered_voters"]))
         ballots_cast = _int(_first(raw, COLUMN_ALIASES["ballots_cast"]))
         if not precinct or not contest or not candidate:
@@ -95,7 +95,7 @@ def parse_generic_precinct_csv(
                     reporting_unit_name=precinct,
                     contest_name=contest,
                     choice_name=candidate,
-                    ballot_order=ballot_order,
+                    source_order=source_order,
                     party=party,
                     votes=votes,
                     vote_mode=mode,
