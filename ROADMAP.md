@@ -65,13 +65,17 @@ Planning invariant:
 
 Current seeded planning denominator: approximately **4,054 primary local units across 24 states**. This is provisional and should be replaced state-by-state with authoritative enumeration.
 
+## Architecture audit findings
+
+The 2026-09-17 architecture audit is recorded in `docs/architecture_audit.md`. Immediate invariant fixes landed for generic ballot-order inference, reconciliation overflow, and unsafe aggregate tracker updates. Open P1 work: independent authority identity/crosswalks, persistent provisional-ID aliases, reporting-unit identity, and mandatory snapshot provenance.
+
 ## Immediate milestone: make coverage real
 
 - [x] Define stable canonical jurisdiction/authority IDs. See `src/election_data_grabber/canonical_ids.py` and `docs/canonical_jurisdiction_identity.md`.
 - [x] Repair tracker invariant and distinguish enumerated-but-unresolved from genuinely unknown units. The tracker now enforces mutually exclusive accounting buckets and resets unreconciled states to estimated unknown.
 - [~] Reconcile PR #11's 911 discovery observations to canonical jurisdictions. Conservative URL-pattern reconciliation is now wired into the census workflow; only high-confidence locality matches are promoted, with the remainder retained for state-specific/manual reconciliation.
 - [ ] Classify each reconciled locality as final_only / election_night_only / both / known_missing_source.
-- [ ] Add evidence/provenance fields for every capability assignment.
+- [ ] Add evidence/provenance fields for every capability assignment. Architecture audit also requires normalized observations to resolve to immutable snapshots.
 - [ ] Produce state and national scorecards: expected, enumerated, final-capable, election-night-capable, both, missing, unknown.
 - [ ] Add automated invariant tests so tracker arithmetic cannot regress.
 - [ ] Merge PR #11 after reconciliation and CI are green.
