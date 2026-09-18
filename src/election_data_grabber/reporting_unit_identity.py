@@ -91,6 +91,14 @@ class GeographicRelationshipType(StrEnum):
     UNKNOWN = "unknown"
 
 
+class AllocationCoverage(StrEnum):
+    """What an allocation weight claims about the reporting unit's geography."""
+
+    COMPLETE = "complete"
+    PARTIAL = "partial"
+    UNKNOWN = "unknown"
+
+
 @dataclass(frozen=True, slots=True)
 class ReportingContextSpec:
     state: str
@@ -312,6 +320,11 @@ class ReportingUnitGeographicCrosswalk:
     effective_to: date | None = None
     allocation_weight: float | None = None
     weight_basis: str | None = None
+    allocation_coverage: AllocationCoverage = AllocationCoverage.UNKNOWN
+    # Optional explicit share that is intentionally outside mapped geography:
+    # mail/absentee pools, tiny suppressed areas, or other source-native units.
+    unmapped_weight: float | None = None
+    unmapped_basis: str | None = None
     note: str | None = None
 
     def __post_init__(self) -> None:
@@ -329,6 +342,15 @@ class ReportingUnitGeographicCrosswalk:
                 raise ValueError("weighted geographic crosswalk requires weight_basis")
             if self.relationship_type in {GeographicRelationshipType.EXACT, GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC}:
                 raise ValueError("exact/non-geographic relationships must not invent allocation weights")
+        if self.unmapped_weight is not None:
+            if not 0 <= self.unmapped_weight <= 1:
+                raise ValueError("unmapped_weight must be between zero and one")
+            if not self.unmapped_basis:
+                raise ValueError("explicit unmapped share requires unmapped_basis")
+            if self.allocation_coverage != AllocationCoverage.PARTIAL:
+                raise ValueError("explicit unmapped share requires partial allocation coverage")
+        if self.allocation_coverage == AllocationCoverage.COMPLETE and self.unmapped_weight not in {None, 0}:
+            raise ValueError("complete allocation cannot reserve an unmapped share")
         if self.effective_from and self.effective_to and self.effective_to < self.effective_from:
             raise ValueError("effective_to cannot precede effective_from")
 
@@ -431,9 +453,9 @@ def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeogra
                 ):
                     raise ValueError(f"exact reporting unit maps to multiple geographies: {reporting_unit_id}")
 
-    # Allocation weights are only meaningful as a complete allocation for a
-    # reporting unit over a common effective interval. Reject partial/overfull
-    # weighted mappings and mixed weighted/unweighted rows for that interval.
+    # Weighted geography can be complete, partial, or unknown. Do not force
+    # source-native non-geographic votes (mail/absentee pools, suppressed tiny
+    # areas, etc.) into precinct geography merely to make weights sum to one.
     allocation_types = {
         GeographicRelationshipType.SPLIT_ACROSS,
         GeographicRelationshipType.AGGREGATE_OF,
@@ -446,12 +468,33 @@ def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeogra
             allocation_groups.setdefault((row.reporting_unit_id, row.effective_from, row.effective_to), []).append(row)
     for key, items in allocation_groups.items():
         weighted = [row for row in items if row.allocation_weight is not None]
-        if weighted and len(weighted) != len(items):
+        if not weighted:
+            continue
+        if len(weighted) != len(items):
             raise ValueError(f"mixed weighted and unweighted geographic allocation: {key}")
-        if weighted:
-            bases = {row.weight_basis for row in weighted}
-            if len(bases) != 1:
-                raise ValueError(f"inconsistent geographic allocation weight basis: {key}")
-            total = sum(row.allocation_weight or 0 for row in weighted)
+        bases = {row.weight_basis for row in weighted}
+        if len(bases) != 1:
+            raise ValueError(f"inconsistent geographic allocation weight basis: {key}")
+        coverages = {row.allocation_coverage for row in weighted}
+        if len(coverages) != 1:
+            raise ValueError(f"inconsistent geographic allocation coverage semantics: {key}")
+        total = sum(row.allocation_weight or 0 for row in weighted)
+        coverage = next(iter(coverages))
+        if total > 1.0 + 1e-9:
+            raise ValueError(f"geographic allocation weights exceed one: {key}")
+        unmapped = {row.unmapped_weight for row in weighted if row.unmapped_weight is not None}
+        unmapped_bases = {row.unmapped_basis for row in weighted if row.unmapped_weight is not None}
+        if len(unmapped) > 1 or len(unmapped_bases) > 1:
+            raise ValueError(f"inconsistent explicit unmapped share: {key}")
+        unmapped_weight = next(iter(unmapped), None)
+        if coverage == AllocationCoverage.COMPLETE:
             if abs(total - 1.0) > 1e-9:
-                raise ValueError(f"geographic allocation weights must sum to one: {key}")
+                raise ValueError(f"complete geographic allocation weights must sum to one: {key}")
+        elif coverage == AllocationCoverage.PARTIAL:
+            if total >= 1.0 - 1e-9:
+                raise ValueError(f"partial geographic allocation must leave a residual share: {key}")
+            if unmapped_weight is not None and abs(total + unmapped_weight - 1.0) > 1e-9:
+                raise ValueError(f"mapped plus explicit unmapped allocation must sum to one: {key}")
+        # UNKNOWN deliberately permits totals below one without inventing an
+        # allocation for the residual. Downstream consumers must not treat such
+        # weights as a complete partition.
