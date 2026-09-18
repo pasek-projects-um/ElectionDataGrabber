@@ -4,6 +4,10 @@ on:
     paths:
       - "src/election_data_grabber/**"
       - "tests/test_national_canaries.py"
+      - "tests/test_source_capabilities.py"
+      - "tests/test_locality_registry.py"
+      - "tests/test_*_locality_registry.py"
+      - "scripts/generate_locality_coverage_tracker.py"
       - "registry/us_state_directory_profiles.csv"
       - "registry/us_primary_election_localities.csv"
       - "registry/us_primary_election_locality_denominators.csv"
