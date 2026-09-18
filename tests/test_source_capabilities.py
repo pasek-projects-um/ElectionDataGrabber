@@ -105,3 +105,30 @@ def test_registry_capability_rows_are_structurally_complete():
     assert all(r.evidence_snapshot_sha256 or r.evidence_reference for r in caps)
     assert all(r.assessment_method for r in caps)
     assert all(r.source_id for r in caps)
+
+
+def test_shared_normalized_source_id_is_allowed_across_jurisdictions():
+    a=cap(source="statewide-feed")
+    b=JurisdictionSourceCapability(
+        "us:mi:county:b","us:authority:mi:county-clerk:b","statewide-feed",CapabilityType.FINAL,
+        verification_status=VerificationStatus.VERIFIED,assessment_method="fixture",evidence_reference="fixture")
+    validate_source_capabilities([a,b])
+
+
+def test_capability_authority_must_match_canonical_locality():
+    class L:
+        jurisdiction_id="us:mi:county:a"
+        authority_id="us:authority:mi:county-clerk:a"
+    bad=JurisdictionSourceCapability(
+        "us:mi:county:a","us:authority:mi:county-clerk:wrong","one",CapabilityType.FINAL,
+        verification_status=VerificationStatus.VERIFIED,assessment_method="fixture",evidence_reference="fixture")
+    with pytest.raises(ValueError):
+        validate_locality_bindings([bad],[L()])
+
+
+def test_invalid_sha256_is_rejected():
+    with pytest.raises(ValueError):
+        JurisdictionSourceCapability(
+            "us:mi:county:a","us:authority:mi:county-clerk:a","one",CapabilityType.FINAL,
+            evidence_snapshot_sha256="g"*64,verification_status=VerificationStatus.VERIFIED,
+            assessment_method="fixture")
