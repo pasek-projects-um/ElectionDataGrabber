@@ -27,3 +27,4 @@ MI,83,county,,,high_confidence,,existing_mi_county_authority_registry,"83 county
 OH,88,county,,,high_confidence,,existing_oh_county_authority_registry,"88 county boards of elections enumerated in repository registry"
 CT,169,municipality,,,high_confidence,,historical_ct_town_registry,"169 towns; historical counties retained only as metadata, not denominator units"
 PA,67,county,,,high_confidence,,historical_pa_county_registry,"67 counties; statewide bulk results provide final-result floor"
+ME,350,municipality,,,high_confidence,,existing_me_locality_registry,"350 municipality/plantation locality candidates enumerated in repository; ward/precinct reporting topology excluded from denominator"
