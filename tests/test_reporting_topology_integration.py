@@ -54,9 +54,9 @@ def test_pa_generic_precinct_source_uses_canonical_reporting_context():
 def test_maine_ward_reporting_units_do_not_change_primary_locality_identity():
     payload={"reporting_units":[{"id":"ward-2","name":"Ward 2","contests":[{"name":"Council","choices":[{"name":"A","votes":3}]}]}]}
     context=ctx("ME","us:me:municipality:portland","us:authority:me:municipal-clerk:portland-municipal-clerk")
-    rows=parse_generic_results_json(payload,election_id="2024-general",jurisdiction_id="legacy",source_id="fixture-source",fetched_at=NOW,reporting_context=context)
+    rows=parse_generic_results_json(payload,election_id="2024-general",jurisdiction_id="legacy",source_id="fixture-source",fetched_at=NOW,reporting_context=context,reporting_unit_type=UnitType.WARD)
     assert rows[0].jurisdiction_id == "us:me:municipality:portland"
-    assert "reporting-unit:precinct" in rows[0].reporting_unit_id
+    assert "reporting-unit:ward" in rows[0].reporting_unit_id
     assert rows[0].reporting_unit_source_native_id == "ward-2"
 
 def test_geography_crosswalk_allows_zero_one_many_without_fake_allocation():
@@ -77,3 +77,25 @@ def test_geography_crosswalk_rejects_fake_precinct_and_conflicting_temporal_sema
 def test_allocation_weight_requires_evidence_basis():
     with pytest.raises(ValueError):
         ReportingUnitGeographicCrosswalk("ru:p2","geo:ward:1",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.5)
+
+
+def test_context_rejects_election_and_source_mismatch():
+    context=ctx("PA","us:pa:county:philadelphia","us:authority:pa:county-election-office:philadelphia-county-election-office")
+    with pytest.raises(ValueError):
+        parse_generic_precinct_csv(b"precinct,contest,candidate,total\nP1,C,A,1\n",election_id="2022-general",jurisdiction_id="legacy",source_id="fixture-source",fetched_at=NOW,reporting_context=context)
+    with pytest.raises(ValueError):
+        parse_generic_precinct_csv(b"precinct,contest,candidate,total\nP1,C,A,1\n",election_id="2024-general",jurisdiction_id="legacy",source_id="wrong-source",fetched_at=NOW,reporting_context=context)
+
+
+def test_context_requires_immutable_snapshot_provenance():
+    with pytest.raises(ValueError):
+        AdapterReportingContext("ME","2024-general","us:me:municipality:portland","us:authority:me:municipal-clerk:portland-municipal-clerk","fixture-source","final","certified","")
+
+
+def test_generic_json_order_is_source_order_not_unverified_ballot_order():
+    payload={"reporting_units":[{"id":"p1","name":"P1","contests":[{"name":"Mayor","choices":[{"name":"A","votes":3,"order":7}]}]}]}
+    context=ctx("PA","us:pa:county:philadelphia","us:authority:pa:county-election-office:philadelphia-county-election-office")
+    row=parse_generic_results_json(payload,election_id="2024-general",jurisdiction_id="legacy",source_id="fixture-source",fetched_at=NOW,reporting_context=context)[0]
+    assert row.source_order == 7
+    assert row.ballot_order is None
+    assert row.snapshot_sha256 == SHA
