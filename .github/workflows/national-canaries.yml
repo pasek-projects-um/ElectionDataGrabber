@@ -6,6 +6,7 @@ on:
       - "tests/test_national_canaries.py"
       - "tests/test_reporting_unit_identity.py"
       - "tests/test_reporting_topology_integration.py"
+      - "tests/test_identity_aliases_vote_modes.py"
       - "tests/test_source_capabilities.py"
       - "tests/test_locality_registry.py"
       - "tests/test_*_locality_registry.py"
@@ -31,4 +32,4 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_national_canaries.py tests/test_provenance.py tests/test_authority_identity.py tests/test_canonical_ids.py tests/test_reporting_unit_identity.py tests/test_reporting_topology_integration.py tests/test_washtenaw_adapter.py tests/test_washtenaw_html_adapter.py tests/test_clarity_xml_adapter.py tests/test_platform_adapters.py tests/test_locality_registry.py tests/test_mi_oh_locality_registry.py tests/test_reconcile_local_units.py tests/test_ct_pa_locality_registry.py tests/test_me_locality_registry.py tests/test_source_capabilities.py
+      - run: pytest -q tests/test_national_canaries.py tests/test_provenance.py tests/test_authority_identity.py tests/test_canonical_ids.py tests/test_reporting_unit_identity.py tests/test_reporting_topology_integration.py tests/test_identity_aliases_vote_modes.py tests/test_washtenaw_adapter.py tests/test_washtenaw_html_adapter.py tests/test_clarity_xml_adapter.py tests/test_platform_adapters.py tests/test_locality_registry.py tests/test_mi_oh_locality_registry.py tests/test_reconcile_local_units.py tests/test_ct_pa_locality_registry.py tests/test_me_locality_registry.py tests/test_source_capabilities.py
