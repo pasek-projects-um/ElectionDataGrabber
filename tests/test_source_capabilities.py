@@ -92,3 +92,16 @@ def test_legacy_source_identity_cannot_be_reused_across_jurisdictions():
         verification_status=VerificationStatus.VERIFIED,assessment_method="fixture",evidence_reference="fixture")
     with pytest.raises(ValueError):
         validate_source_capabilities([a,b])
+
+
+def test_registry_capability_rows_are_structurally_complete():
+    localities=read_localities(ROOT/"registry/us_primary_election_localities.csv")
+    caps=read_source_capabilities(ROOT/"registry/jurisdiction_source_capabilities.csv")
+    validate_source_capabilities(caps)
+    by_id={r.jurisdiction_id:r for r in localities}
+    assert len(caps)==488
+    assert all(r.jurisdiction_id in by_id for r in caps)
+    assert all(r.authority_id == by_id[r.jurisdiction_id].authority_id for r in caps)
+    assert all(r.evidence_snapshot_sha256 or r.evidence_reference for r in caps)
+    assert all(r.assessment_method for r in caps)
+    assert all(r.source_id for r in caps)
