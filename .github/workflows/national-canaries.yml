@@ -1,0 +1,24 @@
+name: National shared-core canaries
+on:
+  pull_request:
+    paths:
+      - "src/election_data_grabber/**"
+      - "tests/test_national_canaries.py"
+      - "registry/us_state_directory_profiles.csv"
+      - ".github/workflows/national-canaries.yml"
+  workflow_dispatch:
+
+jobs:
+  canaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+      - run: pip install -e '.[dev]'
+      - run: pytest -q tests/test_national_canaries.py tests/test_provenance.py tests/test_authority_identity.py tests/test_canonical_ids.py
