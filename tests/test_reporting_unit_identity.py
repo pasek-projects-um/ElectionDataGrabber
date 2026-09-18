@@ -80,3 +80,33 @@ def test_duplicate_crosswalk_fails_validation():
     row = ReportingUnitCrosswalk("a", "b", RelationshipType.COMPONENT_OF, "source", SHA)
     with pytest.raises(ValueError):
         validate_reporting_unit_crosswalks([row, row])
+
+
+def test_reporting_unit_id_rejects_regime_state_or_election_mismatch():
+    regime = reporting_regime_id("us:mi:county:washtenaw", "2024-general", "certified", "source")
+    with pytest.raises(ValueError):
+        reporting_unit_id("OH", "2024-general", regime, UnitType.PRECINCT, "P1")
+    with pytest.raises(ValueError):
+        reporting_unit_id("MI", "2022-general", regime, UnitType.PRECINCT, "P1")
+
+
+def test_canonical_unit_rejects_id_component_drift_and_self_parent():
+    regime = reporting_regime_id("us:mi:county:washtenaw", "2024-general", "certified", "source")
+    good = reporting_unit_id("MI", "2024-general", regime, UnitType.PRECINCT, "P1", "001")
+    args = (
+        good, "2024-general", "us:mi:county:washtenaw",
+        "us:authority:mi:county-clerk:washtenaw", "source", "final", regime,
+        UnitType.PRECINCT, "Precinct 1", "P1", SHA, "001",
+    )
+    CanonicalReportingUnit(*args)
+    with pytest.raises(ValueError):
+        CanonicalReportingUnit("ru:wrong", *args[1:])
+    with pytest.raises(ValueError):
+        CanonicalReportingUnit(*args, parent_reporting_unit_id=good)
+
+
+def test_reporting_crosswalk_rejects_overlapping_conflicting_semantics():
+    a = ReportingUnitCrosswalk("ru:a", "ru:b", RelationshipType.RENAMED_TO, "source", SHA, effective_from=date(2024,1,1))
+    b = ReportingUnitCrosswalk("ru:a", "ru:b", RelationshipType.SAME_AS, "source", SHA, effective_from=date(2024,6,1))
+    with pytest.raises(ValueError):
+        validate_reporting_unit_crosswalks([a, b])
