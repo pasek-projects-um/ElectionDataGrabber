@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Any
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 def parse_generic_results_json(
@@ -13,6 +14,7 @@ def parse_generic_results_json(
     jurisdiction_id: str,
     source_id: str,
     fetched_at: datetime,
+    reporting_context: AdapterReportingContext | None = None,
 ) -> list[ResultObservation]:
     """Parse a simple contest -> choices JSON feed shape used as an adapter contract fixture.
 
@@ -44,9 +46,12 @@ def parse_generic_results_json(
                 observations.append(
                     ResultObservation(
                         election_id=election_id,
-                        jurisdiction_id=jurisdiction_id,
-                        reporting_unit_id=f"{jurisdiction_id}:{unit_id}",
+                        jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
+                        reporting_unit_id=(reporting_context.unit_id(UnitType.PRECINCT, unit_name, unit_id) if reporting_context else f"{jurisdiction_id}:{unit_id}"),
                         reporting_unit_name=unit_name,
+                        reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                        reporting_unit_raw_name=unit_name,
+                        reporting_unit_source_native_id=unit_id,
                         contest_name=contest_name,
                         choice_name=name,
                         ballot_order=choice.get("order"),
