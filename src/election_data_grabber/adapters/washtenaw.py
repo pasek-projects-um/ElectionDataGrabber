@@ -29,6 +29,9 @@ class WashtenawAdapter(Adapter):
     ]
 
     def parse(self, body: bytes, *, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
+        election_id = "2026-08-04-mi-primary"
+        if reporting_context is not None:
+            reporting_context.validate_call(election_id=election_id, source_id=self.source.source_id)
         soup = BeautifulSoup(body, "html.parser")
         text = soup.get_text(" ", strip=True)
         report_ts = self._parse_report_timestamp(text)
@@ -77,12 +80,13 @@ class WashtenawAdapter(Adapter):
             ):
                 observations.append(
                     ResultObservation(
-                        election_id="2026-08-04-mi-primary",
-                        jurisdiction_id="mi-washtenaw",
+                        election_id=election_id,
+                        jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else "mi-washtenaw"),
                         reporting_unit_id=reporting_unit_id,
                         reporting_unit_name=reporting_unit_name,
                         reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
                         reporting_unit_raw_name=reporting_unit_name,
+                        snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                         contest_name=current_contest,
                         choice_name=choice,
                         ballot_order=ballot_order,
