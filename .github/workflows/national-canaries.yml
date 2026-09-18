@@ -4,7 +4,15 @@ on:
     paths:
       - "src/election_data_grabber/**"
       - "tests/test_national_canaries.py"
+      - "tests/test_source_capabilities.py"
+      - "tests/test_locality_registry.py"
+      - "tests/test_*_locality_registry.py"
+      - "scripts/generate_locality_coverage_tracker.py"
       - "registry/us_state_directory_profiles.csv"
+      - "registry/us_primary_election_localities.csv"
+      - "registry/us_primary_election_locality_denominators.csv"
+      - "registry/us_local_unit_coverage_tracker.csv"
+      - "registry/jurisdiction_source_capabilities.csv"
       - ".github/workflows/national-canaries.yml"
   workflow_dispatch:
 
@@ -21,4 +29,4 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_national_canaries.py tests/test_provenance.py tests/test_authority_identity.py tests/test_canonical_ids.py tests/test_reporting_unit_identity.py tests/test_locality_registry.py tests/test_mi_oh_locality_registry.py tests/test_reconcile_local_units.py tests/test_ct_pa_locality_registry.py tests/test_me_locality_registry.py
+      - run: pytest -q tests/test_national_canaries.py tests/test_provenance.py tests/test_authority_identity.py tests/test_canonical_ids.py tests/test_reporting_unit_identity.py tests/test_locality_registry.py tests/test_mi_oh_locality_registry.py tests/test_reconcile_local_units.py tests/test_ct_pa_locality_registry.py tests/test_me_locality_registry.py tests/test_source_capabilities.py

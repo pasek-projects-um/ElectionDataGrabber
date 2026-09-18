@@ -82,7 +82,18 @@ class LocalityDenominator:
             raise ValueError("denominator requires provenance method")
 
 
-def derive_tracker(localities: list[PrimaryElectionLocality], denominators: list[LocalityDenominator]) -> list[dict[str, str]]:
+def derive_tracker(
+    localities: list[PrimaryElectionLocality],
+    denominators: list[LocalityDenominator],
+    capability_map: dict[str, tuple[bool, bool]] | None = None,
+) -> list[dict[str, str]]:
+    """Derive coverage counts.
+
+    When capability_map is supplied it is authoritative for positive source
+    capability. Stored locality capability fields are then compatibility data
+    only. KNOWN_MISSING_SOURCE remains an explicit affirmative adjudication;
+    absence of a positive source record never implies missing-source status.
+    """
     by_state: dict[str, dict[CoverageStatus, int]] = {}
     seen: set[str] = set()
     for row in localities:
@@ -90,7 +101,20 @@ def derive_tracker(localities: list[PrimaryElectionLocality], denominators: list
             raise ValueError(f"duplicate locality: {row.jurisdiction_id}")
         seen.add(row.jurisdiction_id)
         counts = by_state.setdefault(row.state, {s: 0 for s in CoverageStatus})
-        counts[row.coverage_status] += 1
+        status = row.coverage_status
+        if capability_map is not None:
+            final, live = capability_map.get(row.jurisdiction_id, (False, False))
+            if final and live:
+                status = CoverageStatus.BOTH
+            elif final:
+                status = CoverageStatus.FINAL_ONLY
+            elif live:
+                status = CoverageStatus.ELECTION_NIGHT_ONLY
+            elif row.coverage_status == CoverageStatus.KNOWN_MISSING_SOURCE:
+                status = CoverageStatus.KNOWN_MISSING_SOURCE
+            else:
+                status = CoverageStatus.ENUMERATED_UNRESOLVED
+        counts[status] += 1
 
     out = []
     national_expected = national_enumerated = 0
