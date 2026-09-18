@@ -118,6 +118,9 @@ class ResultObservation(BaseModel):
     jurisdiction_id: str
     reporting_unit_id: str
     reporting_unit_name: str
+    reporting_regime_id: str | None = None
+    reporting_unit_raw_name: str | None = None
+    reporting_unit_source_native_id: str | None = None
     contest_id: str | None = None
     contest_name: str
     choice_id: str | None = None
