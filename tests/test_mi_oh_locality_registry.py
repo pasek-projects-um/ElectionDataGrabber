@@ -36,6 +36,7 @@ def test_mi_oh_authority_crosswalks_are_valid_and_cover_every_locality():
     wanted={r.jurisdiction_id for r in rows if r.state in {"MI","OH"}}
     with (ROOT/"registry/authority_jurisdiction_crosswalk.csv").open(encoding="utf-8-sig") as f:
         raw=list(csv.DictReader(f))
-    cross=[AuthorityJurisdictionCrosswalk(r["authority_id"],r["jurisdiction_id"],evidence_url=r["evidence_url"] or None) for r in raw]\n    mi_oh_cross=[r for r in cross if r.jurisdiction_id.startswith(("us:mi:", "us:oh:"))]
+    cross=[AuthorityJurisdictionCrosswalk(r["authority_id"],r["jurisdiction_id"],evidence_url=r["evidence_url"] or None) for r in raw]
+    mi_oh_cross=[r for r in cross if r.jurisdiction_id.startswith(("us:mi:", "us:oh:"))]
     validate_crosswalks(cross)
     assert {r.jurisdiction_id for r in mi_oh_cross}==wanted
