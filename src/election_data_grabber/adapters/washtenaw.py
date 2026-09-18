@@ -85,7 +85,7 @@ class WashtenawAdapter(Adapter):
                         reporting_unit_id=reporting_unit_id,
                         reporting_unit_name=reporting_unit_name,
                         reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
-                        reporting_unit_raw_name=reporting_unit_name,
+                        reporting_unit_raw_name=(reporting_unit_name if reporting_context else None),
                         snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                         contest_name=current_contest,
                         choice_name=choice,
