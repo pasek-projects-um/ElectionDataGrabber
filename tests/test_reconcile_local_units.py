@@ -1,4 +1,4 @@
-from scripts.reconcile_local_units import infer
+from scripts.reconcile_local_units import infer, candidate_authority_id
 
 def test_county_host_reconciles_high_confidence():
     r={"state":"IA","authority_url":"https://www.grundycountyiowa.gov/departments/auditor","status":"reached"}
@@ -14,3 +14,9 @@ def test_generic_state_page_does_not_reconcile():
 def test_generic_result_url_without_county_marker_does_not_invent_identity():
     r={"state":"IA","authority_url":"https://example.gov/elections/results","status":"reached"}
     assert infer(r,"county") is None
+
+
+def test_reconciliation_uses_independent_authority_namespace():
+    r={"state":"IA","authority_url":"https://www.grundycountyiowa.gov/departments/auditor","status":"reached"}
+    c=infer(r,"county")
+    assert candidate_authority_id(c).startswith("us:authority:ia:")

@@ -7,7 +7,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlparse
 
-from election_data_grabber.canonical_ids import authority_id, jurisdiction_id
+from election_data_grabber.canonical_ids import jurisdiction_id
+from election_data_grabber.authority_identity import election_authority_id
 
 GENERIC = {
     "elections","election","voting","vote","results","result","auditor","auditors",
@@ -62,6 +63,11 @@ def infer(row: dict[str, str], model: str) -> Candidate | None:
     return Candidate(row["state"], token, level, url, "high", "county_url_pattern")
 
 
+def candidate_authority_id(candidate: Candidate) -> str:
+    """Return a provisional independent authority ID for reconciled discovery evidence."""
+    return election_authority_id(candidate.state, "election", f"{candidate.name_token} election authority")
+
+
 def main() -> None:
     ap=argparse.ArgumentParser()
     ap.add_argument("--observations", type=Path, default=Path("audit/us-state-central-authority-expansion.csv"))
@@ -100,7 +106,7 @@ def main() -> None:
         for jid,c in accepted:
             output.append({
                 "jurisdiction_id":jid,
-                "authority_id":authority_id(jid,"election"),
+                "authority_id":candidate_authority_id(c),
                 "state":state,
                 "jurisdiction_level":c.jurisdiction_level,
                 "canonical_name":c.name_token.replace("-"," ").title(),
