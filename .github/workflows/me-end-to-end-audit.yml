@@ -4,12 +4,13 @@ on:
     paths:
       - "registry/me_locality_authorities.csv"
       - "registry/me_locality_capabilities.csv"
-      - "src/election_data_grabber/**"
       - "scripts/audit_maine_end_to_end.py"
       - "scripts/triage_maine_pending.py"
       - "tests/test_maine_end_to_end_audit.py"
       - ".github/workflows/me-end-to-end-audit.yml"
   workflow_dispatch:
+  schedule:
+    - cron: "23 7 * * *"
 
 jobs:
   validate:
