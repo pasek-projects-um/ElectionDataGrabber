@@ -13,6 +13,7 @@ from election_data_grabber.reporting_unit_identity import (
     reporting_regime_id,
     reporting_unit_id,
     validate_reporting_unit_crosswalks,
+    validate_reporting_unit_hierarchy,
     UnitType,
 )
 
@@ -110,3 +111,32 @@ def test_reporting_crosswalk_rejects_overlapping_conflicting_semantics():
     b = ReportingUnitCrosswalk("ru:a", "ru:b", RelationshipType.SAME_AS, "source", SHA, effective_from=date(2024,6,1))
     with pytest.raises(ValueError):
         validate_reporting_unit_crosswalks([a, b])
+
+
+def _unit(name, native, parent=None, election="2024-general", jurisdiction="us:mi:county:washtenaw", regime=None):
+    regime = regime or reporting_regime_id(jurisdiction, election, "certified", "source")
+    state = jurisdiction.split(":")[1].upper()
+    uid = reporting_unit_id(state, election, regime, UnitType.PRECINCT, name, native)
+    return CanonicalReportingUnit(
+        uid, election, jurisdiction, "us:authority:mi:county-clerk:washtenaw",
+        "source", "final", regime, UnitType.PRECINCT, name, name, SHA, native,
+        parent_reporting_unit_id=parent,
+    )
+
+
+def test_reporting_unit_hierarchy_requires_same_regime_known_parent_and_acyclic_graph():
+    parent = _unit("Ward 1", "w1")
+    child = _unit("Precinct 1", "p1", parent.reporting_unit_id)
+    validate_reporting_unit_hierarchy([parent, child])
+    with pytest.raises(ValueError):
+        validate_reporting_unit_hierarchy([child])
+    a = _unit("A", "a")
+    b = _unit("B", "b", a.reporting_unit_id)
+    a_cycle = CanonicalReportingUnit(
+        a.reporting_unit_id, a.election_id, a.jurisdiction_id, a.authority_id,
+        a.source_id, a.source_capability_type, a.reporting_regime_id, a.unit_type,
+        a.canonical_name, a.raw_name, a.snapshot_sha256, a.source_native_id,
+        parent_reporting_unit_id=b.reporting_unit_id,
+    )
+    with pytest.raises(ValueError):
+        validate_reporting_unit_hierarchy([a_cycle, b])
