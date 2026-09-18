@@ -2,6 +2,7 @@ state,expected_primary_units,enumerated_unresolved,known_final_only,known_electi
 AK,1,0,0,0,0,0,1,0,0,0,state/election-region,provisional,migrated_from_existing_tracker
 AL,67,0,0,0,0,0,67,0,0,0,county,provisional,migrated_from_existing_tracker
 AZ,15,0,0,0,0,0,15,0,0,0,county,provisional,migrated_from_existing_tracker
+CT,169,169,0,0,0,0,0,0,0,0,municipality,high_confidence,historical_ct_town_registry
 GA,159,0,0,0,0,0,159,0,0,0,county,provisional,migrated_from_existing_tracker
 HI,4,0,0,0,0,0,4,0,0,0,state+county,provisional,migrated_from_existing_tracker
 IA,99,0,0,0,0,0,99,0,0,0,county,provisional,migrated_from_existing_tracker
@@ -20,6 +21,7 @@ NM,33,0,0,0,0,0,33,0,0,0,county+state,provisional,migrated_from_existing_tracker
 NY,58,0,0,0,0,0,58,0,0,0,county+board-of-elections,provisional,migrated_from_existing_tracker
 OH,88,0,12,0,76,0,0,88,88,76,county,high_confidence,existing_oh_county_authority_registry
 OR,36,0,0,0,0,0,36,0,0,0,county,provisional,migrated_from_existing_tracker
+PA,67,0,66,0,1,0,0,67,67,1,county,high_confidence,historical_pa_county_registry
 RI,39,0,0,0,0,0,39,0,0,0,state+municipal,provisional,migrated_from_existing_tracker
 SC,46,0,0,0,0,0,46,0,0,0,county+state,provisional,migrated_from_existing_tracker
 VA,133,0,0,0,0,0,133,0,0,0,county+independent-city,provisional,migrated_from_existing_tracker
