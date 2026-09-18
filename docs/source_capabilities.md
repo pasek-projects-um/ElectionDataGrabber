@@ -18,6 +18,6 @@ A capability must bind to a canonical locality and its independent election auth
 
 ## Coverage compatibility
 
-The national coverage tracker remains a generated view of canonical localities and denominators. During migration, CI requires the first-class source-capability relation to reproduce locality final/election-night flags exactly. The locality flags remain a compatibility surface until downstream reporting-regime consumers migrate; they are not intended to become a second independently maintained capability truth.
+The national coverage tracker remains a generated view of canonical localities and denominators. The generated tracker now derives positive final/election-night coverage from the first-class source-capability relation. CI also requires that relation to reproduce the existing locality final/election-night compatibility fields exactly during migration. Those locality fields remain readable for downstream consumers until reporting-regime migration, but they are no longer authoritative inputs to generated positive coverage. `known_missing_source` remains an explicit locality adjudication because absence of a positive source relation is not evidence of absence.
 
 Failed fetches, parser failures, discovery misses, and unsupported artifacts do not establish source absence and cannot create a positive capability or `known_missing_source`.
