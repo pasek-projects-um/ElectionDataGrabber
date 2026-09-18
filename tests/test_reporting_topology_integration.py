@@ -43,7 +43,7 @@ def test_ohio_precinct_detail_preserves_raw_and_source_native_identity():
     assert r.reporting_regime_id == context.regime_id
     assert r.reporting_unit_raw_name == "001"
     assert r.reporting_unit_source_native_id == "001"
-    assert r.reporting_unit_id.startswith("us:oh:election:2024-general:reporting-unit:precinct:")
+    assert r.reporting_unit_id.startswith("us:oh:county:franklin:election:2024-general:regime:certified:fixture-source:reporting-unit:precinct:")
 
 def test_pa_generic_precinct_source_uses_canonical_reporting_context():
     body=b"precinct,contest,candidate,total,mail\nDIV 01,Mayor,Alice,10,4\n"
