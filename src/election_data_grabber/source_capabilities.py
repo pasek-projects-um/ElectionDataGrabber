@@ -164,6 +164,7 @@ def validate_locality_bindings(
         valid_pairs = {
             (getattr(r, "authority_id"), getattr(r, "jurisdiction_id"))
             for r in authority_crosswalks
+            if getattr(r, "status", "verified") == "verified"
         }
 
     for capability in rows:
