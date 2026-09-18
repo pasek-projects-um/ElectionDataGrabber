@@ -100,7 +100,7 @@ def parse_enhanced_voting_html(body: bytes, *, election_id: str, jurisdiction_id
                     election_id=election_id,jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
                     reporting_unit_id=(reporting_context.unit_id(UnitType.PRECINCT, str(unit), str(unit)) if reporting_context else f"{jurisdiction_id}:{unit}"),reporting_unit_name=str(unit),
                     reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
-                    reporting_unit_raw_name=str(unit),reporting_unit_source_native_id=str(unit),
+                    reporting_unit_raw_name=(str(unit) if reporting_context else None),reporting_unit_source_native_id=(str(unit) if reporting_context else None),
                     snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                     contest_name=str(contest),choice_name=str(choice),party=str(party) if party else None,
                     votes=votes,vote_mode=mode,source_id=source_id,fetched_at=fetched_at,
