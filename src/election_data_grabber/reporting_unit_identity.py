@@ -92,6 +92,38 @@ class GeographicRelationshipType(StrEnum):
 
 
 @dataclass(frozen=True, slots=True)
+class ReportingContextSpec:
+    state: str
+    election_id: str
+    jurisdiction_id: str
+    authority_id: str
+    source_id: str
+    source_capability_type: str
+    regime_kind: str
+
+    @classmethod
+    def from_source_capability(cls, *, state: str, election_id: str, regime_kind: str, capability: object) -> "ReportingContextSpec":
+        if not getattr(capability, "is_positive", False):
+            raise ValueError("reporting context requires positively adjudicated source capability")
+        capability_type = str(getattr(capability, "capability_type", ""))
+        if regime_kind == "election-night" and capability_type != "election_night":
+            raise ValueError("election-night regime requires election-night source capability")
+        if regime_kind in {"certified", "final"} and capability_type != "final":
+            raise ValueError("certified/final regime requires final source capability")
+        return cls(
+            state, election_id, getattr(capability, "jurisdiction_id"),
+            getattr(capability, "authority_id"), getattr(capability, "source_id"),
+            capability_type, regime_kind,
+        )
+
+    def for_snapshot(self, snapshot_sha256: str) -> "AdapterReportingContext":
+        return AdapterReportingContext(
+            self.state, self.election_id, self.jurisdiction_id, self.authority_id,
+            self.source_id, self.source_capability_type, self.regime_kind, snapshot_sha256,
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class AdapterReportingContext:
     state: str
     election_id: str
