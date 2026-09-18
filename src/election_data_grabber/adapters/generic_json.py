@@ -55,6 +55,7 @@ def parse_generic_results_json(
                         reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
                         reporting_unit_raw_name=unit_name,
                         reporting_unit_source_native_id=unit_id,
+                        snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                         contest_name=contest_name,
                         choice_name=name,
                         source_order=choice.get("order"),
