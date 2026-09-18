@@ -130,3 +130,17 @@ def test_geography_validator_rejects_exclusive_cross_target_contradictions():
     mapped=ReportingUnitGeographicCrosswalk("ru:x","geo:a",GeographicRelationshipType.APPROXIMATE,"source",SHA)
     with pytest.raises(ValueError):
         validate_reporting_unit_geographic_crosswalks([synthetic,mapped])
+
+
+def test_geographic_allocation_weights_must_be_complete_and_consistent():
+    a=ReportingUnitGeographicCrosswalk("ru:p2","geo:a",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.4,weight_basis="registered_voters")
+    b=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="registered_voters")
+    validate_reporting_unit_geographic_crosswalks([a,b])
+    with pytest.raises(ValueError):
+        validate_reporting_unit_geographic_crosswalks([a])
+    mixed=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA)
+    with pytest.raises(ValueError):
+        validate_reporting_unit_geographic_crosswalks([a,mixed])
+    wrong_basis=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="ballots_cast")
+    with pytest.raises(ValueError):
+        validate_reporting_unit_geographic_crosswalks([a,wrong_basis])
