@@ -21,7 +21,8 @@ SHA = "a" * 64
 
 
 def rid(jurisdiction, election, regime, raw, native=""):
-    return reporting_unit_id("MI", election, regime, UnitType.PRECINCT, raw, native)
+    state = regime.split(":")[1].upper()
+    return reporting_unit_id(state, election, regime, UnitType.PRECINCT, raw, native)
 
 
 def test_same_name_different_jurisdictions_and_elections_do_not_collide():
