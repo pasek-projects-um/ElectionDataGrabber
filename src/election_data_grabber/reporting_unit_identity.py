@@ -125,6 +125,24 @@ class AdapterReportingContext:
     def unit_id(self, unit_type: UnitType, raw_name: str, source_native_id: str = "") -> str:
         return reporting_unit_id(self.state, self.election_id, self.regime_id, unit_type, raw_name, source_native_id)
 
+    @classmethod
+    def from_source_capability(cls, *, state: str, election_id: str, regime_kind: str, snapshot_sha256: str, capability: object) -> "AdapterReportingContext":
+        if not getattr(capability, "is_positive", False):
+            raise ValueError("reporting context requires positively adjudicated source capability")
+        capability_type = str(getattr(capability, "capability_type", ""))
+        if regime_kind == "election-night" and capability_type != "election_night":
+            raise ValueError("election-night regime requires election-night source capability")
+        if regime_kind in {"certified", "final"} and capability_type != "final":
+            raise ValueError("certified/final regime requires final source capability")
+        return cls(
+            state=state, election_id=election_id,
+            jurisdiction_id=getattr(capability, "jurisdiction_id"),
+            authority_id=getattr(capability, "authority_id"),
+            source_id=getattr(capability, "source_id"),
+            source_capability_type=capability_type, regime_kind=regime_kind,
+            snapshot_sha256=snapshot_sha256,
+        )
+
 
 def reporting_regime_id(jurisdiction_id: str, election_id: str, regime_kind: str, source_id: str) -> str:
     if not jurisdiction_id.startswith("us:"):
@@ -297,3 +315,24 @@ def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeogra
                 if _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
                     if left.relationship_type != right.relationship_type:
                         raise ValueError(f"conflicting geographic relationships in overlapping periods: {key}")
+
+    # Some semantics are exclusive at the reporting-unit level, not merely for
+    # a reporting/geographic pair. An exact unit cannot simultaneously be exact
+    # to two different geographies, and a synthetic/non-geographic unit cannot
+    # acquire geography during the same effective interval.
+    by_reporting_unit: dict[str, list[ReportingUnitGeographicCrosswalk]] = {}
+    for row in rows:
+        by_reporting_unit.setdefault(row.reporting_unit_id, []).append(row)
+    for reporting_unit_id, items in by_reporting_unit.items():
+        for i, left in enumerate(items):
+            for right in items[i + 1:]:
+                if not _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
+                    continue
+                types = {left.relationship_type, right.relationship_type}
+                if GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC in types and len(types) > 1:
+                    raise ValueError(f"non-geographic unit has overlapping geographic mapping: {reporting_unit_id}")
+                if (
+                    left.relationship_type == right.relationship_type == GeographicRelationshipType.EXACT
+                    and left.geographic_unit_id != right.geographic_unit_id
+                ):
+                    raise ValueError(f"exact reporting unit maps to multiple geographies: {reporting_unit_id}")
