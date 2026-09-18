@@ -29,7 +29,8 @@ def test_same_name_different_jurisdictions_and_elections_do_not_collide():
     r1 = reporting_regime_id("us:mi:county:washtenaw", "2024-general", "election-night", "enhanced")
     r2 = reporting_regime_id("us:mi:county:wayne", "2024-general", "election-night", "enhanced")
     assert rid("washtenaw", "2024-general", r1, "Precinct 1") != rid("wayne", "2024-general", r2, "Precinct 1")
-    assert rid("washtenaw", "2024-general", r1, "Precinct 1") != rid("washtenaw", "2022-general", r1, "Precinct 1")
+    r3 = reporting_regime_id("us:mi:county:washtenaw", "2022-general", "election-night", "enhanced")
+    assert rid("washtenaw", "2024-general", r1, "Precinct 1") != rid("washtenaw", "2022-general", r3, "Precinct 1")
 
 
 def test_source_native_identifier_is_preserved_and_required_for_authoritative_status():
