@@ -82,7 +82,7 @@ def parse_washtenaw_like_html(
                         reporting_unit_name=unit_name,
                         contest_name=contest_name,
                         choice_name=candidate,
-                        ballot_order=order,
+                        source_order=order,
                         party=party or None,
                         votes=votes,
                         vote_mode=mode,
