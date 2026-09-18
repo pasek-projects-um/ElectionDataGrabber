@@ -82,15 +82,13 @@ class LocalityDenominator:
             raise ValueError("denominator requires provenance method")
 
 
-def derive_tracker(localities: list[PrimaryElectionLocality], denominators: list[LocalityDenominator]) -> list[dict[str, str]]:
-    by_state: dict[str, dict[CoverageStatus, int]] = {}
+def derive_tracker(\n    localities: list[PrimaryElectionLocality],\n    denominators: list[LocalityDenominator],\n    capability_map: dict[str, tuple[bool, bool]] | None = None,\n) -> list[dict[str, str]]:\n    """Derive coverage counts.\n\n    When capability_map is supplied it is authoritative for positive source\n    capability. Stored locality capability fields are then compatibility data\n    only. KNOWN_MISSING_SOURCE remains an explicit affirmative adjudication;\n    absence of a positive source record never implies missing-source status.\n    """\n    by_state: dict[str, dict[CoverageStatus, int]] = {}
     seen: set[str] = set()
     for row in localities:
         if row.jurisdiction_id in seen:
             raise ValueError(f"duplicate locality: {row.jurisdiction_id}")
         seen.add(row.jurisdiction_id)
-        counts = by_state.setdefault(row.state, {s: 0 for s in CoverageStatus})
-        counts[row.coverage_status] += 1
+        counts = by_state.setdefault(row.state, {s: 0 for s in CoverageStatus})\n        status = row.coverage_status\n        if capability_map is not None:\n            final, live = capability_map.get(row.jurisdiction_id, (False, False))\n            if final and live:\n                status = CoverageStatus.BOTH\n            elif final:\n                status = CoverageStatus.FINAL_ONLY\n            elif live:\n                status = CoverageStatus.ELECTION_NIGHT_ONLY\n            elif row.coverage_status == CoverageStatus.KNOWN_MISSING_SOURCE:\n                status = CoverageStatus.KNOWN_MISSING_SOURCE\n            else:\n                status = CoverageStatus.ENUMERATED_UNRESOLVED\n        counts[status] += 1
 
     out = []
     national_expected = national_enumerated = 0
