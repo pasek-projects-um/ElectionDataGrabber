@@ -70,6 +70,8 @@ def parse_generic_precinct_csv(
     specific adapters can still supersede this when ballot topology or metadata
     require it.
     """
+    if reporting_context is not None:
+        reporting_context.validate_call(election_id=election_id, source_id=source_id)
     text = body.decode("utf-8-sig", errors="replace")
     reader = csv.DictReader(io.StringIO(text))
     rows: list[ResultObservation] = []
