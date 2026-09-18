@@ -430,3 +430,28 @@ def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeogra
                     and left.geographic_unit_id != right.geographic_unit_id
                 ):
                     raise ValueError(f"exact reporting unit maps to multiple geographies: {reporting_unit_id}")
+
+    # Allocation weights are only meaningful as a complete allocation for a
+    # reporting unit over a common effective interval. Reject partial/overfull
+    # weighted mappings and mixed weighted/unweighted rows for that interval.
+    allocation_types = {
+        GeographicRelationshipType.SPLIT_ACROSS,
+        GeographicRelationshipType.AGGREGATE_OF,
+        GeographicRelationshipType.REASSIGNED,
+        GeographicRelationshipType.APPROXIMATE,
+    }
+    allocation_groups: dict[tuple[str, date | None, date | None], list[ReportingUnitGeographicCrosswalk]] = {}
+    for row in rows:
+        if row.relationship_type in allocation_types:
+            allocation_groups.setdefault((row.reporting_unit_id, row.effective_from, row.effective_to), []).append(row)
+    for key, items in allocation_groups.items():
+        weighted = [row for row in items if row.allocation_weight is not None]
+        if weighted and len(weighted) != len(items):
+            raise ValueError(f"mixed weighted and unweighted geographic allocation: {key}")
+        if weighted:
+            bases = {row.weight_basis for row in weighted}
+            if len(bases) != 1:
+                raise ValueError(f"inconsistent geographic allocation weight basis: {key}")
+            total = sum(row.allocation_weight or 0 for row in weighted)
+            if abs(total - 1.0) > 1e-9:
+                raise ValueError(f"geographic allocation weights must sum to one: {key}")
