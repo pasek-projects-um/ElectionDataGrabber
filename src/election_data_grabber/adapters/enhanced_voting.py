@@ -8,6 +8,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 _MODE_KEYS = {
     "electionday": VoteMode.ELECTION_DAY, "election_day": VoteMode.ELECTION_DAY,
@@ -71,12 +72,15 @@ def _walk(obj: Any):
 
 
 def parse_enhanced_voting_html(body: bytes, *, election_id: str, jurisdiction_id: str,
-                               source_id: str, fetched_at: datetime) -> list[ResultObservation]:
+                               source_id: str, fetched_at: datetime,
+                               reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
     """Normalize Enhanced Voting embedded result records when exposed in the page payload.
 
     The public shell can change independently of the result JSON. This parser therefore
     searches embedded JSON semantically and refuses to infer ballot order from display order.
     """
+    if reporting_context is not None:
+        reporting_context.validate_call(election_id=election_id, source_id=source_id)
     out=[]
     seen=set()
     for doc in embedded_json_documents(body):
@@ -93,8 +97,11 @@ def parse_enhanced_voting_html(body: bytes, *, election_id: str, jurisdiction_id
                 if sig in seen: continue
                 seen.add(sig)
                 out.append(ResultObservation(
-                    election_id=election_id,jurisdiction_id=jurisdiction_id,
-                    reporting_unit_id=f"{jurisdiction_id}:{unit}",reporting_unit_name=str(unit),
+                    election_id=election_id,jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
+                    reporting_unit_id=(reporting_context.unit_id(UnitType.PRECINCT, str(unit), str(unit)) if reporting_context else f"{jurisdiction_id}:{unit}"),reporting_unit_name=str(unit),
+                    reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                    reporting_unit_raw_name=str(unit),reporting_unit_source_native_id=str(unit),
+                    snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                     contest_name=str(contest),choice_name=str(choice),party=str(party) if party else None,
                     votes=votes,vote_mode=mode,source_id=source_id,fetched_at=fetched_at,
                     raw_vote_mode=key,
