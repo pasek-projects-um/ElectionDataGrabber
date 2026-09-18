@@ -27,7 +27,7 @@ def test_unverified_source_evidence_cannot_promote_capability():
 def test_five_state_tracker_is_exact_generated_output():
     loc=read_localities(ROOT/"registry/us_primary_election_localities.csv")
     den=read_denominators(ROOT/"registry/us_primary_election_locality_denominators.csv")
-    derived=derive_tracker(loc,den)
+    caps=read_source_capabilities(ROOT/"registry/jurisdiction_source_capabilities.csv")\n    derived=derive_tracker(loc,den,capability_map=derived_capabilities(caps))
     with (ROOT/"registry/us_local_unit_coverage_tracker.csv").open(encoding="utf-8-sig",newline="") as f:
         committed=list(csv.DictReader(f))
     assert committed == derived
@@ -132,3 +132,32 @@ def test_invalid_sha256_is_rejected():
             "us:mi:county:a","us:authority:mi:county-clerk:a","one",CapabilityType.FINAL,
             evidence_snapshot_sha256="g"*64,verification_status=VerificationStatus.VERIFIED,
             assessment_method="fixture")
+
+
+def test_tracker_positive_coverage_is_source_derived_not_locality_flag_derived():
+    from election_data_grabber.locality_registry import CoverageStatus, LocalityDenominator, EstimateStatus, PrimaryElectionLocality
+    locality=PrimaryElectionLocality(
+        "us:mi:county:a","MI","county","A","provisional_name",
+        CoverageStatus.FINAL_ONLY,final_capable=True,
+    )
+    denominator=LocalityDenominator("MI",1,"county",EstimateStatus.PROVISIONAL,"fixture")
+    # No adjudicated source relation: the stored positive compatibility flag
+    # cannot promote the generated tracker.
+    row=derive_tracker([locality],[denominator],capability_map={})[0]
+    assert row["enumerated_unresolved"] == "1"
+    assert row["known_final_only"] == "0"
+    # Adding positive source evidence promotes coverage deterministically.
+    row=derive_tracker([locality],[denominator],capability_map={"us:mi:county:a":(True,False)})[0]
+    assert row["known_final_only"] == "1"
+
+
+def test_source_absence_does_not_convert_affirmative_missing_to_unknown():
+    from election_data_grabber.locality_registry import CoverageStatus, LocalityDenominator, EstimateStatus, PrimaryElectionLocality
+    locality=PrimaryElectionLocality(
+        "us:mi:county:a","MI","county","A","provisional_name",
+        CoverageStatus.KNOWN_MISSING_SOURCE,assessment_method="manual_source_investigation",
+        assessment_status="affirmatively_adjudicated",
+    )
+    denominator=LocalityDenominator("MI",1,"county",EstimateStatus.PROVISIONAL,"fixture")
+    row=derive_tracker([locality],[denominator],capability_map={})[0]
+    assert row["known_units_missing_source"] == "1"
