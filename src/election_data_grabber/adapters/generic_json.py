@@ -15,6 +15,7 @@ def parse_generic_results_json(
     source_id: str,
     fetched_at: datetime,
     reporting_context: AdapterReportingContext | None = None,
+    reporting_unit_type: UnitType = UnitType.PRECINCT,
 ) -> list[ResultObservation]:
     """Parse a simple contest -> choices JSON feed shape used as an adapter contract fixture.
 
@@ -24,6 +25,8 @@ def parse_generic_results_json(
 
     Vendor-specific adapters should transform their native payloads into this contract.
     """
+    if reporting_context is not None:
+        reporting_context.validate_call(election_id=election_id, source_id=source_id)
     observations: list[ResultObservation] = []
     for unit in payload.get("reporting_units", []):
         unit_id = str(unit.get("id") or unit.get("name") or "").strip()
@@ -47,14 +50,14 @@ def parse_generic_results_json(
                     ResultObservation(
                         election_id=election_id,
                         jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
-                        reporting_unit_id=(reporting_context.unit_id(UnitType.PRECINCT, unit_name, unit_id) if reporting_context else f"{jurisdiction_id}:{unit_id}"),
+                        reporting_unit_id=(reporting_context.unit_id(reporting_unit_type, unit_name, unit_id) if reporting_context else f"{jurisdiction_id}:{unit_id}"),
                         reporting_unit_name=unit_name,
                         reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
                         reporting_unit_raw_name=unit_name,
                         reporting_unit_source_native_id=unit_id,
                         contest_name=contest_name,
                         choice_name=name,
-                        ballot_order=choice.get("order"),
+                        source_order=choice.get("order"),
                         party=(str(choice.get("party")).strip() if choice.get("party") else None),
                         votes=int(choice.get("votes") or 0),
                         vote_mode=mode,
