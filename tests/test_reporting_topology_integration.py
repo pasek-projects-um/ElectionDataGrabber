@@ -6,7 +6,7 @@ from election_data_grabber.adapters.generic_csv import parse_generic_precinct_cs
 from election_data_grabber.adapters.generic_json import parse_generic_results_json
 from election_data_grabber.adapters.ohio_precinct_detail import OhioPrecinctDetailAdapter
 from election_data_grabber.adapters.washtenaw import WashtenawAdapter
-from election_data_grabber.models import Format, Source, SourceKind
+from election_data_grabber.models import Format, ResultObservation, Source, SourceKind
 from election_data_grabber.source_capabilities import CapabilityType, JurisdictionSourceCapability, VerificationStatus
 from election_data_grabber.reporting_unit_identity import (
     AdapterReportingContext,
@@ -144,3 +144,13 @@ def test_geographic_allocation_weights_must_be_complete_and_consistent():
     wrong_basis=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="ballots_cast")
     with pytest.raises(ValueError):
         validate_reporting_unit_geographic_crosswalks([a,wrong_basis])
+
+
+def test_observation_rejects_partial_canonical_topology_without_snapshot():
+    with pytest.raises(ValueError):
+        ResultObservation(
+            election_id="2024-general",jurisdiction_id="us:pa:county:philadelphia",
+            reporting_unit_id="ru:p1",reporting_unit_name="P1",
+            reporting_regime_id="regime",contest_name="Mayor",choice_name="A",
+            votes=1,source_id="fixture-source",fetched_at=NOW,
+        )
