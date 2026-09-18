@@ -7,7 +7,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlparse
 
-from election_data_grabber.canonical_ids import authority_id, jurisdiction_id
+from election_data_grabber.canonical_ids import jurisdiction_id
+from election_data_grabber.authority_identity import election_authority_id
 
 GENERIC = {
     "elections","election","voting","vote","results","result","auditor","auditors",
@@ -100,7 +101,7 @@ def main() -> None:
         for jid,c in accepted:
             output.append({
                 "jurisdiction_id":jid,
-                "authority_id":authority_id(jid,"election"),
+                "authority_id":election_authority_id(c.state, "election", f"{c.name_token} election authority"),
                 "state":state,
                 "jurisdiction_level":c.jurisdiction_level,
                 "canonical_name":c.name_token.replace("-"," ").title(),
