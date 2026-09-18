@@ -4,7 +4,7 @@ This package operationalizes canonical reporting-regime and reporting-unit ident
 
 ## Adapter contract
 
-Adapters may receive an `AdapterReportingContext` carrying canonical jurisdiction, independent authority, canonical source identity/capability, election ID, regime kind, and immutable snapshot SHA.
+A `ReportingContextSpec` is built from a positively adjudicated jurisdiction-source capability before fetch. Each persisted snapshot then materializes an `AdapterReportingContext` carrying canonical jurisdiction, independent authority, canonical source identity/capability, election ID, regime kind, and that snapshot's immutable SHA. Context construction rejects capability/regime mismatches.
 
 When supplied, normalized observations must emit:
 
@@ -15,7 +15,7 @@ When supplied, normalized observations must emit:
 
 Election-night and certified/final feeds use distinct regime kinds and therefore distinct reporting-unit identities even if the source label is identical. Historical identities are not destructively rewritten.
 
-The first-cut canaries cover Washtenaw/Michigan, the Ohio BOE precinct-detail family, a Pennsylvania precinct/division-shaped generic source, and Maine municipal ward/precinct topology.
+The migration covers Washtenaw production ingest and shared Washtenaw-like, Ohio BOE precinct-detail, generic CSV/JSON/HTML, Enhanced Voting, and Clarity-like adapter paths. Structural canaries cover Washtenaw/Michigan, the Ohio BOE family, a Pennsylvania precinct/division-shaped source, and Maine municipal ward/precinct topology. Generic result/display order is preserved as `source_order`, never promoted to voter-facing `ballot_order` without separate ballot evidence.
 
 ## Geography bridge
 
