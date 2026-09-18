@@ -198,10 +198,17 @@ def reporting_unit_id(
         raise ValueError("invalid state abbreviation")
     election = _token(election_id)
     key = _token(source_native_id) if source_native_id.strip() else _token(raw_name)
-    regime = _token(reporting_regime_id)
-    if not election or not regime or not key:
+    expected_prefix = f"us:{st.lower()}:"
+    if not reporting_regime_id.startswith(expected_prefix):
+        raise ValueError("reporting regime state disagrees with reporting-unit state")
+    marker = f":election:{election}:regime:"
+    if marker not in reporting_regime_id:
+        raise ValueError("reporting regime election disagrees with reporting-unit election")
+    if not election or not key:
         raise ValueError("election, regime, and source identity are required")
-    return f"us:{st.lower()}:election:{election}:reporting-unit:{unit_type.value}:{regime}:{key}"
+    # The regime ID is already canonical and scoped to jurisdiction/election/source.
+    # Embed it structurally rather than lossy-tokenizing the full identifier.
+    return f"{reporting_regime_id}:reporting-unit:{unit_type.value}:{key}"
 
 
 @dataclass(frozen=True, slots=True)
@@ -221,6 +228,14 @@ class ReportingRegime:
             raise ValueError("reporting_regime_id disagrees with regime components")
         if not self.authority_id.startswith("us:authority:"):
             raise ValueError("authority_id must be independent")
+        expected_unit_id = reporting_unit_id(
+            self.jurisdiction_id.split(":")[1].upper(), self.election_id,
+            self.reporting_regime_id, self.unit_type, self.raw_name, self.source_native_id or "",
+        )
+        if self.reporting_unit_id != expected_unit_id:
+            raise ValueError("reporting_unit_id disagrees with reporting-unit components")
+        if self.parent_reporting_unit_id == self.reporting_unit_id:
+            raise ValueError("reporting unit cannot parent itself")
         if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting regime requires immutable snapshot SHA-256")
 
@@ -321,11 +336,19 @@ def _overlap(a_start: date | None, a_end: date | None, b_start: date | None, b_e
 
 def validate_reporting_unit_crosswalks(rows: list[ReportingUnitCrosswalk]) -> None:
     seen: set[tuple[str, str, RelationshipType, date | None, date | None]] = set()
+    groups: dict[tuple[str, str], list[ReportingUnitCrosswalk]] = {}
     for row in rows:
         key = (row.from_reporting_unit_id, row.to_reporting_unit_id, row.relationship_type, row.effective_from, row.effective_to)
         if key in seen:
             raise ValueError(f"duplicate reporting-unit crosswalk: {key}")
         seen.add(key)
+        groups.setdefault((row.from_reporting_unit_id, row.to_reporting_unit_id), []).append(row)
+    for key, items in groups.items():
+        for i, left in enumerate(items):
+            for right in items[i + 1:]:
+                if _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
+                    if left.relationship_type != right.relationship_type:
+                        raise ValueError(f"conflicting reporting-unit relationships in overlapping periods: {key}")
 
 
 def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeographicCrosswalk]) -> None:
