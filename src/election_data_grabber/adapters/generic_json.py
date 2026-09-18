@@ -5,6 +5,7 @@ from typing import Any
 
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
+from election_data_grabber.vote_modes import normalize_vote_mode
 
 
 def parse_generic_results_json(
@@ -41,11 +42,9 @@ def parse_generic_results_json(
                 name = str(choice.get("name") or "").strip()
                 if not name:
                     continue
-                mode_raw = str(choice.get("mode") or "total").strip().lower()
-                try:
-                    mode = VoteMode(mode_raw)
-                except ValueError:
-                    mode = VoteMode.OTHER
+                mode_raw = str(choice.get("mode") or "total").strip()
+                resolution = normalize_vote_mode(mode_raw, source_id=source_id)
+                mode = resolution.vote_mode or VoteMode.UNKNOWN
                 observations.append(
                     ResultObservation(
                         election_id=election_id,
@@ -65,6 +64,8 @@ def parse_generic_results_json(
                         source_id=source_id,
                         fetched_at=fetched_at,
                         raw_vote_mode=mode_raw,
+                        vote_mode_mapping_method=(resolution.rule.mapping_method if resolution.rule else None),
+                        vote_mode_evidence_reference=(resolution.rule.evidence_reference if resolution.rule else None),
                     )
                 )
     return observations
