@@ -103,6 +103,7 @@ def parse_generic_precinct_csv(
                     reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
                     reporting_unit_raw_name=precinct,
                     reporting_unit_source_native_id=precinct,
+                    snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                     contest_name=contest,
                     choice_name=candidate,
                     source_order=source_order,
