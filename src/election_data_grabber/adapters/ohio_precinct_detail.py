@@ -93,6 +93,7 @@ class OhioPrecinctDetailAdapter:
                     reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
                     reporting_unit_raw_name=current_unit,
                     reporting_unit_source_native_id=current_unit,
+                    snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                     contest_name=current_contest,
                     choice_name=cells[0],
                     source_order=order,
