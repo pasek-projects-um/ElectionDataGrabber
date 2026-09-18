@@ -10,6 +10,7 @@ from election_data_grabber.models import Format, ResultObservation, Source, Sour
 from election_data_grabber.source_capabilities import CapabilityType, JurisdictionSourceCapability, VerificationStatus
 from election_data_grabber.reporting_unit_identity import (
     AdapterReportingContext,
+    AllocationCoverage,
     GeographicRelationshipType,
     ReportingUnitGeographicCrosswalk,
     UnitType,
@@ -132,18 +133,41 @@ def test_geography_validator_rejects_exclusive_cross_target_contradictions():
         validate_reporting_unit_geographic_crosswalks([synthetic,mapped])
 
 
-def test_geographic_allocation_weights_must_be_complete_and_consistent():
-    a=ReportingUnitGeographicCrosswalk("ru:p2","geo:a",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.4,weight_basis="registered_voters")
-    b=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="registered_voters")
+def test_geographic_allocation_weights_distinguish_complete_partial_and_unknown():
+    a=ReportingUnitGeographicCrosswalk("ru:p2","geo:a",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.4,weight_basis="registered_voters",allocation_coverage=AllocationCoverage.COMPLETE)
+    b=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="registered_voters",allocation_coverage=AllocationCoverage.COMPLETE)
     validate_reporting_unit_geographic_crosswalks([a,b])
     with pytest.raises(ValueError):
         validate_reporting_unit_geographic_crosswalks([a])
+
+    # A reporting unit may only map partially to ordinary geography. The
+    # residual can remain unknown rather than being fabricated into precincts.
+    partial=ReportingUnitGeographicCrosswalk("ru:mail","geo:county:a",GeographicRelationshipType.APPROXIMATE,"source",SHA,allocation_weight=.72,weight_basis="ballots_cast",allocation_coverage=AllocationCoverage.PARTIAL)
+    validate_reporting_unit_geographic_crosswalks([partial])
+
+    # If the source actually quantifies the non-geographic residual, preserve it.
+    explicit=ReportingUnitGeographicCrosswalk("ru:mail","geo:county:a",GeographicRelationshipType.APPROXIMATE,"source",SHA,allocation_weight=.72,weight_basis="ballots_cast",allocation_coverage=AllocationCoverage.PARTIAL,unmapped_weight=.28,unmapped_basis="source-reported mail pool")
+    validate_reporting_unit_geographic_crosswalks([explicit])
+
+    # Unknown completeness is also valid: 0.72 is evidence, not a claim that the
+    # remaining 0.28 has any particular geographic destination.
+    unknown=ReportingUnitGeographicCrosswalk("ru:small-area","geo:ward:a",GeographicRelationshipType.APPROXIMATE,"source",SHA,allocation_weight=.72,weight_basis="registered_voters")
+    validate_reporting_unit_geographic_crosswalks([unknown])
+
     mixed=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA)
     with pytest.raises(ValueError):
         validate_reporting_unit_geographic_crosswalks([a,mixed])
-    wrong_basis=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="ballots_cast")
+    wrong_basis=ReportingUnitGeographicCrosswalk("ru:p2","geo:b",GeographicRelationshipType.SPLIT_ACROSS,"source",SHA,allocation_weight=.6,weight_basis="ballots_cast",allocation_coverage=AllocationCoverage.COMPLETE)
     with pytest.raises(ValueError):
         validate_reporting_unit_geographic_crosswalks([a,wrong_basis])
+
+
+def test_partial_geographic_allocation_rejects_false_completeness_and_bad_residuals():
+    with pytest.raises(ValueError):
+        ReportingUnitGeographicCrosswalk("ru:x","geo:a",GeographicRelationshipType.APPROXIMATE,"source",SHA,allocation_weight=.8,weight_basis="ballots",allocation_coverage=AllocationCoverage.COMPLETE,unmapped_weight=.2,unmapped_basis="mail")
+    bad=ReportingUnitGeographicCrosswalk("ru:x","geo:a",GeographicRelationshipType.APPROXIMATE,"source",SHA,allocation_weight=.8,weight_basis="ballots",allocation_coverage=AllocationCoverage.PARTIAL,unmapped_weight=.1,unmapped_basis="mail")
+    with pytest.raises(ValueError):
+        validate_reporting_unit_geographic_crosswalks([bad])
 
 
 def test_observation_rejects_partial_canonical_topology_without_snapshot():
