@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.adapters.base import Adapter
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 REPORT_TS_RE = re.compile(r"This report created:\s*(.+)")
@@ -27,12 +28,14 @@ class WashtenawAdapter(Adapter):
         VoteMode.TOTAL,
     ]
 
-    def parse(self, body: bytes, *, fetched_at: datetime) -> list[ResultObservation]:
+    def parse(self, body: bytes, *, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
         soup = BeautifulSoup(body, "html.parser")
         text = soup.get_text(" ", strip=True)
         report_ts = self._parse_report_timestamp(text)
         reporting_unit_name = self._reporting_unit_name(soup)
         reporting_unit_id = self._slug(reporting_unit_name)
+        if reporting_context is not None:
+            reporting_unit_id = reporting_context.unit_id(UnitType.REPORTING_UNIT, reporting_unit_name)
         registered_voters = self._labeled_int(text, "Registered Voters")
         ballots_cast = self._labeled_int(text, "Ballots Cast")
 
@@ -78,6 +81,8 @@ class WashtenawAdapter(Adapter):
                         jurisdiction_id="mi-washtenaw",
                         reporting_unit_id=reporting_unit_id,
                         reporting_unit_name=reporting_unit_name,
+                        reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                        reporting_unit_raw_name=reporting_unit_name,
                         contest_name=current_contest,
                         choice_name=choice,
                         ballot_order=ballot_order,
