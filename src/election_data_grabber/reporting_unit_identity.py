@@ -7,6 +7,7 @@ from datetime import date
 from enum import StrEnum
 
 SAFE = re.compile(r"[^a-z0-9]+")
+SHA256 = re.compile(r"^[0-9a-fA-F]{64}$")
 
 
 def _token(value: str) -> str:
@@ -78,6 +79,45 @@ class RelationshipType(StrEnum):
     APPROXIMATE_CROSSWALK = "approximate_crosswalk"
 
 
+class GeographicRelationshipType(StrEnum):
+    EXACT = "exact"
+    AGGREGATE_OF = "aggregate_of"
+    COMPONENT_OF = "component_of"
+    SPLIT_ACROSS = "split_across"
+    MERGED_FROM = "merged_from"
+    REASSIGNED = "reassigned"
+    SYNTHETIC_NON_GEOGRAPHIC = "synthetic_non_geographic"
+    APPROXIMATE = "approximate"
+    UNKNOWN = "unknown"
+
+
+@dataclass(frozen=True, slots=True)
+class AdapterReportingContext:
+    state: str
+    election_id: str
+    jurisdiction_id: str
+    authority_id: str
+    source_id: str
+    source_capability_type: str
+    regime_kind: str
+    snapshot_sha256: str = ""
+
+    def __post_init__(self) -> None:
+        if not self.jurisdiction_id.startswith("us:"):
+            raise ValueError("adapter reporting context requires canonical jurisdiction_id")
+        if not self.authority_id.startswith("us:authority:"):
+            raise ValueError("adapter reporting context requires independent authority_id")
+        if self.snapshot_sha256 and not SHA256.fullmatch(self.snapshot_sha256):
+            raise ValueError("snapshot_sha256 must be a SHA-256 hex digest")
+
+    @property
+    def regime_id(self) -> str:
+        return reporting_regime_id(self.jurisdiction_id, self.election_id, self.regime_kind, self.source_id)
+
+    def unit_id(self, unit_type: UnitType, raw_name: str, source_native_id: str = "") -> str:
+        return reporting_unit_id(self.state, self.election_id, self.regime_id, unit_type, raw_name, source_native_id)
+
+
 def reporting_regime_id(jurisdiction_id: str, election_id: str, regime_kind: str, source_id: str) -> str:
     if not jurisdiction_id.startswith("us:"):
         raise ValueError("reporting regime requires canonical jurisdiction_id")
@@ -118,11 +158,12 @@ class ReportingRegime:
     snapshot_sha256: str
 
     def __post_init__(self) -> None:
-        if not self.jurisdiction_id.startswith("us:"):
-            raise ValueError("jurisdiction_id must be canonical")
+        expected = reporting_regime_id(self.jurisdiction_id, self.election_id, self.regime_kind, self.source_id)
+        if self.reporting_regime_id != expected:
+            raise ValueError("reporting_regime_id disagrees with regime components")
         if not self.authority_id.startswith("us:authority:"):
             raise ValueError("authority_id must be independent")
-        if len(self.snapshot_sha256) != 64:
+        if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting regime requires immutable snapshot SHA-256")
 
 
@@ -151,7 +192,7 @@ class CanonicalReportingUnit:
     def __post_init__(self) -> None:
         if self.effective_from and self.effective_to and self.effective_to < self.effective_from:
             raise ValueError("effective_to cannot precede effective_from")
-        if len(self.snapshot_sha256) != 64:
+        if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting unit requires immutable snapshot SHA-256")
         if self.identity_status == IdentityStatus.AUTHORITATIVE_SOURCE_NATIVE and not self.source_native_id:
             raise ValueError("source-native identity requires source_native_id")
@@ -174,7 +215,7 @@ class ReportingUnitCrosswalk:
     def __post_init__(self) -> None:
         if self.from_reporting_unit_id == self.to_reporting_unit_id:
             raise ValueError("crosswalk endpoints must be distinct historical identities")
-        if len(self.evidence_snapshot_sha256) != 64:
+        if not SHA256.fullmatch(self.evidence_snapshot_sha256):
             raise ValueError("crosswalk requires immutable evidence snapshot")
         if self.weight is not None and not 0 <= self.weight <= 1:
             raise ValueError("weight must be between zero and one")
@@ -184,6 +225,42 @@ class ReportingUnitCrosswalk:
             raise ValueError("effective_to cannot precede effective_from")
 
 
+@dataclass(frozen=True, slots=True)
+class ReportingUnitGeographicCrosswalk:
+    reporting_unit_id: str
+    geographic_unit_id: str | None
+    relationship_type: GeographicRelationshipType
+    evidence_source_id: str
+    evidence_snapshot_sha256: str
+    effective_from: date | None = None
+    effective_to: date | None = None
+    allocation_weight: float | None = None
+    weight_basis: str | None = None
+    note: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.relationship_type == GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC:
+            if self.geographic_unit_id:
+                raise ValueError("synthetic/non-geographic reporting unit cannot claim geographic identity")
+        elif not self.geographic_unit_id:
+            raise ValueError("geographic relationship requires geographic_unit_id")
+        if not SHA256.fullmatch(self.evidence_snapshot_sha256):
+            raise ValueError("geographic crosswalk requires immutable evidence snapshot")
+        if self.allocation_weight is not None:
+            if not 0 <= self.allocation_weight <= 1:
+                raise ValueError("allocation_weight must be between zero and one")
+            if not self.weight_basis:
+                raise ValueError("weighted geographic crosswalk requires weight_basis")
+            if self.relationship_type in {GeographicRelationshipType.EXACT, GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC}:
+                raise ValueError("exact/non-geographic relationships must not invent allocation weights")
+        if self.effective_from and self.effective_to and self.effective_to < self.effective_from:
+            raise ValueError("effective_to cannot precede effective_from")
+
+
+def _overlap(a_start: date | None, a_end: date | None, b_start: date | None, b_end: date | None) -> bool:
+    return max(a_start or date.min, b_start or date.min) <= min(a_end or date.max, b_end or date.max)
+
+
 def validate_reporting_unit_crosswalks(rows: list[ReportingUnitCrosswalk]) -> None:
     seen: set[tuple[str, str, RelationshipType, date | None, date | None]] = set()
     for row in rows:
@@ -191,3 +268,24 @@ def validate_reporting_unit_crosswalks(rows: list[ReportingUnitCrosswalk]) -> No
         if key in seen:
             raise ValueError(f"duplicate reporting-unit crosswalk: {key}")
         seen.add(key)
+
+
+def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeographicCrosswalk]) -> None:
+    seen: set[tuple[object, ...]] = set()
+    groups: dict[tuple[str, str | None], list[ReportingUnitGeographicCrosswalk]] = {}
+    for row in rows:
+        key = (
+            row.reporting_unit_id, row.geographic_unit_id, row.relationship_type,
+            row.effective_from, row.effective_to,
+        )
+        if key in seen:
+            raise ValueError(f"duplicate reporting-unit/geography crosswalk: {key}")
+        seen.add(key)
+        groups.setdefault((row.reporting_unit_id, row.geographic_unit_id), []).append(row)
+
+    for key, items in groups.items():
+        for i, left in enumerate(items):
+            for right in items[i + 1:]:
+                if _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
+                    if left.relationship_type != right.relationship_type:
+                        raise ValueError(f"conflicting geographic relationships in overlapping periods: {key}")
