@@ -18,7 +18,7 @@ class WashtenawAdapter(Adapter):
     """Parse Washtenaw County's election-reporting HTML.
 
     The county exposes separate Early, Absentee, Election Day, and Total columns.
-    This adapter preserves all four modes and candidate DOM order.
+    This adapter preserves all four modes and candidate DOM order as source order.
     """
 
     vote_modes = [
@@ -89,7 +89,7 @@ class WashtenawAdapter(Adapter):
                         snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                         contest_name=current_contest,
                         choice_name=choice,
-                        ballot_order=ballot_order,
+                        source_order=ballot_order,
                         votes=votes,
                         vote_mode=mode,
                         source_id=self.source.source_id,
