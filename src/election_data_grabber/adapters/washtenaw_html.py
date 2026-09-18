@@ -85,7 +85,7 @@ def parse_washtenaw_like_html(
                         reporting_unit_id=(reporting_context.unit_id(UnitType.REPORTING_UNIT, unit_name) if reporting_context else f"{jurisdiction_id}:{unit_name}"),
                         reporting_unit_name=unit_name,
                         reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
-                        reporting_unit_raw_name=unit_name,
+                        reporting_unit_raw_name=(unit_name if reporting_context else None),
                         snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                         contest_name=contest_name,
                         choice_name=candidate,
