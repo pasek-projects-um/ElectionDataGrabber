@@ -100,19 +100,27 @@ class AdapterReportingContext:
     source_id: str
     source_capability_type: str
     regime_kind: str
-    snapshot_sha256: str = ""
+    snapshot_sha256: str
 
     def __post_init__(self) -> None:
         if not self.jurisdiction_id.startswith("us:"):
             raise ValueError("adapter reporting context requires canonical jurisdiction_id")
         if not self.authority_id.startswith("us:authority:"):
             raise ValueError("adapter reporting context requires independent authority_id")
-        if self.snapshot_sha256 and not SHA256.fullmatch(self.snapshot_sha256):
-            raise ValueError("snapshot_sha256 must be a SHA-256 hex digest")
+        if not SHA256.fullmatch(self.snapshot_sha256):
+            raise ValueError("adapter reporting context requires immutable snapshot SHA-256")
+        if not self.source_id.strip() or not self.source_capability_type.strip() or not self.regime_kind.strip():
+            raise ValueError("source identity, capability, and regime kind are required")
 
     @property
     def regime_id(self) -> str:
         return reporting_regime_id(self.jurisdiction_id, self.election_id, self.regime_kind, self.source_id)
+
+    def validate_call(self, *, election_id: str, source_id: str) -> None:
+        if election_id != self.election_id:
+            raise ValueError("reporting context election_id disagrees with adapter call")
+        if source_id != self.source_id:
+            raise ValueError("reporting context source_id disagrees with adapter call")
 
     def unit_id(self, unit_type: UnitType, raw_name: str, source_native_id: str = "") -> str:
         return reporting_unit_id(self.state, self.election_id, self.regime_id, unit_type, raw_name, source_native_id)
