@@ -337,6 +337,42 @@ def _overlap(a_start: date | None, a_end: date | None, b_start: date | None, b_e
     return max(a_start or date.min, b_start or date.min) <= min(a_end or date.max, b_end or date.max)
 
 
+
+def validate_reporting_unit_hierarchy(rows: list[CanonicalReportingUnit]) -> None:
+    by_id = {row.reporting_unit_id: row for row in rows}
+    if len(by_id) != len(rows):
+        raise ValueError("duplicate canonical reporting_unit_id")
+    for row in rows:
+        parent_id = row.parent_reporting_unit_id
+        if not parent_id:
+            continue
+        parent = by_id.get(parent_id)
+        if parent is None:
+            raise ValueError(f"unknown parent reporting unit: {parent_id}")
+        if parent.election_id != row.election_id or parent.reporting_regime_id != row.reporting_regime_id:
+            raise ValueError("parent reporting unit must belong to the same election and reporting regime")
+        if parent.jurisdiction_id != row.jurisdiction_id:
+            raise ValueError("parent reporting unit must belong to the same jurisdiction")
+
+    visiting: set[str] = set()
+    visited: set[str] = set()
+
+    def visit(unit_id: str) -> None:
+        if unit_id in visiting:
+            raise ValueError("reporting-unit parent hierarchy contains a cycle")
+        if unit_id in visited:
+            return
+        visiting.add(unit_id)
+        parent_id = by_id[unit_id].parent_reporting_unit_id
+        if parent_id:
+            visit(parent_id)
+        visiting.remove(unit_id)
+        visited.add(unit_id)
+
+    for unit_id in by_id:
+        visit(unit_id)
+
+
 def validate_reporting_unit_crosswalks(rows: list[ReportingUnitCrosswalk]) -> None:
     seen: set[tuple[str, str, RelationshipType, date | None, date | None]] = set()
     groups: dict[tuple[str, str], list[ReportingUnitCrosswalk]] = {}
