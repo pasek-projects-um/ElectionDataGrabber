@@ -178,3 +178,12 @@ def test_observation_rejects_partial_canonical_topology_without_snapshot():
             reporting_regime_id="regime",contest_name="Mayor",choice_name="A",
             votes=1,source_id="fixture-source",fetched_at=NOW,
         )
+
+
+def test_reporting_context_rejects_state_identity_disagreement():
+    with pytest.raises(ValueError):
+        AdapterReportingContext(
+            "OH","2024-general","us:mi:county:washtenaw",
+            "us:authority:mi:county-clerk:washtenaw","fixture-source","final",
+            "certified",SHA,
+        )
