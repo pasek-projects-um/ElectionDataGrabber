@@ -228,14 +228,6 @@ class ReportingRegime:
             raise ValueError("reporting_regime_id disagrees with regime components")
         if not self.authority_id.startswith("us:authority:"):
             raise ValueError("authority_id must be independent")
-        expected_unit_id = reporting_unit_id(
-            self.jurisdiction_id.split(":")[1].upper(), self.election_id,
-            self.reporting_regime_id, self.unit_type, self.raw_name, self.source_native_id or "",
-        )
-        if self.reporting_unit_id != expected_unit_id:
-            raise ValueError("reporting_unit_id disagrees with reporting-unit components")
-        if self.parent_reporting_unit_id == self.reporting_unit_id:
-            raise ValueError("reporting unit cannot parent itself")
         if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting regime requires immutable snapshot SHA-256")
 
@@ -265,6 +257,17 @@ class CanonicalReportingUnit:
     def __post_init__(self) -> None:
         if self.effective_from and self.effective_to and self.effective_to < self.effective_from:
             raise ValueError("effective_to cannot precede effective_from")
+        parts = self.jurisdiction_id.split(":")
+        if len(parts) < 3 or parts[0] != "us":
+            raise ValueError("reporting unit requires canonical jurisdiction_id")
+        expected_unit_id = reporting_unit_id(
+            parts[1].upper(), self.election_id, self.reporting_regime_id,
+            self.unit_type, self.raw_name, self.source_native_id or "",
+        )
+        if self.reporting_unit_id != expected_unit_id:
+            raise ValueError("reporting_unit_id disagrees with reporting-unit components")
+        if self.parent_reporting_unit_id == self.reporting_unit_id:
+            raise ValueError("reporting unit cannot parent itself")
         if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting unit requires immutable snapshot SHA-256")
         if self.identity_status == IdentityStatus.AUTHORITATIVE_SOURCE_NATIVE and not self.source_native_id:
