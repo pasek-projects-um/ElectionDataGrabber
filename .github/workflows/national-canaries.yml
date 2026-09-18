@@ -4,6 +4,8 @@ on:
     paths:
       - "src/election_data_grabber/**"
       - "tests/test_national_canaries.py"
+      - "tests/test_reporting_unit_identity.py"
+      - "tests/test_reporting_topology_integration.py"
       - "tests/test_source_capabilities.py"
       - "tests/test_locality_registry.py"
       - "tests/test_*_locality_registry.py"
