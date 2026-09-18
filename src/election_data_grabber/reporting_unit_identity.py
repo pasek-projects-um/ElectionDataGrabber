@@ -145,8 +145,14 @@ class AdapterReportingContext:
     def __post_init__(self) -> None:
         if not self.jurisdiction_id.startswith("us:"):
             raise ValueError("adapter reporting context requires canonical jurisdiction_id")
+        jurisdiction_parts = self.jurisdiction_id.split(":")
+        if len(jurisdiction_parts) < 3 or jurisdiction_parts[1] != self.state.strip().lower():
+            raise ValueError("adapter reporting context state disagrees with jurisdiction_id")
         if not self.authority_id.startswith("us:authority:"):
             raise ValueError("adapter reporting context requires independent authority_id")
+        authority_parts = self.authority_id.split(":")
+        if len(authority_parts) < 4 or authority_parts[2] != self.state.strip().lower():
+            raise ValueError("adapter reporting context state disagrees with authority_id")
         if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("adapter reporting context requires immutable snapshot SHA-256")
         if not self.source_id.strip() or not self.source_capability_type.strip() or not self.regime_kind.strip():
