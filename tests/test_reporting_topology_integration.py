@@ -7,6 +7,7 @@ from election_data_grabber.adapters.generic_json import parse_generic_results_js
 from election_data_grabber.adapters.ohio_precinct_detail import OhioPrecinctDetailAdapter
 from election_data_grabber.adapters.washtenaw import WashtenawAdapter
 from election_data_grabber.models import Format, Source, SourceKind
+from election_data_grabber.source_capabilities import CapabilityType, JurisdictionSourceCapability, VerificationStatus
 from election_data_grabber.reporting_unit_identity import (
     AdapterReportingContext,
     GeographicRelationshipType,
@@ -99,3 +100,33 @@ def test_generic_json_order_is_source_order_not_unverified_ballot_order():
     assert row.source_order == 7
     assert row.ballot_order is None
     assert row.snapshot_sha256 == SHA
+
+
+def test_context_can_only_be_built_from_positive_matching_source_capability():
+    cap=JurisdictionSourceCapability(
+        "us:mi:county:washtenaw","us:authority:mi:county-clerk:washtenaw-county-clerk",
+        "fixture-source",CapabilityType.ELECTION_NIGHT,
+        verification_status=VerificationStatus.VERIFIED,
+        assessment_method="fixture",evidence_reference="fixture",
+    )
+    context=AdapterReportingContext.from_source_capability(
+        state="MI",election_id="2024-general",regime_kind="election-night",
+        snapshot_sha256=SHA,capability=cap,
+    )
+    assert context.source_capability_type == "election_night"
+    with pytest.raises(ValueError):
+        AdapterReportingContext.from_source_capability(
+            state="MI",election_id="2024-general",regime_kind="certified",
+            snapshot_sha256=SHA,capability=cap,
+        )
+
+
+def test_geography_validator_rejects_exclusive_cross_target_contradictions():
+    exact_a=ReportingUnitGeographicCrosswalk("ru:p1","geo:a",GeographicRelationshipType.EXACT,"source",SHA)
+    exact_b=ReportingUnitGeographicCrosswalk("ru:p1","geo:b",GeographicRelationshipType.EXACT,"source",SHA)
+    with pytest.raises(ValueError):
+        validate_reporting_unit_geographic_crosswalks([exact_a,exact_b])
+    synthetic=ReportingUnitGeographicCrosswalk("ru:x",None,GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC,"source",SHA)
+    mapped=ReportingUnitGeographicCrosswalk("ru:x","geo:a",GeographicRelationshipType.APPROXIMATE,"source",SHA)
+    with pytest.raises(ValueError):
+        validate_reporting_unit_geographic_crosswalks([synthetic,mapped])
