@@ -27,7 +27,8 @@ def test_unverified_source_evidence_cannot_promote_capability():
 def test_five_state_tracker_is_exact_generated_output():
     loc=read_localities(ROOT/"registry/us_primary_election_localities.csv")
     den=read_denominators(ROOT/"registry/us_primary_election_locality_denominators.csv")
-    caps=read_source_capabilities(ROOT/"registry/jurisdiction_source_capabilities.csv")\n    derived=derive_tracker(loc,den,capability_map=derived_capabilities(caps))
+    caps=read_source_capabilities(ROOT/"registry/jurisdiction_source_capabilities.csv")
+    derived=derive_tracker(loc,den,capability_map=derived_capabilities(caps))
     with (ROOT/"registry/us_local_unit_coverage_tracker.csv").open(encoding="utf-8-sig",newline="") as f:
         committed=list(csv.DictReader(f))
     assert committed == derived
