@@ -138,4 +138,7 @@ class ResultObservation(BaseModel):
     ballots_cast: int | None = None
     precincts_reporting: int | None = None
     precincts_total: int | None = None
-    raw_vote_mode: str | None = None\n    # Optional until all adapters parse from a persisted Snapshot; audit requires\n    # this to become mandatory at the normalized persistence boundary.\n    snapshot_sha256: str | None = None
+    raw_vote_mode: str | None = None
+    # Optional until all adapters parse from a persisted Snapshot; audit requires
+    # this to become mandatory at the normalized persistence boundary.
+    snapshot_sha256: str | None = None
