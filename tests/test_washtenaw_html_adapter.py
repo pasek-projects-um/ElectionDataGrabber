@@ -16,7 +16,8 @@ def test_washtenaw_like_html_preserves_order_modes_and_unit():
     assert len(rows) == 8
     alpha = [r for r in rows if r.choice_name == "Alpha"]
     assert all(r.reporting_unit_name == "City of Ann Arbor, Ward 1, Precinct 2" for r in alpha)
-    assert all(r.ballot_order == 1 for r in alpha)
+    assert all(r.source_order == 1 for r in alpha)
+    assert all(r.ballot_order is None for r in alpha)
     assert {r.vote_mode for r in alpha} == {
         VoteMode.EARLY,
         VoteMode.ABSENTEE,

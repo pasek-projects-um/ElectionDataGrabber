@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.adapters.washtenaw import WashtenawAdapter
 from election_data_grabber.models import ResultObservation, Snapshot
+from election_data_grabber.reporting_unit_identity import ReportingContextSpec
 
 
 @dataclass(slots=True)
@@ -77,19 +78,23 @@ def ingest_election(
     adapter: WashtenawAdapter,
     election_url: str,
     snapshot_root: Path,
+    reporting_context_spec: ReportingContextSpec | None = None,
 ) -> tuple[WashtenawSummary, list[Snapshot], list[ResultObservation]]:
     """Fetch summary + all linked precinct pages and normalize observations."""
     summary_fetch = adapter.fetch_url(election_url)
     summary_snapshot = adapter.snapshot(summary_fetch, snapshot_root)
     summary = parse_summary(summary_fetch.body, election_url)
-    summary.contest_totals = adapter.parse(summary_fetch.body, fetched_at=summary_fetch.fetched_at)
+    summary_context = reporting_context_spec.for_snapshot(summary_snapshot.sha256) if reporting_context_spec else None
+    summary.contest_totals = adapter.parse(summary_fetch.body, fetched_at=summary_fetch.fetched_at, reporting_context=summary_context)
 
     snapshots = [summary_snapshot]
     observations: list[ResultObservation] = []
 
     for precinct_url in summary.precinct_urls:
         fetched = adapter.fetch_url(precinct_url)
-        snapshots.append(adapter.snapshot(fetched, snapshot_root))
-        observations.extend(adapter.parse(fetched.body, fetched_at=fetched.fetched_at))
+        snapshot = adapter.snapshot(fetched, snapshot_root)
+        snapshots.append(snapshot)
+        context = reporting_context_spec.for_snapshot(snapshot.sha256) if reporting_context_spec else None
+        observations.extend(adapter.parse(fetched.body, fetched_at=fetched.fetched_at, reporting_context=context))
 
     return summary, snapshots, observations

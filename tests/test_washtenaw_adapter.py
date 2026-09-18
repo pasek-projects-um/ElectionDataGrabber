@@ -45,7 +45,8 @@ def test_washtenaw_preserves_modes_order_and_turnout_fields():
     assert first.reporting_unit_name == "City of Ann Arbor, Ward 1, Precinct 2"
     assert first.contest_name == "Governor DEM"
     assert first.choice_name == "Jocelyn Benson"
-    assert first.ballot_order == 1
+    assert first.source_order == 1
+    assert first.ballot_order is None
     assert first.vote_mode == VoteMode.EARLY
     assert first.votes == 81
     assert first.registered_voters == 2109
@@ -60,4 +61,4 @@ def test_washtenaw_preserves_modes_order_and_turnout_fields():
     ]
 
     swanson = [r for r in rows if r.choice_name == "Christopher Robert Swanson"]
-    assert all(r.ballot_order == 2 for r in swanson)
+    assert all(r.source_order == 2 for r in swanson)

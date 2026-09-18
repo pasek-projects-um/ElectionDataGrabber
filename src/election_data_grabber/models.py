@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 from datetime import datetime
+import re
 from enum import StrEnum
 from typing import Any
 
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import BaseModel, Field, HttpUrl, model_validator
 
 
 class SourceKind(StrEnum):
@@ -118,6 +119,9 @@ class ResultObservation(BaseModel):
     jurisdiction_id: str
     reporting_unit_id: str
     reporting_unit_name: str
+    reporting_regime_id: str | None = None
+    reporting_unit_raw_name: str | None = None
+    reporting_unit_source_native_id: str | None = None
     contest_id: str | None = None
     contest_name: str
     choice_id: str | None = None
@@ -142,3 +146,19 @@ class ResultObservation(BaseModel):
     # Optional until all adapters parse from a persisted Snapshot; audit requires
     # this to become mandatory at the normalized persistence boundary.
     snapshot_sha256: str | None = None
+
+    @model_validator(mode="after")
+    def validate_topology_provenance(self) -> "ResultObservation":
+        topology_fields = (
+            self.reporting_regime_id,
+            self.reporting_unit_raw_name,
+            self.reporting_unit_source_native_id,
+        )
+        if any(value is not None for value in topology_fields):
+            if not self.reporting_regime_id:
+                raise ValueError("canonical topology metadata requires reporting_regime_id")
+            if not self.snapshot_sha256 or not re.fullmatch(r"[0-9a-fA-F]{64}", self.snapshot_sha256):
+                raise ValueError("canonical topology metadata requires immutable snapshot SHA-256")
+            if not self.jurisdiction_id.startswith("us:"):
+                raise ValueError("canonical topology metadata requires canonical jurisdiction_id")
+        return self

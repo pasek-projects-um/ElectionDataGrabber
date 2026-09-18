@@ -7,6 +7,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 MODE_LABELS = {
@@ -37,12 +38,16 @@ def parse_mode_table_html(
     source_id: str,
     fetched_at: datetime,
     profile: HtmlTableProfile = HtmlTableProfile(),
+    reporting_context: AdapterReportingContext | None = None,
+    reporting_unit_type: UnitType = UnitType.REPORTING_UNIT,
 ) -> list[ResultObservation]:
     """Parse common county result tables by recognizing semantic headers.
 
     This intentionally favors header inference over fixed column positions so
     minor vendor/template changes do not require a new parser.
     """
+    if reporting_context is not None:
+        reporting_context.validate_call(election_id=election_id, source_id=source_id)
     soup = BeautifulSoup(body, "html.parser")
     reporting_unit = jurisdiction_id
     if profile.reporting_unit_selector:
@@ -84,9 +89,12 @@ def parse_mode_table_html(
                     continue
                 observations.append(ResultObservation(
                     election_id=election_id,
-                    jurisdiction_id=jurisdiction_id,
-                    reporting_unit_id=f"{jurisdiction_id}:{reporting_unit}",
+                    jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
+                    reporting_unit_id=(reporting_context.unit_id(reporting_unit_type, reporting_unit) if reporting_context else f"{jurisdiction_id}:{reporting_unit}"),
                     reporting_unit_name=reporting_unit,
+                    reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                    reporting_unit_raw_name=(reporting_unit if reporting_context else None),
+                    snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                     contest_name=contest_name,
                     choice_name=choice,
                     votes=int(m.group(0).replace(",", "")),

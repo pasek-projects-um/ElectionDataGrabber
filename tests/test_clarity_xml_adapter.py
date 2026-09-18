@@ -15,7 +15,8 @@ def test_clarity_like_xml_extracts_order_party_and_modes():
     )
     assert len(rows) == 8
     alpha = [r for r in rows if r.choice_name == "Alpha"]
-    assert all(r.ballot_order == 1 for r in alpha)
+    assert all(r.source_order == 1 for r in alpha)
+    assert all(r.ballot_order is None for r in alpha)
     assert all(r.party == "DEM" for r in alpha)
     assert {r.vote_mode for r in alpha} == {
         VoteMode.ELECTION_DAY,

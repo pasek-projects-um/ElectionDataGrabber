@@ -6,6 +6,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 from election_data_grabber.models import ResultObservation, Source, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 _INT = re.compile(r"[^0-9-]")
@@ -57,7 +58,9 @@ class OhioPrecinctDetailAdapter:
         self.source = source
         self.election_id = election_id
 
-    def parse(self, body: bytes, fetched_at: datetime) -> list[ResultObservation]:
+    def parse(self, body: bytes, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
+        if reporting_context is not None:
+            reporting_context.validate_call(election_id=self.election_id, source_id=self.source.source_id)
         soup = BeautifulSoup(body, "html.parser")
         out: list[ResultObservation] = []
         current_unit = None
@@ -79,11 +82,18 @@ class OhioPrecinctDetailAdapter:
                 continue
             if current_unit and current_contest and len(cells) >= 2 and re.search(r"\d", cells[-1]):
                 order += 1
+                canonical_unit_id = current_unit
+                if reporting_context is not None:
+                    canonical_unit_id = reporting_context.unit_id(UnitType.PRECINCT, current_unit, current_unit)
                 out.append(ResultObservation(
                     election_id=self.election_id,
-                    jurisdiction_id=self.source.jurisdiction,
-                    reporting_unit_id=current_unit,
+                    jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else self.source.jurisdiction),
+                    reporting_unit_id=canonical_unit_id,
                     reporting_unit_name=current_unit,
+                    reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                    reporting_unit_raw_name=(current_unit if reporting_context else None),
+                    reporting_unit_source_native_id=(current_unit if reporting_context else None),
+                    snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                     contest_name=current_contest,
                     choice_name=cells[0],
                     source_order=order,

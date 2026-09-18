@@ -7,6 +7,7 @@ from datetime import date
 from enum import StrEnum
 
 SAFE = re.compile(r"[^a-z0-9]+")
+SHA256 = re.compile(r"^[0-9a-fA-F]{64}$")
 
 
 def _token(value: str) -> str:
@@ -78,6 +79,117 @@ class RelationshipType(StrEnum):
     APPROXIMATE_CROSSWALK = "approximate_crosswalk"
 
 
+class GeographicRelationshipType(StrEnum):
+    EXACT = "exact"
+    AGGREGATE_OF = "aggregate_of"
+    COMPONENT_OF = "component_of"
+    SPLIT_ACROSS = "split_across"
+    MERGED_FROM = "merged_from"
+    REASSIGNED = "reassigned"
+    SYNTHETIC_NON_GEOGRAPHIC = "synthetic_non_geographic"
+    APPROXIMATE = "approximate"
+    UNKNOWN = "unknown"
+
+
+class AllocationCoverage(StrEnum):
+    """What an allocation weight claims about the reporting unit's geography."""
+
+    COMPLETE = "complete"
+    PARTIAL = "partial"
+    UNKNOWN = "unknown"
+
+
+@dataclass(frozen=True, slots=True)
+class ReportingContextSpec:
+    state: str
+    election_id: str
+    jurisdiction_id: str
+    authority_id: str
+    source_id: str
+    source_capability_type: str
+    regime_kind: str
+
+    @classmethod
+    def from_source_capability(cls, *, state: str, election_id: str, regime_kind: str, capability: object) -> "ReportingContextSpec":
+        if not getattr(capability, "is_positive", False):
+            raise ValueError("reporting context requires positively adjudicated source capability")
+        capability_type = str(getattr(capability, "capability_type", ""))
+        if regime_kind == "election-night" and capability_type != "election_night":
+            raise ValueError("election-night regime requires election-night source capability")
+        if regime_kind in {"certified", "final"} and capability_type != "final":
+            raise ValueError("certified/final regime requires final source capability")
+        return cls(
+            state, election_id, getattr(capability, "jurisdiction_id"),
+            getattr(capability, "authority_id"), getattr(capability, "source_id"),
+            capability_type, regime_kind,
+        )
+
+    def for_snapshot(self, snapshot_sha256: str) -> "AdapterReportingContext":
+        return AdapterReportingContext(
+            self.state, self.election_id, self.jurisdiction_id, self.authority_id,
+            self.source_id, self.source_capability_type, self.regime_kind, snapshot_sha256,
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class AdapterReportingContext:
+    state: str
+    election_id: str
+    jurisdiction_id: str
+    authority_id: str
+    source_id: str
+    source_capability_type: str
+    regime_kind: str
+    snapshot_sha256: str
+
+    def __post_init__(self) -> None:
+        if not self.jurisdiction_id.startswith("us:"):
+            raise ValueError("adapter reporting context requires canonical jurisdiction_id")
+        jurisdiction_parts = self.jurisdiction_id.split(":")
+        if len(jurisdiction_parts) < 3 or jurisdiction_parts[1] != self.state.strip().lower():
+            raise ValueError("adapter reporting context state disagrees with jurisdiction_id")
+        if not self.authority_id.startswith("us:authority:"):
+            raise ValueError("adapter reporting context requires independent authority_id")
+        authority_parts = self.authority_id.split(":")
+        if len(authority_parts) < 4 or authority_parts[2] != self.state.strip().lower():
+            raise ValueError("adapter reporting context state disagrees with authority_id")
+        if not SHA256.fullmatch(self.snapshot_sha256):
+            raise ValueError("adapter reporting context requires immutable snapshot SHA-256")
+        if not self.source_id.strip() or not self.source_capability_type.strip() or not self.regime_kind.strip():
+            raise ValueError("source identity, capability, and regime kind are required")
+
+    @property
+    def regime_id(self) -> str:
+        return reporting_regime_id(self.jurisdiction_id, self.election_id, self.regime_kind, self.source_id)
+
+    def validate_call(self, *, election_id: str, source_id: str) -> None:
+        if election_id != self.election_id:
+            raise ValueError("reporting context election_id disagrees with adapter call")
+        if source_id != self.source_id:
+            raise ValueError("reporting context source_id disagrees with adapter call")
+
+    def unit_id(self, unit_type: UnitType, raw_name: str, source_native_id: str = "") -> str:
+        return reporting_unit_id(self.state, self.election_id, self.regime_id, unit_type, raw_name, source_native_id)
+
+    @classmethod
+    def from_source_capability(cls, *, state: str, election_id: str, regime_kind: str, snapshot_sha256: str, capability: object) -> "AdapterReportingContext":
+        if not getattr(capability, "is_positive", False):
+            raise ValueError("reporting context requires positively adjudicated source capability")
+        capability_type = str(getattr(capability, "capability_type", ""))
+        if regime_kind == "election-night" and capability_type != "election_night":
+            raise ValueError("election-night regime requires election-night source capability")
+        if regime_kind in {"certified", "final"} and capability_type != "final":
+            raise ValueError("certified/final regime requires final source capability")
+        return cls(
+            state=state, election_id=election_id,
+            jurisdiction_id=getattr(capability, "jurisdiction_id"),
+            authority_id=getattr(capability, "authority_id"),
+            source_id=getattr(capability, "source_id"),
+            source_capability_type=capability_type, regime_kind=regime_kind,
+            snapshot_sha256=snapshot_sha256,
+        )
+
+
 def reporting_regime_id(jurisdiction_id: str, election_id: str, regime_kind: str, source_id: str) -> str:
     if not jurisdiction_id.startswith("us:"):
         raise ValueError("reporting regime requires canonical jurisdiction_id")
@@ -100,10 +212,17 @@ def reporting_unit_id(
         raise ValueError("invalid state abbreviation")
     election = _token(election_id)
     key = _token(source_native_id) if source_native_id.strip() else _token(raw_name)
-    regime = _token(reporting_regime_id)
-    if not election or not regime or not key:
+    expected_prefix = f"us:{st.lower()}:"
+    if not reporting_regime_id.startswith(expected_prefix):
+        raise ValueError("reporting regime state disagrees with reporting-unit state")
+    marker = f":election:{election}:regime:"
+    if marker not in reporting_regime_id:
+        raise ValueError("reporting regime election disagrees with reporting-unit election")
+    if not election or not key:
         raise ValueError("election, regime, and source identity are required")
-    return f"us:{st.lower()}:election:{election}:reporting-unit:{unit_type.value}:{regime}:{key}"
+    # The regime ID is already canonical and scoped to jurisdiction/election/source.
+    # Embed it structurally rather than lossy-tokenizing the full identifier.
+    return f"{reporting_regime_id}:reporting-unit:{unit_type.value}:{key}"
 
 
 @dataclass(frozen=True, slots=True)
@@ -118,11 +237,12 @@ class ReportingRegime:
     snapshot_sha256: str
 
     def __post_init__(self) -> None:
-        if not self.jurisdiction_id.startswith("us:"):
-            raise ValueError("jurisdiction_id must be canonical")
+        expected = reporting_regime_id(self.jurisdiction_id, self.election_id, self.regime_kind, self.source_id)
+        if self.reporting_regime_id != expected:
+            raise ValueError("reporting_regime_id disagrees with regime components")
         if not self.authority_id.startswith("us:authority:"):
             raise ValueError("authority_id must be independent")
-        if len(self.snapshot_sha256) != 64:
+        if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting regime requires immutable snapshot SHA-256")
 
 
@@ -151,7 +271,18 @@ class CanonicalReportingUnit:
     def __post_init__(self) -> None:
         if self.effective_from and self.effective_to and self.effective_to < self.effective_from:
             raise ValueError("effective_to cannot precede effective_from")
-        if len(self.snapshot_sha256) != 64:
+        parts = self.jurisdiction_id.split(":")
+        if len(parts) < 3 or parts[0] != "us":
+            raise ValueError("reporting unit requires canonical jurisdiction_id")
+        expected_unit_id = reporting_unit_id(
+            parts[1].upper(), self.election_id, self.reporting_regime_id,
+            self.unit_type, self.raw_name, self.source_native_id or "",
+        )
+        if self.reporting_unit_id != expected_unit_id:
+            raise ValueError("reporting_unit_id disagrees with reporting-unit components")
+        if self.parent_reporting_unit_id == self.reporting_unit_id:
+            raise ValueError("reporting unit cannot parent itself")
+        if not SHA256.fullmatch(self.snapshot_sha256):
             raise ValueError("reporting unit requires immutable snapshot SHA-256")
         if self.identity_status == IdentityStatus.AUTHORITATIVE_SOURCE_NATIVE and not self.source_native_id:
             raise ValueError("source-native identity requires source_native_id")
@@ -174,7 +305,7 @@ class ReportingUnitCrosswalk:
     def __post_init__(self) -> None:
         if self.from_reporting_unit_id == self.to_reporting_unit_id:
             raise ValueError("crosswalk endpoints must be distinct historical identities")
-        if len(self.evidence_snapshot_sha256) != 64:
+        if not SHA256.fullmatch(self.evidence_snapshot_sha256):
             raise ValueError("crosswalk requires immutable evidence snapshot")
         if self.weight is not None and not 0 <= self.weight <= 1:
             raise ValueError("weight must be between zero and one")
@@ -184,10 +315,192 @@ class ReportingUnitCrosswalk:
             raise ValueError("effective_to cannot precede effective_from")
 
 
+@dataclass(frozen=True, slots=True)
+class ReportingUnitGeographicCrosswalk:
+    reporting_unit_id: str
+    geographic_unit_id: str | None
+    relationship_type: GeographicRelationshipType
+    evidence_source_id: str
+    evidence_snapshot_sha256: str
+    effective_from: date | None = None
+    effective_to: date | None = None
+    allocation_weight: float | None = None
+    weight_basis: str | None = None
+    allocation_coverage: AllocationCoverage = AllocationCoverage.UNKNOWN
+    # Optional explicit share that is intentionally outside mapped geography:
+    # mail/absentee pools, tiny suppressed areas, or other source-native units.
+    unmapped_weight: float | None = None
+    unmapped_basis: str | None = None
+    note: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.relationship_type == GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC:
+            if self.geographic_unit_id:
+                raise ValueError("synthetic/non-geographic reporting unit cannot claim geographic identity")
+        elif not self.geographic_unit_id:
+            raise ValueError("geographic relationship requires geographic_unit_id")
+        if not SHA256.fullmatch(self.evidence_snapshot_sha256):
+            raise ValueError("geographic crosswalk requires immutable evidence snapshot")
+        if self.allocation_weight is not None:
+            if not 0 <= self.allocation_weight <= 1:
+                raise ValueError("allocation_weight must be between zero and one")
+            if not self.weight_basis:
+                raise ValueError("weighted geographic crosswalk requires weight_basis")
+            if self.relationship_type in {GeographicRelationshipType.EXACT, GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC}:
+                raise ValueError("exact/non-geographic relationships must not invent allocation weights")
+        if self.unmapped_weight is not None:
+            if not 0 <= self.unmapped_weight <= 1:
+                raise ValueError("unmapped_weight must be between zero and one")
+            if not self.unmapped_basis:
+                raise ValueError("explicit unmapped share requires unmapped_basis")
+            if self.allocation_coverage != AllocationCoverage.PARTIAL:
+                raise ValueError("explicit unmapped share requires partial allocation coverage")
+        if self.allocation_coverage == AllocationCoverage.COMPLETE and self.unmapped_weight not in {None, 0}:
+            raise ValueError("complete allocation cannot reserve an unmapped share")
+        if self.effective_from and self.effective_to and self.effective_to < self.effective_from:
+            raise ValueError("effective_to cannot precede effective_from")
+
+
+def _overlap(a_start: date | None, a_end: date | None, b_start: date | None, b_end: date | None) -> bool:
+    return max(a_start or date.min, b_start or date.min) <= min(a_end or date.max, b_end or date.max)
+
+
+
+def validate_reporting_unit_hierarchy(rows: list[CanonicalReportingUnit]) -> None:
+    by_id = {row.reporting_unit_id: row for row in rows}
+    if len(by_id) != len(rows):
+        raise ValueError("duplicate canonical reporting_unit_id")
+    for row in rows:
+        parent_id = row.parent_reporting_unit_id
+        if not parent_id:
+            continue
+        parent = by_id.get(parent_id)
+        if parent is None:
+            raise ValueError(f"unknown parent reporting unit: {parent_id}")
+        if parent.election_id != row.election_id or parent.reporting_regime_id != row.reporting_regime_id:
+            raise ValueError("parent reporting unit must belong to the same election and reporting regime")
+        if parent.jurisdiction_id != row.jurisdiction_id:
+            raise ValueError("parent reporting unit must belong to the same jurisdiction")
+
+    visiting: set[str] = set()
+    visited: set[str] = set()
+
+    def visit(unit_id: str) -> None:
+        if unit_id in visiting:
+            raise ValueError("reporting-unit parent hierarchy contains a cycle")
+        if unit_id in visited:
+            return
+        visiting.add(unit_id)
+        parent_id = by_id[unit_id].parent_reporting_unit_id
+        if parent_id:
+            visit(parent_id)
+        visiting.remove(unit_id)
+        visited.add(unit_id)
+
+    for unit_id in by_id:
+        visit(unit_id)
+
+
 def validate_reporting_unit_crosswalks(rows: list[ReportingUnitCrosswalk]) -> None:
     seen: set[tuple[str, str, RelationshipType, date | None, date | None]] = set()
+    groups: dict[tuple[str, str], list[ReportingUnitCrosswalk]] = {}
     for row in rows:
         key = (row.from_reporting_unit_id, row.to_reporting_unit_id, row.relationship_type, row.effective_from, row.effective_to)
         if key in seen:
             raise ValueError(f"duplicate reporting-unit crosswalk: {key}")
         seen.add(key)
+        groups.setdefault((row.from_reporting_unit_id, row.to_reporting_unit_id), []).append(row)
+    for key, items in groups.items():
+        for i, left in enumerate(items):
+            for right in items[i + 1:]:
+                if _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
+                    if left.relationship_type != right.relationship_type:
+                        raise ValueError(f"conflicting reporting-unit relationships in overlapping periods: {key}")
+
+
+def validate_reporting_unit_geographic_crosswalks(rows: list[ReportingUnitGeographicCrosswalk]) -> None:
+    seen: set[tuple[object, ...]] = set()
+    groups: dict[tuple[str, str | None], list[ReportingUnitGeographicCrosswalk]] = {}
+    for row in rows:
+        key = (
+            row.reporting_unit_id, row.geographic_unit_id, row.relationship_type,
+            row.effective_from, row.effective_to,
+        )
+        if key in seen:
+            raise ValueError(f"duplicate reporting-unit/geography crosswalk: {key}")
+        seen.add(key)
+        groups.setdefault((row.reporting_unit_id, row.geographic_unit_id), []).append(row)
+
+    for key, items in groups.items():
+        for i, left in enumerate(items):
+            for right in items[i + 1:]:
+                if _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
+                    if left.relationship_type != right.relationship_type:
+                        raise ValueError(f"conflicting geographic relationships in overlapping periods: {key}")
+
+    # Some semantics are exclusive at the reporting-unit level, not merely for
+    # a reporting/geographic pair. An exact unit cannot simultaneously be exact
+    # to two different geographies, and a synthetic/non-geographic unit cannot
+    # acquire geography during the same effective interval.
+    by_reporting_unit: dict[str, list[ReportingUnitGeographicCrosswalk]] = {}
+    for row in rows:
+        by_reporting_unit.setdefault(row.reporting_unit_id, []).append(row)
+    for reporting_unit_id, items in by_reporting_unit.items():
+        for i, left in enumerate(items):
+            for right in items[i + 1:]:
+                if not _overlap(left.effective_from, left.effective_to, right.effective_from, right.effective_to):
+                    continue
+                types = {left.relationship_type, right.relationship_type}
+                if GeographicRelationshipType.SYNTHETIC_NON_GEOGRAPHIC in types and len(types) > 1:
+                    raise ValueError(f"non-geographic unit has overlapping geographic mapping: {reporting_unit_id}")
+                if (
+                    left.relationship_type == right.relationship_type == GeographicRelationshipType.EXACT
+                    and left.geographic_unit_id != right.geographic_unit_id
+                ):
+                    raise ValueError(f"exact reporting unit maps to multiple geographies: {reporting_unit_id}")
+
+    # Weighted geography can be complete, partial, or unknown. Do not force
+    # source-native non-geographic votes (mail/absentee pools, suppressed tiny
+    # areas, etc.) into precinct geography merely to make weights sum to one.
+    allocation_types = {
+        GeographicRelationshipType.SPLIT_ACROSS,
+        GeographicRelationshipType.AGGREGATE_OF,
+        GeographicRelationshipType.REASSIGNED,
+        GeographicRelationshipType.APPROXIMATE,
+    }
+    allocation_groups: dict[tuple[str, date | None, date | None], list[ReportingUnitGeographicCrosswalk]] = {}
+    for row in rows:
+        if row.relationship_type in allocation_types:
+            allocation_groups.setdefault((row.reporting_unit_id, row.effective_from, row.effective_to), []).append(row)
+    for key, items in allocation_groups.items():
+        weighted = [row for row in items if row.allocation_weight is not None]
+        if not weighted:
+            continue
+        if len(weighted) != len(items):
+            raise ValueError(f"mixed weighted and unweighted geographic allocation: {key}")
+        bases = {row.weight_basis for row in weighted}
+        if len(bases) != 1:
+            raise ValueError(f"inconsistent geographic allocation weight basis: {key}")
+        coverages = {row.allocation_coverage for row in weighted}
+        if len(coverages) != 1:
+            raise ValueError(f"inconsistent geographic allocation coverage semantics: {key}")
+        total = sum(row.allocation_weight or 0 for row in weighted)
+        coverage = next(iter(coverages))
+        if total > 1.0 + 1e-9:
+            raise ValueError(f"geographic allocation weights exceed one: {key}")
+        unmapped = {row.unmapped_weight for row in weighted if row.unmapped_weight is not None}
+        unmapped_bases = {row.unmapped_basis for row in weighted if row.unmapped_weight is not None}
+        if len(unmapped) > 1 or len(unmapped_bases) > 1:
+            raise ValueError(f"inconsistent explicit unmapped share: {key}")
+        unmapped_weight = next(iter(unmapped), None)
+        if coverage == AllocationCoverage.COMPLETE:
+            if abs(total - 1.0) > 1e-9:
+                raise ValueError(f"complete geographic allocation weights must sum to one: {key}")
+        elif coverage == AllocationCoverage.PARTIAL:
+            if total >= 1.0 - 1e-9:
+                raise ValueError(f"partial geographic allocation must leave a residual share: {key}")
+            if unmapped_weight is not None and abs(total + unmapped_weight - 1.0) > 1e-9:
+                raise ValueError(f"mapped plus explicit unmapped allocation must sum to one: {key}")
+        # UNKNOWN deliberately permits totals below one without inventing an
+        # allocation for the residual. Downstream consumers must not treat such
+        # weights as a complete partition.

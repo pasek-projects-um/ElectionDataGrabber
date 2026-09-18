@@ -6,6 +6,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 MODE_HEADERS = {
@@ -33,6 +34,7 @@ def parse_washtenaw_like_html(
     jurisdiction_id: str,
     source_id: str,
     fetched_at: datetime,
+    reporting_context: AdapterReportingContext | None = None,
 ) -> list[ResultObservation]:
     """Parse a simplified Washtenaw-style precinct result table.
 
@@ -40,8 +42,10 @@ def parse_washtenaw_like_html(
     - one element with class `reporting-unit`
     - one or more `.contest` blocks with a heading
     - table headers containing candidate plus mode columns
-    - candidate rows preserving DOM order as ballot order
+    - candidate rows preserving DOM order as source/display order
     """
+    if reporting_context is not None:
+        reporting_context.validate_call(election_id=election_id, source_id=source_id)
     soup = BeautifulSoup(body.decode("utf-8", errors="replace"), "html.parser")
     unit_el = soup.select_one(".reporting-unit")
     unit_name = unit_el.get_text(" ", strip=True) if unit_el else ""
@@ -77,12 +81,15 @@ def parse_washtenaw_like_html(
                 observations.append(
                     ResultObservation(
                         election_id=election_id,
-                        jurisdiction_id=jurisdiction_id,
-                        reporting_unit_id=f"{jurisdiction_id}:{unit_name}",
+                        jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
+                        reporting_unit_id=(reporting_context.unit_id(UnitType.REPORTING_UNIT, unit_name) if reporting_context else f"{jurisdiction_id}:{unit_name}"),
                         reporting_unit_name=unit_name,
+                        reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                        reporting_unit_raw_name=(unit_name if reporting_context else None),
+                        snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                         contest_name=contest_name,
                         choice_name=candidate,
-                        ballot_order=order,
+                        source_order=order,
                         party=party or None,
                         votes=votes,
                         vote_mode=mode,

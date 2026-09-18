@@ -4,6 +4,7 @@ from datetime import datetime
 from xml.etree import ElementTree as ET
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 _MODE_MAP = {
@@ -37,6 +38,7 @@ def parse_clarity_like_xml(
     jurisdiction_id: str,
     source_id: str,
     fetched_at: datetime,
+    reporting_context: AdapterReportingContext | None = None,
 ) -> list[ResultObservation]:
     """Parse a compact Clarity-like XML fixture shape into canonical observations.
 
@@ -44,6 +46,8 @@ def parse_clarity_like_xml(
     contract for tests and a staging point before delegating richer discovery/parsing
     to OpenElections clarify.
     """
+    if reporting_context is not None:
+        reporting_context.validate_call(election_id=election_id, source_id=source_id)
     root = ET.fromstring(body)
     observations: list[ResultObservation] = []
 
@@ -70,12 +74,16 @@ def parse_clarity_like_xml(
                     observations.append(
                         ResultObservation(
                             election_id=election_id,
-                            jurisdiction_id=jurisdiction_id,
-                            reporting_unit_id=f'{jurisdiction_id}:{precinct_id}',
+                            jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
+                            reporting_unit_id=(reporting_context.unit_id(UnitType.PRECINCT, precinct_name, precinct_id) if reporting_context else f'{jurisdiction_id}:{precinct_id}'),
                             reporting_unit_name=precinct_name,
+                            reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                            reporting_unit_raw_name=(precinct_name if reporting_context else None),
+                            reporting_unit_source_native_id=(precinct_id if reporting_context else None),
+                            snapshot_sha256=(reporting_context.snapshot_sha256 if reporting_context else None),
                             contest_name=contest_name,
                             choice_name=choice_name,
-                            ballot_order=order,
+                            source_order=order,
                             party=party,
                             votes=int(votes_raw.replace(',', '')),
                             vote_mode=mode,
