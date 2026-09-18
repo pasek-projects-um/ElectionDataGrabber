@@ -8,7 +8,7 @@ class CapabilityType(StrEnum):
     FINAL = "final"
     ELECTION_NIGHT = "election_night"
 
-POSITIVE_STATUSES = {"verified", "affirmatively_adjudicated", "adjudicated_from_locality_registry"}
+POSITIVE_STATUSES = {"verified", "affirmatively_adjudicated", "migrated_positive"}
 
 @dataclass(frozen=True, slots=True)
 class JurisdictionSourceCapability:
@@ -24,6 +24,7 @@ class JurisdictionSourceCapability:
     evidence_snapshot_sha256: str = ""
     verification_status: str = ""
     assessment_method: str = ""
+    evidence_reference: str = ""
     notes: str = ""
 
     def __post_init__(self) -> None:
@@ -37,6 +38,10 @@ class JurisdictionSourceCapability:
             raise ValueError("source capability requires assessment_method")
         if self.evidence_snapshot_sha256 and (len(self.evidence_snapshot_sha256) != 64 or any(c not in "0123456789abcdefABCDEF" for c in self.evidence_snapshot_sha256)):
             raise ValueError("evidence_snapshot_sha256 must be a SHA-256 hex digest")
+        if self.valid_from and self.valid_to and self.valid_from > self.valid_to:
+            raise ValueError("source capability validity interval is inverted")
+        if not self.evidence_snapshot_sha256 and not self.evidence_reference:
+            raise ValueError("source capability requires evidence provenance")
 
 def read_source_capabilities(path: Path) -> list[JurisdictionSourceCapability]:
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -47,7 +52,7 @@ def read_source_capabilities(path: Path) -> list[JurisdictionSourceCapability]:
             smallest_observed_unit=r.get("smallest_observed_unit",""), valid_from=r.get("valid_from",""),
             valid_to=r.get("valid_to",""), evidence_snapshot_sha256=r.get("evidence_snapshot_sha256",""),
             verification_status=r.get("verification_status",""), assessment_method=r.get("assessment_method",""),
-            notes=r.get("notes","")) for r in csv.DictReader(f)]
+            evidence_reference=r.get("evidence_reference",""), notes=r.get("notes","")) for r in csv.DictReader(f)]
 
 def validate_source_capabilities(rows: list[JurisdictionSourceCapability]) -> None:
     seen=set()
@@ -67,3 +72,14 @@ def derived_capabilities(rows: list[JurisdictionSourceCapability]) -> dict[str, 
         if r.capability_type is CapabilityType.ELECTION_NIGHT: live=True
         out[r.jurisdiction_id]=(final,live)
     return out
+
+
+def validate_locality_bindings(rows: list[JurisdictionSourceCapability], localities: list[object]) -> None:
+    by_id = {getattr(r, "jurisdiction_id"): r for r in localities}
+    for capability in rows:
+        locality = by_id.get(capability.jurisdiction_id)
+        if locality is None:
+            raise ValueError(f"source capability references unknown locality: {capability.jurisdiction_id}")
+        expected_authority = getattr(locality, "authority_id", "")
+        if capability.authority_id != expected_authority:
+            raise ValueError(f"source capability authority disagrees with locality: {capability.jurisdiction_id}")
