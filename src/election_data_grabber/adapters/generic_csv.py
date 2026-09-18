@@ -5,6 +5,7 @@ import io
 from datetime import datetime
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
 MODE_ALIASES = {
@@ -60,6 +61,7 @@ def parse_generic_precinct_csv(
     jurisdiction_id: str,
     source_id: str,
     fetched_at: datetime,
+    reporting_context: AdapterReportingContext | None = None,
 ) -> list[ResultObservation]:
     """Parse common precinct CSV exports into canonical long-form observations.
 
@@ -93,9 +95,12 @@ def parse_generic_precinct_csv(
             rows.append(
                 ResultObservation(
                     election_id=election_id,
-                    jurisdiction_id=jurisdiction_id,
-                    reporting_unit_id=f"{jurisdiction_id}:{precinct}",
+                    jurisdiction_id=(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id),
+                    reporting_unit_id=(reporting_context.unit_id(UnitType.PRECINCT, precinct, precinct) if reporting_context else f"{jurisdiction_id}:{precinct}"),
                     reporting_unit_name=precinct,
+                    reporting_regime_id=(reporting_context.regime_id if reporting_context else None),
+                    reporting_unit_raw_name=precinct,
+                    reporting_unit_source_native_id=precinct,
                     contest_name=contest,
                     choice_name=candidate,
                     source_order=source_order,
