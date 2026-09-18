@@ -5,6 +5,7 @@ from xml.etree import ElementTree as ET
 
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
+from election_data_grabber.vote_modes import normalize_vote_mode
 
 
 _MODE_MAP = {
@@ -68,8 +69,9 @@ def parse_clarity_like_xml(
                 order_raw = _text(choice, 'order', 'Order')
                 order = int(order_raw) if order_raw and order_raw.isdigit() else None
                 for total in choice.findall('./Total'):
-                    mode_raw = (_text(total, 'mode', 'Mode') or 'total').lower()
-                    mode = _MODE_MAP.get(mode_raw, VoteMode.OTHER)
+                    mode_raw = _text(total, 'mode', 'Mode') or 'total'
+                    resolution = normalize_vote_mode(mode_raw, source_id=source_id)
+                    mode = resolution.vote_mode or VoteMode.UNKNOWN
                     votes_raw = _text(total, 'votes', 'Votes') or '0'
                     observations.append(
                         ResultObservation(
@@ -90,6 +92,8 @@ def parse_clarity_like_xml(
                             source_id=source_id,
                             fetched_at=fetched_at,
                             raw_vote_mode=mode_raw,
+                            vote_mode_mapping_method=(resolution.rule.mapping_method if resolution.rule else None),
+                            vote_mode_evidence_reference=(resolution.rule.evidence_reference if resolution.rule else None),
                         )
                     )
     return observations
