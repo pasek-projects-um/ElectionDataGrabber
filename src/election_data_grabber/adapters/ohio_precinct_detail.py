@@ -59,6 +59,8 @@ class OhioPrecinctDetailAdapter:
         self.election_id = election_id
 
     def parse(self, body: bytes, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
+        if reporting_context is not None:
+            reporting_context.validate_call(election_id=self.election_id, source_id=self.source.source_id)
         soup = BeautifulSoup(body, "html.parser")
         out: list[ResultObservation] = []
         current_unit = None
