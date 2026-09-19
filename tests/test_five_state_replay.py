@@ -27,6 +27,7 @@ from election_data_grabber.replay import (
     validate_replay_identity,
 )
 from election_data_grabber.reporting_unit_identity import UnitType
+from election_data_grabber.source_capabilities import CapabilityType
 
 
 NOW=datetime(2026,11,3,22,0,tzinfo=timezone.utc)
@@ -34,11 +35,11 @@ ROOT=Path(__file__).parent/"fixtures"/"replay"
 
 
 CASES=[
-    ReplayFixture("MI","2026-general","us:mi:county:washtenaw","us:authority:mi:county-clerk:washtenaw-county-clerk","replay-mi","election_night","election-night","csv",ROOT/"mi.csv",NOW,"https://example.gov/mi"),
-    ReplayFixture("OH","2026-general","us:oh:county:franklin","us:authority:oh:board-of-elections:franklin-county-board-of-elections","replay-oh","final","certified","json",ROOT/"oh.json",NOW,"https://example.gov/oh"),
-    ReplayFixture("CT","2026-general","us:ct:town:greenwich","us:authority:ct:town-clerk:greenwich-town-clerk","replay-ct","final","certified","csv",ROOT/"ct.csv",NOW,"https://example.gov/ct"),
-    ReplayFixture("PA","2026-general","us:pa:county:philadelphia","us:authority:pa:county-election-office:philadelphia-county-election-office","replay-pa","election_night","election-night","csv",ROOT/"pa.csv",NOW,"https://example.gov/pa"),
-    ReplayFixture("ME","2026-general","us:me:municipality:portland","us:authority:me:municipal-clerk:portland-municipal-clerk","replay-me","final","certified","json",ROOT/"me.json",NOW,"https://example.gov/me",UnitType.WARD),
+    ReplayFixture("MI","2026-general","us:mi:county:washtenaw","us:authority:mi:county-clerk:washtenaw-county-clerk","replay-mi",CapabilityType.ELECTION_NIGHT,"election-night","csv",ROOT/"mi.csv",NOW,"https://example.gov/mi"),
+    ReplayFixture("OH","2026-general","us:oh:county:franklin","us:authority:oh:board-of-elections:franklin-county-board-of-elections","replay-oh",CapabilityType.FINAL,"certified","json",ROOT/"oh.json",NOW,"https://example.gov/oh"),
+    ReplayFixture("CT","2026-general","us:ct:town:greenwich","us:authority:ct:town-clerk:greenwich-town-clerk","replay-ct",CapabilityType.FINAL,"certified","csv",ROOT/"ct.csv",NOW,"https://example.gov/ct"),
+    ReplayFixture("PA","2026-general","us:pa:county:philadelphia","us:authority:pa:county-election-office:philadelphia-county-election-office","replay-pa",CapabilityType.ELECTION_NIGHT,"election-night","csv",ROOT/"pa.csv",NOW,"https://example.gov/pa"),
+    ReplayFixture("ME","2026-general","us:me:municipality:portland","us:authority:me:municipal-clerk:portland-municipal-clerk","replay-me",CapabilityType.FINAL,"certified","json",ROOT/"me.json",NOW,"https://example.gov/me",UnitType.WARD),
 ]
 
 
