@@ -70,3 +70,22 @@ Undervotes 4
         reporting_context=CTX,
     )
     assert [r.choice_name for r in rows]==["Alice","Bob"]
+
+
+
+def test_preserves_explicit_write_in_candidate_rows():
+    text="""Precinct 001
+Registered Voters 100
+Ballots Cast 60
+President
+Alice 30
+Write-In Candidate 2
+"""
+    rows=parse_ohio_tabulator_text(
+        text,
+        election_id="2026-general",
+        source_id="oh-athens-sov",
+        fetched_at=NOW,
+        reporting_context=CTX,
+    )
+    assert [(r.choice_name,r.votes) for r in rows]==[("Alice",30),("Write-In Candidate",2)]
