@@ -94,7 +94,7 @@ def test_ambiguous_identity_is_not_silently_accepted():
 def test_integrity_failure_stops_persistence(tmp_path):
     fixture=ReplayFixture(
         "MI","2026-general","us:mi:county:washtenaw","us:authority:mi:county-clerk:washtenaw-county-clerk",
-        "replay-mi","election_night","election-night","csv",ROOT/"mi.csv",NOW,"https://example.gov/mi",
+        "replay-mi",CapabilityType.ELECTION_NIGHT,"election-night","csv",ROOT/"mi.csv",NOW,"https://example.gov/mi",
     )
     snapshot=snapshot_for_fixture(fixture)
     progress=[
