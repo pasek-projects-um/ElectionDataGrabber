@@ -6,7 +6,10 @@ from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.reconcile import aggregate_observations, reconcile_to_summary
 
 
-def obs(unit: str, votes: int, mode: VoteMode = VoteMode.TOTAL) -> ResultObservation:
+FIXED_FETCHED_AT = datetime(2026, 8, 4, 20, 0, tzinfo=timezone.utc)
+
+
+def obs(unit: str, votes: int, mode: VoteMode = VoteMode.TOTAL, *, snapshot: str | None = None) -> ResultObservation:
     return ResultObservation(
         election_id="2026-08-04-mi-primary",
         jurisdiction_id="mi-washtenaw",
@@ -17,7 +20,8 @@ def obs(unit: str, votes: int, mode: VoteMode = VoteMode.TOTAL) -> ResultObserva
         votes=votes,
         vote_mode=mode,
         source_id="test",
-        fetched_at=datetime.now(timezone.utc),
+        fetched_at=FIXED_FETCHED_AT,
+        snapshot_sha256=snapshot,
     )
 
 
@@ -45,4 +49,13 @@ def test_aggregation_allows_component_only_modes():
         obs("p1", 40, VoteMode.ABSENTEE),
     ])
     assert totals[("Governor", "Candidate A", VoteMode.ELECTION_DAY)] == 60
+    assert totals[("Governor", "Candidate A", VoteMode.ABSENTEE)] == 40
+
+
+def test_aggregation_allows_same_identity_across_distinct_snapshots():
+    totals = aggregate_observations([
+        obs("p1", 100, VoteMode.TOTAL, snapshot="a"*64),
+        obs("p1", 40, VoteMode.ABSENTEE, snapshot="b"*64),
+    ])
+    assert totals[("Governor", "Candidate A", VoteMode.TOTAL)] == 100
     assert totals[("Governor", "Candidate A", VoteMode.ABSENTEE)] == 40
