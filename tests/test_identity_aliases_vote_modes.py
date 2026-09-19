@@ -209,3 +209,9 @@ def test_non_overlapping_historical_decision_does_not_downgrade_current_alias():
     current=alias("us:mi:county:x","Example",start=date(2000,1,1))
     merged=merge_identity_aliases([current],[historical])
     assert historical in merged and current in merged
+
+
+def test_unknown_mode_does_not_claim_component_semantics_for_double_count_guard():
+    assert_no_aggregate_component_double_count([_obs(VoteMode.TOTAL),_obs(VoteMode.UNKNOWN)])
+    with pytest.raises(ValueError):
+        assert_no_aggregate_component_double_count([_obs(VoteMode.TOTAL),_obs(VoteMode.MAIL)])
