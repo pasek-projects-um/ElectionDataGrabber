@@ -99,9 +99,9 @@ def resolve_vote_mode(raw_label: str, rules: list[VoteModeRule], *, state: str |
 
 DEFAULT_RULES = [
     VoteModeRule("election day", VoteMode.ELECTION_DAY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
-    VoteModeRule("election_day", VoteMode.ELECTION_DAY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
+    VoteModeRule("election_day", VoteMode.ELECTION_DAY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),\n    VoteModeRule("ed", VoteMode.ELECTION_DAY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
     VoteModeRule("early", VoteMode.EARLY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
-    VoteModeRule("early voting", VoteMode.EARLY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
+    VoteModeRule("early voting", VoteMode.EARLY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),\n    VoteModeRule("early_voting", VoteMode.EARLY, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
     VoteModeRule("absentee", VoteMode.ABSENTEE, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
     VoteModeRule("mail", VoteMode.MAIL, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
     VoteModeRule("provisional", VoteMode.PROVISIONAL, "literal_label", "governed_default", aggregation=VoteModeAggregation.COMPONENT),
@@ -110,8 +110,8 @@ DEFAULT_RULES = [
     VoteModeRule("total votes", VoteMode.TOTAL, "literal_label", "governed_default", aggregation=VoteModeAggregation.AGGREGATE),
     VoteModeRule("votes", VoteMode.TOTAL, "literal_label", "governed_default", aggregation=VoteModeAggregation.AGGREGATE),
     VoteModeRule("av", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
-    VoteModeRule("av counting boards", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
-    VoteModeRule("pre process absentee", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
+    VoteModeRule("av counting boards", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),\n    VoteModeRule("av_counting_boards", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
+    VoteModeRule("pre process absentee", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),\n    VoteModeRule("pre_process_absentee", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
 ]
 
 
