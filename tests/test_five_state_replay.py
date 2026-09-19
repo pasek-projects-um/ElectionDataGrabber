@@ -27,7 +27,7 @@ from election_data_grabber.replay import (
     validate_replay_identity,
 )
 from election_data_grabber.reporting_unit_identity import UnitType
-from election_data_grabber.source_capabilities import CapabilityType
+from election_data_grabber.source_capabilities import CapabilityType, VerificationStatus
 
 
 NOW=datetime(2026,11,3,22,0,tzinfo=timezone.utc)
@@ -144,3 +144,15 @@ def test_progress_is_included_in_deterministic_output():
     b=replay_fixture(fixture,progress=progress)
     assert a == b
     assert a.progress[0]["reporting_count"] == 4
+
+
+
+def test_candidate_source_capability_is_not_accepted_for_replay():
+    fixture=ReplayFixture(
+        "PA","2026-general","us:pa:county:philadelphia",
+        "us:authority:pa:county-election-office:philadelphia-county-election-office",
+        "replay-pa",CapabilityType.ELECTION_NIGHT,"election-night","csv",ROOT/"pa.csv",NOW,
+        "https://example.gov/pa",verification_status=VerificationStatus.CANDIDATE,
+    )
+    with pytest.raises(ValueError,match="positively adjudicated"):
+        replay_fixture(fixture)
