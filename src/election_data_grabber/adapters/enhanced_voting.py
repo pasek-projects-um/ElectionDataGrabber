@@ -8,7 +8,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 from election_data_grabber.models import (
-    ReportingProgress, ReportingProgressBasis, ReportingProgressKind,
+    ReportingProgress, ReportingProgressBasis, ReportingProgressKind, ReportingProgressScope,
     ResultObservation, UpdateSemantics, VoteMode,
 )
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
@@ -115,10 +115,30 @@ def parse_enhanced_voting_html(body: bytes, *, election_id: str, jurisdiction_id
     return out
 
 
-_PROGRESS_REPORTING_KEYS=("precinctsReporting","reportingPrecincts","precincts_reported","reporting")
+_PROGRESS_REPORTING_KEYS=("precinctsReporting","reportingPrecincts","precincts_reported")
 _PROGRESS_TOTAL_KEYS=("precinctsTotal","totalPrecincts","precincts_total","expectedPrecincts")
 _PROGRESS_COMPLETE_KEYS=("complete","isComplete","reportingComplete","resultsComplete")
-_PROGRESS_SEMANTIC_KEYS=("incremental","isIncremental","cumulative","isCumulative")
+_PROGRESS_INCREMENTAL_KEYS=("incremental","isIncremental")
+_PROGRESS_CUMULATIVE_KEYS=("cumulative","isCumulative")
+
+
+def _bool(v: Any) -> bool | None:
+    if isinstance(v,bool): return v
+    if v is None: return None
+    raw=str(v).strip().lower()
+    if raw in {"true","yes","1"}: return True
+    if raw in {"false","no","0"}: return False
+    return None
+
+
+def _update_semantics(d: dict[str,Any]) -> UpdateSemantics:
+    incremental=_bool(_first(d,_PROGRESS_INCREMENTAL_KEYS))
+    cumulative=_bool(_first(d,_PROGRESS_CUMULATIVE_KEYS))
+    if incremental is True and cumulative is not True:
+        return UpdateSemantics.INCREMENTAL
+    if cumulative is True and incremental is not True:
+        return UpdateSemantics.CUMULATIVE
+    return UpdateSemantics.UNKNOWN
 
 
 def parse_enhanced_voting_progress(body: bytes, *, election_id: str, jurisdiction_id: str,
@@ -129,41 +149,33 @@ def parse_enhanced_voting_progress(body: bytes, *, election_id: str, jurisdictio
     out=[]
     seen=set()
     canonical_jurisdiction=reporting_context.jurisdiction_id if reporting_context else jurisdiction_id
+    progress_keys=set(
+        _PROGRESS_REPORTING_KEYS+_PROGRESS_TOTAL_KEYS+_PROGRESS_COMPLETE_KEYS+
+        _PROGRESS_INCREMENTAL_KEYS+_PROGRESS_CUMULATIVE_KEYS
+    )
     for doc in embedded_json_documents(body):
         for d in _walk(doc):
             reporting=_int(_first(d,_PROGRESS_REPORTING_KEYS))
             expected=_int(_first(d,_PROGRESS_TOTAL_KEYS))
             complete_raw=_first(d,_PROGRESS_COMPLETE_KEYS)
-            semantic_raw=_first(d,_PROGRESS_SEMANTIC_KEYS)
             if reporting is None and expected is None and complete_raw is None:
                 continue
             unit=_first(d,_UNIT_KEYS)
-            scope="reporting_unit" if unit else "source"
+            scope=ReportingProgressScope.REPORTING_UNIT if unit else ReportingProgressScope.SOURCE
             unit_id=None
             unit_name=str(unit) if unit else None
             if unit and reporting_context is not None:
                 unit_id=reporting_context.unit_id(UnitType.PRECINCT,str(unit),str(unit))
             elif unit:
                 unit_id=f"{jurisdiction_id}:{unit}"
-            semantics=UpdateSemantics.UNKNOWN
-            raw_semantic=str(semantic_raw).strip().lower() if semantic_raw is not None else ""
-            if "increment" in raw_semantic or raw_semantic in {"true","1"} and any(k.lower().startswith("increment") for k in map(str,d.keys())):
-                semantics=UpdateSemantics.INCREMENTAL
-            elif "cumul" in raw_semantic:
-                semantics=UpdateSemantics.CUMULATIVE
-            complete=None
-            if isinstance(complete_raw,bool):
-                complete=complete_raw
-            elif complete_raw is not None:
-                raw=str(complete_raw).strip().lower()
-                if raw in {"true","yes","1","complete","completed","final"}: complete=True
-                elif raw in {"false","no","0","incomplete","partial"}: complete=False
+            semantics=_update_semantics(d)
+            complete=_bool(complete_raw)
             raw_status=json.dumps(
-                {str(k): d[k] for k in d if str(k) in set(_PROGRESS_REPORTING_KEYS+_PROGRESS_TOTAL_KEYS+_PROGRESS_COMPLETE_KEYS+_PROGRESS_SEMANTIC_KEYS)},
+                {str(k): d[k] for k in d if str(k) in progress_keys},
                 sort_keys=True,
                 default=str,
             )
-            sig=(scope,unit_id,reporting,expected,complete,semantics.value,raw_status)
+            sig=(scope.value,unit_id,reporting,expected,complete,semantics.value,raw_status)
             if sig in seen: continue
             seen.add(sig)
             if reporting is not None or expected is not None:
