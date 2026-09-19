@@ -69,13 +69,18 @@ def _overlap(a0: date | None, a1: date | None, b0: date | None, b1: date | None)
 
 
 def validate_identity_aliases(rows: list[IdentityAlias]) -> None:
-    seen: set[tuple] = set()
+    exact_seen: set[tuple] = set()
     groups: dict[tuple[IdentityObjectType, str, str], list[IdentityAlias]] = {}
     for row in rows:
-        exact = (row.lookup_key, row.canonical_id, row.status, row.effective_from, row.effective_to)
-        if exact in seen:
+        exact = (
+            row.object_type, row.canonical_id, row.alias_kind, row.alias_value,
+            row.alias_namespace, row.status, row.confidence,
+            row.reconciliation_method, row.evidence_reference, row.reviewer,
+            row.effective_from, row.effective_to,
+        )
+        if exact in exact_seen:
             raise ValueError(f"duplicate identity alias decision: {row.lookup_key}")
-        seen.add(exact)
+        exact_seen.add(exact)
         groups.setdefault(row.lookup_key, []).append(row)
     for key, items in groups.items():
         verified = [row for row in items if row.status == IdentityDecisionStatus.VERIFIED]
@@ -110,6 +115,4 @@ def authoritative_external_alias(rows: list[IdentityAlias], canonical_id: str) -
     ]
     if not verified:
         return None
-    # Multiple authoritative namespaces may coexist; never choose by name or
-    # silently downgrade one. Stable ordering makes reruns idempotent.
     return sorted(verified, key=lambda row: (row.alias_namespace, row.alias_value))[0]
