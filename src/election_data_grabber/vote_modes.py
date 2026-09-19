@@ -57,9 +57,19 @@ def validate_vote_mode_rules(rows: list[VoteModeRule]) -> None:
     for row in rows:
         key = (_label(row.raw_label), row.state.upper() if row.state else None, row.source_id)
         prior = seen.get(key)
-        if prior and prior != row:
-            raise ValueError(f"conflicting vote-mode rule: {key}")
-        seen[key] = row
+        if prior:
+            prior_semantics = (
+                prior.vote_mode, prior.mapping_method, prior.evidence_reference,
+                prior.status, prior.aggregation,
+            )
+            row_semantics = (
+                row.vote_mode, row.mapping_method, row.evidence_reference,
+                row.status, row.aggregation,
+            )
+            if prior_semantics != row_semantics:
+                raise ValueError(f"conflicting vote-mode rule: {key}")
+        else:
+            seen[key] = row
 
 
 def resolve_vote_mode(raw_label: str, rules: list[VoteModeRule], *, state: str | None = None, source_id: str | None = None) -> VoteModeResolution:
@@ -99,7 +109,6 @@ DEFAULT_RULES = [
     VoteModeRule("total", VoteMode.TOTAL, "literal_label", "governed_default", aggregation=VoteModeAggregation.AGGREGATE),
     VoteModeRule("total votes", VoteMode.TOTAL, "literal_label", "governed_default", aggregation=VoteModeAggregation.AGGREGATE),
     VoteModeRule("votes", VoteMode.TOTAL, "literal_label", "governed_default", aggregation=VoteModeAggregation.AGGREGATE),
-    # Michigan AV is jurisdictionally governed; it is not a universal synonym.
     VoteModeRule("av", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
     VoteModeRule("av counting boards", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
     VoteModeRule("pre process absentee", VoteMode.ABSENTEE, "state_semantic_override", "mi_av_semantics", state="MI"),
@@ -111,11 +120,7 @@ def normalize_vote_mode(raw_label: str, *, state: str | None = None, source_id: 
 
 
 def assert_no_aggregate_component_double_count(rows: list[object]) -> None:
-    """Reject a result set that would sum TOTAL alongside mode components.
-
-    The caller may retain both forms; this guard is for aggregation paths that
-    intend to sum observations. Unknown modes are not silently classified.
-    """
+    """Reject a result set that would sum TOTAL alongside mode components."""
     groups: dict[tuple, set[VoteMode]] = {}
     for row in rows:
         key = (
