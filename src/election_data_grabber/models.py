@@ -173,12 +173,6 @@ class ReportingProgress(BaseModel):
             raise ValueError("reporting_count cannot be negative")
         if self.expected_count is not None and self.expected_count < 0:
             raise ValueError("expected_count cannot be negative")
-        if (
-            self.reporting_count is not None
-            and self.expected_count is not None
-            and self.reporting_count > self.expected_count
-        ):
-            raise ValueError("reporting_count cannot exceed expected_count")
         if self.kind == ReportingProgressKind.SOURCE_COUNTS and self.reporting_count is None and self.expected_count is None:
             raise ValueError("source counts require reporting_count or expected_count")
         if self.kind == ReportingProgressKind.SOURCE_COMPLETE and self.complete is None:
