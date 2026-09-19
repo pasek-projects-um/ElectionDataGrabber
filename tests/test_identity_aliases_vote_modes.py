@@ -192,3 +192,20 @@ def test_temporal_alias_requires_as_of_date():
     assert resolve_alias(rows,object_type=IdentityObjectType.JURISDICTION,namespace="name:mi:county",value="Shared Name") is None
     assert resolve_alias(rows,object_type=IdentityObjectType.JURISDICTION,namespace="name:mi:county",value="Shared Name",when=date(2010,1,1))=="us:ct:municipality:old"
     assert resolve_alias(rows,object_type=IdentityObjectType.JURISDICTION,namespace="name:mi:county",value="Shared Name",when=date(2024,1,1))=="us:ct:municipality:new"
+
+
+def test_rerun_cannot_downgrade_verified_alias():
+    verified=alias("us:mi:county:x","Example")
+    proposed=alias("us:mi:county:x","Example",status=IdentityDecisionStatus.PROPOSED)
+    with pytest.raises(ValueError):
+        merge_identity_aliases([verified],[proposed])
+
+
+def test_non_overlapping_historical_decision_does_not_downgrade_current_alias():
+    historical=alias(
+        "us:mi:county:x","Example",status=IdentityDecisionStatus.PROPOSED,
+        start=date(1900,1,1),end=date(1999,12,31),
+    )
+    current=alias("us:mi:county:x","Example",start=date(2000,1,1))
+    merged=merge_identity_aliases([current],[historical])
+    assert historical in merged and current in merged
