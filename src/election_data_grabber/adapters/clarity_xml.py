@@ -8,18 +8,6 @@ from election_data_grabber.reporting_unit_identity import AdapterReportingContex
 from election_data_grabber.vote_modes import normalize_vote_mode
 
 
-_MODE_MAP = {
-    "election day": VoteMode.ELECTION_DAY,
-    "election_day": VoteMode.ELECTION_DAY,
-    "early": VoteMode.EARLY,
-    "early voting": VoteMode.EARLY,
-    "absentee": VoteMode.ABSENTEE,
-    "mail": VoteMode.MAIL,
-    "provisional": VoteMode.PROVISIONAL,
-    "total": VoteMode.TOTAL,
-}
-
-
 def _text(node: ET.Element | None, *names: str) -> str | None:
     if node is None:
         return None
@@ -32,6 +20,16 @@ def _text(node: ET.Element | None, *names: str) -> str | None:
     return None
 
 
+def _state_from_jurisdiction(jurisdiction_id: str) -> str | None:
+    parts = jurisdiction_id.lower().split(":")
+    if len(parts) >= 2 and parts[0] == "us" and len(parts[1]) == 2:
+        return parts[1].upper()
+    for state in ("mi", "oh", "pa", "me"):
+        if jurisdiction_id.lower().startswith(state + "-"):
+            return state.upper()
+    return None
+
+
 def parse_clarity_like_xml(
     body: bytes,
     *,
@@ -41,16 +39,12 @@ def parse_clarity_like_xml(
     fetched_at: datetime,
     reporting_context: AdapterReportingContext | None = None,
 ) -> list[ResultObservation]:
-    """Parse a compact Clarity-like XML fixture shape into canonical observations.
-
-    Real Clarity deployments vary by export; this is intentionally a compatibility
-    contract for tests and a staging point before delegating richer discovery/parsing
-    to OpenElections clarify.
-    """
+    """Parse a compact Clarity-like XML fixture shape into canonical observations."""
     if reporting_context is not None:
         reporting_context.validate_call(election_id=election_id, source_id=source_id)
     root = ET.fromstring(body)
     observations: list[ResultObservation] = []
+    state = _state_from_jurisdiction(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id)
 
     for precinct in root.findall('.//Precinct'):
         precinct_id = _text(precinct, 'id', 'Id', 'precinctId') or _text(precinct, 'Name')
@@ -70,7 +64,7 @@ def parse_clarity_like_xml(
                 order = int(order_raw) if order_raw and order_raw.isdigit() else None
                 for total in choice.findall('./Total'):
                     mode_raw = _text(total, 'mode', 'Mode') or 'total'
-                    resolution = normalize_vote_mode(mode_raw, source_id=source_id)
+                    resolution = normalize_vote_mode(mode_raw, state=state, source_id=source_id)
                     mode = resolution.vote_mode or VoteMode.UNKNOWN
                     votes_raw = _text(total, 'votes', 'Votes') or '0'
                     observations.append(
