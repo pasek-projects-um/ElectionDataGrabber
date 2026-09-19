@@ -162,3 +162,44 @@ def test_source_counts_above_expected_are_preserved_and_auditable():
         fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
     ) if r.kind == ReportingProgressKind.SOURCE_COUNTS)
     assert (row.reporting_count,row.expected_count) == (11,10)
+    findings=validate_progress_history([row])
+    assert any("reporting_count exceeds expected_count 11>10" in finding for finding in findings)
+
+
+
+def test_progress_model_rejects_cross_kind_payload_fields():
+    from pydantic import ValidationError
+    from election_data_grabber.models import ReportingProgress
+    try:
+        ReportingProgress(
+            election_id="e1",jurisdiction_id="us:mi:county:test",source_id="s",
+            fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
+            scope=ReportingProgressScope.SOURCE,
+            kind=ReportingProgressKind.SOURCE_COMPLETE,
+            basis=ReportingProgressBasis.INFERRED,
+            complete=False,
+            reporting_count=1,
+        )
+    except ValidationError:
+        pass
+    else:
+        raise AssertionError("cross-kind reporting_count should be rejected")
+
+
+def test_contest_scope_requires_contest_identity():
+    from pydantic import ValidationError
+    from election_data_grabber.models import ReportingProgress
+    try:
+        ReportingProgress(
+            election_id="e1",jurisdiction_id="us:mi:county:test",source_id="s",
+            fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
+            scope=ReportingProgressScope.CONTEST,
+            kind=ReportingProgressKind.SOURCE_COUNTS,
+            basis=ReportingProgressBasis.SOURCE_REPORTED,
+            reporting_count=1,
+            raw_status="1 reporting",
+        )
+    except ValidationError:
+        pass
+    else:
+        raise AssertionError("contest scope without contest_id should be rejected")
