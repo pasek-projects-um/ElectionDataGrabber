@@ -39,7 +39,7 @@ MN is currently indirect.
 Generic central-directory extraction remains unresolved for:
 AK, AL, GA, KS, LA, MA, ND, NM, NY, RI, SC, VT, WI.
 
-A governed expansion-profile layer now covers all 13 of these states (3,116 planned primary units) with explicit authority models, unit types, and priority result families. The next census runs should use those profiles to turn directory reachability into canonical locality/source records rather than ad hoc state handling.
+A governed expansion-profile layer now covers all 13 of these states (3,073 planned primary units) with explicit authority models, unit types, and priority result families. The next census runs should use those profiles to turn directory reachability into canonical locality/source records rather than ad hoc state handling.
 
 These are directory-enumeration problems, not evidence that local result sources do not exist.
 
@@ -94,7 +94,7 @@ Work unresolved states alphabetically with state-specific central-directory prof
 - [~] Massachusetts — governed 351-municipality profile in place; execute local-election-office census.
 - [~] North Dakota — governed 53-county profile in place; execute county-official census.
 - [~] New Mexico — governed 33-county profile in place; execute county-clerk census.
-- [~] New York — governed 62-board/county profile in place; execute board census with NYC special handling preserved.
+- [~] New York — governed 58-board/county profile in place; execute board census with NYC special handling preserved.
 - [~] Rhode Island — governed 39-municipality profile in place; execute local-board census.
 - [~] South Carolina — governed 46-county profile in place; execute county-office census.
 - [~] Vermont — governed 247-town profile in place; execute clerk census.
