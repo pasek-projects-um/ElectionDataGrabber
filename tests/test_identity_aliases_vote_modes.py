@@ -183,3 +183,12 @@ def test_generic_json_mi_av_uses_state_governance():
     )[0]
     assert row.vote_mode==VoteMode.ABSENTEE
     assert row.vote_mode_mapping_method=="state_semantic_override"
+
+
+def test_temporal_alias_requires_as_of_date():
+    old=alias("us:ct:municipality:old","Shared Name",start=date(1900,1,1),end=date(2020,12,31))
+    new=alias("us:ct:municipality:new","Shared Name",start=date(2021,1,1))
+    rows=[old,new]
+    assert resolve_alias(rows,object_type=IdentityObjectType.JURISDICTION,namespace="name:mi:county",value="Shared Name") is None
+    assert resolve_alias(rows,object_type=IdentityObjectType.JURISDICTION,namespace="name:mi:county",value="Shared Name",when=date(2010,1,1))=="us:ct:municipality:old"
+    assert resolve_alias(rows,object_type=IdentityObjectType.JURISDICTION,namespace="name:mi:county",value="Shared Name",when=date(2024,1,1))=="us:ct:municipality:new"
