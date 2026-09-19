@@ -108,16 +108,23 @@ def resolve_alias(rows: list[IdentityAlias], *, object_type: IdentityObjectType,
     return next(iter(unique), None)
 
 
-def authoritative_external_alias(rows: list[IdentityAlias], canonical_id: str) -> IdentityAlias | None:
+def authoritative_external_alias(
+    rows: list[IdentityAlias], canonical_id: str, *, namespace: str | None = None
+) -> IdentityAlias | None:
+    """Return a unique verified external alias; never choose arbitrarily across namespaces."""
     verified = [
         row for row in rows
         if row.canonical_id == canonical_id
         and row.alias_kind == AliasKind.EXTERNAL_ID
         and row.status == IdentityDecisionStatus.VERIFIED
+        and (namespace is None or row.alias_namespace.strip().lower() == namespace.strip().lower())
     ]
     if not verified:
         return None
-    return sorted(verified, key=lambda row: (row.alias_namespace, row.alias_value))[0]
+    unique = {(row.alias_namespace.strip().lower(), normalized_alias(row.alias_value)): row for row in verified}
+    if len(unique) != 1:
+        return None
+    return next(iter(unique.values()))
 
 
 ALIAS_FIELDS = (
