@@ -6,7 +6,10 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 from election_data_grabber.adapters.base import Adapter
-from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.models import (
+    ReportingProgress, ReportingProgressBasis, ReportingProgressKind, ReportingProgressScope,
+    ResultObservation, UpdateSemantics, VoteMode,
+)
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
 
 
@@ -101,6 +104,69 @@ class WashtenawAdapter(Adapter):
                     )
                 )
         return observations
+
+
+    def parse_progress(self, body: bytes, *, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ReportingProgress]:
+        election_id = "2026-08-04-mi-primary"
+        if reporting_context is not None:
+            reporting_context.validate_call(election_id=election_id, source_id=self.source.source_id)
+        soup = BeautifulSoup(body, "html.parser")
+        text = soup.get_text(" ", strip=True)
+        report_ts = self._parse_report_timestamp(text)
+        unit_name = self._reporting_unit_name(soup)
+        unit_id = (
+            reporting_context.unit_id(UnitType.REPORTING_UNIT, unit_name)
+            if reporting_context is not None
+            else self._slug(unit_name)
+        )
+        jurisdiction_id = reporting_context.jurisdiction_id if reporting_context else "mi-washtenaw"
+        regime_id = reporting_context.regime_id if reporting_context else None
+        snapshot_sha = reporting_context.snapshot_sha256 if reporting_context else None
+
+        progress = [
+            ReportingProgress(
+                election_id=election_id,
+                jurisdiction_id=jurisdiction_id,
+                source_id=self.source.source_id,
+                fetched_at=fetched_at,
+                reporting_regime_id=regime_id,
+                reporting_unit_id=unit_id,
+                reporting_unit_name=unit_name,
+                scope=ReportingProgressScope.REPORTING_UNIT,
+                kind=ReportingProgressKind.UNIT_EXISTS,
+                basis=ReportingProgressBasis.INFERRED,
+                update_semantics=UpdateSemantics.UNKNOWN,
+                reported=True,
+                source_timestamp=report_ts,
+                snapshot_sha256=snapshot_sha,
+                raw_status=unit_name,
+            )
+        ]
+
+        has_candidate_votes = any(
+            len(row.find_all(["th", "td"])) >= 5
+            for row in soup.find_all("tr")
+        )
+        progress.append(
+            ReportingProgress(
+                election_id=election_id,
+                jurisdiction_id=jurisdiction_id,
+                source_id=self.source.source_id,
+                fetched_at=fetched_at,
+                reporting_regime_id=regime_id,
+                reporting_unit_id=unit_id,
+                reporting_unit_name=unit_name,
+                scope=ReportingProgressScope.REPORTING_UNIT,
+                kind=ReportingProgressKind.UNIT_REPORTED,
+                basis=ReportingProgressBasis.INFERRED,
+                update_semantics=UpdateSemantics.UNKNOWN,
+                reported=has_candidate_votes,
+                source_timestamp=report_ts,
+                snapshot_sha256=snapshot_sha,
+                raw_status="candidate rows present" if has_candidate_votes else "no candidate rows observed",
+            )
+        )
+        return progress
 
     @staticmethod
     def _parse_int(value: str) -> int | None:
