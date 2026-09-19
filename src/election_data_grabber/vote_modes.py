@@ -86,7 +86,12 @@ def resolve_vote_mode(raw_label: str, rules: list[VoteModeRule], *, state: str |
         return VoteModeResolution(raw_label, None, None)
 
     def specificity(row: VoteModeRule) -> tuple[int, int]:
-        return (1 if row.source_id else 0, 1 if row.state else 0)
+        # State and source are independent scoping dimensions. A rule scoped to
+        # both outranks either alone; state-only and source-only are peers and
+        # conflicting peer rules must remain unresolved rather than relying on
+        # an arbitrary dimension precedence.
+        scoped = int(row.source_id is not None) + int(row.state is not None)
+        return (scoped, 0)
 
     candidates.sort(key=specificity, reverse=True)
     best = specificity(candidates[0])
@@ -132,6 +137,7 @@ def assert_no_aggregate_component_double_count(rows: list[object]) -> None:
     for row in rows:
         key = (
             getattr(row, "election_id", None), getattr(row, "jurisdiction_id", None),
+            getattr(row, "source_id", None), getattr(row, "snapshot_sha256", None) or getattr(row, "fetched_at", None),
             getattr(row, "reporting_unit_id", None), getattr(row, "contest_id", None) or getattr(row, "contest_name", None),
             getattr(row, "choice_id", None) or getattr(row, "choice_name", None),
         )
