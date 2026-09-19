@@ -5,6 +5,17 @@ from typing import Any
 
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
+from election_data_grabber.vote_modes import normalize_vote_mode
+
+
+def _state_from_jurisdiction(jurisdiction_id: str) -> str | None:
+    parts = jurisdiction_id.lower().split(":")
+    if len(parts) >= 2 and parts[0] == "us" and len(parts[1]) == 2:
+        return parts[1].upper()
+    for state in ("mi", "oh", "pa", "me"):
+        if jurisdiction_id.lower().startswith(state + "-"):
+            return state.upper()
+    return None
 
 
 def parse_generic_results_json(
@@ -28,6 +39,7 @@ def parse_generic_results_json(
     if reporting_context is not None:
         reporting_context.validate_call(election_id=election_id, source_id=source_id)
     observations: list[ResultObservation] = []
+    state = _state_from_jurisdiction(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id)
     for unit in payload.get("reporting_units", []):
         unit_id = str(unit.get("id") or unit.get("name") or "").strip()
         unit_name = str(unit.get("name") or unit_id).strip()
@@ -41,11 +53,9 @@ def parse_generic_results_json(
                 name = str(choice.get("name") or "").strip()
                 if not name:
                     continue
-                mode_raw = str(choice.get("mode") or "total").strip().lower()
-                try:
-                    mode = VoteMode(mode_raw)
-                except ValueError:
-                    mode = VoteMode.OTHER
+                mode_raw = str(choice.get("mode") or "total").strip()
+                resolution = normalize_vote_mode(mode_raw, state=state, source_id=source_id)
+                mode = resolution.vote_mode or VoteMode.UNKNOWN
                 observations.append(
                     ResultObservation(
                         election_id=election_id,
@@ -65,6 +75,8 @@ def parse_generic_results_json(
                         source_id=source_id,
                         fetched_at=fetched_at,
                         raw_vote_mode=mode_raw,
+                        vote_mode_mapping_method=(resolution.rule.mapping_method if resolution.rule else None),
+                        vote_mode_evidence_reference=(resolution.rule.evidence_reference if resolution.rule else None),
                     )
                 )
     return observations

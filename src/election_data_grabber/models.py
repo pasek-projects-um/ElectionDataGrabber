@@ -38,6 +38,7 @@ class VoteMode(StrEnum):
     PROVISIONAL = "provisional"
     UOCAVA = "uocava"
     OTHER = "other"
+    UNKNOWN = "unknown"
 
 
 class Source(BaseModel):
@@ -143,6 +144,8 @@ class ResultObservation(BaseModel):
     precincts_reporting: int | None = None
     precincts_total: int | None = None
     raw_vote_mode: str | None = None
+    vote_mode_mapping_method: str | None = None
+    vote_mode_evidence_reference: str | None = None
     # Optional until all adapters parse from a persisted Snapshot; audit requires
     # this to become mandatory at the normalized persistence boundary.
     snapshot_sha256: str | None = None

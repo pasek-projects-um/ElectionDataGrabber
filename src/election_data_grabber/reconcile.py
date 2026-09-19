@@ -4,6 +4,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 
 from election_data_grabber.models import ResultObservation, VoteMode
+from election_data_grabber.vote_modes import assert_no_aggregate_component_double_count
 
 
 @dataclass(slots=True)
@@ -23,6 +24,7 @@ class ReconciliationResult:
 def aggregate_observations(
     observations: list[ResultObservation],
 ) -> dict[tuple[str, str, VoteMode], int]:
+    assert_no_aggregate_component_double_count(observations)
     totals: dict[tuple[str, str, VoteMode], int] = defaultdict(int)
     for obs in observations:
         totals[(obs.contest_name, obs.choice_name, obs.vote_mode)] += obs.votes
