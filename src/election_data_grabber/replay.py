@@ -14,6 +14,7 @@ from election_data_grabber.provenance import require_snapshot_provenance, valida
 from election_data_grabber.reconcile import aggregate_observations
 from election_data_grabber.reporting_progress import validate_progress_history
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
+from election_data_grabber.source_capabilities import CapabilityType
 
 
 @dataclass(frozen=True, slots=True)
@@ -23,7 +24,7 @@ class ReplayFixture:
     jurisdiction_id: str
     authority_id: str
     source_id: str
-    capability_type: str
+    capability_type: CapabilityType
     regime_kind: str
     format: str
     body_path: Path
@@ -61,7 +62,7 @@ def _context(fixture: ReplayFixture, snapshot: Snapshot) -> AdapterReportingCont
         fixture.jurisdiction_id,
         fixture.authority_id,
         fixture.source_id,
-        fixture.capability_type,
+        fixture.capability_type.value,
         fixture.regime_kind,
         snapshot.sha256,
     )
@@ -116,6 +117,10 @@ def replay_fixture(
 
     # Integrity checks execute before any canonical output is serialized.
     aggregate_observations(observations)
+    if fixture.regime_kind == "election-night" and fixture.capability_type != CapabilityType.ELECTION_NIGHT:
+        raise ValueError("election-night replay requires election-night source capability")
+    if fixture.regime_kind in {"certified","final"} and fixture.capability_type != CapabilityType.FINAL:
+        raise ValueError("final/certified replay requires final source capability")
     progress_rows=list(progress or [])
     if progress_rows:
         require_snapshot_provenance(progress_rows)
