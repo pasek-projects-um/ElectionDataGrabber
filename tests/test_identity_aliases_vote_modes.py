@@ -1,14 +1,16 @@
-from datetime import date
+from datetime import date, datetime, timezone
 
 import pytest
 
+from election_data_grabber.adapters.enhanced_voting import parse_enhanced_voting_html
+from election_data_grabber.adapters.generic_csv import parse_generic_precinct_csv
 from election_data_grabber.identity_aliases import (
     AliasKind, IdentityAlias, IdentityDecisionStatus, IdentityObjectType,
     authoritative_external_alias, resolve_alias, validate_identity_aliases,
 )
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.vote_modes import (
-    VoteModeAggregation, VoteModeMappingStatus, VoteModeRule,
+    VoteModeMappingStatus, VoteModeRule,
     assert_no_aggregate_component_double_count, normalize_vote_mode, resolve_vote_mode,
 )
 
@@ -72,8 +74,48 @@ def test_candidate_mapping_never_promotes():
     assert resolve_vote_mode("AV",rules,state="ME").vote_mode is None
 
 
+def test_generic_csv_mi_av_uses_state_governance_and_carries_provenance():
+    body=b"precinct,office,candidate,av,total\nP1,Mayor,Alice,7,10\n"
+    rows=parse_generic_precinct_csv(
+        body,election_id="e",jurisdiction_id="us:mi:county:washtenaw",source_id="mi-source",
+        fetched_at=datetime(2026,8,4,tzinfo=timezone.utc),
+    )
+    av=next(r for r in rows if r.raw_vote_mode=="av")
+    assert av.vote_mode==VoteMode.ABSENTEE
+    assert av.vote_mode_mapping_method=="state_semantic_override"
+    assert av.vote_mode_evidence_reference=="mi_av_semantics"
+
+
+def test_generic_csv_oh_av_remains_unknown():
+    body=b"precinct,office,candidate,av,total\nP1,Mayor,Alice,7,10\n"
+    rows=parse_generic_precinct_csv(
+        body,election_id="e",jurisdiction_id="us:oh:county:franklin",source_id="oh-source",
+        fetched_at=datetime(2026,11,3,tzinfo=timezone.utc),
+    )
+    av=next(r for r in rows if r.raw_vote_mode=="av")
+    assert av.vote_mode==VoteMode.UNKNOWN
+    assert av.vote_mode_mapping_method is None
+
+
+def test_enhanced_voting_pa_literal_modes_carry_governed_provenance():
+    import json
+    payload={"results":[{"precinctName":"P1","contestName":"Mayor","candidateName":"Alice","mail":4,"total":9}]}
+    html=f'<script type="application/json">{json.dumps(payload)}</script>'.encode()
+    rows=parse_enhanced_voting_html(
+        html,election_id="e",jurisdiction_id="us:pa:county:allegheny",source_id="pa-enhanced",
+        fetched_at=datetime(2026,11,3,tzinfo=timezone.utc),
+    )
+    mail=next(r for r in rows if r.raw_vote_mode=="mail")
+    assert mail.vote_mode==VoteMode.MAIL
+    assert mail.vote_mode_mapping_method=="literal_label"
+
+
+def test_maine_document_label_not_governed_without_evidence():
+    resolution=normalize_vote_mode("Absentee / UOCAVA combined",state="ME",source_id="me-document")
+    assert resolution.vote_mode is None
+
+
 def _obs(mode):
-    from datetime import datetime
     return ResultObservation(election_id="2024-general",jurisdiction_id="us:pa:county:x",reporting_unit_id="p1",reporting_unit_name="P1",contest_name="Mayor",choice_name="A",votes=1,vote_mode=mode,source_id="s",fetched_at=datetime(2024,1,1))
 
 
