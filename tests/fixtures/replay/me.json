@@ -1,0 +1,27 @@
+{
+  "reporting_units": [
+    {
+      "id": "ward-2",
+      "name": "Ward 2",
+      "contests": [
+        {
+          "name": "Council",
+          "choices": [
+            {
+              "name": "A",
+              "order": 2,
+              "votes": 3,
+              "mode": "total"
+            },
+            {
+              "name": "B",
+              "order": 1,
+              "votes": 2,
+              "mode": "total"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
