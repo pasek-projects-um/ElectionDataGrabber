@@ -1,0 +1,27 @@
+{
+  "reporting_units": [
+    {
+      "id": "001",
+      "name": "Precinct 001",
+      "contests": [
+        {
+          "name": "Mayor",
+          "choices": [
+            {
+              "name": "Alice",
+              "order": 2,
+              "votes": 12,
+              "mode": "election_day"
+            },
+            {
+              "name": "Bob",
+              "order": 1,
+              "votes": 9,
+              "mode": "election_day"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
