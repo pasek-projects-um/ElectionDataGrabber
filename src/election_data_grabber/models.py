@@ -149,6 +149,7 @@ class ReportingProgress(BaseModel):
     reporting_regime_id: str | None = None
     reporting_unit_id: str | None = None
     reporting_unit_name: str | None = None
+    contest_id: str | None = None
     scope: ReportingProgressScope
     kind: ReportingProgressKind
     basis: ReportingProgressBasis
@@ -167,20 +168,32 @@ class ReportingProgress(BaseModel):
     def validate_progress(self) -> "ReportingProgress":
         if self.scope == ReportingProgressScope.REPORTING_UNIT and not self.reporting_unit_id:
             raise ValueError("reporting-unit progress requires reporting_unit_id")
-        if self.scope != ReportingProgressScope.REPORTING_UNIT and self.reporting_unit_id is not None:
-            raise ValueError("reporting_unit_id is only valid at reporting-unit scope")
+        if self.scope == ReportingProgressScope.SOURCE and self.reporting_unit_id is not None:
+            raise ValueError("source-scope progress cannot carry reporting_unit_id")
+        if self.scope == ReportingProgressScope.CONTEST and not self.contest_id:
+            raise ValueError("contest-scope progress requires contest_id")
+        if self.scope != ReportingProgressScope.CONTEST and self.contest_id is not None:
+            raise ValueError("contest_id is only valid at contest scope")
         if self.reporting_count is not None and self.reporting_count < 0:
             raise ValueError("reporting_count cannot be negative")
         if self.expected_count is not None and self.expected_count < 0:
             raise ValueError("expected_count cannot be negative")
         if self.kind == ReportingProgressKind.SOURCE_COUNTS and self.reporting_count is None and self.expected_count is None:
             raise ValueError("source counts require reporting_count or expected_count")
+        if self.kind != ReportingProgressKind.SOURCE_COUNTS and (self.reporting_count is not None or self.expected_count is not None):
+            raise ValueError("reporting/expected counts are only valid for source-count progress")
         if self.kind == ReportingProgressKind.SOURCE_COMPLETE and self.complete is None:
             raise ValueError("source completion requires complete")
+        if self.kind != ReportingProgressKind.SOURCE_COMPLETE and self.complete is not None:
+            raise ValueError("complete is only valid for source-completion progress")
         if self.kind in {ReportingProgressKind.UNIT_EXISTS, ReportingProgressKind.UNIT_REPORTED} and self.reported is None:
             raise ValueError("unit existence/reporting requires reported")
+        if self.kind not in {ReportingProgressKind.UNIT_EXISTS, ReportingProgressKind.UNIT_REPORTED} and self.reported is not None:
+            raise ValueError("reported is only valid for unit existence/reporting progress")
         if self.kind == ReportingProgressKind.EXPECTED_COMPONENTS and self.expected_components is None:
             raise ValueError("expected-components progress requires expected_components")
+        if self.kind != ReportingProgressKind.EXPECTED_COMPONENTS and (self.expected_components is not None or self.observed_components is not None):
+            raise ValueError("component lists are only valid for expected-components progress")
         if self.snapshot_sha256 is not None and not re.fullmatch(r"[0-9a-fA-F]{64}", self.snapshot_sha256):
             raise ValueError("reporting progress snapshot_sha256 must be a SHA-256")
         if self.basis == ReportingProgressBasis.SOURCE_REPORTED and self.raw_status is None and self.kind == ReportingProgressKind.SOURCE_COMPLETE:
