@@ -99,6 +99,10 @@ def resolve_alias(rows: list[IdentityAlias], *, object_type: IdentityObjectType,
     for row in rows:
         if row.lookup_key != key or row.status != IdentityDecisionStatus.VERIFIED:
             continue
+        if when is None and (row.effective_from is not None or row.effective_to is not None):
+            # Temporal aliases require an as-of date. Without one, selecting a
+            # historical or future identity would manufacture a current mapping.
+            continue
         if when is not None and ((row.effective_from and when < row.effective_from) or (row.effective_to and when > row.effective_to)):
             continue
         matches.append(row.canonical_id)
