@@ -9,14 +9,9 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
+from election_data_grabber.vote_modes import normalize_vote_mode
 
-_MODE_KEYS = {
-    "electionday": VoteMode.ELECTION_DAY, "election_day": VoteMode.ELECTION_DAY,
-    "early": VoteMode.EARLY, "earlyvoting": VoteMode.EARLY,
-    "absentee": VoteMode.ABSENTEE, "av": VoteMode.ABSENTEE,
-    "mail": VoteMode.MAIL, "provisional": VoteMode.PROVISIONAL,
-    "votes": VoteMode.TOTAL, "total": VoteMode.TOTAL, "votecount": VoteMode.TOTAL,
-}
+_MODE_KEYS = ("electionday","election_day","early","earlyvoting","absentee","av","mail","provisional","votes","total","votecount")
 _UNIT_KEYS=("precinct","precinctName","reportingUnit","reportingUnitName","ward")
 _CONTEST_KEYS=("contest","contestName","office","race","raceName")
 _CHOICE_KEYS=("candidate","candidateName","choice","choiceName","option")
@@ -47,6 +42,14 @@ def _int(v: Any) -> int | None:
     except (ValueError,TypeError): return None
 
 
+def _state_from_jurisdiction(jurisdiction_id: str) -> str | None:
+    parts=jurisdiction_id.lower().split(":")
+    if len(parts)>=2 and parts[0]=="us" and len(parts[1])==2: return parts[1].upper()
+    for state in ("mi","oh","pa","me"):
+        if jurisdiction_id.lower().startswith(state+"-"): return state.upper()
+    return None
+
+
 def embedded_json_documents(body: bytes) -> list[Any]:
     soup=BeautifulSoup(body,"html.parser")
     docs=[]
@@ -74,26 +77,24 @@ def _walk(obj: Any):
 def parse_enhanced_voting_html(body: bytes, *, election_id: str, jurisdiction_id: str,
                                source_id: str, fetched_at: datetime,
                                reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
-    """Normalize Enhanced Voting embedded result records when exposed in the page payload.
-
-    The public shell can change independently of the result JSON. This parser therefore
-    searches embedded JSON semantically and refuses to infer ballot order from display order.
-    """
     if reporting_context is not None:
         reporting_context.validate_call(election_id=election_id, source_id=source_id)
     out=[]
     seen=set()
+    state=_state_from_jurisdiction(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id)
     for doc in embedded_json_documents(body):
         for d in _walk(doc):
             unit=_first(d,_UNIT_KEYS); contest=_first(d,_CONTEST_KEYS); choice=_first(d,_CHOICE_KEYS)
             if not (unit and contest and choice): continue
             party=_first(d,_PARTY_KEYS)
             lower={str(k).lower():v for k,v in d.items()}
-            for key,mode in _MODE_KEYS.items():
+            for key in _MODE_KEYS:
                 if key not in lower: continue
                 votes=_int(lower[key])
                 if votes is None: continue
-                sig=(str(unit),str(contest),str(choice),mode.value,votes)
+                resolution=normalize_vote_mode(key,state=state,source_id=source_id)
+                mode=resolution.vote_mode or VoteMode.UNKNOWN
+                sig=(str(unit),str(contest),str(choice),key,votes)
                 if sig in seen: continue
                 seen.add(sig)
                 out.append(ResultObservation(
@@ -105,5 +106,7 @@ def parse_enhanced_voting_html(body: bytes, *, election_id: str, jurisdiction_id
                     contest_name=str(contest),choice_name=str(choice),party=str(party) if party else None,
                     votes=votes,vote_mode=mode,source_id=source_id,fetched_at=fetched_at,
                     raw_vote_mode=key,
+                    vote_mode_mapping_method=(resolution.rule.mapping_method if resolution.rule else None),
+                    vote_mode_evidence_reference=(resolution.rule.evidence_reference if resolution.rule else None),
                 ))
     return out
