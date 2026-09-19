@@ -3,7 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 from election_data_grabber.adapters.generic_csv import parse_generic_precinct_csv
@@ -14,7 +14,6 @@ from election_data_grabber.provenance import require_snapshot_provenance, valida
 from election_data_grabber.reconcile import aggregate_observations
 from election_data_grabber.reporting_progress import validate_progress_history
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
-from election_data_grabber.source_capabilities import JurisdictionSourceCapability
 
 
 @dataclass(frozen=True, slots=True)
