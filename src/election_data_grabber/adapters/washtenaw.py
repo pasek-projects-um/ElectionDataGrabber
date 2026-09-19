@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.adapters.base import Adapter
 from election_data_grabber.models import (
-    ReportingProgress, ReportingProgressBasis, ReportingProgressKind,
+    ReportingProgress, ReportingProgressBasis, ReportingProgressKind, ReportingProgressScope,
     ResultObservation, UpdateSemantics, VoteMode,
 )
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
@@ -132,10 +132,10 @@ class WashtenawAdapter(Adapter):
                 reporting_regime_id=regime_id,
                 reporting_unit_id=unit_id,
                 reporting_unit_name=unit_name,
-                scope="reporting_unit",
+                scope=ReportingProgressScope.REPORTING_UNIT,
                 kind=ReportingProgressKind.UNIT_EXISTS,
-                basis=ReportingProgressBasis.SOURCE_REPORTED,
-                update_semantics=UpdateSemantics.CUMULATIVE,
+                basis=ReportingProgressBasis.INFERRED,
+                update_semantics=UpdateSemantics.UNKNOWN,
                 reported=True,
                 source_timestamp=report_ts,
                 snapshot_sha256=snapshot_sha,
@@ -159,7 +159,7 @@ class WashtenawAdapter(Adapter):
                 scope="reporting_unit",
                 kind=ReportingProgressKind.UNIT_REPORTED,
                 basis=ReportingProgressBasis.INFERRED,
-                update_semantics=UpdateSemantics.CUMULATIVE,
+                update_semantics=UpdateSemantics.UNKNOWN,
                 reported=has_candidate_votes,
                 source_timestamp=report_ts,
                 snapshot_sha256=snapshot_sha,
