@@ -8,26 +8,23 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
-
-
-MODE_LABELS = {
-    "early": VoteMode.EARLY,
-    "early voting": VoteMode.EARLY,
-    "absentee": VoteMode.ABSENTEE,
-    "av": VoteMode.ABSENTEE,
-    "election day": VoteMode.ELECTION_DAY,
-    "ed": VoteMode.ELECTION_DAY,
-    "provisional": VoteMode.PROVISIONAL,
-    "mail": VoteMode.MAIL,
-    "total": VoteMode.TOTAL,
-    "total votes": VoteMode.TOTAL,
-}
+from election_data_grabber.vote_modes import normalize_vote_mode
 
 
 @dataclass(frozen=True, slots=True)
 class HtmlTableProfile:
     contest_selector: str | None = None
     reporting_unit_selector: str | None = None
+
+
+def _state_from_jurisdiction(jurisdiction_id: str) -> str | None:
+    parts = jurisdiction_id.lower().split(":")
+    if len(parts) >= 2 and parts[0] == "us" and len(parts[1]) == 2:
+        return parts[1].upper()
+    for state in ("mi", "oh", "pa", "me"):
+        if jurisdiction_id.lower().startswith(state + "-"):
+            return state.upper()
+    return None
 
 
 def parse_mode_table_html(
@@ -41,11 +38,6 @@ def parse_mode_table_html(
     reporting_context: AdapterReportingContext | None = None,
     reporting_unit_type: UnitType = UnitType.REPORTING_UNIT,
 ) -> list[ResultObservation]:
-    """Parse common county result tables by recognizing semantic headers.
-
-    This intentionally favors header inference over fixed column positions so
-    minor vendor/template changes do not require a new parser.
-    """
     if reporting_context is not None:
         reporting_context.validate_call(election_id=election_id, source_id=source_id)
     soup = BeautifulSoup(body, "html.parser")
@@ -55,19 +47,18 @@ def parse_mode_table_html(
         if node:
             reporting_unit = " ".join(node.stripped_strings)
 
+    state = _state_from_jurisdiction(reporting_context.jurisdiction_id if reporting_context else jurisdiction_id)
     observations: list[ResultObservation] = []
     for table in soup.find_all("table"):
         rows = table.find_all("tr")
         if not rows:
             continue
-        headers = [" ".join(x.stripped_strings).strip().lower() for x in rows[0].find_all(["th", "td"])]
-        mode_cols: dict[int, tuple[VoteMode, str]] = {}
+        headers = [" ".join(x.stripped_strings).strip() for x in rows[0].find_all(["th", "td"])]
+        mode_cols: dict[int, tuple[VoteMode, str, object | None]] = {}
         for i, header in enumerate(headers):
-            normalized = re.sub(r"\s+", " ", header)
-            for label, mode in MODE_LABELS.items():
-                if label == normalized or label in normalized:
-                    mode_cols[i] = (mode, header)
-                    break
+            resolution = normalize_vote_mode(header, state=state, source_id=source_id)
+            if resolution.vote_mode is not None:
+                mode_cols[i] = (resolution.vote_mode, header, resolution.rule)
         if not mode_cols:
             continue
         for row in rows[1:]:
@@ -81,7 +72,7 @@ def parse_mode_table_html(
             if hasattr(contest, "stripped_strings"):
                 contest = " ".join(contest.stripped_strings)
             contest_name = str(contest or "unknown contest")
-            for idx, (mode, raw_label) in mode_cols.items():
+            for idx, (mode, raw_label, rule) in mode_cols.items():
                 if idx >= len(cells):
                     continue
                 m = re.search(r"-?\d[\d,]*", cells[idx])
@@ -102,5 +93,7 @@ def parse_mode_table_html(
                     source_id=source_id,
                     fetched_at=fetched_at,
                     raw_vote_mode=raw_label,
+                    vote_mode_mapping_method=(rule.mapping_method if rule else None),
+                    vote_mode_evidence_reference=(rule.evidence_reference if rule else None),
                 ))
     return observations
