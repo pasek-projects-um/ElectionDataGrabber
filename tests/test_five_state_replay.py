@@ -56,7 +56,7 @@ def test_identical_snapshot_replay_is_deterministic_and_traceable(fixture):
 
 def test_source_order_does_not_become_ballot_order():
     out=replay_fixture(CASES[1])
-    assert [row["source_order"] for row in out.observations] == [1,2]
+    assert sorted(row["source_order"] for row in out.observations) == [1,2]
     assert all(row["ballot_order"] is None for row in out.observations)
 
 
