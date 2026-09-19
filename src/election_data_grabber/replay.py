@@ -118,10 +118,21 @@ def replay_fixture(
     *,
     progress: list[ReportingProgress] | None = None,
     expected_snapshot_sha256: str | None = None,
+    aliases: list[IdentityAlias] | None = None,
+    alias_namespace: str = "replay",
 ) -> ReplayOutput:
     snapshot=snapshot_for_fixture(fixture)
     if expected_snapshot_sha256 is not None and snapshot.sha256 != expected_snapshot_sha256:
         raise ValueError("fixture bytes disagree with expected immutable snapshot SHA-256")
+    if aliases is not None:
+        resolved=validate_replay_identity(
+            aliases,
+            object_type=IdentityObjectType.JURISDICTION,
+            namespace=alias_namespace,
+            value=fixture.jurisdiction_id,
+        )
+        if resolved != fixture.jurisdiction_id:
+            raise ValueError("replay fixture jurisdiction alias resolves to a different canonical identity")
     observations=_parse(fixture,snapshot)
     require_snapshot_provenance(observations)
     if any(row.source_id != snapshot.source_id or row.snapshot_sha256 != snapshot.sha256 for row in observations):
