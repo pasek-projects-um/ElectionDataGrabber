@@ -156,7 +156,7 @@ class WashtenawAdapter(Adapter):
                 reporting_regime_id=regime_id,
                 reporting_unit_id=unit_id,
                 reporting_unit_name=unit_name,
-                scope="reporting_unit",
+                scope=ReportingProgressScope.REPORTING_UNIT,
                 kind=ReportingProgressKind.UNIT_REPORTED,
                 basis=ReportingProgressBasis.INFERRED,
                 update_semantics=UpdateSemantics.UNKNOWN,
