@@ -196,7 +196,22 @@ def merge_identity_aliases(existing: list[IdentityAlias], additions: list[Identi
     """Idempotently add decisions while refusing silent replacement of prior evidence."""
     merged = list(existing)
     for row in additions:
-        if row not in merged:
-            merged.append(row)
+        if row in merged:
+            continue
+        # A later rerun must not append a weaker decision for an alias that is
+        # already verified over an overlapping interval. Preserve the
+        # authoritative adjudication instead of accumulating a downgrade.
+        for prior in merged:
+            if (
+                prior.lookup_key == row.lookup_key
+                and prior.status == IdentityDecisionStatus.VERIFIED
+                and row.status != IdentityDecisionStatus.VERIFIED
+                and _overlap(
+                    prior.effective_from, prior.effective_to,
+                    row.effective_from, row.effective_to,
+                )
+            ):
+                raise ValueError(f"cannot downgrade verified identity alias: {row.lookup_key}")
+        merged.append(row)
     validate_identity_aliases(merged)
     return merged
