@@ -203,3 +203,41 @@ def test_contest_scope_requires_contest_identity():
         pass
     else:
         raise AssertionError("contest scope without contest_id should be rejected")
+
+
+
+def test_contest_scope_rejects_reporting_unit_identity():
+    from pydantic import ValidationError
+    from election_data_grabber.models import ReportingProgress
+    try:
+        ReportingProgress(
+            election_id="e1",jurisdiction_id="us:mi:county:test",source_id="s",
+            fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
+            scope=ReportingProgressScope.CONTEST,
+            contest_id="contest-1",
+            reporting_unit_id="ru-1",
+            kind=ReportingProgressKind.SOURCE_COUNTS,
+            basis=ReportingProgressBasis.SOURCE_REPORTED,
+            reporting_count=1,
+            raw_status="1 reporting",
+        )
+    except ValidationError:
+        pass
+    else:
+        raise AssertionError("contest scope should not carry reporting_unit_id")
+
+
+def test_expected_components_allow_unknown_observed_components_without_implying_incomplete():
+    from election_data_grabber.models import ReportingProgress
+    row=ReportingProgress(
+        election_id="e1",jurisdiction_id="us:mi:county:test",source_id="s",
+        fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
+        scope=ReportingProgressScope.SOURCE,
+        kind=ReportingProgressKind.EXPECTED_COMPONENTS,
+        basis=ReportingProgressBasis.SOURCE_REPORTED,
+        expected_components=["election_day","absentee"],
+        observed_components=None,
+        raw_status="source declares expected modes only",
+    )
+    assert row.observed_components is None
+    assert row.complete is None
