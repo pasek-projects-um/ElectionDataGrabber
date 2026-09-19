@@ -117,8 +117,11 @@ def replay_fixture(
     fixture: ReplayFixture,
     *,
     progress: list[ReportingProgress] | None = None,
+    expected_snapshot_sha256: str | None = None,
 ) -> ReplayOutput:
     snapshot=snapshot_for_fixture(fixture)
+    if expected_snapshot_sha256 is not None and snapshot.sha256 != expected_snapshot_sha256:
+        raise ValueError("fixture bytes disagree with expected immutable snapshot SHA-256")
     observations=_parse(fixture,snapshot)
     require_snapshot_provenance(observations)
     if any(row.source_id != snapshot.source_id or row.snapshot_sha256 != snapshot.sha256 for row in observations):
