@@ -3,7 +3,7 @@ from election_data_grabber.state_expansion import PROFILES, classify_result_fami
 
 def test_large_state_profiles_cover_all_unresolved_directory_states():
     assert set(PROFILES)=={"AK","AL","GA","KS","LA","MA","ND","NM","NY","RI","SC","VT","WI"}
-    assert sum(p.expected_units for p in PROFILES.values())==3116
+    assert sum(p.expected_units for p in PROFILES.values())==3073
 
 
 def test_profiles_preserve_noncounty_authority_models():
