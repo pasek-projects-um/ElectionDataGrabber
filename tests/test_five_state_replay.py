@@ -156,3 +156,12 @@ def test_candidate_source_capability_is_not_accepted_for_replay():
     )
     with pytest.raises(ValueError,match="positively adjudicated"):
         replay_fixture(fixture)
+
+
+
+def test_replay_can_pin_expected_fixture_sha():
+    fixture=CASES[0]
+    snapshot=snapshot_for_fixture(fixture)
+    assert replay_fixture(fixture,expected_snapshot_sha256=snapshot.sha256).observations
+    with pytest.raises(ValueError,match="expected immutable snapshot"):
+        replay_fixture(fixture,expected_snapshot_sha256="0"*64)
