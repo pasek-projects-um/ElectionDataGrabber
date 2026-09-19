@@ -61,7 +61,7 @@ def parse_ohio_tabulator_text(
             ballots_cast = int(ballots.group(1).replace(",", ""))
             continue
 
-        if _SKIP.match(line):
+        if _SKIP.match(line) and not _WRITE_IN.match(line):
             continue
 
         choice = _CHOICE_VOTES.match(line)
