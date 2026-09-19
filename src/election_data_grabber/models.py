@@ -172,6 +172,8 @@ class ReportingProgress(BaseModel):
             raise ValueError("source-scope progress cannot carry reporting_unit_id")
         if self.scope == ReportingProgressScope.CONTEST and not self.contest_id:
             raise ValueError("contest-scope progress requires contest_id")
+        if self.scope == ReportingProgressScope.CONTEST and self.reporting_unit_id is not None:
+            raise ValueError("contest-scope progress cannot carry reporting_unit_id")
         if self.scope != ReportingProgressScope.CONTEST and self.contest_id is not None:
             raise ValueError("contest_id is only valid at contest scope")
         if self.reporting_count is not None and self.reporting_count < 0:
@@ -192,6 +194,11 @@ class ReportingProgress(BaseModel):
             raise ValueError("reported is only valid for unit existence/reporting progress")
         if self.kind == ReportingProgressKind.EXPECTED_COMPONENTS and self.expected_components is None:
             raise ValueError("expected-components progress requires expected_components")
+        if self.kind == ReportingProgressKind.EXPECTED_COMPONENTS:
+            expected = self.expected_components or []
+            observed = self.observed_components or []
+            if len(expected) != len(set(expected)) or len(observed) != len(set(observed)):
+                raise ValueError("component lists cannot contain duplicates")
         if self.kind != ReportingProgressKind.EXPECTED_COMPONENTS and (self.expected_components is not None or self.observed_components is not None):
             raise ValueError("component lists are only valid for expected-components progress")
         if self.snapshot_sha256 is not None and not re.fullmatch(r"[0-9a-fA-F]{64}", self.snapshot_sha256):
