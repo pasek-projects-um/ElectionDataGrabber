@@ -11,7 +11,8 @@ _REGISTERED = re.compile(r"Registered\s+Voters\s*[:\-]?\s*([\d,]+)", re.I)
 _BALLOTS = re.compile(r"(?:Ballots|Voters)\s+Cast\s*[:\-]?\s*([\d,]+)", re.I)
 _CONTEST = re.compile(r"^(?!Precinct\b)(?!Registered\s+Voters\b)(?!Ballots\s+Cast\b)(?!Voters\s+Cast\b)(?!Turnout\b)(?!Total\s+Votes\b)(?!Overvotes?\b)(?!Undervotes?\b)([A-Za-z].*?)\s*$")
 _CHOICE_VOTES = re.compile(r"^\s*(.+?)\s+([\d,]+)\s*$")
-_SKIP = re.compile(r"^(Total\s+Votes|Overvotes?|Undervotes?|Write[- ]?Ins?|Times\s+Cast|Cards\s+Cast|Turnout)\b", re.I)
+_SKIP = re.compile(r"^(Total\s+Votes|Overvotes?|Undervotes?|Times\s+Cast|Cards\s+Cast|Turnout)\b", re.I)
+_WRITE_IN = re.compile(r"^Write[- ]?In(?:s)?\b", re.I)
 
 
 def parse_ohio_tabulator_text(
