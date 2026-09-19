@@ -14,7 +14,7 @@ from election_data_grabber.provenance import require_snapshot_provenance, valida
 from election_data_grabber.reconcile import aggregate_observations
 from election_data_grabber.reporting_progress import validate_progress_history
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
-from election_data_grabber.source_capabilities import CapabilityType
+from election_data_grabber.source_capabilities import CapabilityType, JurisdictionSourceCapability, VerificationStatus
 
 
 @dataclass(frozen=True, slots=True)
@@ -31,6 +31,7 @@ class ReplayFixture:
     fetched_at: datetime
     source_url: str
     reporting_unit_type: UnitType = UnitType.PRECINCT
+    verification_status: VerificationStatus = VerificationStatus.VERIFIED
 
 
 @dataclass(frozen=True, slots=True)
@@ -56,15 +57,23 @@ def snapshot_for_fixture(fixture: ReplayFixture) -> Snapshot:
 
 
 def _context(fixture: ReplayFixture, snapshot: Snapshot) -> AdapterReportingContext:
-    return AdapterReportingContext(
-        fixture.state,
-        fixture.election_id,
-        fixture.jurisdiction_id,
-        fixture.authority_id,
-        fixture.source_id,
-        fixture.capability_type.value,
-        fixture.regime_kind,
-        snapshot.sha256,
+    capability=JurisdictionSourceCapability(
+        jurisdiction_id=fixture.jurisdiction_id,
+        authority_id=fixture.authority_id,
+        source_id=fixture.source_id,
+        capability_type=fixture.capability_type,
+        source_url=fixture.source_url,
+        evidence_snapshot_sha256=snapshot.sha256,
+        verification_status=fixture.verification_status,
+        assessment_method="deterministic_replay_fixture",
+        evidence_reference=str(fixture.body_path),
+    )
+    return AdapterReportingContext.from_source_capability(
+        state=fixture.state,
+        election_id=fixture.election_id,
+        regime_kind=fixture.regime_kind,
+        snapshot_sha256=snapshot.sha256,
+        capability=capability,
     )
 
 
