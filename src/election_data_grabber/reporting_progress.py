@@ -8,7 +8,7 @@ from election_data_grabber.models import ReportingProgress, ReportingProgressKin
 def validate_progress_history(rows: Iterable[ReportingProgress]) -> list[str]:
     """Return audit findings for progress transitions without rewriting history."""
     findings: list[str] = []
-    groups: dict[tuple[str, str, str, str, str | None], list[ReportingProgress]] = {}
+    groups: dict[tuple[str, str, str, str, str | None, str | None], list[ReportingProgress]] = {}
     for row in rows:
         key=(
             row.election_id,
@@ -16,6 +16,7 @@ def validate_progress_history(rows: Iterable[ReportingProgress]) -> list[str]:
             row.source_id,
             row.scope.value,
             row.reporting_unit_id,
+            row.contest_id,
         )
         groups.setdefault(key,[]).append(row)
 
@@ -33,6 +34,8 @@ def validate_progress_history(rows: Iterable[ReportingProgress]) -> list[str]:
                     and row.reporting_count < prior_reporting
                 ):
                     findings.append(f"{key}: cumulative reporting_count decreased {prior_reporting}->{row.reporting_count}")
+                if row.reporting_count is not None and row.expected_count is not None and row.reporting_count > row.expected_count:
+                    findings.append(f"{key}: reporting_count exceeds expected_count {row.reporting_count}>{row.expected_count}")
                 if prior_expected is not None and row.expected_count is not None and row.expected_count != prior_expected:
                     findings.append(f"{key}: expected_count changed {prior_expected}->{row.expected_count}")
                 if row.reporting_count is not None:
