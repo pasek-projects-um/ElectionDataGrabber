@@ -165,3 +165,23 @@ def test_replay_can_pin_expected_fixture_sha():
     assert replay_fixture(fixture,expected_snapshot_sha256=snapshot.sha256).observations
     with pytest.raises(ValueError,match="expected immutable snapshot"):
         replay_fixture(fixture,expected_snapshot_sha256="0"*64)
+
+
+
+def test_replay_identity_binding_fails_closed_inside_pipeline():
+    fixture=CASES[4]
+    aliases=[
+        IdentityAlias(
+            IdentityObjectType.JURISDICTION,
+            "us:me:municipality:portland",
+            AliasKind.HISTORICAL_ID,
+            fixture.jurisdiction_id,
+            "replay",
+            IdentityDecisionStatus.AMBIGUOUS,
+            None,
+            "fixture",
+            "fixture",
+        )
+    ]
+    with pytest.raises(ValueError,match="identity unresolved or ambiguous"):
+        replay_fixture(fixture,aliases=aliases)
