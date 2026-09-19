@@ -135,6 +135,12 @@ class UpdateSemantics(StrEnum):
     UNKNOWN = "unknown"
 
 
+class ReportingProgressScope(StrEnum):
+    SOURCE = "source"
+    REPORTING_UNIT = "reporting_unit"
+    CONTEST = "contest"
+
+
 class ReportingProgress(BaseModel):
     election_id: str
     jurisdiction_id: str
@@ -143,7 +149,7 @@ class ReportingProgress(BaseModel):
     reporting_regime_id: str | None = None
     reporting_unit_id: str | None = None
     reporting_unit_name: str | None = None
-    scope: str
+    scope: ReportingProgressScope
     kind: ReportingProgressKind
     basis: ReportingProgressBasis
     update_semantics: UpdateSemantics = UpdateSemantics.UNKNOWN
@@ -159,6 +165,10 @@ class ReportingProgress(BaseModel):
 
     @model_validator(mode="after")
     def validate_progress(self) -> "ReportingProgress":
+        if self.scope == ReportingProgressScope.REPORTING_UNIT and not self.reporting_unit_id:
+            raise ValueError("reporting-unit progress requires reporting_unit_id")
+        if self.scope != ReportingProgressScope.REPORTING_UNIT and self.reporting_unit_id is not None:
+            raise ValueError("reporting_unit_id is only valid at reporting-unit scope")
         if self.reporting_count is not None and self.reporting_count < 0:
             raise ValueError("reporting_count cannot be negative")
         if self.expected_count is not None and self.expected_count < 0:
@@ -169,6 +179,14 @@ class ReportingProgress(BaseModel):
             and self.reporting_count > self.expected_count
         ):
             raise ValueError("reporting_count cannot exceed expected_count")
+        if self.kind == ReportingProgressKind.SOURCE_COUNTS and self.reporting_count is None and self.expected_count is None:
+            raise ValueError("source counts require reporting_count or expected_count")
+        if self.kind == ReportingProgressKind.SOURCE_COMPLETE and self.complete is None:
+            raise ValueError("source completion requires complete")
+        if self.kind in {ReportingProgressKind.UNIT_EXISTS, ReportingProgressKind.UNIT_REPORTED} and self.reported is None:
+            raise ValueError("unit existence/reporting requires reported")
+        if self.kind == ReportingProgressKind.EXPECTED_COMPONENTS and self.expected_components is None:
+            raise ValueError("expected-components progress requires expected_components")
         if self.snapshot_sha256 is not None and not re.fullmatch(r"[0-9a-fA-F]{64}", self.snapshot_sha256):
             raise ValueError("reporting progress snapshot_sha256 must be a SHA-256")
         if self.basis == ReportingProgressBasis.SOURCE_REPORTED and self.raw_status is None and self.kind == ReportingProgressKind.SOURCE_COMPLETE:
