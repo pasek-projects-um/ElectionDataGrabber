@@ -3,6 +3,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from datetime import date
+from pathlib import Path
+import csv
 from enum import StrEnum
 
 
@@ -116,3 +118,74 @@ def authoritative_external_alias(rows: list[IdentityAlias], canonical_id: str) -
     if not verified:
         return None
     return sorted(verified, key=lambda row: (row.alias_namespace, row.alias_value))[0]
+
+
+ALIAS_FIELDS = (
+    "object_type", "canonical_id", "alias_kind", "alias_value", "alias_namespace",
+    "status", "confidence", "reconciliation_method", "evidence_reference",
+    "reviewer", "effective_from", "effective_to",
+)
+
+
+def read_identity_aliases(path: Path) -> list[IdentityAlias]:
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        rows = []
+        for raw in csv.DictReader(f):
+            rows.append(IdentityAlias(
+                object_type=IdentityObjectType(raw["object_type"]),
+                canonical_id=raw["canonical_id"],
+                alias_kind=AliasKind(raw["alias_kind"]),
+                alias_value=raw["alias_value"],
+                alias_namespace=raw["alias_namespace"],
+                status=IdentityDecisionStatus(raw["status"]),
+                confidence=float(raw["confidence"]) if raw.get("confidence") else None,
+                reconciliation_method=raw["reconciliation_method"],
+                evidence_reference=raw["evidence_reference"],
+                reviewer=raw.get("reviewer") or None,
+                effective_from=date.fromisoformat(raw["effective_from"]) if raw.get("effective_from") else None,
+                effective_to=date.fromisoformat(raw["effective_to"]) if raw.get("effective_to") else None,
+            ))
+    validate_identity_aliases(rows)
+    return rows
+
+
+def write_identity_aliases(path: Path, rows: list[IdentityAlias]) -> None:
+    """Persist an alias registry deterministically and without destructive identity rewrites."""
+    validate_identity_aliases(rows)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    ordered = sorted(rows, key=lambda row: (
+        row.object_type.value, row.alias_namespace.lower(), normalized_alias(row.alias_value),
+        row.canonical_id, row.alias_kind.value, row.status.value,
+        row.effective_from or date.min, row.effective_to or date.max,
+        row.alias_value,
+    ))
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=ALIAS_FIELDS, lineterminator="\n")
+        writer.writeheader()
+        for row in ordered:
+            writer.writerow({
+                "object_type": row.object_type.value,
+                "canonical_id": row.canonical_id,
+                "alias_kind": row.alias_kind.value,
+                "alias_value": row.alias_value,
+                "alias_namespace": row.alias_namespace,
+                "status": row.status.value,
+                "confidence": "" if row.confidence is None else str(row.confidence),
+                "reconciliation_method": row.reconciliation_method,
+                "evidence_reference": row.evidence_reference,
+                "reviewer": row.reviewer or "",
+                "effective_from": row.effective_from.isoformat() if row.effective_from else "",
+                "effective_to": row.effective_to.isoformat() if row.effective_to else "",
+            })
+
+
+def merge_identity_aliases(existing: list[IdentityAlias], additions: list[IdentityAlias]) -> list[IdentityAlias]:
+    """Idempotently add decisions while refusing silent replacement of prior evidence."""
+    merged = list(existing)
+    for row in additions:
+        if row not in merged:
+            merged.append(row)
+    validate_identity_aliases(merged)
+    return merged
