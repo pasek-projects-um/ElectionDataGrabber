@@ -150,3 +150,15 @@ def test_reporting_progress_scope_is_structured():
         fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
     ) if r.kind == ReportingProgressKind.SOURCE_COUNTS)
     assert row.scope == ReportingProgressScope.SOURCE
+
+
+
+def test_source_counts_above_expected_are_preserved_and_auditable():
+    import json
+    payload={"status":{"precinctsReporting":11,"precinctsTotal":10,"isCumulative":True}}
+    html=f'<script type="application/json">{json.dumps(payload)}</script>'.encode()
+    row=next(r for r in parse_enhanced_voting_progress(
+        html,election_id="e1",jurisdiction_id="us:mi:county:test",source_id="enhanced",
+        fetched_at=datetime(2026,11,3,22,0,tzinfo=timezone.utc),
+    ) if r.kind == ReportingProgressKind.SOURCE_COUNTS)
+    assert (row.reporting_count,row.expected_count) == (11,10)
