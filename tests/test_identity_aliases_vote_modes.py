@@ -6,7 +6,8 @@ from election_data_grabber.adapters.enhanced_voting import parse_enhanced_voting
 from election_data_grabber.adapters.generic_csv import parse_generic_precinct_csv
 from election_data_grabber.identity_aliases import (
     AliasKind, IdentityAlias, IdentityDecisionStatus, IdentityObjectType,
-    authoritative_external_alias, resolve_alias, validate_identity_aliases,
+    authoritative_external_alias, merge_identity_aliases, read_identity_aliases,
+    resolve_alias, validate_identity_aliases, write_identity_aliases,
 )
 from election_data_grabber.models import ResultObservation, VoteMode
 from election_data_grabber.vote_modes import (
@@ -123,3 +124,28 @@ def test_aggregate_total_and_components_require_explicit_aggregation_basis():
     with pytest.raises(ValueError):
         assert_no_aggregate_component_double_count([_obs(VoteMode.TOTAL),_obs(VoteMode.MAIL)])
     assert_no_aggregate_component_double_count([_obs(VoteMode.MAIL),_obs(VoteMode.ELECTION_DAY)])
+
+
+def test_identity_alias_registry_round_trips_and_reruns_idempotently(tmp_path):
+    registry=tmp_path/"identity_aliases.csv"
+    old=alias("us:ct:municipality:example","Old Name",start=date(1900,1,1),end=date(2020,12,31))
+    ext=alias("us:ct:municipality:example","09001",namespace="fips",kind=AliasKind.EXTERNAL_ID)
+    rows=merge_identity_aliases([], [old, ext])
+    write_identity_aliases(registry, rows)
+    first=registry.read_bytes()
+
+    loaded=read_identity_aliases(registry)
+    rerun=merge_identity_aliases(loaded, [old, ext])
+    write_identity_aliases(registry, rerun)
+
+    assert registry.read_bytes()==first
+    assert read_identity_aliases(registry)==rows
+
+
+def test_alias_registry_cannot_silently_repoint_authoritative_external_id(tmp_path):
+    registry=tmp_path/"identity_aliases.csv"
+    ext=alias("us:ct:municipality:example","09001",namespace="fips",kind=AliasKind.EXTERNAL_ID)
+    write_identity_aliases(registry,[ext])
+    conflicting=alias("us:ct:municipality:other","09001",namespace="fips",kind=AliasKind.EXTERNAL_ID)
+    with pytest.raises(ValueError):
+        write_identity_aliases(registry,merge_identity_aliases(read_identity_aliases(registry),[conflicting]))
