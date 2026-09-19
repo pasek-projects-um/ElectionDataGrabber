@@ -115,6 +115,67 @@ class BallotSummary(BaseModel):
     raw_label: str | None = None
 
 
+class ReportingProgressKind(StrEnum):
+    UNIT_EXISTS = "unit_exists"
+    UNIT_REPORTED = "unit_reported"
+    SOURCE_COMPLETE = "source_complete"
+    EXPECTED_COMPONENTS = "expected_components"
+    SOURCE_COUNTS = "source_counts"
+
+
+class ReportingProgressBasis(StrEnum):
+    SOURCE_REPORTED = "source_reported"
+    INFERRED = "inferred"
+    UNKNOWN = "unknown"
+
+
+class UpdateSemantics(StrEnum):
+    CUMULATIVE = "cumulative"
+    INCREMENTAL = "incremental"
+    UNKNOWN = "unknown"
+
+
+class ReportingProgress(BaseModel):
+    election_id: str
+    jurisdiction_id: str
+    source_id: str
+    fetched_at: datetime
+    reporting_regime_id: str | None = None
+    reporting_unit_id: str | None = None
+    reporting_unit_name: str | None = None
+    scope: str
+    kind: ReportingProgressKind
+    basis: ReportingProgressBasis
+    update_semantics: UpdateSemantics = UpdateSemantics.UNKNOWN
+    reported: bool | None = None
+    complete: bool | None = None
+    reporting_count: int | None = None
+    expected_count: int | None = None
+    expected_components: list[str] | None = None
+    observed_components: list[str] | None = None
+    source_timestamp: datetime | None = None
+    snapshot_sha256: str | None = None
+    raw_status: str | None = None
+
+    @model_validator(mode="after")
+    def validate_progress(self) -> "ReportingProgress":
+        if self.reporting_count is not None and self.reporting_count < 0:
+            raise ValueError("reporting_count cannot be negative")
+        if self.expected_count is not None and self.expected_count < 0:
+            raise ValueError("expected_count cannot be negative")
+        if (
+            self.reporting_count is not None
+            and self.expected_count is not None
+            and self.reporting_count > self.expected_count
+        ):
+            raise ValueError("reporting_count cannot exceed expected_count")
+        if self.snapshot_sha256 is not None and not re.fullmatch(r"[0-9a-fA-F]{64}", self.snapshot_sha256):
+            raise ValueError("reporting progress snapshot_sha256 must be a SHA-256")
+        if self.basis == ReportingProgressBasis.SOURCE_REPORTED and self.raw_status is None and self.kind == ReportingProgressKind.SOURCE_COMPLETE:
+            raise ValueError("source-reported completion requires raw_status provenance")
+        return self
+
+
 class ResultObservation(BaseModel):
     election_id: str
     jurisdiction_id: str
