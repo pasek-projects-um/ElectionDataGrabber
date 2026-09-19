@@ -143,5 +143,6 @@ def assert_no_aggregate_component_double_count(rows: list[object]) -> None:
         )
         groups.setdefault(key, set()).add(getattr(row, "vote_mode"))
     for key, modes in groups.items():
-        if VoteMode.TOTAL in modes and len(modes - {VoteMode.TOTAL}) > 0:
+        additive_components = modes - {VoteMode.TOTAL, VoteMode.UNKNOWN, VoteMode.OTHER}
+        if VoteMode.TOTAL in modes and additive_components:
             raise ValueError(f"aggregate total and component vote modes coexist; choose one aggregation basis: {key}")
