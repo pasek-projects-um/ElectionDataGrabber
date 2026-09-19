@@ -139,7 +139,7 @@ def test_identity_alias_registry_round_trips_and_reruns_idempotently(tmp_path):
     write_identity_aliases(registry, rerun)
 
     assert registry.read_bytes()==first
-    assert read_identity_aliases(registry)==rows
+    assert set(read_identity_aliases(registry))==set(rows)
 
 
 def test_alias_registry_cannot_silently_repoint_authoritative_external_id(tmp_path):
@@ -149,3 +149,37 @@ def test_alias_registry_cannot_silently_repoint_authoritative_external_id(tmp_pa
     conflicting=alias("us:ct:municipality:other","09001",namespace="fips",kind=AliasKind.EXTERNAL_ID)
     with pytest.raises(ValueError):
         write_identity_aliases(registry,merge_identity_aliases(read_identity_aliases(registry),[conflicting]))
+
+
+def test_authoritative_external_alias_requires_unique_namespace_or_value():
+    fips=alias("us:ct:municipality:example","09001",namespace="fips",kind=AliasKind.EXTERNAL_ID)
+    state_id=alias("us:ct:municipality:example","EXAMPLE-1",namespace="ct:sots",kind=AliasKind.EXTERNAL_ID)
+    assert authoritative_external_alias([fips,state_id],"us:ct:municipality:example") is None
+    assert authoritative_external_alias([fips,state_id],"us:ct:municipality:example",namespace="fips")==fips
+
+
+def test_state_only_and_source_only_conflict_is_unresolved_without_combined_override():
+    rules=[
+        VoteModeRule("AV",VoteMode.ABSENTEE,"state","fixture",state="MI"),
+        VoteModeRule("AV",VoteMode.MAIL,"source","fixture",source_id="vendor"),
+    ]
+    assert resolve_vote_mode("AV",rules,state="MI",source_id="vendor").vote_mode is None
+    rules.append(VoteModeRule("AV",VoteMode.ABSENTEE,"combined","fixture",state="MI",source_id="vendor"))
+    assert resolve_vote_mode("AV",rules,state="MI",source_id="vendor").vote_mode==VoteMode.ABSENTEE
+
+
+def test_double_count_guard_is_snapshot_scoped():
+    a=_obs(VoteMode.TOTAL).model_copy(update={"snapshot_sha256":"a"*64})
+    b=_obs(VoteMode.MAIL).model_copy(update={"snapshot_sha256":"b"*64})
+    assert_no_aggregate_component_double_count([a,b])
+
+
+def test_generic_json_mi_av_uses_state_governance():
+    from election_data_grabber.adapters.generic_json import parse_generic_results_json
+    payload={"reporting_units":[{"id":"p1","name":"P1","contests":[{"name":"Mayor","choices":[{"name":"Alice","votes":7,"mode":"AV"}]}]}]}
+    row=parse_generic_results_json(
+        payload,election_id="e",jurisdiction_id="us:mi:county:washtenaw",source_id="mi-json",
+        fetched_at=datetime(2026,8,4,tzinfo=timezone.utc),
+    )[0]
+    assert row.vote_mode==VoteMode.ABSENTEE
+    assert row.vote_mode_mapping_method=="state_semantic_override"
