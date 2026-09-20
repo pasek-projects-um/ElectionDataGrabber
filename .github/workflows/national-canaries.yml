@@ -23,6 +23,8 @@ on:
       - "scripts/generate_state_unit_data_access_census.py"
       - "registry/us_primary_election_localities.csv"
       - "registry/us_primary_election_locality_denominators.csv"
+      - "registry/us_state_central_authority_sources.csv"
+      - "tests/test_national_first_pass_inventory.py"
       - "registry/us_local_unit_coverage_tracker.csv"
       - "registry/jurisdiction_source_capabilities.csv"
       - ".github/workflows/national-canaries.yml"
