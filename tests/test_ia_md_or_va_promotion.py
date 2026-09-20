@@ -8,7 +8,7 @@ def test_promotes_only_reached_target_state_surfaces(tmp_path: Path):
         "state,authority_url,authority_host,result_links,election_night_candidate,smallest_observed_unit,platform_family,status\n"
         "IA,https://a.gov,a.gov,https://a.gov/results,true,precinct,official_web,reached\n"
         "MD,https://m.gov,m.gov,https://m.gov/results,false,precinct,civicplus,reached\n"
-        "OR,https://o.gov,o.gov,,,official_web,reached\n"
+        "OR,https://o.gov,o.gov,,false,,official_web,reached\n"
         "VA,https://v.gov,v.gov,https://v.gov/results,true,district,clarity,reached\n"
         "AZ,https://z.gov,z.gov,https://z.gov/results,true,precinct,clarity,reached\n"
         "IA,https://bad.gov,bad.gov,,,,central_fetch_failed\n",
