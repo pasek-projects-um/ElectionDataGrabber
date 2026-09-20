@@ -5,6 +5,7 @@ on:
       - "registry/us_state_central_authority_sources.csv"
       - "scripts/expand_state_authorities_from_central.py"
       - "src/election_data_grabber/state_expansion.py"
+      - "scripts/generate_state_unit_data_access_census.py"
       - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
@@ -36,6 +37,8 @@ jobs:
           else
             python scripts/expand_state_authorities_from_central.py
           fi
+      - name: Generate state unit/access census
+        run: python scripts/generate_state_unit_data_access_census.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
