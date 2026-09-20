@@ -7,7 +7,7 @@ on:
       - "src/election_data_grabber/state_expansion.py"
       - "scripts/generate_state_unit_data_access_census.py"
       - "scripts/promote_az_ky_surfaces.py"
-      - "tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py"
+      - "tests/test_az_ky_promotion.py"
       - "scripts/promote_ia_md_or_va_surfaces.py"
       - "tests/test_ia_md_or_va_promotion.py"
       - "registry/us_state_directory_profiles.csv"
