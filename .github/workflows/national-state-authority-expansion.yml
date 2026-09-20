@@ -14,7 +14,7 @@ on:
       - "tests/test_mo_nh_hi_nj_promotion.py"
       - "scripts/classify_mn_next_action.py"
       - "tests/test_mn_next_action.py"
-      - "tests/test_national_first_pass_inventory.py"\n      - "src/election_data_grabber/easy_ingest.py"\n      - "scripts/build_national_easy_ingest_queue.py"\n      - "tests/test_easy_ingest.py"
+      - "tests/test_national_first_pass_inventory.py"\n      - "src/election_data_grabber/easy_ingest.py"\n      - "scripts/build_national_easy_ingest_queue.py"\n      - "tests/test_easy_ingest.py"\n      - "src/election_data_grabber/supported_ingest.py"\n      - "tests/test_supported_ingest.py"
       - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py tests/test_mo_nh_hi_nj_promotion.py tests/test_mn_next_action.py tests/test_national_first_pass_inventory.py tests/test_easy_ingest.py
+      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py tests/test_mo_nh_hi_nj_promotion.py tests/test_mn_next_action.py tests/test_national_first_pass_inventory.py tests/test_easy_ingest.py tests/test_supported_ingest.py
       - name: Expand central state directories
         shell: bash
         run: |
