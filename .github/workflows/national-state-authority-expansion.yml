@@ -4,6 +4,9 @@ on:
     paths:
       - "registry/us_state_central_authority_sources.csv"
       - "scripts/expand_state_authorities_from_central.py"
+      - "src/election_data_grabber/state_expansion.py"
+      - "scripts/generate_state_unit_data_access_census.py"
+      - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
     inputs:
@@ -24,15 +27,18 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_state_directory_profiles.py
+      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py
       - name: Expand central state directories
         shell: bash
         run: |
           if [ -n "${{ inputs.states }}" ]; then
-            python scripts/expand_state_authorities_from_central.py\n          python scripts/reconcile_local_units.py --states ${{ inputs.states }}
+            read -r -a STATE_ARGS <<< "${{ inputs.states }}"
+            python scripts/expand_state_authorities_from_central.py --states "${STATE_ARGS[@]}"
           else
             python scripts/expand_state_authorities_from_central.py
           fi
+      - name: Generate state unit/access census
+        run: python scripts/generate_state_unit_data_access_census.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

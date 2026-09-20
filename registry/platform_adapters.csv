@@ -2,3 +2,7 @@ platform,role,parser_module,notes
 enhanced_voting,result_platform,election_data_grabber.adapters.enhanced_voting,"Public result shell plus embedded/underlying structured payloads; preserve source order separately from ballot order."
 clarity,result_platform,election_data_grabber.adapters.clarity,"Election Night Reporting family; discover canonical election root and downloadable precinct/detail artifacts."
 civicplus,authority_discovery,election_data_grabber.adapters.civicplus,"County/municipal CMS; usually delegates to Enhanced Voting, Clarity, PDFs or structured downloads rather than being the canonical result feed itself."
+scytl,result_platform,election_data_grabber.state_expansion,"Reusable Scytl family classifier for state/local result surfaces; preserve local authority provenance before parser-specific normalization."
+electionware,report_family,election_data_grabber.adapters.ohio_tabulator_text,"Recurring Electionware/SOV reports normalize through conservative tabulator text semantics where artifact structure supports it."
+tabular_download,report_family,election_data_grabber.adapters.generic_csv,"Official CSV/XLS/XLSX result exports route to tabular normalization rather than locality-specific scrapers."
+pdf,report_family,election_data_grabber.adapters.pdf_extract,"Static official result documents preserve immutable raw snapshots and route through embedded-text/image fallback before normalization."

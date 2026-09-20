@@ -39,6 +39,8 @@ MN is currently indirect.
 Generic central-directory extraction remains unresolved for:
 AK, AL, GA, KS, LA, MA, ND, NM, NY, RI, SC, VT, WI.
 
+A governed expansion-profile layer now covers all 13 of these states (3,073 planned primary units) with explicit authority models, unit types, and priority result families. The next census runs should use those profiles to turn directory reachability into canonical locality/source records rather than ad hoc state handling.
+
 These are directory-enumeration problems, not evidence that local result sources do not exist.
 
 ## Coverage accounting
@@ -84,19 +86,19 @@ The 2026-09-17 architecture audit is recorded in `docs/architecture_audit.md`. I
 
 Work unresolved states alphabetically with state-specific central-directory profiles rather than bespoke result parsers:
 
-- [ ] Alaska
-- [ ] Alabama
-- [ ] Georgia
-- [ ] Kansas
-- [ ] Louisiana
-- [ ] Massachusetts
-- [ ] North Dakota
-- [ ] New Mexico
-- [ ] New York
-- [ ] Rhode Island
-- [ ] South Carolina
-- [ ] Vermont
-- [ ] Wisconsin
+- [~] Alaska — governed state/election-region profile in place; execute statewide-result enumeration.
+- [~] Alabama — governed 67-county directory profile in place; execute local-official census.
+- [~] Georgia — governed 159-county directory profile in place; execute county-office/platform census.
+- [~] Kansas — governed 105-county directory profile in place; execute county-officer/platform census.
+- [~] Louisiana — governed 64-parish directory profile in place; execute parish census.
+- [~] Massachusetts — governed 351-municipality profile in place; execute local-election-office census.
+- [~] North Dakota — governed 53-county profile in place; execute county-official census.
+- [~] New Mexico — governed 33-county profile in place; execute county-clerk census.
+- [~] New York — governed 58-board/county profile in place; execute board census with NYC special handling preserved.
+- [~] Rhode Island — governed 39-municipality profile in place; execute local-board census.
+- [~] South Carolina — governed 46-county profile in place; execute county-office census.
+- [~] Vermont — governed 247-town profile in place; execute clerk census.
+- [~] Wisconsin — governed 1,850-municipality clerk profile in place; execute statewide clerk-directory census.
 
 For each state, record:
 - authoritative expected unit count and authority model;
