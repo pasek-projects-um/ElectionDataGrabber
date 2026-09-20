@@ -7,7 +7,8 @@ URL_RE=re.compile(r'https?://[^\s\'"<>]+',re.I)
 UNIT_WORDS={
 "LA":("parish",),"MA":("city","town"),"MN":("county",),"ND":("county",),"NM":("county",),
 "NY":("county","board of elections"),"RI":("board of canvassers","town","city"),"SC":("county",),
-"VT":("town","city"),"WI":("clerk","county","town","village","city")
+"VT":("town","city"),"WI":("clerk","county","town","village","city"),
+"AL":("county","election official"),"GA":("county","election office"),"KS":("county","election officer")
 }
 
 def structured_candidates(state:str, body:bytes, base_url:str)->list[str]:
