@@ -27,7 +27,7 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py
+      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py
       - name: Expand central state directories
         shell: bash
         run: |
@@ -39,6 +39,8 @@ jobs:
           fi
       - name: Generate state unit/access census
         run: python scripts/generate_state_unit_data_access_census.py
+      - name: Prioritize coverage gaps
+        run: python scripts/prioritize_state_coverage_gaps.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
