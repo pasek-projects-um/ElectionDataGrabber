@@ -12,3 +12,12 @@ def test_alaska_discovers_state_result_products():
     assert alaska_state_result_candidates(html,"https://www.elections.alaska.gov/")==[
       "https://www.elections.alaska.gov/elections/results/2024-general"
     ]
+
+
+def test_new_large_state_profiles_use_unit_context():
+    html=b'''<div><span>Example County Election Office</span><a href="https://example.gov/elections">Website</a></div>
+    <div><span>Unrelated Agency</span><a href="https://noise.gov/">Website</a></div>'''
+    for state in ("AL","GA","KS"):
+        got=structured_candidates(state,html,"https://sos.example.gov/")
+        assert "https://example.gov/elections" in got
+        assert "https://noise.gov/" not in got
