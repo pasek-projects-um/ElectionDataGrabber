@@ -6,8 +6,8 @@ from pathlib import Path
 
 from election_data_grabber.state_expansion import classify_result_family
 
-EASY_FAMILIES = {"enhanced_voting", "clarity", "scytl", "electionware", "tabular_download"}
-DOCUMENT_FAMILIES = {"pdf"}
+EASY_FAMILIES = {"enhanced_voting", "clarity"}
+DOCUMENT_FAMILIES = {"pdf"}\nPARTIAL_FAMILIES = {"scytl", "electionware", "tabular_download"}
 DISCOVERY_ONLY_FAMILIES = {"civicplus"}
 UNSUPPORTED_FAMILIES = {"official_web", "unknown_web"}
 
@@ -40,7 +40,7 @@ def build_candidates(expansion_rows: list[dict[str, str]]) -> list[dict[str, str
                 "result_url":url,
                 "result_host":url.split("/")[2].lower() if "://" in url else "",
                 "access_family":family,
-                "ingest_tier":ingest_tier(family),
+                "ingest_tier":ingest_tier(family, url),
                 "election_night_candidate":row.get("election_night_candidate",""),
                 "smallest_observed_unit":row.get("smallest_observed_unit","unknown") or "unknown",
             })
@@ -62,7 +62,7 @@ def summarize(candidates: list[dict[str, str]], denominators: dict[str, int]) ->
             "expected_units_exposed":str(sum(denominators.get(s,0) for s in states)),
         })
     return sorted(out,key=lambda r:(
-        {"ready_adapter":0,"document_adapter":1,"discovery_only":2,"unsupported_web":3}.get(r["ingest_tier"],9),
+        {"ready_adapter":0,"needs_adapter_completion":1,"document_adapter":2,"discovery_only":3,"unsupported_web":4}.get(r["ingest_tier"],9),
         -int(r["expected_units_exposed"]),r["access_family"]))
 
 def read_csv(path: Path) -> list[dict[str, str]]:
