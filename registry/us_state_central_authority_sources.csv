@@ -45,3 +45,8 @@ WA,https://www.sos.wa.gov/elections,county,state election authority first,candid
 WV,https://sos.wv.gov/elections/Pages/default.aspx,county,state election authority first,candidate,"First-pass central authority; enumerate county clerks and result products."
 WY,https://sos.wyo.gov/Elections/,county,state election authority first,candidate,"First-pass central authority; enumerate county clerks and result products."
 DC,https://dcboe.org/,district,district election authority first,candidate,"First-pass single-authority jurisdiction; characterize ward/precinct result products."
+CT,https://portal.ct.gov/sots/election-services/election-services,state+municipal,state election authority first,verified,"Existing canonical 169-municipality registry; state authority retained as national first-pass pointer."
+ME,https://www.maine.gov/sos/cec/elec/,state+municipal,state election authority first,verified,"Existing canonical municipality/plantation registry; state authority retained as national first-pass pointer."
+MI,https://www.michigan.gov/sos/elections,state+county,state election authority first,verified,"Existing canonical 83-county registry; state authority retained as national first-pass pointer."
+OH,https://www.ohiosos.gov/elections/,state+county,state election authority first,verified,"Existing canonical 88-county registry; state authority retained as national first-pass pointer."
+PA,https://www.pa.gov/agencies/vote/elections,state+county,state election authority first,verified,"Existing canonical 67-county registry and statewide bulk-results floor; state authority retained as national first-pass pointer."
