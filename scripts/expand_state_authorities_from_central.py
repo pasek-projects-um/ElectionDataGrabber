@@ -73,7 +73,8 @@ def crawl_state(row: dict[str, str], max_candidates: int) -> list[dict]:
         if state == "AK":
             candidates.extend(alaska_state_result_candidates(r.content, str(r.url)))
         candidates = list(dict.fromkeys(candidates))[:max_candidates]
-        out.append({"state": state, "central_authority_url": str(r.url), "authority_url": str(r.url), "authority_host": urlparse(str(r.url)).hostname or "", "result_links": "", "election_night_candidate": "", "smallest_observed_unit": "", "platform_family": platform(str(r.url), r.text), "status": f"central_reached:{len(candidates)}_candidates:{profile.primary_unit if profile else row.get(\"authority_model\", \"unknown\")}"})
+        unit_label = profile.primary_unit if profile else row.get("authority_model", "unknown")
+        out.append({"state": state, "central_authority_url": str(r.url), "authority_url": str(r.url), "authority_host": urlparse(str(r.url)).hostname or "", "result_links": "", "election_night_candidate": "", "smallest_observed_unit": "", "platform_family": platform(str(r.url), r.text), "status": f"central_reached:{len(candidates)}_candidates:{unit_label}"})
         with ThreadPoolExecutor(max_workers=16) as ex:
             futures = [ex.submit(probe_candidate, client, state, str(r.url), u) for u in candidates]
             for fut in as_completed(futures):
