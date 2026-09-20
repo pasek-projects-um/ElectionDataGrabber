@@ -14,7 +14,12 @@ on:
       - "tests/test_mo_nh_hi_nj_promotion.py"
       - "scripts/classify_mn_next_action.py"
       - "tests/test_mn_next_action.py"
-      - "tests/test_national_first_pass_inventory.py"\n      - "src/election_data_grabber/easy_ingest.py"\n      - "scripts/build_national_easy_ingest_queue.py"\n      - "tests/test_easy_ingest.py"\n      - "src/election_data_grabber/supported_ingest.py"\n      - "tests/test_supported_ingest.py"
+      - "tests/test_national_first_pass_inventory.py"
+        - "src/election_data_grabber/easy_ingest.py"
+        - "scripts/build_national_easy_ingest_queue.py"
+        - "tests/test_easy_ingest.py"
+        - "src/election_data_grabber/supported_ingest.py"
+        - "tests/test_supported_ingest.py"
       - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
