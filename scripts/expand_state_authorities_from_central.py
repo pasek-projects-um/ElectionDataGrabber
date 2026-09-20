@@ -49,7 +49,10 @@ def probe_candidate(client: httpx.Client, state: str, central: str, url: str) ->
 def crawl_state(row: dict[str, str], max_candidates: int) -> list[dict]:
     state = row["state"]
     central = row["central_authority_url"]
-    profile = expansion_profile(state)
+    try:
+        profile = expansion_profile(state)
+    except KeyError:
+        profile = None
     out = []
     with httpx.Client(timeout=10, follow_redirects=True, headers={"User-Agent": "ElectionDataGrabber/0.1 (+academic election research)"}) as client:
         try:
@@ -70,7 +73,7 @@ def crawl_state(row: dict[str, str], max_candidates: int) -> list[dict]:
         if state == "AK":
             candidates.extend(alaska_state_result_candidates(r.content, str(r.url)))
         candidates = list(dict.fromkeys(candidates))[:max_candidates]
-        out.append({"state": state, "central_authority_url": str(r.url), "authority_url": str(r.url), "authority_host": urlparse(str(r.url)).hostname or "", "result_links": "", "election_night_candidate": "", "smallest_observed_unit": "", "platform_family": platform(str(r.url), r.text), "status": f"central_reached:{len(candidates)}_candidates:{profile.primary_unit}"})
+        out.append({"state": state, "central_authority_url": str(r.url), "authority_url": str(r.url), "authority_host": urlparse(str(r.url)).hostname or "", "result_links": "", "election_night_candidate": "", "smallest_observed_unit": "", "platform_family": platform(str(r.url), r.text), "status": f"central_reached:{len(candidates)}_candidates:{profile.primary_unit if profile else row.get(\"authority_model\", \"unknown\")}"})
         with ThreadPoolExecutor(max_workers=16) as ex:
             futures = [ex.submit(probe_candidate, client, state, str(r.url), u) for u in candidates]
             for fut in as_completed(futures):
