@@ -10,6 +10,8 @@ on:
       - "tests/test_az_ky_promotion.py"
       - "scripts/promote_ia_md_or_va_surfaces.py"
       - "tests/test_ia_md_or_va_promotion.py"
+      - "scripts/promote_mo_nh_hi_nj_surfaces.py"
+      - "tests/test_mo_nh_hi_nj_promotion.py"
       - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
@@ -31,7 +33,7 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py
+      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py tests/test_mo_nh_hi_nj_promotion.py
       - name: Expand central state directories
         shell: bash
         run: |
@@ -49,6 +51,8 @@ jobs:
         run: python scripts/promote_az_ky_surfaces.py
       - name: Build IA/MD/OR/VA promotion tranche
         run: python scripts/promote_ia_md_or_va_surfaces.py
+      - name: Build MO/NH/HI/NJ promotion tranche
+        run: python scripts/promote_mo_nh_hi_nj_surfaces.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
