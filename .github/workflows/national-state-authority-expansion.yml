@@ -21,9 +21,11 @@ on:
       - "src/election_data_grabber/supported_ingest.py"
       - "tests/test_supported_ingest.py"
       - "src/election_data_grabber/execution_maturity.py"
-      - "tests/test_execution_maturity.py tests/test_supported_execution.py"
+      - "tests/test_execution_maturity.py"
       - "src/election_data_grabber/supported_execution.py"
       - "tests/test_supported_execution.py"
+      - "scripts/run_national_supported_execution.py"
+      - "tests/test_national_supported_execution.py"
       - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
@@ -45,7 +47,7 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py tests/test_mo_nh_hi_nj_promotion.py tests/test_mn_next_action.py tests/test_national_first_pass_inventory.py tests/test_easy_ingest.py tests/test_supported_ingest.py tests/test_execution_maturity.py
+      - run: pytest -q tests/test_state_directory_profiles.py tests/test_state_expansion.py tests/test_state_coverage_gap_priorities.py tests/test_az_ky_promotion.py tests/test_ia_md_or_va_promotion.py tests/test_mo_nh_hi_nj_promotion.py tests/test_mn_next_action.py tests/test_national_first_pass_inventory.py tests/test_easy_ingest.py tests/test_supported_ingest.py tests/test_execution_maturity.py tests/test_supported_execution.py tests/test_national_supported_execution.py
       - name: Expand central state directories
         shell: bash
         run: |
@@ -67,6 +69,10 @@ jobs:
         run: python scripts/promote_mo_nh_hi_nj_surfaces.py
       - name: Classify Minnesota next action
         run: python scripts/classify_mn_next_action.py
+      - name: Build national supported-source manifest
+        run: python scripts/build_national_easy_ingest_queue.py
+      - name: Run supported-source national execution
+        run: python scripts/run_national_supported_execution.py --timeout 10
       - uses: actions/upload-artifact@v4
         if: always()
         with:
