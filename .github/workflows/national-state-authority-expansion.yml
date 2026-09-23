@@ -26,6 +26,9 @@ on:
       - "tests/test_supported_execution.py"
       - "scripts/run_national_supported_execution.py"
       - "tests/test_national_supported_execution.py"
+      - "src/election_data_grabber/adapters/generic_excel.py"
+      - "tests/test_generic_excel.py"
+      - "pyproject.toml"
       - "registry/us_state_directory_profiles.csv"
       - ".github/workflows/national-state-authority-expansion.yml"
   workflow_dispatch:
