@@ -14,6 +14,10 @@ def supported_ingest_manifest(candidates: list[dict[str, str]]) -> list[dict[str
             continue
         family=row["access_family"]
         parser=PARSER_BY_FAMILY.get(family)
+        if family == "tabular_download":
+            lower = row["result_url"].lower()
+            if lower.endswith(".xls") or ".xls?" in lower or lower.endswith(".xlsx") or ".xlsx?" in lower:
+                parser = "election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel"
         if not parser:
             continue
         out.append({
