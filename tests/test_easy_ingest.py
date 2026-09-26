@@ -13,7 +13,7 @@ def test_result_links_are_fingerprinted_individually_and_deduped():
 def test_easy_tier_is_conservative():
     assert ingest_tier("clarity")=="ready_adapter"
     assert ingest_tier("tabular_download", "https://x.gov/results.csv")=="ready_adapter"
-    assert ingest_tier("tabular_download", "https://x.gov/results.xlsx")=="needs_adapter_completion"
+    assert ingest_tier("tabular_download", "https://x.gov/results.xlsx")=="ready_adapter"
     assert ingest_tier("scytl")=="needs_adapter_completion"
     assert ingest_tier("electionware")=="needs_adapter_completion"
     assert ingest_tier("pdf")=="document_adapter"

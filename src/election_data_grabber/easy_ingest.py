@@ -22,7 +22,7 @@ def ingest_tier(family: str, url: str = "") -> str:
         return "ready_adapter"
     if family == "tabular_download":
         lower = url.lower()
-        if lower.endswith(".csv") or ".csv?" in lower:
+        if any(lower.endswith(ext) or ext + "?" in lower for ext in (".csv", ".xls", ".xlsx")):
             return "ready_adapter"
         return "needs_adapter_completion"
     if family in {"scytl", "electionware"}:
