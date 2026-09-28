@@ -1,0 +1,52 @@
+state,source_url,origin_repository,origin_locator,source_class,notes
+AL,https://www.sos.alabama.gov/alabama-votes/voter/election-data,MEDSL/2024-elections-official,README.md,official_candidate,
+AK,https://www.elections.alaska.gov/election-results/e/?id=24genr,MEDSL/2024-elections-official,README.md,official_candidate,
+AZ,https://github.com/openelections/openelections-data-az/tree/master/2024/General,MEDSL/2024-elections-official,README.md,secondary_repository,"Recover underlying official county/state sources."
+AR,https://results.enr.clarityelections.com/AR/122502/web.345435/#/reporting,MEDSL/2024-elections-official,README.md,official_candidate,
+CA,https://statewidedatabase.org/election.html,MEDSL/2024-elections-official,README.md,secondary_or_research_source,"Statewide Database; preserve jurisdiction-specific suffix caveats."
+CO,https://www.sos.state.co.us/pubs/elections/resultsData.html,MEDSL/2024-elections-official,README.md,official_candidate,
+CT,https://ctemspublic.tgstg.net/#/home,MEDSL/2024-elections-official,README.md,official_candidate,
+DC,https://electionresults.dcboe.org/election_results/2024-General-Election,MEDSL/2024-elections-official,README.md,official_candidate,
+DE,https://elections.delaware.gov/results/html/index.shtml?electionId=GE2024,MEDSL/2024-elections-official,README.md,official_candidate,
+FL,https://dos.fl.gov/elections/data-statistics/elections-data/precinct-level-election-results/,MEDSL/2024-elections-official,README.md,official_candidate,
+GA,https://results.sos.ga.gov/results/public/Georgia/elections/2024NovGen,MEDSL/2024-elections-official,README.md,official_candidate,
+HI,https://elections.hawaii.gov/election-results/,MEDSL/2024-elections-official,README.md,official_candidate,
+IA,https://sos.iowa.gov/elections/results/precinctvotetotals2024general.html,MEDSL/2024-elections-official,README.md,official_candidate,
+ID,https://voteidaho.gov/election-results/,MEDSL/2024-elections-official,README.md,official_candidate,
+IL,https://www.elections.il.gov/electionoperations/ElectionVoteTotalsPrecinct.aspx?ID=rfZ%2buidMSDY%3d,MEDSL/2024-elections-official,README.md,official_candidate,
+IN,https://enr.indianavoters.in.gov/site/index.html,MEDSL/2024-elections-official,README.md,official_candidate,"Supplemented by OpenElections county data; completeness caveats."
+KS,https://sos.ks.gov/elections/election-results.html,MEDSL/2024-elections-official,README.md,official_candidate,
+KY,https://elect.ky.gov/results/2020-2029/Pages/2024.aspx,MEDSL/2024-elections-official,README.md,official_candidate,
+LA,https://voterportal.sos.la.gov/static/2024-11-05,MEDSL/2024-elections-official,README.md,official_candidate,"Early voting is parish-level and excluded from precinct data."
+MA,https://electionstats.state.ma.us/elections/search/year_from:2024/year_to:2024/stage:General,MEDSL/2024-elections-official,README.md,official_candidate,
+MD,https://www.elections.maryland.gov/elections/2024/index.html,MEDSL/2024-elections-official,README.md,official_candidate,
+ME,https://www.maine.gov/sos/cec/elec/results/results24.html,MEDSL/2024-elections-official,README.md,official_candidate,"First-round ranked-choice precinct totals differ from final certified totals."
+MI,https://mielections.us/election/results/,MEDSL/2024-elections-official,README.md,official_candidate,"Negative county-level correction values retained in source."
+MN,https://electionresults.sos.mn.gov/Select/MediaFiles/Index?ersElectionId=170,MEDSL/2024-elections-official,README.md,official_candidate,
+MO,https://enr.sos.mo.gov/,MEDSL/2024-elections-official,README.md,official_candidate,
+MS,https://sos.ms.gov/elections/electionresults_aspx/elections_results_2024_county.aspx,MEDSL/2024-elections-official,README.md,official_candidate,
+MT,https://electionresults.mt.gov/ResultsSW.aspx,MEDSL/2024-elections-official,README.md,official_candidate,
+NC,https://www.ncsbe.gov/results-data/election-results/historical-election-results-data,MEDSL/2024-elections-official,README.md,official_candidate,
+ND,https://results.sos.nd.gov/ResultsExport.aspx?,MEDSL/2024-elections-official,README.md,official_candidate,
+NE,https://electionresults.nebraska.gov/default.aspx,MEDSL/2024-elections-official,README.md,official_candidate,
+NH,https://www.sos.nh.gov/2024-general-election-results,MEDSL/2024-elections-official,README.md,official_candidate,
+NJ,https://www.nj.gov/state/elections/election-night-results.shtml,MEDSL/2024-elections-official,README.md,official_candidate,"MEDSL also uses multiple county result sources and OpenElections; preserve multi-source topology."
+NM,https://electionresults.sos.nm.gov/,MEDSL/2024-elections-official,README.md,official_candidate,
+NV,https://www.nvsos.gov/electionresults/,MEDSL/2024-elections-official,README.md,official_candidate,
+NY,https://www.vote.nyc/page/election-results,MEDSL/2024-elections-official,README.md,mixed_official_and_secondary,"Most counties via OpenElections; NYC via official source."
+OH,https://www.ohiosos.gov/elections/election-results-and-data/2024-official-election-results/,MEDSL/2024-elections-official,README.md,official_candidate,
+OK,https://results.okelections.gov/OKER/?elecDate=20241105,MEDSL/2024-elections-official,README.md,official_candidate,
+OR,https://github.com/openelections/openelections-sources-or/tree/master/2024/general,MEDSL/2024-elections-official,README.md,mixed_secondary_and_local_official,"MEDSL notes OpenElections plus county websites."
+PA,https://www.pa.gov/agencies/dos/resources/voting-and-elections-resources/voting-and-election-statistics/bulk-election-data.html#accordion-b33bb36a11-item-d105bc02cf,MEDSL/2024-elections-official,README.md,official_candidate,
+RI,https://elections.ri.gov/elections/previous-election-results,MEDSL/2024-elections-official,README.md,official_candidate,
+SC,https://www.enr-scvotes.org/SC/122436/web.345435/#/access-to-races,MEDSL/2024-elections-official,README.md,official_candidate,
+SD,https://electionresults.sd.gov/Default.aspx,MEDSL/2024-elections-official,README.md,official_candidate,
+TN,https://sos.tn.gov/elections/results,MEDSL/2024-elections-official,README.md,official_candidate,
+TX,https://data.capitol.texas.gov/topic/elections,MEDSL/2024-elections-official,README.md,official_candidate,
+UT,https://electionresults.utah.gov/results/public/utah/elections/general11052024,MEDSL/2024-elections-official,README.md,official_candidate,
+VA,https://enr.elections.virginia.gov/results/public/Virginia/elections/2024NovemberGeneral,MEDSL/2024-elections-official,README.md,official_candidate,
+VT,https://electionarchive.vermont.gov/elections/search/date:2024-11-05,MEDSL/2024-elections-official,README.md,official_candidate,
+WA,https://results.vote.wa.gov/results/20241105/export.html,MEDSL/2024-elections-official,README.md,official_candidate,
+WI,https://elections.wi.gov/elections/election-results#accordion-11951,MEDSL/2024-elections-official,README.md,official_candidate,
+WV,https://results.enr.clarityelections.com/WV/122766/web.345435/#/summary,MEDSL/2024-elections-official,README.md,official_candidate,
+WY,https://sos.wyo.gov/Elections/Docs/2024/2024GeneralResults.aspx,MEDSL/2024-elections-official,README.md,official_candidate,

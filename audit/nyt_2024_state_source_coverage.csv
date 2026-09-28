@@ -1,0 +1,52 @@
+state,source_url,origin_repository,origin_locator,nyt_availability,source_class,notes
+AL,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+AK,,nytimes/presidential-precinct-map-2024,README.md,unusable,no_direct_source_link,"Absentee, early, and provisional votes reported district-wide."
+AZ,https://azsos.gov/elections/election-information/2024-election-info,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+AR,https://results.enr.clarityelections.com/AR/122502/web.345435/#/reporting,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+CA,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+CO,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+CT,,nytimes/presidential-precinct-map-2024,README.md,partial,no_direct_source_link,"Township-level results."
+DC,https://electionresults.dcboe.org/election_results/2024-General-Election,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+DE,https://elections.delaware.gov/results/html/index.shtml?electionId=GE2024,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+FL,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+GA,https://results.sos.ga.gov/results/public/Georgia/elections/2024NovGen,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+HI,https://elections.hawaii.gov/election-results/,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+IA,https://electionresults.iowa.gov/IA/122322/web.345435/#/reporting,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+ID,https://voteidaho.gov/election-results/,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,"Absentee votes reported by county."
+IL,https://www.elections.il.gov/electionoperations/ElectionVoteTotalsPrecinct.aspx?ID=9huvqbsiUWA%3d,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+IN,https://enr.indianavoters.in.gov/site/index.html,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+KS,https://sos.ks.gov/elections/election-results.html,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+KY,https://elect.ky.gov/results/2020-2029/Pages/2024.aspx,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+LA,https://voterportal.sos.la.gov/graphical,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,"Absentee and provisional results reported by parish."
+MA,https://electionstats.state.ma.us/elections/view/165300/,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+MD,https://elections.maryland.gov/elections/2024/election_data/index.html,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+ME,,nytimes/presidential-precinct-map-2024,README.md,partial,no_direct_source_link,"Township-level results."
+MI,https://github.com/openelections/openelections-data-mi/blob/master/2024/20241105__mi__general__precinct.csv,nytimes/presidential-precinct-map-2024,README.md,complete,secondary_repository,"Use as reconciliation/source map; recover underlying official sources."
+MN,https://electionresults.sos.mn.gov/20241105,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+MO,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,"Absentee/provisional/central precinct votes reported by county."
+MS,https://github.com/openelections/openelections-data-ms/tree/master/2024/counties,nytimes/presidential-precinct-map-2024,README.md,partial,secondary_repository,
+MT,https://sosmt.gov/elections/results/,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+NC,https://www.ncsbe.gov/results-data/election-results/historical-election-results-data,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+ND,https://results.sos.nd.gov/Default.aspx?map=Cty,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+NE,https://electionresults.nebraska.gov/resultsCTY.aspx?type=PRS&rid=12465&osn=90&map=CTY,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+NH,,nytimes/presidential-precinct-map-2024,README.md,partial,no_direct_source_link,"Township-level results."
+NJ,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+NM,https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+NV,https://www.nvsos.gov/sos/elections/election-information/precinct-level-results,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+NY,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+OH,https://www.ohiosos.gov/elections/election-results-and-data/2024-official-election-results/,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+OK,https://results.okelections.gov/OKER/?elecDate=20241105,nytimes/presidential-precinct-map-2024,README.md,partial,official_candidate,"Some counties report absentee votes countywide."
+OR,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+PA,,nytimes/presidential-precinct-map-2024,README.md,complete,no_direct_source_link,
+RI,,nytimes/presidential-precinct-map-2024,README.md,partial,no_direct_source_link,"Township-level results."
+SC,https://scvotes.gov/elections-statistics/election-results/,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+SD,https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY,nytimes/presidential-precinct-map-2024,README.md,partial,official_candidate,"Some counties not collected; countywide absentee reporting occurs in some places."
+TN,https://sos.tn.gov/elections/results,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+TX,https://www.kxan.com/news/your-local-election-hq/2024-presidential-precinct-results/,nytimes/presidential-precinct-map-2024,README.md,complete,secondary_source,"Recover underlying county/state official sources where possible."
+UT,https://electionresults.utah.gov/results/public/utah/elections/general11052024/ballot-items/88e40000-968a-0c37-b0b0-08dce9374078,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+VA,https://enr.elections.virginia.gov/results/public/Virginia/elections/2024NovemberGeneral,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,"Provisional votes reported at county level."
+VT,,nytimes/presidential-precinct-map-2024,README.md,partial,no_direct_source_link,"Township-level results."
+WA,https://results.vote.wa.gov/results/20241105/export.html,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+WI,https://github.com/jdjohn215/wisc-election-night-data/tree/main/2024-nov/wec,nytimes/presidential-precinct-map-2024,README.md,complete,secondary_repository,"Use as source/reconciliation lead; identify underlying WEC source."
+WV,https://results.enr.clarityelections.com/WV/122766/web.345435/#/reporting,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,
+WY,https://sos.wyo.gov/Elections/Docs/2024/2024GeneralResults.aspx,nytimes/presidential-precinct-map-2024,README.md,complete,official_candidate,

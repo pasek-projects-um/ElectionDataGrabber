@@ -1,0 +1,52 @@
+state,origin_repository,origin_locator,source_url,source_text,lead_count,harvest_status,notes
+AK,ElectProject/Early-Vote-2020G,docs/AK.html,https://www.elections.alaska.gov/doc/info/statstable.php,,1,direct_official_url,
+AL,ElectProject/Early-Vote-2020G,docs/AL.html,https://twitter.com/alasecofstate/status/1323282864251830273,,1,official_social_reference,State election-office social post; search modern official data page.
+AR,ElectProject/Early-Vote-2020G,docs/AR.html,,Data provided by Arkansas Secretary of State’s office,0,office_supplied_no_url,
+AZ,ElectProject/Early-Vote-2020G,docs/AZ.html,https://www.dataorbital.com/2020-general-election-early-vote-tracker,,1,secondary_source,Secondary tracker; mine underlying official source separately.
+CA,ElectProject/Early-Vote-2020G,docs/CA.html,https://docs.google.com/forms/d/e/1FAIpQLSfipraqZymaSWDDYjVkidhZ0fpvHGpLuALrX9FxSr0JKeIDGw/viewform,,1,secondary_or_manual_collection,Manual collection form; identify official county/state feeds separately.
+CO,ElectProject/Early-Vote-2020G,docs/CO.html,,Data provided by Colorado Secretary of State’s office,0,office_supplied_no_url,
+CT,ElectProject/Early-Vote-2020G,docs/CT.html,,Data provided by Connecticut Secretary of State’s office,0,office_supplied_no_url,
+DC,ElectProject/Early-Vote-2020G,docs/DC.html,https://www.dcboe.org/ | https://earlyvoting.dcboe.org/,,2,direct_official_url,
+DE,ElectProject/Early-Vote-2020G,docs/DE.html,,Data provided by Delaware Secretary of State’s office,0,office_supplied_no_url,
+FL,ElectProject/Early-Vote-2020G,docs/FL.html,https://countyballotfiles.floridados.gov/VoteByMailEarlyVotingReports/PublicStats,,1,direct_official_url,
+GA,ElectProject/Early-Vote-2020G,docs/GA.html,https://elections.sos.ga.gov/Elections/voterabsenteefile.do,,1,direct_official_url,
+HI,ElectProject/Early-Vote-2020G,docs/HI.html,https://www.facebook.com/elections808/,,1,official_social_reference,Search modern Hawaii election-office source.
+IA,ElectProject/Early-Vote-2020G,docs/IA.html,,Data provided by Iowa Secretary of State’s office,0,office_supplied_no_url,
+ID,ElectProject/Early-Vote-2020G,docs/ID.html,https://twitter.com/L2political/status/1322918125373919232,,1,secondary_source,Ada County only in source; requires statewide/local official discovery.
+IL,ElectProject/Early-Vote-2020G,docs/IL.html,https://elections.il.gov/VotingAndRegistrationSystems/PreElectionCounts.aspx?MID=l0hlXuSrKL0%3d&T=637317257975604269,,1,direct_official_url,
+IN,ElectProject/Early-Vote-2020G,docs/IN.html,,Communication from Indiana Secretary of State’s Office,0,office_supplied_no_url,
+KS,ElectProject/Early-Vote-2020G,docs/KS.html,,Data provided by Kansas Secretary of State’s office,0,office_supplied_no_url,
+KY,ElectProject/Early-Vote-2020G,docs/KY.html,https://spectrumnews1.com/ky/lexington/news/2020/11/02/early-in-person-voting-in-kentucky,,1,secondary_source,Source text says SoS supplied some mail-ballot totals; find official publication.
+LA,ElectProject/Early-Vote-2020G,docs/LA.html,https://www.sos.la.gov/ElectionsAndVoting/Pages/EarlyVotingStatisticsStatewide.aspx,,1,direct_official_url,
+MA,ElectProject/Early-Vote-2020G,docs/MA.html,,Communication from Massachusetts Secretary of State’s office,0,office_supplied_no_url,
+MD,ElectProject/Early-Vote-2020G,docs/MD.html,https://elections.maryland.gov/press_room/index.html,,1,direct_official_url,
+ME,ElectProject/Early-Vote-2020G,docs/ME.html,https://www.maine.gov/sos/cec/elec/data/index.html,,1,direct_official_url,
+MI,ElectProject/Early-Vote-2020G,docs/MI.html,,Data provided by Michigan Secretary of State’s office,0,office_supplied_no_url,Purchased absentee request file; search modern official export/API.
+MN,ElectProject/Early-Vote-2020G,docs/MN.html,https://www.sos.state.mn.us/election-administration-campaigns/data-maps/absentee-data/,,1,direct_official_url,
+MO,ElectProject/Early-Vote-2020G,docs/MO.html,https://twitter.com/MissouriSOS/status/1323321086302429186,,1,official_social_reference,Search modern Missouri official data page.
+MS,ElectProject/Early-Vote-2020G,docs/MS.html,https://mssos.sharefile.com/share/view/s512f4ecd9684d6e8/fo0396ba-d6a9-4e3b-afae-1a669884b304,,1,official_file_share,Likely official hosted file-share; verify current source.
+MT,ElectProject/Early-Vote-2020G,docs/MT.html,https://sosmt.gov/elections/,,1,direct_official_url,
+NC,ElectProject/Early-Vote-2020G,NC.Rmd,,,0,derived_local_dataset_no_source_pointer,"Notebook reads dedicated 2020G_Early_Vote_NC.csv; source provenance must be recovered from repository history or upstream collection process."
+ND,ElectProject/Early-Vote-2020G,docs/ND.html,https://vip.sos.nd.gov/abev.aspx?eid=313,,1,direct_official_url,Real-time processing page; cycle-specific election id.
+NE,ElectProject/Early-Vote-2020G,docs/NE.html,,Data provided by Nebraska Secretary of State’s office,0,office_supplied_no_url,
+NH,ElectProject/Early-Vote-2020G,docs/NH.html,https://sos.nh.gov/elections/information/notices/absentee-ballots-requested-for-general-election/,,1,direct_official_url,
+NJ,ElectProject/Early-Vote-2020G,docs/NJ.html,,Data Provided by New Jersey Department of State,0,office_supplied_no_url,
+NM,ElectProject/Early-Vote-2020G,docs/NM.html,,Data Provided by New Mexico Department of State,0,office_supplied_no_url,
+NV,ElectProject/Early-Vote-2020G,docs/NV.html,https://www.nvsos.gov/sos/elections/voters/election-turnout-statistics,,1,direct_official_url,
+NY,ElectProject/Early-Vote-2020G,docs/NY.html,,Communication from New York State Board of Elections,0,office_supplied_no_url,
+OH,ElectProject/Early-Vote-2020G,docs/OH.html,,Data scraped from county websites,0,local_official_sources_aggregate,80 of 88 counties in 2020; requires county-by-county source recovery.
+OK,ElectProject/Early-Vote-2020G,docs/OK.html,https://www.ok.gov/elections/Absentee_Ballot_Statistics.html,,1,direct_official_url,
+OR,ElectProject/Early-Vote-2020G,docs/OR.html,https://sos.oregon.gov/voting/Pages/current-election.aspx,,1,direct_official_url,
+PA,ElectProject/Early-Vote-2020G,docs/PA.html,,Data provided by Pennsylvania Secretary of State’s office,0,office_supplied_no_url,
+RI,ElectProject/Early-Vote-2020G,docs/RI.html,https://app.powerbigov.us/view?r=eyJrIjoiMGEwN2E0MzUtOTA0OC00ZDA3LThjMTItZDZhYTBjYjU5ZjhjIiwidCI6IjJkMGYxZGI2LWRkNTktNDc3Mi04NjVmLTE5MTQxNzVkMDdjMiJ9,,1,official_dashboard_candidate,Verify sponsoring agency and current dashboard.
+SC,ElectProject/Early-Vote-2020G,docs/SC.html,https://www.scvotes.gov/fact-sheets,,1,direct_official_url,
+SD,ElectProject/Early-Vote-2020G,docs/SD.html,https://sdsos.gov/elections-voting/upcoming-elections/general-information/2020-General-Election-Absentee-Numbers.aspx,,1,direct_official_url,
+TN,ElectProject/Early-Vote-2020G,docs/TN.html,https://sos.tn.gov/products/elections-executive/nov-3-election-information,,1,direct_official_url,
+TX,ElectProject/Early-Vote-2020G,docs/TX.html,https://earlyvoting.texas-election.com/Elections/getElectionDetails.do,,1,direct_official_url,
+UT,ElectProject/Early-Vote-2020G,docs/UT.html,https://voteinfo.utah.gov/ballots-processed/,,1,direct_official_url,
+VA,ElectProject/Early-Vote-2020G,docs/VA.html,https://results.elections.virginia.gov/vaelections/2020%20November%20General/Site/Statistics/Absentee.html | https://www.vpap.org/elections/early-voting/,,2,mixed_official_and_secondary,First URL official; second secondary.
+VT,ElectProject/Early-Vote-2020G,docs/VT.html,https://sos.vermont.gov/elections/election-info-resources/elections-results-data/,,1,direct_official_url,
+WA,ElectProject/Early-Vote-2020G,docs/WA.html,https://www.sos.wa.gov/elections/research/data-and-statistics.aspx,,1,direct_official_url,
+WI,ElectProject/Early-Vote-2020G,docs/WI.html,https://elections.wi.gov/index.php/elections-voting/statistics,,1,direct_official_url,
+WV,ElectProject/Early-Vote-2020G,docs/WV.html,http://services.sos.wv.gov/Elections/AbsenteeBallotStats,,1,direct_official_url,Legacy HTTP endpoint; find HTTPS/current descendant.
+WY,ElectProject/Early-Vote-2020G,docs/WY.html,,Communication from Wyoming Secretary of State’s Office,0,office_supplied_no_url,
