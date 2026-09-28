@@ -16,7 +16,7 @@ def classify_family(url: str) -> tuple[str,str]:
     if "clarityelections.com" in host or "/results/public/" in path:
         return "clarity","clarity"
     if "electionresults." in host or "results." in host or host.startswith("enr."):
-        return "results_portal","generic_html"
+        return "results_portal",""
     if path.endswith(".csv") or "export" in path or "mediafiles" in path:
         return "tabular_export","generic_csv"
     if path.endswith((".xlsx",".xls")):
@@ -24,7 +24,7 @@ def classify_family(url: str) -> tuple[str,str]:
     if path.endswith(".pdf"):
         return "document","pdf_extract"
     if host.endswith(".gov") or ".gov." in host or host.endswith(".us"):
-        return "official_web","generic_html"
+        return "official_web",""
     return "unknown",""
 
 
@@ -47,7 +47,7 @@ def source_candidates(root: Path) -> list[dict[str,str]]:
                 continue
             seen.add(key)
             family,parser=classify_family(url)
-            runnable=parser in {"clarity","generic_csv","generic_excel","pdf_extract","generic_html"}
+            runnable=parser in {"clarity","generic_csv","generic_excel","pdf_extract"}
             out.append({
                 "state":row["state"],
                 "source_url":url,
