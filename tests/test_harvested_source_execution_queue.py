@@ -8,10 +8,10 @@ def test_clarity_urls_are_classified_to_clarity_adapter():
     assert parser=="clarity"
 
 
-def test_results_portal_gets_generic_html_fallback():
+def test_results_portal_requires_fingerprint_before_parser_promotion():
     family,parser=classify_family("https://results.sos.nd.gov/Default.aspx")
     assert family=="results_portal"
-    assert parser=="generic_html"
+    assert parser==""
 
 
 def test_queue_covers_all_states_and_dc():
