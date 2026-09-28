@@ -1,5 +1,7 @@
 # Maine election-results portability census
 
+> **Historical portability case study:** Maine was an early municipality-first stress test. Cohort/status language below is a snapshot of that work, not the current national coverage boundary.
+
 Maine is deliberately treated as a **municipality-first** state for election-result ingestion.
 County is retained as geography, but the primary reporting/administrative unit can be a city,
 town, plantation, or other municipality.
