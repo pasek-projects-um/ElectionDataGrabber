@@ -1,5 +1,7 @@
 # Michigan unidentified-surface deep dive
 
+> **Historical investigation note:** This documents an early Michigan unknown-web triage pass. Family observations remain useful, but bucket sizes/status are not current national metrics.
+
 The first top-10 fingerprint pass labeled several surfaces `unknown_web`. Manual inspection shows this bucket mixes at least three reusable source families and some crawler noise.
 
 ## Lenawee — electionlenawee.com
