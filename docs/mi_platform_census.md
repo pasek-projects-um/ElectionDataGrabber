@@ -1,5 +1,7 @@
 # Michigan county platform census
 
+> **Historical portability case study:** The 83-county Michigan census was an early platform-enumeration milestone. Current national coverage/readiness is tracked elsewhere.
+
 Goal: enumerate all 83 Michigan counties before optimizing adapters.
 
 The census output has one or more candidate result sources per county and records:
