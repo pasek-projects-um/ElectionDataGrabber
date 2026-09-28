@@ -14,7 +14,7 @@ def readiness_route(row: dict[str,str]) -> tuple[str,str]:
     artifact=readiness_artifact(row)
     if family=="clarity":
         return "clarity","election_data_grabber.adapters.clarity:discover_clarity_downloads"
-    if family in {"scytl","electionware"} and artifact is None:
+    if family in {"scytl","electionware","results_portal","structured_web"} and artifact is None:
         return family,"election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
     if artifact is not None:
         if artifact.kind=="json":
