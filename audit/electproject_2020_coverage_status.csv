@@ -26,7 +26,7 @@ MN,ElectProject/Early-Vote-2020G,docs/MN.html,https://www.sos.state.mn.us/electi
 MO,ElectProject/Early-Vote-2020G,docs/MO.html,https://twitter.com/MissouriSOS/status/1323321086302429186,,1,official_social_reference,Search modern Missouri official data page.
 MS,ElectProject/Early-Vote-2020G,docs/MS.html,https://mssos.sharefile.com/share/view/s512f4ecd9684d6e8/fo0396ba-d6a9-4e3b-afae-1a669884b304,,1,official_file_share,Likely official hosted file-share; verify current source.
 MT,ElectProject/Early-Vote-2020G,docs/MT.html,https://sosmt.gov/elections/,,1,direct_official_url,
-NC,ElectProject/Early-Vote-2020G,docs/NC.html,,,0,source_not_resolved,Rendered page did not expose a Source field in initial extraction; inspect state file/history.
+NC,ElectProject/Early-Vote-2020G,NC.Rmd,,,0,derived_local_dataset_no_source_pointer,"Notebook reads dedicated 2020G_Early_Vote_NC.csv; source provenance must be recovered from repository history or upstream collection process."
 ND,ElectProject/Early-Vote-2020G,docs/ND.html,https://vip.sos.nd.gov/abev.aspx?eid=313,,1,direct_official_url,Real-time processing page; cycle-specific election id.
 NE,ElectProject/Early-Vote-2020G,docs/NE.html,,Data provided by Nebraska Secretary of State’s office,0,office_supplied_no_url,
 NH,ElectProject/Early-Vote-2020G,docs/NH.html,https://sos.nh.gov/elections/information/notices/absentee-ballots-requested-for-general-election/,,1,direct_official_url,
