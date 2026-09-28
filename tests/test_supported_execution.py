@@ -92,8 +92,8 @@ def test_clarity_landing_page_discovers_detail_artifact():
         source_id="clarity-page",
         fetched_at=NOW,
     )
-    assert evidence.stage == ExecutionStage.ARTIFACT_DISCOVERED
-    assert evidence.failure_class == ""
+    assert evidence.stage == ExecutionStage.PARSER_SELECTED
+    assert evidence.failure_class == "artifact_discovered_requires_fetch"
 
 
 def test_clarity_xml_executes_to_replay_tested_evidence():
