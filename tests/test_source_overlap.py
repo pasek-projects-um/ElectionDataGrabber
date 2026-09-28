@@ -1,3 +1,4 @@
+import pytest
 from election_data_grabber.source_overlap import (
     OverlapCalibration, OverlapRelationship, SourceSnapshot,
     comparable_progress, cosine_similarity, jaccard, match_snapshots, summarize_overlap,
