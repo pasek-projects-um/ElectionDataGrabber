@@ -1,6 +1,6 @@
 platform_family,priority,states,implementation_status,notes
-clarity,high,,existing_adapter_review,
-structured_web,high,,pending,
+clarity,high,,artifact_and_xml_execution_complete,
+structured_web,high,,artifact_routing_and_json_bridge_in_progress,
 scytl,high,,pending,
 electionware,high,,pending,
 results_portal,medium,,pending,
