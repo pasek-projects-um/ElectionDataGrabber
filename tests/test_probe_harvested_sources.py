@@ -14,7 +14,7 @@ def test_probe_preserves_failed_fetch_as_explicit_status(monkeypatch):
 def test_probe_fingerprints_fetchable_source(monkeypatch):
     monkeypatch.setattr(
         "scripts.probe_harvested_sources.fetch_text",
-        lambda url,timeout:("<html>Clarity Elections</html>","fetchable","200"),
+        lambda url,timeout:("<html>Election Night Reporting</html>","fetchable","200"),
     )
     rows=probe([{"state":"AA","source_url":"https://aa.gov/results","source_origin":"internal","platform_family":"official_web"}])
     assert rows[0]["fetch_status"]=="fetchable"
