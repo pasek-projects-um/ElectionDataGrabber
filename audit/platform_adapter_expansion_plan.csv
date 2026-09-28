@@ -1,6 +1,6 @@
 platform_family,priority,states,implementation_status,notes
 clarity,high,,artifact_and_xml_execution_complete,
-structured_web,high,,artifact_routing_and_json_bridge_in_progress,
+structured_web,high,,artifact_routing_and_json_bridge_complete,
 scytl,high,,vendor_artifact_discovery_complete,
 electionware,high,,vendor_artifact_discovery_complete,
-results_portal,medium,,pending,
+results_portal,medium,,generalized_structured_discovery_complete,
