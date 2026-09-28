@@ -11,13 +11,43 @@ from election_data_grabber.adapters.vendor_structured import discover_vendor_art
 from election_data_grabber.adapters.structured_web import select_structured_artifact
 from election_data_grabber.execution_maturity import maturity_row
 from election_data_grabber.supported_execution import execute_supported_body
-from scripts.run_national_supported_execution import fetch_body, failed_row
+import urllib.error
+import urllib.request
+
 
 
 FIELDS=[
     "state","result_url","access_family","parser","execution_stage","observation_count",
     "smallest_observed_unit","vote_modes_preserved","failure_class","snapshot_sha256",
 ]
+
+
+def fetch_body(url: str, timeout: int) -> tuple[bytes | None, str]:
+    req=urllib.request.Request(url,headers={"User-Agent":"ElectionDataGrabber/1.0 harvested-execution-depth"})
+    try:
+        with urllib.request.urlopen(req,timeout=timeout) as resp:
+            return resp.read(),""
+    except urllib.error.HTTPError as exc:
+        return None,f"http_{exc.code}"
+    except urllib.error.URLError:
+        return None,"network_error"
+    except TimeoutError:
+        return None,"timeout"
+
+
+def failed_row(row: dict[str,str], failure_class: str) -> dict[str,str]:
+    return {
+        "state":row.get("state",""),
+        "result_url":row.get("result_url",""),
+        "access_family":row.get("access_family",""),
+        "parser":row.get("parser",""),
+        "execution_stage":"discovered",
+        "observation_count":"0",
+        "smallest_observed_unit":row.get("smallest_observed_unit","unknown"),
+        "vote_modes_preserved":"",
+        "failure_class":failure_class,
+        "snapshot_sha256":"",
+    }
 
 
 def read_rows(path: Path) -> list[dict[str,str]]:
