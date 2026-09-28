@@ -45,10 +45,10 @@ def execute_supported_body(
             result_url=manifest_row["result_url"],
             access_family=family,
             parser=parser_path,
-            stage=(ExecutionStage.ARTIFACT_DISCOVERED if artifact else ExecutionStage.FETCHABLE),
+            stage=(ExecutionStage.PARSER_SELECTED if artifact else ExecutionStage.FETCHABLE),
             smallest_observed_unit=manifest_row.get("smallest_observed_unit", "unknown"),
             snapshot_sha256=snapshot_sha256(body),
-            failure_class=("" if artifact else "requires_download_artifact_selection"),
+            failure_class=("artifact_discovered_requires_fetch" if artifact else "requires_download_artifact_selection"),
         )
 
     parser = PARSER_FUNCTIONS.get(parser_path)
