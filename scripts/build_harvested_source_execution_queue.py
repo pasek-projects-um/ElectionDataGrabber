@@ -47,6 +47,7 @@ def source_candidates(root: Path) -> list[dict[str,str]]:
                 continue
             seen.add(key)
             family,parser=classify_family(url)
+            runnable=parser in {"clarity","generic_csv","generic_excel","pdf_extract","generic_html"}
             out.append({
                 "state":row["state"],
                 "source_url":url,
@@ -55,8 +56,8 @@ def source_candidates(root: Path) -> list[dict[str,str]]:
                 "fetch_status":"untested",
                 "platform_family":family,
                 "parser_family":parser,
-                "execution_stage":"classified" if parser else "needs_family_probe",
-                "notes":"",
+                "execution_stage":"adapter_candidate" if runnable else ("classified" if parser else "needs_family_probe"),
+                "notes":"existing_adapter_family" if runnable else "",
             })
     return sorted(out,key=lambda r:(r["state"],r["source_origin"],r["source_url"]))
 
