@@ -1,6 +1,6 @@
 from election_data_grabber.source_overlap import (
     OverlapCalibration, OverlapRelationship, SourceSnapshot,
-    comparable_progress, cosine_similarity, jaccard,
+    comparable_progress, cosine_similarity, jaccard, match_snapshots, summarize_overlap,
 )
 
 def test_imperfect_similarity_does_not_imply_independence():
@@ -26,3 +26,28 @@ def test_progress_matching_is_jurisdiction_scoped():
     assert not comparable_progress(a,c)
     assert cosine_similarity(a.result_vector,b.result_vector) > 0.99
     assert jaccard(a.reporting_units,b.reporting_units) == 1/3
+
+
+def test_snapshot_matching_prefers_nearest_reporting_fraction():
+    left=[SourceSnapshot("a","j1","t1",0.50,(0.6,0.4),frozenset({"p1","p2"}))]
+    right=[
+        SourceSnapshot("b","j1","t2",0.54,(0.59,0.41),frozenset({"p1","p2"})),
+        SourceSnapshot("b","j1","t3",0.51,(0.605,0.395),frozenset({"p1","p2"})),
+    ]
+    pairs=match_snapshots(left,right)
+    assert len(pairs)==1
+    assert pairs[0].right.captured_at=="t3"
+    assert pairs[0].progress_distance == pytest.approx(0.01)
+
+def test_probable_mirror_does_not_imply_independence():
+    left=[
+        SourceSnapshot("a","j1","t1",0.50,(0.6,0.4),frozenset({"p1","p2"})),
+        SourceSnapshot("a","j1","t2",0.75,(0.58,0.42),frozenset({"p1","p2"})),
+    ]
+    right=[
+        SourceSnapshot("b","j1","u1",0.50,(0.6,0.4),frozenset({"p1","p2"})),
+        SourceSnapshot("b","j1","u2",0.75,(0.58,0.42),frozenset({"p1","p2"})),
+    ]
+    calibration=summarize_overlap("a","b","j1",match_snapshots(left,right))
+    assert calibration.relationship == OverlapRelationship.PROBABLE_MIRROR
+    assert calibration.safe_for_independent_evidence is False
