@@ -1,0 +1,16 @@
+state,source_url,origin_repository,origin_locator,coverage_role,official_status,notes
+CO,https://co.elstats2.civera.com/eng/contests,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+CT,https://ctemspublic.tgstg.net/#/home,gchickering21/DownBallotR,inst/python/Connecticut/client.py,live_results,likely_official,"CTEMS public portal."
+GA,https://results.sos.ga.gov/results/public/Georgia,gchickering21/DownBallotR,inst/python/Clarity/Georgia/client.py,live_results,likely_official,
+ID,https://canvass.sos.idaho.gov/eng/contests,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+IN,https://enr.indianavoters.in.gov/archive,gchickering21/DownBallotR,inst/python/Indiana/discovery.py,results_archive,likely_official,
+LA,https://voterportal.sos.la.gov/Graphical,gchickering21/DownBallotR,inst/python/Louisiana/discovery.py,live_and_historical_results,likely_official,
+MA,https://electionstats.state.ma.us/elections,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+NC,https://www.ncsbe.gov/results-data/election-results/historical-election-results-data,gchickering21/DownBallotR,inst/python/NorthCarolina/discovery.py,historical_results,likely_official,
+NH,https://nh.electionstats.com/elections,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+NM,https://electionstats.sos.nm.gov,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+NY,https://results.elections.ny.gov,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,live_and_historical_results,likely_official,
+SC,https://electionhistory.scvotes.gov,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+UT,https://electionresults.utah.gov/results/public/Utah,gchickering21/DownBallotR,inst/python/Clarity/Utah/client.py,live_results,likely_official,
+VA,https://historical.elections.virginia.gov,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
+VT,https://electionarchive.vermont.gov/elections,gchickering21/DownBallotR,inst/python/ElectionStats/state_config.py,historical_results,likely_official,
