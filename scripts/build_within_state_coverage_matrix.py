@@ -96,9 +96,15 @@ def main() -> None:
     denominators=read_rows(root/"registry/us_primary_election_locality_denominators.csv")
     localities=read_rows(root/"registry/us_primary_election_localities.csv")
     leads_path=root/"audit/geography_source_leads.csv"
-    execution_path=root/"audit/national_supported_execution.csv"
+    execution_paths=[
+        root/"audit/national_supported_execution.csv",
+        root/"audit/harvested_source_execution_results.csv",
+    ]
     leads=read_rows(leads_path) if leads_path.exists() else []
-    execution=read_rows(execution_path) if execution_path.exists() else []
+    execution=[]
+    for execution_path in execution_paths:
+        if execution_path.exists():
+            execution.extend(read_rows(execution_path))
     rows=build_matrix(first_pass,denominators,localities,leads,execution)
     outputs={
         root/"audit/national_within_state_coverage_matrix.csv":rows,
