@@ -1,5 +1,7 @@
 # Maine micro-geography probe
 
+> **Technical case study:** This Maine investigation remains authoritative for the reporting-resolution principles it documents, but any “next target” language is historical rather than the current national roadmap.
+
 The ingestion target is the **smallest election reporting unit actually published for a given election**, not a fixed notion of precinct.
 
 ## Resolution ladder
