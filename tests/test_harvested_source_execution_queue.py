@@ -19,3 +19,11 @@ def test_queue_covers_all_states_and_dc():
     rows=source_candidates(root)
     assert len({r["state"] for r in rows})==51
     assert all(r["verification_status"]=="candidate" for r in rows)
+
+
+def test_existing_adapter_families_are_promoted_to_adapter_candidate():
+    root=Path(__file__).resolve().parents[1]
+    rows=source_candidates(root)
+    clarity=[r for r in rows if r["parser_family"]=="clarity"]
+    assert clarity
+    assert all(r["execution_stage"]=="adapter_candidate" for r in clarity)
