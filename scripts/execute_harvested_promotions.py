@@ -161,6 +161,22 @@ def execute_promotions(rows: list[dict[str,str]], *, timeout: int=12, limit: int
             "parser":parser,
             "smallest_observed_unit":"unknown",
         }
+        if parser.endswith("parse_generic_precinct_excel") and not urlparse(target_url).path.lower().endswith((".xlsx",".xls")):
+            hint=(row.get("discovered_artifacts","")+" "+row.get("evidence","")).lower()
+            if ".xlsx" in hint:
+                manifest["result_url"]=target_url+".xlsx"
+            elif ".xls" in hint:
+                manifest["result_url"]=target_url+".xls"
+            else:
+                out.append(failed_row({
+                    "state":row.get("state",""),
+                    "result_url":target_url,
+                    "access_family":family,
+                    "parser":parser,
+                    "smallest_observed_unit":"unknown",
+                },"excel_format_ambiguous"))
+                continue
+
         evidence=execute_supported_body(
             manifest,
             body,
