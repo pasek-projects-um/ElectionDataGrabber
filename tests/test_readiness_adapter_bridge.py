@@ -54,3 +54,15 @@ def test_electionware_without_probe_artifact_routes_to_vendor_discovery():
     family,parser=readiness_route({"platform_family":"electionware","discovered_artifacts":""})
     assert family=="electionware"
     assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
+
+
+def test_results_portal_without_probe_artifact_routes_to_structured_discovery():
+    family,parser=readiness_route({"platform_family":"results_portal","discovered_artifacts":""})
+    assert family=="results_portal"
+    assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
+
+
+def test_structured_web_without_probe_artifact_routes_to_structured_discovery():
+    family,parser=readiness_route({"platform_family":"structured_web","discovered_artifacts":""})
+    assert family=="structured_web"
+    assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
