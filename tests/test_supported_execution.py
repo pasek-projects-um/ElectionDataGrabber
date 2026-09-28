@@ -156,3 +156,33 @@ def test_invalid_generic_json_stays_parser_selected():
     )
     assert evidence.stage == ExecutionStage.PARSER_SELECTED
     assert evidence.failure_class == "invalid_json_payload"
+
+
+def test_generic_excel_executes_through_supported_runtime(monkeypatch):
+    manifest = {
+        "state": "PA",
+        "result_url": "https://example.gov/results.xlsx",
+        "access_family": "tabular_download",
+        "parser": "election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel",
+        "smallest_observed_unit": "precinct",
+    }
+    monkeypatch.setattr(
+        "election_data_grabber.supported_execution.parse_generic_precinct_excel",
+        lambda body, *, filename, election_id, jurisdiction_id, source_id, fetched_at: [
+            type("Row", (), {"raw_vote_mode":"total"})()
+        ],
+    )
+    import election_data_grabber.supported_execution as mod
+    mod.PARSER_FUNCTIONS[
+        "election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel"
+    ] = mod.parse_generic_precinct_excel
+    evidence = mod.execute_supported_body(
+        manifest,
+        b"xlsx-bytes",
+        election_id="2026-general",
+        jurisdiction_id="us:pa:test",
+        source_id="generic-excel",
+        fetched_at=NOW,
+    )
+    assert evidence.stage == ExecutionStage.REPLAY_TESTED
+    assert evidence.observation_count == 1
