@@ -18,6 +18,7 @@ def build_gap_matrix(root: Path) -> list[dict[str,str]]:
     medsl=by_state(read_rows(root/"audit/medsl_2024_source_leads.csv"))
     nyt=by_state(read_rows(root/"audit/nyt_2024_state_source_coverage.csv"))
     down=by_state(read_rows(root/"audit/downballotr_official_source_leads.csv"))
+    first_pass=by_state(read_rows(root/"registry/first_pass_state_result_surfaces.csv"))
     states=sorted(elect)
     out=[]
     for st in states:
@@ -30,6 +31,9 @@ def build_gap_matrix(root: Path) -> list[dict[str,str]]:
         if n["source_class"]=="official_candidate":
             official_candidates += 1
         if d:
+            official_candidates += 1
+        internal=first_pass.get(st)
+        if internal and internal.get("result_url"):
             official_candidates += 1
         secondary_only=(official_candidates==0 and any([
             e["harvest_status"] in {"secondary_source","secondary_or_manual_collection","local_official_sources_aggregate","derived_local_dataset_no_source_pointer"},
@@ -57,6 +61,7 @@ def build_gap_matrix(root: Path) -> list[dict[str,str]]:
             "medsl_source_class":m["source_class"],
             "nyt_source_class":n["source_class"],
             "downballotr_live":"true" if d else "false",
+            "internal_first_pass_url":internal.get("result_url","") if internal else "",
             "secondary_only":"true" if secondary_only else "false",
             "gap_priority":str(priority),
             "gap_reasons":";".join(reasons) or "none",
