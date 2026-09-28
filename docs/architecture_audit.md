@@ -5,7 +5,7 @@
 
 ## Executive assessment
 
-The codebase has a sound separation of acquisition, discovery, and normalization for an exploratory national system, but the audit found several contracts that must be hardened before coverage is scaled aggressively. Three correctness risks were fixed immediately in this audit. Two architectural issues should block treating national coverage as production-grade until resolved.
+This dated audit captured the system on 2026-09-17. It found several contracts that needed hardening before aggressive national scaling; three correctness risks were fixed during the audit, and the subsequent identity/provenance/reporting-regime work addressed major P1 items. Treat finding status below as an audit snapshot unless a section explicitly says otherwise.
 
 Severity vocabulary: **P0 invariant violation**, **P1 correctness risk**, **P2 scalability/reproducibility risk**, **P3 technical debt**.
 
@@ -85,7 +85,7 @@ The A/C/D/E provisional heuristic is useful for triage, but `reconciliation_erro
 
 **Required:** keep portability separate from semantic validation/assurance; document family-specific acceptance tests.
 
-## Contract tests to add next
+## Contract tests identified by the audit
 
 1. Every persisted normalized observation resolves to an immutable snapshot.
 2. Generic result adapters cannot set `ballot_order` without an explicit authoritative-ballot profile.
@@ -109,4 +109,4 @@ The A/C/D/E provisional heuristic is useful for triage, but `reconciliation_erro
 
 ## Audit conclusion
 
-No evidence from this review suggests the existing state work should be discarded. The main risk is that exploratory conventions could become de facto national contracts. The immediate fixes remove three concrete invariant violations; the remaining P1 items should be resolved before the tracker is treated as authoritative national coverage.
+No evidence from this review suggested the existing state work should be discarded. Its lasting lesson is that exploratory conventions must not become de facto national contracts. Subsequent work introduced independent authority identity, snapshot provenance boundaries, reporting-regime/reporting-unit identity, geography-first evidence, and stricter generated coverage views; current status should be read from those contracts and the roadmap rather than inferred from this dated audit.
