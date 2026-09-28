@@ -8,6 +8,6 @@ Canonical reporting units retain raw and canonical names, source-native IDs when
 
 Cross-election or cross-regime continuity is represented with explicit provenance-bearing crosswalks. Relationships include same-as, rename, split, merge, aggregate/component, reassignment, and approximate crosswalk. Weights are optional and require an explicit evidence basis; the model never manufactures weights merely to force reconciliation.
 
-This package does not create primary-locality identities or mutate locality coverage denominators. Production reporting regimes must consume the canonical locality/source-capability layer owned by #15. It also does not project certified topology backward onto election-night feeds.
+This package does not create primary-locality identities or mutate locality coverage denominators. Production reporting regimes consume the canonical locality/source-capability layer. Certified topology must never be projected backward onto election-night feeds.
 
 Migration is additive: existing ReportingUnit and ResultObservation records remain valid while adapter families begin emitting reporting regimes and canonical reporting-unit identities. Historical identities are crosswalked rather than destructively rewritten.

@@ -1,6 +1,6 @@
 # National local reporting-source census
 
-This branch is deliberately discovery-first. It inventories official local election-reporting surfaces without assuming that the county (or county-equivalent) is the only relevant authority.
+This document records the discovery-first national source-census design that established the local-authority/source inventory. The design remains active, but the project has since added 51-jurisdiction state-surface breadth, geography-first ledgers, harvested-source verification, and execution/readiness layers. County or county-equivalent is never assumed to be the only relevant authority.
 
 ## Search hierarchy
 
@@ -21,7 +21,7 @@ For every state, enumerate the legally/administratively relevant election author
 
 Do not infer that final/certified precinct returns imply precinct-identifiable election-night reporting.
 
-## Initial expansion states
+## Historical initial expansion states
 
 Prioritize states that broaden administrative topology and vendor diversity:
 - Wisconsin — municipal clerks + county canvass/reporting
@@ -37,4 +37,4 @@ Prioritize states that broaden administrative topology and vendor diversity:
 - Maryland — county/independent Baltimore structure
 - Missouri — local election authorities that do not map cleanly to county-only assumptions
 
-The objective is not bespoke parsing on this branch. It is to learn the national source topology and produce verified candidate endpoints that downstream platform-family adapters can consume.
+The original objective of this census layer was source-topology discovery rather than bespoke parsing. Downstream platform-family adapters and readiness/execution workflows now consume these candidate endpoints.

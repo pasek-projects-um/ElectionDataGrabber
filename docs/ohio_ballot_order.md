@@ -1,5 +1,7 @@
 # Ohio ballot-order semantics
 
+> **Current semantic contract derived from the Ohio case study:** The ballot-order rules below remain active even though the surrounding Ohio portability work is historical.
+
 Ohio requires special care because candidate order can rotate across precincts.
 ElectionDataGrabber therefore treats ballot order as a property of the
 **reporting-unit observation** whenever the source exposes order at that level.

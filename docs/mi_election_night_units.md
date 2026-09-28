@@ -1,5 +1,7 @@
 # Michigan election-night reporting-unit census
 
+> **Technical case study:** Michigan supplied the initial election-night reporting-topology stress test. The principles remain current; this file is not a statement of nationwide coverage.
+
 Election-night reporting is source-specific and election-specific. County and municipal sources may coexist and expose different resolution or vote-mode detail.
 
 For each election/source pair record:

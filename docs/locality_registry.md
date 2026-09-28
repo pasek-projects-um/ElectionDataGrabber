@@ -6,8 +6,8 @@ Each enumerated jurisdiction has one coverage state: enumerated unresolved, fina
 
 Denominators live in a separate provenance-bearing registry. Changes to expected unit counts are therefore reviewable independently of locality enumeration and cannot silently create or delete jurisdictions.
 
-Authority identity remains independent and is referenced by ID. Multiple localities may share one authority, and multiple sources/reporting regimes may belong to one locality without increasing the denominator. Reporting units from #14 are never denominator units.
+Authority identity remains independent and is referenced by ID. Multiple localities may share one authority, and multiple sources/reporting regimes may belong to one locality without increasing the denominator. Reporting units are never primary-locality denominator units.
 
-The initial denominator file is a lossless migration of the existing planning tracker and is explicitly provisional. The locality registry starts empty rather than fabricating ID-level records from aggregate counts. Existing state registries and discovery reconciliation are inputs for subsequent evidence-backed population.
+The denominator layer originated as a lossless migration of the earlier planning tracker and remains provenance-bearing rather than silently inferred. The locality registry is populated only from evidence-backed identities; aggregate planning counts must never be converted into fabricated locality rows. State registries, directory expansion, geography ledgers, and source reconciliation are inputs to continued evidence-backed population.
 
 The generator enforces unique locality IDs, coverage/capability consistency, affirmative adjudication for known-missing status, per-state denominator bounds, and national sum invariants.

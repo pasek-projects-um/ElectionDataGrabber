@@ -1,5 +1,7 @@
 # Ohio portability census
 
+> **Historical portability case study:** Ohio was the first cross-state stress test after Michigan. The A–E portability framework remains useful; cohort/status language is historical.
+
 Ohio is the first cross-state stress test for the extraction architecture built in Michigan.
 
 For each county classify portability as:

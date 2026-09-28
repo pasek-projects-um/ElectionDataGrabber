@@ -1,6 +1,6 @@
 # Geographic source-evidence ledger
 
-The next coverage layer is geography-first. A state-level result surface is not evidence that every reporting authority, county, municipality, parish, town, ward, or precinct family has been discovered.
+Coverage depth is geography-first. The project now has a first-pass state/DC result-surface catalog, but a state-level surface is not evidence that every reporting authority, county, municipality, parish, town, ward, or precinct family has been discovered.
 
 ## Unit ledger
 

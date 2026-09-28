@@ -1,5 +1,7 @@
 # Maine permissive candidate universe
 
+> **Historical Maine discovery note:** This permissive candidate-universe strategy remains useful provenance, but current source/capability status is determined by canonical registries and evidence ledgers.
+
 Source strategy: use Maine state locality lists as a permissive superset, not as proof of election-authority status.
 
 Candidate classes:

@@ -22,4 +22,4 @@ The crosswalk requires evidence before production adjudication. Open-ended dates
 
 ## Migration
 
-The older jurisdiction-scoped `authority_id(jurisdiction, kind)` helper on PR #11 is transitional. When this branch is reconciled with #11, national reconciliation should create independent authority IDs and emit crosswalk rows instead of embedding jurisdiction IDs inside authority IDs.
+Legacy jurisdiction-scoped authority identifiers may still appear in historical artifacts, but the current contract uses independent authority IDs plus explicit authority–jurisdiction crosswalk rows. New reconciliation work must not embed jurisdiction identity into authority identity.

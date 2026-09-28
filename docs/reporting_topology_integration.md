@@ -15,7 +15,7 @@ When supplied, normalized observations must emit:
 
 Election-night and certified/final feeds use distinct regime kinds and therefore distinct reporting-unit identities even if the source label is identical. Historical identities are not destructively rewritten.
 
-The migration covers Washtenaw production ingest and shared Washtenaw-like, Ohio BOE precinct-detail, generic CSV/JSON/HTML, Enhanced Voting, and Clarity-like adapter paths. Structural canaries cover Washtenaw/Michigan, the Ohio BOE family, a Pennsylvania precinct/division-shaped source, and Maine municipal ward/precinct topology. Generic result/display order is preserved as `source_order`, never promoted to voter-facing `ballot_order` without separate ballot evidence.
+The reporting-topology integration began with Washtenaw production ingest and shared Washtenaw-like, Ohio BOE precinct-detail, generic CSV/JSON/HTML, Enhanced Voting, and Clarity-like adapter paths. Structural canaries cover Washtenaw/Michigan, the Ohio BOE family, a Pennsylvania precinct/division-shaped source, and Maine municipal ward/precinct topology. Generic result/display order is preserved as `source_order`, never promoted to voter-facing `ballot_order` without separate ballot evidence.
 
 ## Geography bridge
 

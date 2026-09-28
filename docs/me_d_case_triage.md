@@ -1,5 +1,7 @@
 # Maine provisional-D triage
 
+> **Historical investigation note (early Maine portability work):** Counts and triage status below describe the audit at the time it was run. Use current registries/audits for present coverage; retain this document for artifact-classification lessons.
+
 The first statewide audit produced 12 locality-level D classifications in its shard summaries, but artifact-level inspection shows the D bucket is contaminated by discovery false positives and contains 24 localities with at least one D artifact.
 
 Observed families:
