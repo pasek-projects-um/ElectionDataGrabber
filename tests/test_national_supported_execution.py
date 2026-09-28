@@ -45,8 +45,8 @@ def test_runner_emits_normalized_and_failure_rows(tmp_path, monkeypatch):
     rows = mod.run(manifest, output, timeout=1)
     assert rows[0]["execution_stage"] == "replay_tested"
     assert rows[0]["observation_count"] == "1"
-    assert rows[1]["execution_stage"] == "fetchable"
-    assert rows[1]["failure_class"] == "requires_download_artifact_selection"
+    assert rows[1]["execution_stage"] == "parser_selected"
+    assert rows[1]["failure_class"] == "artifact_discovered_requires_fetch"
     assert output.exists()
 
 

@@ -35,3 +35,21 @@ def discover_clarity_downloads(body: bytes, base_url: str) -> ClaritySurface:
 def discover_clarity_urls(body: bytes) -> list[str]:
     text=body.decode("utf-8",errors="ignore")
     return sorted(set(re.findall(r'https://results\.enr\.clarityelections\.com/[^\s\'"<>]+',text,re.I)))
+
+
+def select_clarity_detail_artifact(surface: ClaritySurface) -> str | None:
+    ranked=[]
+    for url in surface.downloadable_urls:
+        lower=url.lower()
+        score=0
+        if lower.endswith(".xml"): score += 5
+        if "detail" in lower: score += 4
+        if "precinct" in lower: score += 3
+        if lower.endswith(".json"): score += 2
+        if lower.endswith(".csv"): score += 1
+        ranked.append((score,url))
+    ranked=[item for item in ranked if item[0]>0]
+    if not ranked:
+        return None
+    ranked.sort(key=lambda item:(-item[0],item[1]))
+    return ranked[0][1]
