@@ -112,6 +112,8 @@ jobs:
         run: python scripts/build_external_corpus_gap_matrix.py
       - name: Build harvested source execution queue
         run: python scripts/build_harvested_source_execution_queue.py
+      - name: Probe harvested source set
+        run: python scripts/probe_harvested_sources.py --timeout 8
       - name: Summarize harvested source readiness
         run: python scripts/summarize_harvested_source_readiness.py
       - name: Probe ranked election-result platforms
