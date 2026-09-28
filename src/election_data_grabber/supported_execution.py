@@ -3,15 +3,21 @@ from __future__ import annotations
 import hashlib
 from datetime import datetime
 from typing import Callable
+import json
 
 from election_data_grabber.adapters.enhanced_voting import parse_enhanced_voting_html
+from election_data_grabber.adapters.clarity import discover_clarity_downloads, select_clarity_detail_artifact
+from election_data_grabber.adapters.clarity_xml import parse_clarity_like_xml
 from election_data_grabber.adapters.generic_csv import parse_generic_precinct_csv
+from election_data_grabber.adapters.generic_json import parse_generic_results_json
 from election_data_grabber.execution_maturity import ExecutionStage, SourceExecutionEvidence
 
 
 PARSER_FUNCTIONS: dict[str, Callable] = {
     "election_data_grabber.adapters.enhanced_voting:parse_enhanced_voting_html": parse_enhanced_voting_html,
     "election_data_grabber.adapters.generic_csv:parse_generic_precinct_csv": parse_generic_precinct_csv,
+    "election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml": parse_clarity_like_xml,
+    "election_data_grabber.adapters.generic_json:parse_generic_results_json": parse_generic_results_json,
 }
 
 
@@ -32,15 +38,17 @@ def execute_supported_body(
     family = manifest_row["access_family"]
 
     if family == "clarity":
+        surface=discover_clarity_downloads(body,manifest_row["result_url"])
+        artifact=select_clarity_detail_artifact(surface)
         return SourceExecutionEvidence(
             state=manifest_row["state"],
             result_url=manifest_row["result_url"],
             access_family=family,
             parser=parser_path,
-            stage=ExecutionStage.FETCHABLE,
+            stage=(ExecutionStage.ARTIFACT_DISCOVERED if artifact else ExecutionStage.FETCHABLE),
             smallest_observed_unit=manifest_row.get("smallest_observed_unit", "unknown"),
             snapshot_sha256=snapshot_sha256(body),
-            failure_class="requires_download_artifact_selection",
+            failure_class=("" if artifact else "requires_download_artifact_selection"),
         )
 
     parser = PARSER_FUNCTIONS.get(parser_path)
@@ -56,8 +64,23 @@ def execute_supported_body(
             failure_class="parser_not_executable",
         )
 
+    payload = body
+    if parser is parse_generic_results_json:
+        try:
+            payload = json.loads(body.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            return SourceExecutionEvidence(
+                state=manifest_row["state"],
+                result_url=manifest_row["result_url"],
+                access_family=family,
+                parser=parser_path,
+                stage=ExecutionStage.PARSER_SELECTED,
+                smallest_observed_unit=manifest_row.get("smallest_observed_unit", "unknown"),
+                snapshot_sha256=snapshot_sha256(body),
+                failure_class="invalid_json_payload",
+            )
     rows = parser(
-        body,
+        payload,
         election_id=election_id,
         jurisdiction_id=jurisdiction_id,
         source_id=source_id,

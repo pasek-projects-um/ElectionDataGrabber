@@ -76,7 +76,7 @@ def test_successful_parser_with_no_rows_stays_below_normalized():
     assert evidence.failure_class == "no_normalized_observations"
 
 
-def test_clarity_landing_page_is_not_promoted_to_normalized():
+def test_clarity_landing_page_discovers_detail_artifact():
     manifest = {
         "state": "WV",
         "result_url": "https://results.enr.clarityelections.com/WV/X/1/",
@@ -92,5 +92,67 @@ def test_clarity_landing_page_is_not_promoted_to_normalized():
         source_id="clarity-page",
         fetched_at=NOW,
     )
-    assert evidence.stage == ExecutionStage.FETCHABLE
-    assert evidence.failure_class == "requires_download_artifact_selection"
+    assert evidence.stage == ExecutionStage.ARTIFACT_DISCOVERED
+    assert evidence.failure_class == ""
+
+
+def test_clarity_xml_executes_to_replay_tested_evidence():
+    manifest = {
+        "state": "WV",
+        "result_url": "https://results.enr.clarityelections.com/WV/X/1/detail.xml",
+        "access_family": "clarity_xml",
+        "parser": "election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml",
+        "smallest_observed_unit": "precinct",
+    }
+    body = b"""<Results><Precinct id="p1" name="P1"><Contest name="Mayor"><Choice name="Alice"><Total mode="total" votes="12"/></Choice></Contest></Precinct></Results>"""
+    evidence = execute_supported_body(
+        manifest,
+        body,
+        election_id="2026-general",
+        jurisdiction_id="us:wv:test",
+        source_id="clarity-xml",
+        fetched_at=NOW,
+    )
+    assert evidence.stage == ExecutionStage.REPLAY_TESTED
+    assert evidence.observation_count == 1
+
+
+def test_generic_json_executes_to_replay_tested_evidence():
+    manifest = {
+        "state": "VA",
+        "result_url": "https://example.gov/api/results.json",
+        "access_family": "structured_json",
+        "parser": "election_data_grabber.adapters.generic_json:parse_generic_results_json",
+        "smallest_observed_unit": "precinct",
+    }
+    body = b'{"reporting_units":[{"id":"p1","name":"P1","contests":[{"name":"Mayor","choices":[{"name":"Alice","votes":12,"mode":"total"}]}]}]}'
+    evidence = execute_supported_body(
+        manifest,
+        body,
+        election_id="2026-general",
+        jurisdiction_id="us:va:test",
+        source_id="generic-json",
+        fetched_at=NOW,
+    )
+    assert evidence.stage == ExecutionStage.REPLAY_TESTED
+    assert evidence.observation_count == 1
+
+
+def test_invalid_generic_json_stays_parser_selected():
+    manifest = {
+        "state": "VA",
+        "result_url": "https://example.gov/api/results.json",
+        "access_family": "structured_json",
+        "parser": "election_data_grabber.adapters.generic_json:parse_generic_results_json",
+        "smallest_observed_unit": "precinct",
+    }
+    evidence = execute_supported_body(
+        manifest,
+        b"not-json",
+        election_id="2026-general",
+        jurisdiction_id="us:va:test",
+        source_id="bad-json",
+        fetched_at=NOW,
+    )
+    assert evidence.stage == ExecutionStage.PARSER_SELECTED
+    assert evidence.failure_class == "invalid_json_payload"

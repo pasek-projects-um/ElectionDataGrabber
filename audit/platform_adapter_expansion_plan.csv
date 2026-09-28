@@ -1,0 +1,6 @@
+platform_family,priority,states,implementation_status,notes
+clarity,high,,existing_adapter_review,
+structured_web,high,,pending,
+scytl,high,,pending,
+electionware,high,,pending,
+results_portal,medium,,pending,
