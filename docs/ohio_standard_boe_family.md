@@ -1,5 +1,7 @@
 # Ohio standardized BOE family
 
+> **Technical case study:** This documents a reusable Ohio BOE/report family discovered during early portability work. References to the “next” family are historical; current priorities come from nationwide readiness outputs.
+
 A large share of Ohio county BOE sites use the Ohio Secretary of State-hosted pattern:
 
 - `https://www.boe.ohio.gov/{county}/election-info/election-results/`
