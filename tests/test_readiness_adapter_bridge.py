@@ -42,3 +42,15 @@ def test_excel_artifact_routes_to_generic_excel_runtime():
     })
     assert family=="tabular_download"
     assert parser=="election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel"
+
+
+def test_scytl_without_probe_artifact_routes_to_vendor_discovery():
+    family,parser=readiness_route({"platform_family":"scytl","discovered_artifacts":""})
+    assert family=="scytl"
+    assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
+
+
+def test_electionware_without_probe_artifact_routes_to_vendor_discovery():
+    family,parser=readiness_route({"platform_family":"electionware","discovered_artifacts":""})
+    assert family=="electionware"
+    assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
