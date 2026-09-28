@@ -4,9 +4,9 @@ Primary-locality identity and denominator accounting remain in the canonical loc
 
 A locality may have multiple final and election-night sources without increasing its denominator count. A single source may expose multiple capabilities. Capability type is therefore not part of source identity. Only positively adjudicated capability rows contribute to derived capability; discovery candidates, rejected evidence, and platform fingerprints do not.
 
-## Migration state
+## Historical migration note
 
-The initial migration preserves the five-state MI/OH/CT/PA/ME capability state exactly. Where the older locality registry had positive capability evidence but no normalized source ID, the migration uses a clearly marked `legacy:` source key. If final and election-night capability share the same evidence endpoint, they share one legacy source key. These IDs are migration placeholders, not a durable source namespace, and URLs are never promoted to identity.
+The first capability migration preserved the then-existing MI/OH/CT/PA/ME state exactly. That five-state scope is historical context, not the current national coverage boundary. Older positive evidence without a normalized source ID may still use a clearly marked `legacy:` source key; these keys are migration placeholders, not a durable source namespace, and URLs are never promoted to identity.
 
 Every migrated row carries an explicit registry evidence reference. Future source adjudication should replace that with immutable snapshot provenance where available. Replacement of a legacy source key must preserve the capability evidence/history rather than rewriting jurisdiction identity.
 
@@ -18,6 +18,6 @@ A capability must bind to a canonical locality and its independent election auth
 
 ## Coverage compatibility
 
-The national coverage tracker remains a generated view of canonical localities and denominators. The generated tracker now derives positive final/election-night coverage from the first-class source-capability relation. CI also requires that relation to reproduce the existing locality final/election-night compatibility fields exactly during migration. Those locality fields remain readable for downstream consumers until reporting-regime migration, but they are no longer authoritative inputs to generated positive coverage. `known_missing_source` remains an explicit locality adjudication because absence of a positive source relation is not evidence of absence.
+The national coverage tracker is a generated view of canonical localities and denominators. Positive final/election-night coverage derives from the first-class source-capability relation; compatibility fields may remain readable for older consumers but are not authoritative inputs to generated positive coverage. `known_missing_source` remains an explicit locality adjudication because absence of a positive source relation is not evidence of absence. Catalogued state surfaces, candidate leads, platform fingerprints, and execution readiness are separate evidence layers and do not by themselves create positive locality capability.
 
 Failed fetches, parser failures, discovery misses, and unsupported artifacts do not establish source absence and cannot create a positive capability or `known_missing_source`.
