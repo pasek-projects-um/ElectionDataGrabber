@@ -1,0 +1,6 @@
+repository,role,priority,notes
+ElectProject/Early-Vote-2020G,early_vote_source_discovery,high,"Mine state-specific files and history for official early-vote/absentee endpoints; verify underlying official URLs before promotion."
+MEDSL/2024-elections-official,official_results_reconnaissance,high,"Use as historical source map and reconciliation evidence; prefer underlying official artifacts."
+gchickering21/DownBallotR,platform_endpoint_reconnaissance,high,"Mine state-specific scrapers for undocumented official endpoints and platform families."
+nytimes/presidential-precinct-map-2024,geography_and_source_caveats,medium,"Use for precinct coverage expectations, source patterns, and geography caveats."
+rdmurphy/scrape-la-county-election-results-2026,local_dynamic_feed_example,medium,"Use as example of locality-level dynamic JSON feed discovery and snapshotting."
