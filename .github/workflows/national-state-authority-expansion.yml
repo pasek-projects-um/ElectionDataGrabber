@@ -125,6 +125,12 @@ jobs:
         run: python scripts/summarize_harvested_source_readiness.py
       - name: Promote harvested sources through current adapter routes
         run: python scripts/build_harvested_execution_promotions.py
+      - name: Execute harvested promotion campaign
+        run: python scripts/execute_harvested_promotions.py --timeout 8
+      - name: Summarize harvested execution depth
+        run: python scripts/summarize_harvested_execution_depth.py
+      - name: Classify harvested execution residuals
+        run: python scripts/classify_harvested_execution_residuals.py
       - name: Probe ranked election-result platforms
         run: python scripts/probe_ranked_platforms.py --timeout 8 --limit 25
       - uses: actions/upload-artifact@v4
