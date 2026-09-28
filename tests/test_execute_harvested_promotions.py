@@ -15,3 +15,9 @@ def test_vendor_discovery_selects_json_over_zip():
     }
     body=b'<a href="archive.zip">Zip</a><script>fetch("/api/results.json")</script>'
     assert discover_artifact(row,body)=="https://x.gov/api/results.json"
+
+
+def test_extensionless_excel_artifact_is_not_crashable():
+    family,parser=parser_for_artifact("https://x.gov/download")
+    assert family==""
+    assert parser==""
