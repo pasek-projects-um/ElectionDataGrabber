@@ -1,183 +1,134 @@
 # ElectionDataGrabber Roadmap
 
 **Status:** living project roadmap  
-**Last substantive refresh:** 2026-09-17  
-**Update rule:** revise this document whenever a milestone is completed, a material discovery changes priorities, or a new workstream is opened. Keep completed work for provenance rather than silently deleting it.
+**Last substantive refresh:** 2026-09-28
 
 ## North star
 
-Build a national, auditable system for historical/final and election-night election-result acquisition at the most granular official reporting level available, while preserving source provenance, reporting topology, temporal geography, candidate/ballot-line semantics, and uncertainty.
+Build a national, auditable system for historical/final and election-night result acquisition at the most granular official reporting level available, while preserving source provenance, reporting topology, temporal geography, candidate/ballot-line semantics, source overlap, and uncertainty.
 
-The scaling objective is **parser/platform families rather than locality-specific code**.
+Scale by **platform/report family and source topology**, not one scraper per locality.
 
 ## Current position
 
-### Completed / consolidated on main
+### National breadth is established
 
-- [x] Canonical source, snapshot, reporting-unit, contest-choice, ballot-summary, and result-observation models.
-- [x] Immutable SHA-256 snapshot/provenance layer and respectful fetch base.
-- [x] Generic CSV, HTML, document inventory, discovery, and PDF extraction layers.
-- [x] Michigan county census and election-night architecture.
-- [x] Washtenaw live ingestion, reconciliation, diffing, and persistence.
-- [x] Ohio 88-county portability census and reusable precinct-detail family.
-- [x] Maine municipality-first authority/discovery and artifact-audit architecture.
-- [x] Connecticut 169-town statewide registry and historical-geography policy.
-- [x] Pennsylvania 67-county registry and state-bulk-first strategy.
-- [x] National source-census foundation and cross-state semantic edge cases.
-- [x] Explicit distinction between source/display order and authoritative ballot order.
-- [x] Explicit distinction between election-night reporting topology and certified/final geography.
+- [x] At least one first-pass result surface catalogued for all 50 states plus DC.
+- [x] Geography-first source-evidence ledger and unresolved-search queue.
+- [x] Canonical locality/authority identity separated from source URLs and reporting-unit identity.
+- [x] External lead provenance for MEDSL, ElectProject/McDonald, NYT precinct-source research, and DownBallotR-style scraper intelligence.
+- [x] Cross-corpus gap accounting that requires a concrete primary-source candidate for every state/DC when combined with the vetted internal state-surface catalog.
+- [x] Harvested-source execution queue, fetchability/platform probes, and readiness routing.
 
-### Active: PR #11 — national state authority expansion
+The 51-jurisdiction catalog is a **breadth milestone, not a completeness claim**. It does not mean every county, municipality, election authority, reporting unit, or election-night feed within each state has been enumerated or normalized.
 
-Latest successful census: **24 states / 911 discovery observations**.
+### Execution maturity is now explicit
 
-Central repositories currently classified as directly exposing useful local infrastructure:
-AZ, HI, IA, KY, MD, MO, NH, NJ, OR, VA.
+The system distinguishes:
 
-MN is currently indirect.
+`discovered → fetchable → parser_selected → parsed → normalized → replay_tested`
 
-Generic central-directory extraction remains unresolved for:
-AK, AL, GA, KS, LA, MA, ND, NM, NY, RI, SC, VT, WI.
+Artifact discovery can advance a source to a parser-selected/fetch-next state without pretending the artifact has already been parsed. Generated readiness outputs separately route sources toward existing adapters, artifact discovery, platform follow-up, new-adapter work, or fetch-blocked investigation.
 
-A governed expansion-profile layer now covers all 13 of these states (3,073 planned primary units) with explicit authority models, unit types, and priority result families. The next census runs should use those profiles to turn directory reachability into canonical locality/source records rather than ad hoc state handling.
+Current reusable paths include generic CSV/Excel/JSON and document/HTML/PDF handling; Clarity landing-page/detail discovery and XML execution; Enhanced Voting; structured-web artifact ranking; vendor-oriented Scytl/Electionware discovery; Ohio standardized report families; and other state/source-specific adapters already present in the package.
 
-These are directory-enumeration problems, not evidence that local result sources do not exist.
+### Coverage accounting is geography-first
 
-## Coverage accounting
+Keep these dimensions separate:
 
-The national coverage tracker uses mutually exclusive locality capability states:
+1. expected/enumerated primary election geographies or authorities;
+2. candidate source leads;
+3. positively adjudicated final/election-night capabilities;
+4. execution maturity;
+5. normalized/replay-tested coverage;
+6. election-night refresh verification.
 
-1. **final_only** — historical/final/certified source established; election-night source not established.
-2. **election_night_only** — election-night source established; durable historical/final source not established.
-3. **both** — both capabilities established.
-4. **known_missing_source** — locality is canonically known and investigated, but neither useful source class is established.
-5. **estimated_unknown** — expected primary units not yet individually enumerated/adjudicated.
+A locality can have multiple sources without increasing the denominator. A source can cover multiple localities. Geographic containment does not imply arithmetic additivity.
 
-Derived metrics:
+Negative findings require affirmative adjudication. HTTP failures, robots restrictions, parser failures, or missing links remain unresolved evidence—not `known_missing_source`.
 
-- final coverage = final_only + both
-- election-night coverage = election_night_only + both
-- any-source coverage = final_only + election_night_only + both
+## Completed architecture foundations
 
-Planning invariant:
+- [x] Immutable snapshot/provenance layer.
+- [x] Canonical jurisdiction and independent authority identities.
+- [x] Reporting-regime and election-specific reporting-unit identity.
+- [x] Temporal identity aliases/crosswalks.
+- [x] Governed vote-mode semantics with raw-label preservation.
+- [x] Source/display order separated from authoritative ballot order.
+- [x] Election-night reporting topology separated from certified/final geography.
+- [x] Non-additive geography relationships and explicit central absentee/mail/special reporting units.
+- [x] Source-overlap calibration model with the guardrail that similarity can establish redundancy but dissimilarity alone cannot establish residual independence.
+- [x] Snapshot/calibration persistence and external-source-lead provenance.
+- [x] Nationwide source harvesting/readiness pipeline.
+- [x] Readiness-to-adapter compatibility bridge and structured artifact routing.
 
-`expected_primary_units = final_only + election_night_only + both + known_missing_source + estimated_unknown`
+## Current milestone: turn breadth into executable depth
 
-**Known issue:** the current tracker has not yet reconciled discovery observations to canonical jurisdiction IDs and presently double-populates missing/unknown denominators. Do not treat its current capability counts as national coverage statistics.
+The next work should be driven by generated readiness/evidence, not by another undifferentiated web crawl.
 
-Current seeded planning denominator: approximately **4,054 primary local units across 24 states**. This is provisional and should be replaced state-by-state with authoritative enumeration.
+- [ ] Execute and replay every harvested candidate already covered by an existing adapter family.
+- [ ] Fetch discovered JSON/XML/CSV/Excel artifacts and promote successful cases through normalization/replay.
+- [ ] Rank remaining platform families by number of jurisdictions/authorities unlocked and election-night value.
+- [ ] Implement high-leverage missing platform adapters in batches.
+- [ ] Deepen within-state authority/geography enumeration using canonical denominator sources.
+- [ ] Separate enumerated primary units, units with any lead, and unreconciled candidate URLs in depth metrics.
+- [ ] Verify repeated election-night refresh behavior: stable race/unit identity, cumulative revisions, timestamps, and throughput.
+- [ ] Persist synchronized source snapshots and matched-pair overlap evidence for feeds that may be mirrors/partial overlaps.
 
-## Architecture audit findings
+## Source-overlap and redundancy milestone
 
-The 2026-09-17 architecture audit is recorded in `docs/architecture_audit.md`. Immediate invariant fixes landed for generic ballot-order inference, reconciliation overflow, and unsafe aggregate tracker updates. Open P1 work: independent authority identity/crosswalks, persistent provisional-ID aliases, reporting-unit identity, and mandatory snapshot provenance.
+Multiple outlets for the same reporting geography are useful redundancy, not automatically duplicates to delete.
 
-## Immediate milestone: make coverage real
+- [x] Preserve source outlet separately from geography and underlying artifact/feed.
+- [x] Compare synchronized snapshots at comparable reporting progress.
+- [x] Preserve reporting-unit and vote-mode overlap evidence.
+- [x] Require explicit residual-independence evidence before treating two feeds as independent observations.
+- [ ] Add reporting-basis compatibility to snapshot matching.
+- [ ] Prevent many-to-one snapshot matching where it biases calibration.
+- [ ] Add temporal lead/lag diagnostics and conservative zero-vector handling.
+- [ ] Emit durable pair-level match audit artifacts alongside summary calibrations.
 
-- [x] Define stable canonical jurisdiction/authority IDs. See `src/election_data_grabber/canonical_ids.py` and `docs/canonical_jurisdiction_identity.md`.
-- [x] Repair tracker invariant and distinguish enumerated-but-unresolved from genuinely unknown units. The tracker now enforces mutually exclusive accounting buckets and resets unreconciled states to estimated unknown.
-- [~] Reconcile PR #11's 911 discovery observations to canonical jurisdictions. Conservative URL-pattern reconciliation is now wired into the census workflow; only high-confidence locality matches are promoted, with the remainder retained for state-specific/manual reconciliation.
-- [ ] Classify each reconciled locality as final_only / election_night_only / both / known_missing_source.
-- [ ] Add evidence/provenance fields for every capability assignment. Architecture audit also requires normalized observations to resolve to immutable snapshots.
-- [ ] Produce state and national scorecards: expected, enumerated, final-capable, election-night-capable, both, missing, unknown.
-- [ ] Add automated invariant tests so tracker arithmetic cannot regress.
-- [ ] Merge PR #11 after reconciliation and CI are green.
+## Within-state depth milestone
 
-## Next milestone: finish authority enumeration
+The project must not equate one statewide surface with full state coverage.
 
-Work unresolved states alphabetically with state-specific central-directory profiles rather than bespoke result parsers:
+For each state, maintain evidence for:
 
-- [~] Alaska — governed state/election-region profile in place; execute statewide-result enumeration.
-- [~] Alabama — governed 67-county directory profile in place; execute local-official census.
-- [~] Georgia — governed 159-county directory profile in place; execute county-office/platform census.
-- [~] Kansas — governed 105-county directory profile in place; execute county-officer/platform census.
-- [~] Louisiana — governed 64-parish directory profile in place; execute parish census.
-- [~] Massachusetts — governed 351-municipality profile in place; execute local-election-office census.
-- [~] North Dakota — governed 53-county profile in place; execute county-official census.
-- [~] New Mexico — governed 33-county profile in place; execute county-clerk census.
-- [~] New York — governed 58-board/county profile in place; execute board census with NYC special handling preserved.
-- [~] Rhode Island — governed 39-municipality profile in place; execute local-board census.
-- [~] South Carolina — governed 46-county profile in place; execute county-office census.
-- [~] Vermont — governed 247-town profile in place; execute clerk census.
-- [~] Wisconsin — governed 1,850-municipality clerk profile in place; execute statewide clerk-directory census.
-
-For each state, record:
 - authoritative expected unit count and authority model;
-- units individually identified;
-- local authority URLs exposed;
-- result-site URLs exposed;
-- directory mechanism (anchors, table, cards, search widget, API, scripts, state-only);
-- historical/final capability;
-- election-night capability;
+- individually enumerated units;
+- units with final and/or election-night source capability;
+- all credible source outlets per unit;
 - smallest observed reporting unit;
-- confidence and evidence.
+- platform/report family;
+- execution maturity and replay status;
+- explicit unresolved and affirmatively missing cases.
 
-## Platform leverage milestone
+Prefer states/localities with high election-night value and relevant federal/state contests once easy/high-leverage families have been exhausted, while recognizing that complete coverage of every difficult low-value source may not be operationally worthwhile.
 
-Once canonical jurisdictions are attached to discoveries:
+## Historical state work
 
-- [ ] Build a national platform/report-family census by number of authorities unlocked.
-- [ ] Prioritize reusable families by locality coverage and election-night value.
-- [ ] Complete normalized parsers where discovery/profile support exists but normalization does not.
-- [ ] Highest-value known families include Enhanced Voting, Clarity ENR, standardized tabulator/SOV/canvass reports, CivicPlus-as-discovery, Electionware, and recurring static document families.
-- [ ] Track the target metric: **new locality-specific parser code should trend toward zero**.
+Michigan, Ohio, Maine, Connecticut, and Pennsylvania remain important architecture case studies. Their state-specific docs describe the investigation at the time and should be read as technical evidence, not as the current project boundary.
 
-## State-specific technical debt / follow-up
+Remaining state-specific follow-up should be prioritized through the national readiness/depth matrices rather than maintained as a separate five-state roadmap.
 
-### Maine
-- [ ] Add proper post-shard aggregation for pending-source triage.
-- [ ] Continue authority/source discovery; current dominant blocker is discovery, not parser failure.
-- [ ] Keep image-only/OCR-required artifacts provisional E until validated and reconciled.
-
-### Michigan
-- [ ] Complete normalized table-to-ResultObservation parser for standardized SOV/canvass reports.
-- [ ] Deepen unknown-web family classification.
-- [ ] Preserve election-night resolution independently from certified resolution.
-
-### Ohio
-- [ ] Convert family-classified A cases into artifact-executed production evidence where still needed.
-
-### Connecticut
-- [ ] Expand voting-district recovery while preserving historical 8-county vs current planning-region geography.
-
-### Pennsylvania
-- [ ] Finish full 67-county platform/capability classification.
-
-## Data-model guardrails
-
-Maintain these invariants throughout expansion:
-
-- Reporting topology is separate from final/certified geography.
-- Temporal geography/crosswalks are explicit.
-- Vote mode is recorded only when explicit or defensibly derived.
-- Candidate identity, candidacy, ballot line, party label, and ballot position are separate concepts.
-- Source/display order is never promoted to voter-facing ballot order without authoritative evidence.
-- Fusion voting preserves ballot-line votes and candidate-combined totals.
-- Election stages/runoffs preserve stable candidacy identity and stage semantics.
-- Missing registration denominators remain null/not-applicable where the jurisdiction has no registration system.
-- Ballot-delivery regime is separate from reporting-mode breakout.
-- Source disagreement is retained and adjudicated, never silently conformed.
-
-## Modeling and assurance — after acquisition coverage matures
+## Modeling and assurance — after acquisition depth matures
 
 - [ ] Separate turnout and preference: electorate composition × turnout × candidate preference.
-- [ ] Add uniform-by-group swing benchmarks.
-- [ ] Add hierarchical / empirical-Bayes models by administrative and reporting regime.
+- [ ] Add uniform-by-group descriptive benchmarks.
+- [ ] Add hierarchical / empirical-Bayes models with administrative/reporting-regime-aware pooling.
 - [ ] Historical replay/backtesting.
-- [ ] Administrative-regime tables and temporal-geography-aware comparisons.
 - [ ] Neutral anomaly detection plus affirmative assurance/accounting checks.
 - [ ] Preserve uncertainty and avoid treating ecological inference as individually identified behavior.
 
 ## Roadmap maintenance protocol
 
-At the end of any material work session:
+At the end of material work:
 
-1. Mark completed checklist items.
-2. Update the current-position metrics from actual artifacts/workflows.
+1. Update this file from merged artifacts/workflows, not remembered counts.
+2. Keep catalog, capability, execution, normalized, replay, and refresh coverage distinct.
 3. Record newly discovered blockers under the relevant milestone.
-4. Reorder only when evidence changes expected leverage.
-5. Add links/PR numbers or artifact paths for major deliverables.
-6. Keep provisional estimates explicitly labeled.
-7. Never convert crawl failures into substantive source-absence claims.
-8. Update the roadmap in the same PR as the work whenever practical.
+4. Keep historical investigations but label them as snapshots when their status language ages.
+5. Never convert crawl/fetch/parser failures into source-absence claims.
+6. Update documentation in the same PR as architecture/maturity changes whenever practical.
 
-The roadmap is the project's canonical statement of **where we are, what is next, and why**. Detailed registries and audit artifacts remain the source of truth for individual jurisdictions.
+Detailed registries and generated audit artifacts remain the source of truth for individual jurisdictions and source candidates.
