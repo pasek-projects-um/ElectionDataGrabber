@@ -10,6 +10,7 @@ from election_data_grabber.adapters.clarity import discover_clarity_downloads, s
 from election_data_grabber.adapters.clarity_xml import parse_clarity_like_xml
 from election_data_grabber.adapters.generic_csv import parse_generic_precinct_csv
 from election_data_grabber.adapters.generic_json import parse_generic_results_json
+from election_data_grabber.adapters.generic_excel import parse_generic_precinct_excel
 from election_data_grabber.execution_maturity import ExecutionStage, SourceExecutionEvidence
 
 
@@ -18,6 +19,7 @@ PARSER_FUNCTIONS: dict[str, Callable] = {
     "election_data_grabber.adapters.generic_csv:parse_generic_precinct_csv": parse_generic_precinct_csv,
     "election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml": parse_clarity_like_xml,
     "election_data_grabber.adapters.generic_json:parse_generic_results_json": parse_generic_results_json,
+    "election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel": parse_generic_precinct_excel,
 }
 
 
@@ -79,13 +81,15 @@ def execute_supported_body(
                 snapshot_sha256=snapshot_sha256(body),
                 failure_class="invalid_json_payload",
             )
-    rows = parser(
-        payload,
-        election_id=election_id,
-        jurisdiction_id=jurisdiction_id,
-        source_id=source_id,
-        fetched_at=fetched_at,
-    )
+    kwargs = {
+        "election_id": election_id,
+        "jurisdiction_id": jurisdiction_id,
+        "source_id": source_id,
+        "fetched_at": fetched_at,
+    }
+    if parser is parse_generic_precinct_excel:
+        kwargs["filename"] = manifest_row["result_url"]
+    rows = parser(payload, **kwargs)
     if not rows:
         return SourceExecutionEvidence(
             state=manifest_row["state"],
