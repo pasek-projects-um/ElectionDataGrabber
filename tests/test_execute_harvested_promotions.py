@@ -21,3 +21,22 @@ def test_extensionless_excel_artifact_is_not_crashable():
     family,parser=parser_for_artifact("https://x.gov/download")
     assert family==""
     assert parser==""
+
+
+def test_parser_exception_becomes_residual(monkeypatch):
+    import scripts.execute_harvested_promotions as mod
+    monkeypatch.setattr(mod,"fetch_body",lambda url,timeout:(b"not-an-xlsx",""))
+    monkeypatch.setattr(
+        mod,
+        "execute_supported_body",
+        lambda *args,**kwargs: (_ for _ in ()).throw(ValueError("bad workbook")),
+    )
+    rows=mod.execute_promotions([{
+        "state":"AA",
+        "source_url":"https://x.gov/results.xlsx",
+        "promoted_family":"tabular_download",
+        "execution_route":"election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel",
+        "promotion_action":"execute_now",
+    }])
+    assert rows[0]["execution_stage"]=="discovered"
+    assert rows[0]["failure_class"]=="parser_exception:ValueError"
