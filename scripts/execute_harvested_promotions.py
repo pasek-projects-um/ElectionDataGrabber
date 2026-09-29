@@ -177,14 +177,24 @@ def execute_promotions(rows: list[dict[str,str]], *, timeout: int=12, limit: int
                 },"excel_format_ambiguous"))
                 continue
 
-        evidence=execute_supported_body(
-            manifest,
-            body,
-            election_id="harvested-execution-depth",
-            jurisdiction_id=f"us:{row.get('state','').lower()}:harvested-{index}",
-            source_id=f"harvested-depth:{index}",
-            fetched_at=fetched_at,
-        )
+        try:
+            evidence=execute_supported_body(
+                manifest,
+                body,
+                election_id="harvested-execution-depth",
+                jurisdiction_id=f"us:{row.get('state','').lower()}:harvested-{index}",
+                source_id=f"harvested-depth:{index}",
+                fetched_at=fetched_at,
+            )
+        except (ValueError, TypeError, KeyError, UnicodeError, OSError) as exc:
+            out.append(failed_row({
+                "state":row.get("state",""),
+                "result_url":manifest.get("result_url",target_url),
+                "access_family":family,
+                "parser":parser,
+                "smallest_observed_unit":"unknown",
+            },f"parser_exception:{type(exc).__name__}"))
+            continue
         out.append(maturity_row(evidence))
     return out
 
