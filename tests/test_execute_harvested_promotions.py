@@ -59,3 +59,22 @@ def test_bad_zip_parser_exception_becomes_residual(monkeypatch):
         "promotion_action":"execute_now",
     }])
     assert rows[0]["failure_class"]=="parser_exception:BadZipFile"
+
+
+def test_xml_parse_exception_becomes_residual(monkeypatch):
+    import xml.etree.ElementTree as ET
+    import scripts.execute_harvested_promotions as mod
+    monkeypatch.setattr(mod,"fetch_body",lambda url,timeout:(b"<bad xml>",""))
+    monkeypatch.setattr(
+        mod,
+        "execute_supported_body",
+        lambda *args,**kwargs: (_ for _ in ()).throw(ET.ParseError("bad xml")),
+    )
+    rows=mod.execute_promotions([{
+        "state":"AA",
+        "source_url":"https://x.gov/results.xml",
+        "promoted_family":"structured_xml",
+        "execution_route":"election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml",
+        "promotion_action":"execute_now",
+    }])
+    assert rows[0]["failure_class"]=="parser_exception:ParseError"
