@@ -13,6 +13,7 @@ from election_data_grabber.execution_maturity import maturity_row
 from election_data_grabber.supported_execution import execute_supported_body
 import urllib.error
 import urllib.request
+import zipfile
 
 
 
@@ -186,7 +187,7 @@ def execute_promotions(rows: list[dict[str,str]], *, timeout: int=12, limit: int
                 source_id=f"harvested-depth:{index}",
                 fetched_at=fetched_at,
             )
-        except (ValueError, TypeError, KeyError, UnicodeError, OSError) as exc:
+        except (ValueError, TypeError, KeyError, UnicodeError, OSError, zipfile.BadZipFile) as exc:
             out.append(failed_row({
                 "state":row.get("state",""),
                 "result_url":manifest.get("result_url",target_url),
