@@ -1,28 +1,43 @@
-from scripts.build_within_state_coverage_matrix import build_matrix, build_priority_queue
+from scripts.build_within_state_coverage_matrix import build_matrix
 
-def test_matrix_keeps_catalog_and_execution_separate():
-    first=[{"state":"AA","result_url":"https://aa.gov/results","source_scope":"statewide","election_night_candidate":"true","smallest_observed_unit":"county"}]
-    candidates=[{"state":"AA","result_host":"aa.gov","result_url":"https://aa.gov/a"},{"state":"AA","result_host":"county.aa.gov","result_url":"https://county.aa.gov/b"}]
-    execution=[{"state":"AA","stage":"replay_tested"}]
-    profiles=[{"state":"AA","profile_type":"county_directory","expected_units":"4"}]
-    rows=build_matrix(first,candidates,execution,profiles)
-    row=rows[0]
-    assert row["catalogued_result_urls"]=="2"
-    assert row["catalogued_hosts"]=="2"
-    assert row["expected_units"]=="4"
-    assert row["observed_catalog_units"]=="2"
-    assert row["catalog_depth_ratio"]=="0.5000"
-    assert row["highest_execution_stage"]=="replay_tested"
-    assert row["normalized_sources"]=="1"
-    assert "jurisdiction_gap" in row["depth_reasons"]
-    assert "election_night_refresh_unverified" in row["depth_reasons"]
 
-def test_priority_queue_favors_election_night_and_uncovered_depth():
-    first=[
-        {"state":"AA","result_url":"https://aa.gov/results","source_scope":"statewide","election_night_candidate":"false","smallest_observed_unit":"county"},
-        {"state":"BB","result_url":"https://bb.gov/results","source_scope":"county","election_night_candidate":"true","smallest_observed_unit":"precinct"},
+def test_urls_do_not_count_as_enumerated_primary_units():
+    first=[{"state":"AA","result_url":"https://aa.gov/results","source_scope":"statewide","election_night_candidate":"true"}]
+    den=[{"state":"AA","expected_primary_units":"3","authority_model":"county"}]
+    loc=[
+        {"state":"AA","jurisdiction_id":"us:aa:county:1"},
+        {"state":"AA","jurisdiction_id":"us:aa:county:2"},
     ]
-    rows=build_matrix(first,[],[],[])
-    queue=build_priority_queue(rows)
-    assert queue[0]["state"]=="BB"
-    assert int(queue[0]["depth_priority"]) > int(queue[1]["depth_priority"])
+    leads=[
+        {"state":"AA","jurisdiction_id":"us:aa:county:1","lead_url":"https://aa.gov/a"},
+        {"state":"AA","jurisdiction_id":"us:aa:county:1","lead_url":"https://aa.gov/b"},
+        {"state":"AA","jurisdiction_id":"us:aa:county:2","lead_url":"https://aa.gov/c"},
+    ]
+    rows=build_matrix(first,den,loc,leads,[])
+    row=rows[0]
+    assert row["expected_primary_units"]=="3"
+    assert row["enumerated_primary_units"]=="2"
+    assert row["units_with_any_lead"]=="2"
+    assert row["catalogued_source_leads"]=="3"
+    assert row["enumeration_ratio"]=="0.6667"
+    assert row["lead_coverage_ratio"]=="1.0000"
+    assert "enumeration_gap" in row["depth_reasons"]
+
+
+def test_execution_stages_are_counted_separately():
+    first=[{"state":"AA","result_url":"https://aa.gov/results","source_scope":"statewide","election_night_candidate":"true"}]
+    den=[{"state":"AA","expected_primary_units":"1","authority_model":"state"}]
+    loc=[{"state":"AA","jurisdiction_id":"us:aa:state:aa"}]
+    leads=[{"state":"AA","jurisdiction_id":"us:aa:state:aa","lead_url":"https://aa.gov/results"}]
+    execution=[
+        {"state":"AA","stage":"parser_selected"},
+        {"state":"AA","stage":"normalized"},
+        {"state":"AA","stage":"replay_tested"},
+        {"state":"AA","stage":"refresh_verified"},
+    ]
+    row=build_matrix(first,den,loc,leads,execution)[0]
+    assert row["executable_sources"]=="4"
+    assert row["normalized_sources"]=="3"
+    assert row["replay_tested_sources"]=="2"
+    assert row["refresh_verified_sources"]=="1"
+    assert row["highest_execution_stage"]=="refresh_verified"

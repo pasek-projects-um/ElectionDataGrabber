@@ -1,0 +1,7 @@
+metric,scope,status,notes
+enumerated_primary_units,national,pending,"Canonical denominator-backed units; never substitute source URL count."
+units_with_any_lead,national,pending,"Canonical units with at least one credible source lead."
+executable_sources,national,pending,"Sources with a supported executable adapter/runtime path."
+normalized_sources,national,pending,"Sources producing canonical observations."
+replay_tested_sources,national,pending,"Sources with preserved evidence that reprocesses successfully."
+refresh_verified_sources,national,pending,"Election-night sources verified across repeated updates."
