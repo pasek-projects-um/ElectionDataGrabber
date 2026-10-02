@@ -66,3 +66,12 @@ def test_structured_web_without_probe_artifact_routes_to_structured_discovery():
     family,parser=readiness_route({"platform_family":"structured_web","discovered_artifacts":""})
     assert family=="structured_web"
     assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
+
+
+def test_generic_xml_requires_discovery_before_parser_selection():
+    family,route=readiness_route({
+        "platform_family":"structured_web",
+        "discovered_artifacts":"https://x.gov/results.xml",
+    })
+    assert family=="structured_xml"
+    assert route=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
