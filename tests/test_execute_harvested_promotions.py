@@ -78,3 +78,16 @@ def test_xml_parse_exception_becomes_residual(monkeypatch):
         "promotion_action":"execute_now",
     }])
     assert rows[0]["failure_class"]=="parser_exception:ParseError"
+
+
+def test_payload_format_mismatch_is_residual(monkeypatch):
+    import scripts.execute_harvested_promotions as mod
+    monkeypatch.setattr(mod,"fetch_body",lambda url,timeout:(b"<html>not json</html>",""))
+    rows=mod.execute_promotions([{
+        "state":"AA",
+        "source_url":"https://x.gov/results.json",
+        "promoted_family":"structured_json",
+        "execution_route":"election_data_grabber.adapters.generic_json:parse_generic_results_json",
+        "promotion_action":"execute_now",
+    }])
+    assert rows[0]["failure_class"]=="payload_format_mismatch:json:xml"
