@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 from election_data_grabber.adapters.clarity import discover_clarity_downloads, select_clarity_detail_artifact
 from election_data_grabber.adapters.vendor_structured import discover_vendor_artifacts
-from election_data_grabber.adapters.structured_web import select_structured_artifact
+from election_data_grabber.adapters.structured_web import select_structured_artifact, sniff_payload_kind
 from election_data_grabber.execution_maturity import maturity_row
 from election_data_grabber.supported_execution import execute_supported_body
 import urllib.error
@@ -154,6 +154,24 @@ def execute_promotions(rows: list[dict[str,str]], *, timeout: int=12, limit: int
                 "parser":parser,
                 "smallest_observed_unit":"unknown",
             },failure))
+            continue
+
+        payload_kind=sniff_payload_kind(body)
+        expected_kind=(
+            "json" if parser.endswith("parse_generic_results_json") else
+            "csv" if parser.endswith("parse_generic_precinct_csv") else
+            "excel" if parser.endswith("parse_generic_precinct_excel") else
+            "xml" if parser.endswith("parse_clarity_like_xml") else
+            ""
+        )
+        if expected_kind and payload_kind not in {expected_kind,"unknown"}:
+            out.append(failed_row({
+                "state":row.get("state",""),
+                "result_url":target_url,
+                "access_family":family,
+                "parser":parser,
+                "smallest_observed_unit":"unknown",
+            },f"payload_format_mismatch:{expected_kind}:{payload_kind}"))
             continue
 
         manifest={
