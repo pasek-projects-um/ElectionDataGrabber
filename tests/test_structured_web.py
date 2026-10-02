@@ -25,3 +25,11 @@ def test_precinct_detail_breaks_same_kind_tie():
 def test_unknown_assets_are_not_selected():
     assert artifact_kind("https://x.gov/app.js")=="unknown"
     assert select_structured_artifact(["https://x.gov/app.js"]) is None
+
+
+def test_sniff_payload_kind():
+    from election_data_grabber.adapters.structured_web import sniff_payload_kind
+    assert sniff_payload_kind(b'{"results":[]}')=="json"
+    assert sniff_payload_kind(b"<?xml version='1.0'?><Results/>")=="xml"
+    assert sniff_payload_kind(b"PK\x03\x04fake")=="excel"
+    assert sniff_payload_kind(b"a,b,c\n1,2,3\n")=="csv"
