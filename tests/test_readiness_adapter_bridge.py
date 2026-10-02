@@ -26,13 +26,13 @@ def test_csv_artifact_routes_to_generic_csv_runtime():
     assert parser=="election_data_grabber.adapters.generic_csv:parse_generic_precinct_csv"
 
 
-def test_xml_artifact_routes_to_xml_runtime():
+def test_xml_artifact_requires_structured_discovery():
     family,parser=readiness_route({
         "platform_family":"structured_web",
         "discovered_artifacts":"https://x.gov/detail.xml",
     })
     assert family=="structured_xml"
-    assert parser=="election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml"
+    assert parser=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
 
 
 def test_excel_artifact_routes_to_generic_excel_runtime():
