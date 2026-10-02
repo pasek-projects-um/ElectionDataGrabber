@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 from election_data_grabber.adapters.clarity import discover_clarity_downloads, select_clarity_detail_artifact
 from election_data_grabber.adapters.vendor_structured import discover_vendor_artifacts
-from election_data_grabber.adapters.structured_web import select_structured_artifact
+from election_data_grabber.adapters.structured_web import select_structured_artifact, sniff_payload_kind
 from election_data_grabber.execution_maturity import maturity_row
 from election_data_grabber.supported_execution import execute_supported_body
 import urllib.error
@@ -57,6 +57,16 @@ def read_rows(path: Path) -> list[dict[str,str]]:
         return list(csv.DictReader(f))
 
 
+def parser_for_payload_kind(kind: str) -> tuple[str,str]:
+    if kind=="json":
+        return "structured_json","election_data_grabber.adapters.generic_json:parse_generic_results_json"
+    if kind=="csv":
+        return "tabular_download","election_data_grabber.adapters.generic_csv:parse_generic_precinct_csv"
+    if kind=="excel":
+        return "tabular_download","election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel"
+    return "",""
+
+
 def parser_for_artifact(url: str) -> tuple[str,str]:
     path=urlparse(url).path.lower()
     if path.endswith(".json") or "/api/" in path:
@@ -68,6 +78,16 @@ def parser_for_artifact(url: str) -> tuple[str,str]:
     if path.endswith(".xml"):
         return "structured_xml","election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml"
     return "",""
+
+
+def discover_structured_from_markup(body: bytes, base_url: str) -> str|None:
+    selected=select_structured_artifact(discover_vendor_artifacts(body,base_url))
+    return selected.url if selected else None
+
+
+def discover_structured_from_landing(body: bytes, base_url: str) -> str|None:
+    selected=select_structured_artifact(discover_vendor_artifacts(body,base_url))
+    return selected.url if selected else None
 
 
 def discover_artifact(row: dict[str,str], body: bytes) -> str|None:
@@ -155,6 +175,73 @@ def execute_promotions(rows: list[dict[str,str]], *, timeout: int=12, limit: int
                 "smallest_observed_unit":"unknown",
             },failure))
             continue
+
+        payload_kind=sniff_payload_kind(body)
+        expected_kind=(
+            "json" if parser.endswith("parse_generic_results_json") else
+            "csv" if parser.endswith("parse_generic_precinct_csv") else
+            "excel" if parser.endswith("parse_generic_precinct_excel") else
+            "xml" if parser.endswith("parse_clarity_like_xml") else
+            ""
+        )
+        if expected_kind and payload_kind not in {expected_kind,"unknown"}:
+            payload_family,payload_parser=parser_for_payload_kind(payload_kind)
+            if payload_parser:
+                family,parser=payload_family,payload_parser
+                expected_kind=payload_kind
+            elif payload_kind=="xml" and body.lstrip().lower().startswith((b"<html",b"<!doctype html")):
+                artifact=discover_structured_from_markup(body,target_url)
+                if not artifact:
+                    out.append(failed_row({
+                        "state":row.get("state",""),
+                        "result_url":target_url,
+                        "access_family":family,
+                        "parser":parser,
+                        "smallest_observed_unit":"unknown",
+                    },"landing_page_no_structured_artifact"))
+                    continue
+                artifact_body,artifact_failure=fetch_body(artifact,timeout)
+                if artifact_body is None:
+                    out.append(failed_row({
+                        "state":row.get("state",""),
+                        "result_url":artifact,
+                        "access_family":family,
+                        "parser":parser,
+                        "smallest_observed_unit":"unknown",
+                    },artifact_failure))
+                    continue
+                target_url=artifact
+                body=artifact_body
+                family,parser=parser_for_artifact(artifact)
+                if not parser:
+                    artifact_kind=sniff_payload_kind(body)
+                    family,parser=parser_for_payload_kind(artifact_kind)
+                if not parser:
+                    out.append(failed_row({
+                        "state":row.get("state",""),
+                        "result_url":artifact,
+                        "access_family":family,
+                        "parser":"",
+                        "smallest_observed_unit":"unknown",
+                    },"artifact_family_not_executable"))
+                    continue
+                payload_kind=sniff_payload_kind(body)
+                expected_kind=(
+                    "json" if parser.endswith("parse_generic_results_json") else
+                    "csv" if parser.endswith("parse_generic_precinct_csv") else
+                    "excel" if parser.endswith("parse_generic_precinct_excel") else
+                    "xml" if parser.endswith("parse_clarity_like_xml") else
+                    ""
+                )
+            else:
+                out.append(failed_row({
+                    "state":row.get("state",""),
+                    "result_url":target_url,
+                    "access_family":family,
+                    "parser":parser,
+                    "smallest_observed_unit":"unknown",
+                },f"payload_format_mismatch:{expected_kind}:{payload_kind}"))
+                continue
 
         manifest={
             "state":row.get("state",""),

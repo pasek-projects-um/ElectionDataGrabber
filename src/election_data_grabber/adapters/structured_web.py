@@ -43,3 +43,21 @@ def rank_structured_artifacts(urls: list[str] | tuple[str,...]) -> list[Structur
 def select_structured_artifact(urls: list[str] | tuple[str,...]) -> StructuredArtifact | None:
     ranked=rank_structured_artifacts(urls)
     return ranked[0] if ranked and ranked[0].score>0 else None
+
+
+def sniff_payload_kind(body: bytes) -> str:
+    sample=body[:65536].lstrip()
+    if sample.startswith(b"PK\x03\x04"):
+        return "excel"
+    if sample.startswith((b"{",b"[")):
+        return "json"
+    if sample.startswith(b"<?xml") or sample.startswith(b"<"):
+        return "xml"
+    try:
+        text=sample.decode("utf-8")
+    except UnicodeDecodeError:
+        return "unknown"
+    first=text.splitlines()[0] if text.splitlines() else ""
+    if "," in first and len(first.split(",")) >= 3:
+        return "csv"
+    return "unknown"
