@@ -80,7 +80,7 @@ def test_xml_parse_exception_becomes_residual(monkeypatch):
     assert rows[0]["failure_class"]=="parser_exception:ParseError"
 
 
-def test_payload_format_mismatch_is_residual(monkeypatch):
+def test_html_payload_mismatch_becomes_landing_residual(monkeypatch):
     import scripts.execute_harvested_promotions as mod
     monkeypatch.setattr(mod,"fetch_body",lambda url,timeout:(b"<html>not json</html>",""))
     rows=mod.execute_promotions([{
@@ -90,7 +90,7 @@ def test_payload_format_mismatch_is_residual(monkeypatch):
         "execution_route":"election_data_grabber.adapters.generic_json:parse_generic_results_json",
         "promotion_action":"execute_now",
     }])
-    assert rows[0]["failure_class"]=="payload_format_mismatch:json:xml"
+    assert rows[0]["failure_class"]=="landing_page_no_structured_artifact"
 
 
 def test_payload_format_reroutes_to_matching_parser(monkeypatch):
