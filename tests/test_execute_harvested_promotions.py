@@ -91,3 +91,37 @@ def test_payload_format_mismatch_is_residual(monkeypatch):
         "promotion_action":"execute_now",
     }])
     assert rows[0]["failure_class"]=="payload_format_mismatch:json:xml"
+
+
+def test_payload_format_reroutes_to_matching_parser(monkeypatch):
+    import scripts.execute_harvested_promotions as mod
+    seen={}
+    monkeypatch.setattr(mod,"fetch_body",lambda url,timeout:(b'{"reporting_units":[]}',""))
+    class Evidence:
+        observations=[]
+        snapshot_sha256="x"
+        parser="election_data_grabber.adapters.generic_json:parse_generic_results_json"
+        source_url="https://x.gov/results.xlsx"
+        access_family="structured_json"
+        smallest_observed_unit="unknown"
+        vote_modes_preserved=False
+    def fake_execute(manifest, body, **kwargs):
+        seen.update(manifest)
+        return Evidence()
+    monkeypatch.setattr(mod,"execute_supported_body",fake_execute)
+    monkeypatch.setattr(mod,"maturity_row",lambda evidence:{
+        "state":"AA","result_url":seen["result_url"],"access_family":seen["access_family"],
+        "parser":seen["parser"],"execution_stage":"normalized","observation_count":"0",
+        "smallest_observed_unit":"unknown","vote_modes_preserved":"","failure_class":"",
+        "snapshot_sha256":"x",
+    })
+    rows=mod.execute_promotions([{
+        "state":"AA",
+        "source_url":"https://x.gov/results.xlsx",
+        "promoted_family":"tabular_download",
+        "execution_route":"election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel",
+        "promotion_action":"execute_now",
+    }])
+    assert seen["access_family"]=="structured_json"
+    assert seen["parser"]=="election_data_grabber.adapters.generic_json:parse_generic_results_json"
+    assert rows[0]["failure_class"]==""
