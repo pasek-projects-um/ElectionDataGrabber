@@ -22,7 +22,7 @@ def readiness_route(row: dict[str,str]) -> tuple[str,str]:
         if artifact.kind=="csv":
             return "tabular_download","election_data_grabber.adapters.generic_csv:parse_generic_precinct_csv"
         if artifact.kind=="xml":
-            return "structured_xml","election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml"
+            return "structured_xml","election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
         if artifact.kind=="excel":
             return "tabular_download","election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel"
     return family,""
