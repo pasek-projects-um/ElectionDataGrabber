@@ -85,6 +85,11 @@ def discover_structured_from_markup(body: bytes, base_url: str) -> str|None:
     return selected.url if selected else None
 
 
+def discover_structured_from_landing(body: bytes, base_url: str) -> str|None:
+    selected=select_structured_artifact(discover_vendor_artifacts(body,base_url))
+    return selected.url if selected else None
+
+
 def discover_artifact(row: dict[str,str], body: bytes) -> str|None:
     route=row.get("execution_route","")
     url=row["source_url"]
