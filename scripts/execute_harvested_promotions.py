@@ -57,6 +57,16 @@ def read_rows(path: Path) -> list[dict[str,str]]:
         return list(csv.DictReader(f))
 
 
+def parser_for_payload_kind(kind: str) -> tuple[str,str]:
+    if kind=="json":
+        return "structured_json","election_data_grabber.adapters.generic_json:parse_generic_results_json"
+    if kind=="csv":
+        return "tabular_download","election_data_grabber.adapters.generic_csv:parse_generic_precinct_csv"
+    if kind=="excel":
+        return "tabular_download","election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel"
+    return "",""
+
+
 def parser_for_artifact(url: str) -> tuple[str,str]:
     path=urlparse(url).path.lower()
     if path.endswith(".json") or "/api/" in path:
@@ -165,14 +175,19 @@ def execute_promotions(rows: list[dict[str,str]], *, timeout: int=12, limit: int
             ""
         )
         if expected_kind and payload_kind not in {expected_kind,"unknown"}:
-            out.append(failed_row({
-                "state":row.get("state",""),
-                "result_url":target_url,
-                "access_family":family,
-                "parser":parser,
-                "smallest_observed_unit":"unknown",
-            },f"payload_format_mismatch:{expected_kind}:{payload_kind}"))
-            continue
+            payload_family,payload_parser=parser_for_payload_kind(payload_kind)
+            if payload_parser:
+                family,parser=payload_family,payload_parser
+                expected_kind=payload_kind
+            else:
+                out.append(failed_row({
+                    "state":row.get("state",""),
+                    "result_url":target_url,
+                    "access_family":family,
+                    "parser":parser,
+                    "smallest_observed_unit":"unknown",
+                },f"payload_format_mismatch:{expected_kind}:{payload_kind}"))
+                continue
 
         manifest={
             "state":row.get("state",""),
