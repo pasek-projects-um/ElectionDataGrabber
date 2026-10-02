@@ -160,3 +160,37 @@ def test_markup_mismatch_without_artifact_is_residual(monkeypatch):
         "promotion_action":"execute_now",
     }])
     assert rows[0]["failure_class"]=="landing_page_no_structured_artifact"
+
+
+def test_html_landing_mismatch_discovers_and_executes_artifact(monkeypatch):
+    import scripts.execute_harvested_promotions as mod
+    calls=[]
+    landing=b'<html><a href="/downloads/results.csv">results</a></html>'
+    csv=b"precinct,contest,candidate,votes\nP1,Mayor,Alice,3\n"
+    def fake_fetch(url,timeout):
+        calls.append(url)
+        return (csv,"") if url.endswith("results.csv") else (landing,"")
+    monkeypatch.setattr(mod,"fetch_body",fake_fetch)
+    rows=mod.execute_promotions([{
+        "state":"AA",
+        "source_url":"https://x.gov/results.xlsx",
+        "promoted_family":"tabular_download",
+        "execution_route":"election_data_grabber.adapters.generic_excel:parse_generic_precinct_excel",
+        "promotion_action":"execute_now",
+    }])
+    assert calls==["https://x.gov/results.xlsx","https://x.gov/downloads/results.csv"]
+    assert rows[0]["failure_class"]==""
+    assert rows[0]["execution_stage"] in {"normalized","replay_tested"}
+
+
+def test_html_landing_mismatch_without_artifact_is_residual(monkeypatch):
+    import scripts.execute_harvested_promotions as mod
+    monkeypatch.setattr(mod,"fetch_body",lambda url,timeout:(b"<html><body>No exports</body></html>",""))
+    rows=mod.execute_promotions([{
+        "state":"AA",
+        "source_url":"https://x.gov/results.json",
+        "promoted_family":"structured_json",
+        "execution_route":"election_data_grabber.adapters.generic_json:parse_generic_results_json",
+        "promotion_action":"execute_now",
+    }])
+    assert rows[0]["failure_class"]=="landing_page_no_structured_artifact"
