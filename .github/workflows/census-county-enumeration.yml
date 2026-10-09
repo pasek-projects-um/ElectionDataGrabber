@@ -1,0 +1,33 @@
+name: Census county enumeration sprint
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: national-100pct-starting-point-coverage
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install httpx
+      - run: python scripts/expand_census_county_starts.py --min-additions 1000
+      - run: python -m scripts.audit_national_starting_point_coverage
+      - name: Commit verified Census names to sprint branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry/us_primary_election_localities.csv
+          git diff --cached --quiet && exit 0
+          git commit -m "Enumerate 1000+ additional Census-backed election jurisdiction candidates"
+          git push origin HEAD:national-100pct-starting-point-coverage
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: census-national-coverage-audit
+          path: audit/national-starting-point*
