@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": "clarity-host",
+      "family": "clarity",
+      "role": "result_platform",
+      "field": "host",
+      "pattern": "(^|\\.)clarityelections\\.com$",
+      "weight": 80,
+      "evidence": "tests/test_platform_adapters.py::test_clarity_election_root"
+    },
+    {
+      "id": "enhanced-public",
+      "family": "enhanced_voting",
+      "role": "result_platform",
+      "field": "url",
+      "pattern": "^https?://app\\.enhancedvoting\\.com/results/public/",
+      "weight": 85,
+      "evidence": "tests/test_platform_adapters.py:28"
+    },
+    {
+      "id": "enhanced-host",
+      "family": "enhanced_voting",
+      "role": "result_platform",
+      "field": "host",
+      "pattern": "^app\\.enhancedvoting\\.com$",
+      "weight": 55,
+      "evidence": "registry/mi_county_authorities.csv#Lake"
+    },
+    {
+      "id": "scytl-brand",
+      "family": "scytl",
+      "role": "result_platform",
+      "field": "text",
+      "pattern": "\\bscytl\\b",
+      "weight": 35,
+      "evidence": "src/election_data_grabber/adapters/vendor_structured.py#is_scytl"
+    },
+    {
+      "id": "civicplus-brand",
+      "family": "civicplus",
+      "role": "authority_discovery",
+      "field": "text",
+      "pattern": "\\bcivicplus\\b|\\bcivicengage\\b",
+      "weight": 0,
+      "evidence": "registry/platform_adapters.csv#civicplus"
+    },
+    {
+      "id": "electionware-report",
+      "family": "electionware",
+      "role": "report_family",
+      "field": "text",
+      "pattern": "\\belectionware\\b",
+      "weight": 20,
+      "evidence": "registry/platform_adapters.csv#electionware"
+    },
+    {
+      "id": "pdf-artifact",
+      "family": "pdf",
+      "role": "report_family",
+      "field": "path",
+      "pattern": "\\.pdf$",
+      "weight": 10,
+      "evidence": "registry/sources.csv#mi-jackson-archive"
+    },
+    {
+      "id": "tabular-artifact",
+      "family": "tabular_download",
+      "role": "report_family",
+      "field": "path",
+      "pattern": "\\.(csv|xlsx?|xml|json|zip)$",
+      "weight": 15,
+      "evidence": "src/election_data_grabber/platform_fingerprint.py"
+    }
+  ]
+}

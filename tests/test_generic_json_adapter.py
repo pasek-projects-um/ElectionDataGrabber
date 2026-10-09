@@ -30,7 +30,9 @@ def test_generic_json_preserves_order_party_and_mode():
         fetched_at=datetime(2026, 11, 3, tzinfo=timezone.utc),
     )
     assert len(rows) == 2
-    assert rows[0].ballot_order == 1
+    assert rows[0].source_order == 1
     assert rows[0].party == "DEM"
     assert rows[0].vote_mode == VoteMode.EARLY
-    assert rows[1].ballot_order == 2
+    assert rows[1].source_order == 2
+
+    assert all(row.ballot_order is None for row in rows)
