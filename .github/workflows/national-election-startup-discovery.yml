@@ -6,13 +6,6 @@ on:
         description: "Maximum seed URLs to probe (bounded run)"
         required: false
         default: "100"
-  pull_request:
-    paths:
-      - "scripts/national_election_startup_discovery.py"
-      - "tests/test_national_election_startup_discovery.py"
-      - ".github/workflows/national-election-startup-discovery.yml"
-  schedule:
-    - cron: "11 12 * * *"
 permissions:
   contents: read
 jobs:
