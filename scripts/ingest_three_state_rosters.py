@@ -37,7 +37,7 @@ def main():
                 names=sorted({str(x["attributes"].get(field,"")).strip() for x in features if x.get("attributes",{}).get(field)})
                 print(f"{state} official GIS: {len(features)} features; {len(names)} names; sample attributes {features[0]['attributes'] if features else {}}")
                 if state == "VT":
-                    nonmunicipal = {"Averill", "Avery's Gore", "Buels Gore", "Ferdinand", "Glastenbury", "Lewis", "Somerset", "Warner's Grant", "Warren Gore"}
+                    nonmunicipal = {"Averill", "Avery's Gore", "Buels Gore", "Ferdinand", "Glastenbury", "Lewis", "Somerset", "Warner's Grant", "Warren's Gore"}
                     if not nonmunicipal.issubset(set(names)):
                         print("Missing unorganized:", sorted(nonmunicipal - set(names)))
                         print("Gore and Grant GIS names:", [x for x in names if "Gore" in x or "Grant" in x or "Warren" in x])
