@@ -18,7 +18,8 @@ import httpx
 CENSUS_URL = "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_counties_national.zip"
 COUNTY_MODELS = {"county", "county+state", "county+independent-city",
                  "county+board-of-elections", "county+municipal/election-district",
-                 "parish", "county+state/local", "state+county"}
+                 "parish", "county+state/local", "state+county",
+                 "state+county/local", "local-election-authority"}
 FIELDS = ("jurisdiction_id", "state", "jurisdiction_level", "canonical_name",
           "external_id_namespace", "external_id", "id_status", "authority_id",
           "coverage_status", "final_capable", "election_night_capable",
