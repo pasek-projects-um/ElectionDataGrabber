@@ -86,3 +86,43 @@ def test_persisted_ledger_rejects_duplicate_source_and_malformed_rows(tmp_path):
 def test_url_credentials_are_rejected():
     with pytest.raises(ValueError):
         canonical_url("https://secret:password@example.gov/results")
+
+
+def test_cross_run_persistence_through_outage_and_recovery(tmp_path):
+    path = tmp_path / "ledger.json"
+    key = ("us:me:kennebec:chelsea", "https://example.gov/results.pdf")
+    day1 = merge_source_observation(
+        None, jurisdiction_id=key[0], source_url=key[1],
+        verified=True, observed_at="2026-10-07T08:00:00Z",
+    )
+    save_ledger(path, {key: day1})
+    restored = load_ledger(path)
+    day2 = merge_source_observation(
+        restored[key], jurisdiction_id=key[0], source_url=key[1],
+        verified=False, observed_at="2026-10-08T08:00:00Z", failure_class="timeout",
+    )
+    save_ledger(path, {key: day2})
+    restored = load_ledger(path)
+    assert restored[key]["ever_verified"] is True
+    assert restored[key]["currently_reachable"] is False
+    day3 = merge_source_observation(
+        restored[key], jurisdiction_id=key[0], source_url=key[1],
+        verified=True, observed_at="2026-10-09T08:00:00Z",
+    )
+    save_ledger(path, {key: day3})
+    assert load_ledger(path)[key]["first_verified_at"] == day1["first_verified_at"]
+    assert load_ledger(path)[key]["currently_reachable"] is True
+
+
+def test_unobserved_source_retains_historical_record(tmp_path):
+    key = ("us:me:a", "https://example.gov/a")
+    row = merge_source_observation(
+        None, jurisdiction_id=key[0], source_url=key[1],
+        verified=True, observed_at="2026-10-07T08:00:00Z",
+    )
+    path = tmp_path / "ledger.json"
+    save_ledger(path, {key: row})
+    # No audit observation for this URL in the next run: do not delete it.
+    restored = load_ledger(path)
+    save_ledger(path, restored)
+    assert load_ledger(path)[key] == row
