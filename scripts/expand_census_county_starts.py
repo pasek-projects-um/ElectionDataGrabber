@@ -43,7 +43,9 @@ def expand(root: Path, gazetteer_bytes: bytes):
     per_state = Counter(row["state"] for row in current)
     for row in source:
         row = {key.strip(): (value or "").strip() for key, value in row.items() if key is not None}
-        state = row["USPS"]
+        state = row.get("USPS") or row.get("USPS Code") or row.get("STATE") or row.get("STATE_ABBR") or ""
+        if not state:
+            raise ValueError(f"Unexpected Census Gazetteer columns: {sorted(row)}")
         d = denominator.get(state)
         if not d or d["authority_model"].strip() not in COUNTY_MODELS:
             continue
