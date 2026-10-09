@@ -10,11 +10,13 @@ def readiness_artifact(row: dict[str,str]):
 
 
 def readiness_route(row: dict[str,str]) -> tuple[str,str]:
-    family=row.get("platform_family","")
+    family=row.get("platform_family","").strip().lower()
     artifact=readiness_artifact(row)
     if family=="enhanced_voting":
         return "enhanced_voting","election_data_grabber.adapters.enhanced_voting:parse_enhanced_voting_html"
     if family=="clarity":
+        if artifact is not None and artifact.kind=="xml":
+            return "clarity_xml","election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml"
         return "clarity","election_data_grabber.adapters.clarity:discover_clarity_downloads"
     if family in {"scytl","electionware","results_portal","structured_web"} and artifact is None:
         return family,"election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
