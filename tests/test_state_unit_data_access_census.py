@@ -24,8 +24,8 @@ def test_census_separates_admin_reporting_and_access_dimensions():
     assert mi["data_access_families"] != "none"
 
 
-def test_unresolved_states_still_show_denominator_even_before_enumeration():
+def test_wisconsin_source_reconciled_municipal_and_county_denominator():
     rows=build_census(ROOT)
     wi=next(r for r in rows if r["state"]=="WI")
-    assert wi["expected_primary_units"]=="1850"
-    assert int(wi["enumerated_primary_units"]) <= 1850
+    assert wi["expected_primary_units"]=="1921"
+    assert int(wi["enumerated_primary_units"]) == 1921
