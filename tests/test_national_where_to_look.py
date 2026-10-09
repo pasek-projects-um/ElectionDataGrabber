@@ -18,8 +18,8 @@ def test_compiler_keeps_multiple_page_roles_and_exposes_gaps(tmp_path: Path):
     ):
         (tmp_path/name).write_text(header+"\n")
     rows,gaps,summary=build(tmp_path)
-    assert summary["candidate_pages"]==3
+    assert summary["candidate_pages"]==4
     assert summary["localities_without_registered_url"]==1
-    assert gaps[0]["jurisdiction_id"]=="us:mi:county:beta"
+    assert gaps[0]["jurisdiction_id"]=="us:mi:county:beta"\n    assert gaps[0]["gap"]=="state_fallback_only"\n    assert summary["localities_without_any_start"]==0\n    assert any(row["jurisdiction_id"]=="us:mi:county:beta" and row["verification_status"]=="fallback_unverified_for_locality" for row in rows)
     assert {row["page_role"] for row in rows}=={
-        "historical_or_final_results","election_night_lead","state_election_authority"}
+        "historical_or_final_results","election_night_lead","state_election_authority","state_directory_fallback"}
