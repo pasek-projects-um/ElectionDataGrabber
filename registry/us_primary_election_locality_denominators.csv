@@ -1,52 +1,52 @@
 state,expected_primary_units,authority_model,effective_from,effective_to,estimate_status,evidence_url,evidence_method,notes
-AK,1,"state/election-region",,,provisional,,migrated_from_existing_tracker,"state-administered; provisional"
-HI,4,"state+county",,,provisional,,migrated_from_existing_tracker,"four county election divisions"
-LA,64,"parish",,,provisional,,migrated_from_existing_tracker,"64 parishes"
-MA,351,"municipal",,,provisional,,migrated_from_existing_tracker,"351 cities and towns"
-MD,24,"county+independent-city",,,provisional,,migrated_from_existing_tracker,"23 counties plus Baltimore City"
-MN,87,"state+county/local",,,provisional,,migrated_from_existing_tracker,"87 counties; local layer may expand"
-MO,116,"local-election-authority",,,provisional,,migrated_from_existing_tracker,"provisional local authority count"
-ND,53,"county+state",,,provisional,,migrated_from_existing_tracker,"53 counties"
-NH,234,"town+ward",,,provisional,,migrated_from_existing_tracker,"municipal baseline; wards may expand"
-NJ,21,"county+municipal/election-district",,,provisional,,migrated_from_existing_tracker,"21 county primary authorities"
-NM,33,"county+state",,,provisional,,migrated_from_existing_tracker,"33 counties"
-NY,58,"county+board-of-elections",,,provisional,,migrated_from_existing_tracker,"county BOEs with multi-county NYC board; provisional"
-OR,36,"county",,,provisional,,migrated_from_existing_tracker,"36 counties"
-RI,39,"state+municipal",,,provisional,,migrated_from_existing_tracker,"39 municipalities"
-SC,46,"county+state",,,provisional,,migrated_from_existing_tracker,"46 counties"
-VA,133,"county+independent-city",,,provisional,,migrated_from_existing_tracker,"counties and independent cities; provisional"
-VT,247,"town",,,provisional,,migrated_from_existing_tracker,"town/city baseline; provisional"
-WI,1850,"municipal+county",,,provisional,,migrated_from_existing_tracker,"state clerk-directory working estimate"
-AL,67,"county",,,provisional,,migrated_from_existing_tracker,"67 counties"
-AZ,15,"county",,,provisional,,migrated_from_existing_tracker,"15 counties"
-GA,159,"county",,,provisional,,migrated_from_existing_tracker,"159 counties"
-IA,99,"county",,,provisional,,migrated_from_existing_tracker,"99 county auditors"
-KS,105,"county",,,provisional,,migrated_from_existing_tracker,"105 counties"
-KY,120,"county",,,provisional,,migrated_from_existing_tracker,"120 counties"
-MI,83,county,,,high_confidence,,existing_mi_county_authority_registry,"83 county authorities enumerated in repository registry"
-OH,88,county,,,high_confidence,,existing_oh_county_authority_registry,"88 county boards of elections enumerated in repository registry"
+AK,1,state/election-region,,,provisional,,migrated_from_existing_tracker,state-administered; provisional
+HI,4,state+county,,,provisional,,migrated_from_existing_tracker,four county election divisions
+LA,64,parish,,,provisional,,migrated_from_existing_tracker,64 parishes
+MA,351,municipal,,,provisional,,migrated_from_existing_tracker,351 cities and towns
+MD,24,county+independent-city,,,provisional,,migrated_from_existing_tracker,23 counties plus Baltimore City
+MN,87,state+county/local,,,provisional,,migrated_from_existing_tracker,87 counties; local layer may expand
+MO,116,local-election-authority,,,provisional,,migrated_from_existing_tracker,provisional local authority count
+ND,53,county+state,,,provisional,,migrated_from_existing_tracker,53 counties
+NH,234,town+ward,,,provisional,,migrated_from_existing_tracker,municipal baseline; wards may expand
+NJ,21,county+municipal/election-district,,,provisional,,migrated_from_existing_tracker,21 county primary authorities
+NM,33,county+state,,,provisional,,migrated_from_existing_tracker,33 counties
+NY,58,county+board-of-elections,,,provisional,,migrated_from_existing_tracker,county BOEs with multi-county NYC board; provisional
+OR,36,county,,,provisional,,migrated_from_existing_tracker,36 counties
+RI,39,state+municipal,,,provisional,,migrated_from_existing_tracker,39 municipalities
+SC,46,county+state,,,provisional,,migrated_from_existing_tracker,46 counties
+VA,133,county+independent-city,,,provisional,,migrated_from_existing_tracker,counties and independent cities; provisional
+VT,247,town,,,provisional,,migrated_from_existing_tracker,town/city baseline; provisional
+WI,1921,municipal+county,,,provisional,https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/ArcGIS/rest/services/WI_Cities_Towns_and_Villages_Current/FeatureServer/0,2026_wi_ltsb_1849_municipalities_plus_72_counties,Provisional authority model: 1849 unique cities/towns/villages + 72 county clerks; deduplicate overlapping geography; these are named candidates not verified local result endpoints.
+AL,67,county,,,provisional,,migrated_from_existing_tracker,67 counties
+AZ,15,county,,,provisional,,migrated_from_existing_tracker,15 counties
+GA,159,county,,,provisional,,migrated_from_existing_tracker,159 counties
+IA,99,county,,,provisional,,migrated_from_existing_tracker,99 county auditors
+KS,105,county,,,provisional,,migrated_from_existing_tracker,105 counties
+KY,120,county,,,provisional,,migrated_from_existing_tracker,120 counties
+MI,83,county,,,high_confidence,,existing_mi_county_authority_registry,83 county authorities enumerated in repository registry
+OH,88,county,,,high_confidence,,existing_oh_county_authority_registry,88 county boards of elections enumerated in repository registry
 CT,169,municipality,,,high_confidence,,historical_ct_town_registry,"169 towns; historical counties retained only as metadata, not denominator units"
-PA,67,county,,,high_confidence,,historical_pa_county_registry,"67 counties; statewide bulk results provide final-result floor"
-ME,350,municipality,,,high_confidence,,existing_me_locality_registry,"350 municipality/plantation locality candidates enumerated in repository; ward/precinct reporting topology excluded from denominator"
-AR,75,county,,,provisional,,national_first_pass_2026,"75 counties; county administration baseline"
-CA,58,county,,,provisional,,national_first_pass_2026,"58 county election offices"
-CO,64,county,,,provisional,,national_first_pass_2026,"64 counties; county clerk baseline"
-DE,3,county+state,,,provisional,,national_first_pass_2026,"3 counties; elections substantially state-administered"
-FL,67,county,,,provisional,,national_first_pass_2026,"67 county supervisors of elections"
-ID,44,county,,,provisional,,national_first_pass_2026,"44 counties"
-IL,108,local-election-authority,,,provisional,,national_first_pass_2026,"County clerks plus separate election commissions; denominator provisional"
-IN,92,county,,,provisional,,national_first_pass_2026,"92 counties"
-MS,82,county,,,provisional,,national_first_pass_2026,"82 counties"
-MT,56,county,,,provisional,,national_first_pass_2026,"56 counties"
-NE,93,county,,,provisional,,national_first_pass_2026,"93 counties"
-NV,17,county+independent-city,,,provisional,,national_first_pass_2026,"16 counties plus Carson City"
-NC,100,county+state,,,provisional,,national_first_pass_2026,"100 county boards of elections"
-OK,77,county,,,provisional,,national_first_pass_2026,"77 county election boards"
-SD,66,county,,,provisional,,national_first_pass_2026,"66 counties"
-TN,95,county,,,provisional,,national_first_pass_2026,"95 county election commissions"
-TX,254,county,,,provisional,,national_first_pass_2026,"254 counties"
-UT,29,county,,,provisional,,national_first_pass_2026,"29 counties"
-WA,39,county,,,provisional,,national_first_pass_2026,"39 county election offices"
-WV,55,county,,,provisional,,national_first_pass_2026,"55 counties"
-WY,23,county,,,provisional,,national_first_pass_2026,"23 counties"
-DC,1,district,,,provisional,,national_first_pass_2026,"Single district election authority"
+PA,67,county,,,high_confidence,,historical_pa_county_registry,67 counties; statewide bulk results provide final-result floor
+ME,350,municipality,,,high_confidence,,existing_me_locality_registry,350 municipality/plantation locality candidates enumerated in repository; ward/precinct reporting topology excluded from denominator
+AR,75,county,,,provisional,,national_first_pass_2026,75 counties; county administration baseline
+CA,58,county,,,provisional,,national_first_pass_2026,58 county election offices
+CO,64,county,,,provisional,,national_first_pass_2026,64 counties; county clerk baseline
+DE,3,county+state,,,provisional,,national_first_pass_2026,3 counties; elections substantially state-administered
+FL,67,county,,,provisional,,national_first_pass_2026,67 county supervisors of elections
+ID,44,county,,,provisional,,national_first_pass_2026,44 counties
+IL,108,local-election-authority,,,provisional,,national_first_pass_2026,County clerks plus separate election commissions; denominator provisional
+IN,92,county,,,provisional,,national_first_pass_2026,92 counties
+MS,82,county,,,provisional,,national_first_pass_2026,82 counties
+MT,56,county,,,provisional,,national_first_pass_2026,56 counties
+NE,93,county,,,provisional,,national_first_pass_2026,93 counties
+NV,17,county+independent-city,,,provisional,,national_first_pass_2026,16 counties plus Carson City
+NC,100,county+state,,,provisional,,national_first_pass_2026,100 county boards of elections
+OK,77,county,,,provisional,,national_first_pass_2026,77 county election boards
+SD,66,county,,,provisional,,national_first_pass_2026,66 counties
+TN,95,county,,,provisional,,national_first_pass_2026,95 county election commissions
+TX,254,county,,,provisional,,national_first_pass_2026,254 counties
+UT,29,county,,,provisional,,national_first_pass_2026,29 counties
+WA,39,county,,,provisional,,national_first_pass_2026,39 county election offices
+WV,55,county,,,provisional,,national_first_pass_2026,55 counties
+WY,23,county,,,provisional,,national_first_pass_2026,23 counties
+DC,1,district,,,provisional,,national_first_pass_2026,Single district election authority
