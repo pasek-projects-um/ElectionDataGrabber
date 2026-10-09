@@ -302,6 +302,8 @@ def main():
     summary = {
         "shard": args.shard, "shards": args.shards, "localities": len(rows),
         "historically_verified_sources": sum(bool(v["ever_verified"]) for v in ledger.values()),
+        "stale_verified_sources": sum(bool(v["ever_verified"] and not v["currently_reachable"]) for v in ledger.values()),
+        "unverified_discovered_sources": sum(not v["ever_verified"] for v in ledger.values()),
         "currently_reachable_verified_sources": sum(bool(v["ever_verified"] and v["currently_reachable"]) for v in ledger.values()),
         "artifact_audits": len(audits),
         "authority_resolved": len({x["locality"] for x in audits if x["resolved_authority"]}),
