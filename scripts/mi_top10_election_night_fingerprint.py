@@ -22,7 +22,7 @@ HOST_FAMILIES=[
  ("civicplus",re.compile(r"civicplus|civicengage",re.I)),
 ]
 DATA_HINT=re.compile(r"(\\.json(?:\\?|$)|\\.csv(?:\\?|$)|\\.xml(?:\\?|$)|api/|results?|precinct|reporting)",re.I)
-LINK_HINT=re.compile(r"(result|election|enhanced|clarity|report)",re.I)
+LINK_HINT=re.compile(r"(results?|election|enhanced|clarity|report)",re.I)
 LINK_RE=re.compile(r'''href\\s*=\\s*["']([^"']+)["']''',re.I)
 FIELDS=("county","url","host","platform_family","content_type","data_hints","precinct_token","reporting_token","timestamp_token","vote_mode_token","discovery_origin","probe_status","http_status","error_class")
 VENDOR_FAMILIES={"enhanced_voting","election_reporting","clarity","scytl"}
