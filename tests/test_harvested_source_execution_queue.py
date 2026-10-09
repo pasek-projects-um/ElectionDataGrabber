@@ -27,3 +27,9 @@ def test_existing_adapter_families_are_promoted_to_adapter_candidate():
     clarity=[r for r in rows if r["parser_family"]=="clarity"]
     assert clarity
     assert all(r["execution_stage"]=="adapter_candidate" for r in clarity)
+
+
+def test_results_public_path_is_not_clarity():
+    family,parser=classify_family("https://results.sos.ga.gov/results/public/Georgia")
+    assert family=="results_portal"
+    assert parser==""

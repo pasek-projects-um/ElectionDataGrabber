@@ -81,6 +81,24 @@ def execute_supported_body(
                 snapshot_sha256=snapshot_sha256(body),
                 failure_class="invalid_json_payload",
             )
+    # A valid JSON document is not necessarily the generic reporting-unit schema.
+    # Treat vendor arrays and incompatible objects as execution residuals rather
+    # than passing them to an adapter that assumes a mapping.
+    if parser is parse_generic_results_json and (
+        not isinstance(payload, dict)
+        or not isinstance(payload.get("reporting_units"), list)
+        or any(not isinstance(unit, dict) for unit in payload["reporting_units"])
+    ):
+        return SourceExecutionEvidence(
+            state=manifest_row["state"],
+            result_url=manifest_row["result_url"],
+            access_family=family,
+            parser=parser_path,
+            stage=ExecutionStage.PARSER_SELECTED,
+            smallest_observed_unit=manifest_row.get("smallest_observed_unit", "unknown"),
+            snapshot_sha256=snapshot_sha256(body),
+            failure_class="unsupported_json_schema",
+        )
     kwargs = {
         "election_id": election_id,
         "jurisdiction_id": jurisdiction_id,

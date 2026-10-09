@@ -13,8 +13,10 @@ def read_rows(path: Path) -> list[dict[str,str]]:
 def classify_family(url: str) -> tuple[str,str]:
     host=(urlparse(url).hostname or "").lower()
     path=urlparse(url).path.lower()
-    if "clarityelections.com" in host or "/results/public/" in path:
+    if "clarityelections.com" in host:
         return "clarity","clarity"
+    if "/results/public/" in path:
+        return "results_portal",""
     if "electionresults." in host or "results." in host or host.startswith("enr."):
         return "results_portal",""
     if path.endswith(".csv") or "export" in path or "mediafiles" in path:
