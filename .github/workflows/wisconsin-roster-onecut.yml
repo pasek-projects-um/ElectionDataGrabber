@@ -1,9 +1,5 @@
 name: Wisconsin one-cut roster ingestion
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/wisconsin-roster-onecut.yml'
-      - 'scripts/ingest_wisconsin_ltsb_roster.py'
   workflow_dispatch:
 permissions:
   contents: write
