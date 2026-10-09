@@ -32,7 +32,10 @@ def expand(root: Path, gazetteer_bytes: bytes):
         denominator = {row["state"]: row for row in csv.DictReader(f)}
     with (root / "us_primary_election_localities.csv").open(newline="", encoding="utf-8-sig") as f:
         current = list(csv.DictReader(f))
-    existing = {(row["state"], row["canonical_name"].strip().casefold()) for row in current}
+    def normalized(name):
+        return re.sub(r"\\s+(county|parish|borough|census area)$", "", name.strip(), flags=re.I).casefold()
+
+    existing = {(row["state"], normalized(row["canonical_name"])) for row in current}
     with zipfile.ZipFile(io.BytesIO(gazetteer_bytes)) as zf:
         txt = next(name for name in zf.namelist() if name.lower().endswith(".txt"))
         source = list(csv.DictReader(io.StringIO(zf.read(txt).decode("utf-8-sig")), delimiter="\t"))
@@ -47,7 +50,7 @@ def expand(root: Path, gazetteer_bytes: bytes):
         name = row["NAME"].strip()
         if not re.fullmatch(r"\d{5}", geoid) or not name:
             continue
-        if (state, name.casefold()) in existing:
+        if (state, normalized(name)) in existing:
             continue
         if per_state[state] >= int(d["expected_primary_units"]):
             continue
@@ -63,7 +66,7 @@ def expand(root: Path, gazetteer_bytes: bytes):
                     notes=f"2025 Census Gazetteer county-equivalent; official election authority not yet verified. {CENSUS_URL}")
         current.append(item)
         added.append(item)
-        existing.add((state, name.casefold()))
+        existing.add((state, normalized(name)))
         per_state[state] += 1
     return current, added
 
