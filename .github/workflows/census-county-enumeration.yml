@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/census-county-enumeration.yml'
       - 'scripts/expand_census_county_starts.py'
+      - 'tests/test_expand_census_county_starts.py'
 permissions:
   contents: write
 jobs:
