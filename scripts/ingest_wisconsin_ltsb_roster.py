@@ -55,6 +55,15 @@ def main():
         for ident in ("GEOID","MCD_FIPS","FIPS6","DOA","DOR","DOT","MCD_NAME","LABEL"):
             vals=[str(v.get(ident) or "").strip() for v in names_by_id.values()]
             print(f"WI uniqueness {ident}: {len(set(vals))} distinct over {len(vals)} records, {sum(not v for v in vals)} blank")
+        for ident in ("FIPS6","DOA"):
+            groups={}
+            for attr in names_by_id.values():
+                v=str(attr.get(ident) or "").strip()
+                groups.setdefault(v,[]).append(attr)
+            print(f"WI {ident} blank samples:",[(x.get("CNTY_NAME"),x.get("LABEL"),x.get("MCD_FIPS")) for x in groups.get("",[])[:16]])
+            print(f"WI {ident} repeated nonblank key samples:",
+                  [(k, [(x.get("CNTY_NAME"),x.get("LABEL")) for x in v[:4]])
+                    for k,v in groups.items() if k and len(v)>1][:18])
         print("WI selected name field",primary)
         unique={}
         for k,attr in names_by_id.items():
