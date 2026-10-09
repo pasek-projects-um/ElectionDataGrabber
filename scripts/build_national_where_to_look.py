@@ -85,7 +85,9 @@ def build(root: Path):
            "gap":"no_registered_local_url"}
           for jid,(s,level,name) in sorted(jurisdictions.items()) if jid not in represented]
     summary={"known_locality_jurisdictions":len(jurisdictions),
-             "localities_without_registered_url":len(gaps),\n             "localities_without_any_start":sum(g["gap"]=="no_starting_url" for g in gaps),\n             "localities_using_state_fallback":sum(g["gap"]=="state_fallback_only" for g in gaps),
+             "localities_without_registered_url":len(gaps),
+             "localities_without_any_start":sum(g["gap"]=="no_starting_url" for g in gaps),
+             "localities_using_state_fallback":sum(g["gap"]=="state_fallback_only" for g in gaps),
              "candidate_pages":len(rows),
              "states_with_candidates":len({row["state"] for row in rows}),
              "roles":dict(Counter(row["page_role"] for row in rows))}
