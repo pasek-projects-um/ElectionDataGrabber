@@ -5,12 +5,18 @@ on:
       - "registry/me_locality_authorities.csv"
       - "registry/me_locality_capabilities.csv"
       - "scripts/audit_maine_end_to_end.py"
+      - "src/election_data_grabber/source_reliability.py"
+      - "tests/test_source_reliability.py"
       - "scripts/triage_maine_pending.py"
       - "tests/test_maine_end_to_end_audit.py"
       - ".github/workflows/me-end-to-end-audit.yml"
   workflow_dispatch:
   schedule:
     - cron: "23 7 * * *"
+
+permissions:
+  contents: read
+  actions: read
 
 jobs:
   validate:
@@ -24,7 +30,7 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_maine_end_to_end_audit.py tests/test_artifact_auditor.py tests/test_authority_resolver.py tests/test_me_d_families.py
+      - run: pytest -q tests/test_maine_end_to_end_audit.py tests/test_source_reliability.py tests/test_artifact_auditor.py tests/test_authority_resolver.py tests/test_me_d_families.py
 
   audit:
     needs: validate
@@ -44,7 +50,22 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e .
-      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json
+      - name: Restore previous source ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p audit
+          previous_run=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "me-end-to-end-audit.yml" --branch main --status success --limit 1 --json databaseId --jq ".[0].databaseId" || true)
+          if [ -n "$previous_run" ]; then
+            gh run download "$previous_run" --repo "$GITHUB_REPOSITORY" --name "maine-audit-${{ matrix.shard }}" --dir previous-ledger || true
+          fi
+          if [ -f "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" ]; then
+            cp "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" "audit/previous-ledger.json"
+          fi
+          if [ ! -f audit/previous-ledger.json ]; then
+            printf "[]\\n" > audit/previous-ledger.json
+          fi
+      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json --source-ledger-in audit/previous-ledger.json --source-ledger-out audit/maine-source-ledger-${{ matrix.shard }}.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

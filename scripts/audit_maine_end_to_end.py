@@ -7,6 +7,8 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict
 from pathlib import Path
+from datetime import datetime, timezone
+from election_data_grabber.source_reliability import canonical_url, load_ledger, save_ledger, merge_source_observation
 from urllib.parse import urlparse
 
 import httpx
@@ -230,6 +232,8 @@ def main():
     ap.add_argument("--shard", type=int, default=0)
     ap.add_argument("--shards", type=int, default=1)
     ap.add_argument("--max-artifacts", type=int, default=2)
+    ap.add_argument("--source-ledger-in", type=Path, help="Previously persisted verified-source ledger")
+    ap.add_argument("--source-ledger-out", type=Path, help="Write updated source ledger")
     args = ap.parse_args()
 
     with args.registry.open(encoding="utf-8-sig") as f:
@@ -255,6 +259,31 @@ def main():
             done += 1
             print(f"[{done}/{len(rows)}] {locality} -> {[(x['audit_status'], x['provisional_portability']) for x in result]}")
 
+    # Persist source identities independently of the volatile current audit snapshot.
+    # A fetched authority page is not proof of an election-results artifact.
+    ledger = load_ledger(args.source_ledger_in) if args.source_ledger_in else {}
+    observed_at = datetime.now(timezone.utc).isoformat()
+    for item in audits:
+        locality_key = "us:me:" + ":".join(
+            re.sub(r"[^a-z0-9]+", "-", value.strip().lower()).strip("-")
+            for value in (item["county"], item["locality"])
+        )
+        # Record artifact observations only: authority/home pages alone do not
+        # establish election-result coverage.
+        url = item["artifact_url"]
+        if not url:
+            continue
+        status = item["audit_status"]
+        verified = status == "parsed"  # Partial/placeholder evidence is not verified ingestion
+        failure = "" if verified else ("artifact_fetch_failed" if status == "artifact_fetch_failed" else f"audit_{status}")
+        key = (locality_key, canonical_url(url))
+        ledger[key] = merge_source_observation(
+            ledger.get(key), jurisdiction_id=locality_key, source_url=url,
+            verified=verified, observed_at=observed_at, failure_class=failure,
+        )
+    if args.source_ledger_out:
+        save_ledger(args.source_ledger_out, ledger)
+
     fields = [
         "locality","county","authority_seed","resolved_authority","artifact_url","artifact_kind",
         "audit_status","result_rows","reporting_units","contests","has_text_layer",
@@ -272,6 +301,10 @@ def main():
             locality_best[x["locality"]] = x["provisional_portability"]
     summary = {
         "shard": args.shard, "shards": args.shards, "localities": len(rows),
+        "historically_verified_sources": sum(bool(v["ever_verified"]) for v in ledger.values()),
+        "stale_verified_sources": sum(bool(v["ever_verified"] and not v["currently_reachable"]) for v in ledger.values()),
+        "unverified_discovered_sources": sum(not v["ever_verified"] for v in ledger.values()),
+        "currently_reachable_verified_sources": sum(bool(v["ever_verified"] and v["currently_reachable"]) for v in ledger.values()),
         "artifact_audits": len(audits),
         "authority_resolved": len({x["locality"] for x in audits if x["resolved_authority"]}),
         "artifact_found": len({x["locality"] for x in audits if x["artifact_url"]}),
