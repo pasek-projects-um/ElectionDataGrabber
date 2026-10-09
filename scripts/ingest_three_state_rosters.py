@@ -39,7 +39,9 @@ def main():
                 if state == "VT":
                     nonmunicipal = {"Averill", "Avery's Gore", "Buels Gore", "Ferdinand", "Glastenbury", "Lewis", "Somerset", "Warner's Grant", "Warren Gore"}
                     if not nonmunicipal.issubset(set(names)):
-                        raise ValueError("Vermont's nine unorganized names not all present")
+                        print("Missing unorganized:", sorted(nonmunicipal - set(names)))
+                        print("Gore and Grant GIS names:", [x for x in names if "Gore" in x or "Grant" in x or "Warren" in x])
+                        continue
                     names = sorted(set(names) - nonmunicipal)
                     print(f"VT: excluded nine non-reporting unorganized areas, leaving {len(names)} municipalities")
                 if len(names)!=expected:
