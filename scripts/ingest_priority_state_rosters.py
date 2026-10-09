@@ -78,6 +78,9 @@ def main():
                 ("city", "town", "cities", "towns")]
     nh_names = sorted({str(x["NAME"]).strip() for x in eligible if x.get("NAME")})
     if len(nh_names) != 234:
+        from collections import Counter as _Counter
+        print(f"NH GIS classified values: {dict(_Counter((str(x.get(chr(67)+chr(73)+chr(84)+chr(89)+chr(84)+chr(79)+chr(87)+chr(78))), str(x.get(chr(78)+chr(79)+chr(78)+chr(95)+chr(65)+chr(84)+chr(84)+chr(95)+chr(65)+chr(82)+chr(69)+chr(65)))) for x in nh))}")
+        print(f"NH GIS examples: {[(x.get(chr(78)+chr(65)+chr(77)+chr(69)), x.get(chr(67)+chr(73)+chr(84)+chr(89)+chr(84)+chr(79)+chr(87)+chr(78)), x.get(chr(78)+chr(79)+chr(78)+chr(95)+chr(65)+chr(84)+chr(84)+chr(95)+chr(65)+chr(82)+chr(69)+chr(65))) for x in nh[:12]]}")
         print(f"NH official GIS city/town filter returned {len(nh_names)} rather than 234; no speculative NH names imported")
     else:
         for name in nh_names:
