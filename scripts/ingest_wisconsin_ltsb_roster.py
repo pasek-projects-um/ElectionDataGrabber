@@ -85,17 +85,64 @@ def main():
             unique.setdefault(name,[]).append(attr)
         print(f"WI raw polygons={count}; unique labels={len(unique)}; duplicate label samples",
               [(n,len(v)) for n,v in unique.items() if len(v)>1][:12])
-        if len(unique)>EXPECTED:
-            print(f"WI unique municipality labels {len(unique)} > provisional denominator {EXPECTED}; no truncation");return
-        additions=0
-        for name in sorted(unique):
-            key=re.sub(r"[^a-z0-9]+","-",name.lower()).strip("-")
-            if append_unique(rows,"WI",name,"municipality",key,
-                             f"{BASE}; Wisconsin LTSB July 2026; official clerk directory {DIRECTORY}"):
-                additions+=1
+        # One town-name per county; cities and villages spanning county lines
+        # are one municipality.  Preserve county authorities as a separate
+        # level rather than embedding them in a fictitious 1850-unit total.
+        counties=sorted({str(x.get("CNTY_NAME") or "").strip() for x in names_by_id.values()})
+        if len(grouped)!=1849 or len(counties)!=72 or any(not x for x in counties):
+            raise ValueError(f"WI official roster unexpectedly {len(grouped)} municipalities/{len(counties)} counties")
+        expected_all=len(grouped)+len(counties)
+        # This script owns only the newly generated, still-unresolved WI
+        # candidates; do not delete independently verified/source-linked rows.
+        prior=[x for x in rows if x["state"]=="WI"]
+        if any(x.get("coverage_status")!="enumerated_unresolved" or x.get("final_source_id") or
+               x.get("election_night_source_id") for x in prior):
+            raise ValueError("WI existing linked/verified rows require manual crosswalk before replacement")
+        rows=[x for x in rows if x["state"]!="WI"]
+        for (typ,county,name),items in sorted(grouped.items()):
+            level={"C":"city","T":"town","V":"village"}[typ]
+            label=str(items[0].get("MCD_NAME") or "").strip().title()
+            parent=county.title() if county else ""
+            full=f"{level.title()} of {label}" + (f" ({parent} County)" if typ=="T" else "")
+            suffix=re.sub(r"[^a-z0-9]+","-",f"{typ}-{county}-{name}").strip("-")
+            item=dict.fromkeys(FIELDS,"")
+            item.update(jurisdiction_id=f"us:wi:ltsb2026:{suffix}",state="WI",
+                jurisdiction_level=level,canonical_name=full,
+                external_id_namespace="wi_ltsb_ctv_july_2026",
+                external_id="|".join(sorted(str(i.get("GEOID")) for i in items)),
+                id_status="state_official_2026_gis",coverage_status="enumerated_unresolved",
+                final_capable="false",election_night_capable="false",
+                assessment_method="2026_wi_ltsb_municipal_boundary_gis",
+                assessment_status="enumerated_not_source_verified",
+                notes=f"WI LTSB July 2026 city/town/village boundary; source={BASE}; county fragments={len(items)}; local election results not verified; clerk directory={DIRECTORY}")
+            rows.append(item)
+        for county in counties:
+            suffix=re.sub(r"[^a-z0-9]+","-",county.lower()).strip("-")
+            item=dict.fromkeys(FIELDS,"")
+            item.update(jurisdiction_id=f"us:wi:ltsb2026:county-{suffix}",state="WI",
+                jurisdiction_level="county",canonical_name=f"{county.title()} County",
+                external_id_namespace="wi_ltsb_2026_county_name",
+                external_id=county,id_status="state_official_2026_gis",
+                coverage_status="enumerated_unresolved",final_capable="false",
+                election_night_capable="false",
+                assessment_method="2026_wi_ltsb_municipal_boundary_gis_counties",
+                assessment_status="enumerated_not_source_verified",
+                notes=f"WI county-level election administration layer, deduplicated county name from LTSB municipal GIS: {BASE}; direct result URL not verified.")
+            rows.append(item)
         with (root/"us_primary_election_localities.csv").open("w",newline="",encoding="utf-8") as f:
             w=csv.DictWriter(f,fieldnames=FIELDS);w.writeheader();w.writerows(rows)
-        print(f"WI imported {additions} unique official GIS municipality labels; remaining provisional gap {EXPECTED-additions}; no local results verified")
+        denominator=root/"us_primary_election_locality_denominators.csv"
+        with denominator.open(newline="",encoding="utf-8-sig") as f:
+            dr=csv.DictReader(f);columns=dr.fieldnames;all_den=list(dr)
+        wi=[x for x in all_den if x["state"]=="WI"]
+        if len(wi)!=1 or int(wi[0]["expected_primary_units"]) not in (1850,expected_all):
+            raise ValueError("WI historical denominator changed unexpectedly")
+        wi[0].update(expected_primary_units=str(expected_all),
+            evidence_url=BASE,evidence_method="2026_wi_ltsb_1849_municipalities_plus_72_counties",
+            notes="Provisional authority model: 1849 unique cities/towns/villages + 72 county clerks; deduplicate overlapping geography; these are named candidates not verified local result endpoints.")
+        with denominator.open("w",newline="",encoding="utf-8") as f:
+            w=csv.DictWriter(f,fieldnames=columns);w.writeheader();w.writerows(all_den)
+        print(f"WI imported {len(grouped)} municipality plus {len(counties)} county named candidates; {expected_all} WI records; 0 unnamed against revised, source-backed provisional WI denominator")
 
 if __name__=="__main__":
     main()
