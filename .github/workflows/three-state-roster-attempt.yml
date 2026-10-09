@@ -1,5 +1,8 @@
 name: Three-state bounded roster attempt
 on:
+  pull_request:
+    paths:
+      - 'scripts/ingest_three_state_rosters.py'
   workflow_dispatch:
 permissions:
   contents: write
