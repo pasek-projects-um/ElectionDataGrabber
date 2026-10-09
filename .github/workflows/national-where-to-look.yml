@@ -4,6 +4,10 @@ on:
   pull_request:
     paths:
       - "scripts/build_national_where_to_look.py"
+      - "scripts/audit_national_starting_point_coverage.py"
+      - "tests/test_national_starting_point_coverage.py"
+      - "scripts/wayback_starting_point_leads.py"
+      - "tests/test_wayback_starting_point_leads.py"
       - "tests/test_national_where_to_look.py"
       - "registry/**"
       - ".github/workflows/national-where-to-look.yml"
@@ -21,9 +25,12 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_national_where_to_look.py
+      - run: pytest -q tests/test_national_where_to_look.py tests/test_national_starting_point_coverage.py tests/test_wayback_starting_point_leads.py
       - run: python scripts/build_national_where_to_look.py
+      - run: python scripts/audit_national_starting_point_coverage.py
       - uses: actions/upload-artifact@v4
         with:
           name: national-where-to-look-inventory
-          path: audit/national-where-to-look*
+          path: |
+            audit/national-where-to-look*
+            audit/national-starting-point*
