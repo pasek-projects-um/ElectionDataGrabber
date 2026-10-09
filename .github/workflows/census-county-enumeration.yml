@@ -1,6 +1,10 @@
 name: Census county enumeration sprint
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/census-county-enumeration.yml'
+      - 'scripts/expand_census_county_starts.py'
 permissions:
   contents: write
 jobs:
