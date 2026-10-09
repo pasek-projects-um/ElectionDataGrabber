@@ -93,3 +93,21 @@ def test_enhanced_voting_preferred_over_generic_download_route():
     })
     assert family == "enhanced_voting"
     assert parser.endswith(":parse_enhanced_voting_html")
+
+
+def test_clarity_xml_artifact_routes_to_normalized_precinct_parser():
+    family, parser = readiness_route({
+        "platform_family": "clarity",
+        "discovered_artifacts": "https://results.enr.clarityelections.com/MI/Example/123/detail.xml",
+    })
+    assert family == "clarity_xml"
+    assert parser == "election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml"
+
+
+def test_clarity_without_xml_retains_platform_discovery():
+    family, parser = readiness_route({
+        "platform_family": "Clarity ",
+        "discovered_artifacts": "https://example.gov/results.csv",
+    })
+    assert family == "clarity"
+    assert parser.endswith("clarity:discover_clarity_downloads")
