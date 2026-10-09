@@ -17,13 +17,13 @@ TARGETS={"Berrien","Eaton","Alpena","Newaygo","Schoolcraft","Washtenaw","Kent","
 HOST_FAMILIES=[
  ("enhanced_voting",re.compile(r"enhancedvoting",re.I)),
  ("election_reporting",re.compile(r"electionreporting",re.I)),
- ("clarity",re.compile(r"clarity|enr\\.clarity",re.I)),
+ ("clarity",re.compile(r"clarity|enr\.clarity",re.I)),
  ("scytl",re.compile(r"scytl",re.I)),
  ("civicplus",re.compile(r"civicplus|civicengage",re.I)),
 ]
-DATA_HINT=re.compile(r"(\\.json(?:\\?|$)|\\.csv(?:\\?|$)|\\.xml(?:\\?|$)|api/|results?|precinct|reporting)",re.I)
+DATA_HINT=re.compile(r"(\.json(?:\?|$)|\.csv(?:\?|$)|\.xml(?:\?|$)|api/|results?|precinct|reporting)",re.I)
 LINK_HINT=re.compile(r"(results?|election|enhanced|clarity|report)",re.I)
-LINK_RE=re.compile(r'''href\\s*=\\s*["']([^"']+)["']''',re.I)
+LINK_RE=re.compile(r'''href\s*=\s*["']([^"']+)["']''',re.I)
 FIELDS=("county","url","host","platform_family","content_type","data_hints","precinct_token","reporting_token","timestamp_token","vote_mode_token","discovery_origin","probe_status","http_status","error_class")
 VENDOR_FAMILIES={"enhanced_voting","election_reporting","clarity","scytl"}
 HEADERS={"User-Agent":"ElectionDataGrabber/0.1 (+academic election research)"}
@@ -35,8 +35,8 @@ def family(url,body=""):
     return "unknown_web"
 
 def hints(body,base_host):
-    urls=set(re.findall(r'''https?://[^\\s'"<>]+''',body))
-    rel=re.findall(r'''["']([^"']+(?:\\.json|\\.csv|\\.xml|api/[^"']+))''',body,re.I)
+    urls=set(re.findall(r'''https?://[^\s'"<>]+''',body))
+    rel=re.findall(r'''["']([^"']+(?:\.json|\.csv|\.xml|api/[^"']+))''',body,re.I)
     urls.update(rel)
     return sorted(u for u in urls if DATA_HINT.search(u))[:30]
 
