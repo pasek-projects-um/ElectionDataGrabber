@@ -80,7 +80,7 @@ def main():
     nh_response.raise_for_status()
     nh_csv = list(csv.reader(io.StringIO(nh_response.content.decode("utf-8-sig"))))
     print(f"NH official municipality CSV header/sample: {nh_csv[:3]}")
-    nh_names = sorted({str(row[0]).strip() for row in nh_csv[1:] if row and row[0].strip()})
+    nh_names = sorted({str(row[0]).strip() for row in nh_csv if row and row[0].strip()})
     if len(nh_names) != 234:
         print(f"NH government CSV returned {len(nh_names)} rather than 234; no speculative NH records imported")
     else:
