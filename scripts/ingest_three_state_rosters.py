@@ -36,6 +36,12 @@ def main():
                 features=payload.get("features",[])
                 names=sorted({str(x["attributes"].get(field,"")).strip() for x in features if x.get("attributes",{}).get(field)})
                 print(f"{state} official GIS: {len(features)} features; {len(names)} names; sample attributes {features[0]['attributes'] if features else {}}")
+                if state == "VT":
+                    nonmunicipal = {"Averill", "Avery's Gore", "Buels Gore", "Ferdinand", "Glastenbury", "Lewis", "Somerset", "Warner's Grant", "Warren Gore"}
+                    if not nonmunicipal.issubset(set(names)):
+                        raise ValueError("Vermont's nine unorganized names not all present")
+                    names = sorted(set(names) - nonmunicipal)
+                    print(f"VT: excluded nine non-reporting unorganized areas, leaving {len(names)} municipalities")
                 if len(names)!=expected:
                     print(f"{state} DEFERRED: GIS roster count {len(names)} != expected {expected}; sample names {names[:12]}; do not guess")
                     continue
