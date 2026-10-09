@@ -52,6 +52,9 @@ def main():
         if len(names_by_id)!=count:
             print(f"WI fetched {len(names_by_id)}/{count}; no partial import");return
         print("WI sample GIS features",list(names_by_id.values())[:3])
+        for ident in ("GEOID","MCD_FIPS","FIPS6","DOA","DOR","DOT","MCD_NAME","LABEL"):
+            vals=[str(v.get(ident) or "").strip() for v in names_by_id.values()]
+            print(f"WI uniqueness {ident}: {len(set(vals))} distinct over {len(vals)} records, {sum(not v for v in vals)} blank")
         print("WI selected name field",primary)
         unique={}
         for k,attr in names_by_id.items():
