@@ -47,6 +47,6 @@ UT,29,29,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 VA,133,133,0,0,0,0,0,0,0,0,county+independent-city,provisional,migrated_from_existing_tracker
 VT,247,247,0,0,0,0,0,0,0,0,town,provisional,migrated_from_existing_tracker
 WA,39,39,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
-WI,1850,1615,0,0,0,0,235,0,0,0,municipal+county,provisional,migrated_from_existing_tracker
+WI,1921,1921,0,0,0,0,0,0,0,0,municipal+county,provisional,2026_wi_ltsb_1849_municipalities_plus_72_counties
 WV,55,55,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 WY,23,23,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
