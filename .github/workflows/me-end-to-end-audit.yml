@@ -61,7 +61,8 @@ jobs:
           fi
           if [ -f "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" ]; then
             cp "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" "audit/previous-ledger.json"
-          fi\n      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json --source-ledger-in audit/previous-ledger.json --source-ledger-out audit/maine-source-ledger-${{ matrix.shard }}.json
+          fi
+      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json --source-ledger-in audit/previous-ledger.json --source-ledger-out audit/maine-source-ledger-${{ matrix.shard }}.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
