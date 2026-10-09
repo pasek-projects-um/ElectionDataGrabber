@@ -130,3 +130,16 @@ The Vermont state GIS contains exactly 256 town-equivalent geographic areas. Ver
 References: https://legislature.vermont.gov/assets/Clerk-of-the-House-Documents/District-Lists-and-All-Member-Info/250930-House-District-List-2025.pdf ; https://www.arcgis.com/sharing/rest/content/items/fae5aad934a74108812dbe8ecd6232d4/info/metadata/metadata.xml?format=default&output=html ; https://legislature.vermont.gov/statutes/section/17/043/02123 .
 
 After reconciliation, national provisional named-unit enumeration is **4,367/6,217**, with Wisconsin's **1,850** as the *only* remaining unnamed provisional denominator. This supersedes the prior Vermont-deferred note. The roster importer was returned to manual-only dispatch after successful GitHub Actions import and derived tracker regeneration.
+
+
+## Wisconsin one-cut reconciliation completed — October 9, 2026
+
+Wisconsin Legislative Technology Services Bureau **July 2026** municipal-boundary GIS provides 1,912 county-fragment polygon records. The unique `LABEL` value is **not** a municipality ID: identically named towns in different counties must remain distinct, while some cities/villages span several counties and must not be counted twice.
+
+County-aware normalization finds **1,849 distinct municipal governments** (190 cities, 1,240 towns, 419 villages) and **72 distinct counties** represented by the same statewide official layer. This resolves Wisconsin's earlier *unsubstantiated* 1,850 mixed-tier estimate by replacing it with a source-backed **1,921-unit provisional denominator (1,849 municipal + 72 county)**, including both independently relevant election administration/reporting tiers. Municipality records use stable GIS-backed identity keys and retain source GEOIDs, category, relevant county and provenance; original 1,615 misleading label-deduplicated candidate rows were replaced by properly keyed records. No municipal results URLs were asserted or newly verified.
+
+Source: https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/ArcGIS/rest/services/WI_Cities_Towns_and_Villages_Current/FeatureServer/0 ; state clerk directory: https://elections.wi.gov/clerks/directory ; code: scripts/ingest_wisconsin_ltsb_roster.py.
+
+**National nominal named-unit enumeration = 6,288 / 6,288 (100.0% against current, predominantly provisional denominators).** This is *NOT* 100% direct official local website discovery, verified election-night coverage, precinct-resolution results, verified denominator completeness, or population/reporting-place-weighted coverage. The national unit count changed from 6,217 to 6,288 because the Wisconsin authority model was made explicit, not because a new 71 local source URLs were discovered. Reconcile actual clerk authority relationships and historical results before moving denominator confidence upward. Other states' denominators remain provisional unless independently reviewed.
+
+The successful one-cut importer has returned to workflow_dispatch only to avoid continual bot-triggered PR CI suppression; both national shared-core and where-to-look canaries must remain green before merging PR #68.
