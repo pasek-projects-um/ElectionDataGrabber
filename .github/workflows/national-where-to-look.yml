@@ -1,0 +1,29 @@
+name: National where-to-look inventory
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/build_national_where_to_look.py"
+      - "tests/test_national_where_to_look.py"
+      - "registry/**"
+      - ".github/workflows/national-where-to-look.yml"
+  schedule:
+    - cron: "23 11 * * *"
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e '.[dev]'
+      - run: pytest -q tests/test_national_where_to_look.py
+      - run: python scripts/build_national_where_to_look.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: national-where-to-look-inventory
+          path: audit/national-where-to-look*
