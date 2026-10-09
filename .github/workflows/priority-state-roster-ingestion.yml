@@ -1,10 +1,6 @@
 name: Priority eight-state roster ingestion
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - '.github/workflows/priority-state-roster-ingestion.yml'
-      - 'scripts/ingest_priority_state_rosters.py'
 permissions:
   contents: write
 jobs:
