@@ -13,7 +13,7 @@ GA,159,159,0,0,0,0,0,0,0,0,county,provisional,migrated_from_existing_tracker
 HI,4,4,0,0,0,0,0,0,0,0,state+county,provisional,migrated_from_existing_tracker
 IA,99,99,0,0,0,0,0,0,0,0,county,provisional,migrated_from_existing_tracker
 ID,44,44,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
-IL,108,102,0,0,0,0,6,0,0,0,local-election-authority,provisional,national_first_pass_2026
+IL,108,108,0,0,0,0,0,0,0,0,local-election-authority,provisional,national_first_pass_2026
 IN,92,92,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 KS,105,105,0,0,0,0,0,0,0,0,county,provisional,migrated_from_existing_tracker
 KY,120,120,0,0,0,0,0,0,0,0,county,provisional,migrated_from_existing_tracker
@@ -23,7 +23,7 @@ MD,24,24,0,0,0,0,0,0,0,0,county+independent-city,provisional,migrated_from_exist
 ME,350,200,150,0,0,0,0,150,150,0,municipality,high_confidence,existing_me_locality_registry
 MI,83,0,60,0,23,0,0,83,83,23,county,high_confidence,existing_mi_county_authority_registry
 MN,87,87,0,0,0,0,0,0,0,0,state+county/local,provisional,migrated_from_existing_tracker
-MO,116,115,0,0,0,0,1,0,0,0,local-election-authority,provisional,migrated_from_existing_tracker
+MO,116,116,0,0,0,0,0,0,0,0,local-election-authority,provisional,migrated_from_existing_tracker
 MS,82,82,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 MT,56,56,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 NC,100,100,0,0,0,0,0,0,0,0,county+state,provisional,national_first_pass_2026
