@@ -52,3 +52,37 @@ def test_rejects_identity_mismatch_and_invalid_evidence():
                                  verified=False, observed_at="2026-10-06T08:00:00Z", failure_class="timeout")
     with pytest.raises(ValueError):
         canonical_url("file:///etc/passwd")
+
+
+def test_timezone_offsets_and_naive_times_rejected():
+    row = merge_source_observation(
+        None, jurisdiction_id="us:me:a", source_url="https://example.gov/a",
+        verified=True, observed_at="2026-10-08T09:00:00+01:00",
+    )
+    assert row["last_checked_at"] == "2026-10-08T08:00:00+00:00"
+    with pytest.raises(ValueError):
+        merge_source_observation(
+            row, jurisdiction_id="us:me:a", source_url="https://example.gov/a",
+            verified=False, observed_at="2026-10-08T08:30:00",
+            failure_class="timeout",
+        )
+
+
+def test_persisted_ledger_rejects_duplicate_source_and_malformed_rows(tmp_path):
+    import json
+    path = tmp_path / "ledger.json"
+    row = merge_source_observation(
+        None, jurisdiction_id="us:me:a", source_url="https://example.gov/a",
+        verified=True, observed_at="2026-10-08T08:00:00Z",
+    )
+    path.write_text(json.dumps([row, row]), encoding="utf-8")
+    with pytest.raises(ValueError, match="duplicate"):
+        load_ledger(path)
+    path.write_text(json.dumps([{"jurisdiction_id": "us:me:a", "source_url": "https://example.gov/a", "ever_verified": "yes"}]), encoding="utf-8")
+    with pytest.raises(ValueError, match="invalid"):
+        load_ledger(path)
+
+
+def test_url_credentials_are_rejected():
+    with pytest.raises(ValueError):
+        canonical_url("https://secret:password@example.gov/results")
