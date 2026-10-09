@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://results.sos.ga.gov/results/public/Georgia/elections/GeneralPrimary51926",
+    "fixture": "custom-host-0.html",
+    "observed_at": "2026-10-09",
+    "status": 200,
+    "evidence": "HTML public-results base and same main/polyfill asset filenames; enhancedvoting.com CSP reference in fetched original",
+    "verification_status": "fetched_unverified",
+    "live_coverage": false
+  },
+  {
+    "url": "https://electionresults.utah.gov/results/public/cache-county-ut/elections/Primary06232026/precincts",
+    "fixture": "custom-host-1.html",
+    "observed_at": "2026-10-09",
+    "status": 200,
+    "evidence": "HTML public-results base and same main/polyfill asset filenames; enhancedvoting.com CSP reference in fetched original",
+    "verification_status": "fetched_unverified",
+    "live_coverage": false
+  }
+]

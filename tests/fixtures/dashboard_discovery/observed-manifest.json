@@ -1,0 +1,29 @@
+[
+  {
+    "page_url": "https://docs.ingham.org/departments_and_officials/county_clerk/election_results.php",
+    "final_url": "https://docs.ingham.org/departments_and_officials/county_clerk/election_results.php",
+    "fixture": "observed-0.html",
+    "observed_vendor_links": 10,
+    "new_dashboard_candidates": 8,
+    "legacy_url_keyword_hits": 0,
+    "label": "observed official outbound vendor links; target/live status unverified"
+  },
+  {
+    "page_url": "https://www.accesskent.com/Departments/Elections/",
+    "final_url": "https://www.kentcountymi.gov/197/Elections",
+    "fixture": "observed-1.html",
+    "observed_vendor_links": 2,
+    "new_dashboard_candidates": 2,
+    "legacy_url_keyword_hits": 0,
+    "label": "observed official outbound vendor links; target/live status unverified"
+  },
+  {
+    "page_url": "https://www.berriencounty.org/169/Elections",
+    "final_url": "https://www.berriencounty.org/169/Election-Reporting-Archive",
+    "fixture": "observed-2.html",
+    "observed_vendor_links": 11,
+    "new_dashboard_candidates": 8,
+    "legacy_url_keyword_hits": 0,
+    "label": "observed official outbound vendor links; target/live status unverified"
+  }
+]

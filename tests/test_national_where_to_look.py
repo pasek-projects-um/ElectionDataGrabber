@@ -26,3 +26,11 @@ def test_compiler_keeps_multiple_page_roles_and_exposes_gaps(tmp_path: Path):
     assert any(row["jurisdiction_id"]=="us:mi:county:beta" and row["verification_status"]=="fallback_unverified_for_locality" for row in rows)
     assert {row["page_role"] for row in rows}=={
         "historical_or_final_results","election_night_lead","state_election_authority","state_directory_fallback"}
+
+
+def test_state_surfaces_are_candidate_scoped_leads():
+    rows, _, _ = build(Path('registry'))
+    utah = [r for r in rows if r['state']=='UT' and r['evidence_registry']=='first_pass_state_result_surfaces.csv']
+    assert utah and all(r['page_role']=='county_results_lead' for r in utah)
+    assert all(r['verification_status']=='candidate' for r in utah)
+    assert len({r['state'] for r in rows if r['evidence_registry']=='first_pass_state_result_surfaces.csv'})==51

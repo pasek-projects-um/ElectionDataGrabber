@@ -1,0 +1,28 @@
+{
+  "candidate_limit_per_page": 50,
+  "candidate_publishers": 258,
+  "catalog_sha256": "b65f455fb0c7ec61ab1cf24fe3fe9f4d05807f946bb16eeb6dd550bf608e1077",
+  "http_requests_this_run": 250,
+  "page_statuses": {
+    "fetch_failed": 187,
+    "fetched": 25
+  },
+  "pages": 212,
+  "requests_this_run": 212,
+  "selected_seed_publishers": 200,
+  "selected_states": [
+    "ME",
+    "MI",
+    "OH"
+  ],
+  "signature_hits": {
+    "civicplus-brand": 4,
+    "pdf-artifact": 60,
+    "tabular-artifact": 126
+  },
+  "verification_states": {
+    "candidate": 342,
+    "fetched_unverified": 16
+  },
+  "verified_live_sources": 0
+}

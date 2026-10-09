@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "id": "clarity-host",
+      "family": "clarity",
+      "role": "result_platform",
+      "field": "host",
+      "pattern": "(^|\\.)clarityelections\\.com$",
+      "weight": 80,
+      "evidence": "tests/test_platform_adapters.py::test_clarity_root_and_discovery",
+      "specificity": "exact_vendor_host_or_path"
+    },
+    {
+      "id": "enhanced-public",
+      "family": "enhanced_voting",
+      "role": "result_platform",
+      "field": "url",
+      "pattern": "^https?://app\\.enhancedvoting\\.com/results/public/",
+      "weight": 85,
+      "evidence": "tests/test_platform_adapters.py:28",
+      "specificity": "exact_vendor_host_or_path"
+    },
+    {
+      "id": "enhanced-host",
+      "family": "enhanced_voting",
+      "role": "result_platform",
+      "field": "host",
+      "pattern": "^app\\.enhancedvoting\\.com$",
+      "weight": 55,
+      "evidence": "registry/mi_county_authorities.csv#Lake",
+      "specificity": "exact_vendor_host_or_path"
+    },
+    {
+      "id": "scytl-brand",
+      "family": "scytl",
+      "role": "result_platform",
+      "field": "text",
+      "pattern": "\\bscytl\\b",
+      "weight": 35,
+      "evidence": "src/election_data_grabber/adapters/vendor_structured.py#is_scytl",
+      "specificity": "brand_or_artifact_lead"
+    },
+    {
+      "id": "civicplus-brand",
+      "family": "civicplus",
+      "role": "authority_discovery",
+      "field": "text",
+      "pattern": "\\bcivicplus\\b|\\bcivicengage\\b",
+      "weight": 0,
+      "evidence": "registry/platform_adapters.csv#civicplus",
+      "specificity": "brand_or_artifact_lead"
+    },
+    {
+      "id": "electionware-report",
+      "family": "electionware",
+      "role": "report_family",
+      "field": "text",
+      "pattern": "\\belectionware\\b",
+      "weight": 20,
+      "evidence": "registry/platform_adapters.csv#electionware",
+      "specificity": "brand_or_artifact_lead"
+    },
+    {
+      "id": "pdf-artifact",
+      "family": "pdf",
+      "role": "report_family",
+      "field": "path",
+      "pattern": "\\.pdf$",
+      "weight": 10,
+      "evidence": "registry/sources.csv#mi-jackson-archive",
+      "specificity": "brand_or_artifact_lead"
+    },
+    {
+      "id": "tabular-artifact",
+      "family": "tabular_download",
+      "role": "report_family",
+      "field": "path",
+      "pattern": "\\.(csv|xlsx?|xml|json|zip)$",
+      "weight": 15,
+      "evidence": "src/election_data_grabber/platform_fingerprint.py",
+      "specificity": "brand_or_artifact_lead"
+    },
+    {
+      "id": "enhanced-government-hosts",
+      "family": "enhanced_voting",
+      "role": "result_platform",
+      "field": "host",
+      "pattern": "^(results\\.sos\\.ga\\.gov|electionresults\\.utah\\.gov|enr\\.elections\\.virginia\\.gov)$",
+      "weight": 75,
+      "specificity": "observed_custom_hosts",
+      "evidence": "tests/fixtures/dashboard_discovery/custom-host-manifest.json",
+      "examples": [
+        "https://results.sos.ga.gov/results/public/Georgia/elections/GeneralPrimary51926",
+        "https://electionresults.utah.gov/results/public/cache-county-ut/elections/Primary06232026/precincts"
+      ]
+    },
+    {
+      "id": "public-results-path",
+      "family": "public_results_app",
+      "role": "result_platform",
+      "field": "path",
+      "pattern": "^/results/public/[^/]+/(?:elections/)?[^/]+",
+      "weight": 60,
+      "specificity": "application_path_candidate",
+      "evidence": "registry/first_pass_state_result_surfaces.csv#GA,UT"
+    },
+    {
+      "id": "civicplus-script",
+      "family": "civicplus",
+      "role": "authority_discovery",
+      "field": "html",
+      "pattern": "<script\\b[^>]*src\\s*=\\s*[\\'\\\"][^\\'\\\"]*(?:civicplus|civicengage)",
+      "weight": 0,
+      "specificity": "cms_asset_only",
+      "evidence": "src/election_data_grabber/adapters/civicplus.py#is_civicplus"
+    },
+    {
+      "id": "quest-enr-html",
+      "family": "quest_enr",
+      "role": "result_platform",
+      "field": "html",
+      "pattern": "(?s)^(?=.*Quest Information Systems)(?=.*Scripts/EnrAngular/)",
+      "weight": 70,
+      "specificity": "brand_and_application_assets",
+      "evidence": "tests/fixtures/dashboard_discovery/quest-enr.html",
+      "examples": [
+        "https://enr.indianavoters.in.gov/"
+      ]
+    }
+  ]
+}

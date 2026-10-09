@@ -1,0 +1,27 @@
+{
+  "candidate_publishers": 774,
+  "http_requests_this_run": 220,
+  "pages": 191,
+  "requests_this_run": 192,
+  "selected_seed_publishers": 150,
+  "signature_hits": {
+    "civicplus-brand": 9,
+    "clarity-host": 3,
+    "enhanced-host": 28,
+    "enhanced-public": 24,
+    "pdf-artifact": 517,
+    "tabular-artifact": 15
+  },
+  "verification_states": {
+    "candidate": 13863,
+    "context_supported": 51,
+    "fetch_failed": 42,
+    "fetched_unverified": 933
+  },
+  "verified_live_sources": 0,
+  "page_statuses": {
+    "fetched": 70,
+    "fetch_failed": 121
+  },
+  "scope": "Initial live pilot; final pipeline replay caps candidate expansion at 50 per page."
+}

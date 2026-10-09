@@ -1,0 +1,33 @@
+name: Dashboard discovery fixtures
+on:
+  pull_request:
+    paths:
+      - 'src/election_data_grabber/national_discovery.py'
+      - 'src/election_data_grabber/discovery_catalog.py'
+      - 'src/election_data_grabber/discovery_publication.py'
+      - 'src/election_data_grabber/discovery_payloads.py'
+      - 'scripts/inspect_maryland_discovery_payload.py'
+      - 'tests/test_discovery_payloads.py'
+      - 'scripts/catalog_discovery_results.py'
+      - 'scripts/replay_discovery_snapshots.py'
+      - 'scripts/build_national_where_to_look.py'
+      - 'tests/test_discovery_catalog.py'
+      - 'registry/discovered_result_sources.csv'
+      - 'scripts/discover_national_results.py'
+      - 'registry/dashboard_fingerprints.json'
+      - 'tests/test_dashboard_discovery.py'
+      - 'tests/fixtures/dashboard_discovery/**'
+      - '.github/workflows/dashboard-discovery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixtures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -e '.[dev]'
+      - run: pytest -q

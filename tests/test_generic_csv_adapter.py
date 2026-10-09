@@ -20,7 +20,10 @@ def test_generic_csv_preserves_vote_modes():
     assert {r.vote_mode for r in alpha} == {
         VoteMode.TOTAL,
         VoteMode.ELECTION_DAY,
-        VoteMode.ABSENTEE,
+        VoteMode.UNKNOWN,
         VoteMode.EARLY,
     }
     assert next(r for r in alpha if r.vote_mode == VoteMode.TOTAL).votes == 120
+
+    # State/source-unspecified absentee labels remain unresolved under governed mappings.
+    assert next(r for r in alpha if r.raw_vote_mode == "av_counting_boards").vote_mode == VoteMode.UNKNOWN

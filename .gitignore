@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+audit/dashboard-discovery/*checkpoint*.json
+audit/dashboard-discovery/*.tmp
+audit/dashboard-discovery/snapshots/
+audit/dashboard-discovery/expansion-candidates.jsonl
