@@ -88,13 +88,28 @@ def main():
             if append_unique(rows, "NH", name, "municipality", re.sub(r"[^a-z0-9]+", "-", name.lower()),
                              f"{nh_municipality_url}; election directory {NH_DIRECTORY}"):
                 added["NH"] += 1
+    # Illinois Board of Elections explicitly lists six municipal commissions
+    # separately from county election authorities; these are not Census counties.
+    il_directory = "https://www.elections.il.gov/electionoperations/electionauthoritiesprint.aspx"
+    for city in ("Bloomington", "Chicago", "Danville", "East St. Louis", "Galesburg", "Rockford"):
+        title = f"City of {city} Board of Election Commissioners"
+        if append_unique(rows, "IL", title, "municipal_election_commission",
+                         re.sub(r"[^a-z0-9]+", "-", city.lower()), il_directory):
+            added["IL"] += 1
+    # Missouri has 114 counties, independent St Louis City, and one separate
+    # Kansas City board covering the Jackson County part of that municipality.
+    kc_url = "https://kceb.org/board/"
+    if append_unique(rows, "MO", "Kansas City Board of Election Commissioners",
+                     "municipal_election_authority", "kansas-city-election-board",
+                     f"{kc_url}; Missouri SOS https://www.sos.mo.gov/elections/goVoteMissouri/"):
+        added["MO"] += 1
     # Never overwrite an existing record; retain source classification as unverified.
     with (root / "us_primary_election_localities.csv").open("w", encoding="utf-8", newline="") as out:
         writer = csv.DictWriter(out, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(rows)
     print(f"Priority roster additions: {dict(sorted(added.items()))}; total {sum(added.values())}")
-    print("IL municipal commissions and MO split authorities remain unresolved until authoritative crosswalks are validated.")
+    print("Illinois municipal commissions and the Kansas City split authority have roster-based names; source verification remains separate.")
 
 if __name__ == "__main__":
     main()
