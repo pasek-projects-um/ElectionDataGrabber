@@ -38,11 +38,12 @@ def expand(root: Path, gazetteer_bytes: bytes):
     existing = {(row["state"], normalized(row["canonical_name"])) for row in current}
     with zipfile.ZipFile(io.BytesIO(gazetteer_bytes)) as zf:
         txt = next(name for name in zf.namelist() if name.lower().endswith(".txt"))
-        source = list(csv.DictReader(io.StringIO(zf.read(txt).decode("utf-8-sig")), delimiter="\t"))
+        source = list(csv.DictReader(io.StringIO(zf.read(txt).decode("utf-8-sig")), delimiter="\t", skipinitialspace=True))
     added = []
     per_state = Counter(row["state"] for row in current)
     for row in source:
-        state = row["USPS"].strip()
+        row = {key.strip(): (value or "").strip() for key, value in row.items() if key is not None}
+        state = row["USPS"]
         d = denominator.get(state)
         if not d or d["authority_model"].strip() not in COUNTY_MODELS:
             continue
