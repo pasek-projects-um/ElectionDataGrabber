@@ -81,7 +81,7 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--registry", default="registry")
-    parser.add_argument("--min-additions", type=int, default=1000)
+    parser.add_argument("--min-additions", type=int, default=0)
     args = parser.parse_args()
     root = Path(args.registry)
     response = httpx.get(CENSUS_URL, timeout=120, follow_redirects=True)
