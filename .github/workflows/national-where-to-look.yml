@@ -6,6 +6,8 @@ on:
       - "scripts/build_national_where_to_look.py"
       - "scripts/audit_national_starting_point_coverage.py"
       - "tests/test_national_starting_point_coverage.py"
+      - "scripts/expand_census_county_starts.py"
+      - "tests/test_expand_census_county_starts.py"
       - "scripts/wayback_starting_point_leads.py"
       - "tests/test_wayback_starting_point_leads.py"
       - "tests/test_national_where_to_look.py"
@@ -25,7 +27,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_national_where_to_look.py tests/test_national_starting_point_coverage.py tests/test_wayback_starting_point_leads.py
+      - run: pytest -q tests/test_national_where_to_look.py tests/test_national_starting_point_coverage.py tests/test_wayback_starting_point_leads.py tests/test_expand_census_county_starts.py
       - run: python scripts/build_national_where_to_look.py
       - run: python -m scripts.audit_national_starting_point_coverage
       - uses: actions/upload-artifact@v4
