@@ -56,6 +56,9 @@ def expand(root: Path, gazetteer_bytes: bytes):
         name = row["NAME"].strip()
         if not re.fullmatch(r"\d{5}", geoid) or not name:
             continue
+        if state == "HI" and geoid == "15005":
+            # Kalawao is a Census county-equivalent, not one of the four county election divisions.
+            continue
         if (state, normalized(name)) in existing:
             continue
         if per_state[state] >= int(d["expected_primary_units"]):
