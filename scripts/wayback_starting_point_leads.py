@@ -38,10 +38,10 @@ def archive_candidates(jurisdiction_id, seed_url, election_type, election_day, c
     parsed = urlsplit(seed_url)
     if parsed.scheme not in ("http", "https") or not parsed.hostname:
         return []
-    params = {"url": seed_url, "output": "json", "filter": "statuscode:200",
-              "filter": "mimetype:text/html", "collapse": "timestamp:4",
-              "from": start, "to": end, "fl": "timestamp,original,statuscode",
-              "limit": str(max_snapshots)}
+    params = [("url", seed_url), ("output", "json"), ("filter", "statuscode:200"),
+              ("filter", "mimetype:text/html"), ("collapse", "timestamp:4"),
+              ("from", start), ("to", end), ("fl", "timestamp,original,statuscode"),
+              ("limit", str(max_snapshots))]
     response = client.get(CDX, params=params)
     response.raise_for_status()
     payload = response.json()
@@ -70,7 +70,9 @@ def archive_candidates(jurisdiction_id, seed_url, election_type, election_day, c
                 continue
             from urllib.parse import urljoin
             candidate = urljoin(original, raw)
-            if candidate.startswith("https://web.archive.org/web/"):
+            if raw.startswith(("/web/", "https://web.archive.org/web/", "http://web.archive.org/web/")):
+                candidate = urljoin("https://web.archive.org", raw)
+            if candidate.startswith(("https://web.archive.org/web/", "http://web.archive.org/web/")):
                 match = re.match(r"https://web\.archive\.org/web/\d+(?:[a-z_]+)?/(https?://.+)", candidate)
                 if match:
                     candidate = match.group(1)
