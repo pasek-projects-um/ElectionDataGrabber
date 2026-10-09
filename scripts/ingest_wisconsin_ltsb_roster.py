@@ -4,6 +4,7 @@ This populates only source-backed municipality candidates; it never turns the
 provisional 1850 administrative count into fictitious verified authorities.
 """
 import csv
+import hashlib
 import re
 from pathlib import Path
 from collections import Counter
@@ -106,7 +107,8 @@ def main():
             full=f"{level.title()} of {label}" + (f" ({parent} County)" if typ=="T" else "")
             suffix=re.sub(r"[^a-z0-9]+","-",f"{typ}-{county}-{name}").strip("-")
             item=dict.fromkeys(FIELDS,"")
-            item.update(jurisdiction_id=f"us:wi:ltsb2026:{suffix}",state="WI",
+            stable_id=hashlib.sha256(repr((typ,county,name)).encode()).hexdigest()[:16]
+            item.update(jurisdiction_id=f"us:wi:ltsb2026:{suffix}-{stable_id}",state="WI",
                 jurisdiction_level=level,canonical_name=full,
                 external_id_namespace="wi_ltsb_ctv_july_2026",
                 external_id="|".join(sorted(str(i.get("GEOID")) for i in items)),
