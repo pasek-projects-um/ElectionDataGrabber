@@ -50,7 +50,18 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e .
-      - name: Restore previous source ledger\n        env:\n          GH_TOKEN: ${{ github.token }}\n        run: |\n          mkdir -p audit\n          previous_run=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "me-end-to-end-audit.yml" --branch main --status success --limit 1 --json databaseId --jq ".[0].databaseId")\n          if [ -n "$previous_run" ]; then\n            gh run download "$previous_run" --repo "$GITHUB_REPOSITORY" --name "maine-audit-${{ matrix.shard }}" --dir previous-ledger || true\n          fi\n          if [ -f "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" ]; then\n            cp "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" "audit/previous-ledger.json"\n          fi\n      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json --source-ledger-in audit/previous-ledger.json --source-ledger-out audit/maine-source-ledger-${{ matrix.shard }}.json
+      - name: Restore previous source ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p audit
+          previous_run=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "me-end-to-end-audit.yml" --branch main --status success --limit 1 --json databaseId --jq ".[0].databaseId")
+          if [ -n "$previous_run" ]; then
+            gh run download "$previous_run" --repo "$GITHUB_REPOSITORY" --name "maine-audit-${{ matrix.shard }}" --dir previous-ledger || true
+          fi
+          if [ -f "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" ]; then
+            cp "previous-ledger/maine-source-ledger-${{ matrix.shard }}.json" "audit/previous-ledger.json"
+          fi\n      - run: mkdir -p audit && python scripts/audit_maine_end_to_end.py --shard ${{ matrix.shard }} --shards 7 --max-artifacts 2 --out audit/maine-audit-${{ matrix.shard }}.csv --summary audit/maine-summary-${{ matrix.shard }}.json --source-ledger-in audit/previous-ledger.json --source-ledger-out audit/maine-source-ledger-${{ matrix.shard }}.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
