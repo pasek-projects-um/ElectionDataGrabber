@@ -98,3 +98,17 @@ This proposal supersedes the prior **increasing-visibility-fraction** candidate 
 ## Current tactical target: all except three largest unresolved state rosters
 
 Target **every state/DC other than Wisconsin (1,850 nominal missing), Massachusetts (351), and Vermont (247)** for this pass. Do **not** defer New Hampshire (234): its municipal/town and ward units are now in scope. From the October 9 tracker, the eight in-scope states/DC still needing names are NH 234, MO 116, IL 108, MN 87, RI 39, HI 4, AK 1, DC 1 (590 total). Other states have already met their provisional enumeration counts. Address these eight using official jurisdiction rosters; preserve each roster's unit model, IDs, provenance and true overlap. Do not fake coverage by assigning state links as locally verified sources or by silently truncating municipalities. Hawaii county-equivalents now fall within the existing Census enumerator. Continue to report weighted actual source coverage separately from named enumeration. The 2,448 units in the three deferred states remain visible gaps; this is a near-term sprint scope, not a revision of national completeness criteria.
+
+
+## Eight-state roster ingestion completed — October 9, 2026
+
+The eight-state named geography/authority candidate enumeration pass has been ingested and audited: AK 1, DC 1, HI 4, IL 108, MN 87, MO 116, NH 234, RI 39 (**590/590**). Nationwide named primary candidates: **3,769 / 6,217** against provisional denominators. Remaining unenumerated units in the tracker: **WI 1,850, MA 351, VT 247** (2,448 total).
+
+Evidence and semantics:
+- 2025 Census Gazetteer county-equivalent names back the county-shaped candidate rows for MN, IL, MO and HI. Hawaii Kalawao is not an independent county election division and is intentionally excluded.
+- Rhode Island state GIS identifies its 39 municipalities; New Hampshire state planning office publishes a headerless official 234-municipality CSV, excluding additional unincorporated areas found in GIS.
+- IL six municipal election commissions are explicitly listed by the Illinois State Board of Elections; Missouri's Kansas City Election Board is distinct from the Jackson County board.
+- AK and DC are modeled as single state/district election authorities.
+- **Caution**: IL's 102 county-equivalent candidates plus six city commissions meet the provisional 108 count but do not yet prove that every Census geography maps one-to-one to one of the state's 102 county-level election authorities (some may operate under commission arrangements). Similar caveat for MO: 115 county/city geographies plus the separate Kansas City election board, and Kansas City's board covers only the Jackson County portion of the city. Crosswalk authority identities and overlapping jurisdiction boundaries before considering these verified independent authorities.
+- These additions are enumerated_unresolved: no local election-result endpoints were verified by this import. Statewide directory fallbacks do not constitute verified local result access, and population/reporting-place-weighted actual coverage is still not computed.
+- scripts/ingest_priority_state_rosters.py is reproducible/idempotent; its GitHub workflow is manual-only after the successful initial import. Keep the registry and derived tracker synchronized whenever re-running.
