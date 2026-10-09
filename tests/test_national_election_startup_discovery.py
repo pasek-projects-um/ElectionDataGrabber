@@ -28,7 +28,7 @@ def test_seed_registry_spans_jurisdiction_levels_and_deduplicates(tmp_path):
         "us:me:town:a,ME,town,https://town.example/elections,https://town.example/elections\n"
     )
     (tmp_path / "us_state_central_authority_sources.csv").write_text(
-        "state,central_authority_url\\nME,https://state.example/elections\n"
+        "state,central_authority_url\nME,https://state.example/elections\n"
     )
     (tmp_path / "us_local_reporting_sources.csv").write_text(
         "state,locality_type,locality_name,authority_url,results_url\n"
