@@ -7,3 +7,21 @@ Tracking issue: https://github.com/pasek-projects-um/ElectionDataGrabber/issues/
 Do **not** count the existing 757-unit registry as the full national denominator. Never count a state-directory fallback as a verified local official site. Keep separate coverage metrics for any-start, direct/shared source and verified reachable.
 
 Work state by state, reconciling jurisdiction identifiers, authoritative parent relationships, and source provenance. Keep URL inventory CI deterministic and fast; use manual crawls for evidence gathering. Defer local model classification, deployment, additional ingestion adapters and unrelated features until the nationwide any-start metric genuinely reaches 100%.
+
+## Internet Archive escalation for uncertain starts
+
+When a jurisdiction has only a state-directory fallback, generic government homepage,
+unreachable or ambiguous election-office page, or multiple competing candidate URLs,
+search the Wayback Machine for its election-site link structure. Restrict queries to
+the 2024 November 5 general election window, jurisdiction-specific 2025 election dates,
+and jurisdiction-specific 2026 primary dates. Dates must be supplied explicitly; never
+assume every jurisdiction has the same 2025 election or 2026 primary date.
+
+Use `scripts/wayback_starting_point_leads.py --targets targets.csv` with columns
+`jurisdiction_id,seed_url,election_type,election_date`. The script produces archived-only
+candidate links and their snapshot timestamps, and is deliberately **manual**, not PR CI.
+Archive evidence must not be treated as proof of current reachability or official status.
+Promote an archive lead to a verified current start only after a separate live check and
+authority/jurisdiction confirmation. Record original and archived URLs together.
+
+Prioritize these archive lookups over speculative general web searching for uncertain units.
