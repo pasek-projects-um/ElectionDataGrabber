@@ -194,3 +194,49 @@ def test_html_landing_mismatch_without_artifact_is_residual(monkeypatch):
         "promotion_action":"execute_now",
     }])
     assert rows[0]["failure_class"]=="landing_page_no_structured_artifact"
+
+
+import pytest
+
+
+@pytest.mark.parametrize("payload", [
+    b'[{"reporting_units": []}]',
+    b'{"results": []}',
+    b'{"reporting_units": {}}',
+    b'{"reporting_units": [null]}',
+])
+def test_unsupported_json_schema_becomes_residual(monkeypatch, payload):
+    import scripts.execute_harvested_promotions as mod
+
+    monkeypatch.setattr(mod, "fetch_body", lambda url, timeout: (payload, ""))
+    rows = mod.execute_promotions([{
+        "state": "AA",
+        "source_url": "https://x.gov/results.json",
+        "promoted_family": "structured_json",
+        "execution_route": "election_data_grabber.adapters.generic_json:parse_generic_results_json",
+        "promotion_action": "execute_now",
+    }])
+    assert len(rows) == 1
+    assert rows[0]["execution_stage"] == "parser_selected"
+    assert rows[0]["failure_class"] == "unsupported_json_schema"
+    assert rows[0]["observation_count"] == "0"
+
+
+def test_generic_json_contract_still_executes(monkeypatch):
+    import scripts.execute_harvested_promotions as mod
+
+    body = (
+        b'{"reporting_units": [{"id": "P1", "name": "Precinct 1", '
+        b'"contests": [{"name": "Mayor", "choices": [{"name": "Alice", "votes": 7}]}]}]}'
+    )
+    monkeypatch.setattr(mod, "fetch_body", lambda url, timeout: (body, ""))
+    rows = mod.execute_promotions([{
+        "state": "MI",
+        "source_url": "https://x.gov/results.json",
+        "promoted_family": "structured_json",
+        "execution_route": "election_data_grabber.adapters.generic_json:parse_generic_results_json",
+        "promotion_action": "execute_now",
+    }])
+    assert rows[0]["execution_stage"] == "replay_tested"
+    assert rows[0]["observation_count"] == "1"
+    assert not rows[0]["failure_class"]
