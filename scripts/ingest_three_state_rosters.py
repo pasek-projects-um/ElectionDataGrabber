@@ -13,7 +13,7 @@ from ingest_priority_state_rosters import FIELDS, append_unique
 
 SOURCES = {
     "MA": ("https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Municipalities/FeatureServer/1/query", "TOWN", 351),
-    "VT": ("https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Boundary_BNDHASH_poly_towns_SP_v1/FeatureServer/0/query", "TOWN", 247),
+    "VT": ("https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Boundary_BNDHASH_poly_towns_SP_v1/FeatureServer/0/query", "TOWNNAMEMC", 247),
 }
 # WI clerk directory requires a verified export of clerk jurisdictions and
 # jurisdiction types; statewide counties and incorporated municipalities must
@@ -37,7 +37,7 @@ def main():
                 names=sorted({str(x["attributes"].get(field,"")).strip() for x in features if x.get("attributes",{}).get(field)})
                 print(f"{state} official GIS: {len(features)} features; {len(names)} names; sample attributes {features[0]['attributes'] if features else {}}")
                 if len(names)!=expected:
-                    print(f"{state} DEFERRED: GIS roster count {len(names)} != expected {expected}; do not guess")
+                    print(f"{state} DEFERRED: GIS roster count {len(names)} != expected {expected}; sample names {names[:12]}; do not guess")
                     continue
                 for name in names:
                     if append_unique(rows,state,name,"municipality",re.sub(r"[^a-z0-9]+","-",name.lower()),url):
