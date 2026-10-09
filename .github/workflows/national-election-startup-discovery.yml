@@ -1,0 +1,48 @@
+name: National election startup discovery
+on:
+  workflow_dispatch:
+    inputs:
+      max_seeds:
+        description: "Maximum seed URLs to probe (bounded run)"
+        required: false
+        default: "100"
+  pull_request:
+    paths:
+      - "scripts/national_election_startup_discovery.py"
+      - "tests/test_national_election_startup_discovery.py"
+      - ".github/workflows/national-election-startup-discovery.yml"
+  schedule:
+    - cron: "11 12 * * *"
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e '.[dev]'
+      - run: pytest -q tests/test_national_election_startup_discovery.py
+  crawl:
+    needs: validate
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e .
+      - name: Bounded national election-site crawl
+        env:
+          MAX_SEEDS: ${{ inputs.max_seeds || '100' }}
+        run: python scripts/national_election_startup_discovery.py --max-seeds "$MAX_SEEDS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: national-election-startup-discovery
+          path: audit/national-election-startup-*
