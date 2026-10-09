@@ -32,7 +32,7 @@ def merge_source_observation(
         raise ValueError("observation timestamp must include timezone")
     observed_at = checked.astimezone(timezone.utc).isoformat()
     url = canonical_url(source_url)
-    if previous and (previous["jurisdiction_id"], previous["source_url"]) != (jurisdiction_id, url):
+    if previous and (previous["jurisdiction_id"], canonical_url(previous["source_url"])) != (jurisdiction_id, url):
         raise ValueError("cannot merge different source identities")
     if previous:
         last = datetime.fromisoformat(previous["last_checked_at"].replace("Z", "+00:00"))
@@ -71,6 +71,10 @@ def load_ledger(path: Path) -> dict[tuple[str, str], dict]:
         key = (row["jurisdiction_id"], canonical_url(row["source_url"]))
         if key in ledger:
             raise ValueError("duplicate source identity")
+        if not isinstance(row.get("currently_reachable"), bool) or not isinstance(row.get("last_checked_at"), str):
+            raise ValueError("invalid ledger state")
+        row = dict(row)
+        row["source_url"] = key[1]
         ledger[key] = row
     return ledger
 
