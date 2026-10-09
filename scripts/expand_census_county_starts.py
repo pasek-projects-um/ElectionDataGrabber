@@ -38,7 +38,10 @@ def expand(root: Path, gazetteer_bytes: bytes):
     existing = {(row["state"], normalized(row["canonical_name"])) for row in current}
     with zipfile.ZipFile(io.BytesIO(gazetteer_bytes)) as zf:
         txt = next(name for name in zf.namelist() if name.lower().endswith(".txt"))
-        source = list(csv.DictReader(io.StringIO(zf.read(txt).decode("utf-8-sig")), delimiter="|", skipinitialspace=True))
+        gazetteer_text = zf.read(txt).decode("utf-8-sig")
+        first_line = gazetteer_text.splitlines()[0]
+        delimiter = "|" if "|" in first_line else "\t"
+        source = list(csv.DictReader(io.StringIO(gazetteer_text), delimiter=delimiter, skipinitialspace=True))
     added = []
     per_state = Counter(row["state"] for row in current)
     for row in source:
