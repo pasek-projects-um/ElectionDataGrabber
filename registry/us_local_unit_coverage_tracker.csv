@@ -45,7 +45,7 @@ TN,95,95,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 TX,254,254,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 UT,29,29,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 VA,133,133,0,0,0,0,0,0,0,0,county+independent-city,provisional,migrated_from_existing_tracker
-VT,247,0,0,0,0,0,247,0,0,0,town,provisional,migrated_from_existing_tracker
+VT,247,247,0,0,0,0,0,0,0,0,town,provisional,migrated_from_existing_tracker
 WA,39,39,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 WI,1850,0,0,0,0,0,1850,0,0,0,municipal+county,provisional,migrated_from_existing_tracker
 WV,55,55,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
