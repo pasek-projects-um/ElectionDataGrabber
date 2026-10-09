@@ -1,13 +1,5 @@
 name: Michigan top county election-night fingerprints
 on:
-  pull_request:
-    paths:
-      - "scripts/mi_top10_election_night_fingerprint.py"
-      - "src/election_data_grabber/adapters/enhanced_voting.py"
-      - "src/election_data_grabber/adapters/clarity.py"
-      - "src/election_data_grabber/adapters/civicplus.py"
-      - "src/election_data_grabber/adapters/tabulator_reports.py"
-      - ".github/workflows/mi-top10-election-night.yml"
   workflow_dispatch:
 jobs:
   validate:
@@ -21,7 +13,7 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e '.[dev]'
-      - run: pytest -q tests/test_platform_adapters.py tests/test_tabulator_reports.py
+      - run: pytest -q tests/test_platform_adapters.py tests/test_tabulator_reports.py tests/test_mi_top10_historical_leads.py
   fingerprint:
     needs: validate
     runs-on: ubuntu-latest
@@ -35,7 +27,16 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
       - run: pip install -e .
-      - run: python scripts/mi_top10_election_night_fingerprint.py
+      - name: Restore previous successful fingerprint evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          previous=$(gh run list --workflow mi-top10-election-night.yml --branch main --status success --limit 5 --json databaseId --jq ".[].databaseId" | head -n 1)
+          if [ -n "$previous" ]; then
+            gh run download "$previous" -n mi-top10-election-night-fingerprints -D prior || true
+          fi
+      - run: python scripts/mi_top10_election_night_fingerprint.py --previous prior/mi-top10-election-night-fingerprints.csv
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
@@ -25,6 +25,12 @@ def discover_clarity_downloads(body: bytes, base_url: str) -> ClaritySurface:
     downloads=set(); summary=None
     for a in soup.find_all("a",href=True):
         url=urljoin(base_url,str(a["href"]))
+        parts=urlsplit(url)
+        if str(a["href"]).strip().lower().startswith(("javascript:","data:","mailto:")):
+            continue
+        if parts.scheme.lower() not in {"http","https"} or not parts.netloc:
+            continue
+        url=urlunsplit((parts.scheme,parts.netloc,parts.path,parts.query,""))
         label=" ".join(a.stripped_strings).lower()
         blob=(url+" "+label).lower()
         if any(x in blob for x in (".csv",".xml",".json",".zip","download","detail report","precinct")):
@@ -40,7 +46,7 @@ def discover_clarity_urls(body: bytes) -> list[str]:
 def select_clarity_detail_artifact(surface: ClaritySurface) -> str | None:
     ranked=[]
     for url in surface.downloadable_urls:
-        lower=url.lower()
+        lower=urlsplit(url).path.lower()
         score=0
         if lower.endswith(".xml"): score += 5
         if "detail" in lower: score += 4

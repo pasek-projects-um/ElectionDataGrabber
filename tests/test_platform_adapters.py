@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from election_data_grabber.adapters.enhanced_voting import (
     discover_enhanced_voting_urls, parse_enhanced_voting_html,
 )
-from election_data_grabber.adapters.clarity import clarity_election_root, discover_clarity_urls
+from election_data_grabber.adapters.clarity import clarity_election_root, discover_clarity_urls, discover_clarity_downloads, select_clarity_detail_artifact
 from election_data_grabber.adapters.civicplus import discover_civicplus_result_links
 
 
@@ -46,3 +46,16 @@ def test_civicplus_delegates_to_vendor_and_documents():
     """
     got=discover_civicplus_result_links(body,"https://county.gov/elections")
     assert {x.downstream_family for x in got}=={"enhanced_voting","clarity","document"}
+
+
+def test_clarity_download_discovery_filters_non_http_links_and_fragments():
+    body = b"""
+      <a href="javascript:alert(1)">Download</a>
+      <a href="/results/detail.xml#section">Precinct detail XML</a>
+      <a href="/results/report.csv">CSV</a>
+    """
+    surface = discover_clarity_downloads(body, "https://results.enr.clarityelections.com/MI/Test/123/")
+    assert all(x.startswith("https://") for x in surface.downloadable_urls)
+    assert select_clarity_detail_artifact(surface) == (
+        "https://results.enr.clarityelections.com/results/detail.xml"
+    )

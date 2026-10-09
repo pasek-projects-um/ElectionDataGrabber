@@ -75,3 +75,39 @@ def test_generic_xml_requires_discovery_before_parser_selection():
     })
     assert family=="structured_xml"
     assert route=="election_data_grabber.adapters.vendor_structured:discover_vendor_artifacts"
+
+
+def test_enhanced_voting_routes_to_live_dashboard_adapter():
+    family, parser = readiness_route({
+        "platform_family": "enhanced_voting",
+        "discovered_artifacts": "",
+    })
+    assert family == "enhanced_voting"
+    assert parser == "election_data_grabber.adapters.enhanced_voting:parse_enhanced_voting_html"
+
+
+def test_enhanced_voting_preferred_over_generic_download_route():
+    family, parser = readiness_route({
+        "platform_family": "enhanced_voting",
+        "discovered_artifacts": "https://example.gov/results.json",
+    })
+    assert family == "enhanced_voting"
+    assert parser.endswith(":parse_enhanced_voting_html")
+
+
+def test_clarity_xml_artifact_routes_to_normalized_precinct_parser():
+    family, parser = readiness_route({
+        "platform_family": "clarity",
+        "discovered_artifacts": "https://results.enr.clarityelections.com/MI/Example/123/detail.xml",
+    })
+    assert family == "clarity_xml"
+    assert parser == "election_data_grabber.adapters.clarity_xml:parse_clarity_like_xml"
+
+
+def test_clarity_without_xml_retains_platform_discovery():
+    family, parser = readiness_route({
+        "platform_family": "Clarity ",
+        "discovered_artifacts": "https://example.gov/results.csv",
+    })
+    assert family == "clarity"
+    assert parser.endswith("clarity:discover_clarity_downloads")
