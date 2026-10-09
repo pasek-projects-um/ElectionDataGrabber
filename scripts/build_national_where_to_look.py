@@ -65,13 +65,27 @@ def build(root: Path):
         for field,role in (("authority_url","local_election_authority"),("results_url","results_lead")):
             for url in row.get(field,"").split("|"):
                 add(jid,state,level,name,role,url,"us_local_reporting_sources.csv",row.get("status","candidate"))
+    # Every locality must have a crawl entry point, even when its own office
+    # has not yet been identified. State authorities are explicit fallbacks,
+    # never mislabeled as verified locality sites.
+    state_entries = {}
+    for row in records.values():
+        if row["page_role"] == "state_election_authority":
+            state_entries.setdefault(row["state"], []).append(row["url"])
+    direct = {row["jurisdiction_id"] for row in records.values()}
+    for jid, (state, level, name) in jurisdictions.items():
+        if jid in direct:
+            continue
+        for url in sorted(set(state_entries.get(state, [])))[:2]:
+            add(jid, state, level, name, "state_directory_fallback", url,
+                "us_state_central_authority_sources.csv", "fallback_unverified_for_locality")
     rows=sorted(records.values(),key=lambda x:(x["state"],x["jurisdiction_id"],x["page_role"],x["url"]))
     represented={row["jurisdiction_id"] for row in rows}
     gaps=[{"jurisdiction_id":jid,"state":s,"jurisdiction_level":level,"jurisdiction_name":name,
            "gap":"no_registered_local_url"}
           for jid,(s,level,name) in sorted(jurisdictions.items()) if jid not in represented]
     summary={"known_locality_jurisdictions":len(jurisdictions),
-             "localities_without_registered_url":len(gaps),
+             "localities_without_registered_url":len(gaps),\n             "localities_without_any_start":sum(g["gap"]=="no_starting_url" for g in gaps),\n             "localities_using_state_fallback":sum(g["gap"]=="state_fallback_only" for g in gaps),
              "candidate_pages":len(rows),
              "states_with_candidates":len({row["state"] for row in rows}),
              "roles":dict(Counter(row["page_role"] for row in rows))}
