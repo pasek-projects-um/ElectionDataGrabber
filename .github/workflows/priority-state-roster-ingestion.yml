@@ -1,0 +1,41 @@
+name: Priority eight-state roster ingestion
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/priority-state-roster-ingestion.yml'
+      - 'scripts/ingest_priority_state_rosters.py'
+permissions:
+  contents: write
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: national-100pct-starting-point-coverage
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[dev]'
+      - name: Import official roster candidates
+        run: python scripts/ingest_priority_state_rosters.py
+      - name: Regenerate national coverage tracker
+        run: python scripts/generate_locality_coverage_tracker.py
+      - name: Validate coverage accounting
+        run: python -m scripts.audit_national_starting_point_coverage
+      - name: Commit imported jurisdiction names
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry/us_primary_election_localities.csv registry/us_local_unit_coverage_tracker.csv
+          git diff --cached --quiet && exit 0
+          git commit -m "Ingest verified official geography names for eight-state coverage pass"
+          git push origin HEAD:national-100pct-starting-point-coverage
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: priority-roster-audit
+          path: audit/national-starting-point*
