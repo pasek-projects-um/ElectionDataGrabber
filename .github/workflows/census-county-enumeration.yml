@@ -21,7 +21,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install httpx
-      - run: python scripts/expand_census_county_starts.py --min-additions 1000
+      - name: Expand registry from Census if needed
+        run: python scripts/expand_census_county_starts.py --min-additions 0
       - run: python -m scripts.audit_national_starting_point_coverage
       - name: Commit verified Census names to sprint branch
         run: |
