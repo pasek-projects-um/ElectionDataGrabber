@@ -71,21 +71,22 @@ def main():
         if append_unique(rows, "RI", name, "municipality", re.sub(r"[^a-z0-9]+", "-", name.lower()),
                          f"{RI_URL}; election directory {RI_DIRECTORY}"):
             added["RI"] += 1
-    # NH GIS includes unincorporated areas; only promote an explicit city/town
-    # subset when its unique names reconcile exactly with 234 municipalities.
-    nh = arcgis_names(client, NH_URL, ["NAME", "CITYTOWN", "NON_ATT_AREA"])
-    eligible = [x for x in nh if str(x.get("CITYTOWN", "")).strip().lower() in
-                ("city", "town", "cities", "towns")]
-    nh_names = sorted({str(x["NAME"]).strip() for x in eligible if x.get("NAME")})
+    # The NH state planning agency publishes a curated list of exactly 234
+    # incorporated municipalities; the separate GIS boundary layer also includes
+    # 25 unincorporated geographies and must not be truncated arbitrarily.
+    import io
+    nh_municipality_url = "https://www.nheconomy.com/getmedia/1738929e-d2f2-4ce8-a158-70475da024e7/municipality-county-region.csv"
+    nh_response = client.get(nh_municipality_url)
+    nh_response.raise_for_status()
+    nh_csv = list(csv.reader(io.StringIO(nh_response.content.decode("utf-8-sig"))))
+    print(f"NH official municipality CSV header/sample: {nh_csv[:3]}")
+    nh_names = sorted({str(row[0]).strip() for row in nh_csv[1:] if row and row[0].strip()})
     if len(nh_names) != 234:
-        from collections import Counter as _Counter
-        print(f"NH GIS classified values: {dict(_Counter((str(x.get(chr(67)+chr(73)+chr(84)+chr(89)+chr(84)+chr(79)+chr(87)+chr(78))), str(x.get(chr(78)+chr(79)+chr(78)+chr(95)+chr(65)+chr(84)+chr(84)+chr(95)+chr(65)+chr(82)+chr(69)+chr(65)))) for x in nh))}")
-        print(f"NH GIS examples: {[(x.get(chr(78)+chr(65)+chr(77)+chr(69)), x.get(chr(67)+chr(73)+chr(84)+chr(89)+chr(84)+chr(79)+chr(87)+chr(78)), x.get(chr(78)+chr(79)+chr(78)+chr(95)+chr(65)+chr(84)+chr(84)+chr(95)+chr(65)+chr(82)+chr(69)+chr(65))) for x in nh[:12]]}")
-        print(f"NH official GIS city/town filter returned {len(nh_names)} rather than 234; no speculative NH names imported")
+        print(f"NH government CSV returned {len(nh_names)} rather than 234; no speculative NH records imported")
     else:
         for name in nh_names:
             if append_unique(rows, "NH", name, "municipality", re.sub(r"[^a-z0-9]+", "-", name.lower()),
-                             f"{NH_URL}; {NH_DIRECTORY}"):
+                             f"{nh_municipality_url}; election directory {NH_DIRECTORY}"):
                 added["NH"] += 1
     # Never overwrite an existing record; retain source classification as unverified.
     with (root / "us_primary_election_localities.csv").open("w", encoding="utf-8", newline="") as out:
