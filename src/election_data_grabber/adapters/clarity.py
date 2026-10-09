@@ -26,6 +26,8 @@ def discover_clarity_downloads(body: bytes, base_url: str) -> ClaritySurface:
     for a in soup.find_all("a",href=True):
         url=urljoin(base_url,str(a["href"]))
         parts=urlsplit(url)
+        if str(a["href"]).strip().lower().startswith(("javascript:","data:","mailto:")):
+            continue
         if parts.scheme.lower() not in {"http","https"} or not parts.netloc:
             continue
         url=urlunsplit((parts.scheme,parts.netloc,parts.path,parts.query,""))
