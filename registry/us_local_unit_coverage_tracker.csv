@@ -29,7 +29,7 @@ MT,56,56,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 NC,100,100,0,0,0,0,0,0,0,0,county+state,provisional,national_first_pass_2026
 ND,53,53,0,0,0,0,0,0,0,0,county+state,provisional,migrated_from_existing_tracker
 NE,93,93,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
-NH,234,0,0,0,0,0,234,0,0,0,town+ward,provisional,migrated_from_existing_tracker
+NH,234,234,0,0,0,0,0,0,0,0,town+ward,provisional,migrated_from_existing_tracker
 NJ,21,21,0,0,0,0,0,0,0,0,county+municipal/election-district,provisional,migrated_from_existing_tracker
 NM,33,33,0,0,0,0,0,0,0,0,county+state,provisional,migrated_from_existing_tracker
 NV,17,17,0,0,0,0,0,0,0,0,county+independent-city,provisional,national_first_pass_2026
