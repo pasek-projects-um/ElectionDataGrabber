@@ -24,15 +24,15 @@ def response(url, html):
 
 def test_seed_registry_spans_jurisdiction_levels_and_deduplicates(tmp_path):
     (tmp_path / "us_primary_election_localities.csv").write_text(
-        "jurisdiction_id,state,jurisdiction_level,election_night_evidence_url,final_evidence_url\\n"
-        "us:me:town:a,ME,town,https://town.example/elections,https://town.example/elections\\n"
+        "jurisdiction_id,state,jurisdiction_level,election_night_evidence_url,final_evidence_url\n"
+        "us:me:town:a,ME,town,https://town.example/elections,https://town.example/elections\n"
     )
     (tmp_path / "us_state_central_authority_sources.csv").write_text(
-        "state,central_authority_url\\nME,https://state.example/elections\\n"
+        "state,central_authority_url\\nME,https://state.example/elections\n"
     )
     (tmp_path / "us_local_reporting_sources.csv").write_text(
-        "state,locality_type,locality_name,authority_url,results_url\\n"
-        "MI,county,Alpha,https://alpha.example/elections,https://alpha.example/results\\n"
+        "state,locality_type,locality_name,authority_url,results_url\n"
+        "MI,county,Alpha,https://alpha.example/elections,https://alpha.example/results\n"
     )
     seeds = load_seeds(tmp_path)
     assert len(seeds) == 4
