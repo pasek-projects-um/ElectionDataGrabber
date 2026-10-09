@@ -82,8 +82,8 @@ def build(root: Path):
     rows=sorted(records.values(),key=lambda x:(x["state"],x["jurisdiction_id"],x["page_role"],x["url"]))
     represented={row["jurisdiction_id"] for row in rows}
     gaps=[{"jurisdiction_id":jid,"state":s,"jurisdiction_level":level,"jurisdiction_name":name,
-           "gap":"no_registered_local_url"}
-          for jid,(s,level,name) in sorted(jurisdictions.items()) if jid not in represented]
+           "gap":("no_starting_url" if jid not in represented else "state_fallback_only")}
+          for jid,(s,level,name) in sorted(jurisdictions.items()) if jid not in direct]
     summary={"known_locality_jurisdictions":len(jurisdictions),
              "localities_without_registered_url":len(gaps),
              "localities_without_any_start":sum(g["gap"]=="no_starting_url" for g in gaps),
