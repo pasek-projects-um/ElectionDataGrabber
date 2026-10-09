@@ -20,7 +20,17 @@ import httpx
 from bs4 import BeautifulSoup
 
 RESULT = re.compile(r"results?|election.night|unofficial|precinct|canvass|tabulation|statement.of.votes", re.I)
-ELECTION = re.compile(r"elections?|voting|ballot|clerk|registrar|general.election", re.I)
+ELECTION = re.compile(
+    r"elections?|voting|voter.?information|ballot|clerk|registrar|"
+    r"board.of.elections|election.commission|election.office|county.auditor|"
+    r"election.division|supervisor.of.elections|general.election|"
+    r"past.elections?|previous.elections?|archives?|election.history|"
+    r"election.database|election.portal|election.calendar", re.I
+)
+ELECTION_PICKER = re.compile(
+    r"2026|november|general.election|select.election|choose.election|"
+    r"election.details?|election.history|past.elections?", re.I
+)
 VENDOR = ("enhancedvoting.com", "clarityelections.com", "electionreporting.com")
 FIELDS = ("jurisdiction_id", "state", "jurisdiction_level", "seed_url", "url",
           "depth", "category", "status", "platform_family", "error_class")
@@ -76,6 +86,15 @@ def load_seeds(root: str | Path = "registry") -> list[Seed]:
             for field in ("authority_url", "results_url"):
                 for url in row.get(field, "").split("|"):
                     add(identity, state, row.get("locality_type", ""), url)
+    path = root / "sources.csv"
+    if path.exists():
+        with path.open(encoding="utf-8-sig", newline="") as stream:
+            for row in csv.DictReader(stream):
+                if row.get("official", "").lower() != "true":
+                    continue
+                state = row.get("state", "").upper()
+                add(f"us:{state.lower()}:source:{row.get('source_id', '')}", state,
+                    "source", row.get("url", ""))
     return sorted(seeds.values(), key=lambda item: (item.state, item.jurisdiction_id, item.url))
 
 
@@ -136,7 +155,7 @@ def crawl_seed(seed: Seed, client: httpx.Client, *, max_pages: int = 8, max_dept
             label = " ".join(link.stripped_strings)
             phrase = label + " " + link_url
             result = bool(RESULT.search(phrase))
-            election = bool(ELECTION.search(phrase))
+            election = bool(ELECTION.search(phrase) or ELECTION_PICKER.search(phrase))
             if result or election:
                 candidates.append((0 if result else 1, link_url, "result_lead" if result else "election_site"))
         for _, link_url, kind in sorted(candidates):
