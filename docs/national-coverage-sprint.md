@@ -78,3 +78,18 @@ This proxy affects **estimated** reporting-unit-weighted prioritization only. Al
 ### Candidate replacement for the cube-root proxy (October 2026)
 
 The simple cube-root/10 proxy likely grows too slowly at scale and is not anchored to precinct-size intuition. A **proposed, uncalibrated** visibility model is `R(P) = max(1, round((P/1000) * min(0.8, 0.20*(P/10000)^0.2)))` for positive population P in persons. This separates potential precinct-sized units (`P/1000`) from the hypothesized share visibly reported (`q(P)`), which increases mildly with population but is capped. This is *not* evidence that larger jurisdictions actually publish more detail; large-county aggregation can invert that expectation, so actual source observed granularity must override estimates. Record the proxy formula, parameters, confidence and provenance; do not conflate predicted visibility with verified reporting units. Calibrate on known 2024/2025 and 2026 primary source examples before adopting the model in production or substituting it for the currently documented cube-root/10 baseline. Report both population and unique observable reporting-unit coverage independently in the blended score.
+
+
+### Heteroskedastic high-population visibility: revised candidate model
+
+The previously proposed increasing-visibility-fraction power law is **too optimistic at high population** and should not be used as the central estimate. Replace that candidate with a **sublinear, saturating typical-case** reporting-unit estimate (for positive population (P) in persons):
+
+`typical(P) = max(1, round(2 * (P / 10000)^0.55))`.
+
+This is a provisional planning assumption, not measured precinct visibility. Example typical values: 10,000 → 2; 100,000 → 7; 1,000,000 → 25; 10,000,000 → 89. The actual number may be far lower (a single countywide aggregate) or much higher (hundreds/thousands of published precincts). Accordingly **do not treat typical(P) as a deterministic prediction**. Model uncertainty explicitly, increasing with size: define `s(P) = 0.35 + 0.20 * max(0, log10(P/10000))` (for positive P), and provisional planning bounds `lower(P) = max(1, round(typical(P) * exp(-1.645*s(P))))`, `upper(P) = max(typical(P), round(typical(P) * exp(1.645*s(P))))`. These are **scenario bands, not calibrated 90% statistical confidence intervals**; empirical residuals must be used to calibrate them.
+
+A large county showing only aggregate results remains a realistic lower-tail outcome, regardless of population. Keep a separate coarse-aggregation scenario (1 or a handful of geographic result rows) in prioritization and report high-population estimates as a range rather than a precise number. Use source- or state-specific publication models once sufficient historical results are observed; a simple overall population function cannot explain mixed vendor / reporting policies. Where observed unit counts exist, use those rather than any imputation.
+
+Keep population coverage distinct from geographic-detail coverage and deduplicate across overlapping feeds. For ranking candidates with unknown granularity, retain a transparent conservative typical benefit and sensitivity to lower-/upper-visibility scenarios. Neither imputed unit counts nor scenario bands count as observed geographic reporting units.
+
+This proposal supersedes the prior **increasing-visibility-fraction** candidate for prioritization review; retain the original cube-root/10 assumption only as historical context, not as a second active default. No scoring-pipeline implementation or empirical calibration is claimed yet.
