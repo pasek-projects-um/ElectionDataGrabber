@@ -64,6 +64,18 @@ def main():
             print(f"WI {ident} repeated nonblank key samples:",
                   [(k, [(x.get("CNTY_NAME"),x.get("LABEL")) for x in v[:4]])
                     for k,v in groups.items() if k and len(v)>1][:18])
+        def wi_municipal_key(x):
+            ctv=str(x.get("CTV") or "").upper().strip()
+            name=str(x.get("MCD_NAME") or "").strip().casefold()
+            county=str(x.get("CNTY_NAME") or "").strip().casefold()
+            return (ctv,county if ctv=="T" else "",name)
+        grouped={}
+        for item in names_by_id.values():
+            grouped.setdefault(wi_municipal_key(item),[]).append(item)
+        print("WI grouped true municipalities",len(grouped),
+              "by CTV",dict(Counter(key[0] for key in grouped)),
+              "merged polygon fragments",sum(len(v)-1 for v in grouped.values()),
+              "examples",[(k,len(v)) for k,v in grouped.items() if len(v)>1][:15])
         print("WI selected name field",primary)
         unique={}
         for k,attr in names_by_id.items():
