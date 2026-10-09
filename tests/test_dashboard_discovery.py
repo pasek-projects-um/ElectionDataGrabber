@@ -21,7 +21,7 @@ ENHANCED = "https://app.enhancedvoting.com/results/public/example/elections/2026
 
 def test_catalog_evidence_and_roles():
     catalog = load_catalog()
-    assert catalog["version"] == 1
+    assert catalog["version"] == 3
     assert all(r["evidence"] for r in catalog["rules"])
     assert matches("https://evilclarityelections.com/") == []
     assert matches("https://app.enhancedvoting.com.evil.org/") == []
@@ -254,3 +254,87 @@ def test_national_selection_spreads_states(tmp_path):
     result = run_batch(seeds, tmp_path / "state.json", fetch, max_publishers=2)
     assert result["summary"]["selected_states"] == ["AK", "WI"]
     assert calls == ["https://ak0.gov/", "https://wi0.gov/"]
+
+
+def test_observed_custom_hosts_and_html_base():
+    import json
+
+    manifest = json.loads((FIXTURES / "custom-host-manifest.json").read_text())
+    for record in manifest:
+        rows = discover(record["url"], (FIXTURES / record["fixture"]).read_text())
+        root = next(r for r in rows if r["url"] == record["url"])
+        assert "enhanced-government-hosts" in root["signatures"]
+        script_urls = [
+            r["url"] for r in rows if any(p["kind"] == "script" for p in r["provenance"])
+        ]
+        assert script_urls and all(
+            "/results/public/main-" in u or "/results/public/polyfills-" in u for u in script_urls
+        )
+        assert not root["live_coverage"]
+    assert not any(
+        r["family"] == "enhanced_voting" for r in matches("https://results.sos.ga.gov.evil.org/")
+    )
+
+
+def test_cms_script_is_not_result_platform():
+    rows = discover(
+        "https://county.gov/", '<script src="https://assets.civicplus.com/app.js"></script>'
+    )
+    assert rows[0]["roles"] == ["authority_discovery"]
+    assert rows[0]["score"] == 0
+
+
+def test_artifact_is_an_explicit_uninspected_state(tmp_path):
+    from election_data_grabber.national_discovery import ArtifactNeedsInspection
+
+    def artifact(url):
+        raise ArtifactNeedsInspection("PDF")
+
+    state = run_batch(
+        [{"url": "https://county.gov/report.pdf", "jurisdiction_id": "one"}],
+        tmp_path / "artifact.json",
+        artifact,
+    )
+    assert state["pages"]["https://county.gov/report.pdf"]["status"] == "artifact_needs_inspection"
+
+
+def test_blocked_html_is_not_a_successful_discovery(tmp_path):
+    from election_data_grabber.national_discovery import html_access_state
+
+    assert (
+        html_access_state(
+            "<title>Request Rejected</title>Request Rejected The requested URL was rejected"
+        )
+        == "blocked_html"
+    )
+    assert (
+        html_access_state("<title>Election Results</title><app-root></app-root>")
+        == "application_shell"
+    )
+    seed = {"url": "https://state.gov/election-results", "jurisdiction_id": "state"}
+    state = run_batch(
+        [seed],
+        tmp_path / "blocked.json",
+        lambda url: (
+            url,
+            "<title>Request Rejected</title>Request Rejected The requested URL was rejected",
+        ),
+    )
+    assert state["pages"][seed["url"]]["status"] == "blocked_html"
+    assert state["publishers"] == {}
+
+
+def test_quest_requires_brand_and_assets():
+    rows = discover("https://enr.indianavoters.in.gov/", (FIXTURES / "quest-enr.html").read_text())
+    assert (
+        "quest-enr-html"
+        in next(r for r in rows if r["url"] == "https://enr.indianavoters.in.gov/")["signatures"]
+    )
+    assert not matches("https://county.gov/", html="<p>Quest Information Systems</p>")
+
+
+def test_html_fingerprint_handles_large_negative_page():
+    # Anchored lookaheads inspect the page once rather than retrying at every character.
+    rule = next(r for r in load_catalog()["rules"] if r["id"] == "quest-enr-html")
+    assert rule["pattern"].startswith("(?s)^")
+    assert not matches("https://county.gov/", html="<p>Budget</p>" * 80000)

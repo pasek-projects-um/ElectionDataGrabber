@@ -1,0 +1,30 @@
+{
+  "candidate_limit_per_page": 50,
+  "candidate_publishers": 33,
+  "catalog_sha256": "b65f455fb0c7ec61ab1cf24fe3fe9f4d05807f946bb16eeb6dd550bf608e1077",
+  "http_requests_this_run": 50,
+  "page_statuses": {
+    "fetch_failed": 23,
+    "fetched": 27
+  },
+  "pages": 50,
+  "requests_this_run": 50,
+  "selected_seed_publishers": 50,
+  "selected_states": [
+    "MI",
+    "VA",
+    "WA",
+    "WV"
+  ],
+  "signature_hits": {
+    "enhanced-government-hosts": 16,
+    "enhanced-host": 14,
+    "enhanced-public": 14,
+    "public-results-path": 25
+  },
+  "verification_states": {
+    "candidate": 72,
+    "fetched_unverified": 27
+  },
+  "verified_live_sources": 0
+}

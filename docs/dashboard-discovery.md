@@ -120,3 +120,7 @@ fixtures beyond Enhanced Voting. Separate non-HTML artifact inspection from fetc
 add robots/Retry-After policy and browser escalation for unresolved JavaScript shells,
 and review false positives before expanding nationwide crawling. No registry coverage
 flags are changed by this phase.
+
+Continuation: [expanded source catalog and second discovery pass](dashboard-discovery-expansion.md)
+documents catalog v3, additional state-surface entry points, snapshot replay and 446
+additional cataloged URLs. The counts above describe the original catalog-v1 pilot.

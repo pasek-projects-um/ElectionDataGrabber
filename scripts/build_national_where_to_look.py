@@ -26,7 +26,9 @@ def build(root: Path):
         key = (jid, role, url)
         records[key] = dict(zip(FIELDS, (jid,state,level,name,role,url,source,status)))
 
-    def read(filename):
+    def read(filename, optional=False):
+        if optional and not (root / filename).exists():
+            return
         with (root / filename).open(encoding="utf-8-sig",newline="") as stream:
             yield from csv.DictReader(stream)
 
@@ -38,6 +40,13 @@ def build(root: Path):
             add(jid,row["state"],row["jurisdiction_level"],row["canonical_name"],role,
                 row.get(field,""),"us_primary_election_localities.csv",
                 row.get("assessment_status","candidate"))
+    for row in read("first_pass_state_result_surfaces.csv", optional=True):
+        state = row["state"]
+        # County-scoped surfaces (e.g. Utah Cache) must not assert statewide service.
+        scope = row.get("source_scope", "unknown")
+        add(f"us:{state.lower()}:surface:{scope}", state, "source", state,
+            f"{scope}_results_lead", row["result_url"],
+            "first_pass_state_result_surfaces.csv", "candidate")
     for row in read("us_state_central_authority_sources.csv"):
         state = row["state"]
         add(f"us:{state.lower()}",state,"state",state,"state_election_authority",

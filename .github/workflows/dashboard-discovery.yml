@@ -3,6 +3,13 @@ on:
   pull_request:
     paths:
       - 'src/election_data_grabber/national_discovery.py'
+      - 'src/election_data_grabber/discovery_catalog.py'
+      - 'src/election_data_grabber/discovery_publication.py'
+      - 'scripts/catalog_discovery_results.py'
+      - 'scripts/replay_discovery_snapshots.py'
+      - 'scripts/build_national_where_to_look.py'
+      - 'tests/test_discovery_catalog.py'
+      - 'registry/discovered_result_sources.csv'
       - 'scripts/discover_national_results.py'
       - 'registry/dashboard_fingerprints.json'
       - 'tests/test_dashboard_discovery.py'

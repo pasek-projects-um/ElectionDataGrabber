@@ -16,6 +16,9 @@ def main():
     p.add_argument(
         "--checkpoint", type=Path, default=Path("audit/dashboard-discovery/checkpoint.json")
     )
+    p.add_argument(
+        "--snapshot-dir", type=Path, help="Optional immutable HTML snapshots for audit/replay"
+    )
     p.add_argument("--max-publishers", type=int, default=150)
     p.add_argument("--max-requests", type=int, default=300)
     p.add_argument("--max-depth", type=int, default=1)
@@ -41,7 +44,7 @@ def main():
             authority = {r["jurisdiction_id"]: r["authority_id"] for r in csv.DictReader(f)}
         for row in seeds:
             row["authority_id"] = authority.get(row["jurisdiction_id"], "")
-    fetch = Fetcher(args.delay, max_requests=args.max_requests)
+    fetch = Fetcher(args.delay, max_requests=args.max_requests, snapshot_dir=args.snapshot_dir)
     try:
         result = run_batch(
             seeds,

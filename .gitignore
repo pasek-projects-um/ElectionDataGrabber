@@ -5,3 +5,5 @@ __pycache__/
 .ruff_cache/
 audit/dashboard-discovery/*checkpoint*.json
 audit/dashboard-discovery/*.tmp
+audit/dashboard-discovery/snapshots/
+audit/dashboard-discovery/expansion-candidates.jsonl

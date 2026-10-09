@@ -8,6 +8,7 @@ import json
 import re
 import time
 from collections import Counter, defaultdict
+from datetime import UTC, datetime
 from html import unescape
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
@@ -78,9 +79,9 @@ def load_catalog(path=CATALOG):
     return catalog
 
 
-def matches(url, text="", catalog=None):
+def matches(url, text="", catalog=None, html=""):
     p = urlsplit(url)
-    fields = {"host": p.hostname or "", "path": p.path, "url": url, "text": text}
+    fields = {"host": p.hostname or "", "path": p.path, "url": url, "text": text, "html": html}
     return [
         r
         for r in (catalog or load_catalog())["rules"]
@@ -91,6 +92,9 @@ def matches(url, text="", catalog=None):
 def discover(page_url, html, requested_url="", catalog=None):
     catalog = catalog or load_catalog()
     soup = BeautifulSoup(html, "html.parser")
+    base_tag = soup.find("base", href=True)
+    resolution_base = normalize(base_tag["href"], page_url) if base_tag else page_url
+    resolution_base = resolution_base or page_url
     targets = [(page_url, "response", soup.get_text(" ", strip=True))]
     if requested_url and normalize(requested_url) != normalize(page_url):
         targets.append((page_url, "redirect", requested_url))
@@ -115,10 +119,10 @@ def discover(page_url, html, requested_url="", catalog=None):
             targets.append((m[1], "embedded", ""))
     rows = {}
     for raw, kind, label in targets:
-        url = normalize(raw, page_url) if raw else ""
+        url = normalize(raw, resolution_base) if raw else ""
         if not url:
             continue
-        signatures = matches(url, label, catalog)
+        signatures = matches(url, label, catalog, html if kind == "response" else "")
         keyword = bool(RESULT.search(url + " " + label))
         if not signatures and not keyword:
             continue
@@ -145,6 +149,7 @@ def discover(page_url, html, requested_url="", catalog=None):
                 row["roles"].append(s["role"])
         evidence = {
             "page_url": page_url,
+            "resolution_base": resolution_base,
             "kind": kind,
             "raw_target": raw,
             "label": label[:500],
@@ -162,7 +167,16 @@ def publisher_key(url):
         if m:
             return urlunsplit((p.scheme, p.netloc, m[1], "", ""))
     m = re.match(r"(/results/public/[^/]+/elections/[^/]+)", p.path)
-    if p.hostname == "app.enhancedvoting.com" and m:
+    if (
+        p.hostname
+        in (
+            "app.enhancedvoting.com",
+            "results.sos.ga.gov",
+            "electionresults.utah.gov",
+            "enr.elections.virginia.gov",
+        )
+        and m
+    ):
         return urlunsplit((p.scheme, p.netloc, m[1], p.query, ""))
     return normalize(url)
 
@@ -189,15 +203,33 @@ def assess(html, name, election):
     }
 
 
+def html_access_state(html):
+    soup = BeautifulSoup(html, "html.parser")
+    title = soup.title.get_text(" ", strip=True).casefold() if soup.title else ""
+    text = soup.get_text(" ", strip=True)
+    if title in ("just a moment...", "request rejected", "access denied") or text.startswith(
+        "Request Rejected The requested URL was rejected"
+    ):
+        return "blocked_html"
+    if soup.find("app-root") or "{{" in text:
+        return "application_shell"
+    return "html_content"
+
+
 class RequestBudgetExhausted(Exception):
     pass
 
 
+class ArtifactNeedsInspection(ValueError):
+    pass
+
+
 class Fetcher:
-    def __init__(self, delay=1.0, max_bytes=1_000_000, max_requests=1000):
+    def __init__(self, delay=1.0, max_bytes=1_000_000, max_requests=1000, snapshot_dir=None):
         self.delay, self.max_bytes, self.last = delay, max_bytes, {}
         self.remaining = max_requests
         self.requests = 0
+        self.snapshot_dir = Path(snapshot_dir) if snapshot_dir else None
         self.client = httpx.Client(
             timeout=15,
             follow_redirects=False,
@@ -222,13 +254,18 @@ class Fetcher:
                     continue
                 r.raise_for_status()
                 if "html" not in r.headers.get("content-type", "").lower():
-                    raise ValueError("Artifact requires separate inspection")
+                    raise ArtifactNeedsInspection("Artifact requires separate inspection")
                 data = bytearray()
                 for chunk in r.iter_bytes():
                     data.extend(chunk)
                     if len(data) > self.max_bytes:
                         raise ValueError("Response exceeds byte limit")
-                return url, data.decode(r.encoding or "utf-8", errors="replace")
+                html = data.decode(r.encoding or "utf-8", errors="replace")
+                if self.snapshot_dir:
+                    self.snapshot_dir.mkdir(parents=True, exist_ok=True)
+                    digest = hashlib.sha256(html.encode()).hexdigest()
+                    (self.snapshot_dir / (digest + ".html")).write_text(html)
+                return url, html
         raise ValueError("Redirect limit")
 
     def close(self):
@@ -307,15 +344,24 @@ def run_batch(
                     raise ValueError("Invalid final URL")
                 page = {
                     "status": "fetched",
+                    "observed_at": datetime.now(UTC).isoformat(),
                     "final_url": final,
                     "sha256": hashlib.sha256(html.encode()).hexdigest(),
                     "candidates": discover(final, html, url, catalog),
                     "text": BeautifulSoup(html, "html.parser").get_text(" ", strip=True),
+                    "access_state": html_access_state(html),
                 }
             except RequestBudgetExhausted:
                 break
+            except ArtifactNeedsInspection as exc:
+                page = {"status": "artifact_needs_inspection", "error": str(exc), "candidates": []}
             except (httpx.HTTPError, ValueError, KeyError) as exc:
                 page = {"status": "fetch_failed", "error": type(exc).__name__, "candidates": []}
+                if isinstance(exc, httpx.HTTPStatusError):
+                    page["http_status"] = exc.response.status_code
+            if page.get("access_state") == "blocked_html":
+                page["status"] = "blocked_html"
+                page["candidates"] = []
             state["pages"][url] = page
         for candidate in page["candidates"][:50]:
             key = publisher_key(candidate["url"])
