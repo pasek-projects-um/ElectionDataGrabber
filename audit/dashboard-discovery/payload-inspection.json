@@ -1,0 +1,115 @@
+{
+  "maryland": {
+    "state": "MD",
+    "contest": "Governor / Lt. Governor",
+    "party": "DEM",
+    "matched_candidates": 2,
+    "matched_votes": 633080,
+    "verification_status": "historical_payload_crosschecked",
+    "live_coverage": false,
+    "served_jurisdiction_verified": false,
+    "election_context": "Official 2026 Gubernatorial Primary Election",
+    "html_url": "https://elections.maryland.gov/elections/2026/primary_results/gen_results_2026_1.html",
+    "csv_url": "https://elections.maryland.gov/elections/2026/election_data/GP26_CongressionalBreakDownDemocratic.csv",
+    "html_observed_from": "https://elections.maryland.gov/elections/2026/primary_results/index.html",
+    "csv_observed_from": "https://elections.maryland.gov/elections/2026/election_data/index.html",
+    "html_sha256": "bc97f265ef020109f51edf6b33ae8f31227d999fdbbe4255d9eaefeaa6e254c2",
+    "csv_sha256": "a4479f9e0179663537573f6f84aaa1ecbd8ef2d14878864cdc4797f7a5acbe36",
+    "csv_rows": 1196,
+    "html_candidate_rows": 11,
+    "observed_at": "2026-10-09",
+    "scope_limit": "Only statewide Democratic Governor totals reconciled; no county or precinct service claim."
+  },
+  "wyoming": {
+    "url": "https://sos.wyo.gov/Elections/Docs/2026/Results/Primary/2026_Wyoming_Primary_Results.zip",
+    "observed_from": "https://sos.wyo.gov/Elections/Docs/2026/2026PrimaryResults.aspx",
+    "sha256": "f17a674877d0e069198c4c914c1deb104deb8849d7de3624ad105c14c4cb6416",
+    "verification_status": "historical_workbook_inspected",
+    "live_coverage": false,
+    "served_jurisdiction_verified": false,
+    "election_context": "Wyoming Primary Election - August 18, 2026",
+    "observed_at": "2026-10-09",
+    "workbooks": [
+      {
+        "name": "2026 Primary Results Summaries - OFFICIAL.xlsx",
+        "sheet_count": 7,
+        "sheets": [
+          "Statewide Total Ballots Cast",
+          "Statewide Candidates",
+          "Statewide Senate Odd",
+          "Statewide Senate Even",
+          "Statewide House",
+          "BLANKSS",
+          "BLANKSH"
+        ]
+      },
+      {
+        "name": "2026 Primary County PbP Results - OFFICIAL.xlsx",
+        "sheet_count": 23,
+        "sheets": [
+          "Albany",
+          "Big Horn",
+          "Campbell",
+          "Carbon",
+          "Converse",
+          "Crook",
+          "Fremont",
+          "Goshen",
+          "Hot Springs",
+          "Johnson",
+          "Laramie",
+          "Lincoln",
+          "Natrona",
+          "Niobrara",
+          "Park",
+          "Platte",
+          "Sheridan",
+          "Sublette",
+          "Sweetwater",
+          "Teton",
+          "Uinta",
+          "Washakie",
+          "Weston"
+        ]
+      },
+      {
+        "name": "2026 Primary County PbP Total Ballots Cast - OFFICIAL.xlsx",
+        "sheet_count": 23,
+        "sheets": [
+          "Albany",
+          "Big Horn",
+          "Campbell",
+          "Carbon",
+          "Converse",
+          "Crook",
+          "Fremont",
+          "Goshen",
+          "Hot Springs",
+          "Johnson",
+          "Laramie",
+          "Lincoln",
+          "Natrona",
+          "Niobrara",
+          "Park",
+          "Platte",
+          "Sheridan",
+          "Sublette",
+          "Sweetwater",
+          "Teton",
+          "Uinta",
+          "Washakie",
+          "Weston"
+        ]
+      }
+    ],
+    "sample": {
+      "sheet": "Albany",
+      "precinct": "13-1",
+      "republican": 582,
+      "democratic": 157,
+      "nonpartisan": 33,
+      "total": 772,
+      "sum_matches": true
+    }
+  }
+}

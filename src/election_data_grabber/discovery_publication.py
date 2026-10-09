@@ -59,7 +59,7 @@ def publishable_url(url):
         return False
     parsed = urlsplit(url)
     if "/cdn-cgi/" in parsed.path or (parsed.hostname or "").endswith(
-        ("cloudflare.com", "perimeterx.net")
+        ("cloudflare.com", "perimeterx.net", "perfdrive.com")
     ):
         return False
     for key, value in parse_qsl(parsed.query, keep_blank_values=True):

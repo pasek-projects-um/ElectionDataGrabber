@@ -1,29 +1,19 @@
 {
-  "additional_live_http_requests": 400,
-  "additional_seed_locations": 200,
-  "baseline_cataloged_urls": 303,
-  "cataloged_urls": 749,
-  "cataloged_urls_not_in_starting_inventory": 685,
-  "fingerprint_catalog_version": 3,
+  "added_urls": 193,
+  "cataloged_urls": 940,
+  "historical_crosschecked_contests": 1,
+  "historical_payloads_inspected": 2,
   "kinds": {
-    "authority_cms": 22,
-    "dashboard_candidate": 140,
-    "result_artifact_lead": 222,
-    "results_page_lead": 365
+    "authority_cms": 25,
+    "dashboard_candidate": 139,
+    "result_artifact_lead": 366,
+    "results_page_lead": 410
   },
-  "newly_cataloged_urls": 446,
-  "original_pilot_publisher_leads": 577,
-  "platform_record_counts": {
-    "civicplus": 22,
-    "clarity": 49,
-    "enhanced_voting": 37,
-    "pdf": 213,
-    "public_results_app": 79,
-    "quest_enr": 1,
-    "tabular_download": 9
-  },
-  "publisher_keys": 749,
-  "state_attributed_records": 749,
+  "previous_published_catalog_urls": 749,
+  "publisher_keys": 940,
+  "removed_nonresult_urls": 2,
+  "served_jurisdictions_verified": 0,
+  "state_attributed_records": 940,
   "states_with_attributed_records": [
     "AL",
     "AZ",
@@ -61,13 +51,10 @@
     "WV",
     "WY"
   ],
-  "supporting_probe_note": "10 separate target probes; redirects were not included in the capped batch request counter.",
-  "supporting_probe_targets": 10,
   "target_statuses": {
     "fetch_failed": 25,
-    "fetched": 234,
-    "not_fetched": 490
+    "fetched": 248,
+    "not_fetched": 667
   },
-  "targeted_observed_dashboard_urls": 50,
   "verified_live_sources": 0
 }

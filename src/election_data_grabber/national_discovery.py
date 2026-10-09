@@ -207,8 +207,10 @@ def html_access_state(html):
     soup = BeautifulSoup(html, "html.parser")
     title = soup.title.get_text(" ", strip=True).casefold() if soup.title else ""
     text = soup.get_text(" ", strip=True)
-    if title in ("just a moment...", "request rejected", "access denied") or text.startswith(
-        "Request Rejected The requested URL was rejected"
+    if (
+        title in ("just a moment...", "request rejected", "access denied", "radware captcha page")
+        or ("request blocked" in text.casefold() and "cloudfront" in text.casefold())
+        or text.startswith("Request Rejected The requested URL was rejected")
     ):
         return "blocked_html"
     if soup.find("app-root") or "{{" in text:

@@ -1,5 +1,7 @@
 # Discovery catalog expansion — October 9, 2026
 
+This documents the earlier 749-URL snapshot. See [the continuation report](dashboard-discovery-continuation.md) for the current catalog and payload validation.
+
 The first pilot produced raw candidate evidence. This continuation adds a filtered,
 reviewable source-lead catalog and a second nationwide pass on draft PR #70.
 

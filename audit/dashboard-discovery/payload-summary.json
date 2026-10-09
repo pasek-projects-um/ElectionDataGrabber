@@ -1,0 +1,23 @@
+{
+  "candidate_limit_per_page": 50,
+  "candidate_publishers": 52,
+  "catalog_sha256": "b65f455fb0c7ec61ab1cf24fe3fe9f4d05807f946bb16eeb6dd550bf608e1077",
+  "http_requests_this_run": 3,
+  "page_statuses": {
+    "fetched": 3
+  },
+  "pages": 3,
+  "requests_this_run": 3,
+  "selected_seed_publishers": 3,
+  "selected_states": [
+    "MD"
+  ],
+  "signature_hits": {
+    "tabular-artifact": 49
+  },
+  "verification_states": {
+    "candidate": 49,
+    "fetched_unverified": 4
+  },
+  "verified_live_sources": 0
+}

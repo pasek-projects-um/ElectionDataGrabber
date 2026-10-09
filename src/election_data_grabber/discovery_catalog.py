@@ -58,12 +58,22 @@ def catalog_sources(batches, *, observed_date):
                 if candidate is None:
                     continue
                 url = normalize(candidate["url"])
-                if not url or urlsplit(url).path.lower().endswith((".js", ".css")):
+                if (
+                    not url
+                    or urlsplit(url).path.lower().endswith((".js", ".css", "/sitemap.xml"))
+                    or re.search(
+                        r"/(?:login|logout|signin|account)(?:/|$)", urlsplit(url).path, re.I
+                    )
+                ):
                     continue
                 roles = set(candidate["roles"])
                 provenance = candidate["provenance"]
                 keyword = any(p["keyword_match"] for p in provenance)
-                parent_results = any(RESULT.search(p["page_url"]) for p in provenance)
+                parent_results = any(
+                    RESULT.search(p["page_url"])
+                    or re.search(r"/elections/\d{4}/election_data/", urlsplit(p["page_url"]).path)
+                    for p in provenance
+                )
                 if "result_platform" in roles:
                     kind = "dashboard_candidate"
                 elif "report_family" in roles and (keyword or parent_results):
