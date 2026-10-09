@@ -18,7 +18,7 @@ IN,92,92,0,0,0,0,0,0,0,0,county,provisional,national_first_pass_2026
 KS,105,105,0,0,0,0,0,0,0,0,county,provisional,migrated_from_existing_tracker
 KY,120,120,0,0,0,0,0,0,0,0,county,provisional,migrated_from_existing_tracker
 LA,64,64,0,0,0,0,0,0,0,0,parish,provisional,migrated_from_existing_tracker
-MA,351,0,0,0,0,0,351,0,0,0,municipal,provisional,migrated_from_existing_tracker
+MA,351,351,0,0,0,0,0,0,0,0,municipal,provisional,migrated_from_existing_tracker
 MD,24,24,0,0,0,0,0,0,0,0,county+independent-city,provisional,migrated_from_existing_tracker
 ME,350,200,150,0,0,0,0,150,150,0,municipality,high_confidence,existing_me_locality_registry
 MI,83,0,60,0,23,0,0,83,83,23,county,high_confidence,existing_mi_county_authority_registry
