@@ -14,7 +14,7 @@ not establish that a source is absent.
 - `unit-readiness.csv`: every named unit, category, hunting/result URLs and next action.
 - `directory-link-candidates.csv`: 1,420 observed links with roles, parent URLs,
   bounded excerpts, capture hashes and provisional unit matches.
-- `capture-status-by-state.csv`: all 51 state/DC starts; 29 usable captures,
+- `capture-status-by-state.csv`: all 51 state/DC starts; 29 saved captures (28 usable; one security challenge),
   12 robots-denied, four robots-unresolved and six fetch-unresolved.
 - `discovery-priorities.csv`: states ranked by unresolved named units, with an
   initial lane based on whether an official page capture is available.

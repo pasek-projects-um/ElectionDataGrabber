@@ -70,3 +70,17 @@ def test_changed_capture_is_rejected(evidence):
     next(snapshots.iterdir()).write_text("modified capture")
     with pytest.raises(ValueError, match="digest mismatch"):
         command.replay(registry, captured, snapshots)
+
+
+def test_http_success_challenge_is_not_a_usable_directory(evidence):
+    registry, captured, snapshots = evidence
+    html = '<html><script src="/_Incapsula_Resource?challenge=example"></script><body></body></html>'
+    digest = hashlib.sha256(html.encode()).hexdigest()
+    (snapshots / (digest + ".html")).write_text(html)
+    next(iter(captured["pages"].values()))["snapshot_sha256"] = digest
+    candidates, states, units, summary = command.replay(registry, captured, snapshots)
+    assert not candidates
+    assert states[0]["fetch_status"] == "fetched"
+    assert states[0]["capture_access_state"] == "blocked_html"
+    assert summary["captured_state_pages"] == 1 and summary["usable_state_captures"] == 0
+    assert all(r["bucket"] == "unresolved_location" for r in units)

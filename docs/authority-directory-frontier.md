@@ -63,7 +63,8 @@ handling, state scoping, watcher retention and capture digest verification.
 ## National capture replay and readiness report
 
 The October 10 pass checked all 51 registered state/DC starting pages with 96 HTTP
-requests. It saved 29 usable captures; 12 pages were robots-denied, four had
+requests. It saved 29 captures, of which 28 contain usable HTML and one is a security
+challenge; 12 pages were robots-denied, four had
 unresolved robots access and six had unresolved fetches. Offline replay extracted
 1,420 links and retained link roles separately: authority websites, external
 websites, result leads, documents/maps, anchors and other links. Only unique

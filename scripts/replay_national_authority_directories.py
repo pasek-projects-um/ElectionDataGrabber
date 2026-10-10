@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from election_data_grabber.authority_directory import extract_directory
-from election_data_grabber.national_discovery import normalize
+from election_data_grabber.national_discovery import html_access_state, normalize
 from scripts.build_national_where_to_look import build
 
 GOOD_ROLES = {"authority_website_lead", "external_website_lead", "result_page_lead"}
@@ -38,10 +38,12 @@ def replay(registry, captured, snapshots):
         capture_available = bool(re.fullmatch(r"[a-f0-9]{64}", digest))
         capture_available = capture_available and (snapshots / (digest + ".html")).exists()
         rows = []
+        access = "no_capture"
         if capture_available:
             body = (snapshots / (digest + ".html")).read_bytes()
             if hashlib.sha256(body).hexdigest() != digest:
                 raise ValueError("Capture digest mismatch")
+            access = html_access_state(body.decode("utf-8"))
             rows, _ = extract_directory(page.get("final_url", url), body.decode("utf-8"),
                                         units, state=state)
             for row in rows:
@@ -53,6 +55,7 @@ def replay(registry, captured, snapshots):
         states.append({
             "state": state, "directory_url": url, "fetch_status": page.get("status", "not_checked"),
             "capture_available": capture_available, "capture_sha256": digest,
+            "capture_access_state": access,
             "expected_primary_units": denominators[state]["expected_primary_units"],
             "denominator_status": denominators[state]["estimate_status"],
             "named_units": len(named), "extracted_links": len(rows),
@@ -109,6 +112,8 @@ def replay(registry, captured, snapshots):
     summary = {
         "state_pages": len(states), "fetch_statuses": dict(Counter(r["fetch_status"] for r in states)),
         "captured_state_pages": sum(r["capture_available"] for r in states),
+        "usable_state_captures": sum(r["capture_access_state"] == "html_content" for r in states),
+        "capture_access_states": dict(Counter(r["capture_access_state"] for r in states)),
         "extracted_links": len(candidates),
         "link_roles": dict(Counter(r["link_role"] for r in candidates)),
         "named_units": len(unit_rows), "unit_buckets": dict(Counter(r["bucket"] for r in unit_rows)),

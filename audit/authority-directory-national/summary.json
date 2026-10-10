@@ -1,4 +1,9 @@
 {
+  "capture_access_states": {
+    "blocked_html": 1,
+    "html_content": 28,
+    "no_capture": 22
+  },
   "captured_state_pages": 29,
   "extracted_links": 1420,
   "fetch_statuses": {
@@ -24,5 +29,6 @@
     "evidence_backed_hunting_location": 248,
     "observed_result_page_candidate": 39,
     "unresolved_location": 6001
-  }
+  },
+  "usable_state_captures": 28
 }
