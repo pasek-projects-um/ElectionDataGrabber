@@ -31,7 +31,7 @@ def test_overlapping_names_and_multiple_entries_remain_distinct():
     assert single["associated_unit_ids"] == "unit:3"
     shared = next(r for r in rows if r["url"].endswith("/shared"))
     assert shared["match_status"] == "ambiguous_unit_label"
-    assert len(gaps) == 3
+    assert len(gaps) == 4  # A label alone on an arbitrary internal path is not a website lead.
 
 
 def test_duplicate_names_cannot_establish_unique_authority():
@@ -68,6 +68,45 @@ def test_unmatched_authority_links_are_retained_for_review_and_names_are_state_s
 def test_in_page_anchors_do_not_resolve_local_authority_website():
     rows, gaps = extract_directory(PAGE, '<a href="#alpha">Alpha County</a>', UNITS, state="XY")
     assert rows[0]["match_status"] == "directory_anchor" and len(gaps) == 4
+
+
+def test_maps_documents_and_other_unit_links_do_not_become_authority_websites():
+    rows, gaps = extract_directory(PAGE,
+        '<a href="/maps/sd/alpha.html">Alpha County</a>'
+        '<a href="/media/92">Beta County Wait Time Reduction Plan</a>'
+        '<a href="/candidates/york.html">York County</a>', UNITS, state="XY")
+    assert {r["link_role"] for r in rows} == {"document_or_map_lead", "other_unit_link"}
+    assert len(gaps) == 4
+
+
+def test_historical_results_are_a_distinct_hunting_clue():
+    rows, gaps = extract_directory(PAGE,
+        '<tr><td>Alpha County 2016 Election</td><td>'
+        '<a href="/elections/resultsarchive/2016/alpha.html">Results</a></td></tr>',
+        UNITS, state="XY")
+    assert rows[0]["link_role"] == "result_page_lead"
+    assert rows[0]["served_jurisdiction_verified"] == "false" and len(gaps) == 3
+
+
+def test_details_summary_matches_official_county_display_form_without_changing_ids():
+    units = [{"state": "MD", "canonical_name": "Allegany County",
+              "jurisdiction_id": "us:md:census-county:24001", "jurisdiction_level": "county_equivalent"}]
+    html = '<details><summary>Allegany</summary><dl><dt>Website</dt><dd>'
+    html += '<a href="http://alleganygov.org/158/Election-Office">'
+    html += 'http://alleganygov.org/158/election-office</a></dd></dl></details>'
+    rows, gaps = extract_directory("https://elections.maryland.gov/about/county_boards.html",
+                                   html, units, state="MD")
+    assert rows[0]["associated_unit_ids"] == "us:md:census-county:24001"
+    assert rows[0]["match_basis"] == "details_summary" and not gaps
+
+
+def test_administrative_suffix_alias_preserves_ambiguity():
+    units = [{"state": "XY", "canonical_name": name, "jurisdiction_level": "county_equivalent",
+              "jurisdiction_id": str(i)} for i, name in enumerate(("Alpha County", "Alpha Parish"))]
+    rows, gaps = extract_directory(PAGE,
+        '<details><summary>Alpha</summary><a href="https://alpha.gov/clerk">Website</a></details>',
+        units, state="XY")
+    assert rows[0]["match_status"] == "ambiguous_unit_label" and len(gaps) == 2
 
 
 def test_directory_watcher_emits_and_retains_review_queue_without_auto_follow(tmp_path):

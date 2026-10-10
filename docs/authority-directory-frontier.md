@@ -8,8 +8,10 @@ website or an ambiguous link to every unit, and does not change verified coverag
 On each successful capture of a registered state-authority/directory starting page:
 
 1. Resolve actual anchor URLs against the observed page/base URL.
-2. Match state-scoped canonical unit names in anchor labels, or a bounded table/list
-   row when the label is simply "Website".
+2. Match state-scoped canonical unit names in anchor labels, a bounded table/list
+   row, a details summary or a definition term when the label is simply "Website".
+   County/parish units also accept the observed display name without that suffix;
+   duplicate aliases remain ambiguous and canonical IDs remain unchanged.
 3. Keep unique label matches separate from ambiguous names, unmatched authority
    links, artifact links and in-page anchors.
 4. Bind candidates to their directory URL, exact evidence excerpt and snapshot hash.
@@ -53,11 +55,40 @@ network requests and produces `authority-link-candidates.csv`,
 `unresolved-units.csv`, and `summary.json`. Counts describe evidence in that single
 capture, not source absence or complete state coverage.
 
-The initial regression cases use synthetic directories, not claimed official
-captures. They cover observed URLs, base/row context, overlapping names, duplicate
-names, ambiguity, social/contact/transient filtering, artifacts, anchors,
-blocked/shell handling, state scoping and watcher retention. The next evidence
-pass should run against saved official directories across states, review matches,
-and measure how much of the 6,097-unit fallback frontier becomes local starting
-evidence. Directory formats without observed links need separate structured or
-rendered evidence extraction.
+The regression cases use synthetic examples, including a manually constructed
+example of the details/summary structure observed on Maryland's official page.
+They cover ambiguity, contact/transient filtering, link roles, blocked/shell
+handling, state scoping, watcher retention and capture digest verification.
+
+## National capture replay and readiness report
+
+The October 10 pass checked all 51 registered state/DC starting pages with 96 HTTP
+requests. It saved 29 usable captures; 12 pages were robots-denied, four had
+unresolved robots access and six had unresolved fetches. Offline replay extracted
+1,420 links and retained link roles separately: authority websites, external
+websites, result leads, documents/maps, anchors and other links. Only unique
+unit-label matches to website/result leads contribute a directory hunting clue.
+Targets linked from these directories have not been fetched by this pass.
+
+Across the 6,288 named units, the report has 39 units with observed result-page
+candidates from the prior discovery catalog, 248 with hunting locations, and
+6,001 unresolved. These counts describe units, not distinct URLs. Catalog parent
+joins and directory labels still require service-area review; none of these
+counts certifies live results or a served jurisdiction. Provisional denominators
+remain provisional. Shared statewide fallbacks do not resolve local gaps.
+
+See [the report](../audit/authority-directory-national/README.md). Reproduce from
+your own saved watcher checkpoint and snapshots:
+
+```sh
+python -m scripts.replay_national_authority_directories \
+  --watch-state /absolute/path/to/watch-data/state.json \
+  --snapshots /absolute/path/to/watch-data/snapshots \
+  --output audit/authority-directory-national
+```
+
+The replay checks capture hashes, makes no network requests and writes per-state
+capture status, observed link evidence, per-unit readiness and summary files.
+Raw HTML remains in the worker snapshot directory; the repository report records
+source URLs, digests and bounded excerpts. It does not claim a complete crawl.
+Directory formats without usable links need structured or rendered extraction.
