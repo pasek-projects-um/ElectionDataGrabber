@@ -68,3 +68,20 @@ workbooks with cross-checks against official totals; resolve public-app shells t
 observed assets or browser-rendered evidence; obtain authoritative service-area mappings;
 and expand locality starts outside the MI/OH/ME-heavy registry. Historical payload access
 must remain separate from an election-night update test. Draft PR #70 remains unmerged.
+
+## October 10: Maryland reconciliation safeguards
+
+The observed Maryland HTML parser now checks each official party table's totals
+against the sum of candidate counts, separately for every vote mode and overall.
+Recognized tables reject missing or duplicate totals, incomplete candidate rows,
+mixed party context, and duplicate candidate/party rows. Reconciliation also rejects
+duplicate pre-parsed candidates before building candidate maps, preventing silent
+overwrites from producing a successful cross-check.
+
+Seven added regression cases cover balanced but incorrect mode totals, duplicate
+HTML and pre-parsed candidate rows, missing/duplicate totals, and truncated rows.
+The original observed fixture still reconciles 633,080 Democratic governor votes.
+These safeguards do not advance precinct ingestion, statewide coverage, or live
+verification; Maryland precinct ingestion and Wyoming workbook reconciliation
+remain outstanding. Prioritize observed supported formats and reusable platform
+families that unlock multiple states when continuing the national acquisition work.
