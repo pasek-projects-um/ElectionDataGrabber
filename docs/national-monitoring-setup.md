@@ -87,6 +87,10 @@ across restarts; changing it intentionally starts a new baseline.
   state/event IDs and deduplicate journal records by sequence and content.
 - `watch-data/candidate-queue.csv`: candidates, parent pages, recognition rules,
   observation times and snapshot hashes, ready for the inspection/adapter stage.
+- `watch-data/authority-link-queue.csv`: observed links from registered state
+  directory/authority pages, with state-scoped unit-label matches and snapshot
+  evidence. Ambiguous and unmatched links remain separate review work. See
+  `docs/authority-directory-frontier.md` for replay and registry promotion.
 - `watch-data/last-run.json`: checked pages, request count, new candidates,
   remaining due pages, unvisited pages and oldest due lateness.
 

@@ -8,6 +8,7 @@ import time
 from contextlib import contextmanager
 from pathlib import Path
 
+from election_data_grabber.authority_directory import FIELDS
 from election_data_grabber.discovery_watch import WatchFetcher, follow_candidates, run_watch
 from election_data_grabber.national_discovery import save
 
@@ -55,6 +56,8 @@ def main():
     parser.add_argument("--seeds", type=Path,
                         default=Path("audit/national-layers/unique-start-pages.csv"))
     parser.add_argument("--state-dir", type=Path, default=Path("watch-data"))
+    parser.add_argument("--registry", type=Path, default=Path("registry"),
+                        help="Named-unit registry for directory link extraction")
     parser.add_argument("--source-seeds", type=Path,
                         default=Path("audit/national-layers/source-next-actions.csv"))
     parser.add_argument("--max-depth", type=int, default=2,
@@ -99,14 +102,31 @@ def main():
             seeds = [s for s in seeds if wanted.intersection(
                 value.strip() for value in s.get("states", s.get("state", "")).split("|"))]
         fetch = WatchFetcher(args.delay, max_bytes=args.max_bytes, max_requests=args.max_requests)
+        locality_path = args.registry / "us_primary_election_localities.csv"
+        if locality_path.exists():
+            with locality_path.open(newline="", encoding="utf-8-sig") as stream:
+                localities = list(csv.DictReader(stream))
+        else:
+            localities = []
         try:
             state, _, summary = run_watch(
                 seeds, args.state_dir / "state.json", args.state_dir / "snapshots", fetch,
                 now=time.time(), interval=args.interval, max_pages=args.max_pages,
+                localities=localities,
             )
         finally:
             fetch.close()
         export_queue(args.state_dir / "candidate-queue.csv", state)
+        authority_path = args.state_dir / "authority-link-queue.csv"
+        authority_rows = list(state.get("authority_candidates", {}).values())
+        temp = authority_path.with_suffix(".tmp")
+        with temp.open("w", newline="", encoding="utf-8") as stream:
+            # Use a stable header even on the initial pass with no directory rows.
+            fields = [*FIELDS, "first_observed_at", "last_observed_at"]
+            writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(authority_rows)
+        temp.replace(authority_path)
         save(args.state_dir / "last-run.json", summary)
         print(json.dumps(summary, sort_keys=True))
 
