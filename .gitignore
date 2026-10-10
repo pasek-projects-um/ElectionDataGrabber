@@ -1,0 +1,6 @@
+watch-data/
+.venv/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+pytest-of-root/

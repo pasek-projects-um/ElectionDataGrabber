@@ -6,6 +6,8 @@ from urllib.parse import urljoin,urlparse
 import httpx
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# Legacy census remains reproducible. For evidence-scored resumable discovery use
+# python -m scripts.discover_national_results (catalog + publisher mapping).
 RESULT_RE=re.compile(r"(election\s+results?|unofficial\s+results?|official\s+results?|statement\s+of\s+votes?|canvass|election\s+night|precinct\s+results?)",re.I)
 PLATFORMS=[
  ("enhanced_voting",re.compile(r"enhancedvoting",re.I)),
