@@ -66,6 +66,14 @@ Negative findings require affirmative adjudication. HTTP failures, robots restri
 
 The next work should be driven by generated readiness/evidence, not by another undifferentiated web crawl.
 
+October 10 discovery-layer continuation: `scripts/build_national_layer_frontier.py`
+now joins named units, direct/state-fallback starts, and exact observed page provenance
+into separate national/state/unit/source queues. The current registry has 6,288 named
+units, 191 with direct starts and 6,097 using state fallbacks; 46 state denominators
+remain provisional. Prioritize national authority-directory resolution and linked
+local websites before concentrating on individual historical payloads. See
+`docs/national-layer-frontier.md`; these offline queues do not establish new coverage.
+
 - [ ] Execute and replay every harvested candidate already covered by an existing adapter family.
 - [ ] Fetch discovered JSON/XML/CSV/Excel artifacts and promote successful cases through normalization/replay.
 - [ ] Rank remaining platform families by number of jurisdictions/authorities unlocked and election-night value.

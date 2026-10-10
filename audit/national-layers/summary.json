@@ -1,0 +1,32 @@
+{
+  "network_requests": 0,
+  "observed_source_tasks": 940,
+  "scope": "Registry evidence only; exact page provenance is not verified service coverage.",
+  "source_next_actions": {
+    "extract_authority_links": 25,
+    "extract_result_links": 408,
+    "inspect_dashboard_and_payload_links": 139,
+    "inspect_result_artifact": 343,
+    "investigate_fetch_failure": 25
+  },
+  "starting_point_audit": {
+    "denominator_overrun": 0,
+    "expected_units": 6288,
+    "named_units": 6288,
+    "named_units_without_start": 0,
+    "national_100_percent": false,
+    "provisional_state_count": 46,
+    "state_count": 51,
+    "units_with_any_start": 6288,
+    "units_with_direct_lead": 191,
+    "unnamed_units": 0
+  },
+  "unique_start_page_tasks": 627,
+  "unit_next_actions": {
+    "extract_links_from_local_start": 171,
+    "inspect_observed_result_leads": 20,
+    "resolve_local_authority_from_state_directory": 6097
+  },
+  "watch_fingerprint_catalog": "registry/dashboard_fingerprints.json",
+  "watch_fingerprint_catalog_version": 3
+}

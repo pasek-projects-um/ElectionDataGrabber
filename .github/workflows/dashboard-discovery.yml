@@ -11,6 +11,8 @@ on:
       - 'scripts/catalog_discovery_results.py'
       - 'scripts/replay_discovery_snapshots.py'
       - 'scripts/build_national_where_to_look.py'
+      - 'scripts/build_national_layer_frontier.py'
+      - 'tests/test_national_layer_frontier.py'
       - 'tests/test_discovery_catalog.py'
       - 'registry/discovered_result_sources.csv'
       - 'scripts/discover_national_results.py'

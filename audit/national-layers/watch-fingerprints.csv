@@ -1,0 +1,13 @@
+id,family,role,field,pattern,specificity,evidence
+clarity-host,clarity,result_platform,host,(^|\.)clarityelections\.com$,exact_vendor_host_or_path,tests/test_platform_adapters.py::test_clarity_root_and_discovery
+enhanced-public,enhanced_voting,result_platform,url,^https?://app\.enhancedvoting\.com/results/public/,exact_vendor_host_or_path,tests/test_platform_adapters.py:28
+enhanced-host,enhanced_voting,result_platform,host,^app\.enhancedvoting\.com$,exact_vendor_host_or_path,registry/mi_county_authorities.csv#Lake
+scytl-brand,scytl,result_platform,text,\bscytl\b,brand_or_artifact_lead,src/election_data_grabber/adapters/vendor_structured.py#is_scytl
+civicplus-brand,civicplus,authority_discovery,text,\bcivicplus\b|\bcivicengage\b,brand_or_artifact_lead,registry/platform_adapters.csv#civicplus
+electionware-report,electionware,report_family,text,\belectionware\b,brand_or_artifact_lead,registry/platform_adapters.csv#electionware
+pdf-artifact,pdf,report_family,path,\.pdf$,brand_or_artifact_lead,registry/sources.csv#mi-jackson-archive
+tabular-artifact,tabular_download,report_family,path,\.(csv|xlsx?|xml|json|zip)$,brand_or_artifact_lead,src/election_data_grabber/platform_fingerprint.py
+enhanced-government-hosts,enhanced_voting,result_platform,host,^(results\.sos\.ga\.gov|electionresults\.utah\.gov|enr\.elections\.virginia\.gov)$,observed_custom_hosts,tests/fixtures/dashboard_discovery/custom-host-manifest.json
+public-results-path,public_results_app,result_platform,path,^/results/public/[^/]+/(?:elections/)?[^/]+,application_path_candidate,"registry/first_pass_state_result_surfaces.csv#GA,UT"
+civicplus-script,civicplus,authority_discovery,html,"<script\b[^>]*src\s*=\s*[\'\""][^\'\""]*(?:civicplus|civicengage)",cms_asset_only,src/election_data_grabber/adapters/civicplus.py#is_civicplus
+quest-enr-html,quest_enr,result_platform,html,(?s)^(?=.*Quest Information Systems)(?=.*Scripts/EnrAngular/),brand_and_application_assets,tests/fixtures/dashboard_discovery/quest-enr.html
