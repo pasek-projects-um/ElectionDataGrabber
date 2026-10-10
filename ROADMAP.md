@@ -80,6 +80,12 @@ retained historical leads, depth-bounded HTML follow-up and a candidate inspecti
 queue. Scheduler deployment, national throughput measurement and vote-payload
 activation remain outstanding; see `docs/national-monitoring-setup.md`.
 
+Directory-layer continuation: registered state directory/authority captures now
+produce a separate local-authority link review queue with exact observed URLs,
+state-scoped unit-label matching, ambiguity, provenance and unresolved unit IDs.
+This is candidate extraction, not adjudicated new local coverage. See
+`docs/authority-directory-frontier.md` for the official-capture evidence pass.
+
 - [ ] Execute and replay every harvested candidate already covered by an existing adapter family.
 - [ ] Fetch discovered JSON/XML/CSV/Excel artifacts and promote successful cases through normalization/replay.
 - [ ] Rank remaining platform families by number of jurisdictions/authorities unlocked and election-night value.

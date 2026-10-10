@@ -12,6 +12,7 @@ from urllib.robotparser import RobotFileParser
 
 import httpx
 
+from election_data_grabber.authority_directory import extract_directory
 from election_data_grabber.discovery_publication import clean_public_candidate, publishable_url
 from election_data_grabber.national_discovery import (
     ArtifactNeedsInspection,
@@ -134,7 +135,7 @@ def choose_due(groups, pages, now, limit):
 
 
 def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max_pages=100,
-              retry_cap=86400):
+              retry_cap=86400, localities=None):
     if interval < 60 or max_pages < 1 or retry_cap < interval:
         raise ValueError("Invalid watch interval, page limit or retry cap")
     snapshot_dir.mkdir(parents=True, exist_ok=True)
@@ -144,6 +145,7 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
     if state.get("version") != 1:
         raise ValueError("Unsupported watch state version")
     catalog = load_catalog()
+    state.setdefault("authority_candidates", {})
     fingerprint_sha = hashlib.sha256(json.dumps(catalog, sort_keys=True).encode()).hexdigest()
     groups = seed_groups(seeds)
     selected = choose_due(groups, state["pages"], now, max_pages)
@@ -175,6 +177,38 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
             access = html_access_state(html)
             if access == "blocked_html":
                 raise ValueError("Blocked HTML")
+            directory_states = set()
+            for seed in groups[url]:
+                roles = {role.strip() for role in seed.get("page_roles",
+                                                          seed.get("page_role", "")).split("|")}
+                if roles & {"state_directory_fallback", "state_election_authority"}:
+                    directory_states.update(s.strip() for s in seed.get("states",
+                                                          seed.get("state", "")).split("|") if s.strip())
+            directory_summaries = {}
+            for directory_state in sorted(directory_states):
+                state_units = [u for u in (localities or []) if u["state"] == directory_state]
+                if not state_units:
+                    continue
+                authority_rows, unresolved = extract_directory(final, html, state_units,
+                                                               state=directory_state)
+                for row in authority_rows:
+                    identity = hashlib.sha256(json.dumps(
+                        [row["state"], row["url"], url, row["associated_unit_ids"], row["match_status"]]
+                    ).encode()).hexdigest()
+                    stored = state["authority_candidates"].get(identity)
+                    if stored is None:
+                        event("authority_link_candidate", row["url"], url, digest)
+                    state["authority_candidates"][identity] = {
+                        **row, "first_observed_at": stored["first_observed_at"] if stored else now,
+                        "last_observed_at": now,
+                    }
+                directory_summaries[directory_state] = {
+                    "candidate_links": len(authority_rows),
+                    "unresolved_unit_ids": [u["jurisdiction_id"] for u in unresolved],
+                    "scope": "Directory-label candidates; service and authority association unverified",
+                }
+            if directory_summaries:
+                page["directory_extraction"] = directory_summaries
             candidates = [clean_public_candidate(c) for c in discover(final, html, url, catalog)]
             candidates = [c for c in candidates if c is not None]
             truncated = len(candidates) > 200
@@ -259,6 +293,7 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
                "checked_pages": sum(statuses.values()), "page_statuses": dict(statuses),
                "new_candidates": sum(e["kind"] == "candidate_discovered" for e in events),
                "events": len(events), "retained_candidates": len(state["candidates"]),
+               "retained_authority_link_candidates": len(state["authority_candidates"]),
                "http_requests": getattr(fetch, "requests", requests_before) - requests_before,
                "remaining_due_pages": sum(state["pages"].get(url, {}).get("next_check_at", 0) <= now
                                           for url in groups),

@@ -211,6 +211,7 @@ def html_access_state(html):
         title in ("just a moment...", "request rejected", "access denied", "radware captcha page")
         or ("request blocked" in text.casefold() and "cloudfront" in text.casefold())
         or text.startswith("Request Rejected The requested URL was rejected")
+        or (not text and soup.find("script", src=re.compile(r"/_Incapsula_Resource", re.IGNORECASE)))
     ):
         return "blocked_html"
     if soup.find("app-root") or "{{" in text:

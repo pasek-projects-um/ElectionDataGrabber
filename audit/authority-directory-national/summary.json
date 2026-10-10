@@ -1,0 +1,34 @@
+{
+  "capture_access_states": {
+    "blocked_html": 1,
+    "html_content": 28,
+    "no_capture": 22
+  },
+  "captured_state_pages": 29,
+  "extracted_links": 1420,
+  "fetch_statuses": {
+    "fetch_unresolved": 6,
+    "fetched": 29,
+    "robots_denied": 12,
+    "robots_unresolved": 4
+  },
+  "link_roles": {
+    "authority_website_lead": 48,
+    "directory_anchor": 40,
+    "document_or_map_lead": 120,
+    "external_website_lead": 161,
+    "other_unit_link": 796,
+    "result_page_lead": 255
+  },
+  "named_units": 6288,
+  "network_requests_in_replay": 0,
+  "scope": "Observed HTML candidates and unreviewed exact directory-label clues; no live-feed claim.",
+  "service_associations_verified": 0,
+  "state_pages": 51,
+  "unit_buckets": {
+    "evidence_backed_hunting_location": 248,
+    "observed_result_page_candidate": 39,
+    "unresolved_location": 6001
+  },
+  "usable_state_captures": 28
+}
