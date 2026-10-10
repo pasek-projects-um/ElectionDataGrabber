@@ -103,3 +103,7 @@ reporting begins. Before then, measure hunting readiness: identified authority,
 known parent pages, historical endpoint evidence, recognition signals, and unresolved
 paths. Keep that readiness separate from post-election payload and refresh
 verification; a lack of published results before the election is expected.
+
+The repeatable watcher is now implemented in `scripts/watch_national_results.py`.
+See `docs/national-monitoring-setup.md` for bounded runs, persistent state, scheduler
+setup, detection outputs and the remaining deployment/live-ingestion boundary.

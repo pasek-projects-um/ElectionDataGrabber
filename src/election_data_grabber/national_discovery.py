@@ -243,6 +243,7 @@ class Fetcher:
             url = normalize(url)
             if not url:
                 raise ValueError("Unsafe redirect")
+            self.before_request(url)
             if self.remaining <= 0:
                 raise RequestBudgetExhausted()
             self.remaining -= 1
@@ -269,6 +270,9 @@ class Fetcher:
                     (self.snapshot_dir / (digest + ".html")).write_text(html)
                 return url, html
         raise ValueError("Redirect limit")
+
+    def before_request(self, url):
+        """Optional request policy hook, also applied to each redirect target."""
 
     def close(self):
         self.client.close()

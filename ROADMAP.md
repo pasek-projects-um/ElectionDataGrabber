@@ -74,6 +74,12 @@ remain provisional. Prioritize national authority-directory resolution and linke
 local websites before concentrating on individual historical payloads. See
 `docs/national-layer-frontier.md`; these offline queues do not establish new coverage.
 
+The repeatable discovery watcher now provides persistent due-page scheduling,
+bounded/robots-aware requests, immutable captured HTML, changed/new-link events,
+retained historical leads, depth-bounded HTML follow-up and a candidate inspection
+queue. Scheduler deployment, national throughput measurement and vote-payload
+activation remain outstanding; see `docs/national-monitoring-setup.md`.
+
 - [ ] Execute and replay every harvested candidate already covered by an existing adapter family.
 - [ ] Fetch discovered JSON/XML/CSV/Excel artifacts and promote successful cases through normalization/replay.
 - [ ] Rank remaining platform families by number of jurisdictions/authorities unlocked and election-night value.
