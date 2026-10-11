@@ -93,3 +93,40 @@ capture status, observed link evidence, per-unit readiness and summary files.
 Raw HTML remains in the worker snapshot directory; the repository report records
 source URLs, digests and bounded excerpts. It does not claim a complete crawl.
 Directory formats without usable links need structured or rendered extraction.
+
+## Source context and structured lists
+
+Directory and watcher exports now expose `election_context`, `election_year_clues`,
+`source_format` and `update_evidence` independently. National replay also writes
+`source-context.csv`, one row per catalog or directory evidence record. Year and
+archive clues are provisional: `current_year_candidate` is not proof of an upcoming
+election or an active feed. URL extensions identify formats only when explicit;
+extensionless URLs remain unknown. Update evidence remains unknown until a
+separate inspection establishes expected or observed result updates. A changed
+HTML snapshot alone does not establish changed vote totals. Unit readiness buckets
+and verified coverage are unchanged by these annotations.
+
+Saved UTF-8 CSV directories can be extracted with explicit column mapping:
+
+```sh
+python -m scripts.extract_authority_directory \
+  --state ME --page-url https://official.example.gov/clerks.csv \
+  --csv /absolute/path/to/captured.csv \
+  --name-column Town --url-column Website \
+  --output audit/structured-directory-me
+```
+
+Use the actual download URL and actual column names. The extractor preserves the
+original byte digest (including BOM/newlines), CSV record number, selected columns,
+and unit label. Only explicit absolute HTTP(S) URLs are eligible; contacts, blank
+website columns and guessed domains do not establish hunting locations. Duplicate
+unit names stay ambiguous. Outputs require authority/service-area review before
+promotion into watcher seeds; this command does not auto-follow targets.
+
+Maine follow-up, October 11: the official municipal-clerk page at
+https://www.maine.gov/sos/elections-voting/find-a-municipal-clerk-or-registrar
+advertises a CSV last updated October 2. Its visible entries provide contacts,
+not website evidence. The download has not been inspected in this pass; no new
+Maine website or live-result coverage is credited. Inspect columns first, then
+use website extraction only if an actual URL column exists. Contact-only lists
+need a separate official municipal website discovery pass.
