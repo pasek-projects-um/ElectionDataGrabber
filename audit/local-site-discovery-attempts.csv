@@ -279,3 +279,23 @@ us:ky:census-county:21013,KY,2026-10-16T13:29:33-04:00,Bell County Kentucky offi
 us:la:census-county:22013,LA,2026-10-16T13:29:33-04:00,Bienville Parish Louisiana official election results,observed_link_candidate
 us:ma:priority-roster:amesbury,MA,2026-10-16T13:29:33-04:00,Amesbury Massachusetts official election results,observed_link_candidate
 us:me:municipality:allagash,ME,2026-10-16T13:29:33-04:00,Allagash Maine official election results,observed_link_candidate
+"us:mi:county:arenac",MI,2026-10-16T14:52:10-04:00,"Arenac County Michigan official election results clerk","observed_link_candidate"
+"us:tn:census-county:47009",TN,2026-10-16T14:52:10-04:00,"Blount County Tennessee official election results commission","observed_link_candidate"
+"us:tx:census-county:48009",TX,2026-10-16T14:52:10-04:00,"Archer County Texas official election results clerk","observed_link_candidate"
+"us:ut:census-county:49009",UT,2026-10-16T14:52:10-04:00,"Daggett County Utah official election results clerk","observed_link_candidate"
+"us:va:census-county:51009",VA,2026-10-16T14:52:10-04:00,"Amherst County Virginia official election results registrar","observed_link_candidate"
+"us:vt:priority-roster:arlington",VT,2026-10-16T14:52:10-04:00,"Arlington Vermont official election results town clerk","observed_link_candidate"
+"us:wa:census-county:53009",WA,2026-10-16T14:52:10-04:00,"Clallam County Washington official election results auditor","observed_link_candidate"
+"us:wi:ltsb2026:adams-colburn-9552ca76c59622ed",WI,2026-10-16T14:52:10-04:00,"Town of Colburn Adams County Wisconsin official election results clerk","observed_link_candidate"
+"us:wv:census-county:54009",WV,2026-10-16T14:52:10-04:00,"Brooke County West Virginia official election results clerk; site:brookewv.org elections clerk Brooke County WV","completed_no_new_urls"
+"us:wy:census-county:56009",WY,2026-10-16T14:52:10-04:00,"Converse County Wyoming official election results clerk","observed_link_candidate"
+"us:al:census-county:01015",AL,2026-10-16T14:52:10-04:00,"Calhoun County Alabama official election results probate","observed_link_candidate"
+"us:ar:census-county:05015",AR,2026-10-16T14:52:10-04:00,"Carroll County Arkansas official election results clerk; site:carrollcountyarkansas.gov elections county clerk results","observed_link_candidate"
+"us:az:census-county:04013",AZ,2026-10-16T14:52:10-04:00,"Maricopa County Arizona official election results archive recorder","observed_link_candidate"
+"us:ca:census-county:06015",CA,2026-10-16T14:52:10-04:00,"Del Norte County California official election results clerk","observed_link_candidate"
+"us:co:census-county:08014",CO,2026-10-16T14:52:10-04:00,"Broomfield County Colorado official election results clerk","observed_link_candidate"
+"us:ct:municipality:bethany",CT,2026-10-16T14:52:10-04:00,"Bethany Connecticut official election results town clerk","observed_link_candidate"
+"us:fl:census-county:12015",FL,2026-10-16T14:52:10-04:00,"Charlotte County Florida official election results supervisor; site:soecharlottecountyfl.gov election results","observed_link_candidate"
+"us:ga:census-county:13015",GA,2026-10-16T14:52:10-04:00,"Bartow County Georgia official election results elections office; site:bartowcountyga.gov elections results Bartow County","completed_no_new_urls"
+"us:md:census-county:24015",MD,2026-10-16T14:52:10-04:00,"Cecil County Maryland official election results board elections","observed_link_candidate"
+"us:mn:census-county:27011",MN,2026-10-16T14:52:10-04:00,"Big Stone County Minnesota official election results auditor","observed_link_candidate"
