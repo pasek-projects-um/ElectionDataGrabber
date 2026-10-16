@@ -139,3 +139,23 @@ us:ct:municipality:avon,CT,2026-10-16T06:54:33-04:00,Avon CT official election r
 us:de:census-county:10001,DE,2026-10-16T06:54:33-04:00,Kent County DE official election results alternative archive dashboard,observed_link_candidate
 us:fl:census-county:12007,FL,2026-10-16T06:54:33-04:00,Bradford County FL official election results alternative archive dashboard,observed_link_candidate
 us:ga:census-county:13007,GA,2026-10-16T06:54:33-04:00,Baker County GA official election results alternative archive dashboard,observed_link_candidate
+us:nj:census-county:34005,NJ,2026-10-16T07:25:17-04:00,Burlington County New Jersey official election results,observed_link_candidate
+us:nm:census-county:35005,NM,2026-10-16T07:25:17-04:00,Chaves County New Mexico official election results,observed_link_candidate
+us:nv:census-county:32005,NV,2026-10-16T07:25:17-04:00,Douglas County Nevada official election results,observed_link_candidate
+us:ny:census-county:36005,NY,2026-10-16T07:25:17-04:00,Bronx County New York official election results,observed_link_candidate
+us:oh:county:ashland,OH,2026-10-16T07:25:17-04:00,Ashland County Ohio official election results board elections,observed_link_candidate
+us:ok:census-county:40005,OK,2026-10-16T07:25:17-04:00,Atoka County Oklahoma official election results,observed_link_candidate
+us:or:census-county:41005,OR,2026-10-16T07:25:17-04:00,Clackamas County Oregon official election results archive,observed_link_candidate
+us:pa:county:armstrong,PA,2026-10-16T07:25:17-04:00,Armstrong County Pennsylvania official election results,observed_link_candidate
+us:ri:priority-roster:burrillville,RI,2026-10-16T07:25:17-04:00,Burrillville Rhode Island official election results,observed_link_candidate
+us:sc:census-county:45005,SC,2026-10-16T07:25:17-04:00,Allendale County South Carolina official election results,observed_link_candidate
+us:sd:census-county:46007,SD,2026-10-16T07:25:17-04:00,Bennett County South Dakota official election results,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-16T07:25:17-04:00,Maui County Hawaii official election results,observed_link_candidate
+us:ia:census-county:19007,IA,2026-10-16T07:25:17-04:00,Appanoose County Iowa official election results,observed_link_candidate
+us:id:census-county:16007,ID,2026-10-16T07:25:17-04:00,Bear Lake County Idaho official election results,observed_link_candidate
+us:il:census-county:17007,IL,2026-10-16T07:25:17-04:00,Boone County Illinois official election results,observed_link_candidate
+us:in:census-county:18007,IN,2026-10-16T07:25:17-04:00,Benton County Indiana official election results,observed_link_candidate
+us:ks:census-county:20007,KS,2026-10-16T07:25:17-04:00,Barber County Kansas official election results,observed_link_candidate
+us:ky:census-county:21007,KY,2026-10-16T07:25:17-04:00,Ballard County Kentucky official election results,observed_link_candidate
+us:la:census-county:22007,LA,2026-10-16T07:25:17-04:00,Assumption Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:adams,MA,2026-10-16T07:25:17-04:00,Adams Massachusetts official election results town clerk,observed_link_candidate
