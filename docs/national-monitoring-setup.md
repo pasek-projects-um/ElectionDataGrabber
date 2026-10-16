@@ -2,6 +2,12 @@
 
 ## Automated directory expansion and discovery
 
+Fresh web-search leads are also loaded automatically from
+`registry/local_site_discovery_leads.csv`. The separate hourly search automation
+uses unresolved jurisdictions to extend that ledger; see
+[the discovery-loop contract](local-site-discovery-loop.md). These inspection
+targets retain evidence and do not change verified source coverage.
+
 `national-results-watch.yml` adds a GitHub Actions run every 30 minutes and a
 manual dispatch. The schedule only becomes active after the workflow is on the
 default branch; a PR or local dry run is not deployment. Scheduled Actions can

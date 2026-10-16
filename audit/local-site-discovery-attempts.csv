@@ -1,0 +1,5 @@
+jurisdiction_id,state,attempted_at,query,outcome
+us:al:census-county:01001,AL,2026-10-16T02:10:41.753379+00:00,Autauga County Alabama official election results,observed_link_candidate
+us:az:census-county:04001,AZ,2026-10-16T02:10:41.753379+00:00,Apache County Arizona official elections results,observed_link_candidate
+us:co:census-county:08001,CO,2026-10-16T02:10:41.753379+00:00,Adams County Colorado official election results,observed_link_candidate
+us:fl:census-county:12001,FL,2026-10-16T02:10:41.753379+00:00,Alachua County Florida supervisor elections official results,observed_link_candidate
