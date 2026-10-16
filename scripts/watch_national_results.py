@@ -96,13 +96,13 @@ def main():
     locality_path = args.registry / "us_primary_election_localities.csv"
     with locality_path.open(newline="", encoding="utf-8-sig") as stream:
         localities = list(csv.DictReader(stream))
+    quarantined = []
     if args.local_site_leads.exists():
         from election_data_grabber.local_site_discovery import inspection_seeds
 
         with args.local_site_leads.open(newline="", encoding="utf-8-sig") as stream:
-            fresh, rejected = inspection_seeds(csv.DictReader(stream), localities)
-        if rejected:
-            raise ValueError(f"{rejected} invalid local-site discovery rows; inspect lead ledger")
+            fresh, _ = inspection_seeds(csv.DictReader(stream), localities,
+                                        rejected_rows=quarantined)
         seeds.extend(fresh)
     if args.states:
         wanted = {s.upper() for s in args.states}
@@ -112,11 +112,21 @@ def main():
         from election_data_grabber.discovery_watch import seed_groups
 
         print(json.dumps({"seed_pages": len(seed_groups(seeds)), "http_requests": 0,
+                          "quarantined_local_site_leads": len(quarantined),
                           "state_writes": 0, "interval_seconds": args.interval,
                           "max_pages": args.max_pages, "max_requests": args.max_requests},
                          sort_keys=True))
         return
     with worker_lock(args.state_dir / "worker.lock"):
+        from election_data_grabber.local_site_discovery import QUARANTINE_FIELDS
+
+        quarantine_path = args.state_dir / "quarantined-local-site-leads.csv"
+        temp = quarantine_path.with_suffix(".tmp")
+        with temp.open("w", newline="", encoding="utf-8") as stream:
+            writer = csv.DictWriter(stream, fieldnames=QUARANTINE_FIELDS, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(quarantined)
+        temp.replace(quarantine_path)
         state_path = args.state_dir / "state.json"
         previous = json.loads(state_path.read_text()) if state_path.exists() else {}
         seeds = follow_candidates(seeds, previous, args.max_depth)
@@ -143,6 +153,7 @@ def main():
             writer.writeheader()
             writer.writerows(authority_rows)
         temp.replace(authority_path)
+        summary["quarantined_local_site_leads"] = len(quarantined)
         save(args.state_dir / "last-run.json", summary)
         print(json.dumps(summary, sort_keys=True))
 

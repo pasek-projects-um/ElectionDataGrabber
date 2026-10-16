@@ -267,7 +267,7 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
             page.pop("http_status", None)
         except RequestBudgetExhausted:
             break
-        except (httpx.HTTPError, ValueError, KeyError) as exc:
+        except (httpx.HTTPError, httpx.InvalidURL, ValueError, KeyError) as exc:
             failures = previous.get("failures", 0) + 1
             status = "artifact_requires_inspection" if isinstance(exc, ArtifactNeedsInspection) else (
                 "robots_denied" if isinstance(exc, RobotsDenied) else
