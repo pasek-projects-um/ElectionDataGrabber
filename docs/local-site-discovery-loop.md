@@ -44,7 +44,12 @@ The next watcher checkout automatically reads the fresh-lead ledger, validates
 IDs/state/provenance and follows observed result links from these new starts.
 Updates to the lead ledger on main also trigger the watcher immediately; the
 half-hour schedule remains a fallback. Runs share the same concurrency group.
-Invalid ledger rows fail visibly rather than silently disappearing. The first
+Invalid ledger rows are skipped and reported in
+`watch-data/quarantined-local-site-leads.csv`, with counts in dry-run and last-run
+summaries. Valid targets keep running and checkpoints remain intact. The report
+records row numbers, reasons and content digests; unsafe URLs are withheld.
+Corrected ledger entries become eligible on the next pass. HTTP failures remain
+per-target with backoff, including URLs rejected by the HTTP client. The first
 four leads (Autauga AL, Apache AZ, Adams CO, Alachua FL) were inspected October 16
 UTC. They are candidates, not newly verified election-night feeds.
 
