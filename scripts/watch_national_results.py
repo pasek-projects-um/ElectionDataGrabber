@@ -62,6 +62,8 @@ def main():
                         help="Named-unit registry for directory link extraction")
     parser.add_argument("--source-seeds", type=Path,
                         default=Path("audit/national-layers/source-next-actions.csv"))
+    parser.add_argument("--directory-seeds", type=Path,
+                        help="Unverified directory inspection leads with retained provenance")
     parser.add_argument("--max-depth", type=int, default=2,
                         help="Follow observed HTML candidates on later passes, depth 0–3")
     parser.add_argument("--interval", type=int, default=3600,
@@ -84,6 +86,9 @@ def main():
         with args.source_seeds.open(newline="", encoding="utf-8-sig") as stream:
             seeds.extend(row for row in csv.DictReader(stream)
                          if row.get("catalog_kind") != "result_artifact_lead")
+    if args.directory_seeds:
+        with args.directory_seeds.open(newline="", encoding="utf-8-sig") as stream:
+            seeds.extend(csv.DictReader(stream))
     if args.states:
         wanted = {s.upper() for s in args.states}
         seeds = [s for s in seeds if wanted.intersection(

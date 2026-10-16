@@ -1,0 +1,46 @@
+name: National results discovery watch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,37 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: national-results-discovery-watch
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e .
+      - uses: actions/cache/restore@v4
+        id: checkpoint
+        with:
+          path: watch-data
+          key: national-results-watch-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: national-results-watch-v1-
+      - name: Add evidence-backed directory inspection leads
+        run: |
+          python -m scripts.build_directory_watch_seeds
+          if test -f watch-data/authority-link-queue.csv; then
+            python -m scripts.build_directory_watch_seeds --input audit/authority-directory-national/directory-link-candidates.csv --input watch-data/authority-link-queue.csv
+          fi
+      - name: Bounded discovery and follow-up
+        run: |
+          timeout --signal=INT --kill-after=30s 20m python -m scripts.watch_national_results --directory-seeds watch-data/directory-seeds.csv --max-pages 200 --max-requests 600 --max-depth 2 --interval 21600
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: watch-data
+          key: national-results-watch-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: national-results-watch-${{ github.run_id }}-${{ github.run_attempt }}
+          path: watch-data/
+          retention-days: 14

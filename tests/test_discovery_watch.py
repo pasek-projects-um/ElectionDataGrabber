@@ -124,6 +124,31 @@ def test_robots_failures_are_unresolved_and_preserve_state(tmp_path):
         fetch.close()
 
 
+def test_crawl_delay_is_scoped_to_declaring_host(monkeypatch):
+    sleeps = []
+    monkeypatch.setattr("time.sleep", sleeps.append)
+    monkeypatch.setattr("time.monotonic", lambda: 100)
+
+    def transport(request):
+        if request.url.path == "/robots.txt":
+            delay = 30 if request.url.host == "slow.gov" else 1
+            return httpx.Response(200, text=f"User-agent: *\nCrawl-delay: {delay}\n",
+                                  headers={"content-type": "text/plain"})
+        return httpx.Response(200, text="<p>Election information</p>",
+                              headers={"content-type": "text/html"})
+
+    fetch = WatchFetcher(delay=1, max_requests=8)
+    fetch.client.close()
+    fetch.client = httpx.Client(transport=httpx.MockTransport(transport))
+    try:
+        fetch("https://slow.gov/")
+        fetch("https://fast.gov/")
+        assert sleeps == [0, 30, 0, 1]
+        assert fetch.delay == 1
+    finally:
+        fetch.close()
+
+
 def test_worker_lock_prevents_overlapping_state_writes(tmp_path):
     with (worker_lock(tmp_path / "worker.lock"),
           pytest.raises(RuntimeError, match="already owns"),

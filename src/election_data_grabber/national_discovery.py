@@ -230,6 +230,7 @@ class ArtifactNeedsInspection(ValueError):
 class Fetcher:
     def __init__(self, delay=1.0, max_bytes=1_000_000, max_requests=1000, snapshot_dir=None):
         self.delay, self.max_bytes, self.last = delay, max_bytes, {}
+        self.host_delays = {}
         self.remaining = max_requests
         self.requests = 0
         self.snapshot_dir = Path(snapshot_dir) if snapshot_dir else None
@@ -250,7 +251,8 @@ class Fetcher:
             self.remaining -= 1
             self.requests += 1
             host = urlsplit(url).hostname
-            time.sleep(max(0, self.delay - (time.monotonic() - self.last.get(host, 0))))
+            time.sleep(max(0, self.host_delays.get(host, self.delay)
+                           - (time.monotonic() - self.last.get(host, 0))))
             self.last[host] = time.monotonic()
             with self.client.stream("GET", url) as r:
                 if r.status_code in (301, 302, 303, 307, 308):
