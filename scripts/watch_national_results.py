@@ -66,6 +66,8 @@ def main():
                         help="Unverified directory inspection leads with retained provenance")
     parser.add_argument("--local-site-leads", type=Path,
                         help="Fresh search leads; defaults to the selected registry directory")
+    parser.add_argument("--search-attempts", type=Path,
+                        default=Path("audit/local-site-discovery-attempts.csv"))
     parser.add_argument("--max-depth", type=int, default=2,
                         help="Follow observed HTML candidates on later passes, depth 0–3")
     parser.add_argument("--interval", type=int, default=3600,
@@ -97,11 +99,13 @@ def main():
     with locality_path.open(newline="", encoding="utf-8-sig") as stream:
         localities = list(csv.DictReader(stream))
     quarantined = []
+    lead_rows = []
     if args.local_site_leads.exists():
         from election_data_grabber.local_site_discovery import inspection_seeds
 
         with args.local_site_leads.open(newline="", encoding="utf-8-sig") as stream:
-            fresh, _ = inspection_seeds(csv.DictReader(stream), localities,
+            lead_rows = list(csv.DictReader(stream))
+            fresh, _ = inspection_seeds(lead_rows, localities,
                                         rejected_rows=quarantined)
         seeds.extend(fresh)
     if args.states:
@@ -130,6 +134,14 @@ def main():
         state_path = args.state_dir / "state.json"
         previous = json.loads(state_path.read_text()) if state_path.exists() else {}
         seeds = follow_candidates(seeds, previous, args.max_depth)
+        from election_data_grabber.discovery_policy import discovery_frontier, monitoring_seeds
+        from scripts.build_local_site_discovery_frontier import read_rows
+
+        now = time.time()
+        attempts = read_rows(args.search_attempts)
+        frontier = discovery_frontier(localities, lead_rows, attempts, now=now,
+                                      watch_state=previous)
+        seeds = monitoring_seeds(seeds, previous, frontier, now=now)
         if args.states:
             seeds = [s for s in seeds if wanted.intersection(
                 value.strip() for value in s.get("states", s.get("state", "")).split("|"))]
@@ -137,7 +149,7 @@ def main():
         try:
             state, _, summary = run_watch(
                 seeds, args.state_dir / "state.json", args.state_dir / "snapshots", fetch,
-                now=time.time(), interval=args.interval, max_pages=args.max_pages,
+                now=now, interval=args.interval, max_pages=args.max_pages,
                 localities=localities,
             )
         finally:
@@ -153,6 +165,14 @@ def main():
             writer.writeheader()
             writer.writerows(authority_rows)
         temp.replace(authority_path)
+        frontier = discovery_frontier(localities, lead_rows, attempts, now=now, watch_state=state)
+        with (args.state_dir / "jurisdiction-discovery-status.csv").open(
+                "w", newline="", encoding="utf-8") as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(frontier[0]) if frontier else [])
+            writer.writeheader()
+            writer.writerows(frontier)
+        summary["jurisdictions_exhausted_for_now"] = sum(
+            r["discovery_status"] == "exhausted_for_now" for r in frontier)
         summary["quarantined_local_site_leads"] = len(quarantined)
         save(args.state_dir / "last-run.json", summary)
         print(json.dumps(summary, sort_keys=True))
