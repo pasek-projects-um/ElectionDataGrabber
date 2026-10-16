@@ -219,3 +219,23 @@ us:de:census-county:10005,DE,2026-10-16T10:27:07-04:00,Sussex County Delaware of
 us:fl:census-county:12011,FL,2026-10-16T10:27:07-04:00,Broward County Florida official election results,observed_link_candidate
 us:ga:census-county:13011,GA,2026-10-16T10:27:07-04:00,Banks County Georgia official election results,observed_link_candidate
 us:md:census-county:24011,MD,2026-10-16T10:27:07-04:00,Caroline County Maryland official election results,observed_link_candidate
+us:me:municipality:alfred,ME,2026-10-16T11:13:14-04:00,Alfred Maine official election results town clerk,observed_link_candidate
+us:tn:census-county:47007,TN,2026-10-16T11:13:14-04:00,Bledsoe County Tennessee official election results,observed_link_candidate
+us:tx:census-county:48007,TX,2026-10-16T11:13:14-04:00,Aransas County Texas official election results,observed_link_candidate
+us:ut:census-county:49007,UT,2026-10-16T11:13:14-04:00,Carbon County Utah official election results,observed_link_candidate
+us:va:census-county:51007,VA,2026-10-16T11:13:14-04:00,Amelia County Virginia official election results,observed_link_candidate
+us:vt:priority-roster:andover,VT,2026-10-16T11:13:14-04:00,Andover Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53007,WA,2026-10-16T11:13:14-04:00,Chelan County Washington official election results,observed_link_candidate
+us:wi:ltsb2026:adams-c1c69593a23931b8,WI,2026-10-16T11:13:14-04:00,City of Adams Wisconsin official election results clerk,observed_link_candidate
+us:wv:census-county:54007,WV,2026-10-16T11:13:14-04:00,Braxton County West Virginia official election results,observed_link_candidate
+us:wy:census-county:56007,WY,2026-10-16T11:13:14-04:00,Carbon County Wyoming official election results,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-16T11:13:14-04:00,Honolulu County Hawaii official election results,observed_link_candidate
+us:ia:census-county:19011,IA,2026-10-16T11:13:14-04:00,Benton County Iowa official election results,observed_link_candidate
+us:id:census-county:16011,ID,2026-10-16T11:13:14-04:00,Bingham County Idaho official election results,observed_link_candidate
+us:il:census-county:17011,IL,2026-10-16T11:13:14-04:00,Bureau County Illinois official election results,observed_link_candidate
+us:in:census-county:18011,IN,2026-10-16T11:13:14-04:00,Boone County Indiana official election results,observed_link_candidate
+us:ks:census-county:20011,KS,2026-10-16T11:13:14-04:00,Bourbon County Kansas official election results,observed_link_candidate
+us:ky:census-county:21011,KY,2026-10-16T11:13:14-04:00,Bath County Kentucky official election results,observed_link_candidate
+us:la:census-county:22011,LA,2026-10-16T11:13:14-04:00,Beauregard Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:alford,MA,2026-10-16T11:13:14-04:00,Alford Massachusetts official election results town clerk,observed_link_candidate
+us:mi:county:antrim,MI,2026-10-16T11:13:14-04:00,Antrim County Michigan official election results,observed_link_candidate
