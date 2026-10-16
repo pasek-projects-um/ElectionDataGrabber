@@ -65,8 +65,7 @@ def main():
     parser.add_argument("--directory-seeds", type=Path,
                         help="Unverified directory inspection leads with retained provenance")
     parser.add_argument("--local-site-leads", type=Path,
-                        default=Path("registry/local_site_discovery_leads.csv"),
-                        help="Fresh observed search leads; validated against named units")
+                        help="Fresh search leads; defaults to the selected registry directory")
     parser.add_argument("--max-depth", type=int, default=2,
                         help="Follow observed HTML candidates on later passes, depth 0–3")
     parser.add_argument("--interval", type=int, default=3600,
@@ -79,6 +78,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true",
                         help="Show validated seed inventory; no network or state writes")
     args = parser.parse_args()
+    if args.local_site_leads is None:
+        args.local_site_leads = args.registry / "local_site_discovery_leads.csv"
     if not (60 <= args.interval <= 86400 and 1 <= args.max_pages <= 1000
             and 1 <= args.max_requests <= 3000 and args.delay >= 1
             and 1024 <= args.max_bytes <= 10_000_000 and 0 <= args.max_depth <= 3):
