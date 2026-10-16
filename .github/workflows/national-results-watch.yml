@@ -1,5 +1,10 @@
 name: National results discovery watch
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'registry/local_site_discovery_leads.csv'
+      - '.github/workflows/national-results-watch.yml'
   workflow_dispatch:
   schedule:
     - cron: '7,37 * * * *'
