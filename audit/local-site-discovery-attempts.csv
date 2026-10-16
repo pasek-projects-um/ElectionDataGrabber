@@ -19,3 +19,23 @@ us:la:census-county:22001,LA,2026-10-15T22:24:00-04:00,Acadia Parish Louisiana o
 us:ma:priority-roster:abington,MA,2026-10-15T22:24:00-04:00,Abington Massachusetts official election results,observed_link_candidate
 us:md:census-county:24001,MD,2026-10-15T22:24:00-04:00,Allegany County Maryland official election results,observed_link_candidate
 us:me:municipality:abbot,ME,2026-10-15T22:24:00-04:00,Abbot Maine official election results,no_usable_local_lead
+us:mi:county:alcona,MI,2026-10-15T22:34:00-04:00,Alcona County Michigan official election results,observed_link_candidate
+us:mn:census-county:27001,MN,2026-10-15T22:34:00-04:00,Aitkin County Minnesota official election results,observed_link_candidate
+us:mo:census-county:29001,MO,2026-10-15T22:34:00-04:00,Adair County Missouri official election results,observed_link_candidate
+us:ms:census-county:28001,MS,2026-10-15T22:34:00-04:00,Adams County Mississippi official election results,observed_link_candidate
+us:mt:census-county:30001,MT,2026-10-15T22:34:00-04:00,Beaverhead County Montana official election results,observed_link_candidate
+us:nc:census-county:37001,NC,2026-10-15T22:34:00-04:00,Alamance County North Carolina official election results,observed_link_candidate
+us:nd:census-county:38001,ND,2026-10-15T22:34:00-04:00,Adams County North Dakota official election results,observed_link_candidate
+us:ne:census-county:31001,NE,2026-10-15T22:34:00-04:00,Adams County Nebraska official election results,observed_link_candidate
+us:nh:priority-roster:acworth,NH,2026-10-15T22:34:00-04:00,Acworth New Hampshire official election results,observed_link_candidate
+us:nj:census-county:34001,NJ,2026-10-15T22:34:00-04:00,Atlantic County New Jersey official election results,observed_link_candidate
+us:nm:census-county:35001,NM,2026-10-15T22:34:00-04:00,Bernalillo County New Mexico official election results,observed_link_candidate
+us:nv:census-county:32001,NV,2026-10-15T22:34:00-04:00,Churchill County Nevada official election results,observed_link_candidate
+us:ny:census-county:36001,NY,2026-10-15T22:34:00-04:00,Albany County New York official election results,observed_link_candidate
+us:oh:county:adams,OH,2026-10-15T22:34:00-04:00,Adams County Ohio official election results,observed_link_candidate
+us:ok:census-county:40001,OK,2026-10-15T22:34:00-04:00,Adair County Oklahoma official election results,no_usable_local_lead
+us:or:census-county:41001,OR,2026-10-15T22:34:00-04:00,Baker County Oregon official election results,observed_link_candidate
+us:pa:county:adams,PA,2026-10-15T22:34:00-04:00,Adams County Pennsylvania official election results,observed_link_candidate
+us:ri:priority-roster:barrington,RI,2026-10-15T22:34:00-04:00,Barrington Rhode Island official election results,observed_link_candidate
+us:sc:census-county:45001,SC,2026-10-15T22:34:00-04:00,Abbeville County South Carolina official election results,no_usable_local_lead
+us:sd:census-county:46003,SD,2026-10-15T22:34:00-04:00,Aurora County South Dakota official election results,observed_link_candidate
