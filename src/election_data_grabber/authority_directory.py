@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.discovery_publication import clean_public_label, publishable_url
 from election_data_grabber.national_discovery import html_access_state, normalize
+from election_data_grabber.source_context import CONTEXT_FIELDS, source_context
 
 AUTHORITY = re.compile(r"\b(elections?|clerk|registrar|board|county|parish|municipal|town|city)\b",
                        re.IGNORECASE)
@@ -18,7 +19,7 @@ ARTIFACT = re.compile(r"\.(pdf|csv|xlsx?|docx?|zip|xml|json)$", re.IGNORECASE)
 SOCIAL = {"facebook.com", "twitter.com", "x.com", "instagram.com", "youtube.com"}
 FIELDS = ("state", "url", "observed_from", "resolution_base", "associated_unit_ids",
           "match_status", "link_role", "match_basis", "label", "evidence_excerpt", "snapshot_sha256",
-          "next_action", "served_jurisdiction_verified", "live_coverage")
+          "next_action", "served_jurisdiction_verified", "live_coverage", *CONTEXT_FIELDS)
 
 
 def link_role(target, page_url, label, context, artifact, anchor_only):
@@ -126,6 +127,7 @@ def extract_directory(page_url, html, localities, *, state):
             matched.update(ids)
         key = (target, tuple(ids), status)
         record = {
+            **source_context(target, context),
             "state": state, "url": target, "observed_from": page_url,
             "resolution_base": resolution_base,
             "associated_unit_ids": " | ".join(ids),

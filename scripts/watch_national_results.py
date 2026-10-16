@@ -11,6 +11,7 @@ from pathlib import Path
 from election_data_grabber.authority_directory import FIELDS
 from election_data_grabber.discovery_watch import WatchFetcher, follow_candidates, run_watch
 from election_data_grabber.national_discovery import save
+from election_data_grabber.source_context import CONTEXT_FIELDS, source_context
 
 
 @contextmanager
@@ -31,6 +32,7 @@ def export_queue(path, state):
     rows = []
     for url, candidate in sorted(state["candidates"].items()):
         rows.append({
+            **source_context(url),
             "url": url, "score": candidate["score"],
             "signatures": " | ".join(candidate["signatures"]),
             "parent_pages": " | ".join(candidate["parent_pages"]),
@@ -42,7 +44,7 @@ def export_queue(path, state):
         })
     fields = ["url", "score", "signatures", "parent_pages", "first_observed_at",
               "last_observed_at", "source_snapshot_sha256", "next_action",
-              "served_jurisdiction_verified", "live_coverage"]
+              "served_jurisdiction_verified", "live_coverage", *CONTEXT_FIELDS]
     temp = path.with_suffix(".tmp")
     with temp.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")

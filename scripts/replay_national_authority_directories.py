@@ -10,6 +10,7 @@ from pathlib import Path
 
 from election_data_grabber.authority_directory import extract_directory
 from election_data_grabber.national_discovery import html_access_state, normalize
+from election_data_grabber.source_context import source_context
 from scripts.build_national_where_to_look import build
 
 GOOD_ROLES = {"authority_website_lead", "external_website_lead", "result_page_lead"}
@@ -123,6 +124,24 @@ def replay(registry, captured, snapshots):
     return candidates, states, unit_rows, summary
 
 
+def source_inventory(registry, candidates):
+    """One row per evidence record, keeping source dimensions separate from unit buckets."""
+    rows = []
+    for row in read(registry / "discovered_result_sources.csv"):
+        rows.append({"url": row["url"], "observed_from": row.get("observed_from", ""),
+                     "evidence_layer": "discovery_catalog",
+                     **source_context(row["url"], row.get("observed_years", "") + " " +
+                                      row.get("election_labels", "")),
+                     "target_status": row.get("target_status", "unknown"),
+                     "live_coverage": "false"})
+    for row in candidates:
+        rows.append({"url": row["url"], "observed_from": row["observed_from"],
+                     "evidence_layer": "authority_directory",
+                     **source_context(row["url"], row["evidence_excerpt"]),
+                     "target_status": "not_checked", "live_coverage": "false"})
+    return rows
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--registry", type=Path, default=Path("registry"))
@@ -133,7 +152,8 @@ def main():
     outputs = replay(args.registry, json.loads(args.watch_state.read_text()), args.snapshots)
     args.output.mkdir(parents=True, exist_ok=True)
     for name, rows in zip(("directory-link-candidates.csv", "capture-status-by-state.csv",
-                           "unit-readiness.csv"), outputs[:3]):
+                           "unit-readiness.csv", "source-context.csv"),
+                          (*outputs[:3], source_inventory(args.registry, outputs[0]))):
         if rows:
             with (args.output / name).open("w", newline="", encoding="utf-8") as stream:
                 writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")

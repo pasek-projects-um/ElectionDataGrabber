@@ -45,3 +45,13 @@ Registry denominators retain their existing provisional/confidence statuses.
 
 Replay instructions are in `docs/authority-directory-frontier.md`. No recurring
 worker has been deployed by this report.
+
+## Source context pass, October 11
+
+`source-context.csv` annotates 2,360 existing catalog/directory evidence records:
+699 historical, 292 current-year candidates, 17 mixed/other-year records and
+1,352 unknown. These are evidence records, not distinct websites or units.
+The pass uses recorded URL/label/year clues and makes no new HTTP requests.
+Format is recorded separately; update evidence remains unknown for every record.
+No locality readiness bucket or live-coverage count changes. See
+`docs/authority-directory-frontier.md` for CSV extraction and review limitations.
