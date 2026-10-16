@@ -1,0 +1,16 @@
+{
+  "source": "audit/dashboard-discovery/dashboard-evidence.jsonl",
+  "scope": "128 ledgered dashboard evidence records; not full 940-row catalog",
+  "dashboard_destinations": 128,
+  "referral_observations": 198,
+  "distinct_referrer_urls": 89,
+  "signature_groups": {
+    "clarity": 46,
+    "enhanced-voting-host": 11,
+    "government-hosted-results-app": 17,
+    "quest-enr": 1,
+    "public-results-path-unattributed": 53
+  },
+  "tenant_boundary_status": "unknown for all; candidate path tokens are not validated",
+  "live_sources_verified": 0
+}
