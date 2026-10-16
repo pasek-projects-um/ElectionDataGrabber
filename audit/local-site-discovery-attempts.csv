@@ -3,3 +3,19 @@ us:al:census-county:01001,AL,2026-10-16T02:10:41.753379+00:00,Autauga County Ala
 us:az:census-county:04001,AZ,2026-10-16T02:10:41.753379+00:00,Apache County Arizona official elections results,observed_link_candidate
 us:co:census-county:08001,CO,2026-10-16T02:10:41.753379+00:00,Adams County Colorado official election results,observed_link_candidate
 us:fl:census-county:12001,FL,2026-10-16T02:10:41.753379+00:00,Alachua County Florida supervisor elections official results,observed_link_candidate
+us:ar:census-county:05001,AR,2026-10-15T22:24:00-04:00,Arkansas County Arkansas official election results,no_usable_local_lead
+us:ca:census-county:06001,CA,2026-10-15T22:24:00-04:00,Alameda County California official election results,observed_link_candidate
+us:ct:municipality:andover,CT,2026-10-15T22:24:00-04:00,Andover Connecticut official election results,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-15T22:24:00-04:00,Kent County Delaware official election results,observed_link_candidate
+us:ga:census-county:13001,GA,2026-10-15T22:24:00-04:00,Appling County Georgia official election results,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-15T22:24:00-04:00,Hawaii County Hawaii official election results,observed_link_candidate
+us:ia:census-county:19001,IA,2026-10-15T22:24:00-04:00,Adair County Iowa official election results,observed_link_candidate
+us:id:census-county:16001,ID,2026-10-15T22:24:00-04:00,Ada County Idaho official election results,observed_link_candidate
+us:il:census-county:17001,IL,2026-10-15T22:24:00-04:00,Adams County Illinois official election results,observed_link_candidate
+us:in:census-county:18001,IN,2026-10-15T22:24:00-04:00,Adams County Indiana official election results,observed_link_candidate
+us:ks:census-county:20001,KS,2026-10-15T22:24:00-04:00,Allen County Kansas official election results,observed_link_candidate
+us:ky:census-county:21001,KY,2026-10-15T22:24:00-04:00,Adair County Kentucky official election results,observed_link_candidate
+us:la:census-county:22001,LA,2026-10-15T22:24:00-04:00,Acadia Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:abington,MA,2026-10-15T22:24:00-04:00,Abington Massachusetts official election results,observed_link_candidate
+us:md:census-county:24001,MD,2026-10-15T22:24:00-04:00,Allegany County Maryland official election results,observed_link_candidate
+us:me:municipality:abbot,ME,2026-10-15T22:24:00-04:00,Abbot Maine official election results,no_usable_local_lead
