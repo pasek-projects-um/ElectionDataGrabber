@@ -1,5 +1,44 @@
 # Schedule national discovery monitoring
 
+## Automated directory expansion and discovery
+
+`national-results-watch.yml` adds a GitHub Actions run every 30 minutes and a
+manual dispatch. The schedule only becomes active after the workflow is on the
+default branch; a PR or local dry run is not deployment. Scheduled Actions can
+be delayed by GitHub and do not guarantee a 30-minute service level.
+
+Each run builds inspection seeds from uniquely labeled, hash-backed HTML website
+leads in the checked-in directory report and the preceding worker's directory
+queue. Ambiguous labels, artifacts and unsafe URLs remain outside HTML fetching.
+These are unverified inspection associations, never promoted official sources.
+The generated `directory-seeds.csv` retains directory URL, unit, match basis and
+capture digest. Alternative unit associations are preserved for review.
+
+The watcher follows observed results candidates to depth two, at most 200 pages
+and 600 requests per pass, with a six-hour successful-page revisit interval and
+a 20-minute execution limit. New/unvisited targets precede revisits. Discovery
+is separate from election-night vote ingestion; this cadence does not promise
+rapid result-total updates. Robots limits remain enforced per host.
+
+Runs are serialized. Actions cache restores the latest checkpoint, snapshots and
+journals; each attempt also publishes a 14-day recovery artifact. Cache is an
+acceleration mechanism and may be evicted. A missing cache starts a new baseline;
+recover the latest artifact into `watch-data` on a persistent worker to retain
+older state. Artifacts are inspection outputs, not an automatically updated
+registry, and raw captures are not committed. Monitor failed/timed-out Actions
+and `last-run.json` backlog before increasing throughput. A timeout can leave
+queue exports from the prior complete pass; per-page `state.json` checkpoints
+remain authoritative and the next pass regenerates exports.
+
+Reproduce inventory preparation locally:
+
+```sh
+python -m scripts.build_directory_watch_seeds
+python -m scripts.watch_national_results --directory-seeds watch-data/directory-seeds.csv --dry-run
+```
+
+## Persistent worker alternative
+
 This worker watches official starting pages and already observed result-page
 candidates. It detects page changes, recognizes result links with the fingerprint
 catalog, and queues newly observed endpoints. It does not yet parse changing vote

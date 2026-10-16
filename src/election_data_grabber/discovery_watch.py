@@ -53,7 +53,8 @@ class WatchFetcher(Fetcher):
             self.remaining -= 1
             self.requests += 1
             host = parsed.hostname
-            time.sleep(max(0, self.delay - (time.monotonic() - self.last.get(host, 0))))
+            time.sleep(max(0, self.host_delays.get(host, self.delay)
+                           - (time.monotonic() - self.last.get(host, 0))))
             self.last[host] = time.monotonic()
             with self.client.stream("GET", origin + "/robots.txt") as response:
                 if response.status_code == 404:
@@ -82,7 +83,8 @@ class WatchFetcher(Fetcher):
                 raise RobotsDenied()
             delay = parser.crawl_delay(USER_AGENT)
             if delay is not None:
-                self.delay = max(self.delay, delay)
+                host = parsed.hostname
+                self.host_delays[host] = max(self.host_delays.get(host, self.delay), delay)
 
     def before_request(self, url):
         self.check_robots(url)
