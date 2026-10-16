@@ -59,3 +59,23 @@ us:ca:census-county:06003,CA,2026-10-15T23:58:00-04:00,Alpine County California 
 us:ct:municipality:ansonia,CT,2026-10-15T23:58:00-04:00,Ansonia Connecticut official election results town clerk,observed_link_candidate
 us:de:census-county:10003,DE,2026-10-15T23:58:00-04:00,New Castle County Delaware official election results,observed_link_candidate
 us:ga:census-county:13003,GA,2026-10-15T23:58:00-04:00,Atkinson County Georgia official election results,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-16T03:47:00-04:00,Honolulu County official election results,completed_no_new_urls
+us:ia:census-county:19003,IA,2026-10-16T03:47:00-04:00,Adams County Iowa official election results,observed_link_candidate
+us:id:census-county:16003,ID,2026-10-16T03:47:00-04:00,Adams County Idaho official election results,observed_link_candidate
+us:il:census-county:17003,IL,2026-10-16T03:47:00-04:00,Alexander County Illinois official election results | Alexander County Illinois clerk official election results,observed_link_candidate
+us:in:census-county:18003,IN,2026-10-16T03:47:00-04:00,Allen County Indiana official election results | site:allencounty.in.gov election results,observed_link_candidate
+us:ks:census-county:20003,KS,2026-10-16T03:47:00-04:00,Anderson County Kansas official election results | Anderson County Kansas county clerk official election results,observed_link_candidate
+us:ky:census-county:21003,KY,2026-10-16T03:47:00-04:00,Allen County Kentucky official election results,observed_link_candidate
+us:la:census-county:22003,LA,2026-10-16T03:47:00-04:00,Allen Parish Louisiana official election results | Allen Parish Louisiana clerk official election results,observed_link_candidate
+us:ma:priority-roster:acton,MA,2026-10-16T03:47:00-04:00,Acton Massachusetts official election results,observed_link_candidate
+us:md:census-county:24003,MD,2026-10-16T03:47:00-04:00,Anne Arundel County official election results,observed_link_candidate
+us:me:municipality:acton,ME,2026-10-16T03:47:00-04:00,Acton Maine official election results,observed_link_candidate
+us:mi:county:alger,MI,2026-10-16T03:47:00-04:00,Alger County Michigan official election results,observed_link_candidate
+us:mn:census-county:27003,MN,2026-10-16T03:47:00-04:00,Anoka County Minnesota official election results,observed_link_candidate
+us:mo:census-county:29003,MO,2026-10-16T03:47:00-04:00,Andrew County Missouri official election results,observed_link_candidate
+us:ms:census-county:28003,MS,2026-10-16T03:47:00-04:00,Alcorn County Mississippi official election results,observed_link_candidate
+us:mt:census-county:30003,MT,2026-10-16T03:47:00-04:00,Big Horn County Montana official election results,observed_link_candidate
+us:nc:census-county:37003,NC,2026-10-16T03:47:00-04:00,Alexander County North Carolina official election results,observed_link_candidate
+us:nd:census-county:38003,ND,2026-10-16T03:47:00-04:00,Barnes County North Dakota official election results,observed_link_candidate
+us:ne:census-county:31003,NE,2026-10-16T03:47:00-04:00,Antelope County Nebraska official election results,observed_link_candidate
+us:nh:priority-roster:albany,NH,2026-10-16T03:47:00-04:00,Albany New Hampshire official town election results,observed_link_candidate
