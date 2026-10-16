@@ -179,3 +179,23 @@ us:ct:municipality:barkhamsted,CT,2026-10-16T08:54:34-04:00,Barkhamsted Connecti
 us:de:census-county:10003,DE,2026-10-16T08:54:34-04:00,New Castle County Delaware official election results archive,observed_link_candidate
 us:fl:census-county:12009,FL,2026-10-16T08:54:34-04:00,Brevard County Florida official election results,observed_link_candidate
 us:ga:census-county:13009,GA,2026-10-16T08:54:34-04:00,Baldwin County Georgia official election results,observed_link_candidate
+us:mi:county:alpena,MI,2026-10-16T09:16:57-04:00,Alpena County Michigan official election results,observed_link_candidate
+us:mn:census-county:27007,MN,2026-10-16T09:16:57-04:00,Beltrami County Minnesota official election results,observed_link_candidate
+us:mo:census-county:29007,MO,2026-10-16T09:16:57-04:00,Audrain County Missouri official election results,observed_link_candidate
+us:ms:census-county:28007,MS,2026-10-16T09:16:57-04:00,Attala County Mississippi official election results,observed_link_candidate
+us:mt:census-county:30007,MT,2026-10-16T09:16:57-04:00,Broadwater County Montana official election results,observed_link_candidate
+us:nc:census-county:37007,NC,2026-10-16T09:16:57-04:00,Anson County North Carolina official election results,observed_link_candidate
+us:nd:census-county:38007,ND,2026-10-16T09:16:57-04:00,Billings County North Dakota official election results,observed_link_candidate
+us:ne:census-county:31007,NE,2026-10-16T09:16:57-04:00,Banner County Nebraska official election results,observed_link_candidate
+us:nh:priority-roster:allenstown,NH,2026-10-16T09:16:57-04:00,Allenstown New Hampshire official election results town clerk,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-16T09:16:57-04:00,Hawaii County official election results 2026 county,observed_link_candidate
+us:ia:census-county:19009,IA,2026-10-16T09:16:57-04:00,Audubon County Iowa official election results,observed_link_candidate
+us:id:census-county:16009,ID,2026-10-16T09:16:57-04:00,Benewah County Idaho official election results,observed_link_candidate
+us:il:census-county:17009,IL,2026-10-16T09:16:57-04:00,Brown County Illinois official election results,observed_link_candidate
+us:in:census-county:18009,IN,2026-10-16T09:16:57-04:00,Blackford County Indiana official election results,observed_link_candidate
+us:ks:census-county:20009,KS,2026-10-16T09:16:57-04:00,Barton County Kansas official election results,observed_link_candidate
+us:ky:census-county:21009,KY,2026-10-16T09:16:57-04:00,Barren County Kentucky official election results,observed_link_candidate
+us:la:census-county:22009,LA,2026-10-16T09:16:57-04:00,Avoyelles Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:agawam,MA,2026-10-16T09:16:57-04:00,Agawam Massachusetts official election results town clerk,observed_link_candidate
+us:nj:census-county:34007,NJ,2026-10-16T09:16:57-04:00,Camden County New Jersey official election results,observed_link_candidate
+us:nm:census-county:35006,NM,2026-10-16T09:16:57-04:00,Cibola County New Mexico official election results,observed_link_candidate
