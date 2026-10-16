@@ -79,3 +79,23 @@ us:nc:census-county:37003,NC,2026-10-16T03:47:00-04:00,Alexander County North Ca
 us:nd:census-county:38003,ND,2026-10-16T03:47:00-04:00,Barnes County North Dakota official election results,observed_link_candidate
 us:ne:census-county:31003,NE,2026-10-16T03:47:00-04:00,Antelope County Nebraska official election results,observed_link_candidate
 us:nh:priority-roster:albany,NH,2026-10-16T03:47:00-04:00,Albany New Hampshire official town election results,observed_link_candidate
+us:nj:census-county:34003,NJ,2026-10-16T04:08:00-04:00,Bergen County New Jersey official election results,observed_link_candidate
+us:nm:census-county:35003,NM,2026-10-16T04:08:00-04:00,Catron County New Mexico official election results,observed_link_candidate
+us:nv:census-county:32003,NV,2026-10-16T04:08:00-04:00,Clark County Nevada official election results,observed_link_candidate
+us:ny:census-county:36003,NY,2026-10-16T04:08:00-04:00,Allegany County New York official election results,observed_link_candidate
+us:oh:county:allen,OH,2026-10-16T04:08:00-04:00,Allen County Ohio official election results,observed_link_candidate
+us:ok:census-county:40003,OK,2026-10-16T04:08:00-04:00,Alfalfa County Oklahoma official election results,observed_link_candidate
+us:or:census-county:41003,OR,2026-10-16T04:08:00-04:00,Benton County Oregon official election results,observed_link_candidate
+us:pa:county:allegheny,PA,2026-10-16T04:08:00-04:00,Allegheny County Pennsylvania official election results,observed_link_candidate
+us:ri:priority-roster:bristol,RI,2026-10-16T04:08:00-04:00,Bristol Rhode Island official election results,observed_link_candidate
+us:sc:census-county:45003,SC,2026-10-16T04:08:00-04:00,Aiken County South Carolina official election results,observed_link_candidate
+us:sd:census-county:46005,SD,2026-10-16T04:08:00-04:00,Beadle County South Dakota official election results,observed_link_candidate
+us:al:census-county:01005,AL,2026-10-16T04:08:00-04:00,Barbour County Alabama official election results,observed_link_candidate
+us:ar:census-county:05005,AR,2026-10-16T04:08:00-04:00,Baxter County Arkansas official election results,observed_link_candidate
+us:az:census-county:04005,AZ,2026-10-16T04:08:00-04:00,Coconino County Arizona official election results,observed_link_candidate
+us:ca:census-county:06005,CA,2026-10-16T04:08:00-04:00,Amador County California official election results,observed_link_candidate
+us:co:census-county:08005,CO,2026-10-16T04:08:00-04:00,Arapahoe County Colorado official election results,observed_link_candidate
+us:ct:municipality:ashford,CT,2026-10-16T04:08:00-04:00,Ashford Connecticut official election results,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-16T04:08:00-04:00,Sussex County Delaware official election results,observed_link_candidate
+us:fl:census-county:12005,FL,2026-10-16T04:08:00-04:00,Bay County Florida official election results,observed_link_candidate
+us:ga:census-county:13005,GA,2026-10-16T04:08:00-04:00,Bacon County Georgia official election results,observed_link_candidate
