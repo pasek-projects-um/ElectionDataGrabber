@@ -1,0 +1,10 @@
+{
+  "ledger_referrals": 198,
+  "non_self_link_or_embed_handoffs": 118,
+  "distinct_referrers": 9,
+  "distinct_destinations": 115,
+  "referrers_present_in_catalog": 9,
+  "curated_dashboard_candidates": 139,
+  "curated_dashboard_candidates_not_in_ledger_by_url": 11,
+  "scope_note": "Referral handoffs are observed ledger links, not independently revalidated as official or currently active. Catalog crosswalk uses normalized case-insensitive URLs and may miss equivalent aliases."
+}
