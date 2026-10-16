@@ -10,12 +10,13 @@ Each search round reads `audit/authority-directory-national/unit-readiness.csv`,
 `registry/local_site_discovery_leads.csv` and
 `audit/local-site-discovery-attempts.csv` from the latest main branch.
 
-1. Select up to 20 unresolved jurisdictions without an existing fresh lead.
-   Rotate across states, prioritizing states least recently attempted, then
-   never-attempted units and tractable county election authorities. Within a
-   state prefer an unattempted unit over an already searched one. Do not retry
-   unsuccessful searches within 24 hours. Keep municipal gaps in scope and do
-   not change the national denominator.
+1. Generate the frontier with `python -m scripts.build_local_site_discovery_frontier`
+   and use its next 20 due jurisdictions, or apply `discovery_policy.py` directly
+   when execution is unavailable. Rotate states by least recent search, then
+   prefer never-attempted units. A jurisdiction with one or more leads remains
+   eligible for alternative official sites, reporting tiers, platform endpoints
+   and results archives. Never exclude a unit merely because it has a lead.
+   Keep municipal gaps in scope and do not change the national denominator.
 2. Batch web searches using exact unit name, full state name, and election office
    or results terms. Open promising official pages to inspect the actual evidence.
    Follow official references to additional directories where useful. At most
@@ -29,9 +30,14 @@ Each search round reads `audit/authority-directory-national/unit-readiness.csv`,
    Do not generate domains, infer missing links, assign same-named places across
    states/counties, bypass access restrictions, or label candidates verified/live.
    Historical pages are valid leads; describe historical context explicitly.
-4. Append a row per completed unit attempt, including query, time and outcome,
-   even when no usable lead was found. Preserve existing rows, alternative URLs
-   and provenance; deduplicate leads by unit, normalized URL and evidence source.
+4. Append a row per unit search round, including queries, timezone-aware time and
+   outcome. Use `observed_link_candidate` if the round added a distinct usable
+   URL and `completed_no_new_urls` only when the planned alternative searches
+   completed successfully and found no additional URLs. Record blocked, failed,
+   timed-out and incomplete work separately; none count as completed quiet rounds.
+   Multiple query rows with the same round timestamp count only once. Preserve
+   existing rows, alternative URLs and provenance; deduplicate leads by unit,
+   normalized URL and evidence source. Reobserving an old URL is not growth.
 5. Validate candidate rows using `inspection_seeds` in
    `src/election_data_grabber/local_site_discovery.py`, ideally run
    `python -m scripts.watch_national_results --dry-run`, and publish only the two
@@ -57,3 +63,20 @@ The search task also checks recent Actions runs, checkpoint restoration, backlog
 and distinct-URL growth. Report meaningful new results and actionable failures;
 avoid routine no-change notifications. Cache loss starts a new watcher baseline;
 recovery artifacts and the committed lead/attempt ledgers remain separate.
+
+## Per-jurisdiction diminishing returns
+
+Three distinct completed no-gain search rounds after the latest new URL mark a
+unit `exhausted_for_now`, never complete or verified. Active units may be searched
+again after six hours; parked units have a daily alternative-search review.
+New distinct search evidence or a newly observed watcher results link reopens
+discovery. A changed HTML page without a new useful link is not sufficient.
+
+The watcher writes `jurisdiction-discovery-status.csv` with quiet-round counts,
+candidate counts and search due times. For parked units, it stops following the
+full old candidate frontier and checks their roots and top three HTML candidates
+daily. A shared URL associated with an active unit remains eligible; another
+unit's parked status cannot suppress it. Existing per-page errors/backoff and
+request budgets still apply. These are limits on search effort, not evidence
+that every relevant source has been found. Candidate and alternative URLs remain
+retained in their original ledgers/checkpoints when expansion is parked.
