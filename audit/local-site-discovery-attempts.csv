@@ -259,3 +259,23 @@ us:de:census-county:10001,DE,2026-10-16T12:29:24-04:00,Kent County Delaware offi
 us:fl:census-county:12013,FL,2026-10-16T12:29:24-04:00,Calhoun County Florida official election results,observed_link_candidate
 us:ga:census-county:13013,GA,2026-10-16T12:29:24-04:00,Barrow County Georgia official election results,observed_link_candidate
 us:md:census-county:24013,MD,2026-10-16T12:29:24-04:00,Carroll County Maryland official election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-16T13:29:33-04:00,Alaska Division of Elections official election results archives,observed_link_candidate
+us:nv:census-county:32009,NV,2026-10-16T13:29:33-04:00,Esmeralda County Nevada official election results,observed_link_candidate
+us:ny:census-county:36009,NY,2026-10-16T13:29:33-04:00,Cattaraugus County New York official election results,observed_link_candidate
+us:oh:county:athens,OH,2026-10-16T13:29:33-04:00,Athens County Ohio official election results,observed_link_candidate
+us:ok:census-county:40009,OK,2026-10-16T13:29:33-04:00,Beckham County Oklahoma official election results,observed_link_candidate
+us:or:census-county:41009,OR,2026-10-16T13:29:33-04:00,Columbia County Oregon official election results,observed_link_candidate
+us:pa:county:bedford,PA,2026-10-16T13:29:33-04:00,Bedford County Pennsylvania official election results,observed_link_candidate
+us:ri:priority-roster:charlestown,RI,2026-10-16T13:29:33-04:00,Charlestown Rhode Island official election results,observed_link_candidate
+us:sc:census-county:45009,SC,2026-10-16T13:29:33-04:00,Bamberg County South Carolina official election results,observed_link_candidate
+us:sd:census-county:46011,SD,2026-10-16T13:29:33-04:00,Brookings County South Dakota official election results,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-16T13:29:33-04:00,Kauai County Hawaii official election results,observed_link_candidate
+us:ia:census-county:19013,IA,2026-10-16T13:29:33-04:00,Black Hawk County Iowa official election results,observed_link_candidate
+us:id:census-county:16013,ID,2026-10-16T13:29:33-04:00,Blaine County Idaho official election results,observed_link_candidate
+us:il:census-county:17013,IL,2026-10-16T13:29:33-04:00,Calhoun County Illinois official election results,observed_link_candidate
+us:in:census-county:18013,IN,2026-10-16T13:29:33-04:00,Brown County Indiana official election results,observed_link_candidate
+us:ks:census-county:20013,KS,2026-10-16T13:29:33-04:00,Brown County Kansas official election results,observed_link_candidate
+us:ky:census-county:21013,KY,2026-10-16T13:29:33-04:00,Bell County Kentucky official election results,observed_link_candidate
+us:la:census-county:22013,LA,2026-10-16T13:29:33-04:00,Bienville Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:amesbury,MA,2026-10-16T13:29:33-04:00,Amesbury Massachusetts official election results,observed_link_candidate
+us:me:municipality:allagash,ME,2026-10-16T13:29:33-04:00,Allagash Maine official election results,observed_link_candidate
