@@ -299,16 +299,16 @@ us:me:municipality:allagash,ME,2026-10-16T13:29:33-04:00,Allagash Maine official
 "us:ga:census-county:13015",GA,2026-10-16T14:52:10-04:00,"Bartow County Georgia official election results elections office; site:bartowcountyga.gov elections results Bartow County","completed_no_new_urls"
 "us:md:census-county:24015",MD,2026-10-16T14:52:10-04:00,"Cecil County Maryland official election results board elections","observed_link_candidate"
 "us:mn:census-county:27011",MN,2026-10-16T14:52:10-04:00,"Big Stone County Minnesota official election results auditor","observed_link_candidate"
-us:de:census-county:10003,DE,2026-10-16T15:48:03-04:00,New Castle County Delaware official election results county elections | site:elections.delaware.gov New Castle County election office results 2026 official,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-16T15:48:03-04:00,New Castle County Delaware official election results county elections | site:elections.delaware.gov New Castle County election office results 2026 official,completed_no_new_urls
 us:mo:census-county:29011,MO,2026-10-16T15:48:03-04:00,Barton County Missouri official election results county clerk | site:countyofbarton.gov Barton County Missouri election results official,observed_link_candidate
 us:ms:census-county:28011,MS,2026-10-16T15:48:03-04:00,Bolivar County Mississippi official election results election commission,observed_link_candidate
 us:mt:census-county:30011,MT,2026-10-16T15:48:03-04:00,Carter County Montana official election results clerk recorder,observed_link_candidate
-us:nc:census-county:37011,NC,2026-10-16T15:48:03-04:00,Avery County North Carolina official election results board elections,observed_link_candidate
-us:nd:census-county:38011,ND,2026-10-16T15:48:03-04:00,Bowman County North Dakota official election results auditor,observed_link_candidate
+us:nc:census-county:37011,NC,2026-10-16T15:48:03-04:00,Avery County North Carolina official election results board elections,completed_no_new_urls
+us:nd:census-county:38011,ND,2026-10-16T15:48:03-04:00,Bowman County North Dakota official election results auditor,completed_no_new_urls
 us:ne:census-county:31011,NE,2026-10-16T15:48:03-04:00,Boone County Nebraska official election results clerk,observed_link_candidate
 us:nh:priority-roster:alton,NH,2026-10-16T15:48:03-04:00,Alton New Hampshire official election results town clerk archive,observed_link_candidate
 us:nj:census-county:34011,NJ,2026-10-16T15:48:03-04:00,Cumberland County New Jersey official election results clerk elections,observed_link_candidate
-us:nm:census-county:35009,NM,2026-10-16T15:48:03-04:00,Curry County New Mexico official election results clerk,observed_link_candidate
+us:nm:census-county:35009,NM,2026-10-16T15:48:03-04:00,Curry County New Mexico official election results clerk,completed_no_new_urls
 us:hi:census-county:15009,HI,2026-10-16T15:48:03-04:00,Maui County Hawaii official election results county clerk,observed_link_candidate
 us:ia:census-county:19015,IA,2026-10-16T15:48:03-04:00,Boone County Iowa official election results auditor archive,observed_link_candidate
 us:id:census-county:16015,ID,2026-10-16T15:48:03-04:00,Boise County Idaho official election results clerk elections | site:boisecounty.us/services/elections Boise County 2026 election results official,observed_link_candidate
@@ -318,4 +318,4 @@ us:ks:census-county:20015,KS,2026-10-16T15:48:03-04:00,Butler County Kansas offi
 us:ky:census-county:21015,KY,2026-10-16T15:48:03-04:00,Boone County Kentucky official election results county clerk,observed_link_candidate
 us:la:census-county:22015,LA,2026-10-16T15:48:03-04:00,Bossier Parish Louisiana official election results clerk,observed_link_candidate
 us:ma:priority-roster:amherst,MA,2026-10-16T15:48:03-04:00,Amherst Massachusetts official election results town clerk archive,observed_link_candidate
-us:me:municipality:alna,ME,2026-10-16T15:48:03-04:00,Alna Maine official election results town clerk,observed_link_candidate
+us:me:municipality:alna,ME,2026-10-16T15:48:03-04:00,Alna Maine official election results town clerk,completed_no_new_urls
