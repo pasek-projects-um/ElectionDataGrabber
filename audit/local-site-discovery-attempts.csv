@@ -99,3 +99,23 @@ us:ct:municipality:ashford,CT,2026-10-16T04:08:00-04:00,Ashford Connecticut offi
 us:de:census-county:10005,DE,2026-10-16T04:08:00-04:00,Sussex County Delaware official election results,observed_link_candidate
 us:fl:census-county:12005,FL,2026-10-16T04:08:00-04:00,Bay County Florida official election results,observed_link_candidate
 us:ga:census-county:13005,GA,2026-10-16T04:08:00-04:00,Bacon County Georgia official election results,observed_link_candidate
+us:tn:census-county:47003,TN,2026-10-16T05:50:00-04:00,Bedford County Tennessee official election results alternatives,observed_link_candidate
+us:tx:census-county:48003,TX,2026-10-16T05:50:00-04:00,Andrews County Texas official election results dashboard archive,observed_link_candidate
+us:ut:census-county:49003,UT,2026-10-16T05:50:00-04:00,Box Elder County Utah official election results archive,observed_link_candidate
+us:va:census-county:51003,VA,2026-10-16T05:50:00-04:00,Albemarle County Virginia official election results dashboard,observed_link_candidate
+us:vt:priority-roster:albany,VT,2026-10-16T05:50:00-04:00,Albany Vermont official election results town archive,observed_link_candidate
+us:wa:census-county:53003,WA,2026-10-16T05:50:00-04:00,Asotin County Washington official current past election results,observed_link_candidate
+us:wi:ltsb2026:adams-adams-e5ef9246f322a5c9,WI,2026-10-16T05:50:00-04:00,Town of Adams Adams County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54003,WV,2026-10-16T05:50:00-04:00,Berkeley County West Virginia official election results dashboard,observed_link_candidate
+us:wy:census-county:56003,WY,2026-10-16T05:50:00-04:00,Big Horn County Wyoming official 2026 election results,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-16T05:50:00-04:00,Kauai County Hawaii official election results,observed_link_candidate
+us:ia:census-county:19005,IA,2026-10-16T05:50:00-04:00,Allamakee County Iowa official election results past elections,observed_link_candidate
+us:id:census-county:16005,ID,2026-10-16T05:50:00-04:00,Bannock County Idaho official election results,observed_link_candidate
+us:il:census-county:17005,IL,2026-10-16T05:50:00-04:00,Bond County Illinois official election results dashboard,observed_link_candidate
+us:in:census-county:18005,IN,2026-10-16T05:50:00-04:00,Bartholomew County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20005,KS,2026-10-16T05:50:00-04:00,Atchison County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21005,KY,2026-10-16T05:50:00-04:00,Anderson County Kentucky official election results,observed_link_candidate
+us:la:census-county:22005,LA,2026-10-16T05:50:00-04:00,Ascension Parish Louisiana official election results voter portal,observed_link_candidate
+us:ma:priority-roster:acushnet,MA,2026-10-16T05:50:00-04:00,Acushnet Massachusetts official 2026 election results,observed_link_candidate
+us:md:census-county:24005,MD,2026-10-16T05:50:00-04:00,Baltimore County Maryland official 2026 election results archive,observed_link_candidate
+us:me:municipality:addison,ME,2026-10-16T05:50:00-04:00,Addison Maine official election results,observed_link_candidate
