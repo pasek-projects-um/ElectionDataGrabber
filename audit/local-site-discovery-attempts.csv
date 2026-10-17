@@ -499,3 +499,23 @@ us:ga:census-county:13025,GA,2026-10-17T08:27:09-04:00,Brantley County Georgia o
 us:ma:priority-roster:ashburnham,MA,2026-10-17T08:27:09-04:00,Ashburnham Massachusetts official election results town clerk,observed_link_candidate
 us:mi:county:benzie,MI,2026-10-17T08:27:09-04:00,Benzie County Michigan official election results; Benzie County clerk 2026 election results official,observed_link_candidate
 us:mn:census-county:27019,MN,2026-10-17T08:27:09-04:00,Carver County Minnesota official election results,observed_link_candidate
+us:nv:census-county:32017,NV,2026-10-17T09:36:08-04:00,Lincoln County Nevada official election results county clerk; site:lincolncountynv.org elections results Lincoln County Nevada,observed_link_candidate
+us:ny:census-county:36017,NY,2026-10-17T09:36:08-04:00,Chenango County New York official election results board of elections,observed_link_candidate
+us:oh:county:butler,OH,2026-10-17T09:36:08-04:00,Butler County Ohio official election results 2026; site:boe.ohio.gov Butler County live results 2026,observed_link_candidate
+us:ok:census-county:40017,OK,2026-10-17T09:36:08-04:00,Canadian County Oklahoma official election results election board,observed_link_candidate
+us:or:census-county:41017,OR,2026-10-17T09:36:08-04:00,Deschutes County Oregon official election results archive,observed_link_candidate
+us:pa:county:bucks,PA,2026-10-17T09:36:08-04:00,Bucks County Pennsylvania official election results archive 2026,observed_link_candidate
+us:ri:priority-roster:east-greenwich,RI,2026-10-17T09:36:08-04:00,East Greenwich Rhode Island official election results board canvassers,observed_link_candidate
+us:sc:census-county:45017,SC,2026-10-17T09:36:08-04:00,Calhoun County South Carolina official election results; site:calhouncounty.sc.gov election results Calhoun County,observed_link_candidate
+us:sd:census-county:46019,SD,2026-10-17T09:36:08-04:00,Butte County South Dakota official election results,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-17T09:36:08-04:00,Kent County Delaware official election results archive,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-10-17T09:36:08-04:00,Hawaii County official election results archive,observed_link_candidate
+us:ia:census-county:19025,IA,2026-10-17T09:36:08-04:00,Calhoun County Iowa official election results; site:calhouncounty.iowa.gov elections results,observed_link_candidate
+us:id:census-county:16025,ID,2026-10-17T09:36:08-04:00,Camas County Idaho official election results 2026,observed_link_candidate
+us:il:census-county:17025,IL,2026-10-17T09:36:08-04:00,Clay County Illinois official election results 2026,observed_link_candidate
+us:in:census-county:18025,IN,2026-10-17T09:36:08-04:00,Crawford County Indiana official election results 2026,observed_link_candidate
+us:ks:census-county:20025,KS,2026-10-17T09:36:08-04:00,Clark County Kansas official election results,observed_link_candidate
+us:ky:census-county:21025,KY,2026-10-17T09:36:08-04:00,Breathitt County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22025,LA,2026-10-17T09:36:08-04:00,Catahoula Parish Louisiana official election results clerk,observed_link_candidate
+us:md:census-county:24025,MD,2026-10-17T09:36:08-04:00,Harford County Maryland official election results 2026,observed_link_candidate
+us:me:municipality:appleton,ME,2026-10-17T09:36:08-04:00,Appleton Maine official election results town,observed_link_candidate
