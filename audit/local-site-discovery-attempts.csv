@@ -559,3 +559,23 @@ us:in:census-county:18027,IN,2026-10-17T18:54:42-04:00,Daviess County Indiana of
 us:ks:census-county:20027,KS,2026-10-17T18:54:42-04:00,Clay County Kansas official election results county clerk,observed_link_candidate
 us:ky:census-county:21027,KY,2026-10-17T18:54:42-04:00,Breckinridge County Kentucky official election results county clerk,observed_link_candidate
 us:la:census-county:22027,LA,2026-10-17T18:54:42-04:00,Claiborne Parish Louisiana official election results clerk,observed_link_candidate
+us:md:census-county:24027,MD,2026-10-17T19:10:46-04:00,Howard County Maryland official election results board of elections,observed_link_candidate
+us:me:municipality:arundel,ME,2026-10-17T19:10:46-04:00,Arundel Maine official election results town clerk,observed_link_candidate
+us:nv:census-county:32019,NV,2026-10-17T19:10:46-04:00,Lyon County Nevada official election results clerk recorder,observed_link_candidate
+us:ny:census-county:36019,NY,2026-10-17T19:10:46-04:00,Clinton County New York official election results board elections,observed_link_candidate
+us:oh:county:carroll,OH,2026-10-17T19:10:46-04:00,Carroll County Ohio official election results board elections,observed_link_candidate
+us:ok:census-county:40019,OK,2026-10-17T19:10:46-04:00,Carter County Oklahoma official election results election board | site:oklahoma.gov/elections Carter County 2026 election results official,observed_link_candidate
+us:or:census-county:41019,OR,2026-10-17T19:10:46-04:00,Douglas County Oregon official election results clerk,observed_link_candidate
+us:pa:county:butler,PA,2026-10-17T19:10:46-04:00,Butler County Pennsylvania official election results,observed_link_candidate
+us:ri:priority-roster:east-providence,RI,2026-10-17T19:10:46-04:00,East Providence Rhode Island official election results city clerk | site:eastprovidenceri.gov election results East Providence official,observed_link_candidate
+us:sc:census-county:45019,SC,2026-10-17T19:10:46-04:00,Charleston County South Carolina official election results,observed_link_candidate
+us:sd:census-county:46021,SD,2026-10-17T19:10:46-04:00,Campbell County South Dakota official election results auditor | site:sdsos.gov Campbell County 2026 election results official,observed_link_candidate
+us:al:census-county:01029,AL,2026-10-17T19:10:46-04:00,Cleburne County Alabama official election results probate | site:sos.alabama.gov Cleburne County election results 2026 official,observed_link_candidate
+us:ar:census-county:05029,AR,2026-10-17T19:10:46-04:00,Conway County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04027,AZ,2026-10-17T19:10:46-04:00,Yuma County Arizona official election results recorder,observed_link_candidate
+us:ca:census-county:06029,CA,2026-10-17T19:10:46-04:00,Kern County California official election results elections,observed_link_candidate
+us:co:census-county:08027,CO,2026-10-17T19:10:46-04:00,Custer County Colorado official election results clerk,observed_link_candidate
+us:ct:municipality:bridgeport,CT,2026-10-17T19:10:46-04:00,Bridgeport Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12031,FL,2026-10-17T19:10:46-04:00,Duval County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13029,GA,2026-10-17T19:10:46-04:00,Bryan County Georgia official election results elections,observed_link_candidate
+us:ma:priority-roster:ashfield,MA,2026-10-17T19:10:46-04:00,Ashfield Massachusetts official election results town clerk,observed_link_candidate
