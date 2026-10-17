@@ -439,3 +439,23 @@ us:in:census-county:18021,IN,2026-10-17T03:46:22-04:00,Clay County Indiana offic
 us:ks:census-county:20021,KS,2026-10-17T03:46:22-04:00,Cherokee County Kansas official election results,observed_link_candidate
 us:ky:census-county:21021,KY,2026-10-17T03:46:22-04:00,Boyle County Kentucky official election results,observed_link_candidate
 us:la:census-county:22021,LA,2026-10-17T03:46:22-04:00,Caldwell Parish Louisiana official elections clerk results,observed_link_candidate
+us:mi:county:bay,MI,2026-10-17T04:03:40-04:00,Bay County Michigan official election results 2026,observed_link_candidate
+us:mn:census-county:27017,MN,2026-10-17T04:03:40-04:00,Carlton County Minnesota official election results | site:carltoncountymn.gov election results Carlton County,observed_link_candidate
+us:nv:census-county:32015,NV,2026-10-17T04:03:40-04:00,Lander County Nevada official election results | site:landercountynv.org elections results Lander County Nevada,observed_link_candidate
+us:ny:census-county:36015,NY,2026-10-17T04:03:40-04:00,Chemung County New York official election results,observed_link_candidate
+us:oh:county:brown,OH,2026-10-17T04:03:40-04:00,Brown County Ohio official election results,observed_link_candidate
+us:ok:census-county:40015,OK,2026-10-17T04:03:40-04:00,Caddo County Oklahoma official election results | site:caddocountyok.com election results Caddo County Oklahoma,observed_link_candidate
+us:or:census-county:41015,OR,2026-10-17T04:03:40-04:00,Curry County Oregon official election results | site:co.curry.or.us elections results Curry County Oregon,observed_link_candidate
+us:pa:county:bradford,PA,2026-10-17T04:03:40-04:00,Bradford County Pennsylvania official election results,observed_link_candidate
+us:ri:priority-roster:cumberland,RI,2026-10-17T04:03:40-04:00,Cumberland Rhode Island official election results town clerk,observed_link_candidate
+us:sc:census-county:45015,SC,2026-10-17T04:03:40-04:00,Berkeley County South Carolina official election results,observed_link_candidate
+us:sd:census-county:46017,SD,2026-10-17T04:03:40-04:00,Buffalo County South Dakota official election results,observed_link_candidate
+us:al:census-county:01023,AL,2026-10-17T04:03:40-04:00,Choctaw County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05023,AR,2026-10-17T04:03:40-04:00,Cleburne County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04021,AZ,2026-10-17T04:03:40-04:00,Pinal County Arizona official election results,observed_link_candidate
+us:ca:census-county:06023,CA,2026-10-17T04:03:40-04:00,Humboldt County California official election results 2026,observed_link_candidate
+us:co:census-county:08021,CO,2026-10-17T04:03:40-04:00,Conejos County Colorado official election results,observed_link_candidate
+us:ct:municipality:bolton,CT,2026-10-17T04:03:40-04:00,Bolton Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12023,FL,2026-10-17T04:03:40-04:00,Columbia County Florida official election results,observed_link_candidate
+us:ga:census-county:13023,GA,2026-10-17T04:03:40-04:00,Bleckley County Georgia official election results,observed_link_candidate
+us:ma:priority-roster:arlington,MA,2026-10-17T04:03:40-04:00,Arlington Massachusetts official election results town clerk,observed_link_candidate
