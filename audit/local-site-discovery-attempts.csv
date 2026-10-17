@@ -359,3 +359,23 @@ us:in:census-county:18017,IN,2026-10-16T20:28:54-04:00,Cass County Indiana offic
 us:ks:census-county:20017,KS,2026-10-16T20:28:54-04:00,Chase County Kansas official election results clerk,observed_link_candidate
 us:ky:census-county:21017,KY,2026-10-16T20:28:54-04:00,Bourbon County Kentucky official election results county clerk,observed_link_candidate
 us:la:census-county:22017,LA,2026-10-16T20:28:54-04:00,Caddo Parish Louisiana official election results clerk,observed_link_candidate
+us:ma:priority-roster:andover,MA,2026-10-16T21:51:58-04:00,Andover Massachusetts official election results town clerk,observed_link_candidate
+us:me:municipality:amherst,ME,2026-10-16T21:51:58-04:00,Amherst Maine official election results town clerk,observed_link_candidate
+us:mo:census-county:29013,MO,2026-10-16T21:51:58-04:00,Bates County Missouri official election results county clerk,observed_link_candidate
+us:ms:census-county:28013,MS,2026-10-16T21:51:58-04:00,Calhoun County Mississippi official election results election commission,observed_link_candidate
+us:mt:census-county:30013,MT,2026-10-16T21:51:58-04:00,Cascade County Montana official election results elections,observed_link_candidate
+us:nc:census-county:37013,NC,2026-10-16T21:51:58-04:00,Beaufort County North Carolina official election results board elections,observed_link_candidate
+us:nd:census-county:38013,ND,2026-10-16T21:51:58-04:00,Burke County North Dakota official election results auditor,observed_link_candidate
+us:ne:census-county:31013,NE,2026-10-16T21:51:58-04:00,Box Butte County Nebraska official election results clerk,observed_link_candidate
+us:nh:priority-roster:amherst,NH,2026-10-16T21:51:58-04:00,Amherst New Hampshire official election results town clerk,observed_link_candidate
+us:nj:census-county:34013,NJ,2026-10-16T21:51:58-04:00,Essex County New Jersey official election results clerk,observed_link_candidate
+us:nm:census-county:35011,NM,2026-10-16T21:51:58-04:00,De Baca County New Mexico official election results clerk,observed_link_candidate
+us:al:census-county:01019,AL,2026-10-16T21:51:58-04:00,Cherokee County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05019,AR,2026-10-16T21:51:58-04:00,Clark County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04017,AZ,2026-10-16T21:51:58-04:00,Navajo County Arizona official election results elections,observed_link_candidate
+us:ca:census-county:06019,CA,2026-10-16T21:51:58-04:00,Fresno County California official election results elections,observed_link_candidate
+us:co:census-county:08017,CO,2026-10-16T21:51:58-04:00,Cheyenne County Colorado official election results clerk,observed_link_candidate
+us:ct:municipality:bethlehem,CT,2026-10-16T21:51:58-04:00,Bethlehem Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12019,FL,2026-10-16T21:51:58-04:00,Clay County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13019,GA,2026-10-16T21:51:58-04:00,Berrien County Georgia official election results board elections,observed_link_candidate
+us:md:census-county:24019,MD,2026-10-16T21:51:58-04:00,Dorchester County Maryland official election results board elections,observed_link_candidate
