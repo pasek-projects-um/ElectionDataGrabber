@@ -339,3 +339,23 @@ us:ga:census-county:13017,GA,2026-10-16T16:16:29-04:00,Ben Hill County Georgia o
 us:md:census-county:24017,MD,2026-10-16T16:16:29-04:00,Charles County Maryland official election results board elections,observed_link_candidate
 us:mi:county:baraga,MI,2026-10-16T16:16:29-04:00,Baraga County Michigan official election results clerk,observed_link_candidate
 us:mn:census-county:27013,MN,2026-10-16T16:16:29-04:00,Blue Earth County Minnesota official election results elections,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-16T20:28:54-04:00,District of Columbia Board of Elections official election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-16T20:28:54-04:00,Alaska Division of Elections official election results,observed_link_candidate
+us:tn:census-county:47011,TN,2026-10-16T20:28:54-04:00,Bradley County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48011,TX,2026-10-16T20:28:54-04:00,Armstrong County Texas official election results county clerk,observed_link_candidate
+us:ut:census-county:49011,UT,2026-10-16T20:28:54-04:00,Davis County Utah official election results clerk,observed_link_candidate
+us:va:census-county:51011,VA,2026-10-16T20:28:54-04:00,Appomattox County Virginia official election results registrar,observed_link_candidate
+us:vt:priority-roster:athens,VT,2026-10-16T20:28:54-04:00,Athens Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53011,WA,2026-10-16T20:28:54-04:00,Clark County Washington official election results elections,observed_link_candidate
+us:wi:ltsb2026:adams-dell-prairie-56de2e6899fd527f,WI,2026-10-16T20:28:54-04:00,Town of Dell Prairie Adams County Wisconsin official election results clerk,observed_link_candidate
+us:wv:census-county:54011,WV,2026-10-16T20:28:54-04:00,Cabell County West Virginia official election results county clerk | site:cabellcountyclerk.org election results Cabell County,observed_link_candidate
+us:wy:census-county:56011,WY,2026-10-16T20:28:54-04:00,Crook County Wyoming official election results clerk,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-16T20:28:54-04:00,Sussex County Delaware official election results,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-16T20:28:54-04:00,Hawaii County Hawaii official election results elections,completed_no_new_urls
+us:ia:census-county:19017,IA,2026-10-16T20:28:54-04:00,Bremer County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16017,ID,2026-10-16T20:28:54-04:00,Bonner County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17017,IL,2026-10-16T20:28:54-04:00,Cass County Illinois official election results county clerk,observed_link_candidate
+us:in:census-county:18017,IN,2026-10-16T20:28:54-04:00,Cass County Indiana official election results clerk,observed_link_candidate
+us:ks:census-county:20017,KS,2026-10-16T20:28:54-04:00,Chase County Kansas official election results clerk,observed_link_candidate
+us:ky:census-county:21017,KY,2026-10-16T20:28:54-04:00,Bourbon County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22017,LA,2026-10-16T20:28:54-04:00,Caddo Parish Louisiana official election results clerk,observed_link_candidate
