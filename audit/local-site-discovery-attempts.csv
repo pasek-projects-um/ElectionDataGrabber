@@ -519,3 +519,23 @@ us:ky:census-county:21025,KY,2026-10-17T09:36:08-04:00,Breathitt County Kentucky
 us:la:census-county:22025,LA,2026-10-17T09:36:08-04:00,Catahoula Parish Louisiana official election results clerk,observed_link_candidate
 us:md:census-county:24025,MD,2026-10-17T09:36:08-04:00,Harford County Maryland official election results 2026,observed_link_candidate
 us:me:municipality:appleton,ME,2026-10-17T09:36:08-04:00,Appleton Maine official election results town,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-17T17:47:37-04:00,Alaska Division of Elections official results archive 2026,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-10-17T17:47:37-04:00,District of Columbia Board of Elections official election results archive 2026,completed_no_new_urls
+us:tn:census-county:47017,TN,2026-10-17T17:47:37-04:00,Carroll County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48017,TX,2026-10-17T17:47:37-04:00,Bailey County Texas official election results county clerk,observed_link_candidate
+us:ut:census-county:49017,UT,2026-10-17T17:47:37-04:00,Garfield County Utah official election results clerk archive,observed_link_candidate
+us:va:census-county:51017,VA,2026-10-17T17:47:37-04:00,Bath County Virginia official election results registrar,observed_link_candidate
+us:vt:priority-roster:barnard,VT,2026-10-17T17:47:37-04:00,Barnard Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53017,WA,2026-10-17T17:47:37-04:00,Douglas County Washington official election results auditor,observed_link_candidate
+us:wi:ltsb2026:adams-leola-5b92730d0d9f9333,WI,2026-10-17T17:47:37-04:00,Town of Leola Adams County Wisconsin official election results clerk; site:leolawi.gov election voting results Town of Leola Wisconsin,observed_link_candidate
+us:wv:census-county:54017,WV,2026-10-17T17:47:37-04:00,Doddridge County West Virginia official election results county clerk; Doddridge County West Virginia official county clerk elections,observed_link_candidate
+us:wy:census-county:56017,WY,2026-10-17T17:47:37-04:00,Hot Springs County Wyoming official election results clerk,observed_link_candidate
+us:al:census-county:01027,AL,2026-10-17T17:47:37-04:00,Clay County Alabama official election results probate; Clay County Alabama probate office elections official,observed_link_candidate
+us:ar:census-county:05027,AR,2026-10-17T17:47:37-04:00,Columbia County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04025,AZ,2026-10-17T17:47:37-04:00,Yavapai County Arizona official election results 2026 archive,observed_link_candidate
+us:ca:census-county:06027,CA,2026-10-17T17:47:37-04:00,Inyo County California official election results 2026 archive,observed_link_candidate
+us:co:census-county:08025,CO,2026-10-17T17:47:37-04:00,Crowley County Colorado official election results clerk; Crowley County Colorado official election results county clerk,observed_link_candidate
+us:ct:municipality:branford,CT,2026-10-17T17:47:37-04:00,Branford Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12029,FL,2026-10-17T17:47:37-04:00,Dixie County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13027,GA,2026-10-17T17:47:37-04:00,Brooks County Georgia official election results elections office,observed_link_candidate
+us:ma:priority-roster:ashby,MA,2026-10-17T17:47:37-04:00,Ashby Massachusetts official election results town clerk,observed_link_candidate
