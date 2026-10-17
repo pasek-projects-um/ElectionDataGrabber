@@ -399,3 +399,23 @@ us:in:census-county:18019,IN,2026-10-16T22:54:47-04:00,Clark County Indiana cler
 us:ks:census-county:20019,KS,2026-10-16T22:54:47-04:00,Chautauqua County Kansas official county clerk elections website results,observed_link_candidate
 us:ky:census-county:21019,KY,2026-10-16T22:54:47-04:00,Boyd County Kentucky clerk official election results,observed_link_candidate
 us:la:census-county:22019,LA,2026-10-16T22:54:47-04:00,Calcasieu Parish Louisiana official election results clerk current archive,observed_link_candidate
+us:tn:census-county:47013,TN,2026-10-17T02:35:30-04:00,Campbell County Tennessee official election results,observed_link_candidate
+us:tx:census-county:48013,TX,2026-10-17T02:35:30-04:00,Atascosa County Texas official election results,observed_link_candidate
+us:ut:census-county:49013,UT,2026-10-17T02:35:30-04:00,Duchesne County Utah official election results,observed_link_candidate
+us:va:census-county:51013,VA,2026-10-17T02:35:30-04:00,Arlington County Virginia official election results data,observed_link_candidate
+us:vt:priority-roster:bakersfield,VT,2026-10-17T02:35:30-04:00,Bakersfield Vermont official town election results,observed_link_candidate
+us:wa:census-county:53013,WA,2026-10-17T02:35:30-04:00,Columbia County Washington official archived election results,observed_link_candidate
+us:wi:ltsb2026:adams-easton-f8a0a90ed7f41dc6,WI,2026-10-17T02:35:30-04:00,Town of Easton Adams County Wisconsin official voting elections,observed_link_candidate
+us:wv:census-county:54013,WV,2026-10-17T02:35:30-04:00,Calhoun County West Virginia official county clerk election results,observed_link_candidate
+us:wy:census-county:56013,WY,2026-10-17T02:35:30-04:00,Fremont County Wyoming official 2026 election results,observed_link_candidate
+us:al:census-county:01021,AL,2026-10-17T02:35:30-04:00,Chilton County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05021,AR,2026-10-17T02:35:30-04:00,Clay County Arkansas official election results,observed_link_candidate
+us:az:census-county:04019,AZ,2026-10-17T02:35:30-04:00,Pima County Arizona official election results,observed_link_candidate
+us:ca:census-county:06021,CA,2026-10-17T02:35:30-04:00,Glenn County California official election results,observed_link_candidate
+us:co:census-county:08019,CO,2026-10-17T02:35:30-04:00,Clear Creek County Colorado official election results clerk,observed_link_candidate
+us:ct:municipality:bloomfield,CT,2026-10-17T02:35:30-04:00,Bloomfield Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12021,FL,2026-10-17T02:35:30-04:00,Collier County Florida official election results supervisor,observed_link_candidate
+us:ga:census-county:13021,GA,2026-10-17T02:35:30-04:00,Bibb County Georgia official election results board elections,observed_link_candidate
+us:ma:priority-roster:aquinnah,MA,2026-10-17T02:35:30-04:00,Aquinnah Massachusetts official election results town clerk,observed_link_candidate
+us:md:census-county:24021,MD,2026-10-17T02:35:30-04:00,Frederick County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:andover,ME,2026-10-17T02:35:30-04:00,Town of Andover Maine official election results town clerk website,observed_link_candidate
