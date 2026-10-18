@@ -799,3 +799,23 @@ us:la:census-county:22039,LA,2026-10-18T10:23:15-04:00,Evangeline Parish Louisia
 us:md:census-county:24037,MD,2026-10-18T10:23:15-04:00,St. Mary's County Maryland official election results board elections,observed_link_candidate
 us:me:municipality:aurora,ME,2026-10-18T10:23:15-04:00,Aurora Maine official election results town clerk | site:townofaurora.wixsite.com/townhall Aurora Maine election results clerk,observed_link_candidate
 us:mi:county:chippewa,MI,2026-10-18T10:23:15-04:00,Chippewa County Michigan official election results county clerk,observed_link_candidate
+us:nv:census-county:32029,NV,2026-10-18T14:25:51-04:00,Storey County Nevada official election results clerk,observed_link_candidate
+us:ny:census-county:36027,NY,2026-10-18T14:25:51-04:00,Dutchess County New York official election results board elections,observed_link_candidate
+us:oh:county:clinton,OH,2026-10-18T14:25:51-04:00,Clinton County Ohio official election results board elections,observed_link_candidate
+us:ok:census-county:40027,OK,2026-10-18T14:25:51-04:00,Cleveland County Oklahoma official election results election board,observed_link_candidate
+us:or:census-county:41027,OR,2026-10-18T14:25:51-04:00,Hood River County Oregon official election results elections,observed_link_candidate
+us:pa:county:centre,PA,2026-10-18T14:25:51-04:00,Centre County Pennsylvania official election results elections,observed_link_candidate
+us:ri:priority-roster:hopkinton,RI,2026-10-18T14:25:51-04:00,Hopkinton Rhode Island official election results board canvassers,observed_link_candidate
+us:sc:census-county:45027,SC,2026-10-18T14:25:51-04:00,Clarendon County South Carolina official election results elections | site:clarendoncountysc.gov OR site:scvotes.gov Clarendon County official results 2026 election,observed_link_candidate
+us:sd:census-county:46029,SD,2026-10-18T14:25:51-04:00,Codington County South Dakota official election results auditor,observed_link_candidate
+us:al:census-county:01041,AL,2026-10-18T14:25:51-04:00,Crenshaw County Alabama official election results probate,completed_no_new_urls
+us:ar:census-county:05041,AR,2026-10-18T14:25:51-04:00,Desha County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04011,AZ,2026-10-18T14:25:51-04:00,Greenlee County Arizona official election results elections | Greenlee County Arizona 2026 election night reporting official results,observed_link_candidate
+us:ca:census-county:06041,CA,2026-10-18T14:25:51-04:00,Marin County California official election results elections,observed_link_candidate
+us:co:census-county:08039,CO,2026-10-18T14:25:51-04:00,Elbert County Colorado official election results clerk,observed_link_candidate
+us:ct:municipality:canaan,CT,2026-10-18T14:25:51-04:00,Canaan Connecticut official election results town clerk,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-18T14:25:51-04:00,New Castle County Delaware official election results 2026,completed_no_new_urls
+us:fl:census-county:12043,FL,2026-10-18T14:25:51-04:00,Glades County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13043,GA,2026-10-18T14:25:51-04:00,Candler County Georgia official election results elections | site:candlerco-ga.gov elections results Candler County OR site:app.enhancedvoting.com/results/public/candler-county-ga,observed_link_candidate
+us:ma:priority-roster:ayer,MA,2026-10-18T14:25:51-04:00,Ayer Massachusetts official election results town clerk,observed_link_candidate
+us:mn:census-county:27033,MN,2026-10-18T14:25:51-04:00,Cottonwood County Minnesota official election results auditor | site:cottonwoodcountymn.gov elections results Cottonwood County,observed_link_candidate
