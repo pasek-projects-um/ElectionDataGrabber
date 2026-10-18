@@ -739,3 +739,23 @@ us:fl:census-county:12039,FL,2026-10-18T05:05:09-04:00,Gadsden County Florida of
 us:ga:census-county:13037,GA,2026-10-18T05:05:09-04:00,Calhoun County Georgia official election results elections office | site:calhouncountyga.com election results Calhoun County Georgia,completed_no_new_urls
 us:ma:priority-roster:auburn,MA,2026-10-18T05:05:09-04:00,Auburn Massachusetts official election results town clerk,observed_link_candidate
 us:mn:census-county:27029,MN,2026-10-18T05:05:09-04:00,Clearwater County Minnesota official election results auditor,observed_link_candidate
+us:nv:census-county:32027,NV,2026-10-18T08:51:59-04:00,Pershing County Nevada official election results clerk archive | site:pershingcountynv.gov elections results Pershing County clerk treasurer,observed_link_candidate
+us:ny:census-county:36025,NY,2026-10-18T08:51:59-04:00,Delaware County New York official election results board elections archive,observed_link_candidate
+us:oh:county:clermont,OH,2026-10-18T08:51:59-04:00,Clermont County Ohio official election results board elections archive | site:boe.clermontcountyohio.gov election results archive,observed_link_candidate
+us:ok:census-county:40025,OK,2026-10-18T08:51:59-04:00,Cimarron County Oklahoma official election results county election board,observed_link_candidate
+us:or:census-county:41025,OR,2026-10-18T08:51:59-04:00,Harney County Oregon official election results archive county clerk 2026,observed_link_candidate
+us:pa:county:carbon,PA,2026-10-18T08:51:59-04:00,Carbon County Pennsylvania official election results archive elections | site:carboncounty.com elections results Carbon County Pennsylvania,observed_link_candidate
+us:ri:priority-roster:glocester,RI,2026-10-18T08:51:59-04:00,Glocester Rhode Island official election results board canvassers archive,observed_link_candidate
+us:sc:census-county:45025,SC,2026-10-18T08:51:59-04:00,Chesterfield County South Carolina official election results elections office archive,observed_link_candidate
+us:sd:census-county:46027,SD,2026-10-18T08:51:59-04:00,Clay County South Dakota official election results auditor archive,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-18T08:51:59-04:00,Kauai County Hawaii official election results archive elections division,observed_link_candidate
+us:ia:census-county:19037,IA,2026-10-18T08:51:59-04:00,Chickasaw County Iowa official election results auditor archive,observed_link_candidate
+us:id:census-county:16037,ID,2026-10-18T08:51:59-04:00,Custer County Idaho official election results clerk archive,observed_link_candidate
+us:il:census-county:17037,IL,2026-10-18T08:51:59-04:00,DeKalb County Illinois official election results clerk archive,observed_link_candidate
+us:in:census-county:18037,IN,2026-10-18T08:51:59-04:00,Dubois County Indiana official election results clerk archive | site:duboiscountyin.org election results Dubois County clerk,observed_link_candidate
+us:ks:census-county:20037,KS,2026-10-18T08:51:59-04:00,Crawford County Kansas official election results clerk archive,observed_link_candidate
+us:ky:census-county:21037,KY,2026-10-18T08:51:59-04:00,Campbell County Kentucky official election results clerk archive,observed_link_candidate
+us:la:census-county:22037,LA,2026-10-18T08:51:59-04:00,East Feliciana Parish Louisiana official election results clerk archive,observed_link_candidate
+us:md:census-county:24035,MD,2026-10-18T08:51:59-04:00,Queen Anne's County Maryland official election results board elections archive,observed_link_candidate
+us:me:municipality:augusta,ME,2026-10-18T08:51:59-04:00,Augusta Maine official election results city clerk archive,observed_link_candidate
+us:mi:county:cheboygan,MI,2026-10-18T08:51:59-04:00,Cheboygan County Michigan official election results clerk archive,observed_link_candidate
