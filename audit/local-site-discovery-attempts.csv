@@ -599,3 +599,23 @@ us:ky:census-county:21029,KY,2026-10-17T20:42:53-04:00,Bullitt County Kentucky o
 us:la:census-county:22029,LA,2026-10-17T20:42:53-04:00,Concordia Parish Louisiana official election results clerk | site:sos.la.gov Concordia Parish election results official,observed_link_candidate
 us:mi:county:branch,MI,2026-10-17T20:42:53-04:00,Branch County Michigan official election results clerk,observed_link_candidate
 us:mn:census-county:27023,MN,2026-10-17T20:42:53-04:00,Chippewa County Minnesota official election results auditor,observed_link_candidate
+us:mo:census-county:29021,MO,2026-10-17T21:45:29-04:00,Buchanan County Missouri official election results county clerk,observed_link_candidate
+us:ms:census-county:28021,MS,2026-10-17T21:45:29-04:00,Claiborne County Mississippi official election results circuit clerk,observed_link_candidate
+us:mt:census-county:30021,MT,2026-10-17T21:45:29-04:00,Dawson County Montana official election results elections office,observed_link_candidate
+us:nc:census-county:37021,NC,2026-10-17T21:45:29-04:00,Buncombe County North Carolina official election results,observed_link_candidate
+us:nd:census-county:38021,ND,2026-10-17T21:45:29-04:00,Dickey County North Dakota official election results auditor,observed_link_candidate
+us:ne:census-county:31021,NE,2026-10-17T21:45:29-04:00,Burt County Nebraska official election results clerk,observed_link_candidate
+us:nh:priority-roster:atkinson,NH,2026-10-17T21:45:29-04:00,Atkinson New Hampshire official election results town clerk,observed_link_candidate
+us:nj:census-county:34021,NJ,2026-10-17T21:45:29-04:00,Mercer County New Jersey official election results county clerk | Mercer County New Jersey official election results 2026 site:nj.gov OR site:mercercounty.org,observed_link_candidate
+us:nm:census-county:35019,NM,2026-10-17T21:45:29-04:00,Guadalupe County New Mexico official election results clerk | site:guadalupecountynm.org elections county clerk Guadalupe County New Mexico,observed_link_candidate
+us:al:census-county:01031,AL,2026-10-17T21:45:29-04:00,Coffee County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05031,AR,2026-10-17T21:45:29-04:00,Craighead County Arkansas official election results county clerk | Craighead County Arkansas official county clerk elections results,observed_link_candidate
+us:az:census-county:04001,AZ,2026-10-17T21:45:29-04:00,Apache County Arizona official election results 2026,observed_link_candidate
+us:ca:census-county:06031,CA,2026-10-17T21:45:29-04:00,Kings County California official election results elections | Kings County California official election results 2026,observed_link_candidate
+us:co:census-county:08029,CO,2026-10-17T21:45:29-04:00,Delta County Colorado official election results clerk,observed_link_candidate
+us:ct:municipality:bridgewater,CT,2026-10-17T21:45:29-04:00,Bridgewater Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12033,FL,2026-10-17T21:45:29-04:00,Escambia County Florida official election results supervisor,observed_link_candidate
+us:ga:census-county:13031,GA,2026-10-17T21:45:29-04:00,Bulloch County Georgia official election results elections,observed_link_candidate
+us:ma:priority-roster:ashland,MA,2026-10-17T21:45:29-04:00,Ashland Massachusetts official election results town clerk,observed_link_candidate
+us:md:census-county:24029,MD,2026-10-17T21:45:29-04:00,Kent County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:ashland,ME,2026-10-17T21:45:29-04:00,Ashland Maine official election results town clerk | Ashland Maine official town clerk elections,observed_link_candidate
