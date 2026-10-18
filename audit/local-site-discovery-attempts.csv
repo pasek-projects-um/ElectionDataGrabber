@@ -759,3 +759,23 @@ us:la:census-county:22037,LA,2026-10-18T08:51:59-04:00,East Feliciana Parish Lou
 us:md:census-county:24035,MD,2026-10-18T08:51:59-04:00,Queen Anne's County Maryland official election results board elections archive,observed_link_candidate
 us:me:municipality:augusta,ME,2026-10-18T08:51:59-04:00,Augusta Maine official election results city clerk archive,observed_link_candidate
 us:mi:county:cheboygan,MI,2026-10-18T08:51:59-04:00,Cheboygan County Michigan official election results clerk archive,observed_link_candidate
+us:tn:census-county:47025,TN,2026-10-18T09:27:11-04:00,Claiborne County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48025,TX,2026-10-18T09:27:11-04:00,Bee County Texas official election results county clerk,observed_link_candidate
+us:ut:census-county:49025,UT,2026-10-18T09:27:11-04:00,Kane County Utah official election results clerk,observed_link_candidate
+us:va:census-county:51025,VA,2026-10-18T09:27:11-04:00,Brunswick County Virginia official election results registrar | site:brunswickco.com OR site:brunswickelections.com Brunswick Virginia election results registrar official,observed_link_candidate
+us:vt:priority-roster:barton,VT,2026-10-18T09:27:11-04:00,Barton Vermont official election results town clerk | site:bartonvermont.com election results Town of Barton Vermont clerk,observed_link_candidate
+us:wa:census-county:53025,WA,2026-10-18T09:27:11-04:00,Grant County Washington official election results elections,observed_link_candidate
+us:wi:ltsb2026:adams-new-haven-069d3f205a3ed521,WI,2026-10-18T09:27:11-04:00,Town of New Haven Adams County Wisconsin official election results | exact Town of New Haven Adams County Wisconsin elections official,observed_link_candidate
+us:wv:census-county:54025,WV,2026-10-18T09:27:11-04:00,Greenbrier County West Virginia official election results county clerk,observed_link_candidate
+us:wy:census-county:56025,WY,2026-10-18T09:27:11-04:00,Natrona County Wyoming official election results elections,observed_link_candidate
+us:al:census-county:01039,AL,2026-10-18T09:27:11-04:00,Covington County Alabama official election results probate,completed_no_new_urls
+us:ar:census-county:05039,AR,2026-10-18T09:27:11-04:00,Dallas County Arkansas official election results county clerk | Dallas County Arkansas official county clerk election results,completed_no_new_urls
+us:az:census-county:04009,AZ,2026-10-18T09:27:11-04:00,Graham County Arizona official election results elections,completed_no_new_urls
+us:ca:census-county:06039,CA,2026-10-18T09:27:11-04:00,Madera County California official election results elections,observed_link_candidate
+us:co:census-county:08037,CO,2026-10-18T09:27:11-04:00,Eagle County Colorado official election results clerk | site:eaglecounty.us elections voter information results Eagle County Colorado,observed_link_candidate
+us:ct:municipality:burlington,CT,2026-10-18T09:27:11-04:00,Burlington Connecticut official election results town clerk | site:burlingtonct.gov election results Burlington Connecticut,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-18T09:27:11-04:00,Kent County Delaware official election results elections | site:de.gov Kent County Delaware election results 2026 official,completed_no_new_urls
+us:fl:census-county:12041,FL,2026-10-18T09:27:11-04:00,Gilchrist County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13039,GA,2026-10-18T09:27:11-04:00,Camden County Georgia official election results elections,observed_link_candidate
+us:ma:priority-roster:avon,MA,2026-10-18T09:27:11-04:00,Avon Massachusetts official election results town clerk,observed_link_candidate
+us:mn:census-county:27031,MN,2026-10-18T09:27:11-04:00,Cook County Minnesota official election results auditor | Cook County Minnesota official auditor elections results,completed_no_new_urls
