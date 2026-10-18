@@ -779,3 +779,23 @@ us:fl:census-county:12041,FL,2026-10-18T09:27:11-04:00,Gilchrist County Florida 
 us:ga:census-county:13039,GA,2026-10-18T09:27:11-04:00,Camden County Georgia official election results elections,observed_link_candidate
 us:ma:priority-roster:avon,MA,2026-10-18T09:27:11-04:00,Avon Massachusetts official election results town clerk,observed_link_candidate
 us:mn:census-county:27031,MN,2026-10-18T09:27:11-04:00,Cook County Minnesota official election results auditor | Cook County Minnesota official auditor elections results,completed_no_new_urls
+us:mo:census-county:29027,MO,2026-10-18T10:23:15-04:00,Callaway County Missouri official election results county clerk,observed_link_candidate
+us:ms:census-county:28027,MS,2026-10-18T10:23:15-04:00,Coahoma County Mississippi official election results circuit clerk,observed_link_candidate
+us:mt:census-county:30027,MT,2026-10-18T10:23:15-04:00,Fergus County Montana official election results elections,observed_link_candidate
+us:nc:census-county:37027,NC,2026-10-18T10:23:15-04:00,Caldwell County North Carolina official election results board elections,observed_link_candidate
+us:nd:census-county:38027,ND,2026-10-18T10:23:15-04:00,Eddy County North Dakota official election results auditor | site:eddycountynd.org elections results Eddy County auditor North Dakota,completed_no_new_urls
+us:ne:census-county:31027,NE,2026-10-18T10:23:15-04:00,Cedar County Nebraska official election results clerk,observed_link_candidate
+us:nh:priority-roster:barrington,NH,2026-10-18T10:23:15-04:00,Barrington New Hampshire official election results town clerk,observed_link_candidate
+us:nj:census-county:34027,NJ,2026-10-18T10:23:15-04:00,Morris County New Jersey official election results clerk,observed_link_candidate
+us:nm:census-county:35025,NM,2026-10-18T10:23:15-04:00,Lea County New Mexico official election results clerk,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-18T10:23:15-04:00,Maui County Hawaii official election results county clerk,observed_link_candidate
+us:ia:census-county:19039,IA,2026-10-18T10:23:15-04:00,Clarke County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16039,ID,2026-10-18T10:23:15-04:00,Elmore County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17039,IL,2026-10-18T10:23:15-04:00,De Witt County Illinois official election results county clerk,observed_link_candidate
+us:in:census-county:18039,IN,2026-10-18T10:23:15-04:00,Elkhart County Indiana official election results clerk,observed_link_candidate
+us:ks:census-county:20039,KS,2026-10-18T10:23:15-04:00,Decatur County Kansas official election results clerk | site:decaturco.org OR site:decaturcountyks.org Decatur County Kansas elections clerk results,completed_no_new_urls
+us:ky:census-county:21039,KY,2026-10-18T10:23:15-04:00,Carlisle County Kentucky official election results clerk,observed_link_candidate
+us:la:census-county:22039,LA,2026-10-18T10:23:15-04:00,Evangeline Parish Louisiana official election results clerk court | site:evangelineparishclerkofcourt.com elections results Evangeline Parish,completed_no_new_urls
+us:md:census-county:24037,MD,2026-10-18T10:23:15-04:00,St. Mary's County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:aurora,ME,2026-10-18T10:23:15-04:00,Aurora Maine official election results town clerk | site:townofaurora.wixsite.com/townhall Aurora Maine election results clerk,observed_link_candidate
+us:mi:county:chippewa,MI,2026-10-18T10:23:15-04:00,Chippewa County Michigan official election results county clerk,observed_link_candidate
