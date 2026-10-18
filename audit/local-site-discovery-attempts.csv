@@ -579,3 +579,23 @@ us:ct:municipality:bridgeport,CT,2026-10-17T19:10:46-04:00,Bridgeport Connecticu
 us:fl:census-county:12031,FL,2026-10-17T19:10:46-04:00,Duval County Florida official election results supervisor elections,observed_link_candidate
 us:ga:census-county:13029,GA,2026-10-17T19:10:46-04:00,Bryan County Georgia official election results elections,observed_link_candidate
 us:ma:priority-roster:ashfield,MA,2026-10-17T19:10:46-04:00,Ashfield Massachusetts official election results town clerk,observed_link_candidate
+us:tn:census-county:47019,TN,2026-10-17T20:42:53-04:00,Carter County Tennessee official election results election commission | site:cartercountytn.gov election results Carter County Tennessee,completed_no_new_urls
+us:tx:census-county:48019,TX,2026-10-17T20:42:53-04:00,Bandera County Texas official election results elections administrator,observed_link_candidate
+us:ut:census-county:49019,UT,2026-10-17T20:42:53-04:00,Grand County Utah official election results clerk,observed_link_candidate
+us:va:census-county:51019,VA,2026-10-17T20:42:53-04:00,Bedford County Virginia official election results registrar,observed_link_candidate
+us:vt:priority-roster:barnet,VT,2026-10-17T20:42:53-04:00,Barnet Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53019,WA,2026-10-17T20:42:53-04:00,Ferry County Washington official election results auditor,observed_link_candidate
+us:wi:ltsb2026:adams-lincoln-dd1a6bc3006cda5c,WI,2026-10-17T20:42:53-04:00,Town of Lincoln Adams County Wisconsin official election results clerk,observed_link_candidate
+us:wv:census-county:54019,WV,2026-10-17T20:42:53-04:00,Fayette County West Virginia official election results county clerk,observed_link_candidate
+us:wy:census-county:56019,WY,2026-10-17T20:42:53-04:00,Johnson County Wyoming official election results clerk,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-17T20:42:53-04:00,Sussex County Delaware official election results 2026,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-17T20:42:53-04:00,Kauai County Hawaii official election results 2026,observed_link_candidate
+us:ia:census-county:19029,IA,2026-10-17T20:42:53-04:00,Cass County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16029,ID,2026-10-17T20:42:53-04:00,Caribou County Idaho official election results clerk | site:co.caribou.id.us elections Caribou County results,observed_link_candidate
+us:il:census-county:17029,IL,2026-10-17T20:42:53-04:00,Coles County Illinois official election results county clerk,observed_link_candidate
+us:in:census-county:18029,IN,2026-10-17T20:42:53-04:00,Dearborn County Indiana official election results clerk | site:dearborncounty.org election results Dearborn County Indiana clerk,observed_link_candidate
+us:ks:census-county:20029,KS,2026-10-17T20:42:53-04:00,Cloud County Kansas official election results county clerk,observed_link_candidate
+us:ky:census-county:21029,KY,2026-10-17T20:42:53-04:00,Bullitt County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22029,LA,2026-10-17T20:42:53-04:00,Concordia Parish Louisiana official election results clerk | site:sos.la.gov Concordia Parish election results official,observed_link_candidate
+us:mi:county:branch,MI,2026-10-17T20:42:53-04:00,Branch County Michigan official election results clerk,observed_link_candidate
+us:mn:census-county:27023,MN,2026-10-17T20:42:53-04:00,Chippewa County Minnesota official election results auditor,observed_link_candidate
