@@ -859,3 +859,23 @@ us:wa:census-county:53027,WA,2026-10-18T16:55:29-04:00,Grays Harbor County Washi
 us:wi:ltsb2026:adams-preston-2434567946b9ca90,WI,2026-10-18T16:55:29-04:00,Town of Preston Adams County Wisconsin official election results,observed_link_candidate
 us:wv:census-county:54027,WV,2026-10-18T16:55:29-04:00,Hampshire County West Virginia county clerk election results official,observed_link_candidate
 us:hi:census-county:15003,HI,2026-10-18T16:55:29-04:00,Honolulu County official election results city clerk archive,observed_link_candidate
+us:ia:census-county:19041,IA,2026-10-18T17:13:26-04:00,Clay County Iowa official election results archive county auditor,observed_link_candidate
+us:il:census-county:17041,IL,2026-10-18T17:13:26-04:00,Douglas County Illinois official election results archive county clerk,observed_link_candidate
+us:ks:census-county:20041,KS,2026-10-18T17:13:26-04:00,Dickinson County Kansas official election results archive county clerk,observed_link_candidate
+us:ky:census-county:21041,KY,2026-10-18T17:13:26-04:00,Carroll County Kentucky official election results archive county clerk,observed_link_candidate
+us:md:census-county:24039,MD,2026-10-18T17:13:26-04:00,Somerset County Maryland official election results archive board elections,observed_link_candidate
+us:me:municipality:avon,ME,2026-10-18T17:13:26-04:00,Avon Maine official town election results archive | site:maine.gov Avon Maine municipal election results town clerk,observed_link_candidate
+us:mi:county:clare,MI,2026-10-18T17:13:26-04:00,Clare County Michigan official election results archive clerk,observed_link_candidate
+us:ms:census-county:28029,MS,2026-10-18T17:13:26-04:00,Copiah County Mississippi official election results archive circuit clerk | Copiah County Mississippi 2026 official election results site:sos.ms.gov,observed_link_candidate
+us:mt:census-county:30029,MT,2026-10-18T17:13:26-04:00,Flathead County Montana official election results archive elections department,observed_link_candidate
+us:ne:census-county:31029,NE,2026-10-18T17:13:26-04:00,Chase County Nebraska official election results archive county clerk | Chase County Nebraska official election results site:chasecounty.nebraska.gov,observed_link_candidate
+us:nj:census-county:34029,NJ,2026-10-18T17:13:26-04:00,Ocean County New Jersey official election results archive county clerk,observed_link_candidate
+us:nm:census-county:35027,NM,2026-10-18T17:13:26-04:00,Lincoln County New Mexico official election results archive county clerk,observed_link_candidate
+us:ct:municipality:canterbury,CT,2026-10-18T17:13:26-04:00,Canterbury Connecticut official election results archive town clerk,observed_link_candidate
+us:ma:priority-roster:barnstable,MA,2026-10-18T17:13:26-04:00,Barnstable Massachusetts official election results archive town clerk,observed_link_candidate
+us:mn:census-county:27035,MN,2026-10-18T17:13:26-04:00,Crow Wing County Minnesota official election results archive auditor,observed_link_candidate
+us:ny:census-county:36029,NY,2026-10-18T17:13:26-04:00,Erie County New York official election results archive board elections,observed_link_candidate
+us:ok:census-county:40029,OK,2026-10-18T17:13:26-04:00,Coal County Oklahoma official election results archive county election board,observed_link_candidate
+us:pa:county:chester,PA,2026-10-18T17:13:26-04:00,Chester County Pennsylvania official election results archive voting services,observed_link_candidate
+us:sc:census-county:45029,SC,2026-10-18T17:13:26-04:00,Colleton County South Carolina official election results archive election commission | Colleton County South Carolina official election results county board elections,observed_link_candidate
+us:az:census-county:04013,AZ,2026-10-18T17:13:26-04:00,Maricopa County Arizona official election results 2026 archive recorder,observed_link_candidate
