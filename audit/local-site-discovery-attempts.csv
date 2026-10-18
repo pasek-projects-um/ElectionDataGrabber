@@ -699,3 +699,23 @@ us:ct:municipality:brookfield,CT,2026-10-18T03:24:00-04:00,Brookfield Connecticu
 us:fl:census-county:12037,FL,2026-10-18T03:24:00-04:00,Franklin County Florida official election results supervisor elections,observed_link_candidate
 us:ga:census-county:13035,GA,2026-10-18T03:24:00-04:00,Butts County Georgia official election results election office,observed_link_candidate
 us:ma:priority-roster:attleboro,MA,2026-10-18T03:24:00-04:00,Attleboro Massachusetts official election results city clerk,observed_link_candidate
+us:md:census-county:24033,MD,2026-10-18T04:37:06-04:00,Prince George's County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:auburn,ME,2026-10-18T04:37:06-04:00,Auburn Maine official election results city clerk,observed_link_candidate
+us:tn:census-county:47023,TN,2026-10-18T04:37:06-04:00,Chester County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48023,TX,2026-10-18T04:37:06-04:00,Baylor County Texas official election results elections administrator,observed_link_candidate
+us:ut:census-county:49023,UT,2026-10-18T04:37:06-04:00,Juab County Utah official election results clerk auditor,observed_link_candidate
+us:va:census-county:51023,VA,2026-10-18T04:37:06-04:00,Botetourt County Virginia official election results registrar,observed_link_candidate
+us:vt:priority-roster:barre-town,VT,2026-10-18T04:37:06-04:00,Barre Town Vermont official election results town clerk | site:barretown.org election results Barre Town Vermont clerk,observed_link_candidate
+us:wa:census-county:53023,WA,2026-10-18T04:37:06-04:00,Garfield County Washington official election results auditor,observed_link_candidate
+us:wi:ltsb2026:adams-new-chester-966a428b105c8f01,WI,2026-10-18T04:37:06-04:00,Town of New Chester Adams County Wisconsin official election results clerk,observed_link_candidate
+us:wv:census-county:54023,WV,2026-10-18T04:37:06-04:00,Grant County West Virginia official election results county clerk | site:grantcountywv.org election results Grant County West Virginia clerk,observed_link_candidate
+us:wy:census-county:56023,WY,2026-10-18T04:37:06-04:00,Lincoln County Wyoming official election results clerk,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-18T04:37:06-04:00,Honolulu County Hawaii official election results elections division,observed_link_candidate
+us:ia:census-county:19035,IA,2026-10-18T04:37:06-04:00,Cherokee County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16035,ID,2026-10-18T04:37:06-04:00,Clearwater County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17035,IL,2026-10-18T04:37:06-04:00,Cumberland County Illinois official election results clerk | site:cumberlandco.org election results Cumberland County Illinois clerk,completed_no_new_urls
+us:in:census-county:18035,IN,2026-10-18T04:37:06-04:00,Delaware County Indiana official election results clerk | site:co.delaware.in.us election results Delaware County Indiana,observed_link_candidate
+us:ks:census-county:20035,KS,2026-10-18T04:37:06-04:00,Cowley County Kansas official election results county clerk,observed_link_candidate
+us:ky:census-county:21035,KY,2026-10-18T04:37:06-04:00,Calloway County Kentucky official election results clerk,observed_link_candidate
+us:la:census-county:22035,LA,2026-10-18T04:37:06-04:00,East Carroll Parish Louisiana official election results clerk,observed_link_candidate
+us:mi:county:charlevoix,MI,2026-10-18T04:37:06-04:00,Charlevoix County Michigan official election results clerk,observed_link_candidate
