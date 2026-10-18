@@ -719,3 +719,23 @@ us:ks:census-county:20035,KS,2026-10-18T04:37:06-04:00,Cowley County Kansas offi
 us:ky:census-county:21035,KY,2026-10-18T04:37:06-04:00,Calloway County Kentucky official election results clerk,observed_link_candidate
 us:la:census-county:22035,LA,2026-10-18T04:37:06-04:00,East Carroll Parish Louisiana official election results clerk,observed_link_candidate
 us:mi:county:charlevoix,MI,2026-10-18T04:37:06-04:00,Charlevoix County Michigan official election results clerk,observed_link_candidate
+us:mo:census-county:29025,MO,2026-10-18T05:05:09-04:00,Caldwell County Missouri official election results county clerk | site:caldwellco.missouri.org elections Caldwell County clerk,completed_no_new_urls
+us:ms:census-county:28025,MS,2026-10-18T05:05:09-04:00,Clay County Mississippi official election results circuit clerk,observed_link_candidate
+us:mt:census-county:30025,MT,2026-10-18T05:05:09-04:00,Fallon County Montana official election results clerk recorder,observed_link_candidate
+us:nc:census-county:37025,NC,2026-10-18T05:05:09-04:00,Cabarrus County North Carolina official election results board elections,observed_link_candidate
+us:nd:census-county:38025,ND,2026-10-18T05:05:09-04:00,Dunn County North Dakota official election results auditor,observed_link_candidate
+us:ne:census-county:31025,NE,2026-10-18T05:05:09-04:00,Cass County Nebraska official election results election commissioner,observed_link_candidate
+us:nh:priority-roster:barnstead,NH,2026-10-18T05:05:09-04:00,Barnstead New Hampshire official election results town clerk | site:barnstead.org election results Barnstead New Hampshire town clerk,observed_link_candidate
+us:nj:census-county:34025,NJ,2026-10-18T05:05:09-04:00,Monmouth County New Jersey official election results clerk,observed_link_candidate
+us:nm:census-county:35023,NM,2026-10-18T05:05:09-04:00,Hidalgo County New Mexico official election results county clerk,observed_link_candidate
+us:al:census-county:01037,AL,2026-10-18T05:05:09-04:00,Coosa County Alabama official election results probate judge,observed_link_candidate
+us:ar:census-county:05037,AR,2026-10-18T05:05:09-04:00,Cross County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04007,AZ,2026-10-18T05:05:09-04:00,Gila County Arizona official election results elections department,observed_link_candidate
+us:ca:census-county:06037,CA,2026-10-18T05:05:09-04:00,Los Angeles County California official election results registrar recorder,observed_link_candidate
+us:co:census-county:08035,CO,2026-10-18T05:05:09-04:00,Douglas County Colorado official election results clerk recorder,observed_link_candidate
+us:ct:municipality:brooklyn,CT,2026-10-18T05:05:09-04:00,Brooklyn Connecticut official election results town clerk,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-18T05:05:09-04:00,Sussex County Delaware official election results department elections,observed_link_candidate
+us:fl:census-county:12039,FL,2026-10-18T05:05:09-04:00,Gadsden County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13037,GA,2026-10-18T05:05:09-04:00,Calhoun County Georgia official election results elections office | site:calhouncountyga.com election results Calhoun County Georgia,completed_no_new_urls
+us:ma:priority-roster:auburn,MA,2026-10-18T05:05:09-04:00,Auburn Massachusetts official election results town clerk,observed_link_candidate
+us:mn:census-county:27029,MN,2026-10-18T05:05:09-04:00,Clearwater County Minnesota official election results auditor,observed_link_candidate
