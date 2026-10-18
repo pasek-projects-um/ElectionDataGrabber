@@ -659,3 +659,23 @@ us:ga:census-county:13033,GA,2026-10-17T23:45:47-04:00,Burke County Georgia offi
 us:ma:priority-roster:athol,MA,2026-10-17T23:45:47-04:00,Athol Massachusetts official election results town clerk,observed_link_candidate
 us:md:census-county:24031,MD,2026-10-17T23:45:47-04:00,Montgomery County Maryland official election results board elections,observed_link_candidate
 us:me:municipality:atkinson,ME,2026-10-17T23:45:47-04:00,Atkinson Maine official election results clerk | Atkinson Maine deorganized election results official,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-10-18T00:15:00-04:00,Alaska Division of Elections official 2026 results archive alternative dashboard | site:elections.alaska.gov 2026 election results archive dashboard,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-10-18T00:15:00-04:00,DC Board of Elections official 2026 results archive alternative dashboard | site:dcboe.org 2026 election results archive dashboard,completed_no_new_urls
+us:mo:census-county:29023,MO,2026-10-18T00:15:00-04:00,Butler County Missouri official election results county clerk,observed_link_candidate
+us:ms:census-county:28023,MS,2026-10-18T00:15:00-04:00,Clarke County Mississippi official election results election commission | site:clarkecountyms.gov election results,observed_link_candidate
+us:mt:census-county:30023,MT,2026-10-18T00:15:00-04:00,Deer Lodge County Montana official election results clerk,observed_link_candidate
+us:nc:census-county:37023,NC,2026-10-18T00:15:00-04:00,Burke County North Carolina official election results board elections,observed_link_candidate
+us:nd:census-county:38023,ND,2026-10-18T00:15:00-04:00,Divide County North Dakota official election results auditor | site:dividecountynd.hosted.civiclive.com election results,observed_link_candidate
+us:ne:census-county:31023,NE,2026-10-18T00:15:00-04:00,Butler County Nebraska official election results election commissioner,observed_link_candidate
+us:nh:priority-roster:auburn,NH,2026-10-18T00:15:00-04:00,Auburn New Hampshire official 2026 election results town clerk,observed_link_candidate
+us:nj:census-county:34023,NJ,2026-10-18T00:15:00-04:00,Middlesex County New Jersey official 2026 election results dashboard | site:nj.gov Middlesex 2026 election results,observed_link_candidate
+us:nm:census-county:35021,NM,2026-10-18T00:15:00-04:00,Harding County New Mexico official election results county clerk,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-18T00:15:00-04:00,Hawaii County official election results elections division,observed_link_candidate
+us:ia:census-county:19033,IA,2026-10-18T00:15:00-04:00,Cerro Gordo County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16033,ID,2026-10-18T00:15:00-04:00,Clark County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17033,IL,2026-10-18T00:15:00-04:00,Crawford County Illinois official election results clerk dashboard,observed_link_candidate
+us:in:census-county:18033,IN,2026-10-18T00:15:00-04:00,DeKalb County Indiana official election results county clerk | site:dekalbcounty.org election results Indiana,observed_link_candidate
+us:ks:census-county:20033,KS,2026-10-18T00:15:00-04:00,Comanche County Kansas official election results county clerk,observed_link_candidate
+us:ky:census-county:21033,KY,2026-10-18T00:15:00-04:00,Caldwell County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22033,LA,2026-10-18T00:15:00-04:00,East Baton Rouge Parish official election results clerk | site:ebrclerk.com election results 2026,observed_link_candidate
+us:mi:county:cass,MI,2026-10-18T00:15:00-04:00,Cass County Michigan official 2026 election results clerk | site:casscountymi.org 2026 election results,observed_link_candidate
