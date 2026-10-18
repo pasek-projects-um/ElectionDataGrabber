@@ -639,3 +639,23 @@ us:ky:census-county:21031,KY,2026-10-17T22:47:40-04:00,Butler County Kentucky of
 us:la:census-county:22031,LA,2026-10-17T22:47:40-04:00,De Soto Parish Louisiana official election results,observed_link_candidate
 us:mi:county:calhoun,MI,2026-10-17T22:47:40-04:00,Calhoun County Michigan official election results,observed_link_candidate
 us:mn:census-county:27025,MN,2026-10-17T22:47:40-04:00,Chisago County Minnesota official election results,observed_link_candidate
+us:tn:census-county:47021,TN,2026-10-17T23:45:47-04:00,Cheatham County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48021,TX,2026-10-17T23:45:47-04:00,Bastrop County Texas official election results elections office | Bastrop County Texas historical election results official,observed_link_candidate
+us:ut:census-county:49021,UT,2026-10-17T23:45:47-04:00,Iron County Utah official election results clerk elections,observed_link_candidate
+us:va:census-county:51021,VA,2026-10-17T23:45:47-04:00,Bland County Virginia official election results voter registration,observed_link_candidate
+us:vt:priority-roster:barre-city,VT,2026-10-17T23:45:47-04:00,Barre City Vermont official election results city clerk,observed_link_candidate
+us:wa:census-county:53021,WA,2026-10-17T23:45:47-04:00,Franklin County Washington official election results auditor,observed_link_candidate
+us:wi:ltsb2026:adams-monroe-aafbc7baf6967b1e,WI,2026-10-17T23:45:47-04:00,Town of Monroe Adams County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54021,WV,2026-10-17T23:45:47-04:00,Gilmer County West Virginia official election results county clerk,observed_link_candidate
+us:wy:census-county:56021,WY,2026-10-17T23:45:47-04:00,Laramie County Wyoming official election results county clerk,observed_link_candidate
+us:al:census-county:01033,AL,2026-10-17T23:45:47-04:00,Colbert County Alabama official election results probate judge | Colbert County Alabama election results archive official,observed_link_candidate
+us:ar:census-county:05033,AR,2026-10-17T23:45:47-04:00,Crawford County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04003,AZ,2026-10-17T23:45:47-04:00,Cochise County Arizona official election results elections 2026,observed_link_candidate
+us:ca:census-county:06033,CA,2026-10-17T23:45:47-04:00,Lake County California official election results registrar voters 2026,observed_link_candidate
+us:co:census-county:08031,CO,2026-10-17T23:45:47-04:00,Denver County Colorado official election results clerk recorder | Denver election results archive official,observed_link_candidate
+us:ct:municipality:bristol,CT,2026-10-17T23:45:47-04:00,Bristol Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12035,FL,2026-10-17T23:45:47-04:00,Flagler County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13033,GA,2026-10-17T23:45:47-04:00,Burke County Georgia official election results elections office,observed_link_candidate
+us:ma:priority-roster:athol,MA,2026-10-17T23:45:47-04:00,Athol Massachusetts official election results town clerk,observed_link_candidate
+us:md:census-county:24031,MD,2026-10-17T23:45:47-04:00,Montgomery County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:atkinson,ME,2026-10-17T23:45:47-04:00,Atkinson Maine official election results clerk | Atkinson Maine deorganized election results official,completed_no_new_urls
