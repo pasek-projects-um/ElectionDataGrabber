@@ -619,3 +619,23 @@ us:ga:census-county:13031,GA,2026-10-17T21:45:29-04:00,Bulloch County Georgia of
 us:ma:priority-roster:ashland,MA,2026-10-17T21:45:29-04:00,Ashland Massachusetts official election results town clerk,observed_link_candidate
 us:md:census-county:24029,MD,2026-10-17T21:45:29-04:00,Kent County Maryland official election results board elections,observed_link_candidate
 us:me:municipality:ashland,ME,2026-10-17T21:45:29-04:00,Ashland Maine official election results town clerk | Ashland Maine official town clerk elections,observed_link_candidate
+us:nv:census-county:32021,NV,2026-10-17T22:47:40-04:00,Mineral County Nevada official election results county clerk,observed_link_candidate
+us:ny:census-county:36021,NY,2026-10-17T22:47:40-04:00,Columbia County New York official election results board elections,observed_link_candidate
+us:oh:county:champaign,OH,2026-10-17T22:47:40-04:00,Champaign County Ohio official election results,observed_link_candidate
+us:ok:census-county:40021,OK,2026-10-17T22:47:40-04:00,Cherokee County Oklahoma official election results election board,observed_link_candidate
+us:or:census-county:41021,OR,2026-10-17T22:47:40-04:00,Gilliam County Oregon official election results elections archive,observed_link_candidate
+us:pa:county:cambria,PA,2026-10-17T22:47:40-04:00,Cambria County Pennsylvania official election results archive,observed_link_candidate
+us:ri:priority-roster:exeter,RI,2026-10-17T22:47:40-04:00,Exeter Rhode Island official election results,observed_link_candidate
+us:sc:census-county:45021,SC,2026-10-17T22:47:40-04:00,Cherokee County South Carolina official election results,observed_link_candidate
+us:sd:census-county:46023,SD,2026-10-17T22:47:40-04:00,Charles Mix County South Dakota official election results,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-17T22:47:40-04:00,Kent County Delaware official election results alternative archive,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-17T22:47:40-04:00,Maui County Hawaii official election results alternative archive,observed_link_candidate
+us:ia:census-county:19031,IA,2026-10-17T22:47:40-04:00,Cedar County Iowa official election results,observed_link_candidate
+us:id:census-county:16031,ID,2026-10-17T22:47:40-04:00,Cassia County Idaho official election results,observed_link_candidate
+us:il:census-county:17031,IL,2026-10-17T22:47:40-04:00,Cook County Illinois official election results,observed_link_candidate
+us:in:census-county:18031,IN,2026-10-17T22:47:40-04:00,Decatur County Indiana official election results,observed_link_candidate
+us:ks:census-county:20031,KS,2026-10-17T22:47:40-04:00,Coffey County Kansas official election results,observed_link_candidate
+us:ky:census-county:21031,KY,2026-10-17T22:47:40-04:00,Butler County Kentucky official election results,observed_link_candidate
+us:la:census-county:22031,LA,2026-10-17T22:47:40-04:00,De Soto Parish Louisiana official election results,observed_link_candidate
+us:mi:county:calhoun,MI,2026-10-17T22:47:40-04:00,Calhoun County Michigan official election results,observed_link_candidate
+us:mn:census-county:27025,MN,2026-10-17T22:47:40-04:00,Chisago County Minnesota official election results,observed_link_candidate
