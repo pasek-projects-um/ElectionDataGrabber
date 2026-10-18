@@ -879,3 +879,23 @@ us:ok:census-county:40029,OK,2026-10-18T17:13:26-04:00,Coal County Oklahoma offi
 us:pa:county:chester,PA,2026-10-18T17:13:26-04:00,Chester County Pennsylvania official election results archive voting services,observed_link_candidate
 us:sc:census-county:45029,SC,2026-10-18T17:13:26-04:00,Colleton County South Carolina official election results archive election commission | Colleton County South Carolina official election results county board elections,observed_link_candidate
 us:az:census-county:04013,AZ,2026-10-18T17:13:26-04:00,Maricopa County Arizona official election results 2026 archive recorder,observed_link_candidate
+us:id:census-county:16043,ID,2026-10-18T18:53:48-04:00,Fremont County Idaho official election results archive county clerk,observed_link_candidate
+us:in:census-county:18043,IN,2026-10-18T18:53:48-04:00,Floyd County Indiana official election results archive county clerk,observed_link_candidate
+us:la:census-county:22043,LA,2026-10-18T18:53:48-04:00,Grant Parish Louisiana official election results archive registrar voters | Grant Parish Louisiana clerk court election results official 2026,observed_link_candidate
+us:mo:census-county:29031,MO,2026-10-18T18:53:48-04:00,Cape Girardeau County Missouri official election results archive county clerk,observed_link_candidate
+us:nc:census-county:37031,NC,2026-10-18T18:53:48-04:00,Carteret County North Carolina official election results archive board elections,observed_link_candidate
+us:nd:census-county:38031,ND,2026-10-18T18:53:48-04:00,Foster County North Dakota official election results archive auditor,observed_link_candidate
+us:nh:priority-roster:bath,NH,2026-10-18T18:53:48-04:00,Bath New Hampshire official election results town clerk archive | Bath New Hampshire town official election results 2024 2026 site:bath-nh.org OR site:sos.nh.gov,observed_link_candidate
+us:sd:census-county:46033,SD,2026-10-18T18:53:48-04:00,Custer County South Dakota official election results archive auditor,observed_link_candidate
+us:wy:census-county:56029,WY,2026-10-18T18:53:48-04:00,Park County Wyoming official election results archive county clerk,observed_link_candidate
+us:al:census-county:01047,AL,2026-10-18T18:53:48-04:00,Dallas County Alabama official election results archive probate judge | Dallas County Alabama probate election results official county website,observed_link_candidate
+us:ar:census-county:05047,AR,2026-10-18T18:53:48-04:00,Franklin County Arkansas official election results archive county clerk | Franklin County Arkansas official county clerk elections website voter registration,observed_link_candidate
+us:ca:census-county:06045,CA,2026-10-18T18:53:48-04:00,Mendocino County California official election results archive elections,observed_link_candidate
+us:co:census-county:08045,CO,2026-10-18T18:53:48-04:00,Garfield County Colorado official election results archive clerk recorder,observed_link_candidate
+us:fl:census-county:12047,FL,2026-10-18T18:53:48-04:00,Hamilton County Florida official election results archive supervisor elections,observed_link_candidate
+us:ga:census-county:13047,GA,2026-10-18T18:53:48-04:00,Catoosa County Georgia official election results archive elections,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-18T18:53:48-04:00,Kauai County Hawaii official election results archive clerk,observed_link_candidate
+us:nv:census-county:32510,NV,2026-10-18T18:53:48-04:00,Carson City Nevada official election results archive clerk recorder,observed_link_candidate
+us:oh:county:crawford,OH,2026-10-18T18:53:48-04:00,Crawford County Ohio official election results archive board elections,observed_link_candidate
+us:or:census-county:41033,OR,2026-10-18T18:53:48-04:00,Josephine County Oregon official election results archive clerk | Josephine County Oregon official election results county clerk certified results,observed_link_candidate
+us:ri:priority-roster:lincoln,RI,2026-10-18T18:53:48-04:00,Lincoln Rhode Island official election results archive town clerk,observed_link_candidate
