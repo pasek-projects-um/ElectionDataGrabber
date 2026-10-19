@@ -959,3 +959,23 @@ us:mi:county:crawford,MI,2026-10-18T22:27:46-04:00,Crawford County Michigan offi
 us:mn:census-county:27039,MN,2026-10-18T22:27:46-04:00,Dodge County Minnesota official election results auditor | site:dodgecountymn.gov elections results Dodge County Minnesota,observed_link_candidate
 us:ms:census-county:28033,MS,2026-10-18T22:27:46-04:00,DeSoto County Mississippi official election results election commission,observed_link_candidate
 us:tn:census-county:47031,TN,2026-10-18T22:27:46-04:00,Coffee County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48031,TX,2026-10-18T23:20:28-04:00,Blanco County Texas official elections results archive,observed_link_candidate
+us:ut:census-county:49031,UT,2026-10-18T23:20:28-04:00,Piute County Utah official election results,observed_link_candidate
+us:va:census-county:51031,VA,2026-10-18T23:20:28-04:00,Campbell County Virginia official elections results,observed_link_candidate
+us:vt:priority-roster:berkshire,VT,2026-10-18T23:20:28-04:00,Berkshire Vermont official elections results,observed_link_candidate
+us:wa:census-county:53031,WA,2026-10-18T23:20:28-04:00,Jefferson County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:adams-richfield-25bc023b83443791,WI,2026-10-18T23:20:28-04:00,Town of Richfield Adams County Wisconsin official elections,observed_link_candidate
+us:wv:census-county:54031,WV,2026-10-18T23:20:28-04:00,Hardy County West Virginia official election results,observed_link_candidate
+us:al:census-county:01051,AL,2026-10-18T23:20:28-04:00,Elmore County Alabama official elections results,observed_link_candidate
+us:ar:census-county:05051,AR,2026-10-18T23:20:28-04:00,Garland County Arkansas official election results,observed_link_candidate
+us:ca:census-county:06049,CA,2026-10-18T23:20:28-04:00,Modoc County California official elections results,observed_link_candidate
+us:co:census-county:08049,CO,2026-10-18T23:20:28-04:00,Grand County Colorado official election results archive,observed_link_candidate
+us:fl:census-county:12051,FL,2026-10-18T23:20:28-04:00,Hendry County Florida official election results,observed_link_candidate
+us:ga:census-county:13051,GA,2026-10-18T23:20:28-04:00,Chatham County Georgia official election results archive,observed_link_candidate
+us:id:census-county:16047,ID,2026-10-18T23:20:28-04:00,Gooding County Idaho official election results,observed_link_candidate
+us:in:census-county:18047,IN,2026-10-18T23:20:28-04:00,Franklin County Indiana official election results,observed_link_candidate
+us:la:census-county:22047,LA,2026-10-18T23:20:28-04:00,Iberville Parish Louisiana official elections results,observed_link_candidate
+us:mo:census-county:29035,MO,2026-10-18T23:20:28-04:00,Carter County Missouri official election results,observed_link_candidate
+us:mt:census-county:30033,MT,2026-10-18T23:20:28-04:00,Garfield County Montana official election results,observed_link_candidate
+us:ne:census-county:31033,NE,2026-10-18T23:20:28-04:00,Cheyenne County Nebraska official election results,observed_link_candidate
+us:nj:census-county:34033,NJ,2026-10-18T23:20:28-04:00,Salem County New Jersey official election results,observed_link_candidate
