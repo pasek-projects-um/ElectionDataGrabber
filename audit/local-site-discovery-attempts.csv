@@ -939,3 +939,23 @@ us:id:census-county:16045,ID,2026-10-18T21:54:31-04:00,official Gem County Idaho
 us:in:census-county:18045,IN,2026-10-18T21:54:31-04:00,official Fountain County Indiana election results county clerk,completed_no_new_urls
 us:la:census-county:22045,LA,2026-10-18T21:54:31-04:00,site:iberiaparishgovernment.com elections results official Iberia Parish Louisiana,observed_link_candidate
 us:mo:census-county:29033,MO,2026-10-18T21:54:31-04:00,official Carroll County Missouri election results county clerk,observed_link_candidate
+us:nc:census-county:37033,NC,2026-10-18T22:27:46-04:00,Caswell County North Carolina official election results county board,observed_link_candidate
+us:nd:census-county:38033,ND,2026-10-18T22:27:46-04:00,Golden Valley County North Dakota official election results | Golden Valley County North Dakota official auditor elections results,observed_link_candidate
+us:nh:priority-roster:bedford,NH,2026-10-18T22:27:46-04:00,Bedford New Hampshire official election results,observed_link_candidate
+us:oh:county:cuyahoga,OH,2026-10-18T22:27:46-04:00,Cuyahoga County Ohio official election results,observed_link_candidate
+us:or:census-county:41035,OR,2026-10-18T22:27:46-04:00,Klamath County Oregon official election results,observed_link_candidate
+us:ri:priority-roster:little-compton,RI,2026-10-18T22:27:46-04:00,Little Compton Rhode Island official election results,observed_link_candidate
+us:sd:census-county:46035,SD,2026-10-18T22:27:46-04:00,Davison County South Dakota official election results | site:davisoncounty.org election results Davison County South Dakota,observed_link_candidate
+us:wy:census-county:56031,WY,2026-10-18T22:27:46-04:00,Platte County Wyoming official election results,observed_link_candidate
+us:ct:municipality:chaplin,CT,2026-10-18T22:27:46-04:00,Chaplin Connecticut official election results | site:chaplinct.org election results Chaplin,observed_link_candidate
+us:ia:census-county:19045,IA,2026-10-18T22:27:46-04:00,Clinton County Iowa official election results,observed_link_candidate
+us:il:census-county:17045,IL,2026-10-18T22:27:46-04:00,Edgar County Illinois official election results,observed_link_candidate
+us:ks:census-county:20045,KS,2026-10-18T22:27:46-04:00,Douglas County Kansas official election results,observed_link_candidate
+us:ky:census-county:21045,KY,2026-10-18T22:27:46-04:00,Casey County Kentucky official election results,observed_link_candidate
+us:ma:priority-roster:becket,MA,2026-10-18T22:27:46-04:00,Becket Massachusetts official election results,observed_link_candidate
+us:md:census-county:24043,MD,2026-10-18T22:27:46-04:00,Washington County Maryland official election results,observed_link_candidate
+us:me:municipality:baldwin,ME,2026-10-18T22:27:46-04:00,Baldwin Maine official election results,observed_link_candidate
+us:mi:county:crawford,MI,2026-10-18T22:27:46-04:00,Crawford County Michigan official election results county clerk,observed_link_candidate
+us:mn:census-county:27039,MN,2026-10-18T22:27:46-04:00,Dodge County Minnesota official election results auditor | site:dodgecountymn.gov elections results Dodge County Minnesota,observed_link_candidate
+us:ms:census-county:28033,MS,2026-10-18T22:27:46-04:00,DeSoto County Mississippi official election results election commission,observed_link_candidate
+us:tn:census-county:47031,TN,2026-10-18T22:27:46-04:00,Coffee County Tennessee official election results election commission,observed_link_candidate
