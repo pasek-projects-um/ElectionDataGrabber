@@ -899,3 +899,23 @@ us:nv:census-county:32510,NV,2026-10-18T18:53:48-04:00,Carson City Nevada offici
 us:oh:county:crawford,OH,2026-10-18T18:53:48-04:00,Crawford County Ohio official election results archive board elections,observed_link_candidate
 us:or:census-county:41033,OR,2026-10-18T18:53:48-04:00,Josephine County Oregon official election results archive clerk | Josephine County Oregon official election results county clerk certified results,observed_link_candidate
 us:ri:priority-roster:lincoln,RI,2026-10-18T18:53:48-04:00,Lincoln Rhode Island official election results archive town clerk,observed_link_candidate
+us:tn:census-county:47029,TN,2026-10-18T20:32:01-04:00,Cocke County Tennessee official election results archive election commission | site:cockecountyelections.org results election Cocke County,observed_link_candidate
+us:tx:census-county:48029,TX,2026-10-18T20:32:01-04:00,Bexar County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49029,UT,2026-10-18T20:32:01-04:00,Morgan County Utah official election results archive,observed_link_candidate
+us:va:census-county:51029,VA,2026-10-18T20:32:01-04:00,Buckingham County Virginia official election results archive | site:buckinghamcountyva.org election results registrar Buckingham County,observed_link_candidate
+us:vt:priority-roster:benson,VT,2026-10-18T20:32:01-04:00,Benson Vermont official election results town clerk | site:bensonvermont.gov election results town clerk Benson,observed_link_candidate
+us:wa:census-county:53029,WA,2026-10-18T20:32:01-04:00,Island County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:adams-quincy-d6a723c95c222b75,WI,2026-10-18T20:32:01-04:00,Town of Quincy Adams County Wisconsin official election results archive,observed_link_candidate
+us:wv:census-county:54029,WV,2026-10-18T20:32:01-04:00,Hancock County West Virginia official election results archive | Hancock County West Virginia official election results county clerk,observed_link_candidate
+us:az:census-county:04015,AZ,2026-10-18T20:32:01-04:00,Mohave County Arizona official election results archive,observed_link_candidate
+us:ct:municipality:canton,CT,2026-10-18T20:32:01-04:00,Canton Connecticut official election results archive town clerk,observed_link_candidate
+us:ia:census-county:19043,IA,2026-10-18T20:32:01-04:00,Clayton County Iowa official election results archive,observed_link_candidate
+us:il:census-county:17043,IL,2026-10-18T20:32:01-04:00,DuPage County Illinois official election results archive,observed_link_candidate
+us:ks:census-county:20043,KS,2026-10-18T20:32:01-04:00,Doniphan County Kansas official election results archive | site:dpcountyks.com Doniphan County KS official election results 2026,observed_link_candidate
+us:ky:census-county:21043,KY,2026-10-18T20:32:01-04:00,Carter County Kentucky official election results archive | site:carter.countyclerk.us elections results Carter County Kentucky,observed_link_candidate
+us:ma:priority-roster:barre,MA,2026-10-18T20:32:01-04:00,Barre Massachusetts official election results archive town clerk | site:townofbarre.com election results 2026 Barre Massachusetts,observed_link_candidate
+us:md:census-county:24041,MD,2026-10-18T20:32:01-04:00,Talbot County Maryland official election results archive,observed_link_candidate
+us:me:municipality:baileyville,ME,2026-10-18T20:32:01-04:00,Baileyville Maine official election results archive town clerk | site:baileyville.org election voting results Baileyville Maine town clerk,observed_link_candidate
+us:mi:county:clinton,MI,2026-10-18T20:32:01-04:00,Clinton County Michigan official election results archive,observed_link_candidate
+us:mn:census-county:27037,MN,2026-10-18T20:32:01-04:00,Dakota County Minnesota official election results archive,observed_link_candidate
+us:ms:census-county:28031,MS,2026-10-18T20:32:01-04:00,Covington County Mississippi official election results archive,observed_link_candidate
