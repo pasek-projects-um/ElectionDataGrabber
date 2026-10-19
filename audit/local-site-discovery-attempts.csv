@@ -1019,3 +1019,23 @@ us:ne:census-county:31035,NE,2026-10-19T05:18:02-04:00,Clay County Nebraska offi
 us:nj:census-county:34035,NJ,2026-10-19T05:18:02-04:00,Somerset County New Jersey official election results | site:somersetcountynj.gov election results Somerset County,observed_link_candidate
 us:tx:census-county:48033,TX,2026-10-19T05:18:02-04:00,Borden County Texas official election results | site:co.borden.tx.us election results Borden County,observed_link_candidate
 us:ut:census-county:49033,UT,2026-10-19T05:18:02-04:00,Rich County Utah official election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-19T06:52:38-04:00,Alaska Division of Elections official election results historical archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-19T06:52:38-04:00,District of Columbia Board of Elections official election results historical data,observed_link_candidate
+us:nv:census-county:32001,NV,2026-10-19T06:52:38-04:00,Churchill County Nevada official election results archive,observed_link_candidate
+us:az:census-county:04017,AZ,2026-10-19T06:52:38-04:00,Navajo County Arizona official election results archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-19T06:52:38-04:00,Sussex County Delaware official election results archive,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-19T06:52:38-04:00,Hawaii County official election results elections division,observed_link_candidate
+us:va:census-county:51033,VA,2026-10-19T06:52:38-04:00,Caroline County Virginia official election results archive,observed_link_candidate
+us:vt:priority-roster:berlin,VT,2026-10-19T06:52:38-04:00,Berlin Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53033,WA,2026-10-19T06:52:38-04:00,King County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:adams-rome-856fd42bd91c88bf,WI,2026-10-19T06:52:38-04:00,Town of Rome Adams County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54033,WV,2026-10-19T06:52:38-04:00,Harrison County West Virginia official election results archive,observed_link_candidate
+us:ct:municipality:chester,CT,2026-10-19T06:52:38-04:00,Chester Connecticut official election results town clerk,observed_link_candidate
+us:ia:census-county:19049,IA,2026-10-19T06:52:38-04:00,Dallas County Iowa official election results archive,observed_link_candidate
+us:il:census-county:17049,IL,2026-10-19T06:52:38-04:00,Effingham County Illinois official election results archive,observed_link_candidate
+us:ks:census-county:20049,KS,2026-10-19T06:52:38-04:00,Elk County Kansas official election results county clerk,observed_link_candidate
+us:ky:census-county:21049,KY,2026-10-19T06:52:38-04:00,Clark County Kentucky official election results archive,observed_link_candidate
+us:ma:priority-roster:belchertown,MA,2026-10-19T06:52:38-04:00,Belchertown Massachusetts official election results town clerk,observed_link_candidate
+us:md:census-county:24047,MD,2026-10-19T06:52:38-04:00,Worcester County Maryland official election results archive,observed_link_candidate
+us:me:municipality:bar-harbor,ME,2026-10-19T06:52:38-04:00,Bar Harbor Maine official election results town clerk,observed_link_candidate
+us:mi:county:dickinson,MI,2026-10-19T06:52:38-04:00,Dickinson County Michigan official election results archive,observed_link_candidate
