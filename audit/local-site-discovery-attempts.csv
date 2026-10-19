@@ -979,3 +979,23 @@ us:mo:census-county:29035,MO,2026-10-18T23:20:28-04:00,Carter County Missouri of
 us:mt:census-county:30033,MT,2026-10-18T23:20:28-04:00,Garfield County Montana official election results,observed_link_candidate
 us:ne:census-county:31033,NE,2026-10-18T23:20:28-04:00,Cheyenne County Nebraska official election results,observed_link_candidate
 us:nj:census-county:34033,NJ,2026-10-18T23:20:28-04:00,Salem County New Jersey official election results,observed_link_candidate
+us:nm:census-county:35029,NM,2026-10-19T04:47:44-04:00,Luna County New Mexico official election results | Luna County New Mexico historical election results,observed_link_candidate
+us:ny:census-county:36033,NY,2026-10-19T04:47:44-04:00,Franklin County New York official election results | Franklin County New York historical election results,observed_link_candidate
+us:ok:census-county:40033,OK,2026-10-19T04:47:44-04:00,Cotton County Oklahoma official election results | Cotton County Oklahoma county election board results,observed_link_candidate
+us:pa:county:clearfield,PA,2026-10-19T04:47:44-04:00,Clearfield County Pennsylvania official election results | Clearfield County Pennsylvania elections archive,observed_link_candidate
+us:sc:census-county:45033,SC,2026-10-19T04:47:44-04:00,Dillon County South Carolina official election results | Dillon County South Carolina election history,observed_link_candidate
+us:ct:municipality:cheshire,CT,2026-10-19T04:47:44-04:00,Cheshire Connecticut official election results | Cheshire Connecticut municipal election results,observed_link_candidate
+us:ia:census-county:19047,IA,2026-10-19T04:47:44-04:00,Crawford County Iowa official election results | Crawford County Iowa election night results,observed_link_candidate
+us:il:census-county:17047,IL,2026-10-19T04:47:44-04:00,Edwards County Illinois official election results | Edwards County Illinois election authority,observed_link_candidate
+us:ks:census-county:20047,KS,2026-10-19T04:47:44-04:00,Edwards County Kansas official election results | Edwards County Kansas election department,observed_link_candidate
+us:ky:census-county:21047,KY,2026-10-19T04:47:44-04:00,Christian County Kentucky official election results | Christian County Kentucky 2026 election results,observed_link_candidate
+us:ma:priority-roster:bedford,MA,2026-10-19T04:47:44-04:00,Bedford Massachusetts official election results | Bedford Massachusetts historical election results,observed_link_candidate
+us:md:census-county:24045,MD,2026-10-19T04:47:44-04:00,Wicomico County Maryland official election results | Wicomico County Maryland 2026 election data,observed_link_candidate
+us:me:municipality:bangor,ME,2026-10-19T04:47:44-04:00,Bangor Maine official election results | Bangor Maine elections archive,observed_link_candidate
+us:mi:county:delta,MI,2026-10-19T04:47:44-04:00,Delta County Michigan official election results | Delta County Michigan election results archive,observed_link_candidate
+us:mn:census-county:27041,MN,2026-10-19T04:47:44-04:00,Douglas County Minnesota official election results | Douglas County Minnesota state election results,observed_link_candidate
+us:ms:census-county:28035,MS,2026-10-19T04:47:44-04:00,Forrest County Mississippi official election results | Forrest County Mississippi 2024 county results,observed_link_candidate
+us:nc:census-county:37035,NC,2026-10-19T04:47:44-04:00,Catawba County North Carolina official election results | Catawba County North Carolina elections 2026,observed_link_candidate
+us:nd:census-county:38035,ND,2026-10-19T04:47:44-04:00,Grand Forks County North Dakota official election results | Grand Forks County North Dakota state results,observed_link_candidate
+us:nh:priority-roster:belmont,NH,2026-10-19T04:47:44-04:00,Belmont New Hampshire official election results | Belmont New Hampshire state election results,observed_link_candidate
+us:oh:county:darke,OH,2026-10-19T04:47:44-04:00,Darke County Ohio official election results | Darke County Ohio board of elections results,observed_link_candidate
