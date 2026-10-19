@@ -999,3 +999,23 @@ us:nc:census-county:37035,NC,2026-10-19T04:47:44-04:00,Catawba County North Caro
 us:nd:census-county:38035,ND,2026-10-19T04:47:44-04:00,Grand Forks County North Dakota official election results | Grand Forks County North Dakota state results,observed_link_candidate
 us:nh:priority-roster:belmont,NH,2026-10-19T04:47:44-04:00,Belmont New Hampshire official election results | Belmont New Hampshire state election results,observed_link_candidate
 us:oh:county:darke,OH,2026-10-19T04:47:44-04:00,Darke County Ohio official election results | Darke County Ohio board of elections results,observed_link_candidate
+us:or:census-county:41037,OR,2026-10-19T05:18:02-04:00,Lake County Oregon official election results | site:lakecountyor.org election results Lake County Oregon clerk,observed_link_candidate
+us:ri:priority-roster:middletown,RI,2026-10-19T05:18:02-04:00,Middletown Rhode Island official election results,observed_link_candidate
+us:sd:census-county:46037,SD,2026-10-19T05:18:02-04:00,Day County South Dakota official election results,observed_link_candidate
+us:tn:census-county:47033,TN,2026-10-19T05:18:02-04:00,Crockett County Tennessee official election results,observed_link_candidate
+us:wy:census-county:56033,WY,2026-10-19T05:18:02-04:00,Sheridan County Wyoming official election results | site:sheridancountywy.gov election results Sheridan County Wyoming,observed_link_candidate
+us:al:census-county:01053,AL,2026-10-19T05:18:02-04:00,Escambia County Alabama official election results | site:escambiacountyal.gov election results probate Escambia Alabama,observed_link_candidate
+us:ar:census-county:05053,AR,2026-10-19T05:18:02-04:00,Grant County Arkansas official election results,observed_link_candidate
+us:ca:census-county:06051,CA,2026-10-19T05:18:02-04:00,Mono County California official election results,observed_link_candidate
+us:co:census-county:08051,CO,2026-10-19T05:18:02-04:00,Gunnison County Colorado official election results,observed_link_candidate
+us:fl:census-county:12053,FL,2026-10-19T05:18:02-04:00,Hernando County Florida official election results,observed_link_candidate
+us:ga:census-county:13053,GA,2026-10-19T05:18:02-04:00,Chattahoochee County Georgia official election results | site:chattahoocheega.gov election results,observed_link_candidate
+us:id:census-county:16049,ID,2026-10-19T05:18:02-04:00,Idaho County Idaho official election results,observed_link_candidate
+us:in:census-county:18049,IN,2026-10-19T05:18:02-04:00,Fulton County Indiana official election results,observed_link_candidate
+us:la:census-county:22049,LA,2026-10-19T05:18:02-04:00,Jackson Parish Louisiana official election results,observed_link_candidate
+us:mo:census-county:29037,MO,2026-10-19T05:18:02-04:00,Cass County Missouri official election results,observed_link_candidate
+us:mt:census-county:30035,MT,2026-10-19T05:18:02-04:00,Glacier County Montana official election results,observed_link_candidate
+us:ne:census-county:31035,NE,2026-10-19T05:18:02-04:00,Clay County Nebraska official election results | site:claycounty.ne.gov election results,observed_link_candidate
+us:nj:census-county:34035,NJ,2026-10-19T05:18:02-04:00,Somerset County New Jersey official election results | site:somersetcountynj.gov election results Somerset County,observed_link_candidate
+us:tx:census-county:48033,TX,2026-10-19T05:18:02-04:00,Borden County Texas official election results | site:co.borden.tx.us election results Borden County,observed_link_candidate
+us:ut:census-county:49033,UT,2026-10-19T05:18:02-04:00,Rich County Utah official election results,observed_link_candidate
