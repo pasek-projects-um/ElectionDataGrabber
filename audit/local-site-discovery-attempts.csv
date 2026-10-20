@@ -1319,3 +1319,23 @@ us:md:census-county:24009,MD,2026-10-20T15:34:24-04:00,Calvert County Maryland o
 us:me:municipality:belfast,ME,2026-10-20T15:34:24-04:00,Belfast Maine official election results city clerk,observed_link_candidate
 us:mi:county:grand-traverse,MI,2026-10-20T15:34:24-04:00,Grand Traverse County Michigan official election results archive,observed_link_candidate
 us:mn:census-county:27055,MN,2026-10-20T15:34:24-04:00,Houston County Minnesota official election results archive,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-20T16:29:08-04:00,Alaska Division of Elections official election results archive,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-10-20T16:29:08-04:00,District of Columbia Board of Elections official election results archive,observed_link_candidate
+us:mo:census-county:29051,MO,2026-10-20T16:29:08-04:00,Cole County Missouri official election results county clerk archive,observed_link_candidate
+us:ms:census-county:28049,MS,2026-10-20T16:29:08-04:00,Hinds County Mississippi official election results election commission archive,observed_link_candidate
+us:mt:census-county:30047,MT,2026-10-20T16:29:08-04:00,Lake County Montana official election results archive,observed_link_candidate
+us:nv:census-county:32011,NV,2026-10-20T16:29:08-04:00,Eureka County Nevada official election results archive,observed_link_candidate
+us:va:census-county:51043,VA,2026-10-20T16:29:08-04:00,Clarke County Virginia official election results registrar,observed_link_candidate
+us:vt:priority-roster:braintree,VT,2026-10-20T16:29:08-04:00,Braintree Vermont official election results town clerk archive,observed_link_candidate
+us:wa:census-county:53043,WA,2026-10-20T16:29:08-04:00,Lincoln County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:algoma-24db4ede40ed7ad1,WI,2026-10-20T16:29:08-04:00,City of Algoma Wisconsin official election results clerk,observed_link_candidate
+us:wv:census-county:54043,WV,2026-10-20T16:29:08-04:00,Lincoln County West Virginia official election results county clerk archive,observed_link_candidate
+us:al:census-county:01069,AL,2026-10-20T16:29:08-04:00,Houston County Alabama official election results probate judge,observed_link_candidate
+us:ar:census-county:05069,AR,2026-10-20T16:29:08-04:00,Jefferson County Arkansas official election results county clerk archive,observed_link_candidate
+us:az:census-county:04003,AZ,2026-10-20T16:29:08-04:00,Cochise County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06067,CA,2026-10-20T16:29:08-04:00,Sacramento County California official election results archive,observed_link_candidate
+us:co:census-county:08067,CO,2026-10-20T16:29:08-04:00,La Plata County Colorado official election results clerk archive,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-20T16:29:08-04:00,Kent County Delaware official election results archive alternative,completed_no_new_urls
+us:fl:census-county:12069,FL,2026-10-20T16:29:08-04:00,Lake County Florida official election results supervisor elections archive,observed_link_candidate
+us:ga:census-county:13069,GA,2026-10-20T16:29:08-04:00,Coffee County Georgia official election results archive,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-20T16:29:08-04:00,Maui County Hawaii official election results archive,observed_link_candidate
