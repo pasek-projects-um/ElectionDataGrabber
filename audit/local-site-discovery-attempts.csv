@@ -1339,3 +1339,23 @@ us:de:census-county:10001,DE,2026-10-20T16:29:08-04:00,Kent County Delaware offi
 us:fl:census-county:12069,FL,2026-10-20T16:29:08-04:00,Lake County Florida official election results supervisor elections archive,observed_link_candidate
 us:ga:census-county:13069,GA,2026-10-20T16:29:08-04:00,Coffee County Georgia official election results archive,observed_link_candidate
 us:hi:census-county:15009,HI,2026-10-20T16:29:08-04:00,Maui County Hawaii official election results archive,observed_link_candidate
+us:id:census-county:16065,ID,2026-10-20T17:13:24-04:00,Madison County Idaho official election results archive,observed_link_candidate
+us:in:census-county:18065,IN,2026-10-20T17:13:24-04:00,Henry County Indiana official election results archive | site:henrycounty.in.gov elections Henry County Indiana clerk,observed_link_candidate
+us:nc:census-county:37047,NC,2026-10-20T17:13:24-04:00,Columbus County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38047,ND,2026-10-20T17:13:24-04:00,Logan County North Dakota official election results archive,observed_link_candidate
+us:nh:priority-roster:bow,NH,2026-10-20T17:13:24-04:00,Bow New Hampshire official election results town clerk archive | site:bownh.gov election results Bow New Hampshire,observed_link_candidate
+us:nm:census-county:35041,NM,2026-10-20T17:13:24-04:00,Roosevelt County New Mexico official election results county clerk archive,observed_link_candidate
+us:ny:census-county:36045,NY,2026-10-20T17:13:24-04:00,Jefferson County New York official election results board elections archive,observed_link_candidate
+us:oh:county:franklin,OH,2026-10-20T17:13:24-04:00,Franklin County Ohio official election results board elections archive,observed_link_candidate
+us:ok:census-county:40045,OK,2026-10-20T17:13:24-04:00,Ellis County Oklahoma official election results county election board archive,observed_link_candidate
+us:pa:county:delaware,PA,2026-10-20T17:13:24-04:00,Delaware County Pennsylvania official election results archive,observed_link_candidate
+us:sc:census-county:45045,SC,2026-10-20T17:13:24-04:00,Greenville County South Carolina official election results archive,observed_link_candidate
+us:ct:municipality:danbury,CT,2026-10-20T17:13:24-04:00,Danbury Connecticut official election results town clerk,observed_link_candidate
+us:ia:census-county:19065,IA,2026-10-20T17:13:24-04:00,Fayette County Iowa official election results auditor archive,observed_link_candidate
+us:il:census-county:17065,IL,2026-10-20T17:13:24-04:00,Hamilton County Illinois official election results county clerk archive,observed_link_candidate
+us:ks:census-county:20065,KS,2026-10-20T17:13:24-04:00,Graham County Kansas official election results county clerk archive | site:grahamcountyks.com election results Graham County Kansas,observed_link_candidate
+us:ky:census-county:21063,KY,2026-10-20T17:13:24-04:00,Elliott County Kentucky official election results county clerk archive | site:elliottcountyclerk.ky.gov election results,observed_link_candidate
+us:la:census-county:22065,LA,2026-10-20T17:13:24-04:00,Madison Parish Louisiana official election results registrar voters archive,observed_link_candidate
+us:ma:priority-roster:billerica,MA,2026-10-20T17:13:24-04:00,Billerica Massachusetts official election results town clerk archive,observed_link_candidate
+us:md:census-county:24011,MD,2026-10-20T17:13:24-04:00,Caroline County Maryland official election results archive alternative,observed_link_candidate
+us:me:municipality:belgrade,ME,2026-10-20T17:13:24-04:00,Belgrade Maine official election results town clerk archive,observed_link_candidate
