@@ -1039,3 +1039,23 @@ us:ma:priority-roster:belchertown,MA,2026-10-19T06:52:38-04:00,Belchertown Massa
 us:md:census-county:24047,MD,2026-10-19T06:52:38-04:00,Worcester County Maryland official election results archive,observed_link_candidate
 us:me:municipality:bar-harbor,ME,2026-10-19T06:52:38-04:00,Bar Harbor Maine official election results town clerk,observed_link_candidate
 us:mi:county:dickinson,MI,2026-10-19T06:52:38-04:00,Dickinson County Michigan official election results archive,observed_link_candidate
+us:mn:census-county:27043,MN,2026-10-20T02:33:21-04:00,Faribault County Minnesota official election results archive,observed_link_candidate
+us:ms:census-county:28037,MS,2026-10-20T02:33:21-04:00,Franklin County Mississippi official election results election commission,observed_link_candidate
+us:nc:census-county:37037,NC,2026-10-20T02:33:21-04:00,Chatham County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38037,ND,2026-10-20T02:33:21-04:00,Grant County North Dakota official election results archive,observed_link_candidate
+us:nh:priority-roster:bennington,NH,2026-10-20T02:33:21-04:00,Bennington New Hampshire official election results town clerk,observed_link_candidate
+us:nm:census-county:35031,NM,2026-10-20T02:33:21-04:00,McKinley County New Mexico official election results archive,observed_link_candidate
+us:ny:census-county:36035,NY,2026-10-20T02:33:21-04:00,Fulton County New York official election results archive,observed_link_candidate
+us:oh:county:defiance,OH,2026-10-20T02:33:21-04:00,Defiance County Ohio official election results archive,observed_link_candidate
+us:ok:census-county:40035,OK,2026-10-20T02:33:21-04:00,Craig County Oklahoma official election results county election board,observed_link_candidate
+us:pa:county:clinton,PA,2026-10-20T02:33:21-04:00,Clinton County Pennsylvania official election results archive,observed_link_candidate
+us:sc:census-county:45035,SC,2026-10-20T02:33:21-04:00,Dorchester County South Carolina official election results archive,observed_link_candidate
+us:al:census-county:01055,AL,2026-10-20T02:33:21-04:00,Etowah County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05055,AR,2026-10-20T02:33:21-04:00,Greene County Arkansas official election results county clerk,observed_link_candidate
+us:ca:census-county:06053,CA,2026-10-20T02:33:21-04:00,Monterey County California official election results archive,observed_link_candidate
+us:co:census-county:08053,CO,2026-10-20T02:33:21-04:00,Hinsdale County Colorado official election results county clerk,observed_link_candidate
+us:fl:census-county:12055,FL,2026-10-20T02:33:21-04:00,Highlands County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13055,GA,2026-10-20T02:33:21-04:00,Chattooga County Georgia official election results registrar,observed_link_candidate
+us:id:census-county:16051,ID,2026-10-20T02:33:21-04:00,Jefferson County Idaho official election results archive,observed_link_candidate
+us:in:census-county:18051,IN,2026-10-20T02:33:21-04:00,Gibson County Indiana official election results archive,observed_link_candidate
+us:la:census-county:22051,LA,2026-10-20T02:33:21-04:00,Jefferson Parish Louisiana official election results clerk,observed_link_candidate
