@@ -1079,3 +1079,23 @@ us:hi:census-county:15003,HI,2026-10-20T02:57:16-04:00,Honolulu County Hawaii of
 us:ia:census-county:19051,IA,2026-10-20T02:57:16-04:00,Davis County Iowa official election results auditor archive,observed_link_candidate
 us:il:census-county:17051,IL,2026-10-20T02:57:16-04:00,Fayette County Illinois official election results county clerk archive,observed_link_candidate
 us:ks:census-county:20051,KS,2026-10-20T02:57:16-04:00,Ellis County Kansas official election results county clerk archive,observed_link_candidate
+us:ky:census-county:21051,KY,2026-10-20T03:59:14-04:00,Clay County Kentucky official election results county clerk archive,observed_link_candidate
+us:ma:priority-roster:bellingham,MA,2026-10-20T03:59:14-04:00,Bellingham Massachusetts official election results town clerk archive,observed_link_candidate
+us:md:census-county:24510,MD,2026-10-20T03:59:14-04:00,Baltimore City Maryland official election results board of elections archive,observed_link_candidate
+us:me:municipality:baring-plantation,ME,2026-10-20T03:59:14-04:00,Baring Plantation Maine official election results town clerk,observed_link_candidate
+us:mi:county:eaton,MI,2026-10-20T03:59:14-04:00,Eaton County Michigan official election results archive clerk,observed_link_candidate
+us:nv:census-county:32003,NV,2026-10-20T03:59:14-04:00,Clark County Nevada official election results archive alternative dashboard,observed_link_candidate
+us:va:census-county:51035,VA,2026-10-20T03:59:14-04:00,Carroll County Virginia official election results registrar archive,observed_link_candidate
+us:vt:priority-roster:bethel,VT,2026-10-20T03:59:14-04:00,Bethel Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53035,WA,2026-10-20T03:59:14-04:00,Kitsap County Washington official election results archive auditor,observed_link_candidate
+us:wi:ltsb2026:adams-springville-682969cc9f4747c7,WI,2026-10-20T03:59:14-04:00,Town of Springville Adams County Wisconsin official election results clerk,observed_link_candidate
+us:wv:census-county:54035,WV,2026-10-20T03:59:14-04:00,Jackson County West Virginia official election results county clerk,observed_link_candidate
+us:al:census-county:01057,AL,2026-10-20T03:59:14-04:00,Fayette County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05057,AR,2026-10-20T03:59:14-04:00,Hempstead County Arkansas official election results county clerk,observed_link_candidate
+us:ca:census-county:06055,CA,2026-10-20T03:59:14-04:00,Napa County California official election results archive elections,observed_link_candidate
+us:co:census-county:08055,CO,2026-10-20T03:59:14-04:00,Huerfano County Colorado official election results clerk recorder,observed_link_candidate
+us:fl:census-county:12057,FL,2026-10-20T03:59:14-04:00,Hillsborough County Florida official election results archive supervisor,observed_link_candidate
+us:ga:census-county:13057,GA,2026-10-20T03:59:14-04:00,Cherokee County Georgia official election results archive elections,observed_link_candidate
+us:id:census-county:16053,ID,2026-10-20T03:59:14-04:00,Jerome County Idaho official election results clerk archive,observed_link_candidate
+us:in:census-county:18053,IN,2026-10-20T03:59:14-04:00,Grant County Indiana official election results archive clerk,observed_link_candidate
+us:la:census-county:22053,LA,2026-10-20T03:59:14-04:00,Jefferson Davis Parish Louisiana official election results clerk,observed_link_candidate
