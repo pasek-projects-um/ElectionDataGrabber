@@ -1179,3 +1179,23 @@ us:in:census-county:18057,IN,2026-10-20T08:08:11-04:00,Hamilton County Indiana o
 us:ky:census-county:21055,KY,2026-10-20T08:08:11-04:00,Crittenden County Kentucky official election results county clerk,observed_link_candidate
 us:la:census-county:22057,LA,2026-10-20T08:08:11-04:00,Lafourche Parish Louisiana official election results clerk,observed_link_candidate
 us:ma:priority-roster:berkley,MA,2026-10-20T08:08:11-04:00,Berkley Massachusetts official election results town clerk,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-20T13:40:26+00:00,site:elections.alaska.gov Alaska election results archives official,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-20T13:40:26+00:00,site:dcboe.org election results archives official District of Columbia,observed_link_candidate
+us:ne:census-county:31041,NE,2026-10-20T13:40:26+00:00,Custer County Nebraska official election results,observed_link_candidate
+us:nj:census-county:34041,NJ,2026-10-20T13:40:26+00:00,Warren County New Jersey official election results,observed_link_candidate
+us:or:census-county:41043,OR,2026-10-20T13:40:26+00:00,Linn County Oregon official election results archives,observed_link_candidate
+us:ri:priority-roster:newport,RI,2026-10-20T13:40:26+00:00,Newport Rhode Island official election results,observed_link_candidate
+us:sd:census-county:46043,SD,2026-10-20T13:40:26+00:00,Douglas County South Dakota official election results,observed_link_candidate
+us:tn:census-county:47039,TN,2026-10-20T13:40:26+00:00,Decatur County Tennessee official election results,observed_link_candidate
+us:tx:census-county:48039,TX,2026-10-20T13:40:26+00:00,Brazoria County Texas official election results archives,observed_link_candidate
+us:ut:census-county:49039,UT,2026-10-20T13:40:26+00:00,Sanpete County Utah official election results,observed_link_candidate
+us:wy:census-county:56039,WY,2026-10-20T13:40:26+00:00,Teton County Wyoming official election results archives,observed_link_candidate
+us:ct:municipality:columbia,CT,2026-10-20T13:40:26+00:00,Columbia Connecticut official election results,observed_link_candidate
+us:ia:census-county:19057,IA,2026-10-20T13:40:26+00:00,Des Moines County Iowa official election results archives,observed_link_candidate
+us:il:census-county:17057,IL,2026-10-20T13:40:26+00:00,Fulton County Illinois official election results,observed_link_candidate
+us:ks:census-county:20057,KS,2026-10-20T13:40:26+00:00,Ford County Kansas official election results,observed_link_candidate
+us:me:municipality:beals,ME,2026-10-20T13:40:26+00:00,Beals Maine official election results,completed_no_new_urls
+us:mi:county:genesee,MI,2026-10-20T13:40:26+00:00,Genesee County Michigan official election results archives,observed_link_candidate
+us:mn:census-county:27049,MN,2026-10-20T13:40:26+00:00,Goodhue County Minnesota official election results,observed_link_candidate
+us:mo:census-county:29045,MO,2026-10-20T13:40:26+00:00,Clark County Missouri official election results,observed_link_candidate
+us:ms:census-county:28043,MS,2026-10-20T13:40:26+00:00,Grenada County Mississippi official election results,observed_link_candidate
