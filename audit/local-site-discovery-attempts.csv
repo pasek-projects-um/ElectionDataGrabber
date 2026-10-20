@@ -1379,3 +1379,23 @@ us:de:census-county:10003,DE,2026-10-20T18:46:43-04:00,New Castle County Delawar
 us:fl:census-county:12071,FL,2026-10-20T18:46:43-04:00,Lee County Florida official election results archive supervisor elections,observed_link_candidate
 us:ga:census-county:13071,GA,2026-10-20T18:46:43-04:00,Colquitt County Georgia official election results archive elections | site:colquittcountyga.gov election results Colquitt County Georgia,observed_link_candidate
 us:hi:census-county:15001,HI,2026-10-20T18:46:43-04:00,Hawaii County Hawaii official election results archive elections,observed_link_candidate
+us:mo:census-county:29053,MO,2026-10-20T19:06:53-04:00,Cooper County Missouri official election results archive clerk,observed_link_candidate
+us:ms:census-county:28051,MS,2026-10-20T19:06:53-04:00,Holmes County Mississippi official election results archive circuit clerk,observed_link_candidate
+us:mt:census-county:30049,MT,2026-10-20T19:06:53-04:00,Lewis and Clark County Montana official election results archive elections,observed_link_candidate
+us:nv:census-county:32013,NV,2026-10-20T19:06:53-04:00,Humboldt County Nevada official election results archive clerk,observed_link_candidate
+us:va:census-county:51045,VA,2026-10-20T19:06:53-04:00,Craig County Virginia official election results archive registrar | site:craigcountyva.gov election results Craig County,observed_link_candidate
+us:vt:priority-roster:brandon,VT,2026-10-20T19:06:53-04:00,Brandon Vermont official election results town clerk archive,observed_link_candidate
+us:wa:census-county:53045,WA,2026-10-20T19:06:53-04:00,Mason County Washington official election results auditor archive | site:masoncountywa.gov elections results Mason County,observed_link_candidate
+us:wi:ltsb2026:allouez-ca24f89967284e49,WI,2026-10-20T19:06:53-04:00,Village of Allouez Wisconsin official election results clerk archive,observed_link_candidate
+us:wv:census-county:54045,WV,2026-10-20T19:06:53-04:00,Logan County West Virginia official election results county clerk archive,observed_link_candidate
+us:ct:municipality:darien,CT,2026-10-20T19:06:53-04:00,Darien Connecticut official election results town clerk registrar,observed_link_candidate
+us:ia:census-county:19067,IA,2026-10-20T19:06:53-04:00,Floyd County Iowa official election results auditor archive,observed_link_candidate
+us:id:census-county:16067,ID,2026-10-20T19:06:53-04:00,Minidoka County Idaho official election results clerk archive,observed_link_candidate
+us:il:census-county:17067,IL,2026-10-20T19:06:53-04:00,Hancock County Illinois official election results clerk archive,observed_link_candidate
+us:in:census-county:18067,IN,2026-10-20T19:06:53-04:00,Howard County Indiana official election results clerk archive,observed_link_candidate
+us:ks:census-county:20067,KS,2026-10-20T19:06:53-04:00,Grant County Kansas official election results clerk archive,observed_link_candidate
+us:ky:census-county:21065,KY,2026-10-20T19:06:53-04:00,Estill County Kentucky official election results clerk archive | site:estill.countyclerk.us election results Estill County,observed_link_candidate
+us:la:census-county:22067,LA,2026-10-20T19:06:53-04:00,Morehouse Parish Louisiana official election results clerk archive | site:morehouseclerkofcourt.com election results Morehouse Parish,observed_link_candidate
+us:ma:priority-roster:blackstone,MA,2026-10-20T19:06:53-04:00,Blackstone Massachusetts official election results town clerk archive,observed_link_candidate
+us:md:census-county:24013,MD,2026-10-20T19:06:53-04:00,Carroll County Maryland official election results board elections archive,observed_link_candidate
+us:me:municipality:belmont,ME,2026-10-20T19:06:53-04:00,Belmont Maine official election results town clerk archive,observed_link_candidate
