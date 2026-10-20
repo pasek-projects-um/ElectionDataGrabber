@@ -1359,3 +1359,23 @@ us:la:census-county:22065,LA,2026-10-20T17:13:24-04:00,Madison Parish Louisiana 
 us:ma:priority-roster:billerica,MA,2026-10-20T17:13:24-04:00,Billerica Massachusetts official election results town clerk archive,observed_link_candidate
 us:md:census-county:24011,MD,2026-10-20T17:13:24-04:00,Caroline County Maryland official election results archive alternative,observed_link_candidate
 us:me:municipality:belgrade,ME,2026-10-20T17:13:24-04:00,Belgrade Maine official election results town clerk archive,observed_link_candidate
+us:mi:county:gratiot,MI,2026-10-20T18:46:43-04:00,Gratiot County Michigan official election results archive clerk,observed_link_candidate
+us:mn:census-county:27057,MN,2026-10-20T18:46:43-04:00,Hubbard County Minnesota official election results archive auditor | site:hubbardcounty.gov election results Hubbard County Minnesota,observed_link_candidate
+us:ne:census-county:31047,NE,2026-10-20T18:46:43-04:00,Dawson County Nebraska official election results archive clerk,observed_link_candidate
+us:nj:census-county:34005,NJ,2026-10-20T18:46:43-04:00,Burlington County New Jersey official election results archive clerk,observed_link_candidate
+us:or:census-county:41049,OR,2026-10-20T18:46:43-04:00,Morrow County Oregon official election results archive clerk,observed_link_candidate
+us:ri:priority-roster:north-smithfield,RI,2026-10-20T18:46:43-04:00,North Smithfield Rhode Island official election results town clerk archive,observed_link_candidate
+us:sd:census-county:46049,SD,2026-10-20T18:46:43-04:00,Faulk County South Dakota official election results auditor archive,observed_link_candidate
+us:tn:census-county:47045,TN,2026-10-20T18:46:43-04:00,Dyer County Tennessee official election results commission archive,observed_link_candidate
+us:tx:census-county:48045,TX,2026-10-20T18:46:43-04:00,Briscoe County Texas official election results archive clerk,observed_link_candidate
+us:ut:census-county:49045,UT,2026-10-20T18:46:43-04:00,Tooele County Utah official election results archive clerk,observed_link_candidate
+us:wy:census-county:56045,WY,2026-10-20T18:46:43-04:00,Weston County Wyoming official election results archive clerk,observed_link_candidate
+us:al:census-county:01071,AL,2026-10-20T18:46:43-04:00,Jackson County Alabama official election results probate archive | site:jacksoncountyal.gov election results Jackson County Alabama,observed_link_candidate
+us:ar:census-county:05071,AR,2026-10-20T18:46:43-04:00,Johnson County Arkansas official election results archive county clerk | site:johnsoncounty.arkansas.gov election results Johnson County Arkansas,observed_link_candidate
+us:az:census-county:04005,AZ,2026-10-20T18:46:43-04:00,Coconino County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06069,CA,2026-10-20T18:46:43-04:00,San Benito County California official election results archive elections,observed_link_candidate
+us:co:census-county:08069,CO,2026-10-20T18:46:43-04:00,Larimer County Colorado official election results archive clerk,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-20T18:46:43-04:00,New Castle County Delaware official election results archive,observed_link_candidate
+us:fl:census-county:12071,FL,2026-10-20T18:46:43-04:00,Lee County Florida official election results archive supervisor elections,observed_link_candidate
+us:ga:census-county:13071,GA,2026-10-20T18:46:43-04:00,Colquitt County Georgia official election results archive elections | site:colquittcountyga.gov election results Colquitt County Georgia,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-20T18:46:43-04:00,Hawaii County Hawaii official election results archive elections,observed_link_candidate
