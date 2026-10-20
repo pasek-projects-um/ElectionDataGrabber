@@ -1259,3 +1259,23 @@ us:ga:census-county:13065,GA,2026-10-20T12:17:05-04:00,Clinch County Georgia ele
 us:hi:census-county:15003,HI,2026-10-20T12:17:05-04:00,Honolulu County Hawaii election results official archives,observed_link_candidate
 us:id:census-county:16061,ID,2026-10-20T12:17:05-04:00,Lewis County Idaho election results official clerk,observed_link_candidate
 us:in:census-county:18061,IN,2026-10-20T12:17:05-04:00,Harrison County Indiana election results official,observed_link_candidate
+us:ky:census-county:21059,KY,2026-10-20T13:15:53-04:00,Daviess County Kentucky official election results archive clerk,observed_link_candidate
+us:md:census-county:24005,MD,2026-10-20T13:15:53-04:00,Baltimore County Maryland official election results archive,observed_link_candidate
+us:mt:census-county:30045,MT,2026-10-20T13:15:53-04:00,Judith Basin County Montana official election results clerk,observed_link_candidate
+us:nv:census-county:32009,NV,2026-10-20T13:15:53-04:00,Esmeralda County Nevada official election results archive; site:accessesmeralda.com elections election_results Esmeralda County,completed_no_new_urls
+us:va:census-county:51041,VA,2026-10-20T13:15:53-04:00,Chesterfield County Virginia official election results archive,observed_link_candidate
+us:vt:priority-roster:bradford,VT,2026-10-20T13:15:53-04:00,Bradford Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53041,WA,2026-10-20T13:15:53-04:00,Lewis County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:albany-5a491985b112fb9d,WI,2026-10-20T13:15:53-04:00,Village of Albany Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54041,WV,2026-10-20T13:15:53-04:00,Lewis County West Virginia official election results archive; site:lewiscountywv.org elections results county clerk,observed_link_candidate
+us:ct:municipality:coventry,CT,2026-10-20T13:15:53-04:00,Coventry Connecticut official election results town clerk,observed_link_candidate
+us:ia:census-county:19061,IA,2026-10-20T13:15:53-04:00,Dubuque County Iowa official election results archive,observed_link_candidate
+us:il:census-county:17061,IL,2026-10-20T13:15:53-04:00,Greene County Illinois official election results clerk,observed_link_candidate
+us:ks:census-county:20061,KS,2026-10-20T13:15:53-04:00,Geary County Kansas official election results archive clerk,observed_link_candidate
+us:la:census-county:22061,LA,2026-10-20T13:15:53-04:00,Lincoln Parish Louisiana official election results clerk,observed_link_candidate
+us:ma:priority-roster:bernardston,MA,2026-10-20T13:15:53-04:00,Bernardston Massachusetts official election results town clerk,observed_link_candidate
+us:me:municipality:beddington,ME,2026-10-20T13:15:53-04:00,Beddington Maine official election results town clerk,observed_link_candidate
+us:mi:county:gogebic,MI,2026-10-20T13:15:53-04:00,Gogebic County Michigan official election results archive clerk; site:gogebiccountymi.gov clerk elections results,observed_link_candidate
+us:mn:census-county:27053,MN,2026-10-20T13:15:53-04:00,Hennepin County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29049,MO,2026-10-20T13:15:53-04:00,Clinton County Missouri official election results clerk,observed_link_candidate
+us:ms:census-county:28047,MS,2026-10-20T13:15:53-04:00,Harrison County Mississippi official election results archive; site:harrisoncountyms.gov election results elections commission,observed_link_candidate
