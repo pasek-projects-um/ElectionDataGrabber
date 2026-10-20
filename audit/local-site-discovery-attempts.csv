@@ -1299,3 +1299,23 @@ us:ga:census-county:13067,GA,2026-10-20T14:33:15-04:00,Cobb County Georgia offic
 us:hi:census-county:15007,HI,2026-10-20T14:33:15-04:00,Kauai County Hawaii official election results archive alternative,observed_link_candidate
 us:id:census-county:16063,ID,2026-10-20T14:33:15-04:00,Lincoln County Idaho official election results clerk,observed_link_candidate
 us:in:census-county:18063,IN,2026-10-20T14:33:15-04:00,Hendricks County Indiana official election results archive,observed_link_candidate
+us:ne:census-county:31045,NE,2026-10-20T15:34:24-04:00,Dawes County Nebraska official election results archive,observed_link_candidate
+us:nj:census-county:34003,NJ,2026-10-20T15:34:24-04:00,Bergen County New Jersey official election results archive alternative,observed_link_candidate
+us:or:census-county:41047,OR,2026-10-20T15:34:24-04:00,Marion County Oregon official election results archive,observed_link_candidate
+us:ri:priority-roster:north-providence,RI,2026-10-20T15:34:24-04:00,North Providence Rhode Island official election results town clerk,observed_link_candidate
+us:sd:census-county:46047,SD,2026-10-20T15:34:24-04:00,Fall River County South Dakota official election results archive,observed_link_candidate
+us:tn:census-county:47043,TN,2026-10-20T15:34:24-04:00,Dickson County Tennessee official election results archive,observed_link_candidate
+us:tx:census-county:48043,TX,2026-10-20T15:34:24-04:00,Brewster County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49043,UT,2026-10-20T15:34:24-04:00,Summit County Utah official election results archive,observed_link_candidate
+us:wy:census-county:56043,WY,2026-10-20T15:34:24-04:00,Washakie County Wyoming official election results archive,observed_link_candidate
+us:ct:municipality:cromwell,CT,2026-10-20T15:34:24-04:00,Cromwell Connecticut official election results town clerk,observed_link_candidate
+us:ia:census-county:19063,IA,2026-10-20T15:34:24-04:00,Emmet County Iowa official election results archive,observed_link_candidate
+us:il:census-county:17063,IL,2026-10-20T15:34:24-04:00,Grundy County Illinois official election results county clerk,observed_link_candidate
+us:ks:census-county:20063,KS,2026-10-20T15:34:24-04:00,Gove County Kansas official election results county clerk,observed_link_candidate
+us:ky:census-county:21061,KY,2026-10-20T15:34:24-04:00,Edmonson County Kentucky official election results clerk,observed_link_candidate
+us:la:census-county:22063,LA,2026-10-20T15:34:24-04:00,Livingston Parish Louisiana official election results registrar voters,observed_link_candidate
+us:ma:priority-roster:beverly,MA,2026-10-20T15:34:24-04:00,Beverly Massachusetts official election results city clerk archive,observed_link_candidate
+us:md:census-county:24009,MD,2026-10-20T15:34:24-04:00,Calvert County Maryland official election results archive alternative,observed_link_candidate
+us:me:municipality:belfast,ME,2026-10-20T15:34:24-04:00,Belfast Maine official election results city clerk,observed_link_candidate
+us:mi:county:grand-traverse,MI,2026-10-20T15:34:24-04:00,Grand Traverse County Michigan official election results archive,observed_link_candidate
+us:mn:census-county:27055,MN,2026-10-20T15:34:24-04:00,Houston County Minnesota official election results archive,observed_link_candidate
