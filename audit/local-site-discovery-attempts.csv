@@ -1119,3 +1119,23 @@ us:il:census-county:17053,IL,2026-10-20T05:54:19-04:00,Ford County IL official e
 us:ks:census-county:20053,KS,2026-10-20T05:54:19-04:00,Ellsworth County KS official election results county clerk; Ellsworth County Kansas official election results county clerk,observed_link_candidate
 us:mo:census-county:29041,MO,2026-10-20T05:54:19-04:00,Chariton County MO official election results county clerk; Chariton County Missouri official election results county clerk elections,observed_link_candidate
 us:mt:census-county:30039,MT,2026-10-20T05:54:19-04:00,Granite County MT official election results archive county clerk elections,observed_link_candidate
+us:ne:census-county:31039,NE,2026-10-20T06:20:59-04:00,Cuming County NE official election results archive county clerk elections,observed_link_candidate
+us:nj:census-county:34039,NJ,2026-10-20T06:20:59-04:00,Union County NJ official election results archive county clerk elections,observed_link_candidate
+us:or:census-county:41041,OR,2026-10-20T06:20:59-04:00,Lincoln County OR official election results archive county clerk elections,observed_link_candidate
+us:ri:priority-roster:new-shoreham,RI,2026-10-20T06:20:59-04:00,NEW SHOREHAM RI official election results archive county clerk elections,observed_link_candidate
+us:sd:census-county:46041,SD,2026-10-20T06:20:59-04:00,Dewey County SD official election results archive county clerk elections; Dewey County SD official election results county clerk,observed_link_candidate
+us:tn:census-county:47037,TN,2026-10-20T06:20:59-04:00,Davidson County TN official election results archive county clerk elections,observed_link_candidate
+us:tx:census-county:48037,TX,2026-10-20T06:20:59-04:00,Bowie County TX official election results archive county clerk elections,observed_link_candidate
+us:ut:census-county:49037,UT,2026-10-20T06:20:59-04:00,San Juan County UT official election results archive county clerk elections,observed_link_candidate
+us:wy:census-county:56037,WY,2026-10-20T06:20:59-04:00,Sweetwater County WY official election results archive county clerk elections; Sweetwater County WY official election results county clerk,observed_link_candidate
+us:al:census-county:01059,AL,2026-10-20T06:20:59-04:00,Franklin County AL official election results archive county clerk elections; Franklin County AL official election results county clerk,observed_link_candidate
+us:ar:census-county:05059,AR,2026-10-20T06:20:59-04:00,Hot Spring County AR official election results archive county clerk elections,observed_link_candidate
+us:ca:census-county:06057,CA,2026-10-20T06:20:59-04:00,Nevada County CA official election results archive county clerk elections,observed_link_candidate
+us:co:census-county:08057,CO,2026-10-20T06:20:59-04:00,Jackson County CO official election results archive county clerk elections; Jackson County CO official election results county clerk,observed_link_candidate
+us:fl:census-county:12059,FL,2026-10-20T06:20:59-04:00,Holmes County FL official election results archive county clerk elections,observed_link_candidate
+us:ga:census-county:13059,GA,2026-10-20T06:20:59-04:00,Clarke County GA official election results archive county clerk elections; Clarke County GA official election results county clerk,observed_link_candidate
+us:id:census-county:16055,ID,2026-10-20T06:20:59-04:00,Kootenai County ID official election results archive county clerk elections,observed_link_candidate
+us:in:census-county:18055,IN,2026-10-20T06:20:59-04:00,Greene County IN official election results archive county clerk elections; Greene County IN official election results county clerk,observed_link_candidate
+us:ky:census-county:21053,KY,2026-10-20T06:20:59-04:00,Clinton County KY official election results archive county clerk elections; Clinton County KY official election results county clerk,observed_link_candidate
+us:la:census-county:22055,LA,2026-10-20T06:20:59-04:00,Lafayette Parish LA official election results archive county clerk elections,observed_link_candidate
+us:ma:priority-roster:belmont,MA,2026-10-20T06:20:59-04:00,BELMONT MA official election results archive county clerk elections,observed_link_candidate
