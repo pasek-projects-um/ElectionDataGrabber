@@ -1219,3 +1219,23 @@ us:ga:census-county:13063,GA,2026-10-20T10:27:37-04:00,Clayton County Georgia of
 us:id:census-county:16059,ID,2026-10-20T10:27:37-04:00,Lemhi County Idaho official election results archive,observed_link_candidate
 us:in:census-county:18059,IN,2026-10-20T10:27:37-04:00,Hancock County Indiana official election results archive,observed_link_candidate
 us:ky:census-county:21057,KY,2026-10-20T10:27:37-04:00,Cumberland County Kentucky official election results archive,observed_link_candidate
+us:la:census-county:22059,LA,2026-10-20T11:08:56-04:00,LaSalle Parish Louisiana official election results archive,observed_link_candidate
+us:ma:priority-roster:berlin,MA,2026-10-20T11:08:56-04:00,Berlin Massachusetts official election results town clerk archive,observed_link_candidate
+us:nc:census-county:37043,NC,2026-10-20T11:08:56-04:00,Clay County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38043,ND,2026-10-20T11:08:56-04:00,Kidder County North Dakota official election results archive,observed_link_candidate
+us:nh:priority-roster:bethlehem,NH,2026-10-20T11:08:56-04:00,Bethlehem New Hampshire official election results town clerk archive,observed_link_candidate
+us:nm:census-county:35037,NM,2026-10-20T11:08:56-04:00,Quay County New Mexico official election results archive,observed_link_candidate
+us:ny:census-county:36041,NY,2026-10-20T11:08:56-04:00,Hamilton County New York official election results archive,observed_link_candidate
+us:oh:county:fairfield,OH,2026-10-20T11:08:56-04:00,Fairfield County Ohio official election results archive board elections,observed_link_candidate
+us:ok:census-county:40041,OK,2026-10-20T11:08:56-04:00,Delaware County Oklahoma official election results archive,observed_link_candidate
+us:pa:county:cumberland,PA,2026-10-20T11:08:56-04:00,Cumberland County Pennsylvania official election results archive,observed_link_candidate
+us:sc:census-county:45041,SC,2026-10-20T11:08:56-04:00,Florence County South Carolina official election results archive,observed_link_candidate
+us:ct:municipality:cornwall,CT,2026-10-20T11:08:56-04:00,Cornwall Connecticut official election results town clerk archive,observed_link_candidate
+us:ia:census-county:19059,IA,2026-10-20T11:08:56-04:00,Dickinson County Iowa official election results archive,observed_link_candidate
+us:il:census-county:17059,IL,2026-10-20T11:08:56-04:00,Gallatin County Illinois official election results archive,observed_link_candidate
+us:ks:census-county:20059,KS,2026-10-20T11:08:56-04:00,Franklin County Kansas official election results archive,observed_link_candidate
+us:me:municipality:beaver-cove,ME,2026-10-20T11:08:56-04:00,Beaver Cove Maine official election results town clerk,completed_no_new_urls
+us:mi:county:gladwin,MI,2026-10-20T11:08:56-04:00,Gladwin County Michigan official election results archive clerk,observed_link_candidate
+us:mn:census-county:27051,MN,2026-10-20T11:08:56-04:00,Grant County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29047,MO,2026-10-20T11:08:56-04:00,Clay County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28045,MS,2026-10-20T11:08:56-04:00,Hancock County Mississippi official election results archive,observed_link_candidate
