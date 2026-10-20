@@ -1139,3 +1139,23 @@ us:in:census-county:18055,IN,2026-10-20T06:20:59-04:00,Greene County IN official
 us:ky:census-county:21053,KY,2026-10-20T06:20:59-04:00,Clinton County KY official election results archive county clerk elections; Clinton County KY official election results county clerk,observed_link_candidate
 us:la:census-county:22055,LA,2026-10-20T06:20:59-04:00,Lafayette Parish LA official election results archive county clerk elections,observed_link_candidate
 us:ma:priority-roster:belmont,MA,2026-10-20T06:20:59-04:00,BELMONT MA official election results archive county clerk elections,observed_link_candidate
+us:md:census-county:24001,MD,2026-10-20T07:11:17-04:00,Allegany County Maryland official election results archive,observed_link_candidate
+us:me:municipality:bath,ME,2026-10-20T07:11:17-04:00,Bath Maine official city clerk elections results,observed_link_candidate
+us:nv:census-county:32005,NV,2026-10-20T07:11:17-04:00,Douglas County Nevada official election results archive,observed_link_candidate
+us:va:census-county:51036,VA,2026-10-20T07:11:17-04:00,Charles City County Virginia official election results; site:charlescityva.us elections results,observed_link_candidate
+us:wa:census-county:53037,WA,2026-10-20T07:11:17-04:00,Kittitas County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:adams-strongs-prairie-218a6c5197576263,WI,2026-10-20T07:11:17-04:00,Strongs Prairie Wisconsin official elections results Adams County,observed_link_candidate
+us:wv:census-county:54037,WV,2026-10-20T07:11:17-04:00,Jefferson County West Virginia official election results archive,observed_link_candidate
+us:az:census-county:04023,AZ,2026-10-20T07:11:17-04:00,Santa Cruz County Arizona official election results archive,observed_link_candidate
+us:ct:municipality:colebrook,CT,2026-10-20T07:11:17-04:00,Colebrook Connecticut official election results town clerk,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-20T07:11:17-04:00,Maui County Hawaii official election results archive,observed_link_candidate
+us:ia:census-county:19055,IA,2026-10-20T07:11:17-04:00,Delaware County Iowa official election results archive,observed_link_candidate
+us:il:census-county:17055,IL,2026-10-20T07:11:17-04:00,Franklin County Illinois official election results archive,observed_link_candidate
+us:ks:census-county:20055,KS,2026-10-20T07:11:17-04:00,Finney County Kansas official election results archive,observed_link_candidate
+us:mn:census-county:27047,MN,2026-10-20T07:11:17-04:00,Freeborn County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29043,MO,2026-10-20T07:11:17-04:00,Christian County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28041,MS,2026-10-20T07:11:17-04:00,Greene County Mississippi official election results; site:greenecountyms.gov elections,observed_link_candidate
+us:mt:census-county:30041,MT,2026-10-20T07:11:17-04:00,Hill County Montana official election results; site:hillcounty.us election results,observed_link_candidate
+us:mi:county:emmet,MI,2026-10-20T07:11:17-04:00,Emmet County Michigan official election results; site:emmetcounty.org elections results,observed_link_candidate
+us:vt:priority-roster:bloomfield,VT,2026-10-20T07:11:17-04:00,Bloomfield Vermont official election results; Bloomfield Vermont town clerk election results official,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-20T07:11:17-04:00,Sussex County Delaware official election results archive; 2026 Department of Elections,observed_link_candidate
