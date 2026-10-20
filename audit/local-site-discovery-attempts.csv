@@ -1059,3 +1059,23 @@ us:ga:census-county:13055,GA,2026-10-20T02:33:21-04:00,Chattooga County Georgia 
 us:id:census-county:16051,ID,2026-10-20T02:33:21-04:00,Jefferson County Idaho official election results archive,observed_link_candidate
 us:in:census-county:18051,IN,2026-10-20T02:33:21-04:00,Gibson County Indiana official election results archive,observed_link_candidate
 us:la:census-county:22051,LA,2026-10-20T02:33:21-04:00,Jefferson Parish Louisiana official election results clerk,observed_link_candidate
+us:mo:census-county:29039,MO,2026-10-20T02:57:16-04:00,Cedar County Missouri official election results county clerk archive,observed_link_candidate
+us:mt:census-county:30037,MT,2026-10-20T02:57:16-04:00,Golden Valley County Montana official election results clerk recorder,observed_link_candidate
+us:ne:census-county:31037,NE,2026-10-20T02:57:16-04:00,Colfax County Nebraska official election results election commissioner,observed_link_candidate
+us:nj:census-county:34037,NJ,2026-10-20T02:57:16-04:00,Sussex County New Jersey official election results county clerk archive,observed_link_candidate
+us:or:census-county:41039,OR,2026-10-20T02:57:16-04:00,Lane County Oregon official election results archive elections,observed_link_candidate
+us:ri:priority-roster:narragansett,RI,2026-10-20T02:57:16-04:00,Narragansett Rhode Island official election results town clerk,observed_link_candidate
+us:sd:census-county:46039,SD,2026-10-20T02:57:16-04:00,Deuel County South Dakota official election results auditor,observed_link_candidate
+us:tn:census-county:47035,TN,2026-10-20T02:57:16-04:00,Cumberland County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48035,TX,2026-10-20T02:57:16-04:00,Bosque County Texas official election results elections administrator archive,observed_link_candidate
+us:ut:census-county:49035,UT,2026-10-20T02:57:16-04:00,Salt Lake County Utah official election results archive clerk,observed_link_candidate
+us:wy:census-county:56035,WY,2026-10-20T02:57:16-04:00,Sublette County Wyoming official election results county clerk,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-20T02:57:16-04:00,Alaska Division of Elections official election results archive alternative dashboard,observed_link_candidate
+us:az:census-county:04019,AZ,2026-10-20T02:57:16-04:00,Pima County Arizona official election results archive recorder elections,observed_link_candidate
+us:ct:municipality:clinton,CT,2026-10-20T02:57:16-04:00,Clinton Connecticut official election results town clerk,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-20T02:57:16-04:00,District of Columbia Board of Elections official results archive alternative,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-20T02:57:16-04:00,Kent County Delaware official election results archive state,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-20T02:57:16-04:00,Honolulu County Hawaii official election results city clerk state archive,observed_link_candidate
+us:ia:census-county:19051,IA,2026-10-20T02:57:16-04:00,Davis County Iowa official election results auditor archive,observed_link_candidate
+us:il:census-county:17051,IL,2026-10-20T02:57:16-04:00,Fayette County Illinois official election results county clerk archive,observed_link_candidate
+us:ks:census-county:20051,KS,2026-10-20T02:57:16-04:00,Ellis County Kansas official election results county clerk archive,observed_link_candidate
