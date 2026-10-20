@@ -1239,3 +1239,23 @@ us:mi:county:gladwin,MI,2026-10-20T11:08:56-04:00,Gladwin County Michigan offici
 us:mn:census-county:27051,MN,2026-10-20T11:08:56-04:00,Grant County Minnesota official election results archive,observed_link_candidate
 us:mo:census-county:29047,MO,2026-10-20T11:08:56-04:00,Clay County Missouri official election results archive,observed_link_candidate
 us:ms:census-county:28045,MS,2026-10-20T11:08:56-04:00,Hancock County Mississippi official election results archive,observed_link_candidate
+us:ne:census-county:31043,NE,2026-10-20T12:17:05-04:00,Dakota County Nebraska official election results archive,observed_link_candidate
+us:nj:census-county:34001,NJ,2026-10-20T12:17:05-04:00,Atlantic County New Jersey official election results archive,observed_link_candidate
+us:or:census-county:41045,OR,2026-10-20T12:17:05-04:00,Malheur County Oregon official election results archive,observed_link_candidate
+us:ri:priority-roster:north-kingstown,RI,2026-10-20T12:17:05-04:00,North Kingstown Rhode Island official election results town clerk,observed_link_candidate
+us:sd:census-county:46045,SD,2026-10-20T12:17:05-04:00,Edmunds County South Dakota official election results history,observed_link_candidate
+us:tn:census-county:47041,TN,2026-10-20T12:17:05-04:00,DeKalb County Tennessee official election results archive,observed_link_candidate
+us:tx:census-county:48041,TX,2026-10-20T12:17:05-04:00,Brazos County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49041,UT,2026-10-20T12:17:05-04:00,Sevier County Utah official election results archive,observed_link_candidate
+us:wy:census-county:56041,WY,2026-10-20T12:17:05-04:00,Uinta County Wyoming clerk election results official,observed_link_candidate
+us:al:census-county:01065,AL,2026-10-20T12:17:05-04:00,Hale County Alabama election results official county probate,observed_link_candidate
+us:ar:census-county:05065,AR,2026-10-20T12:17:05-04:00,Izard County Arkansas election results official,observed_link_candidate
+us:az:census-county:04027,AZ,2026-10-20T12:17:05-04:00,site:yumacountyaz.gov election results archives Yuma County,observed_link_candidate
+us:ca:census-county:06063,CA,2026-10-20T12:17:05-04:00,Plumas County California clerk election results official,observed_link_candidate
+us:co:census-county:08063,CO,2026-10-20T12:17:05-04:00,Kit Carson County Colorado clerk election results official,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-20T12:17:05-04:00,New Castle County Delaware election results official archive,observed_link_candidate
+us:fl:census-county:12065,FL,2026-10-20T12:17:05-04:00,Jefferson County Florida election results official,observed_link_candidate
+us:ga:census-county:13065,GA,2026-10-20T12:17:05-04:00,Clinch County Georgia election results official,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-20T12:17:05-04:00,Honolulu County Hawaii election results official archives,observed_link_candidate
+us:id:census-county:16061,ID,2026-10-20T12:17:05-04:00,Lewis County Idaho election results official clerk,observed_link_candidate
+us:in:census-county:18061,IN,2026-10-20T12:17:05-04:00,Harrison County Indiana election results official,observed_link_candidate
