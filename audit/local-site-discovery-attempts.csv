@@ -1419,3 +1419,23 @@ us:hi:census-county:15003,HI,2026-10-20T20:46:24-04:00,Honolulu County Hawaii of
 us:mi:county:hillsdale,MI,2026-10-20T20:46:24-04:00,Hillsdale County Michigan official election results clerk archive | site:hillsdalecounty.gov election results archive clerk,observed_link_candidate
 us:mn:census-county:27059,MN,2026-10-20T20:46:24-04:00,Isanti County Minnesota official election results auditor archive | site:isanticountymn.gov election results auditor archive,observed_link_candidate
 us:co:census-county:08071,CO,2026-10-20T20:46:24-04:00,Las Animas County Colorado official election results clerk archive | site:lasanimascounty.colorado.gov election results clerk,blocked_robots
+us:ne:census-county:31049,NE,2026-10-21T01:40:47+00:00,Deuel County Nebraska official election results | Deuel County Nebraska election archive county clerk,observed_link_candidate
+us:nj:census-county:34007,NJ,2026-10-21T01:40:47+00:00,Camden County New Jersey official election results | Camden County NJ election division archive,observed_link_candidate
+us:or:census-county:41051,OR,2026-10-21T01:40:47+00:00,Multnomah County Oregon official election results | Multnomah County election archive 2026,observed_link_candidate
+us:ri:priority-roster:pawtucket,RI,2026-10-21T01:40:47+00:00,Pawtucket Rhode Island official election results | Pawtucket RI previous local election results,observed_link_candidate
+us:sd:census-county:46051,SD,2026-10-21T01:40:47+00:00,Grant County South Dakota official election results | Grant County SD auditor election archive,observed_link_candidate
+us:tn:census-county:47047,TN,2026-10-21T01:40:47+00:00,Fayette County Tennessee official election results | Fayette County TN past election results archive,observed_link_candidate
+us:tx:census-county:48047,TX,2026-10-21T01:40:47+00:00,Brooks County Texas official election results | Brooks County TX elections historical archive,observed_link_candidate
+us:ut:census-county:49047,UT,2026-10-21T01:40:47+00:00,Uintah County Utah official election results | Uintah County UT historical election archive canvass,observed_link_candidate
+us:wy:census-county:56001,WY,2026-10-21T01:40:47+00:00,Albany County Wyoming official election results | Albany County WY previous election archive,observed_link_candidate
+us:ct:municipality:deep-river,CT,2026-10-21T01:40:47+00:00,Deep River Connecticut official election results | Deep River CT registrar town clerk election history,observed_link_candidate
+us:ia:census-county:19069,IA,2026-10-21T01:40:47+00:00,Franklin County Iowa official election results | Franklin County IA past elections 2026,observed_link_candidate
+us:id:census-county:16069,ID,2026-10-21T01:40:47+00:00,Nez Perce County Idaho official election results | Nez Perce County ID past results archive,observed_link_candidate
+us:il:census-county:17069,IL,2026-10-21T01:40:47+00:00,Hardin County Illinois official election results | Hardin County IL pollresults election archive,observed_link_candidate
+us:in:census-county:18069,IN,2026-10-21T01:40:47+00:00,Huntington County Indiana official election results | Huntington County IN election archive,observed_link_candidate
+us:ks:census-county:20069,KS,2026-10-21T01:40:47+00:00,Gray County Kansas official election results | Gray County KS historical election archive,observed_link_candidate
+us:ky:census-county:21067,KY,2026-10-21T01:40:47+00:00,Fayette County Kentucky official election results | Lexington Fayette KY election results archive 2026,observed_link_candidate
+us:la:census-county:22069,LA,2026-10-21T01:40:47+00:00,Natchitoches Parish Louisiana official election results | Natchitoches Parish LA registrar clerk election archive,observed_link_candidate
+us:ma:priority-roster:blandford,MA,2026-10-21T01:40:47+00:00,Blandford Massachusetts official town election results | Blandford MA election archive town clerk,observed_link_candidate
+us:md:census-county:24015,MD,2026-10-21T01:40:47+00:00,Cecil County Maryland official election results | Cecil County MD 2026 primary 2024 archive,observed_link_candidate
+us:me:municipality:berwick,ME,2026-10-21T01:40:47+00:00,Berwick Maine official election results | Berwick ME town clerk election archive,observed_link_candidate
