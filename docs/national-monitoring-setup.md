@@ -8,10 +8,10 @@ uses unresolved jurisdictions to extend that ledger; see
 [the discovery-loop contract](local-site-discovery-loop.md). These inspection
 targets retain evidence and do not change verified source coverage.
 
-`national-results-watch.yml` adds a GitHub Actions run every 30 minutes and a
+`national-results-watch.yml` adds a GitHub Actions run hourly and a
 manual dispatch. The schedule only becomes active after the workflow is on the
 default branch; a PR or local dry run is not deployment. Scheduled Actions can
-be delayed by GitHub and do not guarantee a 30-minute service level.
+be delayed by GitHub and do not guarantee a one-hour service level.
 
 Each run builds inspection seeds from uniquely labeled, hash-backed HTML website
 leads in the checked-in directory report and the preceding worker's directory
@@ -20,21 +20,19 @@ These are unverified inspection associations, never promoted official sources.
 The generated `directory-seeds.csv` retains directory URL, unit, match basis and
 capture digest. Alternative unit associations are preserved for review.
 
-The watcher follows observed results candidates to depth two, at most 200 pages
-and 600 requests per pass, with a six-hour successful-page revisit interval and
-a 20-minute execution limit. New/unvisited targets precede revisits. Discovery
+The watcher follows observed results candidates to depth two, at most 40 pages
+and 100 requests per pass, with a six-hour successful-page revisit interval and
+an 8-minute cooperative network budget and a 12-minute watchdog. New/unvisited targets precede revisits. Discovery
 is separate from election-night vote ingestion; this cadence does not promise
 rapid result-total updates. Robots limits remain enforced per host.
 
-Runs are serialized. Actions cache restores the latest checkpoint, snapshots and
-journals; each attempt also publishes a 14-day recovery artifact. Cache is an
-acceleration mechanism and may be evicted. A missing cache starts a new baseline;
-recover the latest artifact into `watch-data` on a persistent worker to retain
-older state. Artifacts are inspection outputs, not an automatically updated
-registry, and raw captures are not committed. Monitor failed/timed-out Actions
-and `last-run.json` backlog before increasing throughput. A timeout can leave
-queue exports from the prior complete pass; per-page `state.json` checkpoints
-remain authoritative and the next pass regenerates exports.
+Runs are serialized. The v2 cache retains control state and the authority queue;
+per-run captures/journals/exports are compressed into a recovery artifact requesting
+90-day retention. A separate v1 restore migrates old state once. See
+[national-results-watch-operations.md](national-results-watch-operations.md) for
+checkpoint recovery, queue semantics and time-budget behavior. Discovery does not
+collect changing vote totals; use the [election-night runbook](election-night-runbook.md)
+for the independent selected-feed collector.
 
 Reproduce inventory preparation locally:
 
@@ -48,8 +46,8 @@ python -m scripts.watch_national_results --directory-seeds watch-data/directory-
 This worker watches official starting pages and already observed result-page
 candidates. It detects page changes, recognizes result links with the fingerprint
 catalog, and queues newly observed endpoints. It does not yet parse changing vote
-totals, certify served jurisdictions, or verify election-night feeds. It has not
-been deployed or scheduled by this PR.
+totals, certify served jurisdictions, or verify election-night feeds. The GitHub discovery schedule is deployed on main; a separate persistent worker
+is an operator alternative.
 
 The checked-in inventories yield 1,134 eligible unique HTML targets. Additional
 observed HTML candidates are followed on later passes, through depth two by default.
@@ -60,7 +58,7 @@ new to the watcher is not necessarily a newly published website.
 ## Install and inspect the inventory
 
 On a persistent macOS/Linux worker, clone the repository and check out
-`codex/national-dashboard-discovery`. From the repository root:
+`main`. From the repository root:
 
 ```sh
 python3 -m venv .venv

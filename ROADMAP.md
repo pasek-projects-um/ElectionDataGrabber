@@ -1,7 +1,7 @@
 # ElectionDataGrabber Roadmap
 
 **Status:** living project roadmap  
-**Last substantive refresh:** 2026-09-28
+**Last substantive refresh:** 2026-10-21
 
 ## North star
 
@@ -94,6 +94,26 @@ This is candidate extraction, not adjudicated new local coverage. See
 - [ ] Separate enumerated primary units, units with any lead, and unreconciled candidate URLs in depth metrics.
 - [ ] Verify repeated election-night refresh behavior: stable race/unit identity, cumulative revisions, timestamps, and throughput.
 - [ ] Persist synchronized source snapshots and matched-pair overlap evidence for feeds that may be mirrors/partial overlaps.
+
+## November 2026 operational readiness (October 21)
+
+- [x] Repair and production-check bounded discovery execution (PR #77; two successful
+  runs, latest 40 pages / 54 requests in 223.1 seconds, approximately 6.07 MB artifact).
+- [x] Add an explicit-feed collector CLI with atomic SQLite checkpoints, immutable
+  raw/sample captures, conditional polling, offline replay and integrity/staleness status.
+- [x] Exercise restart, changed totals, corrections, row removal, network failures,
+  robots/redirect budgets, empty manifests and artifact corruption in deterministic CI.
+- [x] Rehearse the production Washtenaw August 2026 HTML, fixing real contest headings
+  and replacing the hardcoded election ID with explicit configured identity.
+- [ ] Adjudicate and enable actual November election-specific payloads. The November
+  manifest is empty; the August rehearsal is historical evidence only.
+- [ ] Deploy the persistent collection worker, backup and supervisor health monitoring.
+- [ ] Verify actual November updates/latency, source timestamps, corrections, topology
+  and mirror overlap. No automatic refresh-verification promotion is implemented.
+
+`election-grab readiness` publishes separate national discovery/candidate/capability
+counts and selected-feed execution health, with input hashes. Weighted population and
+reporting-place coverage remain explicitly unknown. See `docs/election-night-runbook.md`.
 
 ## Source-overlap and redundancy milestone
 

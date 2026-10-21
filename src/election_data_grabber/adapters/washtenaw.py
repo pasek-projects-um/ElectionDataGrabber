@@ -7,11 +7,15 @@ from bs4 import BeautifulSoup
 
 from election_data_grabber.adapters.base import Adapter
 from election_data_grabber.models import (
-    ReportingProgress, ReportingProgressBasis, ReportingProgressKind, ReportingProgressScope,
-    ResultObservation, UpdateSemantics, VoteMode,
+    ReportingProgress,
+    ReportingProgressBasis,
+    ReportingProgressKind,
+    ReportingProgressScope,
+    ResultObservation,
+    UpdateSemantics,
+    VoteMode,
 )
 from election_data_grabber.reporting_unit_identity import AdapterReportingContext, UnitType
-
 
 REPORT_TS_RE = re.compile(r"This report created:\s*(.+)")
 INT_RE = re.compile(r"-?\d[\d,]*")
@@ -24,15 +28,19 @@ class WashtenawAdapter(Adapter):
     This adapter preserves all four modes and candidate DOM order as source order.
     """
 
-    vote_modes = [
+    def __init__(self, source, timeout=30.0, *, election_id="2026-08-04-mi-primary"):
+        super().__init__(source, timeout)
+        self.election_id = election_id
+
+    vote_modes = (
         VoteMode.EARLY,
         VoteMode.ABSENTEE,
         VoteMode.ELECTION_DAY,
         VoteMode.TOTAL,
-    ]
+    )
 
     def parse(self, body: bytes, *, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ResultObservation]:
-        election_id = "2026-08-04-mi-primary"
+        election_id = self.election_id
         if reporting_context is not None:
             reporting_context.validate_call(election_id=election_id, source_id=self.source.source_id)
         soup = BeautifulSoup(body, "html.parser")
@@ -52,6 +60,15 @@ class WashtenawAdapter(Adapter):
         for row in soup.find_all("tr"):
             cells = [" ".join(c.stripped_strings) for c in row.find_all(["th", "td"])]
             if not cells:
+                continue
+
+            # Production pages mark contest headings explicitly and may include
+            # a second cell linking precinct detail. District numbers belong to
+            # the contest name and must not disqualify these headings.
+            heading = row.select_one('.headertr')
+            if heading is not None:
+                current_contest = heading.get_text(' ', strip=True)
+                ballot_order = 0
                 continue
 
             # Contest rows generally contain a contest label and no numeric vote columns.
@@ -107,7 +124,7 @@ class WashtenawAdapter(Adapter):
 
 
     def parse_progress(self, body: bytes, *, fetched_at: datetime, reporting_context: AdapterReportingContext | None = None) -> list[ReportingProgress]:
-        election_id = "2026-08-04-mi-primary"
+        election_id = self.election_id
         if reporting_context is not None:
             reporting_context.validate_call(election_id=election_id, source_id=self.source.source_id)
         soup = BeautifulSoup(body, "html.parser")
@@ -174,7 +191,7 @@ class WashtenawAdapter(Adapter):
         return int(match.group(0).replace(",", "")) if match else None
 
     def _labeled_int(self, text: str, label: str) -> int | None:
-        match = re.search(rf"{re.escape(label)}:\s*([\d,]+)", text, re.I)
+        match = re.search(rf"{re.escape(label)}:\s*([\d,]+)", text, re.IGNORECASE)
         return int(match.group(1).replace(",", "")) if match else None
 
     @staticmethod

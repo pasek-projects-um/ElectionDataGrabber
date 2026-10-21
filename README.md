@@ -63,6 +63,15 @@ src/election_data_grabber/
 docs/                           architecture contracts and historical technical investigations
 ```
 
+## Election-night operations
+
+Use `election-grab collect`, `status`, `replay` and `readiness` for explicitly reviewed
+feeds. The collector preserves raw bytes before normalization, stable source/election
+identity, transactional restart state and correction/freshness diagnostics. See
+[the November 2026 runbook](docs/election-night-runbook.md) for rehearsal, feed selection,
+worker scheduling, recovery and release gates. The November manifest currently has
+no enabled feeds; passing parser tests is not deployed national live coverage.
+
 ## Historical pilots
 
 Michigan, Ohio, Maine, Connecticut, and Pennsylvania supplied early stress tests for live reporting, county/municipality authority models, standardized reports, micro-geography, temporal geography, and source portability. Their detailed docs remain useful case studies, but they should not be read as the current national coverage boundary.

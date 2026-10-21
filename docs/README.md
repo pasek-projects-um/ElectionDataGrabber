@@ -7,6 +7,7 @@ Documentation falls into three categories. The distinction matters because many 
 These describe the system as it should behave now:
 
 - `../README.md` — current project scope and pipeline.
+- `election-night-runbook.md` — selected-feed collection, replay, worker operation and November release gates.
 - `../ROADMAP.md` — current milestones and priorities.
 - `data_model_principles.md` — normalization/geography/provenance principles.
 - `canonical_jurisdiction_identity.md` and `authority_identity.md` — durable jurisdiction/authority identity.

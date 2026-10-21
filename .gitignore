@@ -4,3 +4,6 @@ watch-data/
 __pycache__/
 .pytest_cache/
 pytest-of-root/
+
+election-night-data/
+rehearsal-data/
