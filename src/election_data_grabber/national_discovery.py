@@ -248,11 +248,10 @@ class Fetcher:
             self.before_request(url)
             if self.remaining <= 0:
                 raise RequestBudgetExhausted()
+            host = urlsplit(url).hostname
+            self.wait_for_host(host)
             self.remaining -= 1
             self.requests += 1
-            host = urlsplit(url).hostname
-            time.sleep(max(0, self.host_delays.get(host, self.delay)
-                           - (time.monotonic() - self.last.get(host, 0))))
             self.last[host] = time.monotonic()
             with self.client.stream("GET", url) as r:
                 if r.status_code in (301, 302, 303, 307, 308):
@@ -263,6 +262,7 @@ class Fetcher:
                     raise ArtifactNeedsInspection("Artifact requires separate inspection")
                 data = bytearray()
                 for chunk in r.iter_bytes():
+                    self.check_budget()
                     data.extend(chunk)
                     if len(data) > self.max_bytes:
                         raise ValueError("Response exceeds byte limit")
@@ -273,6 +273,14 @@ class Fetcher:
                     (self.snapshot_dir / (digest + ".html")).write_text(html)
                 return url, html
         raise ValueError("Redirect limit")
+
+    def check_budget(self):
+        """Optional elapsed-time policy hook."""
+
+    def wait_for_host(self, host):
+        time.sleep(max(0, self.host_delays.get(host, self.delay)
+                       - (time.monotonic() - self.last.get(host, 0))))
+        self.check_budget()
 
     def before_request(self, url):
         """Optional request policy hook, also applied to each redirect target."""
