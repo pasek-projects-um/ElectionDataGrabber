@@ -1659,3 +1659,23 @@ us:ky:census-county:21077,KY,2026-10-21T11:37:13-04:00,Gallatin County KY offici
 us:la:census-county:22079,LA,2026-10-21T11:37:13-04:00,Rapides Parish LA official election results archive | site-specific official election results or elections,observed_link_candidate
 us:mn:census-county:27069,MN,2026-10-21T11:37:13-04:00,Kittson County MN official election results archive | site-specific official election results or elections,observed_link_candidate
 us:mo:census-county:29063,MO,2026-10-21T11:37:13-04:00,DeKalb County MO official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ne:census-county:31057,NE,2026-10-21T12:40:53-04:00,Dundy County NE official election results archive | site-specific official election results or elections,observed_link_candidate
+us:nj:census-county:34015,NJ,2026-10-21T12:40:53-04:00,Gloucester County NJ official election results archive | site-specific official election results or elections,observed_link_candidate
+us:or:census-county:41059,OR,2026-10-21T12:40:53-04:00,Umatilla County OR official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ri:priority-roster:scituate,RI,2026-10-21T12:40:53-04:00,SCITUATE RI official election results archive | site-specific official election results or elections,observed_link_candidate
+us:sd:census-county:46059,SD,2026-10-21T12:40:53-04:00,Hand County SD official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:tn:census-county:47055,TN,2026-10-21T12:40:53-04:00,Giles County TN official election results archive | site-specific official election results or elections,observed_link_candidate
+us:tx:census-county:48055,TX,2026-10-21T12:40:53-04:00,Caldwell County TX official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ut:census-county:49055,UT,2026-10-21T12:40:53-04:00,Wayne County UT official election results archive | site-specific official election results or elections,observed_link_candidate
+us:wy:census-county:56009,WY,2026-10-21T12:40:53-04:00,Converse County WY official election results archive | site-specific official election results or elections,observed_link_candidate
+us:al:census-county:01087,AL,2026-10-21T12:40:53-04:00,Macon County AL official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:ar:census-county:05087,AR,2026-10-21T12:40:53-04:00,Madison County AR official election results archive | site-specific official election results or elections,observed_link_candidate
+us:az:census-county:04019,AZ,2026-10-21T12:40:53-04:00,Pima County AZ official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ca:census-county:06085,CA,2026-10-21T12:40:53-04:00,Santa Clara County CA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:co:census-county:08085,CO,2026-10-21T12:40:53-04:00,Montrose County CO official election results archive | site-specific official election results or elections,observed_link_candidate
+us:fl:census-county:12086,FL,2026-10-21T12:40:53-04:00,Miami-Dade County FL official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ga:census-county:13087,GA,2026-10-21T12:40:53-04:00,Decatur County GA official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-10-21T12:40:53-04:00,Hawaii County HI official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:ma:priority-roster:boxford,MA,2026-10-21T12:40:53-04:00,BOXFORD MA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:md:census-county:24025,MD,2026-10-21T12:40:53-04:00,Harford County MD official election results archive | site-specific official election results or elections,observed_link_candidate
+us:me:municipality:boothbay,ME,2026-10-21T12:40:53-04:00,Boothbay ME official election results archive | site-specific official election results or elections,completed_no_new_urls
