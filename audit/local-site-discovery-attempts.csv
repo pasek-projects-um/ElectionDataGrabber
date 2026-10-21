@@ -1399,3 +1399,23 @@ us:la:census-county:22067,LA,2026-10-20T19:06:53-04:00,Morehouse Parish Louisian
 us:ma:priority-roster:blackstone,MA,2026-10-20T19:06:53-04:00,Blackstone Massachusetts official election results town clerk archive,observed_link_candidate
 us:md:census-county:24013,MD,2026-10-20T19:06:53-04:00,Carroll County Maryland official election results board elections archive,observed_link_candidate
 us:me:municipality:belmont,ME,2026-10-20T19:06:53-04:00,Belmont Maine official election results town clerk archive,observed_link_candidate
+us:nc:census-county:37049,NC,2026-10-20T20:46:24-04:00,Craven County North Carolina official election results archive board elections,observed_link_candidate
+us:nd:census-county:38049,ND,2026-10-20T20:46:24-04:00,McHenry County North Dakota official election results auditor archive,observed_link_candidate
+us:nh:priority-roster:bradford,NH,2026-10-20T20:46:24-04:00,Bradford New Hampshire official election results town clerk archive,observed_link_candidate
+us:nm:census-county:35043,NM,2026-10-20T20:46:24-04:00,Sandoval County New Mexico official election results clerk archive,observed_link_candidate
+us:ny:census-county:36047,NY,2026-10-20T20:46:24-04:00,Kings County New York official election results board elections archive | Kings County New York NYC Board of Elections official election results archive Brooklyn,observed_link_candidate
+us:oh:county:fulton,OH,2026-10-20T20:46:24-04:00,Fulton County Ohio official election results board elections archive,observed_link_candidate
+us:ok:census-county:40047,OK,2026-10-20T20:46:24-04:00,Garfield County Oklahoma official election results election board archive | Garfield County Oklahoma election board official election results archive,observed_link_candidate
+us:pa:county:elk,PA,2026-10-20T20:46:24-04:00,Elk County Pennsylvania official election results archive elections,observed_link_candidate
+us:sc:census-county:45047,SC,2026-10-20T20:46:24-04:00,Greenwood County South Carolina official election results archive | site:greenwoodcounty-sc.gov election results Greenwood County,observed_link_candidate
+us:al:census-county:01073,AL,2026-10-20T20:46:24-04:00,Jefferson County Alabama official election results probate board registrars | site:jeffcoprobatecourt.com elections results Jefferson County Alabama,observed_link_candidate
+us:ar:census-county:05073,AR,2026-10-20T20:46:24-04:00,Lafayette County Arkansas official election results county clerk archive | site:lafayettecounty.arkansas.gov election results OR site:sos.arkansas.gov Lafayette County election results,observed_link_candidate
+us:az:census-county:04007,AZ,2026-10-20T20:46:24-04:00,Gila County Arizona official election results recorder archive | site:gilacountyaz.gov election results OR site:apps.azsos.gov Gila County election,observed_link_candidate
+us:ca:census-county:06071,CA,2026-10-20T20:46:24-04:00,San Bernardino County California official election results archive registrar | site:elections.sbcounty.gov election results archive San Bernardino,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-20T20:46:24-04:00,Sussex County Delaware official election results archive alternative | site:elections.delaware.gov Sussex County results election archive,observed_link_candidate
+us:fl:census-county:12073,FL,2026-10-20T20:46:24-04:00,Leon County Florida official election results supervisor elections archive | site:leonvotes.gov election results archive,observed_link_candidate
+us:ga:census-county:13073,GA,2026-10-20T20:46:24-04:00,Columbia County Georgia official election results board elections archive | site:columbiacountyga.gov election results Columbia County Georgia Board Elections,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-20T20:46:24-04:00,Honolulu County Hawaii official election results archive alternative | site:honolulu.gov/elections results archive official,observed_link_candidate
+us:mi:county:hillsdale,MI,2026-10-20T20:46:24-04:00,Hillsdale County Michigan official election results clerk archive | site:hillsdalecounty.gov election results archive clerk,observed_link_candidate
+us:mn:census-county:27059,MN,2026-10-20T20:46:24-04:00,Isanti County Minnesota official election results auditor archive | site:isanticountymn.gov election results auditor archive,observed_link_candidate
+us:co:census-county:08071,CO,2026-10-20T20:46:24-04:00,Las Animas County Colorado official election results clerk archive | site:lasanimascounty.colorado.gov election results clerk,blocked_robots
