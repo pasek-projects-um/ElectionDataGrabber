@@ -1519,3 +1519,23 @@ us:ga:census-county:13079,GA,2026-10-21T08:25:58+00:00,Crawford County Georgia o
 us:hi:census-county:15001,HI,2026-10-21T08:25:58+00:00,Hawaii County official election results | Hawaii County official election results clerk archives,blocked_access
 us:mi:county:huron,MI,2026-10-21T08:25:58+00:00,Huron County Michigan official election results clerk,observed_link_candidate
 us:mn:census-county:27063,MN,2026-10-21T08:25:58+00:00,Jackson County Minnesota official election results auditor,observed_link_candidate
+us:nc:census-county:37053,NC,2026-10-21T09:36:33+00:00,Currituck County North Carolina official election results board elections,observed_link_candidate
+us:nd:census-county:38053,ND,2026-10-21T09:36:33+00:00,McKenzie County North Dakota official election results auditor | site:county.mckenziecounty.net elections auditor voting,completed_no_new_urls
+us:nh:priority-roster:bridgewater,NH,2026-10-21T09:36:33+00:00,Bridgewater New Hampshire official elections town clerk results,observed_link_candidate
+us:nm:census-county:35047,NM,2026-10-21T09:36:33+00:00,San Miguel County New Mexico official election results clerk,observed_link_candidate
+us:ny:census-county:36051,NY,2026-10-21T09:36:33+00:00,Livingston County New York official election results board elections,observed_link_candidate
+us:oh:county:geauga,OH,2026-10-21T09:36:33+00:00,Geauga County Ohio official election results board elections,observed_link_candidate
+us:ok:census-county:40051,OK,2026-10-21T09:36:33+00:00,Grady County Oklahoma official election results election board | Grady County Oklahoma election board official website results,observed_link_candidate
+us:pa:county:fayette,PA,2026-10-21T09:36:33+00:00,Fayette County Pennsylvania official election results bureau elections,observed_link_candidate
+us:sc:census-county:45051,SC,2026-10-21T09:36:33+00:00,Horry County South Carolina official election results election commission | Horry County South Carolina county election results official 2026,observed_link_candidate
+us:ct:municipality:durham,CT,2026-10-21T09:36:33+00:00,Durham Connecticut official election results town clerk registrar,observed_link_candidate
+us:ia:census-county:19073,IA,2026-10-21T09:36:33+00:00,Greene County Iowa official election results auditor | site:greenecounty.iowa.gov election results archive auditor -pdf,observed_link_candidate
+us:id:census-county:16073,ID,2026-10-21T09:36:33+00:00,Owyhee County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17073,IL,2026-10-21T09:36:33+00:00,Henry County Illinois official election results county clerk,observed_link_candidate
+us:in:census-county:18073,IN,2026-10-21T09:36:33+00:00,Jasper County Indiana official election results clerk,observed_link_candidate
+us:ks:census-county:20073,KS,2026-10-21T09:36:33+00:00,Greenwood County Kansas official election results clerk | site:greenwoodcounty.org election county clerk voting,completed_no_new_urls
+us:ky:census-county:21071,KY,2026-10-21T09:36:33+00:00,Floyd County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22073,LA,2026-10-21T09:36:33+00:00,Ouachita Parish Louisiana official election results clerk | Ouachita Parish Louisiana clerk election results official,observed_link_candidate
+us:ma:priority-roster:boston,MA,2026-10-21T09:36:33+00:00,Boston Massachusetts official election results elections department archive,observed_link_candidate
+us:md:census-county:24019,MD,2026-10-21T09:36:33+00:00,Dorchester County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:biddeford,ME,2026-10-21T09:36:33+00:00,Biddeford Maine official election results city clerk,observed_link_candidate
