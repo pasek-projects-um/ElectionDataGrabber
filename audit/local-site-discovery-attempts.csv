@@ -1699,3 +1699,23 @@ us:in:census-county:18081,IN,2026-10-21T13:54:54-04:00,Johnson County IN officia
 us:ks:census-county:20081,KS,2026-10-21T13:54:54-04:00,Haskell County KS official election results archive | site-specific official election results or elections,observed_link_candidate
 us:ky:census-county:21079,KY,2026-10-21T13:54:54-04:00,Garrard County KY official election results archive | site-specific official election results or elections,observed_link_candidate
 us:la:census-county:22081,LA,2026-10-21T13:54:54-04:00,Red River Parish LA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:mn:census-county:27071,MN,2026-10-21T14:17:22-04:00,Koochiching County Minnesota official election results | Koochiching County Minnesota official elections clerk results archive dashboard,observed_link_candidate
+us:mo:census-county:29065,MO,2026-10-21T14:17:22-04:00,Dent County Missouri official election results | Dent County Missouri official elections clerk results archive dashboard,observed_link_candidate
+us:nc:census-county:37059,NC,2026-10-21T14:17:22-04:00,Davie County North Carolina official election results | Davie County North Carolina official elections clerk results archive dashboard,observed_link_candidate
+us:nd:census-county:38059,ND,2026-10-21T14:17:22-04:00,Morton County North Dakota official election results | Morton County North Dakota official elections clerk results archive dashboard,observed_link_candidate
+us:nh:priority-roster:brookline,NH,2026-10-21T14:17:22-04:00,Brookline New Hampshire official election results | Brookline New Hampshire official elections clerk results archive dashboard,observed_link_candidate
+us:nm:census-county:35053,NM,2026-10-21T14:17:22-04:00,Socorro County New Mexico official election results | Socorro County New Mexico official elections clerk results archive dashboard,observed_link_candidate
+us:ny:census-county:36057,NY,2026-10-21T14:17:22-04:00,Montgomery County New York official election results | Montgomery County New York official elections clerk results archive dashboard,observed_link_candidate
+us:oh:county:hamilton,OH,2026-10-21T14:17:22-04:00,Hamilton Ohio official election results | Hamilton Ohio official elections clerk results archive dashboard,observed_link_candidate
+us:ok:census-county:40057,OK,2026-10-21T14:17:22-04:00,Harmon County Oklahoma official election results | Harmon County Oklahoma official elections clerk results archive dashboard,observed_link_candidate
+us:pa:county:fulton,PA,2026-10-21T14:17:22-04:00,Fulton Pennsylvania official election results | Fulton Pennsylvania official elections clerk results archive dashboard,observed_link_candidate
+us:sc:census-county:45057,SC,2026-10-21T14:17:22-04:00,Lancaster County South Carolina official election results | Lancaster County South Carolina official elections clerk results archive dashboard,observed_link_candidate
+us:al:census-county:01089,AL,2026-10-21T14:17:22-04:00,Madison County Alabama official election results | Madison County Alabama official elections clerk results archive dashboard,completed_no_new_urls
+us:ar:census-county:05089,AR,2026-10-21T14:17:22-04:00,Marion County Arkansas official election results | Marion County Arkansas official elections clerk results archive dashboard,observed_link_candidate
+us:az:census-county:04021,AZ,2026-10-21T14:17:22-04:00,Pinal County Arizona official election results | Pinal County Arizona official elections clerk results archive dashboard,completed_no_new_urls
+us:ca:census-county:06087,CA,2026-10-21T14:17:22-04:00,Santa Cruz County California official election results | Santa Cruz County California official elections clerk results archive dashboard,observed_link_candidate
+us:co:census-county:08087,CO,2026-10-21T14:17:22-04:00,Morgan County Colorado official election results | Morgan County Colorado official elections clerk results archive dashboard,observed_link_candidate
+us:fl:census-county:12087,FL,2026-10-21T14:17:22-04:00,Monroe County Florida official election results | Monroe County Florida official elections clerk results archive dashboard,observed_link_candidate
+us:ga:census-county:13089,GA,2026-10-21T14:17:22-04:00,DeKalb County Georgia official election results | DeKalb County Georgia official elections clerk results archive dashboard,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-21T14:17:22-04:00,Honolulu County Hawaii official election results | Honolulu County Hawaii official elections clerk results archive dashboard,completed_no_new_urls
+us:ma:priority-roster:boylston,MA,2026-10-21T14:17:22-04:00,BOYLSTON Massachusetts official election results | BOYLSTON Massachusetts official elections clerk results archive dashboard,completed_no_new_urls
