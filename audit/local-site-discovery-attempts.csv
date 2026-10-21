@@ -1679,3 +1679,23 @@ us:hi:census-county:15001,HI,2026-10-21T12:40:53-04:00,Hawaii County HI official
 us:ma:priority-roster:boxford,MA,2026-10-21T12:40:53-04:00,BOXFORD MA official election results archive | site-specific official election results or elections,observed_link_candidate
 us:md:census-county:24025,MD,2026-10-21T12:40:53-04:00,Harford County MD official election results archive | site-specific official election results or elections,observed_link_candidate
 us:me:municipality:boothbay,ME,2026-10-21T12:40:53-04:00,Boothbay ME official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-10-21T13:54:54-04:00,Alaska Division of Elections AK official election results archive | site-specific official election results or elections,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-21T13:54:54-04:00,District of Columbia Board of Elections DC official election results archive | site-specific official election results or elections,observed_link_candidate
+us:mi:county:iron,MI,2026-10-21T13:54:54-04:00,Iron MI official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ms:census-county:28061,MS,2026-10-21T13:54:54-04:00,Jasper County MS official election results archive | site-specific official election results or elections,observed_link_candidate
+us:mt:census-county:30059,MT,2026-10-21T13:54:54-04:00,Meagher County MT official election results archive | site-specific official election results or elections,observed_link_candidate
+us:nv:census-county:32023,NV,2026-10-21T13:54:54-04:00,Nye County NV official election results archive | site-specific official election results or elections,observed_link_candidate
+us:va:census-county:51057,VA,2026-10-21T13:54:54-04:00,Essex County VA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:vt:priority-roster:bristol,VT,2026-10-21T13:54:54-04:00,Bristol VT official election results archive | site-specific official election results or elections,observed_link_candidate
+us:wa:census-county:53055,WA,2026-10-21T13:54:54-04:00,San Juan County WA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:wi:ltsb2026:altoona-94a9d4a3dd003b62,WI,2026-10-21T13:54:54-04:00,City of Altoona WI official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:wv:census-county:54055,WV,2026-10-21T13:54:54-04:00,Mercer County WV official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ct:municipality:east-hartford,CT,2026-10-21T13:54:54-04:00,East Hartford CT official election results archive | site-specific official election results or elections,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-21T13:54:54-04:00,Kent County DE official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ia:census-county:19081,IA,2026-10-21T13:54:54-04:00,Hancock County IA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:id:census-county:16081,ID,2026-10-21T13:54:54-04:00,Teton County ID official election results archive | site-specific official election results or elections,observed_link_candidate
+us:il:census-county:17081,IL,2026-10-21T13:54:54-04:00,Jefferson County IL official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:in:census-county:18081,IN,2026-10-21T13:54:54-04:00,Johnson County IN official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:ks:census-county:20081,KS,2026-10-21T13:54:54-04:00,Haskell County KS official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ky:census-county:21079,KY,2026-10-21T13:54:54-04:00,Garrard County KY official election results archive | site-specific official election results or elections,observed_link_candidate
+us:la:census-county:22081,LA,2026-10-21T13:54:54-04:00,Red River Parish LA official election results archive | site-specific official election results or elections,observed_link_candidate
