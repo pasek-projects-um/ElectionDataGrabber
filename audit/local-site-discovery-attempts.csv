@@ -1479,3 +1479,23 @@ us:ga:census-county:13077,GA,2026-10-21T06:36:35+00:00,Coweta County Georgia off
 us:hi:census-county:15009,HI,2026-10-21T06:36:35+00:00,Maui County Hawaii official election results county clerk elections,completed_no_new_urls
 us:mi:county:houghton,MI,2026-10-21T06:36:35+00:00,Houghton County Michigan official election results county clerk,observed_link_candidate
 us:mn:census-county:27061,MN,2026-10-21T06:36:35+00:00,Itasca County Minnesota official election results auditor elections,observed_link_candidate
+us:ne:census-county:31051,NE,2026-10-21T07:06:58+00:00,Dixon County Nebraska official election results county clerk,observed_link_candidate
+us:nj:census-county:34009,NJ,2026-10-21T07:06:58+00:00,Cape May County New Jersey official election results county clerk | site:capemaycountynj.gov elections results Cape May County,observed_link_candidate
+us:or:census-county:41053,OR,2026-10-21T07:06:58+00:00,Polk County Oregon official election results elections,observed_link_candidate
+us:ri:priority-roster:portsmouth,RI,2026-10-21T07:06:58+00:00,Portsmouth Rhode Island official election results town clerk,observed_link_candidate
+us:sd:census-county:46053,SD,2026-10-21T07:06:58+00:00,Gregory County South Dakota official election results auditor | site:gregorycountysd.gov elections results Gregory County auditor,completed_no_new_urls
+us:tn:census-county:47049,TN,2026-10-21T07:06:58+00:00,Fentress County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48049,TX,2026-10-21T07:06:58+00:00,Brown County Texas official election results elections administrator,observed_link_candidate
+us:ut:census-county:49049,UT,2026-10-21T07:06:58+00:00,Utah County Utah official election results clerk,observed_link_candidate
+us:wy:census-county:56003,WY,2026-10-21T07:06:58+00:00,Big Horn County Wyoming official election results clerk,completed_no_new_urls
+us:ct:municipality:derby,CT,2026-10-21T07:06:58+00:00,Derby Connecticut official election results town clerk,observed_link_candidate
+us:ia:census-county:19071,IA,2026-10-21T07:06:58+00:00,Fremont County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16071,ID,2026-10-21T07:06:58+00:00,Oneida County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17071,IL,2026-10-21T07:06:58+00:00,Henderson County Illinois official election results county clerk | Henderson County Illinois official county clerk elections results,completed_no_new_urls
+us:in:census-county:18071,IN,2026-10-21T07:06:58+00:00,Jackson County Indiana official election results clerk | Jackson County Indiana official county clerk election results,completed_no_new_urls
+us:ks:census-county:20071,KS,2026-10-21T07:06:58+00:00,Greeley County Kansas official election results county clerk,observed_link_candidate
+us:ky:census-county:21069,KY,2026-10-21T07:06:58+00:00,Fleming County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22071,LA,2026-10-21T07:06:58+00:00,Orleans Parish Louisiana official election results clerk court,observed_link_candidate
+us:ma:priority-roster:bolton,MA,2026-10-21T07:06:58+00:00,Bolton Massachusetts official election results town clerk,observed_link_candidate
+us:md:census-county:24017,MD,2026-10-21T07:06:58+00:00,Charles County Maryland official election results board elections,observed_link_candidate
+us:me:municipality:bethel,ME,2026-10-21T07:06:58+00:00,Bethel Maine official election results town clerk,observed_link_candidate
