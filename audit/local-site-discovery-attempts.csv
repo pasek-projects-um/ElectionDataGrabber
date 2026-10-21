@@ -1559,3 +1559,23 @@ us:hi:census-county:15003,HI,2026-10-21T10:49:10+00:00,Honolulu County Hawaii of
 us:mi:county:ingham,MI,2026-10-21T10:49:10+00:00,Ingham County Michigan official election results clerk,observed_link_candidate
 us:mn:census-county:27065,MN,2026-10-21T10:49:10+00:00,Kanabec County Minnesota official election results auditor | site:kanabeccountymn.gov election results Kanabec County,completed_no_new_urls
 us:mo:census-county:29059,MO,2026-10-21T10:49:10+00:00,Dallas County Missouri official election results clerk | site:dallascountymo.gov election results Dallas County Missouri,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-10-21T11:51:09+00:00,Alaska Division Elections official 2026 election results archive | site:elections.alaska.gov 2026 certified results precinct detail files,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-10-21T11:51:09+00:00,District of Columbia Board of Elections official results archive | site:dcboe.org election results data,completed_no_new_urls
+us:de:census-county:10001,DE,2026-10-21T11:51:09+00:00,Kent County Delaware official election results archive | site:elections.delaware.gov Kent County results,completed_no_new_urls
+us:ms:census-county:28057,MS,2026-10-21T11:51:09+00:00,Itawamba County Mississippi official election results | Itawamba County election results clerk official,completed_no_new_urls
+us:mt:census-county:30055,MT,2026-10-21T11:51:09+00:00,McCone County Montana official election results,observed_link_candidate
+us:nv:census-county:32019,NV,2026-10-21T11:51:09+00:00,Lyon County Nevada official election results archive,observed_link_candidate
+us:va:census-county:51051,VA,2026-10-21T11:51:09+00:00,Dickenson County Virginia official election results,observed_link_candidate
+us:vt:priority-roster:bridport,VT,2026-10-21T11:51:09+00:00,Bridport Vermont official election results | site:bridportvt.org election results,observed_link_candidate
+us:wa:census-county:53051,WA,2026-10-21T11:51:09+00:00,Pend Oreille County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:almena-6740c9f3da4d803e,WI,2026-10-21T11:51:09+00:00,Village of Almena Wisconsin official election results | site:villageofalmenawi.com election results,observed_link_candidate
+us:wv:census-county:54051,WV,2026-10-21T11:51:09+00:00,Marshall County West Virginia official election results | site:marshallcountywv.gov election results,observed_link_candidate
+us:ct:municipality:east-granby,CT,2026-10-21T11:51:09+00:00,East Granby Connecticut official election results,observed_link_candidate
+us:ia:census-county:19075,IA,2026-10-21T11:51:09+00:00,Grundy County Iowa official election results | site:grundycounty.iowa.gov election results,completed_no_new_urls
+us:id:census-county:16075,ID,2026-10-21T11:51:09+00:00,Payette County Idaho official election results,observed_link_candidate
+us:il:census-county:17075,IL,2026-10-21T11:51:09+00:00,Iroquois County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18075,IN,2026-10-21T11:51:09+00:00,Jay County Indiana official election results | site:in.gov/counties/jay election results,observed_link_candidate
+us:ks:census-county:20075,KS,2026-10-21T11:51:09+00:00,Hamilton County Kansas official election results,observed_link_candidate
+us:ky:census-county:21073,KY,2026-10-21T11:51:09+00:00,Franklin County Kentucky official election results,observed_link_candidate
+us:la:census-county:22075,LA,2026-10-21T11:51:09+00:00,Plaquemines Parish Louisiana official election results | Plaquemines clerk election results official,observed_link_candidate
+us:ma:priority-roster:bourne,MA,2026-10-21T11:51:09+00:00,Bourne Massachusetts official election results | site:bourne-ma.gov election results,observed_link_candidate
