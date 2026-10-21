@@ -1579,3 +1579,23 @@ us:ks:census-county:20075,KS,2026-10-21T11:51:09+00:00,Hamilton County Kansas of
 us:ky:census-county:21073,KY,2026-10-21T11:51:09+00:00,Franklin County Kentucky official election results,observed_link_candidate
 us:la:census-county:22075,LA,2026-10-21T11:51:09+00:00,Plaquemines Parish Louisiana official election results | Plaquemines clerk election results official,observed_link_candidate
 us:ma:priority-roster:bourne,MA,2026-10-21T11:51:09+00:00,Bourne Massachusetts official election results | site:bourne-ma.gov election results,observed_link_candidate
+us:md:census-county:24021,MD,2026-10-21T12:18:02+00:00,Frederick County Maryland official election results archive board elections,observed_link_candidate
+us:me:municipality:blaine,ME,2026-10-21T12:18:02+00:00,"Blaine Maine official town election results clerk | site:blainemaine.org elections results OR ""Town of Blaine"" Maine official",observed_link_candidate
+us:nc:census-county:37055,NC,2026-10-21T12:18:02+00:00,Dare County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38055,ND,2026-10-21T12:18:02+00:00,McLean County North Dakota official election results auditor,observed_link_candidate
+us:nh:priority-roster:bristol,NH,2026-10-21T12:18:02+00:00,Bristol New Hampshire official election results town clerk,observed_link_candidate
+us:nm:census-county:35049,NM,2026-10-21T12:18:02+00:00,Santa Fe County New Mexico official election results archive,observed_link_candidate
+us:ny:census-county:36053,NY,2026-10-21T12:18:02+00:00,Madison County New York official election results board elections,observed_link_candidate
+us:oh:county:greene,OH,2026-10-21T12:18:02+00:00,Greene County Ohio official election results board elections archive,observed_link_candidate
+us:ok:census-county:40053,OK,2026-10-21T12:18:02+00:00,Grant County Oklahoma official election results county election board,observed_link_candidate
+us:pa:county:forest,PA,2026-10-21T12:18:02+00:00,Forest County Pennsylvania official election results elections office | site:co.forest.pa.us election results Forest County Pennsylvania,observed_link_candidate
+us:sc:census-county:45053,SC,2026-10-21T12:18:02+00:00,Jasper County South Carolina official election results board elections,observed_link_candidate
+us:al:census-county:01083,AL,2026-10-21T12:18:02+00:00,Limestone County Alabama official election results probate judge,observed_link_candidate
+us:ar:census-county:05083,AR,2026-10-21T12:18:02+00:00,Logan County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04015,AZ,2026-10-21T12:18:02+00:00,Mohave County Arizona official election results archive 2026,observed_link_candidate
+us:ca:census-county:06081,CA,2026-10-21T12:18:02+00:00,San Mateo County California official election results archive,observed_link_candidate
+us:co:census-county:08081,CO,2026-10-21T12:18:02+00:00,Moffat County Colorado official election results clerk recorder | site:moffatcounty.colorado.gov elections results clerk recorder Moffat County,observed_link_candidate
+us:fl:census-county:12083,FL,2026-10-21T12:18:02+00:00,Marion County Florida official election results archive supervisor elections,observed_link_candidate
+us:ga:census-county:13083,GA,2026-10-21T12:18:02+00:00,Dade County Georgia official election results elections board,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-21T12:18:02+00:00,Kauai County Hawaii official election results alternative archive,completed_no_new_urls
+us:mi:county:ionia,MI,2026-10-21T12:18:02+00:00,Ionia County Michigan official election results clerk archive,observed_link_candidate
