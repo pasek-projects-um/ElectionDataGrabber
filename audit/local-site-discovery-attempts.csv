@@ -1599,3 +1599,23 @@ us:fl:census-county:12083,FL,2026-10-21T12:18:02+00:00,Marion County Florida off
 us:ga:census-county:13083,GA,2026-10-21T12:18:02+00:00,Dade County Georgia official election results elections board,observed_link_candidate
 us:hi:census-county:15007,HI,2026-10-21T12:18:02+00:00,Kauai County Hawaii official election results alternative archive,completed_no_new_urls
 us:mi:county:ionia,MI,2026-10-21T12:18:02+00:00,Ionia County Michigan official election results clerk archive,observed_link_candidate
+us:mn:census-county:27067,MN,2026-10-21T10:18:00-04:00,Kandiyohi County Minnesota official election results archive | Kandiyohi County MN election night results county auditor,observed_link_candidate
+us:mo:census-county:29061,MO,2026-10-21T10:18:00-04:00,Daviess County Missouri official election results archive | Daviess County MO election night reporting official,observed_link_candidate
+us:ne:census-county:31055,NE,2026-10-21T10:18:00-04:00,Douglas County Nebraska official election results archive | Douglas County NE election night results official dashboard,observed_link_candidate
+us:nj:census-county:34013,NJ,2026-10-21T10:18:00-04:00,Essex County New Jersey official election results archive | Essex County NJ election night results official dashboard,observed_link_candidate
+us:or:census-county:41057,OR,2026-10-21T10:18:00-04:00,Tillamook County Oregon official election results archive | Tillamook County OR election night results official,observed_link_candidate
+us:ri:priority-roster:richmond,RI,2026-10-21T10:18:00-04:00,Richmond Rhode Island official election results archive | Richmond RI local referendum election results official,observed_link_candidate
+us:sd:census-county:46057,SD,2026-10-21T10:18:00-04:00,Hamlin County South Dakota official election results archive | Hamlin County SD local election results official,completed_no_new_urls
+us:tn:census-county:47053,TN,2026-10-21T10:18:00-04:00,Gibson County Tennessee official election results archive | Gibson County TN election night results official,observed_link_candidate
+us:tx:census-county:48053,TX,2026-10-21T10:18:00-04:00,Burnet County Texas official election results archive | Burnet County TX election night results official dashboard,observed_link_candidate
+us:ut:census-county:49053,UT,2026-10-21T10:18:00-04:00,Washington County Utah official election results archive | Washington County UT election night results official dashboard,observed_link_candidate
+us:wy:census-county:56007,WY,2026-10-21T10:18:00-04:00,Carbon County Wyoming official election results archive | Carbon County WY election night results official dashboard,observed_link_candidate
+us:ct:municipality:east-haddam,CT,2026-10-21T10:18:00-04:00,East Haddam Connecticut official election results archive | East Haddam CT municipal election results official,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-21T10:18:00-04:00,New Castle County Delaware official election results archive | New Castle County DE election night results official,completed_no_new_urls
+us:ia:census-county:19077,IA,2026-10-21T10:18:00-04:00,Guthrie County Iowa official election results archive | Guthrie County IA election night results official,observed_link_candidate
+us:id:census-county:16077,ID,2026-10-21T10:18:00-04:00,Power County Idaho official election results archive | Power County ID election night results official county,observed_link_candidate
+us:il:census-county:17077,IL,2026-10-21T10:18:00-04:00,Jackson County Illinois official election results archive | Jackson County IL election night results official,observed_link_candidate
+us:in:census-county:18077,IN,2026-10-21T10:18:00-04:00,Jefferson County Indiana official election results archive | Jefferson County IN election night results official,observed_link_candidate
+us:ks:census-county:20077,KS,2026-10-21T10:18:00-04:00,Harper County Kansas official election results archive | Harper County KS election night results official,observed_link_candidate
+us:ky:census-county:21075,KY,2026-10-21T10:18:00-04:00,Fulton County Kentucky official election results archive | Fulton County KY election night results official,observed_link_candidate
+us:la:census-county:22077,LA,2026-10-21T10:18:00-04:00,Pointe Coupee Parish Louisiana official election results archive | Pointe Coupee Parish LA election night results official,observed_link_candidate
