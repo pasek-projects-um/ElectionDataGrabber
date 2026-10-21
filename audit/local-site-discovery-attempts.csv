@@ -1539,3 +1539,23 @@ us:la:census-county:22073,LA,2026-10-21T09:36:33+00:00,Ouachita Parish Louisiana
 us:ma:priority-roster:boston,MA,2026-10-21T09:36:33+00:00,Boston Massachusetts official election results elections department archive,observed_link_candidate
 us:md:census-county:24019,MD,2026-10-21T09:36:33+00:00,Dorchester County Maryland official election results board elections,observed_link_candidate
 us:me:municipality:biddeford,ME,2026-10-21T09:36:33+00:00,Biddeford Maine official election results city clerk,observed_link_candidate
+us:ne:census-county:31053,NE,2026-10-21T10:49:10+00:00,Dodge County Nebraska official election results clerk,observed_link_candidate
+us:nj:census-county:34011,NJ,2026-10-21T10:49:10+00:00,Cumberland County New Jersey official election results county clerk,observed_link_candidate
+us:or:census-county:41055,OR,2026-10-21T10:49:10+00:00,Sherman County Oregon official election results clerk | site:shermancountyor.gov election results Sherman County Oregon,observed_link_candidate
+us:ri:priority-roster:providence,RI,2026-10-21T10:49:10+00:00,Providence Rhode Island official election results city,observed_link_candidate
+us:sd:census-county:46055,SD,2026-10-21T10:49:10+00:00,Haakon County South Dakota official election results auditor,completed_no_new_urls
+us:tn:census-county:47051,TN,2026-10-21T10:49:10+00:00,Franklin County Tennessee official election results election commission,observed_link_candidate
+us:tx:census-county:48051,TX,2026-10-21T10:49:10+00:00,Burleson County Texas official election results elections,observed_link_candidate
+us:ut:census-county:49051,UT,2026-10-21T10:49:10+00:00,Wasatch County Utah official election results clerk | site:wasatchcounty.gov election results Wasatch County Utah,observed_link_candidate
+us:wy:census-county:56005,WY,2026-10-21T10:49:10+00:00,Campbell County Wyoming official election results clerk,observed_link_candidate
+us:al:census-county:01081,AL,2026-10-21T10:49:10+00:00,Lee County Alabama official election results probate | site:leeco.us election results Lee County Alabama,completed_no_new_urls
+us:ar:census-county:05081,AR,2026-10-21T10:49:10+00:00,Little River County Arkansas official election results clerk | site:lrcounty.org election results Little River County Arkansas,observed_link_candidate
+us:az:census-county:04013,AZ,2026-10-21T10:49:10+00:00,Maricopa County Arizona official election results elections,observed_link_candidate
+us:ca:census-county:06079,CA,2026-10-21T10:49:10+00:00,San Luis Obispo County California official election results clerk recorder,observed_link_candidate
+us:co:census-county:08079,CO,2026-10-21T10:49:10+00:00,Mineral County Colorado official election results clerk,blocked_by_access_control
+us:fl:census-county:12081,FL,2026-10-21T10:49:10+00:00,Manatee County Florida official election results supervisor elections | site:votemanatee.gov election results Manatee County,observed_link_candidate
+us:ga:census-county:13081,GA,2026-10-21T10:49:10+00:00,Crisp County Georgia official election results board elections | site:crispcounty.com election results Crisp County Georgia,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-21T10:49:10+00:00,Honolulu County Hawaii official election results elections,completed_no_new_urls
+us:mi:county:ingham,MI,2026-10-21T10:49:10+00:00,Ingham County Michigan official election results clerk,observed_link_candidate
+us:mn:census-county:27065,MN,2026-10-21T10:49:10+00:00,Kanabec County Minnesota official election results auditor | site:kanabeccountymn.gov election results Kanabec County,completed_no_new_urls
+us:mo:census-county:29059,MO,2026-10-21T10:49:10+00:00,Dallas County Missouri official election results clerk | site:dallascountymo.gov election results Dallas County Missouri,completed_no_new_urls
