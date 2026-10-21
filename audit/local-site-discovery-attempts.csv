@@ -1619,3 +1619,23 @@ us:in:census-county:18077,IN,2026-10-21T10:18:00-04:00,Jefferson County Indiana 
 us:ks:census-county:20077,KS,2026-10-21T10:18:00-04:00,Harper County Kansas official election results archive | Harper County KS election night results official,observed_link_candidate
 us:ky:census-county:21075,KY,2026-10-21T10:18:00-04:00,Fulton County Kentucky official election results archive | Fulton County KY election night results official,observed_link_candidate
 us:la:census-county:22077,LA,2026-10-21T10:18:00-04:00,Pointe Coupee Parish Louisiana official election results archive | Pointe Coupee Parish LA election night results official,observed_link_candidate
+us:ma:priority-roster:boxborough,MA,2026-10-21T10:40:13-04:00,"""BOXBOROUGH"" Massachusetts official election results || ""BOXBOROUGH"" Massachusetts election results archive town clerk",observed_link_candidate
+us:ms:census-county:28059,MS,2026-10-21T10:40:13-04:00,"""Jackson County"" Mississippi official election results || ""Jackson County"" Mississippi election results archive circuit clerk",observed_link_candidate
+us:mt:census-county:30057,MT,2026-10-21T10:40:13-04:00,"""Madison County"" Montana official election results || ""Madison County"" Montana election results archive clerk recorder",observed_link_candidate
+us:nv:census-county:32021,NV,2026-10-21T10:40:13-04:00,"""Mineral County"" Nevada official election results || ""Mineral County"" Nevada election results archive clerk",observed_link_candidate
+us:va:census-county:51053,VA,2026-10-21T10:40:13-04:00,"""Dinwiddie County"" Virginia official election results || ""Dinwiddie County"" Virginia election results archive registrar",observed_link_candidate
+us:vt:priority-roster:brighton,VT,2026-10-21T10:40:13-04:00,"""Brighton"" Vermont official election results town clerk || ""Brighton"" Vermont election results archive",observed_link_candidate
+us:wa:census-county:53053,WA,2026-10-21T10:40:13-04:00,"""Pierce County"" Washington official election results || ""Pierce County"" Washington election results archive auditor",observed_link_candidate
+us:wi:ltsb2026:almond-aae3186fc4b24c28,WI,2026-10-21T10:40:13-04:00,"""Village of Almond"" Wisconsin official election results || ""Village of Almond"" Wisconsin election results archive clerk",observed_link_candidate
+us:wv:census-county:54053,WV,2026-10-21T10:40:13-04:00,"""Mason County"" West Virginia official election results || ""Mason County"" West Virginia election results archive county clerk",observed_link_candidate
+us:al:census-county:01085,AL,2026-10-21T10:40:13-04:00,"""Lowndes County"" Alabama official election results || ""Lowndes County"" Alabama election results archive probate",observed_link_candidate
+us:ar:census-county:05085,AR,2026-10-21T10:40:13-04:00,"""Lonoke County"" Arkansas official election results || ""Lonoke County"" Arkansas election results archive county clerk",observed_link_candidate
+us:az:census-county:04017,AZ,2026-10-21T10:40:13-04:00,"""Navajo County"" Arizona official election results || ""Navajo County"" Arizona election results archive recorder",completed_no_new_urls
+us:ca:census-county:06083,CA,2026-10-21T10:40:13-04:00,"""Santa Barbara County"" California official election results || ""Santa Barbara County"" California election results archive",observed_link_candidate
+us:co:census-county:08083,CO,2026-10-21T10:40:13-04:00,"""Montezuma County"" Colorado official election results || ""Montezuma County"" Colorado election results archive clerk",observed_link_candidate
+us:fl:census-county:12085,FL,2026-10-21T10:40:13-04:00,"""Martin County"" Florida official election results || ""Martin County"" Florida election results archive supervisor elections",observed_link_candidate
+us:ga:census-county:13085,GA,2026-10-21T10:40:13-04:00,"""Dawson County"" Georgia official election results || ""Dawson County"" Georgia election results archive elections office",observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-21T10:40:13-04:00,"""Maui County"" Hawaii official election results || ""Maui County"" Hawaii election results archive clerk",completed_no_new_urls
+us:md:census-county:24023,MD,2026-10-21T10:40:13-04:00,"""Garrett County"" Maryland official election results || ""Garrett County"" Maryland election results archive board elections",observed_link_candidate
+us:me:municipality:blue-hill,ME,2026-10-21T10:40:13-04:00,"""Blue Hill"" Maine official election results town clerk || ""Blue Hill"" Maine election results archive",observed_link_candidate
+us:mi:county:iosco,MI,2026-10-21T10:40:13-04:00,"""Iosco County"" Michigan official election results || ""Iosco County"" Michigan election results archive clerk",observed_link_candidate
