@@ -1639,3 +1639,23 @@ us:hi:census-county:15009,HI,2026-10-21T10:40:13-04:00,"""Maui County"" Hawaii o
 us:md:census-county:24023,MD,2026-10-21T10:40:13-04:00,"""Garrett County"" Maryland official election results || ""Garrett County"" Maryland election results archive board elections",observed_link_candidate
 us:me:municipality:blue-hill,ME,2026-10-21T10:40:13-04:00,"""Blue Hill"" Maine official election results town clerk || ""Blue Hill"" Maine election results archive",observed_link_candidate
 us:mi:county:iosco,MI,2026-10-21T10:40:13-04:00,"""Iosco County"" Michigan official election results || ""Iosco County"" Michigan election results archive clerk",observed_link_candidate
+us:nc:census-county:37057,NC,2026-10-21T11:37:13-04:00,Davidson County NC official election results archive | site-specific official election results or elections,observed_link_candidate
+us:nd:census-county:38057,ND,2026-10-21T11:37:13-04:00,Mercer County ND official election results archive | site-specific official election results or elections,observed_link_candidate
+us:nh:priority-roster:brookfield,NH,2026-10-21T11:37:13-04:00,Brookfield NH official election results archive | site-specific official election results or elections,observed_link_candidate
+us:nm:census-county:35051,NM,2026-10-21T11:37:13-04:00,Sierra County NM official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:ny:census-county:36055,NY,2026-10-21T11:37:13-04:00,Monroe County NY official election results archive | site-specific official election results or elections,observed_link_candidate
+us:oh:county:guernsey,OH,2026-10-21T11:37:13-04:00,Guernsey OH official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ok:census-county:40055,OK,2026-10-21T11:37:13-04:00,Greer County OK official election results archive | site-specific official election results or elections,observed_link_candidate
+us:pa:county:franklin,PA,2026-10-21T11:37:13-04:00,Franklin PA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:sc:census-county:45055,SC,2026-10-21T11:37:13-04:00,Kershaw County SC official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ct:municipality:east-hampton,CT,2026-10-21T11:37:13-04:00,East Hampton CT official election results archive | site-specific official election results or elections,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-21T11:37:13-04:00,Sussex County DE official election results archive | site-specific official election results or elections,completed_no_new_urls
+us:ia:census-county:19079,IA,2026-10-21T11:37:13-04:00,Hamilton County IA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:id:census-county:16079,ID,2026-10-21T11:37:13-04:00,Shoshone County ID official election results archive | site-specific official election results or elections,observed_link_candidate
+us:il:census-county:17079,IL,2026-10-21T11:37:13-04:00,Jasper County IL official election results archive | site-specific official election results or elections,observed_link_candidate
+us:in:census-county:18079,IN,2026-10-21T11:37:13-04:00,Jennings County IN official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ks:census-county:20079,KS,2026-10-21T11:37:13-04:00,Harvey County KS official election results archive | site-specific official election results or elections,observed_link_candidate
+us:ky:census-county:21077,KY,2026-10-21T11:37:13-04:00,Gallatin County KY official election results archive | site-specific official election results or elections,observed_link_candidate
+us:la:census-county:22079,LA,2026-10-21T11:37:13-04:00,Rapides Parish LA official election results archive | site-specific official election results or elections,observed_link_candidate
+us:mn:census-county:27069,MN,2026-10-21T11:37:13-04:00,Kittson County MN official election results archive | site-specific official election results or elections,observed_link_candidate
+us:mo:census-county:29063,MO,2026-10-21T11:37:13-04:00,DeKalb County MO official election results archive | site-specific official election results or elections,observed_link_candidate
