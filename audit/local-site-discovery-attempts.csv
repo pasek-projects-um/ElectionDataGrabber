@@ -1459,3 +1459,23 @@ us:de:census-county:10001,DE,2026-10-21T05:35:46+00:00,Kent County Delaware offi
 us:fl:census-county:12075,FL,2026-10-21T05:35:46+00:00,Levy County Florida official election results supervisor archive,observed_link_candidate
 us:ga:census-county:13075,GA,2026-10-21T05:35:46+00:00,Cook County Georgia official election results elections office archive,observed_link_candidate
 us:hi:census-county:15007,HI,2026-10-21T05:35:46+00:00,Kauai County Hawaii official election results historical alternative,observed_link_candidate
+us:nc:census-county:37051,NC,2026-10-21T06:36:35+00:00,Cumberland County North Carolina official election results board elections,observed_link_candidate
+us:nd:census-county:38051,ND,2026-10-21T06:36:35+00:00,McIntosh County North Dakota official election results auditor elections,observed_link_candidate
+us:nh:priority-roster:brentwood,NH,2026-10-21T06:36:35+00:00,Brentwood New Hampshire official election results town clerk,observed_link_candidate
+us:nm:census-county:35045,NM,2026-10-21T06:36:35+00:00,San Juan County New Mexico official election results county clerk,observed_link_candidate
+us:ny:census-county:36049,NY,2026-10-21T06:36:35+00:00,Lewis County New York official election results board elections,observed_link_candidate
+us:oh:county:gallia,OH,2026-10-21T06:36:35+00:00,Gallia County Ohio official election results board elections,observed_link_candidate
+us:ok:census-county:40049,OK,2026-10-21T06:36:35+00:00,Garvin County Oklahoma official election results election board,completed_no_new_urls
+us:pa:county:erie,PA,2026-10-21T06:36:35+00:00,Erie County Pennsylvania official election results elections,observed_link_candidate
+us:sc:census-county:45049,SC,2026-10-21T06:36:35+00:00,Hampton County South Carolina official election results election commission,observed_link_candidate
+us:al:census-county:01077,AL,2026-10-21T06:36:35+00:00,Lauderdale County Alabama official election results probate elections,observed_link_candidate
+us:ar:census-county:05077,AR,2026-10-21T06:36:35+00:00,Lee County Arkansas official election results county clerk,completed_no_new_urls
+us:az:census-county:04011,AZ,2026-10-21T06:36:35+00:00,Greenlee County Arizona official election results elections,completed_no_new_urls
+us:ca:census-county:06075,CA,2026-10-21T06:36:35+00:00,San Francisco County California official election results department elections,blocked_access
+us:co:census-county:08075,CO,2026-10-21T06:36:35+00:00,Logan County Colorado official election results clerk recorder,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-21T06:36:35+00:00,New Castle County Delaware official election results department elections,completed_no_new_urls
+us:fl:census-county:12077,FL,2026-10-21T06:36:35+00:00,Liberty County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13077,GA,2026-10-21T06:36:35+00:00,Coweta County Georgia official election results elections,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-21T06:36:35+00:00,Maui County Hawaii official election results county clerk elections,completed_no_new_urls
+us:mi:county:houghton,MI,2026-10-21T06:36:35+00:00,Houghton County Michigan official election results county clerk,observed_link_candidate
+us:mn:census-county:27061,MN,2026-10-21T06:36:35+00:00,Itasca County Minnesota official election results auditor elections,observed_link_candidate
