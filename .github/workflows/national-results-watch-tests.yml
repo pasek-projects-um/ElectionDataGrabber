@@ -1,0 +1,26 @@
+name: National watch regression tests
+on:
+  pull_request:
+    paths:
+      - 'src/election_data_grabber/**'
+      - 'scripts/**'
+      - 'tests/test_discovery_watch.py'
+      - '.github/workflows/national-results-watch*.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: national-watch-tests-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[dev]'
+      - run: pytest -q tests/test_discovery_watch.py tests/test_directory_watch_seeds.py tests/test_discovery_policy.py tests/test_national_election_startup_discovery.py
+      - run: ruff check scripts/watch_national_results.py scripts/package_watch_evidence.py src/election_data_grabber/discovery_watch.py src/election_data_grabber/national_discovery.py tests/test_discovery_watch.py

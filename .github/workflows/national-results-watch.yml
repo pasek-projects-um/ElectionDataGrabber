@@ -5,18 +5,23 @@ on:
     paths:
       - 'registry/local_site_discovery_leads.csv'
       - '.github/workflows/national-results-watch.yml'
+      - 'scripts/watch_national_results.py'
+      - 'scripts/package_watch_evidence.py'
+      - 'src/election_data_grabber/discovery_watch.py'
+      - 'src/election_data_grabber/national_discovery.py'
   workflow_dispatch:
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '7 * * * *'
 permissions:
   contents: read
+# Serialize checkpoint writers; retain the running batch when new work is queued.
 concurrency:
   group: national-results-discovery-watch
   cancel-in-progress: false
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,6 +30,15 @@ jobs:
       - run: pip install -e .
       - uses: actions/cache/restore@v4
         id: checkpoint
+        with:
+          path: |
+            watch-data/state.json
+            watch-data/authority-link-queue.csv
+          key: national-results-watch-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: national-results-watch-v2-
+      # One-time migration: retain the old checkpoint and archive its evidence once.
+      - uses: actions/cache/restore@v4
+        if: steps.checkpoint.outputs.cache-matched-key == ''
         with:
           path: watch-data
           key: national-results-watch-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -37,15 +51,22 @@ jobs:
           fi
       - name: Bounded discovery and follow-up
         run: |
-          timeout --signal=INT --kill-after=30s 20m python -m scripts.watch_national_results --directory-seeds watch-data/directory-seeds.csv --max-pages 200 --max-requests 600 --max-depth 2 --interval 21600
+          timeout --signal=TERM --kill-after=30s 12m python -u -m scripts.watch_national_results --directory-seeds watch-data/directory-seeds.csv --time-budget 480 --max-pages 40 --max-requests 100 --max-depth 2 --interval 21600
+      - name: Package run evidence
+        if: always()
+        run: python -m scripts.package_watch_evidence
       - uses: actions/cache/save@v4
         if: always()
         with:
-          path: watch-data
-          key: national-results-watch-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            watch-data/state.json
+            watch-data/authority-link-queue.csv
+          key: national-results-watch-v2-${{ github.run_id }}-${{ github.run_attempt }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: national-results-watch-${{ github.run_id }}-${{ github.run_attempt }}
-          path: watch-data/
-          retention-days: 14
+          path: watch-artifact/
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 90

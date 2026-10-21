@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import time
 from collections import Counter, defaultdict
@@ -29,6 +30,15 @@ USER_AGENT = "ElectionDataGrabber"
 ARTIFACT_PATH = re.compile(r"\.(pdf|csv|xlsx?|xml|json|zip|js|css)$", re.IGNORECASE)
 
 
+class TimeBudgetExhausted(Exception):
+    pass
+
+
+class HostDeferred(Exception):
+    def __init__(self, seconds):
+        self.seconds = seconds
+
+
 class RobotsUnavailable(ValueError):
     pass
 
@@ -43,6 +53,48 @@ class WatchFetcher(Fetcher):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.robots = {}
+        self.robots_cache = {}
+        self.deadline = None
+        self.stopping = False
+
+    def restore_policy(self, policy):
+        self.host_delays.update(policy.get("host_delays", {}))
+        for host, timestamp in policy.get("last_request_at", {}).items():
+            self.last[host] = time.monotonic() - max(0, time.time() - timestamp)
+        for origin, cached in policy.get("robots", {}).items():
+            host = urlsplit(origin).hostname
+            ttl = max(86400, 2 * self.host_delays.get(host, self.delay))
+            if time.time() - cached["fetched_at"] >= ttl:
+                continue
+            parser = None
+            if cached["text"] is not None:
+                parser = RobotFileParser()
+                parser.parse(cached["text"].splitlines())
+            self.robots[origin] = parser
+            self.robots_cache[origin] = cached
+
+    def export_policy(self):
+        return {"host_delays": self.host_delays,
+                "last_request_at": {host: time.time() - (time.monotonic() - timestamp)
+                                    for host, timestamp in self.last.items()},
+                "robots": self.robots_cache}
+
+    def check_budget(self):
+        if self.stopping or (self.deadline is not None and time.monotonic() >= self.deadline):
+            raise TimeBudgetExhausted()
+
+    def wait_for_host(self, host):
+        self.check_budget()
+        delay = max(0, self.host_delays.get(host, self.delay)
+                    - (time.monotonic() - self.last.get(host, 0)))
+        if self.deadline is not None and time.monotonic() + delay + 20 >= self.deadline:
+            raise HostDeferred(delay)
+        # Short waits make termination signals cooperative.
+        end = time.monotonic() + delay
+        while time.monotonic() < end:
+            self.check_budget()
+            time.sleep(min(0.25, max(0, end - time.monotonic())))
+        self.check_budget()
 
     def check_robots(self, url):
         parsed = urlsplit(url)
@@ -50,15 +102,15 @@ class WatchFetcher(Fetcher):
         if origin not in self.robots:
             if self.remaining <= 0:
                 raise RequestBudgetExhausted()
+            host = parsed.hostname
+            self.wait_for_host(host)
             self.remaining -= 1
             self.requests += 1
-            host = parsed.hostname
-            time.sleep(max(0, self.host_delays.get(host, self.delay)
-                           - (time.monotonic() - self.last.get(host, 0))))
             self.last[host] = time.monotonic()
             with self.client.stream("GET", origin + "/robots.txt") as response:
                 if response.status_code == 404:
                     self.robots[origin] = None
+                    self.robots_cache[origin] = {"text": None, "fetched_at": time.time()}
                 elif response.status_code in (401, 403):
                     raise RobotsDenied()
                 elif response.status_code != 200:
@@ -66,6 +118,7 @@ class WatchFetcher(Fetcher):
                 else:
                     data = bytearray()
                     for chunk in response.iter_bytes():
+                        self.check_budget()
                         data.extend(chunk)
                         if len(data) > 256_000:
                             raise RobotsUnavailable("Robots response exceeds byte limit")
@@ -77,6 +130,7 @@ class WatchFetcher(Fetcher):
                     parser = RobotFileParser()
                     parser.parse(text.splitlines())
                     self.robots[origin] = parser
+                    self.robots_cache[origin] = {"text": text, "fetched_at": time.time()}
         parser = self.robots[origin]
         if parser is not None:
             if not parser.can_fetch(USER_AGENT, url):
@@ -87,6 +141,7 @@ class WatchFetcher(Fetcher):
                 self.host_delays[host] = max(self.host_delays.get(host, self.delay), delay)
 
     def before_request(self, url):
+        self.check_budget()
         self.check_robots(url)
 
 
@@ -137,21 +192,27 @@ def choose_due(groups, pages, now, limit):
 
 
 def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max_pages=100,
-              retry_cap=86400, localities=None):
+              retry_cap=86400, localities=None, deadline=None, progress=None):
     if interval < 60 or max_pages < 1 or retry_cap < interval:
         raise ValueError("Invalid watch interval, page limit or retry cap")
+    if isinstance(fetch, WatchFetcher) and deadline is not None:
+        fetch.deadline = min(fetch.deadline, deadline) if fetch.deadline is not None else deadline
     snapshot_dir.mkdir(parents=True, exist_ok=True)
     state = json.loads(state_path.read_text()) if state_path.exists() else {
         "version": 1, "pages": {}, "candidates": {}, "events": [], "sequence": 0,
     }
     if state.get("version") != 1:
         raise ValueError("Unsupported watch state version")
+    if isinstance(fetch, WatchFetcher):
+        fetch.restore_policy(state.get("fetch_policy", {}))
     catalog = load_catalog()
     state.setdefault("authority_candidates", {})
     fingerprint_sha = hashlib.sha256(json.dumps(catalog, sort_keys=True).encode()).hexdigest()
     groups = seed_groups(seeds)
     selected = choose_due(groups, state["pages"], now, max_pages)
     statuses, events = Counter(), []
+    started = time.monotonic()
+    stop_reason = "page_limit" if len(selected) == max_pages else "due_queue_complete"
     requests_before = getattr(fetch, "requests", 0)
 
     def event(kind, url, page_url, digest=""):
@@ -163,6 +224,9 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
         state["events"].append(row)
 
     for url in selected:
+        if deadline is not None and time.monotonic() >= deadline:
+            stop_reason = "time_budget"
+            break
         page_event_start = len(events)
         previous = state["pages"].get(url, {})
         page = dict(previous, last_checked_at=now)
@@ -255,23 +319,33 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
                         if value not in record[key]:
                             record[key].append(value)
                 record["source_snapshot_sha256"] = digest
+                record["source_evidence_run_id"] = os.environ.get("GITHUB_RUN_ID", "local")
                 record["live_coverage"] = False
                 record["served_jurisdiction_verified"] = False
             for target in sorted(old - current) if not truncated else []:
                 event("link_not_observed_this_capture", target, url, digest)
+            page["evidence_run_id"] = os.environ.get("GITHUB_RUN_ID", "local")
             page.update(status="application_shell" if access == "application_shell" else "fetched",
                         snapshot_sha256=digest, final_url=final, last_success_at=now,
                         current_candidate_urls=sorted(current | old if truncated else current), failures=0,
                         next_check_at=now + interval, fingerprint_sha256=fingerprint_sha)
             page.pop("failure_class", None)
             page.pop("http_status", None)
-        except RequestBudgetExhausted:
+        except (TimeBudgetExhausted, KeyboardInterrupt):
+            stop_reason = "time_budget_or_signal"
             break
+        except RequestBudgetExhausted:
+            stop_reason = "request_budget"
+            break
+        except HostDeferred as exc:
+            page = dict(previous, next_check_at=now + (time.monotonic() - started) + max(60, exc.seconds),
+                        last_checked_at=now, status="host_deferred")
         except (httpx.HTTPError, httpx.InvalidURL, ValueError, KeyError) as exc:
             failures = previous.get("failures", 0) + 1
             status = "artifact_requires_inspection" if isinstance(exc, ArtifactNeedsInspection) else (
                 "robots_denied" if isinstance(exc, RobotsDenied) else
                 "robots_unresolved" if isinstance(exc, RobotsUnavailable) else "fetch_unresolved")
+            page["evidence_run_id"] = os.environ.get("GITHUB_RUN_ID", "local")
             page.update(status=status, failure_class=type(exc).__name__, failures=failures,
                         next_check_at=now + min(retry_cap, interval * 2 ** min(failures - 1, 10)))
             if isinstance(exc, httpx.HTTPStatusError):
@@ -290,8 +364,15 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
                 event_path.write_text(body)
         state["events"] = state["events"][-1000:]
         # Events and page checkpoint commit together so retries do not duplicate discovery.
+        if isinstance(fetch, WatchFetcher):
+            state["fetch_policy"] = fetch.export_policy()
         save(state_path, state)
-    summary = {"observed_at": now, "seed_pages": len(groups), "selected_due_pages": len(selected),
+        if progress:
+            progress({"checked_pages": sum(statuses.values()),
+                      "http_requests": getattr(fetch, "requests", 0),
+                      "elapsed_seconds": round(time.monotonic() - started, 2)})
+    summary = {"stop_reason": stop_reason,
+               "elapsed_seconds": round(time.monotonic() - started, 2), "observed_at": now, "seed_pages": len(groups), "selected_due_pages": len(selected),
                "checked_pages": sum(statuses.values()), "page_statuses": dict(statuses),
                "new_candidates": sum(e["kind"] == "candidate_discovered" for e in events),
                "events": len(events), "retained_candidates": len(state["candidates"]),
@@ -304,6 +385,8 @@ def run_watch(seeds, state_path, snapshot_dir, fetch, *, now, interval=3600, max
                    (max(0, now - state["pages"][url]["next_check_at"]) for url in groups
                     if url in state["pages"]), default=0),
                "live_sources_verified_this_run": 0, "fingerprint_sha256": fingerprint_sha}
+    if isinstance(fetch, WatchFetcher):
+        state["fetch_policy"] = fetch.export_policy()
     state["last_summary"] = summary
     save(state_path, state)
     return state, events, summary

@@ -126,8 +126,12 @@ def test_robots_failures_are_unresolved_and_preserve_state(tmp_path):
 
 def test_crawl_delay_is_scoped_to_declaring_host(monkeypatch):
     sleeps = []
-    monkeypatch.setattr("time.sleep", sleeps.append)
-    monkeypatch.setattr("time.monotonic", lambda: 100)
+    clock = [100.0]
+    def sleep(seconds):
+        sleeps.append(seconds)
+        clock[0] += seconds
+    monkeypatch.setattr("time.sleep", sleep)
+    monkeypatch.setattr("time.monotonic", lambda: clock[0])
 
     def transport(request):
         if request.url.path == "/robots.txt":
@@ -143,7 +147,8 @@ def test_crawl_delay_is_scoped_to_declaring_host(monkeypatch):
     try:
         fetch("https://slow.gov/")
         fetch("https://fast.gov/")
-        assert sleeps == [0, 30, 0, 1]
+        assert sum(sleeps) == 31
+        assert max(sleeps) <= 0.25
         assert fetch.delay == 1
     finally:
         fetch.close()
@@ -183,3 +188,138 @@ def test_followup_uses_observed_urls_and_obeys_depth_and_artifact_boundary(tmp_p
     followed = follow_candidates(SEEDS, state, 1)
     assert any(s["url"] == TARGET for s in followed)
     assert not any(s["url"].endswith(".csv") for s in followed)
+
+
+def test_deadline_preserves_checkpoint_and_pending_batch(tmp_path, monkeypatch):
+    import election_data_grabber.discovery_watch as module
+    ticks = iter([0, 0, 10, 10])
+    monkeypatch.setattr(module.time, 'monotonic', lambda: next(ticks, 10))
+    seeds = SEEDS + [{'url': 'https://other.gov/results', 'states': 'OH'}]
+    state, _, summary = run_watch(seeds, tmp_path / 'state.json', tmp_path / 'snapshots',
+                                 lambda url: (url, '<p>Election results</p>'),
+                                 now=100, interval=60, deadline=5)
+    assert summary['checked_pages'] == 1
+    assert summary['stop_reason'] == 'time_budget'
+    assert summary['remaining_due_pages'] == 1
+    assert json.loads((tmp_path / 'state.json').read_text()) == state
+    state, _, summary = run_watch(seeds, tmp_path / 'state.json', tmp_path / 'snapshots',
+                                 lambda url: (url, '<p>Election results</p>'),
+                                 now=101, interval=60, max_pages=1)
+    assert summary['checked_pages'] == 1
+    assert summary['unvisited_pages'] == 0
+
+
+def test_budget_exhaustion_does_not_mark_pending_page_checked(tmp_path):
+    from election_data_grabber.discovery_watch import TimeBudgetExhausted
+    def exhausted(url):
+        raise TimeBudgetExhausted()
+    state, _, summary = run_watch(SEEDS, tmp_path / 'state.json', tmp_path / 'snapshots',
+                                 exhausted, now=100)
+    assert not state['pages']
+    assert summary['checked_pages'] == 0
+    assert summary['remaining_due_pages'] == 1
+    assert summary['stop_reason'] == 'time_budget_or_signal'
+
+
+def test_long_crawl_delay_defers_without_sleeping(monkeypatch):
+    from election_data_grabber.discovery_watch import HostDeferred, TimeBudgetExhausted
+    fetch = WatchFetcher()
+    try:
+        monkeypatch.setattr('time.monotonic', lambda: 100)
+        fetch.deadline = 200
+        fetch.last['county.gov'] = 100
+        fetch.host_delays['county.gov'] = 3600
+        monkeypatch.setattr('time.sleep', lambda _: pytest.fail('must not sleep'))
+        with pytest.raises(HostDeferred):
+            fetch.wait_for_host('county.gov')
+        fetch.stopping = True
+        with pytest.raises(TimeBudgetExhausted):
+            fetch.wait_for_host('county.gov')
+    finally:
+        fetch.close()
+
+
+def test_deferred_host_does_not_starve_other_hosts(tmp_path):
+    from election_data_grabber.discovery_watch import HostDeferred
+    seeds = SEEDS + [{'url': 'https://other.gov/results', 'states': 'OH'}]
+    def fetch(url):
+        if url == URL:
+            raise HostDeferred(3600)
+        return url, '<p>Election results</p>'
+    state, _, summary = run_watch(seeds, tmp_path / 'state.json', tmp_path / 'snapshots',
+                                 fetch, now=100)
+    assert state['pages'][URL]['next_check_at'] == pytest.approx(3700)
+    assert state['pages']['https://other.gov/results']['status'] == 'fetched'
+    assert summary['page_statuses'] == {'host_deferred': 1, 'fetched': 1}
+    assert summary['live_sources_verified_this_run'] == 0
+
+
+def test_evidence_archive_and_compact_cache_contract(tmp_path):
+    import tarfile
+
+    from scripts.package_watch_evidence import package
+    watch(tmp_path / 'state', '<p>Election results</p>', 100)
+    manifest = package(tmp_path / 'state', tmp_path / 'artifact')
+    with tarfile.open(tmp_path / 'artifact/watch-evidence.tar.gz') as archive:
+        names = archive.getnames()
+    assert 'state.json' in names
+    assert any(name.startswith('snapshots/') for name in names)
+    assert any(name.startswith('events/') for name in names)
+    assert manifest['files'] == len(names)
+
+
+def test_deferred_crawl_delay_resumes_across_processes(tmp_path, monkeypatch):
+    clock = [10000.0]
+    monkeypatch.setattr('time.time', lambda: clock[0])
+    monkeypatch.setattr('time.monotonic', lambda: clock[0])
+    requested = []
+    def transport(request):
+        requested.append(str(request.url))
+        if request.url.path == '/robots.txt':
+            return httpx.Response(200, text='User-agent: *\nCrawl-delay: 3600\n')
+        return httpx.Response(200, text='<p>Election results</p>',
+                              headers={'content-type': 'text/html'})
+    def make_fetch():
+        fetch = WatchFetcher()
+        fetch.client.close()
+        fetch.client = httpx.Client(transport=httpx.MockTransport(transport))
+        return fetch
+    first = make_fetch()
+    try:
+        state, _, _ = run_watch(SEEDS, tmp_path / 'state.json', tmp_path / 'snapshots',
+                               first, now=clock[0], deadline=clock[0] + 480)
+    finally:
+        first.close()
+    assert state['pages'][URL]['status'] == 'host_deferred'
+    assert requested == ['https://county.gov/robots.txt']
+    clock[0] += 3601
+    second = make_fetch()
+    try:
+        state, _, summary = run_watch(SEEDS, tmp_path / 'state.json', tmp_path / 'snapshots',
+                                     second, now=clock[0], deadline=clock[0] + 480)
+    finally:
+        second.close()
+    assert state['pages'][URL]['status'] == 'fetched'
+    assert requested == ['https://county.gov/robots.txt', URL]
+    assert summary['http_requests'] == 1
+
+
+def test_termination_during_host_wait_exports_checkpoint(tmp_path, monkeypatch):
+    fetch = WatchFetcher()
+    clock = [100.0]
+    monkeypatch.setattr('time.monotonic', lambda: clock[0])
+    fetch.last['county.gov'] = 100
+    fetch.host_delays['county.gov'] = 30
+    def stop(seconds):
+        fetch.stopping = True
+        clock[0] += seconds
+    monkeypatch.setattr('time.sleep', stop)
+    try:
+        state, _, summary = run_watch(SEEDS, tmp_path / 'state.json', tmp_path / 'snapshots',
+                                     fetch, now=100, deadline=580)
+    finally:
+        fetch.close()
+    assert summary['stop_reason'] == 'time_budget_or_signal'
+    assert summary['http_requests'] == 0
+    assert summary['unvisited_pages'] == 1
+    assert json.loads((tmp_path / 'state.json').read_text()) == state

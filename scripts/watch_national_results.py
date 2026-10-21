@@ -4,6 +4,8 @@ import argparse
 import csv
 import fcntl
 import json
+import os
+import signal
 import time
 from contextlib import contextmanager
 from pathlib import Path
@@ -72,6 +74,8 @@ def main():
                         help="Follow observed HTML candidates on later passes, depth 0–3")
     parser.add_argument("--interval", type=int, default=3600,
                         help="Seconds before revisiting a successful page (minimum 60)")
+    parser.add_argument("--time-budget", type=float, default=480,
+                        help="Cooperative network budget in seconds; reserve time for exports")
     parser.add_argument("--max-pages", type=int, default=100)
     parser.add_argument("--max-requests", type=int, default=300)
     parser.add_argument("--max-bytes", type=int, default=1_000_000)
@@ -82,7 +86,7 @@ def main():
     args = parser.parse_args()
     if args.local_site_leads is None:
         args.local_site_leads = args.registry / "local_site_discovery_leads.csv"
-    if not (60 <= args.interval <= 86400 and 1 <= args.max_pages <= 1000
+    if not (1 <= args.time_budget <= 1200 and 60 <= args.interval <= 86400 and 1 <= args.max_pages <= 1000
             and 1 <= args.max_requests <= 3000 and args.delay >= 1
             and 1024 <= args.max_bytes <= 10_000_000 and 0 <= args.max_depth <= 3):
         parser.error("Invalid interval, page/request/byte budget, or host delay")
@@ -146,14 +150,21 @@ def main():
             seeds = [s for s in seeds if wanted.intersection(
                 value.strip() for value in s.get("states", s.get("state", "")).split("|"))]
         fetch = WatchFetcher(args.delay, max_bytes=args.max_bytes, max_requests=args.max_requests)
+        fetch.deadline = time.monotonic() + args.time_budget
+        def stop(signum, frame):
+            fetch.stopping = True
+        old_handlers = {sig: signal.signal(sig, stop) for sig in (signal.SIGINT, signal.SIGTERM)}
         try:
             state, _, summary = run_watch(
                 seeds, args.state_dir / "state.json", args.state_dir / "snapshots", fetch,
                 now=now, interval=args.interval, max_pages=args.max_pages,
-                localities=localities,
+                localities=localities, deadline=fetch.deadline,
+                progress=lambda row: print(json.dumps({"progress": row}), flush=True),
             )
         finally:
             fetch.close()
+            for sig, handler in old_handlers.items():
+                signal.signal(sig, handler)
         export_queue(args.state_dir / "candidate-queue.csv", state)
         authority_path = args.state_dir / "authority-link-queue.csv"
         authority_rows = list(state.get("authority_candidates", {}).values())
@@ -175,7 +186,13 @@ def main():
             r["discovery_status"] == "exhausted_for_now" for r in frontier)
         summary["quarantined_local_site_leads"] = len(quarantined)
         save(args.state_dir / "last-run.json", summary)
-        print(json.dumps(summary, sort_keys=True))
+        summary["checkpoint_bytes"] = state_path.stat().st_size
+        save(args.state_dir / "last-run.json", summary)
+        if os.environ.get("GITHUB_STEP_SUMMARY"):
+            with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as stream:
+                stream.write("### Discovery candidates (not verified results coverage)\n```json\n"
+                             + json.dumps(summary, indent=2, sort_keys=True) + "\n```\n")
+        print(json.dumps(summary, sort_keys=True), flush=True)
 
 
 if __name__ == "__main__":
