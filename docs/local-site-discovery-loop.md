@@ -1,7 +1,7 @@
 # Fresh local-site discovery loop
 
 Two independent schedules cooperate: the GitHub discovery watcher runs every
-half hour; the ChatGPT Election discovery loop runs hourly and performs fresh web
+hour; the ChatGPT Election discovery loop runs hourly and performs fresh web
 searches. The watcher alone does not search the web. Search scheduling is managed
 outside GitHub; check that automation separately from Actions.
 
@@ -49,7 +49,7 @@ Each search round reads `audit/authority-directory-national/unit-readiness.csv`,
 The next watcher checkout automatically reads the fresh-lead ledger, validates
 IDs/state/provenance and follows observed result links from these new starts.
 Updates to the lead ledger on main also trigger the watcher immediately; the
-half-hour schedule remains a fallback. Runs share the same concurrency group.
+hourly schedule remains a fallback. Runs share the same concurrency group.
 Invalid ledger rows are skipped and reported in
 `watch-data/quarantined-local-site-leads.csv`, with counts in dry-run and last-run
 summaries. Valid targets keep running and checkpoints remain intact. The report

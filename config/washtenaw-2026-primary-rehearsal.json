@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "election_id": "2026-08-04-mi-primary",
+  "election_date": "2026-08-04",
+  "feeds": [
+    {
+      "source_id": "washtenaw-2026-primary-summary",
+      "state": "MI",
+      "jurisdiction_id": "us:mi:county:washtenaw",
+      "authority_id": "us:authority:mi:county-clerk:washtenaw-county-clerk",
+      "election_id": "2026-08-04-mi-primary",
+      "url": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+      "parser": "washtenaw",
+      "enabled": true,
+      "authority_evidence_url": "https://www.washtenaw.org/304/Elections",
+      "election_evidence_url": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+      "reviewed_at": "2026-10-21T17:57:20.840516+00:00",
+      "interval_seconds": 60,
+      "stale_after_seconds": 300,
+      "update_semantics": "cumulative",
+      "required_text": "August 4, 2026",
+      "source_timezone": "America/Detroit",
+      "reporting_unit_name": "Washtenaw County",
+      "reporting_unit_type": "county"
+    }
+  ]
+}

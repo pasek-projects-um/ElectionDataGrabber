@@ -1,0 +1,14 @@
+{
+  "election_id": "2026-08-04-mi-primary",
+  "observation_count": 3464,
+  "observed_at": 1792605463.351861,
+  "offline_replay_match": true,
+  "production_parser_fix": "Explicit election identity and production two-cell contest headings",
+  "refresh_verified": false,
+  "scope": "Historical August primary county summary; not November or precinct completeness evidence",
+  "snapshot_sha256": "750d0b340ada891f3ec35daa453ea9c29f8deab251f2151acc7565892e8199b1",
+  "source_timestamps": [
+    "2026-08-31T11:33:05-04:00"
+  ],
+  "source_url": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp"
+}
