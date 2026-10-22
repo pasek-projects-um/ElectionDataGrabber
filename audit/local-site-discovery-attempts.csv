@@ -1739,3 +1739,23 @@ us:il:census-county:17083,IL,2026-10-21T19:51:52-04:00,Jersey County Illinois of
 us:in:census-county:18083,IN,2026-10-21T19:51:52-04:00,Knox County Indiana official election results | Knox County Indiana official elections clerk results archive dashboard,observed_link_candidate
 us:ks:census-county:20083,KS,2026-10-21T19:51:52-04:00,Hodgeman County Kansas official election results | Hodgeman County Kansas official elections clerk results archive dashboard,observed_link_candidate
 us:ky:census-county:21081,KY,2026-10-21T19:51:52-04:00,Grant County Kentucky official election results | Grant County Kentucky official elections clerk results archive dashboard,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-22T00:46:17+00:00,Alaska Division of Elections official results archive | site:elections.alaska.gov 2026 official election results Alaska Division Elections,observed_link_candidate
+us:la:census-county:22083,LA,2026-10-22T00:46:17+00:00,Richland Parish Louisiana official election results clerk,observed_link_candidate
+us:mi:county:isabella,MI,2026-10-22T00:46:17+00:00,Isabella County Michigan official election results,observed_link_candidate
+us:ms:census-county:28063,MS,2026-10-22T00:46:17+00:00,Jefferson County Mississippi official election results,observed_link_candidate
+us:mt:census-county:30061,MT,2026-10-22T00:46:17+00:00,Mineral County Montana official election results,observed_link_candidate
+us:nv:census-county:32027,NV,2026-10-22T00:46:17+00:00,Pershing County Nevada official election results | site:pershingcountynv.gov elections results,observed_link_candidate
+us:va:census-county:51059,VA,2026-10-22T00:46:17+00:00,Fairfax County Virginia official election results archive,observed_link_candidate
+us:vt:priority-roster:brookfield,VT,2026-10-22T00:46:17+00:00,Brookfield Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53057,WA,2026-10-22T00:46:17+00:00,Skagit County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:amery-c74de0407a831cb3,WI,2026-10-22T00:46:17+00:00,City of Amery Wisconsin official election results Polk County | site:polkcountywi.gov election results Amery,observed_link_candidate
+us:wv:census-county:54057,WV,2026-10-22T00:46:17+00:00,Mineral County West Virginia official election results,observed_link_candidate
+us:al:census-county:01091,AL,2026-10-22T00:46:17+00:00,Marengo County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05091,AR,2026-10-22T00:46:17+00:00,Miller County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04023,AZ,2026-10-22T00:46:17+00:00,Santa Cruz County Arizona official election results archive vendor,observed_link_candidate
+us:ca:census-county:06089,CA,2026-10-22T00:46:17+00:00,Shasta County California official election results archive,observed_link_candidate
+us:co:census-county:08089,CO,2026-10-22T00:46:17+00:00,Otero County Colorado official election results | site:oterocounty.org Colorado elections results,completed_no_new_urls
+us:fl:census-county:12089,FL,2026-10-22T00:46:17+00:00,Nassau County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13091,GA,2026-10-22T00:46:17+00:00,Dodge County Georgia official election results,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-22T00:46:17+00:00,Kauai County Hawaii official election results archive alternative | site:elections.hawaii.gov 2026 general election Kauai results,completed_no_new_urls
+us:ma:priority-roster:braintree,MA,2026-10-22T00:46:17+00:00,Braintree Massachusetts official election results archive,observed_link_candidate
