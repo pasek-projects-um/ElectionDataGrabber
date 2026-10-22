@@ -1819,3 +1819,23 @@ us:in:census-county:18087,IN,2026-10-22T07:21:59+00:00,LaGrange County Indiana o
 us:ks:census-county:20087,KS,2026-10-22T07:21:59+00:00,Jefferson County Kansas official election results archive,observed_link_candidate
 us:ky:census-county:21085,KY,2026-10-22T07:21:59+00:00,Grayson County Kentucky official election results archive county clerk,observed_link_candidate
 us:md:census-county:24031,MD,2026-10-22T07:21:59+00:00,Montgomery County Maryland Board of Elections official election results archive,observed_link_candidate
+us:mn:census-county:27075,MN,2026-10-22T12:01:08+00:00,Lake County Minnesota official election results archive | site:co.lake.mn.us elections Lake County Minnesota,observed_link_candidate
+us:mo:census-county:29069,MO,2026-10-22T12:01:08+00:00,Dunklin County Missouri official election results 2026 archive,observed_link_candidate
+us:nc:census-county:37063,NC,2026-10-22T12:01:08+00:00,Durham County North Carolina official election results archive 2026,observed_link_candidate
+us:nd:census-county:38063,ND,2026-10-22T12:01:08+00:00,Nelson County North Dakota official election results archive | Nelson County North Dakota election results county auditor,observed_link_candidate
+us:nh:priority-roster:canaan,NH,2026-10-22T12:01:08+00:00,Canaan New Hampshire official election results archive town clerk,observed_link_candidate
+us:nm:census-county:35057,NM,2026-10-22T12:01:08+00:00,Torrance County New Mexico official election results archive,observed_link_candidate
+us:ny:census-county:36061,NY,2026-10-22T12:01:08+00:00,New York County New York official election results archive NYC,observed_link_candidate
+us:oh:county:hardin,OH,2026-10-22T12:01:08+00:00,Hardin County Ohio official election results archive,observed_link_candidate
+us:ok:census-county:40061,OK,2026-10-22T12:01:08+00:00,Haskell County Oklahoma official election results archive | Haskell County Oklahoma election board results,observed_link_candidate
+us:pa:county:huntingdon,PA,2026-10-22T12:01:08+00:00,Huntingdon County Pennsylvania official election results archive,observed_link_candidate
+us:sc:census-county:45061,SC,2026-10-22T12:01:08+00:00,Lee County South Carolina official election results archive | Lee County South Carolina election commission results,observed_link_candidate
+us:al:census-county:01095,AL,2026-10-22T12:01:08+00:00,Marshall County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05095,AR,2026-10-22T12:01:08+00:00,Monroe County Arkansas official election results archive | site:monroecountyar.com election results Monroe County Arkansas clerk OR site:ark.org Monroe County election commission results,observed_link_candidate
+us:az:census-county:04027,AZ,2026-10-22T12:01:08+00:00,Yuma County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06093,CA,2026-10-22T12:01:08+00:00,Siskiyou County California official election results archive,observed_link_candidate
+us:co:census-county:08093,CO,2026-10-22T12:01:08+00:00,Park County Colorado official election results archive,observed_link_candidate
+us:fl:census-county:12093,FL,2026-10-22T12:01:08+00:00,Okeechobee County Florida official election results archive | site:voteokeechobee.gov election results archive Okeechobee County Florida,observed_link_candidate
+us:ga:census-county:13095,GA,2026-10-22T12:01:08+00:00,Dougherty County Georgia official election results archive Enhanced Voting,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-22T12:01:08+00:00,Hawaii County Hawaii official election results archive | site:elections.hawaii.gov 2026 election results Hawaii County primary general,observed_link_candidate
+us:la:census-county:22087,LA,2026-10-22T12:01:08+00:00,St Bernard Parish Louisiana official election results archive | site:stbclerk.com election results St Bernard Parish Louisiana OR site:sos.la.gov St Bernard election results,observed_link_candidate
