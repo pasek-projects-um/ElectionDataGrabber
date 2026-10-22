@@ -1779,3 +1779,23 @@ us:in:census-county:18085,IN,2026-10-22T05:46:01+00:00,Kosciusko County Indiana 
 us:ks:census-county:20085,KS,2026-10-22T05:46:01+00:00,Jackson County Kansas official election results clerk,observed_link_candidate
 us:ky:census-county:21083,KY,2026-10-22T05:46:01+00:00,Graves County Kentucky official election results clerk,observed_link_candidate
 us:md:census-county:24029,MD,2026-10-22T05:46:01+00:00,Kent County Maryland official election results,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-22T06:33:56+00:00,District of Columbia Board of Elections official election results archive,observed_link_candidate
+us:me:municipality:bowdoin,ME,2026-10-22T06:33:56+00:00,Bowdoin Maine official election results town clerk,observed_link_candidate
+us:ne:census-county:31061,NE,2026-10-22T06:33:56+00:00,Franklin County Nebraska official election results clerk,observed_link_candidate
+us:nj:census-county:34019,NJ,2026-10-22T06:33:56+00:00,Hunterdon County New Jersey official election results,observed_link_candidate
+us:or:census-county:41063,OR,2026-10-22T06:33:56+00:00,Wallowa County Oregon official election results archive | site:wallowacounty.gov elections results Wallowa County Oregon,completed_no_new_urls
+us:ri:priority-roster:south-kingstown,RI,2026-10-22T06:33:56+00:00,South Kingstown Rhode Island official election results town clerk,observed_link_candidate
+us:sd:census-county:46063,SD,2026-10-22T06:33:56+00:00,Harding County South Dakota official election results,observed_link_candidate
+us:tn:census-county:47059,TN,2026-10-22T06:33:56+00:00,Greene County Tennessee official election results election commission | site:greenecountytngov.com election commission results Greene County Tennessee,completed_no_new_urls
+us:tx:census-county:48059,TX,2026-10-22T06:33:56+00:00,Callahan County Texas official election results elections administrator,observed_link_candidate
+us:ut:census-county:49001,UT,2026-10-22T06:33:56+00:00,Beaver County Utah official election results clerk,observed_link_candidate
+us:wy:census-county:56013,WY,2026-10-22T06:33:56+00:00,Fremont County Wyoming official election results clerk,observed_link_candidate
+us:al:census-county:01093,AL,2026-10-22T06:33:56+00:00,Marion County Alabama official election results probate judge,observed_link_candidate
+us:ar:census-county:05093,AR,2026-10-22T06:33:56+00:00,Mississippi County Arkansas official election results county clerk | site:mississippicountyar.org election results Mississippi County Arkansas,observed_link_candidate
+us:az:census-county:04025,AZ,2026-10-22T06:33:56+00:00,Yavapai County Arizona official election results archive,completed_no_new_urls
+us:ca:census-county:06091,CA,2026-10-22T06:33:56+00:00,Sierra County California official election results elections office,observed_link_candidate
+us:co:census-county:08091,CO,2026-10-22T06:33:56+00:00,Ouray County Colorado official election results clerk,observed_link_candidate
+us:fl:census-county:12091,FL,2026-10-22T06:33:56+00:00,Okaloosa County Florida official election results supervisor elections,observed_link_candidate
+us:ga:census-county:13093,GA,2026-10-22T06:33:56+00:00,Dooly County Georgia official election results elections office | site:doolycountyga.com election results Dooly County Georgia,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-22T06:33:56+00:00,Maui County Hawaii official election results elections division,completed_no_new_urls
+us:la:census-county:22085,LA,2026-10-22T06:33:56+00:00,Sabine Parish Louisiana official election results clerk,observed_link_candidate
