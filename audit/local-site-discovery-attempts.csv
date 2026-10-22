@@ -1859,3 +1859,23 @@ us:il:census-county:17089,IL,2026-10-22T13:36:36.742Z,Kane County Illinois offic
 us:in:census-county:18089,IN,2026-10-22T13:36:36.742Z,Lake County Indiana official election results archive,observed_link_candidate
 us:ks:census-county:20089,KS,2026-10-22T13:36:36.742Z,Jewell County Kansas official election results archive,observed_link_candidate
 us:ky:census-county:21087,KY,2026-10-22T13:36:36.742Z,Green County Kentucky official election results archive,observed_link_candidate
+us:ma:priority-roster:bridgewater,MA,2026-10-22T14:12:09.567Z,Bridgewater Massachusetts official election results archive town clerk,observed_link_candidate
+us:md:census-county:24033,MD,2026-10-22T14:12:09.567Z,Prince George's County Maryland election results official archive | Prince George's County Maryland election results dashboard vendor archive official,observed_link_candidate
+us:mi:county:kalamazoo,MI,2026-10-22T14:12:09.567Z,Kalamazoo County Michigan official election results archive dashboard,observed_link_candidate
+us:ms:census-county:28067,MS,2026-10-22T14:12:09.567Z,Jones County Mississippi official election results circuit clerk archive,observed_link_candidate
+us:mt:census-county:30065,MT,2026-10-22T14:12:09.567Z,Musselshell County Montana official election results archive,observed_link_candidate
+us:nv:census-county:32031,NV,2026-10-22T14:12:09.567Z,Washoe County Nevada official election results archive dashboard,observed_link_candidate
+us:va:census-county:51063,VA,2026-10-22T14:12:09.567Z,Floyd County Virginia official election results archive 2026,observed_link_candidate
+us:vt:priority-roster:brownington,VT,2026-10-22T14:12:09.567Z,Brownington Vermont official election results archive,observed_link_candidate
+us:wa:census-county:53061,WA,2026-10-22T14:12:09.567Z,Snohomish County Washington official election results archive data,observed_link_candidate
+us:wi:ltsb2026:amherst-junction-d045cbe9b0168204,WI,2026-10-22T14:12:09.567Z,Village of Amherst Junction Wisconsin official election results | site:co.portage.wi.gov Election Results Portage County Clerk,observed_link_candidate
+us:wv:census-county:54061,WV,2026-10-22T14:12:09.567Z,Monongalia County West Virginia official election results archive,observed_link_candidate
+us:al:census-county:01097,AL,2026-10-22T14:12:09.567Z,Mobile County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05097,AR,2026-10-22T14:12:09.567Z,Montgomery County Arkansas official election results county clerk,observed_link_candidate
+us:az:census-county:04001,AZ,2026-10-22T14:12:09.567Z,Apache County Arizona official election results archive | Apache County Arizona election results dashboard vendor official results,observed_link_candidate
+us:ca:census-county:06095,CA,2026-10-22T14:12:09.567Z,Solano County California official election results archive,observed_link_candidate
+us:co:census-county:08095,CO,2026-10-22T14:12:09.567Z,Phillips County Colorado official election results clerk recorder,observed_link_candidate
+us:fl:census-county:12095,FL,2026-10-22T14:12:09.567Z,Orange County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13097,GA,2026-10-22T14:12:09.567Z,Douglas County Georgia official election results dashboard archive,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-22T14:12:09.567Z,Honolulu County Hawaii official election results archive | Honolulu County Hawaii election results dashboard city county elections official,completed_no_new_urls
+us:la:census-county:22089,LA,2026-10-22T14:12:09.567Z,St. Charles Parish Louisiana official election results registrar archive,observed_link_candidate
