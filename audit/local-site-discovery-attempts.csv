@@ -1939,3 +1939,23 @@ us:ky:census-county:21091,KY,2026-10-22T18:24:45.251Z,Hancock County Kentucky of
 us:me:municipality:bremen,ME,2026-10-22T18:24:45.251Z,Bremen Maine official election results town,observed_link_candidate
 us:mn:census-county:27079,MN,2026-10-22T18:24:45.251Z,Le Sueur County Minnesota official election results archive,observed_link_candidate
 us:mo:census-county:29073,MO,2026-10-22T18:24:45.251Z,Gasconade County Missouri official election results archive,observed_link_candidate
+us:me:municipality:brewer,ME,2026-10-22T19:09:38+00:00,Brewer ME official election results archive alternatives,observed_link_candidate
+us:tn:census-county:47065,TN,2026-10-22T19:09:38+00:00,Hamilton County TN official election results archive alternatives,observed_link_candidate
+us:wy:census-county:56019,WY,2026-10-22T19:09:38+00:00,Johnson County WY official election results archive alternatives,observed_link_candidate
+us:md:census-county:24037,MD,2026-10-22T19:09:38+00:00,St. Mary's County MD official election results archive alternatives,observed_link_candidate
+us:mi:county:kent,MI,2026-10-22T19:09:38+00:00,Kent MI official election results archive alternatives,observed_link_candidate
+us:ms:census-county:28071,MS,2026-10-22T19:09:38+00:00,Lafayette County MS official election results archive alternatives,observed_link_candidate
+us:nv:census-county:32510,NV,2026-10-22T19:09:38+00:00,Carson City NV official election results archive alternatives,observed_link_candidate
+us:vt:priority-roster:burke,VT,2026-10-22T19:09:38+00:00,Burke VT official election results archive alternatives,observed_link_candidate
+us:ar:census-county:05101,AR,2026-10-22T19:09:38+00:00,Newton County AR official election results archive alternatives,observed_link_candidate
+us:fl:census-county:12099,FL,2026-10-22T19:09:38+00:00,Palm Beach County FL official election results archive alternatives,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-22T19:09:38+00:00,Hawaii County HI official election results archive alternatives,observed_link_candidate
+us:la:census-county:22093,LA,2026-10-22T19:09:38+00:00,St. James Parish LA official election results archive alternatives,observed_link_candidate
+us:nc:census-county:37067,NC,2026-10-22T19:09:38+00:00,Forsyth County NC official election results archive alternatives,observed_link_candidate
+us:nd:census-county:38067,ND,2026-10-22T19:09:38+00:00,Pembina County ND official election results archive alternatives,observed_link_candidate
+us:nm:census-county:35061,NM,2026-10-22T19:09:38+00:00,Valencia County NM official election results archive alternatives,observed_link_candidate
+us:ny:census-county:36065,NY,2026-10-22T19:09:38+00:00,Oneida County NY official election results archive alternatives,observed_link_candidate
+us:ok:census-county:40065,OK,2026-10-22T19:09:38+00:00,Jackson County OK official election results archive alternatives,observed_link_candidate
+us:pa:county:jefferson,PA,2026-10-22T19:09:38+00:00,Jefferson PA official election results archive alternatives,observed_link_candidate
+us:il:census-county:17095,IL,2026-10-22T19:09:38+00:00,Knox County IL official election results archive alternatives,observed_link_candidate
+us:in:census-county:18095,IN,2026-10-22T19:09:38+00:00,Madison County IN official election results archive alternatives,observed_link_candidate
