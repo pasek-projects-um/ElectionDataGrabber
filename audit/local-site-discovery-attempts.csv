@@ -1899,3 +1899,23 @@ us:in:census-county:18091,IN,2026-10-22T17:02:56.216Z,LaPorte County Indiana off
 us:ks:census-county:20091,KS,2026-10-22T17:02:56.216Z,Johnson County Kansas official election results archive,observed_link_candidate
 us:ky:census-county:21089,KY,2026-10-22T17:02:56.216Z,Greenup County Kentucky official election results archive,observed_link_candidate
 us:me:municipality:bowerbank,ME,2026-10-22T17:02:56.216Z,Bowerbank Maine official election results archive town clerk,observed_link_candidate
+us:dc:central,DC,2026-10-22T17:43:57.396Z,District of Columbia official election results archives alternative site | site:dcboe.org election results archives 2026,completed_no_new_urls
+us:ne:census-county:31065,NE,2026-10-22T17:43:57.396Z,Furnas County Nebraska official election results,observed_link_candidate
+us:nj:census-county:34023,NJ,2026-10-22T17:43:57.396Z,Middlesex County New Jersey official election results,observed_link_candidate
+us:or:census-county:41067,OR,2026-10-22T17:43:57.396Z,Washington County Oregon official election results archive,observed_link_candidate
+us:ri:priority-roster:warren,RI,2026-10-22T17:43:57.396Z,Warren Rhode Island official election results,observed_link_candidate
+us:sd:census-county:46067,SD,2026-10-22T17:43:57.396Z,Hutchinson County South Dakota official election results,observed_link_candidate
+us:tn:census-county:47063,TN,2026-10-22T17:43:57.396Z,Hamblen County Tennessee official election results,observed_link_candidate
+us:tx:census-county:48063,TX,2026-10-22T17:43:57.396Z,Camp County Texas official election results,observed_link_candidate
+us:ut:census-county:49005,UT,2026-10-22T17:43:57.396Z,Cache County Utah official election results,observed_link_candidate
+us:wy:census-county:56017,WY,2026-10-22T17:43:57.396Z,Hot Springs County Wyoming official election results,observed_link_candidate
+us:al:census-county:01099,AL,2026-10-22T17:43:57.396Z,Monroe County Alabama official election results,observed_link_candidate
+us:ar:census-county:05099,AR,2026-10-22T17:43:57.396Z,Nevada County Arkansas official election results,observed_link_candidate
+us:az:census-county:04003,AZ,2026-10-22T17:43:57.396Z,Cochise County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06097,CA,2026-10-22T17:43:57.396Z,Sonoma County California official election results archive,observed_link_candidate
+us:co:census-county:08097,CO,2026-10-22T17:43:57.396Z,Pitkin County Colorado official election results archive,observed_link_candidate
+us:fl:census-county:12097,FL,2026-10-22T17:43:57.396Z,Osceola County Florida official election results,observed_link_candidate
+us:ga:census-county:13099,GA,2026-10-22T17:43:57.396Z,Early County Georgia official election results,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-22T17:43:57.396Z,Kauai County Hawaii official election results archive alternative site | site:elections.hawaii.gov Kauai election results,completed_no_new_urls
+us:la:census-county:22091,LA,2026-10-22T17:43:57.396Z,St Helena Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:brimfield,MA,2026-10-22T17:43:57.396Z,Brimfield Massachusetts official election results,observed_link_candidate
