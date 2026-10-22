@@ -1959,3 +1959,23 @@ us:ok:census-county:40065,OK,2026-10-22T19:09:38+00:00,Jackson County OK officia
 us:pa:county:jefferson,PA,2026-10-22T19:09:38+00:00,Jefferson PA official election results archive alternatives,observed_link_candidate
 us:il:census-county:17095,IL,2026-10-22T19:09:38+00:00,Knox County IL official election results archive alternatives,observed_link_candidate
 us:in:census-county:18095,IN,2026-10-22T19:09:38+00:00,Madison County IN official election results archive alternatives,observed_link_candidate
+us:nd:census-county:38069,ND,2026-10-22T20:26:34+00:00,Pierce County North Dakota official election results,observed_link_candidate
+us:nm:census-county:35001,NM,2026-10-22T20:26:34+00:00,Bernalillo County New Mexico official election results archive,observed_link_candidate
+us:ok:census-county:40067,OK,2026-10-22T20:26:34+00:00,Jefferson County Oklahoma official election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-22T20:26:34+00:00,Alaska official election results archive | site:elections.alaska.gov 2026 results archive JSON dashboard official,completed_no_new_urls
+us:de:census-county:10005,DE,2026-10-22T20:26:34+00:00,Sussex County Delaware official election results archive | site:elections.delaware.gov Sussex County election results archive official,observed_link_candidate
+us:il:census-county:17097,IL,2026-10-22T20:26:34+00:00,Lake County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18097,IN,2026-10-22T20:26:34+00:00,Marion County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20095,KS,2026-10-22T20:26:34+00:00,Kingman County Kansas official election results archive,observed_link_candidate
+us:ri:priority-roster:warwick,RI,2026-10-22T20:26:34+00:00,Warwick Rhode Island official election results archive,observed_link_candidate
+us:sd:census-county:46069,SD,2026-10-22T20:26:34+00:00,Hyde County South Dakota official election results archive,observed_link_candidate
+us:ut:census-county:49007,UT,2026-10-22T20:26:34+00:00,Carbon County Utah official election results archive,observed_link_candidate
+us:wy:census-county:56021,WY,2026-10-22T20:26:34+00:00,Laramie County Wyoming official election results archive,observed_link_candidate
+us:ar:census-county:05103,AR,2026-10-22T20:26:34+00:00,Ouachita County Arkansas official election results archive,observed_link_candidate
+us:fl:census-county:12101,FL,2026-10-22T20:26:34+00:00,Pasco County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13101,GA,2026-10-22T20:26:34+00:00,Echols County Georgia official election results archive,observed_link_candidate
+us:ma:priority-roster:brockton,MA,2026-10-22T20:26:34+00:00,Brockton Massachusetts official election results archive,observed_link_candidate
+us:md:census-county:24039,MD,2026-10-22T20:26:34+00:00,Somerset County Maryland official election results archive Board of Elections,observed_link_candidate
+us:ms:census-county:28073,MS,2026-10-22T20:26:34+00:00,Lamar County Mississippi official election results archive election commission,observed_link_candidate
+us:vt:priority-roster:burlington,VT,2026-10-22T20:26:34+00:00,Burlington Vermont official election results archive city clerk,observed_link_candidate
+us:wa:census-county:53065,WA,2026-10-22T20:26:34+00:00,Stevens County Washington official election results archive auditor elections,observed_link_candidate
