@@ -1839,3 +1839,23 @@ us:fl:census-county:12093,FL,2026-10-22T12:01:08+00:00,Okeechobee County Florida
 us:ga:census-county:13095,GA,2026-10-22T12:01:08+00:00,Dougherty County Georgia official election results archive Enhanced Voting,observed_link_candidate
 us:hi:census-county:15001,HI,2026-10-22T12:01:08+00:00,Hawaii County Hawaii official election results archive | site:elections.hawaii.gov 2026 election results Hawaii County primary general,observed_link_candidate
 us:la:census-county:22087,LA,2026-10-22T12:01:08+00:00,St Bernard Parish Louisiana official election results archive | site:stbclerk.com election results St Bernard Parish Louisiana OR site:sos.la.gov St Bernard election results,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-22T13:36:36.742Z,District of Columbia Board of Elections results archive alternative official websites,observed_link_candidate
+us:me:municipality:bowdoinham,ME,2026-10-22T13:36:36.742Z,Bowdoinham Maine official election results archive,observed_link_candidate
+us:ne:census-county:31063,NE,2026-10-22T13:36:36.742Z,Frontier County Nebraska official election results archive,observed_link_candidate
+us:nj:census-county:34021,NJ,2026-10-22T13:36:36.742Z,Mercer County New Jersey official election results archive,observed_link_candidate
+us:or:census-county:41065,OR,2026-10-22T13:36:36.742Z,Wasco County Oregon official election results archive,observed_link_candidate
+us:ri:priority-roster:tiverton,RI,2026-10-22T13:36:36.742Z,Tiverton Rhode Island official election results archive,observed_link_candidate
+us:sd:census-county:46065,SD,2026-10-22T13:36:36.742Z,Hughes County South Dakota official election results archive,observed_link_candidate
+us:tn:census-county:47061,TN,2026-10-22T13:36:36.742Z,Grundy County Tennessee official election results archive,observed_link_candidate
+us:tx:census-county:48061,TX,2026-10-22T13:36:36.742Z,Cameron County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49003,UT,2026-10-22T13:36:36.742Z,Box Elder County Utah official election results archive,observed_link_candidate
+us:wy:census-county:56015,WY,2026-10-22T13:36:36.742Z,Goshen County Wyoming official election results archive,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-22T13:36:36.742Z,Alaska Division of Elections official results archive alternative endpoints | site:elections.alaska.gov/results election map,observed_link_candidate
+us:ct:municipality:eastford,CT,2026-10-22T13:36:36.742Z,Eastford Connecticut official election results archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-22T13:36:36.742Z,Sussex County Delaware official election results archive,observed_link_candidate
+us:ia:census-county:19089,IA,2026-10-22T13:36:36.742Z,Howard County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16001,ID,2026-10-22T13:36:36.742Z,Ada County Idaho official election results archive,observed_link_candidate
+us:il:census-county:17089,IL,2026-10-22T13:36:36.742Z,Kane County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18089,IN,2026-10-22T13:36:36.742Z,Lake County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20089,KS,2026-10-22T13:36:36.742Z,Jewell County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21087,KY,2026-10-22T13:36:36.742Z,Green County Kentucky official election results archive,observed_link_candidate
