@@ -1759,3 +1759,23 @@ us:fl:census-county:12089,FL,2026-10-22T00:46:17+00:00,Nassau County Florida off
 us:ga:census-county:13091,GA,2026-10-22T00:46:17+00:00,Dodge County Georgia official election results,observed_link_candidate
 us:hi:census-county:15007,HI,2026-10-22T00:46:17+00:00,Kauai County Hawaii official election results archive alternative | site:elections.hawaii.gov 2026 general election Kauai results,completed_no_new_urls
 us:ma:priority-roster:braintree,MA,2026-10-22T00:46:17+00:00,Braintree Massachusetts official election results archive,observed_link_candidate
+us:mn:census-county:27073,MN,2026-10-22T05:46:01+00:00,Lac qui Parle County Minnesota official election results,observed_link_candidate
+us:mo:census-county:29067,MO,2026-10-22T05:46:01+00:00,Douglas County Missouri official election results clerk,observed_link_candidate
+us:nc:census-county:37061,NC,2026-10-22T05:46:01+00:00,Duplin County North Carolina official election results,observed_link_candidate
+us:nd:census-county:38061,ND,2026-10-22T05:46:01+00:00,Mountrail County North Dakota official election results,observed_link_candidate
+us:nh:priority-roster:campton,NH,2026-10-22T05:46:01+00:00,Campton New Hampshire official election results town clerk | site:sos.nh.gov Campton 2026 election results,observed_link_candidate
+us:nm:census-county:35055,NM,2026-10-22T05:46:01+00:00,Taos County New Mexico official election results,observed_link_candidate
+us:ny:census-county:36059,NY,2026-10-22T05:46:01+00:00,Nassau County New York official election results Board of Elections,observed_link_candidate
+us:oh:county:hancock,OH,2026-10-22T05:46:01+00:00,Hancock County Ohio official election results,observed_link_candidate
+us:ok:census-county:40059,OK,2026-10-22T05:46:01+00:00,Harper County Oklahoma official election results | site:oklahoma.gov Harper County election results 2026,observed_link_candidate
+us:pa:county:greene,PA,2026-10-22T05:46:01+00:00,Greene County Pennsylvania official election results,observed_link_candidate
+us:sc:census-county:45059,SC,2026-10-22T05:46:01+00:00,Laurens County South Carolina official election results | site:scvotes.gov Laurens County 2026 election results,observed_link_candidate
+us:ct:municipality:east-lyme,CT,2026-10-22T05:46:01+00:00,East Lyme Connecticut official election results town clerk,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-22T05:46:01+00:00,Sussex County Delaware official election results,observed_link_candidate
+us:ia:census-county:19085,IA,2026-10-22T05:46:01+00:00,Harrison County Iowa official election results auditor,observed_link_candidate
+us:id:census-county:16085,ID,2026-10-22T05:46:01+00:00,Valley County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17085,IL,2026-10-22T05:46:01+00:00,Jo Daviess County Illinois official election results,observed_link_candidate
+us:in:census-county:18085,IN,2026-10-22T05:46:01+00:00,Kosciusko County Indiana official election results | site:kosciusko.in.gov election results 2026,observed_link_candidate
+us:ks:census-county:20085,KS,2026-10-22T05:46:01+00:00,Jackson County Kansas official election results clerk,observed_link_candidate
+us:ky:census-county:21083,KY,2026-10-22T05:46:01+00:00,Graves County Kentucky official election results clerk,observed_link_candidate
+us:md:census-county:24029,MD,2026-10-22T05:46:01+00:00,Kent County Maryland official election results,observed_link_candidate
