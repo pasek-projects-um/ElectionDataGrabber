@@ -1899,7 +1899,7 @@ us:in:census-county:18091,IN,2026-10-22T17:02:56.216Z,LaPorte County Indiana off
 us:ks:census-county:20091,KS,2026-10-22T17:02:56.216Z,Johnson County Kansas official election results archive,observed_link_candidate
 us:ky:census-county:21089,KY,2026-10-22T17:02:56.216Z,Greenup County Kentucky official election results archive,observed_link_candidate
 us:me:municipality:bowerbank,ME,2026-10-22T17:02:56.216Z,Bowerbank Maine official election results archive town clerk,observed_link_candidate
-us:dc:central,DC,2026-10-22T17:43:57.396Z,District of Columbia official election results archives alternative site | site:dcboe.org election results archives 2026,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-10-22T17:43:57.396Z,District of Columbia official election results archives alternative site | site:dcboe.org election results archives 2026,completed_no_new_urls
 us:ne:census-county:31065,NE,2026-10-22T17:43:57.396Z,Furnas County Nebraska official election results,observed_link_candidate
 us:nj:census-county:34023,NJ,2026-10-22T17:43:57.396Z,Middlesex County New Jersey official election results,observed_link_candidate
 us:or:census-county:41067,OR,2026-10-22T17:43:57.396Z,Washington County Oregon official election results archive,observed_link_candidate
