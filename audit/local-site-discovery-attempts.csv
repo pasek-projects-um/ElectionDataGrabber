@@ -1799,3 +1799,23 @@ us:fl:census-county:12091,FL,2026-10-22T06:33:56+00:00,Okaloosa County Florida o
 us:ga:census-county:13093,GA,2026-10-22T06:33:56+00:00,Dooly County Georgia official election results elections office | site:doolycountyga.com election results Dooly County Georgia,observed_link_candidate
 us:hi:census-county:15009,HI,2026-10-22T06:33:56+00:00,Maui County Hawaii official election results elections division,completed_no_new_urls
 us:la:census-county:22085,LA,2026-10-22T06:33:56+00:00,Sabine Parish Louisiana official election results clerk,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-22T07:21:59+00:00,Alaska Division of Elections official election results archive,completed_no_new_urls
+us:ma:priority-roster:brewster,MA,2026-10-22T07:21:59+00:00,Brewster Massachusetts official election results town clerk,observed_link_candidate
+us:mi:county:jackson,MI,2026-10-22T07:21:59+00:00,Jackson County Michigan official election results archive,observed_link_candidate
+us:ms:census-county:28065,MS,2026-10-22T07:21:59+00:00,Jefferson Davis County Mississippi official election results circuit clerk,observed_link_candidate
+us:mt:census-county:30063,MT,2026-10-22T07:21:59+00:00,Missoula County Montana official election results archive,observed_link_candidate
+us:nv:census-county:32029,NV,2026-10-22T07:21:59+00:00,Storey County Nevada official election results dashboard archive,observed_link_candidate
+us:va:census-county:51061,VA,2026-10-22T07:21:59+00:00,Fauquier County Virginia official election results registrar,observed_link_candidate
+us:vt:priority-roster:brookline,VT,2026-10-22T07:21:59+00:00,Brookline Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53059,WA,2026-10-22T07:21:59+00:00,Skamania County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:amherst-78194e3697bd87b6,WI,2026-10-22T07:21:59+00:00,Amherst Wisconsin official election results; Portage County Amherst election results,observed_link_candidate
+us:wv:census-county:54059,WV,2026-10-22T07:21:59+00:00,Mingo County West Virginia official election results archive,observed_link_candidate
+us:ct:municipality:east-windsor,CT,2026-10-22T07:21:59+00:00,East Windsor Connecticut official election results town clerk,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-22T07:21:59+00:00,Kent County Delaware official election results archive,completed_no_new_urls
+us:ia:census-county:19087,IA,2026-10-22T07:21:59+00:00,Henry County Iowa official election results; site:henrycounty.iowa.gov election results Henry County Iowa,observed_link_candidate
+us:id:census-county:16087,ID,2026-10-22T07:21:59+00:00,Washington County Idaho official election results archive,observed_link_candidate
+us:il:census-county:17087,IL,2026-10-22T07:21:59+00:00,Johnson County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18087,IN,2026-10-22T07:21:59+00:00,LaGrange County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20087,KS,2026-10-22T07:21:59+00:00,Jefferson County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21085,KY,2026-10-22T07:21:59+00:00,Grayson County Kentucky official election results archive county clerk,observed_link_candidate
+us:md:census-county:24031,MD,2026-10-22T07:21:59+00:00,Montgomery County Maryland Board of Elections official election results archive,observed_link_candidate
