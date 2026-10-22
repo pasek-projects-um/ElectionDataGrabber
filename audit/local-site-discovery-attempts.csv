@@ -1979,3 +1979,23 @@ us:md:census-county:24039,MD,2026-10-22T20:26:34+00:00,Somerset County Maryland 
 us:ms:census-county:28073,MS,2026-10-22T20:26:34+00:00,Lamar County Mississippi official election results archive election commission,observed_link_candidate
 us:vt:priority-roster:burlington,VT,2026-10-22T20:26:34+00:00,Burlington Vermont official election results archive city clerk,observed_link_candidate
 us:wa:census-county:53065,WA,2026-10-22T20:26:34+00:00,Stevens County Washington official election results archive auditor elections,observed_link_candidate
+us:nh:priority-roster:canterbury,NH,2026-10-22T23:44:30+00:00,Canterbury New Hampshire official election results archive town clerk,observed_link_candidate
+us:oh:county:henry,OH,2026-10-22T23:44:30+00:00,Henry County Ohio official election results archive board elections,observed_link_candidate
+us:sc:census-county:45065,SC,2026-10-22T23:44:30+00:00,McCormick County South Carolina official election results archive,observed_link_candidate
+us:al:census-county:01101,AL,2026-10-22T23:44:30+00:00,Montgomery County Alabama official election results archive probate,observed_link_candidate
+us:ca:census-county:06099,CA,2026-10-22T23:44:30+00:00,Stanislaus County California official election results archive registrar | site:stanvote.com election results Stanislaus archive,observed_link_candidate
+us:co:census-county:08099,CO,2026-10-22T23:44:30+00:00,Prowers County Colorado official election results archive clerk,observed_link_candidate
+us:ne:census-county:31067,NE,2026-10-22T23:44:30+00:00,Gage County Nebraska official election results archive,observed_link_candidate
+us:or:census-county:41069,OR,2026-10-22T23:44:30+00:00,Wheeler County Oregon official election results archive clerk,observed_link_candidate
+us:tx:census-county:48065,TX,2026-10-22T23:44:30+00:00,Carson County Texas official election results archive county clerk,observed_link_candidate
+us:ct:municipality:enfield,CT,2026-10-22T23:44:30+00:00,Enfield Connecticut official election results archive town clerk | site:enfield-ct.gov election results Enfield,observed_link_candidate
+us:ia:census-county:19095,IA,2026-10-22T23:44:30+00:00,Iowa County Iowa official election results archive auditor,observed_link_candidate
+us:ky:census-county:21093,KY,2026-10-22T23:44:30+00:00,Hardin County Kentucky official election results archive clerk,observed_link_candidate
+us:mn:census-county:27081,MN,2026-10-22T23:44:30+00:00,Lincoln County Minnesota official election results archive auditor | site:co.lincoln.mn.us election results Lincoln County Minnesota,observed_link_candidate
+us:mo:census-county:29075,MO,2026-10-22T23:44:30+00:00,Gentry County Missouri official election results archive clerk,observed_link_candidate
+us:mt:census-county:30069,MT,2026-10-22T23:44:30+00:00,Petroleum County Montana official election results archive clerk,observed_link_candidate
+us:va:census-county:51067,VA,2026-10-22T23:44:30+00:00,Franklin County Virginia official election results archive registrar,observed_link_candidate
+us:wi:ltsb2026:antigo-f0e9a336dc8f8ef4,WI,2026-10-22T23:44:30+00:00,City of Antigo Wisconsin official election results archive clerk,observed_link_candidate
+us:wv:census-county:54065,WV,2026-10-22T23:44:30+00:00,Morgan County West Virginia official election results archive county clerk,observed_link_candidate
+us:la:census-county:22095,LA,2026-10-22T23:44:30+00:00,St John the Baptist Parish Louisiana official election results archive clerk,observed_link_candidate
+us:me:municipality:bridgewater,ME,2026-10-22T23:44:30+00:00,Bridgewater Maine official election results archive town clerk | site:bridgewatermaine.org election results Bridgewater Maine town,completed_no_new_urls
