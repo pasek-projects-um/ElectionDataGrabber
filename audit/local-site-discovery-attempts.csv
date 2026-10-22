@@ -1919,3 +1919,23 @@ us:ga:census-county:13099,GA,2026-10-22T17:43:57.396Z,Early County Georgia offic
 us:hi:census-county:15007,HI,2026-10-22T17:43:57.396Z,Kauai County Hawaii official election results archive alternative site | site:elections.hawaii.gov Kauai election results,completed_no_new_urls
 us:la:census-county:22091,LA,2026-10-22T17:43:57.396Z,St Helena Parish Louisiana official election results,observed_link_candidate
 us:ma:priority-roster:brimfield,MA,2026-10-22T17:43:57.396Z,Brimfield Massachusetts official election results,observed_link_candidate
+us:md:census-county:24035,MD,2026-10-22T18:24:45.251Z,Queen Anne's County Maryland official election results archive,observed_link_candidate
+us:mi:county:kalkaska,MI,2026-10-22T18:24:45.251Z,Kalkaska County Michigan official election results,observed_link_candidate
+us:ms:census-county:28069,MS,2026-10-22T18:24:45.251Z,Kemper County Mississippi official election results,observed_link_candidate
+us:mt:census-county:30067,MT,2026-10-22T18:24:45.251Z,Park County Montana official election results,observed_link_candidate
+us:nv:census-county:32033,NV,2026-10-22T18:24:45.251Z,White Pine County Nevada official election results archive,observed_link_candidate
+us:va:census-county:51065,VA,2026-10-22T18:24:45.251Z,Fluvanna County Virginia official election results,observed_link_candidate
+us:vt:priority-roster:brunswick,VT,2026-10-22T18:24:45.251Z,Brunswick Vermont official election results town,observed_link_candidate
+us:wa:census-county:53063,WA,2026-10-22T18:24:45.251Z,Spokane County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:aniwa-17fe85951be9d6b7,WI,2026-10-22T18:24:45.251Z,Village of Aniwa Wisconsin official election results | site:co.shawano.wi.us Aniwa election results,observed_link_candidate
+us:wv:census-county:54063,WV,2026-10-22T18:24:45.251Z,Monroe County West Virginia official election results archive,observed_link_candidate
+us:ct:municipality:ellington,CT,2026-10-22T18:24:45.251Z,Ellington Connecticut official election results,observed_link_candidate
+us:ia:census-county:19093,IA,2026-10-22T18:24:45.251Z,Ida County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16005,ID,2026-10-22T18:24:45.251Z,Bannock County Idaho official election results archive,observed_link_candidate
+us:il:census-county:17093,IL,2026-10-22T18:24:45.251Z,Kendall County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18093,IN,2026-10-22T18:24:45.251Z,Lawrence County Indiana official election results archive | site:lawrencecounty.in.gov election results,observed_link_candidate
+us:ks:census-county:20093,KS,2026-10-22T18:24:45.251Z,Kearny County Kansas official election results | site:kearnycountykansas.com election results,observed_link_candidate
+us:ky:census-county:21091,KY,2026-10-22T18:24:45.251Z,Hancock County Kentucky official election results archive,observed_link_candidate
+us:me:municipality:bremen,ME,2026-10-22T18:24:45.251Z,Bremen Maine official election results town,observed_link_candidate
+us:mn:census-county:27079,MN,2026-10-22T18:24:45.251Z,Le Sueur County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29073,MO,2026-10-22T18:24:45.251Z,Gasconade County Missouri official election results archive,observed_link_candidate
