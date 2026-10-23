@@ -2171,3 +2171,23 @@ us:hi:census-county:15003,HI,2026-10-23T17:26:16+00:00,Honolulu County Hawaii of
 us:ia:census-county:19103,IA,2026-10-23T17:26:16+00:00,Johnson County Iowa official election results archive | site:johnsoncountyiowa.gov election returns archive results,observed_link_candidate
 us:id:census-county:16009,ID,2026-10-23T17:26:16+00:00,Benewah County Idaho official election results archive | site:benewahcountyid.gov election results archive,observed_link_candidate
 us:ky:census-county:21101,KY,2026-10-23T17:26:16+00:00,Henderson County Kentucky official election results archive | site:hendersoncountyky.gov election results archive,observed_link_candidate
+us:la:census-county:22103,LA,2026-10-23T18:40:07+00:00,St. Tammany Parish Louisiana official election results archive | site:sttammanyclerk.org election results vendor archive,observed_link_candidate
+us:md:census-county:24043,MD,2026-10-23T18:40:07+00:00,Washington County Maryland official election results archive | site:elections.maryland.gov Washington County results archive,observed_link_candidate
+us:me:municipality:brooks,ME,2026-10-23T18:40:07+00:00,Brooks Maine official election results town clerk | site:brooksme.org election results archive,observed_link_candidate
+us:mn:census-county:27089,MN,2026-10-23T18:40:07+00:00,Marshall County Minnesota official election results archive | site:sos.mn.gov Marshall County election results,observed_link_candidate
+us:mo:census-county:29083,MO,2026-10-23T18:40:07+00:00,Henry County Missouri official election results archive | site:sos.mo.gov Henry County election results,observed_link_candidate
+us:mt:census-county:30077,MT,2026-10-23T18:40:07+00:00,Powell County Montana official election results archive | site:sosmt.gov Powell County election results,observed_link_candidate
+us:nj:census-county:34027,NJ,2026-10-23T18:40:07+00:00,Morris County New Jersey official election results archive | site:morriscountyclerk.org election results archive,completed_no_new_urls
+us:nm:census-county:35005,NM,2026-10-23T18:40:07+00:00,Chaves County New Mexico official election results archive | site:chavescounty.gov elections voting results,observed_link_candidate
+us:nv:census-county:32005,NV,2026-10-23T18:40:07+00:00,Douglas County Nevada official election results archive | site:douglascountynv.gov election results archive,completed_no_new_urls
+us:ut:census-county:49011,UT,2026-10-23T18:40:07+00:00,Davis County Utah official election results archive | site:daviscountyutah.gov election results archive,observed_link_candidate
+us:wy:census-county:56025,WY,2026-10-23T18:40:07+00:00,Natrona County Wyoming official election results archive | site:natronacounty-wy.gov election results archive,completed_no_new_urls
+us:al:census-county:01115,AL,2026-10-23T18:40:07+00:00,St. Clair County Alabama official election results archive | site:stclairco.com election results,observed_link_candidate
+us:ar:census-county:05113,AR,2026-10-23T18:40:07+00:00,Polk County Arkansas official election results archive | site:sos.arkansas.gov Polk County election results,observed_link_candidate
+us:fl:census-county:12111,FL,2026-10-23T18:40:07+00:00,St. Lucie County Florida official election results archive | site:stlucievotes.gov election results archive,observed_link_candidate
+us:ga:census-county:13111,GA,2026-10-23T18:40:07+00:00,Fannin County Georgia official election results archive | site:fannincountyga.com board elections results,observed_link_candidate
+us:il:census-county:17107,IL,2026-10-23T18:40:07+00:00,Logan County Illinois official election results archive | site:logancountyil.gov election results vendor,observed_link_candidate
+us:in:census-county:18107,IN,2026-10-23T18:40:07+00:00,Montgomery County Indiana official election results archive | site:montgomerycounty.in.gov election results archive,observed_link_candidate
+us:ks:census-county:20105,KS,2026-10-23T18:40:07+00:00,Lincoln County Kansas official election results archive | site:ks497.cichosting.com election results publications,observed_link_candidate
+us:ma:priority-roster:cambridge,MA,2026-10-23T18:40:07+00:00,Cambridge Massachusetts official election results archive | site:cambridgema.gov election commission results,observed_link_candidate
+us:mi:county:lenawee,MI,2026-10-23T18:40:07+00:00,Lenawee County Michigan official election results archive | site:electionlenawee.com election results 2026,observed_link_candidate
