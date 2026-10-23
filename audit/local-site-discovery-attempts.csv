@@ -1999,3 +1999,23 @@ us:wi:ltsb2026:antigo-f0e9a336dc8f8ef4,WI,2026-10-22T23:44:30+00:00,City of Anti
 us:wv:census-county:54065,WV,2026-10-22T23:44:30+00:00,Morgan County West Virginia official election results archive county clerk,observed_link_candidate
 us:la:census-county:22095,LA,2026-10-22T23:44:30+00:00,St John the Baptist Parish Louisiana official election results archive clerk,observed_link_candidate
 us:me:municipality:bridgewater,ME,2026-10-22T23:44:30+00:00,Bridgewater Maine official election results archive town clerk | site:bridgewatermaine.org election results Bridgewater Maine town,completed_no_new_urls
+us:mi:county:keweenaw,MI,2026-10-23T00:49:20+00:00,Keweenaw MI official election results county clerk elections,observed_link_candidate
+us:nc:census-county:37069,NC,2026-10-23T00:49:20+00:00,Franklin County NC official election results county clerk elections,observed_link_candidate
+us:ny:census-county:36067,NY,2026-10-23T00:49:20+00:00,Onondaga County NY official election results county clerk elections,observed_link_candidate
+us:pa:county:juniata,PA,2026-10-23T00:49:20+00:00,Juniata PA official election results county clerk elections,observed_link_candidate
+us:tn:census-county:47067,TN,2026-10-23T00:49:20+00:00,Hancock County TN official election results county clerk elections; targeted official-domain follow-up,observed_link_candidate
+us:ar:census-county:05105,AR,2026-10-23T00:49:20+00:00,Perry County AR official election results county clerk elections; targeted official-domain follow-up,completed_no_new_urls
+us:fl:census-county:12103,FL,2026-10-23T00:49:20+00:00,Pinellas County FL official election results county clerk elections,observed_link_candidate
+us:ga:census-county:13103,GA,2026-10-23T00:49:20+00:00,Effingham County GA official election results county clerk elections,observed_link_candidate
+us:il:census-county:17099,IL,2026-10-23T00:49:20+00:00,LaSalle County IL official election results county clerk elections,observed_link_candidate
+us:in:census-county:18099,IN,2026-10-23T00:49:20+00:00,Marshall County IN official election results county clerk elections; targeted official-domain follow-up,completed_no_new_urls
+us:ks:census-county:20097,KS,2026-10-23T00:49:20+00:00,Kiowa County KS official election results county clerk elections,observed_link_candidate
+us:ma:priority-roster:brookfield,MA,2026-10-23T00:49:20+00:00,BROOKFIELD MA official election results county clerk elections,observed_link_candidate
+us:ms:census-county:28075,MS,2026-10-23T00:49:20+00:00,Lauderdale County MS official election results county clerk elections,observed_link_candidate
+us:nd:census-county:38071,ND,2026-10-23T00:49:20+00:00,Ramsey County ND official election results county clerk elections,observed_link_candidate
+us:ok:census-county:40069,OK,2026-10-23T00:49:20+00:00,Johnston County OK official election results county clerk elections; targeted official-domain follow-up,observed_link_candidate
+us:ri:priority-roster:west-greenwich,RI,2026-10-23T00:49:20+00:00,WEST GREENWICH RI official election results county clerk elections,observed_link_candidate
+us:sd:census-county:46071,SD,2026-10-23T00:49:20+00:00,Jackson County SD official election results county clerk elections; targeted official-domain follow-up,observed_link_candidate
+us:vt:priority-roster:cabot,VT,2026-10-23T00:49:20+00:00,Cabot VT official election results county clerk elections,observed_link_candidate
+us:wa:census-county:53067,WA,2026-10-23T00:49:20+00:00,Thurston County WA official election results county clerk elections,observed_link_candidate
+us:al:census-county:01103,AL,2026-10-23T00:49:20+00:00,Morgan County AL official election results county clerk elections,observed_link_candidate
