@@ -2111,3 +2111,23 @@ us:tn:census-county:47071,TN,2026-10-23T07:33:41+00:00,Hardin County TN official
 us:vt:priority-roster:cambridge,VT,2026-10-23T07:33:41+00:00,Cambridge VT official election results archive county clerk | site:cambridge.vermont.gov election results Cambridge Vermont,completed_no_new_urls
 us:wa:census-county:53071,WA,2026-10-23T07:33:41+00:00,Walla Walla County WA official election results archive county clerk,observed_link_candidate
 us:al:census-county:01111,AL,2026-10-23T07:33:41+00:00,Randolph County AL official election results archive county clerk | site:randolphcountyal.gov election results Randolph County Alabama,observed_link_candidate
+us:az:census-county:04005,AZ,2026-10-23T11:13:33+00:00,Coconino County Arizona official election results archive county recorder,completed_no_new_urls
+us:de:census-county:10003,DE,2026-10-23T11:13:33+00:00,New Castle County Delaware official election results archive county election office,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-23T11:13:33+00:00,Maui County Hawaii official election results archive county clerk,completed_no_new_urls
+us:id:census-county:16007,ID,2026-10-23T11:13:33+00:00,Bear Lake County Idaho official election results archive county clerk,observed_link_candidate
+us:md:census-county:24041,MD,2026-10-23T11:13:33+00:00,Talbot County Maryland official election results archive board elections,observed_link_candidate
+us:nj:census-county:34025,NJ,2026-10-23T11:13:33+00:00,Monmouth County New Jersey official election results archive county clerk,observed_link_candidate
+us:nm:census-county:35003,NM,2026-10-23T11:13:33+00:00,Catron County New Mexico official election results archive county clerk,observed_link_candidate
+us:nv:census-county:32003,NV,2026-10-23T11:13:33+00:00,Clark County Nevada official election results archive registrar,observed_link_candidate
+us:ut:census-county:49009,UT,2026-10-23T11:13:33+00:00,Daggett County Utah official election results archive county clerk,observed_link_candidate
+us:wy:census-county:56023,WY,2026-10-23T11:13:33+00:00,Lincoln County Wyoming official election results archive county clerk | Lincoln County Wyoming clerk election results site:lincolncountywy.gov OR site:lcwy.org,completed_no_new_urls
+us:ca:census-county:06105,CA,2026-10-23T11:13:33+00:00,Trinity County California official election results archive elections,observed_link_candidate
+us:co:census-county:08105,CO,2026-10-23T11:13:33+00:00,Rio Grande County Colorado official election results archive clerk | site:riograndecounty.colorado.gov elections results Rio Grande County,completed_no_new_urls
+us:ct:municipality:farmington,CT,2026-10-23T11:13:33+00:00,Farmington Connecticut official municipal election results archive town clerk,observed_link_candidate
+us:ia:census-county:19101,IA,2026-10-23T11:13:33+00:00,Jefferson County Iowa official election results archive auditor,observed_link_candidate
+us:ky:census-county:21099,KY,2026-10-23T11:13:33+00:00,Hart County Kentucky official election results archive county clerk,observed_link_candidate
+us:la:census-county:22101,LA,2026-10-23T11:13:33+00:00,St. Mary Parish Louisiana official election results archive clerk,observed_link_candidate
+us:me:municipality:brooklin,ME,2026-10-23T11:13:33+00:00,Brooklin Maine official municipal election results archive town clerk | Brooklin Maine election results site:brooklinmaine.com OR site:brooklinmaine.gov,observed_link_candidate
+us:mn:census-county:27087,MN,2026-10-23T11:13:33+00:00,Mahnomen County Minnesota official election results archive auditor,observed_link_candidate
+us:mo:census-county:29081,MO,2026-10-23T11:13:33+00:00,Harrison County Missouri official election results archive county clerk | Harrison County Missouri county clerk election results official,observed_link_candidate
+us:mt:census-county:30075,MT,2026-10-23T11:13:33+00:00,Powder River County Montana official election results archive clerk recorder,observed_link_candidate
