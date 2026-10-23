@@ -2091,3 +2091,23 @@ us:va:census-county:51071,VA,2026-10-23T06:55:04+00:00,Giles County Virginia off
 us:wi:ltsb2026:arcadia-c2be01e4d765a03f,WI,2026-10-23T06:55:04+00:00,City of Arcadia Wisconsin official election results archive clerk | site:cityofarcadiawi.com election results Arcadia Wisconsin,completed_no_new_urls
 us:wv:census-county:54069,WV,2026-10-23T06:55:04+00:00,Ohio County West Virginia official election results archive county clerk,observed_link_candidate
 us:al:census-county:01109,AL,2026-10-23T06:55:04+00:00,Pike County Alabama official election results archive probate | site:pikeprobate.com election results Pike County Alabama,observed_link_candidate
+us:ar:census-county:05109,AR,2026-10-23T07:33:41+00:00,Pike County AR official election results archive county clerk | site:pikecwaar.gov elections results Pike County Arkansas,completed_no_new_urls
+us:fl:census-county:12107,FL,2026-10-23T07:33:41+00:00,Putnam County FL official election results archive county clerk,observed_link_candidate
+us:ga:census-county:13107,GA,2026-10-23T07:33:41+00:00,Emanuel County GA official election results archive county clerk,observed_link_candidate
+us:il:census-county:17103,IL,2026-10-23T07:33:41+00:00,Lee County IL official election results archive county clerk,observed_link_candidate
+us:in:census-county:18103,IN,2026-10-23T07:33:41+00:00,Miami County IN official election results archive county clerk,observed_link_candidate
+us:ks:census-county:20101,KS,2026-10-23T07:33:41+00:00,Lane County KS official election results archive county clerk | site:lanecountyks.org election results Lane County Kansas,completed_no_new_urls
+us:ma:priority-roster:buckland,MA,2026-10-23T07:33:41+00:00,BUCKLAND MA official election results archive county clerk,observed_link_candidate
+us:mi:county:lapeer,MI,2026-10-23T07:33:41+00:00,Lapeer MI official election results archive county clerk | site:lapeercountymi.gov election results Lapeer County,completed_no_new_urls
+us:ms:census-county:28079,MS,2026-10-23T07:33:41+00:00,Leake County MS official election results archive county clerk,observed_link_candidate
+us:nc:census-county:37073,NC,2026-10-23T07:33:41+00:00,Gates County NC official election results archive county clerk,observed_link_candidate
+us:nd:census-county:38075,ND,2026-10-23T07:33:41+00:00,Renville County ND official election results archive county clerk | site:renvillecountynd.org election results Renville County North Dakota,observed_link_candidate
+us:ny:census-county:36071,NY,2026-10-23T07:33:41+00:00,Orange County NY official election results archive county clerk,observed_link_candidate
+us:ok:census-county:40073,OK,2026-10-23T07:33:41+00:00,Kingfisher County OK official election results archive county clerk,completed_no_new_urls
+us:pa:county:lancaster,PA,2026-10-23T07:33:41+00:00,Lancaster PA official election results archive county clerk,observed_link_candidate
+us:ri:priority-roster:westerly,RI,2026-10-23T07:33:41+00:00,WESTERLY RI official election results archive county clerk,observed_link_candidate
+us:sd:census-county:46075,SD,2026-10-23T07:33:41+00:00,Jones County SD official election results archive county clerk | site:jonescountysd.org election results Jones County South Dakota,completed_no_new_urls
+us:tn:census-county:47071,TN,2026-10-23T07:33:41+00:00,Hardin County TN official election results archive county clerk | site:hardincoelections.com election results Hardin County Tennessee,completed_no_new_urls
+us:vt:priority-roster:cambridge,VT,2026-10-23T07:33:41+00:00,Cambridge VT official election results archive county clerk | site:cambridge.vermont.gov election results Cambridge Vermont,completed_no_new_urls
+us:wa:census-county:53071,WA,2026-10-23T07:33:41+00:00,Walla Walla County WA official election results archive county clerk,observed_link_candidate
+us:al:census-county:01111,AL,2026-10-23T07:33:41+00:00,Randolph County AL official election results archive county clerk | site:randolphcountyal.gov election results Randolph County Alabama,observed_link_candidate
