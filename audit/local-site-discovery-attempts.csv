@@ -2191,3 +2191,23 @@ us:in:census-county:18107,IN,2026-10-23T18:40:07+00:00,Montgomery County Indiana
 us:ks:census-county:20105,KS,2026-10-23T18:40:07+00:00,Lincoln County Kansas official election results archive | site:ks497.cichosting.com election results publications,observed_link_candidate
 us:ma:priority-roster:cambridge,MA,2026-10-23T18:40:07+00:00,Cambridge Massachusetts official election results archive | site:cambridgema.gov election commission results,observed_link_candidate
 us:mi:county:lenawee,MI,2026-10-23T18:40:07+00:00,Lenawee County Michigan official election results archive | site:electionlenawee.com election results 2026,observed_link_candidate
+us:ne:census-county:31075,NE,2026-10-23T19:43:34+00:00,Grant County Nebraska official election results archive | site:grantcountyne.gov election results clerk,observed_link_candidate
+us:nh:priority-roster:chatham,NH,2026-10-23T19:43:34+00:00,Chatham New Hampshire official election results town clerk | site:chathamnh.org elections results,observed_link_candidate
+us:oh:county:huron,OH,2026-10-23T19:43:34+00:00,Huron County Ohio official election results archive | site:huron.boe.ohio.gov election results,observed_link_candidate
+us:or:census-county:41005,OR,2026-10-23T19:43:34+00:00,Clackamas County Oregon official election results archive | site:clackamas.us/elections 2026 results,observed_link_candidate
+us:sc:census-county:45073,SC,2026-10-23T19:43:34+00:00,Oconee County South Carolina official election results archive | site:oconeesc.com election results voter registration,observed_link_candidate
+us:tx:census-county:48073,TX,2026-10-23T19:43:34+00:00,Cherokee County Texas official election results archive | site:co.cherokee.tx.us election results,observed_link_candidate
+us:va:census-county:51075,VA,2026-10-23T19:43:34+00:00,Goochland County Virginia official election results archive | site:goochlandva.us vote results,observed_link_candidate
+us:wi:ltsb2026:argyle-728b986a066ac006,WI,2026-10-23T19:43:34+00:00,Village of Argyle Wisconsin official election results clerk | site:argylewi.gov elections results,observed_link_candidate
+us:wv:census-county:54073,WV,2026-10-23T19:43:34+00:00,Pleasants County West Virginia official election results archive | site:pleasantscountywv.gov election results county clerk,observed_link_candidate
+us:az:census-county:04009,AZ,2026-10-23T19:43:34+00:00,Graham County Arizona official election results alternative archive | site:graham.az.gov election results archive,observed_link_candidate
+us:ca:census-county:06109,CA,2026-10-23T19:43:34+00:00,Tuolumne County California official election results archive | site:tuolumnecounty.ca.gov elections previous results,observed_link_candidate
+us:co:census-county:08109,CO,2026-10-23T19:43:34+00:00,Saguache County Colorado official election results archive | site:saguachepastelections.colorado.gov results,observed_link_candidate
+us:ct:municipality:glastonbury,CT,2026-10-23T19:43:34+00:00,Glastonbury Connecticut official election results archive | site:glastonburyct.gov registrar election results,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-23T19:43:34+00:00,New Castle County Delaware official election results alternative archive | site:elections.delaware.gov New Castle County 2026 results,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-23T19:43:34+00:00,Kauai County Hawaii official election results alternative archive | site:elections.hawaii.gov Kauai results 2026,completed_no_new_urls
+us:ia:census-county:19105,IA,2026-10-23T19:43:34+00:00,Jones County Iowa official election results archive | site:jonescountyiowaelections.gov results,observed_link_candidate
+us:id:census-county:16011,ID,2026-10-23T19:43:34+00:00,Bingham County Idaho official election results archive | site:binghamid.gov elections results archive,observed_link_candidate
+us:ky:census-county:21103,KY,2026-10-23T19:43:34+00:00,Henry County Kentucky official election results archive | site:henrycountyclerk.ky.gov election results,observed_link_candidate
+us:ms:census-county:28083,MS,2026-10-23T19:43:34+00:00,Leflore County Mississippi official election results archive | site:sos.ms.gov Leflore election results recapitulation,observed_link_candidate
+us:nc:census-county:37077,NC,2026-10-23T19:43:34+00:00,Granville County North Carolina official election results archive | site:granvillecounty.org election results OR site:er.ncsbe.gov Granville official,observed_link_candidate
