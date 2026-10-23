@@ -2039,3 +2039,23 @@ us:va:census-county:51069,VA,2026-10-23T01:46:00+00:00,Frederick County VA offic
 us:wi:ltsb2026:appleton-575efe1c19f6e903,WI,2026-10-23T01:46:00+00:00,City of Appleton WI official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
 us:wv:census-county:54067,WV,2026-10-23T01:46:00+00:00,Nicholas County WV official election results clerk elections archive,observed_link_candidate
 us:al:census-county:01105,AL,2026-10-23T01:46:00+00:00,Perry County AL official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:ar:census-county:05107,AR,2026-10-23T02:14:39+00:00,Phillips County AR official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:fl:census-county:12105,FL,2026-10-23T02:14:39+00:00,Polk County FL official election results clerk elections archive,observed_link_candidate
+us:ga:census-county:13105,GA,2026-10-23T02:14:39+00:00,Elbert County GA official election results clerk elections archive,observed_link_candidate
+us:il:census-county:17101,IL,2026-10-23T02:14:39+00:00,Lawrence County IL official election results clerk elections archive,observed_link_candidate
+us:in:census-county:18101,IN,2026-10-23T02:14:39+00:00,Martin County IN official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:ks:census-county:20099,KS,2026-10-23T02:14:39+00:00,Labette County KS official election results clerk elections archive,observed_link_candidate
+us:ma:priority-roster:brookline,MA,2026-10-23T02:14:39+00:00,BROOKLINE MA official election results clerk elections archive,observed_link_candidate
+us:mi:county:lake,MI,2026-10-23T02:14:39+00:00,Lake MI official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:ms:census-county:28077,MS,2026-10-23T02:14:39+00:00,Lawrence County MS official election results clerk elections archive; targeted official-domain follow-up,completed_no_new_urls
+us:nc:census-county:37071,NC,2026-10-23T02:14:39+00:00,Gaston County NC official election results clerk elections archive,observed_link_candidate
+us:nd:census-county:38073,ND,2026-10-23T02:14:39+00:00,Ransom County ND official election results clerk elections archive,observed_link_candidate
+us:ny:census-county:36069,NY,2026-10-23T02:14:39+00:00,Ontario County NY official election results clerk elections archive,observed_link_candidate
+us:ok:census-county:40071,OK,2026-10-23T02:14:39+00:00,Kay County OK official election results clerk elections archive,observed_link_candidate
+us:pa:county:lackawanna,PA,2026-10-23T02:14:39+00:00,Lackawanna PA official election results clerk elections archive,observed_link_candidate
+us:ri:priority-roster:west-warwick,RI,2026-10-23T02:14:39+00:00,WEST WARWICK RI official election results clerk elections archive,observed_link_candidate
+us:sd:census-county:46073,SD,2026-10-23T02:14:39+00:00,Jerauld County SD official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:tn:census-county:47069,TN,2026-10-23T02:14:39+00:00,Hardeman County TN official election results clerk elections archive,observed_link_candidate
+us:vt:priority-roster:calais,VT,2026-10-23T02:14:39+00:00,Calais VT official election results clerk elections archive,observed_link_candidate
+us:wa:census-county:53069,WA,2026-10-23T02:14:39+00:00,Wahkiakum County WA official election results clerk elections archive,observed_link_candidate
+us:al:census-county:01107,AL,2026-10-23T02:14:39+00:00,Pickens County AL official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
