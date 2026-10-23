@@ -2059,3 +2059,15 @@ us:tn:census-county:47069,TN,2026-10-23T02:14:39+00:00,Hardeman County TN offici
 us:vt:priority-roster:calais,VT,2026-10-23T02:14:39+00:00,Calais VT official election results clerk elections archive,observed_link_candidate
 us:wa:census-county:53069,WA,2026-10-23T02:14:39+00:00,Wahkiakum County WA official election results clerk elections archive,observed_link_candidate
 us:al:census-county:01107,AL,2026-10-23T02:14:39+00:00,Pickens County AL official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:az:census-county:04001,AZ,2026-10-23T05:44:09+00:00,Apache County Arizona official election results archive alternative county vendor dashboard,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-23T05:44:09+00:00,District of Columbia official election results archive alternative DCBOE certified | site:dcboe.org OR site:electionresults.dcboe.org certified election results statistics downloads District of Columbia,completed_no_new_urls
+us:nj:census-county:34001,NJ,2026-10-23T05:44:09+00:00,Atlantic County New Jersey official election results archive alternative clerk board elections dashboard,observed_link_candidate
+us:id:census-county:16001,ID,2026-10-23T05:44:09+00:00,Ada County Idaho official election results archive alternative county elections | Ada County Idaho official elections results county clerk past elections,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-10-23T05:44:09+00:00,Hawaii County official election results archive alternative county elections dashboard,completed_no_new_urls
+us:nv:census-county:32001,NV,2026-10-23T05:44:09+00:00,Churchill County Nevada official election results archive alternative clerk county 2026,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-23T05:44:09+00:00,Alaska Division Elections official election results archive alternative certified 2026,completed_no_new_urls
+us:de:census-county:10001,DE,2026-10-23T05:44:09+00:00,Kent County Delaware official municipal election results 2026 alternative | Kent County Delaware municipality official election results 2026 site:delaware.gov,observed_link_candidate
+us:md:census-county:24001,MD,2026-10-23T05:44:09+00:00,Allegany County Maryland official election results archive alternative state board county,observed_link_candidate
+us:nm:census-county:35001,NM,2026-10-23T05:44:09+00:00,Bernalillo County New Mexico official election results archive alternative county clerk dashboard,observed_link_candidate
+us:ut:census-county:49001,UT,2026-10-23T05:44:09+00:00,Beaver County Utah official election results archive alternative clerk dashboard 2026 | Beaver County Utah municipal official election results 2025 Beaver City Minersville,observed_link_candidate
+us:wy:census-county:56001,WY,2026-10-23T05:44:09+00:00,Albany County Wyoming official election results archive alternative clerk dashboard,observed_link_candidate
