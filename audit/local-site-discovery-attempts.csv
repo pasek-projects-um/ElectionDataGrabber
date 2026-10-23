@@ -2071,3 +2071,23 @@ us:md:census-county:24001,MD,2026-10-23T05:44:09+00:00,Allegany County Maryland 
 us:nm:census-county:35001,NM,2026-10-23T05:44:09+00:00,Bernalillo County New Mexico official election results archive alternative county clerk dashboard,observed_link_candidate
 us:ut:census-county:49001,UT,2026-10-23T05:44:09+00:00,Beaver County Utah official election results archive alternative clerk dashboard 2026 | Beaver County Utah municipal official election results 2025 Beaver City Minersville,observed_link_candidate
 us:wy:census-county:56001,WY,2026-10-23T05:44:09+00:00,Albany County Wyoming official election results archive alternative clerk dashboard,observed_link_candidate
+us:ca:census-county:06103,CA,2026-10-23T06:55:04+00:00,Tehama County California official election results archive,observed_link_candidate
+us:co:census-county:08103,CO,2026-10-23T06:55:04+00:00,Rio Blanco County Colorado official election results archive | site:rbc.us elections results Rio Blanco County Colorado,observed_link_candidate
+us:ct:municipality:fairfield,CT,2026-10-23T06:55:04+00:00,Fairfield Connecticut official election results town clerk archive | site:fairfieldct.org election results Fairfield Connecticut,completed_no_new_urls
+us:ia:census-county:19099,IA,2026-10-23T06:55:04+00:00,Jasper County Iowa official election results auditor archive,observed_link_candidate
+us:ky:census-county:21097,KY,2026-10-23T06:55:04+00:00,Harrison County Kentucky official election results archive county clerk | site:harrisoncountyfiscalcourt.com election results Harrison County Kentucky,completed_no_new_urls
+us:la:census-county:22099,LA,2026-10-23T06:55:04+00:00,St. Martin Parish Louisiana official election results archive clerk,observed_link_candidate
+us:me:municipality:bristol,ME,2026-10-23T06:55:04+00:00,Bristol Maine official election results town clerk archive | site:bristolmaine.org election results town meeting Bristol Maine,observed_link_candidate
+us:mn:census-county:27085,MN,2026-10-23T06:55:04+00:00,McLeod County Minnesota official election results archive auditor,observed_link_candidate
+us:mo:census-county:29079,MO,2026-10-23T06:55:04+00:00,Grundy County Missouri official election results archive county clerk | site:grundycountymo.com elections results Grundy County Missouri,completed_no_new_urls
+us:mt:census-county:30073,MT,2026-10-23T06:55:04+00:00,Pondera County Montana official election results archive clerk recorder,observed_link_candidate
+us:ne:census-county:31071,NE,2026-10-23T06:55:04+00:00,Garfield County Nebraska official election results archive county clerk | site:garfieldcounty.ne.gov elections results Garfield County Nebraska,observed_link_candidate
+us:nh:priority-roster:center-harbor,NH,2026-10-23T06:55:04+00:00,Center Harbor New Hampshire official election results town clerk archive | site:centerharbornh.gov election results Center Harbor,observed_link_candidate
+us:oh:county:hocking,OH,2026-10-23T06:55:04+00:00,Hocking County Ohio official election results archive board elections,observed_link_candidate
+us:or:census-county:41001,OR,2026-10-23T06:55:04+00:00,Baker County Oregon official election results archive county clerk,observed_link_candidate
+us:sc:census-county:45069,SC,2026-10-23T06:55:04+00:00,Marlboro County South Carolina official election results archive elections | site:marlborocounty.sc.gov election results Marlboro County,completed_no_new_urls
+us:tx:census-county:48069,TX,2026-10-23T06:55:04+00:00,Castro County Texas official election results archive county clerk,observed_link_candidate
+us:va:census-county:51071,VA,2026-10-23T06:55:04+00:00,Giles County Virginia official election results archive registrar | site:gilescounty.org election results Giles County Virginia,observed_link_candidate
+us:wi:ltsb2026:arcadia-c2be01e4d765a03f,WI,2026-10-23T06:55:04+00:00,City of Arcadia Wisconsin official election results archive clerk | site:cityofarcadiawi.com election results Arcadia Wisconsin,completed_no_new_urls
+us:wv:census-county:54069,WV,2026-10-23T06:55:04+00:00,Ohio County West Virginia official election results archive county clerk,observed_link_candidate
+us:al:census-county:01109,AL,2026-10-23T06:55:04+00:00,Pike County Alabama official election results archive probate | site:pikeprobate.com election results Pike County Alabama,observed_link_candidate
