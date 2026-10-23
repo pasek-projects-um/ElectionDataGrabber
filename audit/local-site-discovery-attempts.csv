@@ -2066,7 +2066,7 @@ us:id:census-county:16001,ID,2026-10-23T05:44:09+00:00,Ada County Idaho official
 us:hi:census-county:15001,HI,2026-10-23T05:44:09+00:00,Hawaii County official election results archive alternative county elections dashboard,completed_no_new_urls
 us:nv:census-county:32001,NV,2026-10-23T05:44:09+00:00,Churchill County Nevada official election results archive alternative clerk county 2026,observed_link_candidate
 us:ak:priority-roster:central,AK,2026-10-23T05:44:09+00:00,Alaska Division Elections official election results archive alternative certified 2026,completed_no_new_urls
-us:de:census-county:10001,DE,2026-10-23T05:44:09+00:00,Kent County Delaware official municipal election results 2026 alternative | Kent County Delaware municipality official election results 2026 site:delaware.gov,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-23T05:44:09+00:00,Kent County Delaware official municipal election results 2026 alternative | Kent County Delaware municipality official election results 2026 site:delaware.gov,completed_no_new_urls
 us:md:census-county:24001,MD,2026-10-23T05:44:09+00:00,Allegany County Maryland official election results archive alternative state board county,observed_link_candidate
 us:nm:census-county:35001,NM,2026-10-23T05:44:09+00:00,Bernalillo County New Mexico official election results archive alternative county clerk dashboard,observed_link_candidate
 us:ut:census-county:49001,UT,2026-10-23T05:44:09+00:00,Beaver County Utah official election results archive alternative clerk dashboard 2026 | Beaver County Utah municipal official election results 2025 Beaver City Minersville,observed_link_candidate
