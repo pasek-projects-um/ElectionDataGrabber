@@ -2131,3 +2131,23 @@ us:me:municipality:brooklin,ME,2026-10-23T11:13:33+00:00,Brooklin Maine official
 us:mn:census-county:27087,MN,2026-10-23T11:13:33+00:00,Mahnomen County Minnesota official election results archive auditor,observed_link_candidate
 us:mo:census-county:29081,MO,2026-10-23T11:13:33+00:00,Harrison County Missouri official election results archive county clerk | Harrison County Missouri county clerk election results official,observed_link_candidate
 us:mt:census-county:30075,MT,2026-10-23T11:13:33+00:00,Powder River County Montana official election results archive clerk recorder,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-23T16:34:11+00:00,"site:alaska.gov ""Division of Elections"" results archive | site:elections.alaska.gov/results Alaska 2026 election map results",observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-23T16:34:11+00:00,site:dcboe.org election results archive | site:electionresults.dcboe.org/election_results DC certified results 2024 2026,completed_no_new_urls
+us:ne:census-county:31073,NE,2026-10-23T16:34:11+00:00,"""Gosper County"" Nebraska election results official | site:gospercountyne.gov/election-office ""results""",observed_link_candidate
+us:nh:priority-roster:charlestown,NH,2026-10-23T16:34:11+00:00,"""Charlestown"" New Hampshire election results official | site:charlestown-nh.gov/news election voting results",observed_link_candidate
+us:oh:county:holmes,OH,2026-10-23T16:34:11+00:00,"""Holmes County"" Ohio official election results board elections | site:boe.ohio.gov/holmes/c/elecres Holmes results official canvass",observed_link_candidate
+us:or:census-county:41003,OR,2026-10-23T16:34:11+00:00,"""Benton County"" Oregon official election results archive | site:re.bentoncountyor.gov ""Past Election Results""",observed_link_candidate
+us:sc:census-county:45071,SC,2026-10-23T16:34:11+00:00,"""Newberry County"" South Carolina official election results | site:scvotes.gov Newberry County election results official",observed_link_candidate
+us:tx:census-county:48071,TX,2026-10-23T16:34:11+00:00,"""Chambers County"" Texas official election results | site:chamberscountytx.gov election results canvass",observed_link_candidate
+us:va:census-county:51073,VA,2026-10-23T16:34:11+00:00,"""Gloucester County"" Virginia official election results | site:results.elections.virginia.gov Gloucester County official results",observed_link_candidate
+us:wi:ltsb2026:arena-d6a75b4d7b75146d,WI,2026-10-23T16:34:11+00:00,"""Village of Arena"" Wisconsin election results official | site:iowacountywi.gov ""Village of Arena"" election results",observed_link_candidate
+us:wv:census-county:54071,WV,2026-10-23T16:34:11+00:00,"""Pendleton County"" West Virginia official election results | site:apps.sos.wv.gov/elections/results Pendleton official results",completed_no_new_urls
+us:al:census-county:01113,AL,2026-10-23T16:34:11+00:00,"""Russell County"" Alabama official election results | site:russellcountyprobate.com election results Russell Alabama",observed_link_candidate
+us:ar:census-county:05111,AR,2026-10-23T16:34:11+00:00,"""Poinsett County"" Arkansas official election results | site:sos.arkansas.gov Poinsett County 2024 official results",completed_no_new_urls
+us:fl:census-county:12109,FL,2026-10-23T16:34:11+00:00,"""St. Johns County"" Florida official election results archive | site:votesjc.gov election results archive St Johns",observed_link_candidate
+us:ga:census-county:13109,GA,2026-10-23T16:34:11+00:00,"""Evans County"" Georgia official election results | site:app.enhancedvoting.com/results/public/Georgia Evans County official",observed_link_candidate
+us:il:census-county:17105,IL,2026-10-23T16:34:11+00:00,"""Livingston County"" Illinois official election results | site:il-livingston.pollresults.net Livingston County final results",observed_link_candidate
+us:in:census-county:18105,IN,2026-10-23T16:34:11+00:00,"""Monroe County"" Indiana official election results archive | site:secure.in.gov/counties/monroe election results dashboard 2026",observed_link_candidate
+us:ks:census-county:20103,KS,2026-10-23T16:34:11+00:00,"""Leavenworth County"" Kansas official election results | site:files.leavenworthcounty.gov elections results 2026",observed_link_candidate
+us:ma:priority-roster:burlington,MA,2026-10-23T16:34:11+00:00,"""Burlington"" Massachusetts official election results town clerk | site:burlington.org/758 past election results Burlington MA",observed_link_candidate
+us:mi:county:leelanau,MI,2026-10-23T16:34:11+00:00,"""Leelanau County"" Michigan official election results | site:leelanau.gov election results Leelanau County",observed_link_candidate
