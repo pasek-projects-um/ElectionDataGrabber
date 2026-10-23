@@ -2019,3 +2019,23 @@ us:sd:census-county:46071,SD,2026-10-23T00:49:20+00:00,Jackson County SD officia
 us:vt:priority-roster:cabot,VT,2026-10-23T00:49:20+00:00,Cabot VT official election results county clerk elections,observed_link_candidate
 us:wa:census-county:53067,WA,2026-10-23T00:49:20+00:00,Thurston County WA official election results county clerk elections,observed_link_candidate
 us:al:census-county:01103,AL,2026-10-23T00:49:20+00:00,Morgan County AL official election results county clerk elections,observed_link_candidate
+us:ca:census-county:06101,CA,2026-10-23T01:46:00+00:00,Sutter County CA official election results clerk elections archive,observed_link_candidate
+us:co:census-county:08101,CO,2026-10-23T01:46:00+00:00,Pueblo County CO official election results clerk elections archive,observed_link_candidate
+us:ct:municipality:essex,CT,2026-10-23T01:46:00+00:00,Essex CT official election results clerk elections archive,observed_link_candidate
+us:ia:census-county:19097,IA,2026-10-23T01:46:00+00:00,Jackson County IA official election results clerk elections archive,observed_link_candidate
+us:ky:census-county:21095,KY,2026-10-23T01:46:00+00:00,Harlan County KY official election results clerk elections archive,observed_link_candidate
+us:la:census-county:22097,LA,2026-10-23T01:46:00+00:00,St. Landry Parish LA official election results clerk elections archive,observed_link_candidate
+us:me:municipality:bridgton,ME,2026-10-23T01:46:00+00:00,Bridgton ME official election results clerk elections archive,observed_link_candidate
+us:mn:census-county:27083,MN,2026-10-23T01:46:00+00:00,Lyon County MN official election results clerk elections archive,observed_link_candidate
+us:mo:census-county:29077,MO,2026-10-23T01:46:00+00:00,Greene County MO official election results clerk elections archive,observed_link_candidate
+us:mt:census-county:30071,MT,2026-10-23T01:46:00+00:00,Phillips County MT official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:ne:census-county:31069,NE,2026-10-23T01:46:00+00:00,Garden County NE official election results clerk elections archive,observed_link_candidate
+us:nh:priority-roster:carroll,NH,2026-10-23T01:46:00+00:00,Carroll NH official election results clerk elections archive,observed_link_candidate
+us:oh:county:highland,OH,2026-10-23T01:46:00+00:00,Highland OH official election results clerk elections archive,observed_link_candidate
+us:or:census-county:41071,OR,2026-10-23T01:46:00+00:00,Yamhill County OR official election results clerk elections archive,observed_link_candidate
+us:sc:census-county:45067,SC,2026-10-23T01:46:00+00:00,Marion County SC official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:tx:census-county:48067,TX,2026-10-23T01:46:00+00:00,Cass County TX official election results clerk elections archive,observed_link_candidate
+us:va:census-county:51069,VA,2026-10-23T01:46:00+00:00,Frederick County VA official election results clerk elections archive,observed_link_candidate
+us:wi:ltsb2026:appleton-575efe1c19f6e903,WI,2026-10-23T01:46:00+00:00,City of Appleton WI official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
+us:wv:census-county:54067,WV,2026-10-23T01:46:00+00:00,Nicholas County WV official election results clerk elections archive,observed_link_candidate
+us:al:census-county:01105,AL,2026-10-23T01:46:00+00:00,Perry County AL official election results clerk elections archive; targeted official-domain follow-up,observed_link_candidate
