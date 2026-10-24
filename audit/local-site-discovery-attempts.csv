@@ -2410,3 +2410,23 @@ us:de:census-county:10005,DE,2026-10-24T18:27:13+00:00,Sussex County Delaware of
 us:ia:census-county:19113,IA,2026-10-24T18:27:13+00:00,Linn County Iowa official election results auditor archive,observed_link_candidate
 us:id:census-county:16019,ID,2026-10-24T18:27:13+00:00,Bonneville County Idaho official election results archive elections,observed_link_candidate
 us:ky:census-county:21111,KY,2026-10-24T18:27:13+00:00,Jefferson County Kentucky official election results county clerk archive,observed_link_candidate
+us:me:municipality:brunswick,ME,2026-10-24T23:47:21+00:00,Brunswick Maine official election results archive,observed_link_candidate
+us:nd:census-county:38085,ND,2026-10-24T23:47:21+00:00,Sioux County North Dakota official election results,observed_link_candidate
+us:ny:census-county:36081,NY,2026-10-24T23:47:21+00:00,Queens County New York official election results archive,observed_link_candidate
+us:ok:census-county:40083,OK,2026-10-24T23:47:21+00:00,Logan County Oklahoma official election results,observed_link_candidate
+us:pa:county:lycoming,PA,2026-10-24T23:47:21+00:00,Lycoming County Pennsylvania official election results archive,observed_link_candidate
+us:ri:priority-roster:central-falls,RI,2026-10-24T23:47:21+00:00,Central Falls Rhode Island official election results,completed_no_new_urls
+us:sd:census-county:46085,SD,2026-10-24T23:47:21+00:00,Lyman County South Dakota official election results,observed_link_candidate
+us:tn:census-county:47081,TN,2026-10-24T23:47:21+00:00,Hickman County Tennessee official election results,observed_link_candidate
+us:vt:priority-roster:charlotte,VT,2026-10-24T23:47:21+00:00,Charlotte Vermont official election results archive,observed_link_candidate
+us:wa:census-county:53003,WA,2026-10-24T23:47:21+00:00,Asotin County Washington official election results archive,completed_no_new_urls
+us:md:census-county:24005,MD,2026-10-24T23:47:21+00:00,Baltimore County Maryland official election results archive,completed_no_new_urls
+us:mi:county:manistee,MI,2026-10-24T23:47:21+00:00,Manistee County Michigan official election results archive,observed_link_candidate
+us:mo:census-county:29091,MO,2026-10-24T23:47:21+00:00,Howell County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28091,MS,2026-10-24T23:47:21+00:00,Marion County Mississippi official election results archive,observed_link_candidate
+us:mt:census-county:30085,MT,2026-10-24T23:47:21+00:00,Roosevelt County Montana official election results archive,observed_link_candidate
+us:nc:census-county:37085,NC,2026-10-24T23:47:21+00:00,Harnett County North Carolina official election results archive,observed_link_candidate
+us:ne:census-county:31083,NE,2026-10-24T23:47:21+00:00,Harlan County Nebraska official election results archive,observed_link_candidate
+us:nh:priority-roster:claremont,NH,2026-10-24T23:47:21+00:00,Claremont New Hampshire official election results archive,observed_link_candidate
+us:nj:census-county:34035,NJ,2026-10-24T23:47:21+00:00,Somerset County New Jersey official election results archive,completed_no_new_urls
+us:nm:census-county:35011,NM,2026-10-24T23:47:21+00:00,De Baca County New Mexico official election results archive,completed_no_new_urls
