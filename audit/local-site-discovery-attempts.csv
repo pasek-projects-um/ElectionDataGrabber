@@ -2311,3 +2311,23 @@ us:ks:census-county:20111,KS,2026-10-24T07:15:54+00:00,Lyon County Kansas offici
 us:la:census-county:22109,LA,2026-10-24T07:15:54+00:00,Terrebonne Parish Louisiana official election results clerk archive | site:terrebonneclerk.org election results Terrebonne Parish,observed_link_candidate
 us:ma:priority-roster:carver,MA,2026-10-24T07:15:54+00:00,Carver Massachusetts official election results town clerk archive | site:carverma.gov election results Town Carver official,observed_link_candidate
 us:md:census-county:24510,MD,2026-10-24T07:15:54+00:00,Baltimore city Maryland official election results archive board elections,observed_link_candidate
+us:nc:census-county:37081,NC,2026-10-24T08:33:37+00:00,Guilford County North Carolina official election results archive,observed_link_candidate
+us:ne:census-county:31079,NE,2026-10-24T08:33:37+00:00,Hall County Nebraska official election results election commissioner archive,observed_link_candidate
+us:nh:priority-roster:chesterfield,NH,2026-10-24T08:33:37+00:00,Chesterfield New Hampshire official election results town clerk archive,observed_link_candidate
+us:oh:county:jefferson,OH,2026-10-24T08:33:37+00:00,Jefferson County Ohio official election results board elections archive,observed_link_candidate
+us:or:census-county:41009,OR,2026-10-24T08:33:37+00:00,Columbia County Oregon official election results archive,observed_link_candidate
+us:sc:census-county:45077,SC,2026-10-24T08:33:37+00:00,Pickens County South Carolina official election results archive,observed_link_candidate
+us:tx:census-county:48077,TX,2026-10-24T08:33:37+00:00,Clay County Texas official election results archive,observed_link_candidate
+us:va:census-county:51079,VA,2026-10-24T08:33:37+00:00,Greene County Virginia official election results archive,observed_link_candidate
+us:wi:ltsb2026:arpin-d28e1b74e80411af,WI,2026-10-24T08:33:37+00:00,Village of Arpin Wisconsin official election results archive,observed_link_candidate
+us:wv:census-county:54077,WV,2026-10-24T08:33:37+00:00,Preston County West Virginia official election results archive,observed_link_candidate
+us:az:census-county:04013,AZ,2026-10-24T08:33:37+00:00,Maricopa County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06115,CA,2026-10-24T08:33:37+00:00,Yuba County California official election results archive,observed_link_candidate
+us:co:census-county:08115,CO,2026-10-24T08:33:37+00:00,Sedgwick County Colorado official election results archive | Sedgwick County Colorado clerk recorder election results official,completed_no_new_urls
+us:ct:municipality:greenwich,CT,2026-10-24T08:33:37+00:00,Greenwich Connecticut official election results town clerk archive,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-24T08:33:37+00:00,New Castle County Delaware official election results archive | New Castle County Delaware 2026 official election results raw data,completed_no_new_urls
+us:ia:census-county:19111,IA,2026-10-24T08:33:37+00:00,Lee County Iowa official election results archive,completed_no_new_urls
+us:id:census-county:16017,ID,2026-10-24T08:33:37+00:00,Bonner County Idaho official election results archive,observed_link_candidate
+us:ky:census-county:21109,KY,2026-10-24T08:33:37+00:00,Jackson County Kentucky official election results archive,observed_link_candidate
+us:me:municipality:brownville,ME,2026-10-24T08:33:37+00:00,Brownville Maine official election results town clerk archive,observed_link_candidate
+us:mi:county:mackinac,MI,2026-10-24T08:33:37+00:00,Mackinac County Michigan official election results archive,observed_link_candidate
