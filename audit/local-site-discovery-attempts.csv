@@ -2271,3 +2271,23 @@ us:ks:census-county:20109,KS,2026-10-24T02:46:37+00:00,Logan County Kansas offic
 us:la:census-county:22107,LA,2026-10-24T02:46:37+00:00,Tensas Parish Louisiana official election results | Tensas Parish Louisiana election results archive vendor,observed_link_candidate
 us:ma:priority-roster:carlisle,MA,2026-10-24T02:46:37+00:00,Carlisle Massachusetts official election results | Carlisle Massachusetts election results archive town clerk,observed_link_candidate
 us:md:census-county:24047,MD,2026-10-24T02:46:37+00:00,Worcester County Maryland official election results | Worcester County Maryland election results archive vendor,observed_link_candidate
+us:me:municipality:brownfield,ME,2026-10-24T06:43:15+00:00,Brownfield Maine official election results town clerk archive | Brownfield Maine elections results historical municipal,observed_link_candidate
+us:nd:census-county:38081,ND,2026-10-24T06:43:15+00:00,Sargent County North Dakota official election results auditor | Sargent County ND historical election results official,observed_link_candidate
+us:ny:census-county:36077,NY,2026-10-24T06:43:15+00:00,Otsego County New York official election results board elections | site:otsegocounty.com election results archive,observed_link_candidate
+us:ok:census-county:40079,OK,2026-10-24T06:43:15+00:00,Le Flore County Oklahoma official election results election board | Le Flore County OK historical election results official,observed_link_candidate
+us:pa:county:lehigh,PA,2026-10-24T06:43:15+00:00,Lehigh County Pennsylvania official election results archive | site:lehighcounty.org elections results historical,observed_link_candidate
+us:ri:priority-roster:bristol,RI,2026-10-24T06:43:15+00:00,Bristol Rhode Island official election results town clerk archive | site:bristolri.gov election results,observed_link_candidate
+us:sd:census-county:46081,SD,2026-10-24T06:43:15+00:00,Lawrence County South Dakota official election results auditor archive | site:lawrence.sd.us election results,observed_link_candidate
+us:tn:census-county:47077,TN,2026-10-24T06:43:15+00:00,Henderson County Tennessee official election results election commission | Henderson County TN historical election results official,observed_link_candidate
+us:vt:priority-roster:cavendish,VT,2026-10-24T06:43:15+00:00,Cavendish Vermont official election results town clerk | site:cavendishvt.com election results,observed_link_candidate
+us:wa:census-county:53077,WA,2026-10-24T06:43:15+00:00,Yakima County Washington official election results auditor archive | site:yakimacounty.us election results archive,observed_link_candidate
+us:az:census-county:04012,AZ,2026-10-24T06:43:15+00:00,La Paz County Arizona official election results recorder archive | site:lapaz.gov election results,completed_no_new_urls
+us:ca:census-county:06113,CA,2026-10-24T06:43:15+00:00,Yolo County California official election results archive elections office | site:yoloelections.org results archives,observed_link_candidate
+us:co:census-county:08113,CO,2026-10-24T06:43:15+00:00,San Miguel County Colorado official election results clerk archive | site:sanmiguelcountyco.gov election results,observed_link_candidate
+us:ct:municipality:granby,CT,2026-10-24T06:43:15+00:00,Granby Connecticut official election results town clerk archive | site:granby-ct.gov election results,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-24T06:43:15+00:00,Kent County Delaware official election results archive alternative | site:elections.delaware.gov Kent County election results historical,completed_no_new_urls
+us:ia:census-county:19109,IA,2026-10-24T06:43:15+00:00,Kossuth County Iowa official election results auditor archive | site:kossuthcounty.iowa.gov election results,observed_link_candidate
+us:id:census-county:16015,ID,2026-10-24T06:43:15+00:00,Boise County Idaho official election results clerk archive | site:boisecounty.us election results,observed_link_candidate
+us:ky:census-county:21107,KY,2026-10-24T06:43:15+00:00,Hopkins County Kentucky official election results county clerk archive | site:hopkinscountyclerk.org election results,observed_link_candidate
+us:mi:county:luce,MI,2026-10-24T06:43:15+00:00,Luce County Michigan official election results clerk archive | site:lucecountymi.gov election results,observed_link_candidate
+us:mn:census-county:27093,MN,2026-10-24T06:43:15+00:00,Meeker County Minnesota official election results auditor archive | site:meekercountymn.gov election results,observed_link_candidate
