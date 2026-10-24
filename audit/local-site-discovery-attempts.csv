@@ -2390,3 +2390,23 @@ us:tx:census-county:48079,TX,2026-10-24T17:48:18+00:00,Cochran County Texas offi
 us:va:census-county:51081,VA,2026-10-24T17:48:18+00:00,Greensville County Virginia official election results,completed_no_new_urls
 us:wi:ltsb2026:ashland-agenda-15431a585d5e5410,WI,2026-10-24T17:48:18+00:00,Town of Agenda Ashland County Wisconsin official election results,observed_link_candidate
 us:wv:census-county:54079,WV,2026-10-24T17:48:18+00:00,Putnam County West Virginia official election results archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-24T18:27:13+00:00,District of Columbia Board of Elections official results archive alternative,completed_no_new_urls
+us:al:census-county:01125,AL,2026-10-24T18:27:13+00:00,Tuscaloosa County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05123,AR,2026-10-24T18:27:13+00:00,St. Francis County Arkansas official election results county clerk,observed_link_candidate
+us:fl:census-county:12121,FL,2026-10-24T18:27:13+00:00,Suwannee County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13121,GA,2026-10-24T18:27:13+00:00,Fulton County Georgia official election results archive,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-24T18:27:13+00:00,Honolulu County Hawaii official election results archive alternative,completed_no_new_urls
+us:il:census-county:17117,IL,2026-10-24T18:27:13+00:00,Macoupin County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18117,IN,2026-10-24T18:27:13+00:00,Orange County Indiana official election results county,observed_link_candidate
+us:ks:census-county:20115,KS,2026-10-24T18:27:13+00:00,Marion County Kansas official election results archive clerk,observed_link_candidate
+us:la:census-county:22113,LA,2026-10-24T18:27:13+00:00,Vermilion Parish Louisiana official election results clerk archive,observed_link_candidate
+us:ma:priority-roster:charlton,MA,2026-10-24T18:27:13+00:00,Charlton Massachusetts official election results town clerk archive,observed_link_candidate
+us:mn:census-county:27097,MN,2026-10-24T18:27:13+00:00,Morrison County Minnesota official election results auditor archive,observed_link_candidate
+us:az:census-county:04015,AZ,2026-10-24T18:27:13+00:00,Mohave County Arizona official election results archive alternative,observed_link_candidate
+us:ca:census-county:06001,CA,2026-10-24T18:27:13+00:00,Alameda County California official election results archive registrar,observed_link_candidate
+us:co:census-county:08117,CO,2026-10-24T18:27:13+00:00,Summit County Colorado official election results clerk archive,observed_link_candidate
+us:ct:municipality:griswold,CT,2026-10-24T18:27:13+00:00,Griswold Connecticut official election results town clerk archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-24T18:27:13+00:00,Sussex County Delaware official election results archive county,completed_no_new_urls
+us:ia:census-county:19113,IA,2026-10-24T18:27:13+00:00,Linn County Iowa official election results auditor archive,observed_link_candidate
+us:id:census-county:16019,ID,2026-10-24T18:27:13+00:00,Bonneville County Idaho official election results archive elections,observed_link_candidate
+us:ky:census-county:21111,KY,2026-10-24T18:27:13+00:00,Jefferson County Kentucky official election results county clerk archive,observed_link_candidate
