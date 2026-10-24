@@ -2231,3 +2231,23 @@ us:la:census-county:22105,LA,2026-10-23T20:25:55+00:00,Tangipahoa Parish Louisia
 us:ma:priority-roster:canton,MA,2026-10-23T20:25:55+00:00,Canton Massachusetts official election results archive town clerk | site:town.canton.ma.us election results OR election archive,observed_link_candidate
 us:md:census-county:24045,MD,2026-10-23T20:25:55+00:00,Wicomico County Maryland official election results archive board elections | site:wicomicocounty.org election results OR election archive,observed_link_candidate
 us:me:municipality:brooksville,ME,2026-10-23T20:25:55+00:00,Brooksville Maine official election results archive town clerk | site:brooksvillemaine.org election results OR elections,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-24T01:03:18+00:00,Alaska Division Elections alternative official results historical archive regional reporting | site:elections.alaska.gov results 2026 historical election database,completed_no_new_urls
+us:mi:county:livingston,MI,2026-10-24T01:03:18+00:00,Livingston County Michigan official election results archive clerk | site:milivcounty.gov election results archive,observed_link_candidate
+us:mn:census-county:27091,MN,2026-10-24T01:03:18+00:00,Martin County Minnesota official election results archive | site:co.martin.mn.us elections results,observed_link_candidate
+us:mo:census-county:29085,MO,2026-10-24T01:03:18+00:00,Hickory County Missouri official election results archive | site:hickorycountymo.org election results,observed_link_candidate
+us:mt:census-county:30079,MT,2026-10-24T01:03:18+00:00,Prairie County Montana official election results archive | site:prairiecountymt.org election results,completed_no_new_urls
+us:nj:census-county:34029,NJ,2026-10-24T01:03:18+00:00,Ocean County New Jersey official election results archive | site:co.ocean.nj.us election results,observed_link_candidate
+us:nm:census-county:35006,NM,2026-10-24T01:03:18+00:00,Cibola County New Mexico official election results archive | site:cibolacountynm.com election results,completed_no_new_urls
+us:nv:census-county:32007,NV,2026-10-24T01:03:18+00:00,Elko County Nevada official election results archive | site:elkocountynv.net election results,completed_no_new_urls
+us:ut:census-county:49013,UT,2026-10-24T01:03:18+00:00,Duchesne County Utah official election results archive | site:duchesne.utah.gov election results,completed_no_new_urls
+us:wy:census-county:56027,WY,2026-10-24T01:03:18+00:00,Niobrara County Wyoming official election results archive | site:niobraracounty.org election results,completed_no_new_urls
+us:az:census-county:04011,AZ,2026-10-24T01:03:18+00:00,Greenlee County Arizona official election results archive | site:greenlee.az.gov election results,observed_link_candidate
+us:ca:census-county:06111,CA,2026-10-24T01:03:18+00:00,Ventura County California official election results archive | site:ventura.org election results,completed_no_new_urls
+us:co:census-county:08111,CO,2026-10-24T01:03:18+00:00,San Juan County Colorado official election results archive | site:sanjuancountycolorado.us election results,completed_no_new_urls
+us:ct:municipality:goshen,CT,2026-10-24T01:03:18+00:00,Goshen Connecticut official election results archive | site:goshenct.gov election results,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-24T01:03:18+00:00,Sussex County Delaware official election results archive | site:elections.delaware.gov Sussex results,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-10-24T01:03:18+00:00,Hawaii County Hawaii official election results archive | site:elections.hawaii.gov results archive,completed_no_new_urls
+us:ia:census-county:19107,IA,2026-10-24T01:03:18+00:00,Keokuk County Iowa official election results archive | site:keokukcounty.iowa.gov election results,completed_no_new_urls
+us:id:census-county:16013,ID,2026-10-24T01:03:18+00:00,Blaine County Idaho official election results archive | site:blainecounty.org election results,completed_no_new_urls
+us:ky:census-county:21105,KY,2026-10-24T01:03:18+00:00,Hickman County Kentucky official election results archive | site:hickmancounty.ky.gov election results,observed_link_candidate
+us:ms:census-county:28085,MS,2026-10-24T01:03:18+00:00,Lincoln County Mississippi official election results archive | site:lincolncountyms.gov election results,completed_no_new_urls
