@@ -2251,3 +2251,23 @@ us:ia:census-county:19107,IA,2026-10-24T01:03:18+00:00,Keokuk County Iowa offici
 us:id:census-county:16013,ID,2026-10-24T01:03:18+00:00,Blaine County Idaho official election results archive | site:blainecounty.org election results,completed_no_new_urls
 us:ky:census-county:21105,KY,2026-10-24T01:03:18+00:00,Hickman County Kentucky official election results archive | site:hickmancounty.ky.gov election results,observed_link_candidate
 us:ms:census-county:28085,MS,2026-10-24T01:03:18+00:00,Lincoln County Mississippi official election results archive | site:lincolncountyms.gov election results,completed_no_new_urls
+us:nc:census-county:37079,NC,2026-10-24T02:46:37+00:00,Greene County North Carolina official election results | Greene County North Carolina election results archive vendor,observed_link_candidate
+us:ne:census-county:31077,NE,2026-10-24T02:46:37+00:00,Greeley County Nebraska official election results | Greeley County Nebraska election results archive vendor,observed_link_candidate
+us:nh:priority-roster:chester,NH,2026-10-24T02:46:37+00:00,Chester New Hampshire official election results | Chester New Hampshire election results archive town clerk,observed_link_candidate
+us:oh:county:jackson,OH,2026-10-24T02:46:37+00:00,Jackson County Ohio official election results | Jackson County Ohio election results archive vendor,observed_link_candidate
+us:or:census-county:41007,OR,2026-10-24T02:46:37+00:00,Clatsop County Oregon official election results | Clatsop County Oregon election results archive vendor,observed_link_candidate
+us:sc:census-county:45075,SC,2026-10-24T02:46:37+00:00,Orangeburg County South Carolina official election results | Orangeburg County South Carolina election results archive vendor,observed_link_candidate
+us:tx:census-county:48075,TX,2026-10-24T02:46:37+00:00,Childress County Texas official election results | Childress County Texas election results archive vendor,observed_link_candidate
+us:va:census-county:51077,VA,2026-10-24T02:46:37+00:00,Grayson County Virginia official election results | Grayson County Virginia election results archive vendor,observed_link_candidate
+us:wi:ltsb2026:arlington-ca762de09691f6c0,WI,2026-10-24T02:46:37+00:00,Village of Arlington Wisconsin official election results | Village of Arlington Wisconsin election results archive Columbia County,observed_link_candidate
+us:wv:census-county:54075,WV,2026-10-24T02:46:37+00:00,Pocahontas County West Virginia official election results | Pocahontas County West Virginia election results archive vendor,observed_link_candidate
+us:al:census-county:01119,AL,2026-10-24T02:46:37+00:00,Sumter County Alabama official election results | Sumter County Alabama election results archive vendor,observed_link_candidate
+us:ar:census-county:05117,AR,2026-10-24T02:46:37+00:00,Prairie County Arkansas official election results | Prairie County Arkansas election results archive vendor,observed_link_candidate
+us:fl:census-county:12115,FL,2026-10-24T02:46:37+00:00,Sarasota County Florida official election results | Sarasota County Florida election results archive vendor,observed_link_candidate
+us:ga:census-county:13115,GA,2026-10-24T02:46:37+00:00,Floyd County Georgia official election results | Floyd County Georgia election results archive vendor,observed_link_candidate
+us:il:census-county:17111,IL,2026-10-24T02:46:37+00:00,McHenry County Illinois official election results | McHenry County Illinois election results archive vendor,observed_link_candidate
+us:in:census-county:18111,IN,2026-10-24T02:46:37+00:00,Newton County Indiana official election results | Newton County Indiana election results archive vendor,observed_link_candidate
+us:ks:census-county:20109,KS,2026-10-24T02:46:37+00:00,Logan County Kansas official election results | Logan County Kansas election results archive vendor,observed_link_candidate
+us:la:census-county:22107,LA,2026-10-24T02:46:37+00:00,Tensas Parish Louisiana official election results | Tensas Parish Louisiana election results archive vendor,observed_link_candidate
+us:ma:priority-roster:carlisle,MA,2026-10-24T02:46:37+00:00,Carlisle Massachusetts official election results | Carlisle Massachusetts election results archive town clerk,observed_link_candidate
+us:md:census-county:24047,MD,2026-10-24T02:46:37+00:00,Worcester County Maryland official election results | Worcester County Maryland election results archive vendor,observed_link_candidate
