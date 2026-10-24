@@ -2370,3 +2370,23 @@ us:de:census-county:10001,DE,2026-10-24T13:38:00+00:00,Kent County Delaware offi
 us:ia:census-county:19109,IA,2026-10-24T13:38:00+00:00,Kossuth County Iowa official election results archive | site:kossuthcounty.iowa.gov election results,observed_link_candidate
 us:id:census-county:16015,ID,2026-10-24T13:38:00+00:00,Boise County Idaho official election results archive | site:boisecounty.us election results,completed_no_new_urls
 us:ky:census-county:21107,KY,2026-10-24T13:38:00+00:00,Hopkins County Kentucky official election results county clerk | site:hopkinscountyclerk.org election results Kentucky,completed_no_new_urls
+us:md:census-county:24003,MD,2026-10-24T17:48:18+00:00,Anne Arundel County Maryland official election results archive,completed_no_new_urls
+us:mo:census-county:29089,MO,2026-10-24T17:48:18+00:00,Howard County Missouri official election results county clerk,observed_link_candidate
+us:ms:census-county:28089,MS,2026-10-24T17:48:18+00:00,Madison County Mississippi official election results archive,observed_link_candidate
+us:mt:census-county:30083,MT,2026-10-24T17:48:18+00:00,Richland County Montana official election results,observed_link_candidate
+us:nj:census-county:34033,NJ,2026-10-24T17:48:18+00:00,Salem County New Jersey official election results archive,observed_link_candidate
+us:nm:census-county:35009,NM,2026-10-24T17:48:18+00:00,Curry County New Mexico official election results county clerk,observed_link_candidate
+us:nv:census-county:32011,NV,2026-10-24T17:48:18+00:00,Eureka County Nevada official election results,observed_link_candidate
+us:ut:census-county:49017,UT,2026-10-24T17:48:18+00:00,Garfield County Utah official election results archive,observed_link_candidate
+us:wy:census-county:56031,WY,2026-10-24T17:48:18+00:00,Platte County Wyoming official election results archive,observed_link_candidate
+us:mi:county:macomb,MI,2026-10-24T17:48:18+00:00,Macomb County Michigan official election results archive,observed_link_candidate
+us:nc:census-county:37083,NC,2026-10-24T17:48:18+00:00,Halifax County North Carolina official election results,observed_link_candidate
+us:ne:census-county:31081,NE,2026-10-24T17:48:18+00:00,Hamilton County Nebraska official election results archive,observed_link_candidate
+us:nh:priority-roster:chichester,NH,2026-10-24T17:48:18+00:00,Chichester New Hampshire official election results town,observed_link_candidate
+us:oh:county:knox,OH,2026-10-24T17:48:18+00:00,Knox County Ohio official election results archive,observed_link_candidate
+us:or:census-county:41011,OR,2026-10-24T17:48:18+00:00,Coos County Oregon official election results archive,observed_link_candidate
+us:sc:census-county:45079,SC,2026-10-24T17:48:18+00:00,Richland County South Carolina official election results archive,observed_link_candidate
+us:tx:census-county:48079,TX,2026-10-24T17:48:18+00:00,Cochran County Texas official election results archive,observed_link_candidate
+us:va:census-county:51081,VA,2026-10-24T17:48:18+00:00,Greensville County Virginia official election results,completed_no_new_urls
+us:wi:ltsb2026:ashland-agenda-15431a585d5e5410,WI,2026-10-24T17:48:18+00:00,Town of Agenda Ashland County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54079,WV,2026-10-24T17:48:18+00:00,Putnam County West Virginia official election results archive,observed_link_candidate
