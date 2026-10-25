@@ -2690,3 +2690,23 @@ us:de:census-county:10005,DE,2026-10-25T21:40:33+00:00,Sussex County Delaware of
 us:fl:census-county:12001,FL,2026-10-25T21:40:33+00:00,Alachua County Florida official election results archive public records,observed_link_candidate
 us:ga:census-county:13135,GA,2026-10-25T21:40:33+00:00,Gwinnett County Georgia official election results archive 2026,observed_link_candidate
 us:mi:county:missaukee,MI,2026-10-25T21:40:33+00:00,Missaukee County Michigan official election results county clerk archive 2026,observed_link_candidate
+us:mn:census-county:27109,MN,2026-10-25T22:46:16+00:00,Olmsted County Minnesota official election results archive 2026,observed_link_candidate
+us:nc:census-county:37095,NC,2026-10-25T22:46:16+00:00,Hyde County North Carolina official election results archive 2026,observed_link_candidate
+us:nd:census-county:38095,ND,2026-10-25T22:46:16+00:00,Towner County North Dakota official election results archive 2026,observed_link_candidate
+us:ne:census-county:31093,NE,2026-10-25T22:46:16+00:00,Howard County Nebraska official election results archive 2026,observed_link_candidate
+us:nh:priority-roster:conway,NH,2026-10-25T22:46:16+00:00,Conway New Hampshire official election results archive 2026,observed_link_candidate
+us:nj:census-county:34005,NJ,2026-10-25T22:46:16+00:00,Burlington County New Jersey official election results archive 2026,observed_link_candidate
+us:nm:census-county:35021,NM,2026-10-25T22:46:16+00:00,Harding County New Mexico official election results archive 2026,observed_link_candidate
+us:nv:census-county:32023,NV,2026-10-25T22:46:16+00:00,Nye County Nevada official election results archive 2026,observed_link_candidate
+us:ny:census-county:36091,NY,2026-10-25T22:46:16+00:00,Saratoga County New York official election results archive 2026,observed_link_candidate
+us:oh:county:lucas,OH,2026-10-25T22:46:16+00:00,Lucas County Ohio official election results archive 2026,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-25T22:46:16+00:00,Hawaii County Hawaii official election results archive 2026 | Hawaii County elections historical results vendor dashboard,completed_no_new_urls
+us:ia:census-county:19127,IA,2026-10-25T22:46:16+00:00,Marshall County Iowa official election results archive 2026,observed_link_candidate
+us:id:census-county:16033,ID,2026-10-25T22:46:16+00:00,Clark County Idaho official election results archive 2026,observed_link_candidate
+us:il:census-county:17131,IL,2026-10-25T22:46:16+00:00,Mercer County Illinois official election results archive 2026,observed_link_candidate
+us:in:census-county:18131,IN,2026-10-25T22:46:16+00:00,Pulaski County Indiana official election results archive 2026,observed_link_candidate
+us:ks:census-county:20129,KS,2026-10-25T22:46:16+00:00,Morton County Kansas official election results archive 2026,observed_link_candidate
+us:ky:census-county:21125,KY,2026-10-25T22:46:16+00:00,Laurel County Kentucky official election results archive 2026,observed_link_candidate
+us:la:census-county:22127,LA,2026-10-25T22:46:16+00:00,Winn Parish Louisiana official election results archive 2026,observed_link_candidate
+us:ma:priority-roster:chicopee,MA,2026-10-25T22:46:16+00:00,Chicopee Massachusetts official election results archive 2026,observed_link_candidate
+us:md:census-county:24021,MD,2026-10-25T22:46:16+00:00,Frederick County Maryland official election results archive 2026,observed_link_candidate
