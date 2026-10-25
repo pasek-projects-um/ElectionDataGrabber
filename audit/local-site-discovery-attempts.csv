@@ -2610,3 +2610,23 @@ us:fl:census-county:12131,FL,2026-10-25T16:30:59+00:00,Walton County Florida off
 us:ga:census-county:13131,GA,2026-10-25T16:30:59+00:00,Grady County Georgia official election results | site:gradycountyga.gov election results,observed_link_candidate
 us:hi:census-county:15009,HI,2026-10-25T16:30:59+00:00,Maui County Hawaii official election results archive,observed_link_candidate
 us:mn:census-county:27105,MN,2026-10-25T16:30:59+00:00,Nobles County Minnesota official election results auditor,observed_link_candidate
+us:mo:census-county:29099,MO,2026-10-25T17:11:55+00:00,Jefferson County Missouri official election results,observed_link_candidate
+us:ms:census-county:28099,MS,2026-10-25T17:11:55+00:00,Neshoba County Mississippi official election results,observed_link_candidate
+us:mt:census-county:30093,MT,2026-10-25T17:11:55+00:00,Silver Bow County Montana official election results,observed_link_candidate
+us:sc:census-county:45087,SC,2026-10-25T17:11:55+00:00,Union County South Carolina official election results elections office | Union County SC voter registration elections official website election results,observed_link_candidate
+us:tx:census-county:48087,TX,2026-10-25T17:11:55+00:00,Collingsworth County Texas official election results,observed_link_candidate
+us:ut:census-county:49025,UT,2026-10-25T17:11:55+00:00,Kane County Utah official election results,observed_link_candidate
+us:va:census-county:51089,VA,2026-10-25T17:11:55+00:00,Henry County Virginia official election results,observed_link_candidate
+us:wi:ltsb2026:ashland-gingles-180bed3d6bc564e5,WI,2026-10-25T17:11:55+00:00,Town of Gingles Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54087,WV,2026-10-25T17:11:55+00:00,Roane County West Virginia official election results | Roane County WV clerk official election results,observed_link_candidate
+us:wy:census-county:56039,WY,2026-10-25T17:11:55+00:00,Teton County Wyoming official election results,observed_link_candidate
+us:ia:census-county:19123,IA,2026-10-25T17:11:55+00:00,Mahaska County Iowa official election results,observed_link_candidate
+us:id:census-county:16029,ID,2026-10-25T17:11:55+00:00,Caribou County Idaho official election results,observed_link_candidate
+us:il:census-county:17127,IL,2026-10-25T17:11:55+00:00,Massac County Illinois official election results | site:massaccountyil.gov election results,observed_link_candidate
+us:in:census-county:18127,IN,2026-10-25T17:11:55+00:00,Porter County Indiana official election results,observed_link_candidate
+us:ks:census-county:20125,KS,2026-10-25T17:11:55+00:00,Montgomery County Kansas official election results,observed_link_candidate
+us:ky:census-county:21121,KY,2026-10-25T17:11:55+00:00,Knox County Kentucky official election results,observed_link_candidate
+us:la:census-county:22123,LA,2026-10-25T17:11:55+00:00,West Carroll Parish Louisiana official election results,observed_link_candidate
+us:ma:priority-roster:chester,MA,2026-10-25T17:11:55+00:00,Chester Massachusetts official town election results,observed_link_candidate
+us:md:census-county:24017,MD,2026-10-25T17:11:55+00:00,Charles County Maryland official election results,observed_link_candidate
+us:me:municipality:byron,ME,2026-10-25T17:11:55+00:00,Byron Maine official election results town clerk | site:maine.gov Byron municipal clerk election,observed_link_candidate
