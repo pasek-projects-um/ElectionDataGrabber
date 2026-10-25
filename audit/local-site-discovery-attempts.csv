@@ -2590,3 +2590,23 @@ us:md:census-county:24015,MD,2026-10-25T13:29:20+00:00,Cecil County Maryland off
 us:me:municipality:buxton,ME,2026-10-25T13:29:20+00:00,Buxton Maine official election results town clerk archive,observed_link_candidate
 us:mi:county:menominee,MI,2026-10-25T13:29:20+00:00,Menominee County Michigan official election results archive clerk,observed_link_candidate
 us:oh:county:logan,OH,2026-10-25T13:29:20+00:00,Logan County Ohio official election results board elections archive,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-25T16:30:59+00:00,Alaska Division of Elections official results archive current election dashboard | site:elections.alaska.gov REAA election results,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-25T16:30:59+00:00,Kent County Delaware official election results archive county election office | site:elections.delaware.gov Kent school municipal election results,observed_link_candidate
+us:ok:census-county:40089,OK,2026-10-25T16:30:59+00:00,McCurtain County Oklahoma official election results archive county election board,observed_link_candidate
+us:or:census-county:41019,OR,2026-10-25T16:30:59+00:00,Douglas County Oregon official election results archive county clerk,observed_link_candidate
+us:pa:county:mifflin,PA,2026-10-25T16:30:59+00:00,Mifflin County Pennsylvania official election results archive,observed_link_candidate
+us:ri:priority-roster:cranston,RI,2026-10-25T16:30:59+00:00,Cranston Rhode Island official election results archive,observed_link_candidate
+us:sd:census-county:46091,SD,2026-10-25T16:30:59+00:00,Marshall County South Dakota official election results auditor,observed_link_candidate
+us:tn:census-county:47087,TN,2026-10-25T16:30:59+00:00,Jackson County Tennessee official election results election commission,observed_link_candidate
+us:vt:priority-roster:chittenden,VT,2026-10-25T16:30:59+00:00,Chittenden Vermont official election results archive,observed_link_candidate
+us:wa:census-county:53009,WA,2026-10-25T16:30:59+00:00,Clallam County Washington official election results archive,observed_link_candidate
+us:al:census-county:01001,AL,2026-10-25T16:30:59+00:00,Autauga County Alabama official election results probate,observed_link_candidate
+us:ar:census-county:05133,AR,2026-10-25T16:30:59+00:00,Sevier County Arkansas official election results clerk,observed_link_candidate
+us:az:census-county:04025,AZ,2026-10-25T16:30:59+00:00,Yavapai County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06011,CA,2026-10-25T16:30:59+00:00,Colusa County California official election results archive,observed_link_candidate
+us:co:census-county:08001,CO,2026-10-25T16:30:59+00:00,Adams County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:hampton,CT,2026-10-25T16:30:59+00:00,Hampton Connecticut official election results registrar,observed_link_candidate
+us:fl:census-county:12131,FL,2026-10-25T16:30:59+00:00,Walton County Florida official election results supervisor,observed_link_candidate
+us:ga:census-county:13131,GA,2026-10-25T16:30:59+00:00,Grady County Georgia official election results | site:gradycountyga.gov election results,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-25T16:30:59+00:00,Maui County Hawaii official election results archive,observed_link_candidate
+us:mn:census-county:27105,MN,2026-10-25T16:30:59+00:00,Nobles County Minnesota official election results auditor,observed_link_candidate
