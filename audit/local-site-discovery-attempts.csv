@@ -2570,3 +2570,23 @@ us:mn:census-county:27103,MN,2026-10-25T12:32:48+00:00,Nicollet County Minnesota
 us:mo:census-county:29097,MO,2026-10-25T12:32:48+00:00,Jasper County Missouri official election results archive,observed_link_candidate
 us:ms:census-county:28097,MS,2026-10-25T12:32:48+00:00,Montgomery County Mississippi official election results archive,observed_link_candidate
 us:mt:census-county:30091,MT,2026-10-25T12:32:48+00:00,Sheridan County Montana official election results archive,observed_link_candidate
+us:nc:census-county:37091,NC,2026-10-25T13:29:20+00:00,Hertford County North Carolina official election results archive board elections | site:hertfordcountync.gov elections results board Hertford County,observed_link_candidate
+us:nd:census-county:38091,ND,2026-10-25T13:29:20+00:00,Steele County North Dakota official election results archive county auditor,observed_link_candidate
+us:ne:census-county:31089,NE,2026-10-25T13:29:20+00:00,Holt County Nebraska official election results archive county clerk,observed_link_candidate
+us:nh:priority-roster:columbia,NH,2026-10-25T13:29:20+00:00,Columbia New Hampshire official election results town clerk archive | site:columbianh.org election results town clerk Columbia NH,observed_link_candidate
+us:nj:census-county:34041,NJ,2026-10-25T13:29:20+00:00,Warren County New Jersey official election results archive board elections,observed_link_candidate
+us:nm:census-county:35017,NM,2026-10-25T13:29:20+00:00,Grant County New Mexico official election results archive county clerk,observed_link_candidate
+us:nv:census-county:32019,NV,2026-10-25T13:29:20+00:00,Lyon County Nevada official election results archive clerk,completed_no_new_urls
+us:ny:census-county:36087,NY,2026-10-25T13:29:20+00:00,Rockland County New York official election results archive board elections,observed_link_candidate
+us:ia:census-county:19121,IA,2026-10-25T13:29:20+00:00,Madison County Iowa official election results archive auditor,observed_link_candidate
+us:id:census-county:16027,ID,2026-10-25T13:29:20+00:00,Canyon County Idaho official election results archive clerk,observed_link_candidate
+us:il:census-county:17125,IL,2026-10-25T13:29:20+00:00,Mason County Illinois official election results archive county clerk,observed_link_candidate
+us:in:census-county:18125,IN,2026-10-25T13:29:20+00:00,Pike County Indiana official election results archive clerk | site:pikecounty.in.gov election results clerk Pike County Indiana,observed_link_candidate
+us:ks:census-county:20123,KS,2026-10-25T13:29:20+00:00,Mitchell County Kansas official election results archive county clerk,observed_link_candidate
+us:ky:census-county:21119,KY,2026-10-25T13:29:20+00:00,Knott County Kentucky official election results archive county clerk,observed_link_candidate
+us:la:census-county:22121,LA,2026-10-25T13:29:20+00:00,West Baton Rouge Parish Louisiana official election results archive clerk | site:wbrclerk.org election results,observed_link_candidate
+us:ma:priority-roster:cheshire,MA,2026-10-25T13:29:20+00:00,Cheshire Massachusetts official election results town clerk archive,observed_link_candidate
+us:md:census-county:24015,MD,2026-10-25T13:29:20+00:00,Cecil County Maryland official election results archive board elections,observed_link_candidate
+us:me:municipality:buxton,ME,2026-10-25T13:29:20+00:00,Buxton Maine official election results town clerk archive,observed_link_candidate
+us:mi:county:menominee,MI,2026-10-25T13:29:20+00:00,Menominee County Michigan official election results archive clerk,observed_link_candidate
+us:oh:county:logan,OH,2026-10-25T13:29:20+00:00,Logan County Ohio official election results board elections archive,observed_link_candidate
