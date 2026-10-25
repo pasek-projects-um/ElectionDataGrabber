@@ -2670,3 +2670,23 @@ us:la:census-county:22125,LA,2026-10-25T19:23:11+00:00,West Feliciana Parish Lou
 us:ma:priority-roster:chesterfield,MA,2026-10-25T19:23:11+00:00,Chesterfield Massachusetts official election results archive town clerk,observed_link_candidate
 us:md:census-county:24019,MD,2026-10-25T19:23:11+00:00,Dorchester County Maryland official election results archive,observed_link_candidate
 us:me:municipality:calais,ME,2026-10-25T19:23:11+00:00,Calais Maine official election results archive city clerk,observed_link_candidate
+us:mo:census-county:29101,MO,2026-10-25T21:40:33+00:00,Johnson County Missouri official election results archive alternative,observed_link_candidate
+us:ms:census-county:28101,MS,2026-10-25T21:40:33+00:00,Newton County Mississippi official election results circuit clerk archive,observed_link_candidate
+us:mt:census-county:30095,MT,2026-10-25T21:40:33+00:00,Stillwater County Montana official election results archive,observed_link_candidate
+us:sc:census-county:45089,SC,2026-10-25T21:40:33+00:00,Williamsburg County South Carolina official election results archive,observed_link_candidate
+us:tx:census-county:48089,TX,2026-10-25T21:40:33+00:00,Colorado County Texas official election results archive vendor,observed_link_candidate
+us:ut:census-county:49027,UT,2026-10-25T21:40:33+00:00,Millard County Utah official election results archive 2026,observed_link_candidate
+us:va:census-county:51091,VA,2026-10-25T21:40:33+00:00,Highland County Virginia official election results historical archive,observed_link_candidate
+us:wi:ltsb2026:ashland-gordon-9170e4757a74f576,WI,2026-10-25T21:40:33+00:00,Town of Gordon Ashland County Wisconsin official elections clerk,observed_link_candidate
+us:wv:census-county:54089,WV,2026-10-25T21:40:33+00:00,Summers County West Virginia official election results archive; Summers County clerk election information,observed_link_candidate
+us:wy:census-county:56041,WY,2026-10-25T21:40:33+00:00,Uinta County Wyoming official election results archive 2026,observed_link_candidate
+us:al:census-county:01005,AL,2026-10-25T21:40:33+00:00,Barbour County Alabama official election results; Barbour County probate election results alternative,completed_no_new_urls
+us:ar:census-county:05137,AR,2026-10-25T21:40:33+00:00,Stone County Arkansas official election results archive clerk,observed_link_candidate
+us:az:census-county:04003,AZ,2026-10-25T21:40:33+00:00,Cochise County Arizona official election results alternative; Cochise County 2026 official vendor archive,completed_no_new_urls
+us:ca:census-county:06015,CA,2026-10-25T21:40:33+00:00,Del Norte County California official election results archive,observed_link_candidate
+us:co:census-county:08005,CO,2026-10-25T21:40:33+00:00,Arapahoe County Colorado official election results records transparency,observed_link_candidate
+us:ct:municipality:hartland,CT,2026-10-25T21:40:33+00:00,Hartland Connecticut official election results town clerk archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-25T21:40:33+00:00,Sussex County Delaware official election results archive; Delaware 2026 general election alternative,observed_link_candidate
+us:fl:census-county:12001,FL,2026-10-25T21:40:33+00:00,Alachua County Florida official election results archive public records,observed_link_candidate
+us:ga:census-county:13135,GA,2026-10-25T21:40:33+00:00,Gwinnett County Georgia official election results archive 2026,observed_link_candidate
+us:mi:county:missaukee,MI,2026-10-25T21:40:33+00:00,Missaukee County Michigan official election results county clerk archive 2026,observed_link_candidate
