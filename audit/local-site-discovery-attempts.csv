@@ -2450,3 +2450,23 @@ us:de:census-county:10003,DE,2026-10-25T00:15:17+00:00,New Castle County Delawar
 us:fl:census-county:12123,FL,2026-10-25T00:15:17+00:00,Taylor County Florida official election results archive,observed_link_candidate
 us:ga:census-county:13123,GA,2026-10-25T00:15:17+00:00,Gilmer County Georgia official election results archive,observed_link_candidate
 us:hi:census-county:15007,HI,2026-10-25T00:15:17+00:00,Kauai County Hawaii official election results archive,completed_no_new_urls
+us:ia:census-county:19115,IA,2026-10-25T01:39:21+00:00,Louisa County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16021,ID,2026-10-25T01:39:21+00:00,Boundary County Idaho official election results archive alternative,observed_link_candidate
+us:il:census-county:17119,IL,2026-10-25T01:39:21+00:00,Madison County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18119,IN,2026-10-25T01:39:21+00:00,Owen County Indiana official election results clerk archive,observed_link_candidate
+us:ks:census-county:20117,KS,2026-10-25T01:39:21+00:00,Marshall County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21113,KY,2026-10-25T01:39:21+00:00,Jessamine County Kentucky official election results archive,observed_link_candidate
+us:la:census-county:22115,LA,2026-10-25T01:39:21+00:00,Vernon Parish Louisiana official election results archive,observed_link_candidate
+us:ma:priority-roster:chatham,MA,2026-10-25T01:39:21+00:00,Chatham Massachusetts official election results archive,observed_link_candidate
+us:mn:census-county:27099,MN,2026-10-25T01:39:21+00:00,Mower County Minnesota official election results archive,observed_link_candidate
+us:md:census-county:24009,MD,2026-10-25T01:39:21+00:00,Calvert County Maryland official election results current alternative,observed_link_candidate
+us:me:municipality:buckfield,ME,2026-10-25T01:39:21+00:00,Buckfield Maine official election results town clerk archive,observed_link_candidate
+us:mi:county:marquette,MI,2026-10-25T01:39:21+00:00,Marquette County Michigan official election results archive,observed_link_candidate
+us:mo:census-county:29093,MO,2026-10-25T01:39:21+00:00,Iron County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28093,MS,2026-10-25T01:39:21+00:00,Marshall County Mississippi official election results archive,observed_link_candidate
+us:mt:census-county:30087,MT,2026-10-25T01:39:21+00:00,Rosebud County Montana official election results archive,observed_link_candidate
+us:nc:census-county:37087,NC,2026-10-25T01:39:21+00:00,Haywood County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38087,ND,2026-10-25T01:39:21+00:00,Slope County North Dakota official election results archive,observed_link_candidate
+us:ne:census-county:31085,NE,2026-10-25T01:39:21+00:00,Hayes County Nebraska official election results archive,observed_link_candidate
+us:nh:priority-roster:clarksville,NH,2026-10-25T01:39:21+00:00,Clarksville New Hampshire official election results archive,observed_link_candidate
+us:nj:census-county:34037,NJ,2026-10-25T01:39:21+00:00,Sussex County New Jersey official election results archive alternative,observed_link_candidate
