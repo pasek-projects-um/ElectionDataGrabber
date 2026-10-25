@@ -2650,3 +2650,23 @@ us:de:census-county:10001,DE,2026-10-25T18:12:51+00:00,Kent County Delaware offi
 us:fl:census-county:12133,FL,2026-10-25T18:12:51+00:00,Washington County Florida official election results archive,observed_link_candidate
 us:ga:census-county:13133,GA,2026-10-25T18:12:51+00:00,Greene County Georgia official election results,observed_link_candidate
 us:mn:census-county:27107,MN,2026-10-25T18:12:51+00:00,Norman County Minnesota official election results | Norman County Minnesota auditor official election results site:co.norman.mn.us,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-25T19:23:11+00:00,District of Columbia Board of Elections official election results archive 2026 site:dcboe.org,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-10-25T19:23:11+00:00,Honolulu County official election results archive dashboard Hawaii elections,completed_no_new_urls
+us:ok:census-county:40091,OK,2026-10-25T19:23:11+00:00,McIntosh County Oklahoma official election results archive,completed_no_new_urls
+us:or:census-county:41021,OR,2026-10-25T19:23:11+00:00,Gilliam County Oregon official election results archive,completed_no_new_urls
+us:pa:county:monroe,PA,2026-10-25T19:23:11+00:00,Monroe County Pennsylvania official election results archive 2026,observed_link_candidate
+us:ri:priority-roster:cumberland,RI,2026-10-25T19:23:11+00:00,Cumberland Rhode Island official election results archive,observed_link_candidate
+us:sd:census-county:46093,SD,2026-10-25T19:23:11+00:00,Meade County South Dakota official election results archive,observed_link_candidate
+us:tn:census-county:47089,TN,2026-10-25T19:23:11+00:00,Jefferson County Tennessee official election results archive,observed_link_candidate
+us:vt:priority-roster:clarendon,VT,2026-10-25T19:23:11+00:00,Clarendon Vermont official town election results site:clarendonvt.gov OR site:clarendonvt.org,observed_link_candidate
+us:wa:census-county:53011,WA,2026-10-25T19:23:11+00:00,Clark County Washington official election results archive 2026,observed_link_candidate
+us:ia:census-county:19125,IA,2026-10-25T19:23:11+00:00,Marion County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16031,ID,2026-10-25T19:23:11+00:00,Cassia County Idaho 2026 official election results site:cassia.gov OR site:results.voteidaho.gov,observed_link_candidate
+us:il:census-county:17129,IL,2026-10-25T19:23:11+00:00,Menard County Illinois official election results archive,observed_link_candidate
+us:in:census-county:18129,IN,2026-10-25T19:23:11+00:00,Posey County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20127,KS,2026-10-25T19:23:11+00:00,Morris County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21123,KY,2026-10-25T19:23:11+00:00,Larue County Kentucky official election results archive,observed_link_candidate
+us:la:census-county:22125,LA,2026-10-25T19:23:11+00:00,West Feliciana Parish Louisiana official election results archive,observed_link_candidate
+us:ma:priority-roster:chesterfield,MA,2026-10-25T19:23:11+00:00,Chesterfield Massachusetts official election results archive town clerk,observed_link_candidate
+us:md:census-county:24019,MD,2026-10-25T19:23:11+00:00,Dorchester County Maryland official election results archive,observed_link_candidate
+us:me:municipality:calais,ME,2026-10-25T19:23:11+00:00,Calais Maine official election results archive city clerk,observed_link_candidate
