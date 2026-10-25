@@ -2530,3 +2530,23 @@ us:ga:census-county:13127,GA,2026-10-25T08:40:57+00:00,Glynn County GA official 
 us:nm:census-county:35015,NM,2026-10-25T08:40:57+00:00,Eddy County NM official election results archive current dashboard alternative,observed_link_candidate
 us:nv:census-county:32017,NV,2026-10-25T08:40:57+00:00,Lincoln County NV official election results archive current dashboard alternative,observed_link_candidate
 us:ny:census-county:36085,NY,2026-10-25T08:40:57+00:00,Richmond County NY official election results archive current dashboard alternative,observed_link_candidate
+us:oh:county:licking,OH,2026-10-25T11:17:03+00:00,Licking County Ohio official election results archive,observed_link_candidate
+us:ok:census-county:40087,OK,2026-10-25T11:17:03+00:00,McClain County Oklahoma official election results county election board,observed_link_candidate
+us:pa:county:mercer,PA,2026-10-25T11:17:03+00:00,Mercer County Pennsylvania official election results archive,observed_link_candidate
+us:ri:priority-roster:coventry,RI,2026-10-25T11:17:03+00:00,Coventry Rhode Island official election results town clerk,observed_link_candidate
+us:sd:census-county:46089,SD,2026-10-25T11:17:03+00:00,McPherson County South Dakota official election results archive,observed_link_candidate
+us:tn:census-county:47085,TN,2026-10-25T11:17:03+00:00,Humphreys County Tennessee official election results election commission,observed_link_candidate
+us:vt:priority-roster:chester,VT,2026-10-25T11:17:03+00:00,Chester Vermont official election results town clerk,observed_link_candidate
+us:wa:census-county:53007,WA,2026-10-25T11:17:03+00:00,Chelan County Washington official election results archive,observed_link_candidate
+us:ia:census-county:19119,IA,2026-10-25T11:17:03+00:00,Lyon County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16025,ID,2026-10-25T11:17:03+00:00,Camas County Idaho official election results clerk,observed_link_candidate
+us:il:census-county:17123,IL,2026-10-25T11:17:03+00:00,Marshall County Illinois official election results county clerk archive,observed_link_candidate
+us:in:census-county:18123,IN,2026-10-25T11:17:03+00:00,Perry County Indiana official election results clerk archive,observed_link_candidate
+us:ks:census-county:20121,KS,2026-10-25T11:17:03+00:00,Miami County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21117,KY,2026-10-25T11:17:03+00:00,Kenton County Kentucky official election results clerk archive,observed_link_candidate
+us:la:census-county:22119,LA,2026-10-25T11:17:03+00:00,Webster Parish Louisiana official election results clerk,observed_link_candidate
+us:ma:priority-roster:chelsea,MA,2026-10-25T11:17:03+00:00,Chelsea Massachusetts official election results city clerk archive,observed_link_candidate
+us:md:census-county:24013,MD,2026-10-25T11:17:03+00:00,Carroll County Maryland official election results archive,observed_link_candidate
+us:me:municipality:burnham,ME,2026-10-25T11:17:03+00:00,Burnham Maine official election results town clerk,observed_link_candidate
+us:mi:county:mecosta,MI,2026-10-25T11:17:03+00:00,Mecosta County Michigan official election results archive,observed_link_candidate
+us:or:census-county:41017,OR,2026-10-25T11:17:03+00:00,Deschutes County Oregon official election results archive,observed_link_candidate
