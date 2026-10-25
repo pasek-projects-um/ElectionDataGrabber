@@ -2710,3 +2710,23 @@ us:ky:census-county:21125,KY,2026-10-25T22:46:16+00:00,Laurel County Kentucky of
 us:la:census-county:22127,LA,2026-10-25T22:46:16+00:00,Winn Parish Louisiana official election results archive 2026,observed_link_candidate
 us:ma:priority-roster:chicopee,MA,2026-10-25T22:46:16+00:00,Chicopee Massachusetts official election results archive 2026,observed_link_candidate
 us:md:census-county:24021,MD,2026-10-25T22:46:16+00:00,Frederick County Maryland official election results archive 2026,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-25T23:16:49+00:00,Alaska Division of Elections official results archive 2026,observed_link_candidate
+us:me:municipality:camden,ME,2026-10-25T23:16:49+00:00,Camden Maine official election results archive town clerk,observed_link_candidate
+us:ok:census-county:40093,OK,2026-10-25T23:16:49+00:00,Major County Oklahoma official election results county election board archive,observed_link_candidate
+us:or:census-county:41023,OR,2026-10-25T23:16:49+00:00,Grant County Oregon official election results archive county clerk,observed_link_candidate
+us:pa:county:montgomery,PA,2026-10-25T23:16:49+00:00,Montgomery County Pennsylvania official election results archive 2026,observed_link_candidate
+us:ri:priority-roster:east-greenwich,RI,2026-10-25T23:16:49+00:00,East Greenwich Rhode Island official election results archive town clerk,observed_link_candidate
+us:sd:census-county:46095,SD,2026-10-25T23:16:49+00:00,Mellette County South Dakota official election results archive auditor,observed_link_candidate
+us:tn:census-county:47091,TN,2026-10-25T23:16:49+00:00,Johnson County Tennessee official election results archive election commission,observed_link_candidate
+us:vt:priority-roster:colchester,VT,2026-10-25T23:16:49+00:00,Colchester Vermont official election results archive town clerk 2026,observed_link_candidate
+us:wa:census-county:53013,WA,2026-10-25T23:16:49+00:00,Columbia County Washington official election results archive auditor 2026,observed_link_candidate
+us:al:census-county:01007,AL,2026-10-25T23:16:49+00:00,Bibb County Alabama official election results archive probate judge,observed_link_candidate
+us:ar:census-county:05139,AR,2026-10-25T23:16:49+00:00,Union County Arkansas official election results archive county clerk,observed_link_candidate
+us:az:census-county:04001,AZ,2026-10-25T23:16:49+00:00,Apache County Arizona official election results archive 2026 elections,observed_link_candidate
+us:ca:census-county:06017,CA,2026-10-25T23:16:49+00:00,El Dorado County California official election results archive 2026,observed_link_candidate
+us:co:census-county:08007,CO,2026-10-25T23:16:49+00:00,Archuleta County Colorado official election results archive 2026,observed_link_candidate
+us:ct:municipality:harwinton,CT,2026-10-25T23:16:49+00:00,Harwinton Connecticut official election results archive town clerk 2026,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-25T23:16:49+00:00,Sussex County Delaware official election results archive 2026 elections | Sussex County Delaware county election office official local results municipal election archive,observed_link_candidate
+us:fl:census-county:12003,FL,2026-10-25T23:16:49+00:00,Baker County Florida official election results archive supervisor elections,observed_link_candidate
+us:ga:census-county:13137,GA,2026-10-25T23:16:49+00:00,Habersham County Georgia official election results archive 2026 elections,observed_link_candidate
+us:mi:county:monroe,MI,2026-10-25T23:16:49+00:00,Monroe County Michigan official election results archive clerk 2026,observed_link_candidate
