@@ -2430,3 +2430,23 @@ us:ne:census-county:31083,NE,2026-10-24T23:47:21+00:00,Harlan County Nebraska of
 us:nh:priority-roster:claremont,NH,2026-10-24T23:47:21+00:00,Claremont New Hampshire official election results archive,observed_link_candidate
 us:nj:census-county:34035,NJ,2026-10-24T23:47:21+00:00,Somerset County New Jersey official election results archive,completed_no_new_urls
 us:nm:census-county:35011,NM,2026-10-24T23:47:21+00:00,De Baca County New Mexico official election results archive,completed_no_new_urls
+us:nv:census-county:32013,NV,2026-10-25T00:15:17+00:00,Humboldt County Nevada official election results archive alternative domain,completed_no_new_urls
+us:oh:county:lake,OH,2026-10-25T00:15:17+00:00,Lake County Ohio Board of Elections official results archive,observed_link_candidate
+us:or:census-county:41013,OR,2026-10-25T00:15:17+00:00,Crook County Oregon official election results archive,observed_link_candidate
+us:sc:census-county:45081,SC,2026-10-25T00:15:17+00:00,Saluda County South Carolina official election results archive,observed_link_candidate
+us:tx:census-county:48081,TX,2026-10-25T00:15:17+00:00,Coke County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49019,UT,2026-10-25T00:15:17+00:00,Grand County Utah official election results archive,observed_link_candidate
+us:va:census-county:51083,VA,2026-10-25T00:15:17+00:00,Halifax County Virginia official election results archive,observed_link_candidate
+us:wi:ltsb2026:ashland-ashland-a7f322332cc7aeb5,WI,2026-10-25T00:15:17+00:00,Town of Ashland Ashland County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54081,WV,2026-10-25T00:15:17+00:00,Raleigh County West Virginia official election results archive,observed_link_candidate
+us:wy:census-county:56033,WY,2026-10-25T00:15:17+00:00,Sheridan County Wyoming official election results archive,observed_link_candidate
+us:al:census-county:01127,AL,2026-10-25T00:15:17+00:00,Walker County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05125,AR,2026-10-25T00:15:17+00:00,Saline County Arkansas official election results archive,observed_link_candidate
+us:az:census-county:04017,AZ,2026-10-25T00:15:17+00:00,Navajo County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06003,CA,2026-10-25T00:15:17+00:00,Alpine County California official election results archive,observed_link_candidate
+us:co:census-county:08119,CO,2026-10-25T00:15:17+00:00,Teller County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:groton,CT,2026-10-25T00:15:17+00:00,Groton Connecticut official election results archive,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-25T00:15:17+00:00,New Castle County Delaware official election results archive,completed_no_new_urls
+us:fl:census-county:12123,FL,2026-10-25T00:15:17+00:00,Taylor County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13123,GA,2026-10-25T00:15:17+00:00,Gilmer County Georgia official election results archive,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-25T00:15:17+00:00,Kauai County Hawaii official election results archive,completed_no_new_urls
