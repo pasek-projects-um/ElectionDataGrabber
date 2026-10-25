@@ -2550,3 +2550,23 @@ us:md:census-county:24013,MD,2026-10-25T11:17:03+00:00,Carroll County Maryland o
 us:me:municipality:burnham,ME,2026-10-25T11:17:03+00:00,Burnham Maine official election results town clerk,observed_link_candidate
 us:mi:county:mecosta,MI,2026-10-25T11:17:03+00:00,Mecosta County Michigan official election results archive,observed_link_candidate
 us:or:census-county:41017,OR,2026-10-25T11:17:03+00:00,Deschutes County Oregon official election results archive,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-25T12:32:48+00:00,Hawaii County Hawaii official election results archive alternative | site:elections.hawaiicounty.gov Hawaii County certified election results historical reports alternative,completed_no_new_urls
+us:sc:census-county:45085,SC,2026-10-25T12:32:48+00:00,Sumter County South Carolina official election results election commission archive | Sumter County South Carolina official election results county election office,observed_link_candidate
+us:tx:census-county:48085,TX,2026-10-25T12:32:48+00:00,Collin County Texas official election results archive elections,observed_link_candidate
+us:ut:census-county:49023,UT,2026-10-25T12:32:48+00:00,Juab County Utah official election results archive clerk,observed_link_candidate
+us:va:census-county:51087,VA,2026-10-25T12:32:48+00:00,Henrico County Virginia official election results archive registrar,observed_link_candidate
+us:wi:ltsb2026:ashland-f014be1a7cac46ed,WI,2026-10-25T12:32:48+00:00,City of Ashland Wisconsin official election results archive,observed_link_candidate
+us:wv:census-county:54085,WV,2026-10-25T12:32:48+00:00,Ritchie County West Virginia official election results archive clerk,observed_link_candidate
+us:wy:census-county:56037,WY,2026-10-25T12:32:48+00:00,Sweetwater County Wyoming official election results archive,observed_link_candidate
+us:al:census-county:01133,AL,2026-10-25T12:32:48+00:00,Winston County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05131,AR,2026-10-25T12:32:48+00:00,Sebastian County Arkansas official election results archive,observed_link_candidate
+us:az:census-county:04023,AZ,2026-10-25T12:32:48+00:00,Santa Cruz County Arizona official election results archive,completed_no_new_urls
+us:ca:census-county:06009,CA,2026-10-25T12:32:48+00:00,Calaveras County California official election results archive,observed_link_candidate
+us:co:census-county:08125,CO,2026-10-25T12:32:48+00:00,Yuma County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:hamden,CT,2026-10-25T12:32:48+00:00,Hamden Connecticut official election results town clerk archive,observed_link_candidate
+us:fl:census-county:12129,FL,2026-10-25T12:32:48+00:00,Wakulla County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13129,GA,2026-10-25T12:32:48+00:00,Gordon County Georgia official election results archive,observed_link_candidate
+us:mn:census-county:27103,MN,2026-10-25T12:32:48+00:00,Nicollet County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29097,MO,2026-10-25T12:32:48+00:00,Jasper County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28097,MS,2026-10-25T12:32:48+00:00,Montgomery County Mississippi official election results archive,observed_link_candidate
+us:mt:census-county:30091,MT,2026-10-25T12:32:48+00:00,Sheridan County Montana official election results archive,observed_link_candidate
