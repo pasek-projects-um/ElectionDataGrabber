@@ -2470,3 +2470,23 @@ us:nd:census-county:38087,ND,2026-10-25T01:39:21+00:00,Slope County North Dakota
 us:ne:census-county:31085,NE,2026-10-25T01:39:21+00:00,Hayes County Nebraska official election results archive,observed_link_candidate
 us:nh:priority-roster:clarksville,NH,2026-10-25T01:39:21+00:00,Clarksville New Hampshire official election results archive,observed_link_candidate
 us:nj:census-county:34037,NJ,2026-10-25T01:39:21+00:00,Sussex County New Jersey official election results archive alternative,observed_link_candidate
+us:nm:census-county:35013,NM,2026-10-25T06:08:08+00:00,Doña Ana County New Mexico official election results archive,observed_link_candidate
+us:ny:census-county:36083,NY,2026-10-25T06:08:08+00:00,Rensselaer County New York official election results archive,observed_link_candidate
+us:ok:census-county:40085,OK,2026-10-25T06:08:08+00:00,Love County Oklahoma official election results archive,observed_link_candidate
+us:pa:county:mckean,PA,2026-10-25T06:08:08+00:00,McKean County Pennsylvania official election results archive,observed_link_candidate
+us:ri:priority-roster:charlestown,RI,2026-10-25T06:08:08+00:00,Charlestown Rhode Island official election results archive,observed_link_candidate
+us:sd:census-county:46087,SD,2026-10-25T06:08:08+00:00,McCook County South Dakota official election results archive,observed_link_candidate
+us:tn:census-county:47083,TN,2026-10-25T06:08:08+00:00,Houston County Tennessee official election results archive,observed_link_candidate
+us:vt:priority-roster:chelsea,VT,2026-10-25T06:08:08+00:00,Chelsea Vermont official election results archive,observed_link_candidate
+us:wa:census-county:53005,WA,2026-10-25T06:08:08+00:00,Benton County Washington official election results archive,observed_link_candidate
+us:al:census-county:01129,AL,2026-10-25T06:08:08+00:00,Washington County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05127,AR,2026-10-25T06:08:08+00:00,Scott County Arkansas official election results archive,observed_link_candidate
+us:az:census-county:04019,AZ,2026-10-25T06:08:08+00:00,Pima County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06005,CA,2026-10-25T06:08:08+00:00,Amador County California official election results archive,observed_link_candidate
+us:co:census-county:08121,CO,2026-10-25T06:08:08+00:00,Washington County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:guilford,CT,2026-10-25T06:08:08+00:00,Guilford Connecticut official election results archive,observed_link_candidate
+us:fl:census-county:12125,FL,2026-10-25T06:08:08+00:00,Union County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13125,GA,2026-10-25T06:08:08+00:00,Glascock County Georgia official election results archive,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-25T06:08:08+00:00,Hawaii County Hawaii official election results archive | site:hawaiicounty.gov election results County of Hawaii official,completed_no_new_urls
+us:nv:census-county:32015,NV,2026-10-25T06:08:08+00:00,Lander County Nevada official election results archive | site:landercountynv.org OR site:landercountynv.gov election results Lander County,observed_link_candidate
+us:oh:county:lawrence,OH,2026-10-25T06:08:08+00:00,Lawrence County Ohio official election results archive,observed_link_candidate
