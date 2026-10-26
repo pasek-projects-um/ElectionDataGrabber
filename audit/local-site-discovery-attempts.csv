@@ -2730,3 +2730,23 @@ us:de:census-county:10005,DE,2026-10-25T23:16:49+00:00,Sussex County Delaware of
 us:fl:census-county:12003,FL,2026-10-25T23:16:49+00:00,Baker County Florida official election results archive supervisor elections,observed_link_candidate
 us:ga:census-county:13137,GA,2026-10-25T23:16:49+00:00,Habersham County Georgia official election results archive 2026 elections,observed_link_candidate
 us:mi:county:monroe,MI,2026-10-25T23:16:49+00:00,Monroe County Michigan official election results archive clerk 2026,observed_link_candidate
+us:mo:census-county:29103,MO,2026-10-26T04:26:22+00:00,Knox County Missouri official election results archive 2026 elections,observed_link_candidate
+us:ms:census-county:28103,MS,2026-10-26T04:26:22+00:00,Noxubee County Mississippi official election results archive 2026 elections,observed_link_candidate
+us:mt:census-county:30097,MT,2026-10-26T04:26:22+00:00,Sweet Grass County Montana official election results archive 2026 elections,observed_link_candidate
+us:sc:census-county:45091,SC,2026-10-26T04:26:22+00:00,York County South Carolina official election results archive 2026 elections,observed_link_candidate
+us:tx:census-county:48091,TX,2026-10-26T04:26:22+00:00,Comal County Texas official election results archive 2026 elections,observed_link_candidate
+us:ut:census-county:49029,UT,2026-10-26T04:26:22+00:00,Morgan County Utah official election results archive 2026 elections,observed_link_candidate
+us:va:census-county:51093,VA,2026-10-26T04:26:22+00:00,Isle of Wight County Virginia official election results archive 2026 elections,observed_link_candidate
+us:wi:ltsb2026:ashland-jacobs-71cd8a248f783e76,WI,2026-10-26T04:26:22+00:00,Town of Jacobs Ashland County Wisconsin official election results archive,observed_link_candidate
+us:wv:census-county:54091,WV,2026-10-26T04:26:22+00:00,Taylor County West Virginia official election results archive 2026 elections,observed_link_candidate
+us:wy:census-county:56043,WY,2026-10-26T04:26:22+00:00,Washakie County Wyoming official election results archive 2026 elections,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-26T04:26:22+00:00,Kauai County Hawaii official election results archive | Kauai County official historical vendor election night reporting,observed_link_candidate
+us:ia:census-county:19129,IA,2026-10-26T04:26:22+00:00,Mills County Iowa official election results archive 2026 elections,observed_link_candidate
+us:id:census-county:16035,ID,2026-10-26T04:26:22+00:00,Clearwater County Idaho official election results archive 2026 elections,observed_link_candidate
+us:il:census-county:17133,IL,2026-10-26T04:26:22+00:00,Monroe County Illinois official election results archive 2026 elections,observed_link_candidate
+us:in:census-county:18133,IN,2026-10-26T04:26:22+00:00,Putnam County Indiana official election results archive 2026 elections,observed_link_candidate
+us:ks:census-county:20131,KS,2026-10-26T04:26:22+00:00,Nemaha County Kansas official election results archive 2026 elections,observed_link_candidate
+us:ky:census-county:21127,KY,2026-10-26T04:26:22+00:00,Lawrence County Kentucky official election results archive 2026 elections,observed_link_candidate
+us:la:census-county:22001,LA,2026-10-26T04:26:22+00:00,Acadia Parish Louisiana official election results archive 2026 elections,observed_link_candidate
+us:ma:priority-roster:chilmark,MA,2026-10-26T04:26:22+00:00,Chilmark Massachusetts official election results archive town clerk,observed_link_candidate
+us:md:census-county:24023,MD,2026-10-26T04:26:22+00:00,Garrett County Maryland official election results archive 2026 elections,observed_link_candidate
