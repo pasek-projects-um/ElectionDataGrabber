@@ -2870,3 +2870,23 @@ us:ga:census-county:13145,GA,2026-10-26T08:58:27-04:00,Harris County Georgia off
 us:me:municipality:caribou,ME,2026-10-26T08:58:27-04:00,Caribou Maine official election results archive,observed_link_candidate
 us:ok:census-county:40099,OK,2026-10-26T08:58:27-04:00,Murray County Oklahoma official election results archive | Murray County Election Board official Oklahoma,observed_link_candidate
 us:or:census-county:41029,OR,2026-10-26T08:58:27-04:00,Jackson County Oregon official election results archive,observed_link_candidate
+us:mo:census-county:29111,MO,2026-10-26T09:59:32-04:00,Lewis County Missouri official election results archive,observed_link_candidate
+us:sc:census-county:45005,SC,2026-10-26T09:59:32-04:00,Allendale County South Carolina official election results archive,observed_link_candidate
+us:ut:census-county:49035,UT,2026-10-26T09:59:32-04:00,Salt Lake County Utah official election results archive,observed_link_candidate
+us:va:census-county:51099,VA,2026-10-26T09:59:32-04:00,King George County Virginia official election results archive,observed_link_candidate
+us:wi:ltsb2026:ashland-morse-91fe0d04a09b0cf0,WI,2026-10-26T09:59:32-04:00,Town of Morse Ashland County Wisconsin official election results archive,observed_link_candidate
+us:al:census-county:01015,AL,2026-10-26T09:59:32-04:00,Calhoun County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05149,AR,2026-10-26T09:59:32-04:00,Yell County Arkansas official election results archive | Yell County Arkansas election office current results official,observed_link_candidate
+us:ct:municipality:lebanon,CT,2026-10-26T09:59:32-04:00,Lebanon Connecticut official election results archive,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-26T09:59:32-04:00,Kent County Delaware official election results archive | Kent County Delaware 2026 election results official county specific,completed_no_new_urls
+us:ga:census-county:13147,GA,2026-10-26T09:59:32-04:00,Hart County Georgia official election results archive,observed_link_candidate
+us:mn:census-county:27115,MN,2026-10-26T09:59:32-04:00,Pine County Minnesota official election results archive | Pine County Minnesota election results official county archive,observed_link_candidate
+us:nd:census-county:38103,ND,2026-10-26T09:59:32-04:00,Wells County North Dakota official election results archive,observed_link_candidate
+us:nh:priority-roster:dalton,NH,2026-10-26T09:59:32-04:00,Dalton New Hampshire official election results archive,observed_link_candidate
+us:nj:census-county:34011,NJ,2026-10-26T09:59:32-04:00,Cumberland County New Jersey official election results archive,observed_link_candidate
+us:nm:census-county:35028,NM,2026-10-26T09:59:32-04:00,Los Alamos County New Mexico official election results archive | Los Alamos County New Mexico 2026 primary election results official,observed_link_candidate
+us:nv:census-county:32033,NV,2026-10-26T09:59:32-04:00,White Pine County Nevada official election results archive,observed_link_candidate
+us:ny:census-county:36099,NY,2026-10-26T09:59:32-04:00,Seneca County New York official election results archive,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-26T09:59:32-04:00,Alaska Division of Elections official election results archive | Alaska 2026 official election results dashboard,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-10-26T09:59:32-04:00,Honolulu County Hawaii official election results archive | Honolulu elections official current results,observed_link_candidate
+us:ia:census-county:19135,IA,2026-10-26T09:59:32-04:00,Monroe County Iowa official election results archive,observed_link_candidate
