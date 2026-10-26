@@ -2790,3 +2790,23 @@ us:ky:census-county:21129,KY,2026-10-26T06:49:47+00:00,Lee County KY official el
 us:la:census-county:22003,LA,2026-10-26T06:49:47+00:00,Allen Parish LA official election results archive 2026 alternative,observed_link_candidate
 us:ma:priority-roster:clarksburg,MA,2026-10-26T06:49:47+00:00,CLARKSBURG MA official election results archive 2026 alternative,observed_link_candidate
 us:md:census-county:24025,MD,2026-10-26T06:49:47+00:00,Harford County MD official election results archive 2026 alternative,observed_link_candidate
+us:mo:census-county:29105,MO,2026-10-26T07:42:05+00:00,Laclede County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28105,MS,2026-10-26T07:42:05+00:00,Oktibbeha County Mississippi official election results archive | Oktibbeha County Mississippi circuit clerk elections official site results,observed_link_candidate
+us:mt:census-county:30099,MT,2026-10-26T07:42:05+00:00,Teton County Montana official election results archive,observed_link_candidate
+us:sc:census-county:45001,SC,2026-10-26T07:42:05+00:00,Abbeville County South Carolina official election results archive,observed_link_candidate
+us:tx:census-county:48093,TX,2026-10-26T07:42:05+00:00,Comanche County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49031,UT,2026-10-26T07:42:05+00:00,Piute County Utah official election results archive,observed_link_candidate
+us:va:census-county:51095,VA,2026-10-26T07:42:05+00:00,James City County Virginia official election results archive,observed_link_candidate
+us:wi:ltsb2026:ashland-la-pointe-aaf642bb9713b6a4,WI,2026-10-26T07:42:05+00:00,Town of La Pointe Ashland County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54093,WV,2026-10-26T07:42:05+00:00,Tucker County West Virginia official election results archive | Tucker County West Virginia county clerk elections official site,observed_link_candidate
+us:wy:census-county:56045,WY,2026-10-26T07:42:05+00:00,Weston County Wyoming official election results archive,observed_link_candidate
+us:al:census-county:01011,AL,2026-10-26T07:42:05+00:00,Bullock County Alabama official election results archive | Bullock County Alabama probate election official results site,observed_link_candidate
+us:ar:census-county:05143,AR,2026-10-26T07:42:05+00:00,Washington County Arkansas official election results archive,observed_link_candidate
+us:az:census-county:04007,AZ,2026-10-26T07:42:05+00:00,Gila County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06021,CA,2026-10-26T07:42:05+00:00,Glenn County California official election results archive,observed_link_candidate
+us:co:census-county:08011,CO,2026-10-26T07:42:05+00:00,Bent County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:kent,CT,2026-10-26T07:42:05+00:00,Kent Connecticut official election results town clerk,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-26T07:42:05+00:00,Sussex County Delaware official election results archive | Sussex County Delaware official board of elections election results,completed_no_new_urls
+us:fl:census-county:12007,FL,2026-10-26T07:42:05+00:00,Bradford County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13141,GA,2026-10-26T07:42:05+00:00,Hancock County Georgia official election results archive,observed_link_candidate
+us:me:municipality:canton,ME,2026-10-26T07:42:05+00:00,Canton Maine official election results town clerk,observed_link_candidate
