@@ -2930,3 +2930,23 @@ us:ia:census-county:19137,IA,2026-10-26T11:08:32-04:00,Montgomery County Iowa of
 us:mn:census-county:27117,MN,2026-10-26T11:08:32-04:00,Pipestone County Minnesota official election results archive,observed_link_candidate
 us:mo:census-county:29113,MO,2026-10-26T11:08:32-04:00,Lincoln County Missouri official election results archive,observed_link_candidate
 us:nd:census-county:38105,ND,2026-10-26T11:08:32-04:00,Williams County North Dakota official election results archive,observed_link_candidate
+us:nh:priority-roster:danbury,NH,2026-10-26T12:24:29-04:00,Danbury New Hampshire official election results archive,observed_link_candidate
+us:nj:census-county:34013,NJ,2026-10-26T12:24:29-04:00,Essex County New Jersey official election results archive,observed_link_candidate
+us:nm:census-county:35029,NM,2026-10-26T12:24:29-04:00,Luna County New Mexico official election results archive | Luna County New Mexico official clerk elections results vendor dashboard historical,completed_no_new_urls
+us:nv:census-county:32510,NV,2026-10-26T12:24:29-04:00,Carson City Nevada official election results archive | Carson City Nevada election results vendor dashboard 2026 official clerk,completed_no_new_urls
+us:ny:census-county:36101,NY,2026-10-26T12:24:29-04:00,Steuben County New York official election results archive,observed_link_candidate
+us:sc:census-county:45007,SC,2026-10-26T12:24:29-04:00,Anderson County South Carolina official election results archive | Anderson County South Carolina election results county archive official alternative,observed_link_candidate
+us:ut:census-county:49037,UT,2026-10-26T12:24:29-04:00,San Juan County Utah official election results archive,observed_link_candidate
+us:va:census-county:51101,VA,2026-10-26T12:24:29-04:00,King William County Virginia official election results archive,observed_link_candidate
+us:wi:ltsb2026:ashland-peeksville-18162e3265be3d6d,WI,2026-10-26T12:24:29-04:00,Town of Peeksville Ashland County Wisconsin official election results | Peeksville Wisconsin town clerk elections official Ashland County results,observed_link_candidate
+us:co:census-county:08015,CO,2026-10-26T12:24:29-04:00,Chaffee County Colorado official election results archive,observed_link_candidate
+us:fl:census-county:12013,FL,2026-10-26T12:24:29-04:00,Calhoun County Florida official election results archive,observed_link_candidate
+us:id:census-county:16043,ID,2026-10-26T12:24:29-04:00,Fremont County Idaho official election results archive | Fremont County Idaho elections results vendor dashboard county clerk 2026,observed_link_candidate
+us:in:census-county:18141,IN,2026-10-26T12:24:29-04:00,St. Joseph County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20139,KS,2026-10-26T12:24:29-04:00,Osage County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21135,KY,2026-10-26T12:24:29-04:00,Lewis County Kentucky official election results archive,observed_link_candidate
+us:la:census-county:22009,LA,2026-10-26T12:24:29-04:00,Avoyelles Parish Louisiana official election results archive,observed_link_candidate
+us:ma:priority-roster:colrain,MA,2026-10-26T12:24:29-04:00,Colrain Massachusetts official election results archive,observed_link_candidate
+us:mi:county:newaygo,MI,2026-10-26T12:24:29-04:00,Newaygo County Michigan official election results archive,observed_link_candidate
+us:ms:census-county:28111,MS,2026-10-26T12:24:29-04:00,Perry County Mississippi official election results archive | Perry County Mississippi circuit clerk election results official county,observed_link_candidate
+us:mt:census-county:30103,MT,2026-10-26T12:24:29-04:00,Treasure County Montana official election results archive,observed_link_candidate
