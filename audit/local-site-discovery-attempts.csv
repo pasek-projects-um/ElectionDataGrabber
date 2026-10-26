@@ -2770,3 +2770,23 @@ us:de:census-county:10001,DE,2026-10-26T05:08:43+00:00,Kent County DE official e
 us:fl:census-county:12005,FL,2026-10-26T05:08:43+00:00,Bay County FL official election results archive 2026 alternative,observed_link_candidate
 us:ga:census-county:13139,GA,2026-10-26T05:08:43+00:00,Hall County GA official election results archive 2026 alternative,observed_link_candidate
 us:me:municipality:canaan,ME,2026-10-26T05:08:43+00:00,Canaan ME official election results archive 2026 alternative,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-26T06:49:47+00:00,Alaska Division of Elections AK official election results archive 2026 alternative,observed_link_candidate
+us:mi:county:montcalm,MI,2026-10-26T06:49:47+00:00,Montcalm MI official election results archive 2026 alternative,observed_link_candidate
+us:ok:census-county:40095,OK,2026-10-26T06:49:47+00:00,Marshall County OK official election results archive 2026 alternative,observed_link_candidate
+us:or:census-county:41025,OR,2026-10-26T06:49:47+00:00,Harney County OR official election results archive 2026 alternative,observed_link_candidate
+us:pa:county:montour,PA,2026-10-26T06:49:47+00:00,Montour PA official election results archive 2026 alternative,observed_link_candidate
+us:ri:priority-roster:east-providence,RI,2026-10-26T06:49:47+00:00,EAST PROVIDENCE RI official election results archive 2026 alternative,observed_link_candidate
+us:sd:census-county:46097,SD,2026-10-26T06:49:47+00:00,Miner County SD official election results archive 2026 alternative,observed_link_candidate
+us:tn:census-county:47093,TN,2026-10-26T06:49:47+00:00,Knox County TN official election results archive 2026 alternative,observed_link_candidate
+us:vt:priority-roster:concord,VT,2026-10-26T06:49:47+00:00,Concord VT official election results archive 2026 alternative,observed_link_candidate
+us:wa:census-county:53015,WA,2026-10-26T06:49:47+00:00,Cowlitz County WA official election results archive 2026 alternative,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-26T06:49:47+00:00,Maui County HI official election results archive 2026 alternative,observed_link_candidate
+us:ia:census-county:19131,IA,2026-10-26T06:49:47+00:00,Mitchell County IA official election results archive 2026 alternative,observed_link_candidate
+us:id:census-county:16037,ID,2026-10-26T06:49:47+00:00,Custer County ID official election results archive 2026 alternative,observed_link_candidate
+us:il:census-county:17135,IL,2026-10-26T06:49:47+00:00,Montgomery County IL official election results archive 2026 alternative,observed_link_candidate
+us:in:census-county:18135,IN,2026-10-26T06:49:47+00:00,Randolph County IN official election results archive 2026 alternative,observed_link_candidate
+us:ks:census-county:20133,KS,2026-10-26T06:49:47+00:00,Neosho County KS official election results archive 2026 alternative,observed_link_candidate
+us:ky:census-county:21129,KY,2026-10-26T06:49:47+00:00,Lee County KY official election results archive 2026 alternative,observed_link_candidate
+us:la:census-county:22003,LA,2026-10-26T06:49:47+00:00,Allen Parish LA official election results archive 2026 alternative,observed_link_candidate
+us:ma:priority-roster:clarksburg,MA,2026-10-26T06:49:47+00:00,CLARKSBURG MA official election results archive 2026 alternative,observed_link_candidate
+us:md:census-county:24025,MD,2026-10-26T06:49:47+00:00,Harford County MD official election results archive 2026 alternative,observed_link_candidate
