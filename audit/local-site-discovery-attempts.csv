@@ -2890,3 +2890,23 @@ us:ny:census-county:36099,NY,2026-10-26T09:59:32-04:00,Seneca County New York of
 us:ak:priority-roster:central,AK,2026-10-26T09:59:32-04:00,Alaska Division of Elections official election results archive | Alaska 2026 official election results dashboard,completed_no_new_urls
 us:hi:census-county:15003,HI,2026-10-26T09:59:32-04:00,Honolulu County Hawaii official election results archive | Honolulu elections official current results,observed_link_candidate
 us:ia:census-county:19135,IA,2026-10-26T09:59:32-04:00,Monroe County Iowa official election results archive,observed_link_candidate
+us:mt:census-county:30101,MT,2026-10-26T10:49:06-04:00,Toole County Montana official election results archive,observed_link_candidate
+us:tx:census-county:48095,TX,2026-10-26T10:49:06-04:00,Concho County Texas official election results archive,observed_link_candidate
+us:wv:census-county:54095,WV,2026-10-26T10:49:06-04:00,Tyler County West Virginia official election results archive,observed_link_candidate
+us:id:census-county:16041,ID,2026-10-26T10:49:06-04:00,Franklin County Idaho official election results archive,observed_link_candidate
+us:in:census-county:18139,IN,2026-10-26T10:49:06-04:00,Rush County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20137,KS,2026-10-26T10:49:06-04:00,Norton County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21133,KY,2026-10-26T10:49:06-04:00,Letcher County Kentucky official election results archive,observed_link_candidate
+us:la:census-county:22007,LA,2026-10-26T10:49:06-04:00,Assumption Parish Louisiana official election results archive | Assumption Parish Louisiana 2026 election results official Secretary of State,observed_link_candidate
+us:ma:priority-roster:cohasset,MA,2026-10-26T10:49:06-04:00,Cohasset Massachusetts official election results archive,observed_link_candidate
+us:mi:county:muskegon,MI,2026-10-26T10:49:06-04:00,Muskegon County Michigan official election results archive,observed_link_candidate
+us:nc:census-county:37101,NC,2026-10-26T10:49:06-04:00,Johnston County North Carolina official election results archive,observed_link_candidate
+us:ne:census-county:31099,NE,2026-10-26T10:49:06-04:00,Kearney County Nebraska official election results archive,observed_link_candidate
+us:oh:county:marion,OH,2026-10-26T10:49:06-04:00,Marion County Ohio official election results archive,observed_link_candidate
+us:co:census-county:08014,CO,2026-10-26T10:49:06-04:00,Broomfield County Colorado official election results archive,observed_link_candidate
+us:fl:census-county:12011,FL,2026-10-26T10:49:06-04:00,Broward County Florida official election results archive | Broward County Florida 2026 official election results Supervisor Elections,observed_link_candidate
+us:ms:census-county:28109,MS,2026-10-26T10:49:06-04:00,Pearl River County Mississippi official election results archive,observed_link_candidate
+us:pa:county:northumberland,PA,2026-10-26T10:49:06-04:00,Northumberland County Pennsylvania official election results archive,observed_link_candidate
+us:ri:priority-roster:foster,RI,2026-10-26T10:49:06-04:00,Foster Rhode Island official election results archive,observed_link_candidate
+us:sd:census-county:46101,SD,2026-10-26T10:49:06-04:00,Moody County South Dakota official election results archive | Moody County South Dakota auditor elections official county website,observed_link_candidate
+us:tn:census-county:47097,TN,2026-10-26T10:49:06-04:00,Lauderdale County Tennessee official election results archive,observed_link_candidate
