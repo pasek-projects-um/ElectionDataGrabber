@@ -2910,3 +2910,23 @@ us:pa:county:northumberland,PA,2026-10-26T10:49:06-04:00,Northumberland County P
 us:ri:priority-roster:foster,RI,2026-10-26T10:49:06-04:00,Foster Rhode Island official election results archive,observed_link_candidate
 us:sd:census-county:46101,SD,2026-10-26T10:49:06-04:00,Moody County South Dakota official election results archive | Moody County South Dakota auditor elections official county website,observed_link_candidate
 us:tn:census-county:47097,TN,2026-10-26T10:49:06-04:00,Lauderdale County Tennessee official election results archive,observed_link_candidate
+us:vt:priority-roster:cornwall,VT,2026-10-26T11:08:32-04:00,Cornwall Vermont official election results archive,observed_link_candidate
+us:wa:census-county:53019,WA,2026-10-26T11:08:32-04:00,Ferry County Washington official election results archive,observed_link_candidate
+us:az:census-county:04013,AZ,2026-10-26T11:08:32-04:00,Maricopa County Arizona official election results archive | Maricopa County Arizona 2026 election results Results.Maricopa.Vote official,completed_no_new_urls
+us:ca:census-county:06027,CA,2026-10-26T11:08:32-04:00,Inyo County California official election results archive,observed_link_candidate
+us:il:census-county:17141,IL,2026-10-26T11:08:32-04:00,Ogle County Illinois official election results archive,observed_link_candidate
+us:md:census-county:24031,MD,2026-10-26T11:08:32-04:00,Montgomery County Maryland official election results archive,observed_link_candidate
+us:me:municipality:carthage,ME,2026-10-26T11:08:32-04:00,Carthage Maine official election results archive | Carthage Maine town election results official municipal archive,observed_link_candidate
+us:ok:census-county:40101,OK,2026-10-26T11:08:32-04:00,Muskogee County Oklahoma official election results archive | Muskogee County Oklahoma election results county election board official results,observed_link_candidate
+us:or:census-county:41031,OR,2026-10-26T11:08:32-04:00,Jefferson County Oregon official election results archive | Jefferson County Oregon past election results county clerk official,observed_link_candidate
+us:wy:census-county:56005,WY,2026-10-26T11:08:32-04:00,Campbell County Wyoming official election results archive,observed_link_candidate
+us:al:census-county:01017,AL,2026-10-26T11:08:32-04:00,Chambers County Alabama official election results archive | Chambers County Alabama election results official county probate AlabamaVotes,observed_link_candidate
+us:ar:census-county:05001,AR,2026-10-26T11:08:32-04:00,Arkansas County Arkansas official election results archive | Arkansas County Arkansas election results county clerk official,observed_link_candidate
+us:ct:municipality:ledyard,CT,2026-10-26T11:08:32-04:00,Ledyard Connecticut official election results archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-26T11:08:32-04:00,Sussex County Delaware official election results archive | Sussex County Delaware election results official county 2024,observed_link_candidate
+us:ga:census-county:13149,GA,2026-10-26T11:08:32-04:00,Heard County Georgia official election results archive,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-26T11:08:32-04:00,Hawaii County Hawaii official election results archive | Hawaii County election results 2026 official county summary,completed_no_new_urls
+us:ia:census-county:19137,IA,2026-10-26T11:08:32-04:00,Montgomery County Iowa official election results archive,observed_link_candidate
+us:mn:census-county:27117,MN,2026-10-26T11:08:32-04:00,Pipestone County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29113,MO,2026-10-26T11:08:32-04:00,Lincoln County Missouri official election results archive,observed_link_candidate
+us:nd:census-county:38105,ND,2026-10-26T11:08:32-04:00,Williams County North Dakota official election results archive,observed_link_candidate
