@@ -2999,7 +2999,7 @@ us:nv:census-county:32001,NV,2026-10-26T16:44:50-04:00,Churchill County Nevada o
 us:ny:census-county:36103,NY,2026-10-26T16:44:50-04:00,Suffolk County New York official Board of Elections results archive,observed_link_candidate
 us:sc:census-county:45009,SC,2026-10-26T16:44:50-04:00,Bamberg County South Carolina official election results archive | Bamberg County SC ENR historical results,observed_link_candidate
 us:ut:census-county:49039,UT,2026-10-26T16:44:50-04:00,Sanpete County Utah official election results archive,completed_no_new_urls
-us:va:census-county:51103,VA,2026-10-26T16:44:50-04:00,Lancaster County Virginia official registrar election results archive | Lancaster County VA electoral board results,observed_link_candidate
+us:va:census-county:51103,VA,2026-10-26T16:44:50-04:00,Lancaster County Virginia official registrar election results archive | Lancaster County VA electoral board results,completed_no_new_urls
 us:wi:ltsb2026:ashland-sanborn-db5a76126ee9d33a,WI,2026-10-26T16:44:50-04:00,Town of Sanborn Ashland Wisconsin official election results | Sanborn Wisconsin clerk election results archive,completed_no_new_urls
 us:al:census-county:01021,AL,2026-10-26T16:44:50-04:00,Chilton County Alabama official election results archive | Chilton County probate elections results,completed_no_new_urls
 us:ar:census-county:05005,AR,2026-10-26T16:44:50-04:00,Baxter County Arkansas official election results archive | Baxter County election office results,observed_link_candidate
