@@ -2810,3 +2810,23 @@ us:de:census-county:10005,DE,2026-10-26T07:42:05+00:00,Sussex County Delaware of
 us:fl:census-county:12007,FL,2026-10-26T07:42:05+00:00,Bradford County Florida official election results archive,observed_link_candidate
 us:ga:census-county:13141,GA,2026-10-26T07:42:05+00:00,Hancock County Georgia official election results archive,observed_link_candidate
 us:me:municipality:canton,ME,2026-10-26T07:42:05+00:00,Canton Maine official election results town clerk,observed_link_candidate
+us:mn:census-county:27113,MN,2026-10-26T08:19:37+00:00,Pennington County Minnesota official election results archive,observed_link_candidate
+us:nc:census-county:37099,NC,2026-10-26T08:19:37+00:00,Jackson County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38099,ND,2026-10-26T08:19:37+00:00,Walsh County North Dakota official election results archive,observed_link_candidate
+us:ne:census-county:31097,NE,2026-10-26T08:19:37+00:00,Johnson County Nebraska official election results archive | Johnson County Nebraska county clerk election official website results HTML,observed_link_candidate
+us:nh:priority-roster:croydon,NH,2026-10-26T08:19:37+00:00,Croydon New Hampshire official election results town clerk,observed_link_candidate
+us:nj:census-county:34009,NJ,2026-10-26T08:19:37+00:00,Cape May County New Jersey official election results archive,observed_link_candidate
+us:nm:census-county:35025,NM,2026-10-26T08:19:37+00:00,Lea County New Mexico official election results archive | Lea County New Mexico clerk elections official website historical results,completed_no_new_urls
+us:nv:census-county:32029,NV,2026-10-26T08:19:37+00:00,Storey County Nevada official election results archive,observed_link_candidate
+us:ny:census-county:36095,NY,2026-10-26T08:19:37+00:00,Schoharie County New York official election results archive,observed_link_candidate
+us:oh:county:mahoning,OH,2026-10-26T08:19:37+00:00,Mahoning County Ohio official election results archive,observed_link_candidate
+us:ia:census-county:19133,IA,2026-10-26T08:19:37+00:00,Monona County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16039,ID,2026-10-26T08:19:37+00:00,Elmore County Idaho official election results archive,observed_link_candidate
+us:il:census-county:17137,IL,2026-10-26T08:19:37+00:00,Morgan County Illinois official election results archive | Morgan County Illinois county clerk elections official results website,observed_link_candidate
+us:in:census-county:18137,IN,2026-10-26T08:19:37+00:00,Ripley County Indiana official election results archive,observed_link_candidate
+us:ks:census-county:20135,KS,2026-10-26T08:19:37+00:00,Ness County Kansas official election results archive,observed_link_candidate
+us:ky:census-county:21131,KY,2026-10-26T08:19:37+00:00,Leslie County Kentucky official election results archive | Leslie County Kentucky county clerk elections official results website,observed_link_candidate
+us:la:census-county:22005,LA,2026-10-26T08:19:37+00:00,Ascension Parish Louisiana official election results archive,observed_link_candidate
+us:ma:priority-roster:clinton,MA,2026-10-26T08:19:37+00:00,Clinton Massachusetts official election results town clerk,observed_link_candidate
+us:md:census-county:24027,MD,2026-10-26T08:19:37+00:00,Howard County Maryland official election results archive,observed_link_candidate
+us:mi:county:montmorency,MI,2026-10-26T08:19:37+00:00,Montmorency County Michigan official election results archive,observed_link_candidate
