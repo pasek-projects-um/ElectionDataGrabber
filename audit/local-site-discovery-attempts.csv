@@ -2850,3 +2850,23 @@ us:ga:census-county:13143,GA,2026-10-26T09:01:06+00:00,Haralson County Georgia o
 us:me:municipality:cape-elizabeth,ME,2026-10-26T09:01:06+00:00,Cape Elizabeth Maine official election results town clerk,observed_link_candidate
 us:mo:census-county:29107,MO,2026-10-26T09:01:06+00:00,Lafayette County Missouri official election results archive,observed_link_candidate
 us:ms:census-county:28107,MS,2026-10-26T09:01:06+00:00,Panola County Mississippi official election results archive,observed_link_candidate
+us:mo:census-county:29109,MO,2026-10-26T08:58:27-04:00,Lawrence County Missouri official election results archive,observed_link_candidate
+us:sc:census-county:45003,SC,2026-10-26T08:58:27-04:00,Aiken County South Carolina official election results archive,observed_link_candidate
+us:ut:census-county:49033,UT,2026-10-26T08:58:27-04:00,Rich County Utah official election results archive,observed_link_candidate
+us:va:census-county:51097,VA,2026-10-26T08:58:27-04:00,King and Queen County Virginia official election results archive,observed_link_candidate
+us:wi:ltsb2026:ashland-marengo-c9b4c3be8c2ce990,WI,2026-10-26T08:58:27-04:00,Town of Marengo (Ashland County) Wisconsin official election results archive | Town of Marengo Wisconsin elections official,observed_link_candidate
+us:wy:census-county:56003,WY,2026-10-26T08:58:27-04:00,Big Horn County Wyoming official election results archive,observed_link_candidate
+us:il:census-county:17139,IL,2026-10-26T08:58:27-04:00,Moultrie County Illinois official election results archive,observed_link_candidate
+us:md:census-county:24029,MD,2026-10-26T08:58:27-04:00,Kent County Maryland official election results archive,observed_link_candidate
+us:nd:census-county:38101,ND,2026-10-26T08:58:27-04:00,Ward County North Dakota official election results archive,observed_link_candidate
+us:nm:census-county:35027,NM,2026-10-26T08:58:27-04:00,Lincoln County New Mexico official election results archive,observed_link_candidate
+us:nv:census-county:32031,NV,2026-10-26T08:58:27-04:00,Washoe County Nevada official election results archive,observed_link_candidate
+us:ny:census-county:36097,NY,2026-10-26T08:58:27-04:00,Schuyler County New York official election results archive,observed_link_candidate
+us:ar:census-county:05147,AR,2026-10-26T08:58:27-04:00,Woodruff County Arkansas official election results archive,observed_link_candidate
+us:az:census-county:04011,AZ,2026-10-26T08:58:27-04:00,Greenlee County Arizona official election results archive,observed_link_candidate
+us:ca:census-county:06025,CA,2026-10-26T08:58:27-04:00,Imperial County California official election results archive,observed_link_candidate
+us:ct:municipality:killingworth,CT,2026-10-26T08:58:27-04:00,Killingworth Connecticut official election results archive,observed_link_candidate
+us:ga:census-county:13145,GA,2026-10-26T08:58:27-04:00,Harris County Georgia official election results archive,observed_link_candidate
+us:me:municipality:caribou,ME,2026-10-26T08:58:27-04:00,Caribou Maine official election results archive,observed_link_candidate
+us:ok:census-county:40099,OK,2026-10-26T08:58:27-04:00,Murray County Oklahoma official election results archive | Murray County Election Board official Oklahoma,observed_link_candidate
+us:or:census-county:41029,OR,2026-10-26T08:58:27-04:00,Jackson County Oregon official election results archive,observed_link_candidate
