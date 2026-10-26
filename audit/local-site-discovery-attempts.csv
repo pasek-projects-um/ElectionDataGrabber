@@ -2970,3 +2970,23 @@ us:hi:census-county:15007,HI,2026-10-26T14:13:06-04:00,Kauai County Hawaii offic
 us:ia:census-county:19139,IA,2026-10-26T14:13:06-04:00,Muscatine County Iowa official election results archive,observed_link_candidate
 us:il:census-county:17143,IL,2026-10-26T14:13:06-04:00,Peoria County Illinois official election results archive,observed_link_candidate
 us:md:census-county:24033,MD,2026-10-26T14:13:06-04:00,Prince George's County Maryland official election results archive,observed_link_candidate
+us:me:municipality:casco,ME,2026-10-26T15:07:27-04:00,Casco Maine official election results archive | site:cascomaine.org election results municipal official,observed_link_candidate
+us:mn:census-county:27119,MN,2026-10-26T15:07:27-04:00,Polk County Minnesota official election results archive | site:polkcountymn.gov elections results official,observed_link_candidate
+us:mo:census-county:29115,MO,2026-10-26T15:07:27-04:00,Linn County Missouri official election results archive | Linn County Missouri county clerk official elections results,observed_link_candidate
+us:nd:census-county:38001,ND,2026-10-26T15:07:27-04:00,Adams County North Dakota official election results archive | Adams County North Dakota county auditor official elections results,observed_link_candidate
+us:ok:census-county:40103,OK,2026-10-26T15:07:27-04:00,Noble County Oklahoma official election results archive | Noble County Oklahoma election board official results archive,observed_link_candidate
+us:or:census-county:41033,OR,2026-10-26T15:07:27-04:00,Josephine County Oregon official election results archive | site:josephinecounty.gov election results archive clerk,observed_link_candidate
+us:vt:priority-roster:coventry,VT,2026-10-26T15:07:27-04:00,Coventry Vermont official election results archive | site:coventryvt.org elections results official,observed_link_candidate
+us:wa:census-county:53021,WA,2026-10-26T15:07:27-04:00,Franklin County Washington official election results archive | Franklin County Washington auditor official election results archive vendor,observed_link_candidate
+us:wy:census-county:56007,WY,2026-10-26T15:07:27-04:00,Carbon County Wyoming official election results archive | Carbon County Wyoming official election results vendor dashboard,observed_link_candidate
+us:co:census-county:08017,CO,2026-10-26T15:07:27-04:00,Cheyenne County Colorado official election results archive | Cheyenne County Colorado clerk official election results archive,completed_no_new_urls
+us:fl:census-county:12015,FL,2026-10-26T15:07:27-04:00,Charlotte County Florida official election results archive | Charlotte County Florida supervisor elections current results archive,observed_link_candidate
+us:id:census-county:16045,ID,2026-10-26T15:07:27-04:00,Gem County Idaho official election results archive | Gem County Idaho clerk official elections results archive,observed_link_candidate
+us:in:census-county:18143,IN,2026-10-26T15:07:27-04:00,Scott County Indiana official election results archive | Scott County Indiana clerk official election results archive,observed_link_candidate
+us:ks:census-county:20141,KS,2026-10-26T15:07:27-04:00,Osborne County Kansas official election results archive | Osborne County Kansas clerk official election results archive,observed_link_candidate
+us:ky:census-county:21137,KY,2026-10-26T15:07:27-04:00,Lincoln County Kentucky official election results archive | Lincoln County Kentucky clerk official election results archive,observed_link_candidate
+us:la:census-county:22011,LA,2026-10-26T15:07:27-04:00,Beauregard Parish Louisiana official election results archive | Beauregard Parish Louisiana clerk official election results archive,completed_no_new_urls
+us:ma:priority-roster:concord,MA,2026-10-26T15:07:27-04:00,Concord Massachusetts official election results archive | site:concordma.gov election results official archive,observed_link_candidate
+us:mi:county:oakland,MI,2026-10-26T15:07:27-04:00,Oakland County Michigan official election results archive | site:oakgov.com official election results archive Oakland County,observed_link_candidate
+us:ms:census-county:28113,MS,2026-10-26T15:07:27-04:00,Pike County Mississippi official election results archive | Pike County Mississippi official election commission results archive,observed_link_candidate
+us:mt:census-county:30105,MT,2026-10-26T15:07:27-04:00,Valley County Montana official election results archive | Valley County Montana official clerk elections results archive,observed_link_candidate
