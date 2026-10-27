@@ -3090,3 +3090,23 @@ us:nc:census-county:37107,NC,2026-10-27T06:58:19+00:00,Lenoir County North Carol
 us:ne:census-county:31105,NE,2026-10-27T06:58:19+00:00,Kimball County Nebraska official election results archive clerk,observed_link_candidate
 us:oh:county:mercer,OH,2026-10-27T06:58:19+00:00,Mercer County Ohio official election results archive board elections,observed_link_candidate
 us:tx:census-county:48101,TX,2026-10-27T06:58:19+00:00,Cottle County Texas official election results archive county clerk,observed_link_candidate
+us:wv:census-county:54101,WV,2026-10-27T07:55:00+00:00,Webster County West Virginia official election results archive,observed_link_candidate
+us:al:census-county:01025,AL,2026-10-27T07:55:00+00:00,Clarke County Alabama official election results archive,observed_link_candidate
+us:ar:census-county:05009,AR,2026-10-27T07:55:00+00:00,Boone County Arkansas official election results archive,observed_link_candidate
+us:ga:census-county:13157,GA,2026-10-27T07:55:00+00:00,Jackson County Georgia official election results archive,observed_link_candidate
+us:mi:county:ogemaw,MI,2026-10-27T07:55:00+00:00,Ogemaw County Michigan official election results archive,observed_link_candidate
+us:mn:census-county:27123,MN,2026-10-27T07:55:00+00:00,Ramsey County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29119,MO,2026-10-27T07:55:00+00:00,McDonald County Missouri official election results archive,observed_link_candidate
+us:ms:census-county:28117,MS,2026-10-27T07:55:00+00:00,Prentiss County Mississippi official election results archive,observed_link_candidate
+us:mt:census-county:30109,MT,2026-10-27T07:55:00+00:00,Wibaux County Montana official election results archive,observed_link_candidate
+us:or:census-county:41037,OR,2026-10-27T07:55:00+00:00,Lake County Oregon official election results archive; county clerk alternative search,observed_link_candidate
+us:wy:census-county:56011,WY,2026-10-27T07:55:00+00:00,Crook County Wyoming official election results archive; county website alternative search,completed_no_new_urls
+us:az:census-county:04019,AZ,2026-10-27T07:55:00+00:00,Pima County Arizona official election results archive; interactive results alternative search,completed_no_new_urls
+us:ca:census-county:06035,CA,2026-10-27T07:55:00+00:00,Lassen County California official election results archive,observed_link_candidate
+us:co:census-county:08021,CO,2026-10-27T07:55:00+00:00,Conejos County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:madison,CT,2026-10-27T07:55:00+00:00,Madison Connecticut official election results archive,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-27T07:55:00+00:00,New Castle County Delaware official election results archive; municipal and school alternatives,observed_link_candidate
+us:hi:census-county:15001,HI,2026-10-27T07:55:00+00:00,Hawaii County official election results archive; county elections alternative search,completed_no_new_urls
+us:ia:census-county:19145,IA,2026-10-27T07:55:00+00:00,Page County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16049,ID,2026-10-27T07:55:00+00:00,Idaho County Idaho official election results archive,observed_link_candidate
+us:me:municipality:chebeague-island,ME,2026-10-27T07:55:00+00:00,Chebeague Island Maine official election results archive,observed_link_candidate
