@@ -3150,3 +3150,23 @@ us:de:census-county:10005,DE,2026-10-27T13:14:36+00:00,Sussex County Delaware lo
 us:ga:census-county:13159,GA,2026-10-27T13:14:36+00:00,Jasper County Georgia official election results dashboard and archive,observed_link_candidate
 us:hi:census-county:15007,HI,2026-10-27T13:14:36+00:00,Kauai County Hawaii official election results vendor alternative | site:kauai.gov election results archive,completed_no_new_urls
 us:ia:census-county:19147,IA,2026-10-27T13:14:36+00:00,Palo Alto County Iowa official auditor election results | Iowa county results archive,observed_link_candidate
+us:id:census-county:16051,ID,2026-10-27T17:42:01.905+00:00,Jefferson County Idaho official election results archive vendor dashboard | site:jcgov.us Jefferson County Idaho 2026 election results official dashboard,observed_link_candidate
+us:me:municipality:chelsea,ME,2026-10-27T17:42:01.905+00:00,Chelsea Maine official election results town clerk archive,observed_link_candidate
+us:mi:county:ontonagon,MI,2026-10-27T17:42:01.905+00:00,Ontonagon County Michigan official election results archive clerk,observed_link_candidate
+us:mn:census-county:27125,MN,2026-10-27T17:42:01.905+00:00,Red Lake County Minnesota official election results auditor archive,observed_link_candidate
+us:mo:census-county:29121,MO,2026-10-27T17:42:01.905+00:00,Macon County Missouri official election results county clerk archive,observed_link_candidate
+us:ms:census-county:28119,MS,2026-10-27T17:42:01.905+00:00,Quitman County Mississippi official election results archive,observed_link_candidate
+us:mt:census-county:30111,MT,2026-10-27T17:42:01.905+00:00,Yellowstone County Montana official election results archive,observed_link_candidate
+us:or:census-county:41039,OR,2026-10-27T17:42:01.905+00:00,Lane County Oregon official election results archive current dashboard,observed_link_candidate
+us:wv:census-county:54103,WV,2026-10-27T17:42:01.905+00:00,Wetzel County West Virginia official election results clerk archive,observed_link_candidate
+us:wy:census-county:56013,WY,2026-10-27T17:42:01.905+00:00,Fremont County Wyoming official election results archive | site:fremontcountywy.gov election results Fremont County Wyoming clerk,observed_link_candidate
+us:fl:census-county:12023,FL,2026-10-27T17:42:01.905+00:00,Columbia County Florida official election results supervisor archive,observed_link_candidate
+us:il:census-county:17151,IL,2026-10-27T17:42:01.905+00:00,Pope County Illinois official election results clerk archive | site:popecountyil.gov election results Pope County Illinois clerk,observed_link_candidate
+us:in:census-county:18151,IN,2026-10-27T17:42:01.905+00:00,Steuben County Indiana official election results county clerk archive | site:co.steuben.in.us election results Steuben County Indiana,observed_link_candidate
+us:ks:census-county:20149,KS,2026-10-27T17:42:01.905+00:00,Pottawatomie County Kansas official election results clerk archive,observed_link_candidate
+us:ky:census-county:21145,KY,2026-10-27T17:42:01.905+00:00,McCracken County Kentucky official election results clerk archive,observed_link_candidate
+us:la:census-county:22019,LA,2026-10-27T17:42:01.905+00:00,Calcasieu Parish Louisiana official election results clerk archive,observed_link_candidate
+us:ma:priority-roster:danvers,MA,2026-10-27T17:42:01.905+00:00,Danvers Massachusetts official election results town clerk archive,observed_link_candidate
+us:md:census-county:24001,MD,2026-10-27T17:42:01.905+00:00,Allegany County Maryland official election results archive | site:elections.maryland.gov 2026 Allegany County election results Maryland official,observed_link_candidate
+us:nc:census-county:37111,NC,2026-10-27T17:42:01.905+00:00,McDowell County North Carolina official election results board archive,observed_link_candidate
+us:nd:census-county:38007,ND,2026-10-27T17:42:01.905+00:00,Billings County North Dakota official election results auditor archive,observed_link_candidate
