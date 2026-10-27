@@ -3130,3 +3130,23 @@ us:sd:census-county:46105,SD,2026-10-27T12:32:03.785293+00:00,official local ele
 us:tn:census-county:47103,TN,2026-10-27T12:32:03.785293+00:00,Lincoln County Tennessee official election results archive current historical,completed_no_new_urls
 us:vt:priority-roster:danby,VT,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
 us:wa:census-county:53025,WA,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:nh:priority-roster:deering,NH,2026-10-27T13:14:36+00:00,Deering New Hampshire official election results archive town clerk,observed_link_candidate
+us:nj:census-county:34019,NJ,2026-10-27T13:14:36+00:00,Hunterdon County New Jersey alternative official results state archive,observed_link_candidate
+us:nm:census-county:35035,NM,2026-10-27T13:14:36+00:00,Otero County New Mexico alternative official election results archive,observed_link_candidate
+us:nv:census-county:32005,NV,2026-10-27T13:14:36+00:00,Douglas County Nevada official election results alternative hosted mirror,observed_link_candidate
+us:oh:county:miami,OH,2026-10-27T13:14:36+00:00,Miami County Ohio official Board of Elections results archive,observed_link_candidate
+us:sc:census-county:45013,SC,2026-10-27T13:14:36+00:00,Beaufort County South Carolina alternative official previous election results,observed_link_candidate
+us:tx:census-county:48103,TX,2026-10-27T13:14:36+00:00,Crane County Texas official local election results archive,observed_link_candidate
+us:ut:census-county:49043,UT,2026-10-27T13:14:36+00:00,Summit County Utah alternative official county canvass results archive,observed_link_candidate
+us:va:census-county:51107,VA,2026-10-27T13:14:36+00:00,Loudoun County Virginia official election results | Loudoun County election results archive,observed_link_candidate
+us:wi:ltsb2026:ashland-white-river-68ea1bf1d32b247c,WI,2026-10-27T13:14:36+00:00,Town of White River Wisconsin official elections results | Ashland County White River election results,observed_link_candidate
+us:al:census-county:01027,AL,2026-10-27T13:14:36+00:00,Clay County Alabama official election results archive | site:sos.alabama.gov Clay County results,observed_link_candidate
+us:ar:census-county:05011,AR,2026-10-27T13:14:36+00:00,Bradley County Arkansas official election results archive | site:arkansas.gov Bradley County election results,completed_no_new_urls
+us:az:census-county:04021,AZ,2026-10-27T13:14:36+00:00,Pinal County Arizona official 2026 results dashboard alternative,observed_link_candidate
+us:ca:census-county:06037,CA,2026-10-27T13:14:36+00:00,Los Angeles County California official past election results and returns archive,observed_link_candidate
+us:co:census-county:08023,CO,2026-10-27T13:14:36+00:00,Costilla County Colorado official election results archive and clerk authority,observed_link_candidate
+us:ct:municipality:manchester,CT,2026-10-27T13:14:36+00:00,Manchester Connecticut official election results and historical archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-27T13:14:36+00:00,Sussex County Delaware local official results archive alternative | site:elections.delaware.gov Sussex current results,completed_no_new_urls
+us:ga:census-county:13159,GA,2026-10-27T13:14:36+00:00,Jasper County Georgia official election results dashboard and archive,observed_link_candidate
+us:hi:census-county:15007,HI,2026-10-27T13:14:36+00:00,Kauai County Hawaii official election results vendor alternative | site:kauai.gov election results archive,completed_no_new_urls
+us:ia:census-county:19147,IA,2026-10-27T13:14:36+00:00,Palo Alto County Iowa official auditor election results | Iowa county results archive,observed_link_candidate
