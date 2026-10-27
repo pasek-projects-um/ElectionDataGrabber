@@ -3010,3 +3010,23 @@ us:de:census-county:10001,DE,2026-10-26T16:44:50-04:00,Kent County Delaware offi
 us:ga:census-county:13153,GA,2026-10-26T16:44:50-04:00,Houston County Georgia official election results archive,observed_link_candidate
 us:hi:census-county:15009,HI,2026-10-26T16:44:50-04:00,Maui County Hawaii official election results archive | Maui County elections division results,observed_link_candidate
 us:ia:census-county:19141,IA,2026-10-26T16:44:50-04:00,O'Brien County Iowa official election results archive | O'Brien County auditor official results vendor,observed_link_candidate
+us:il:census-county:17145,IL,2026-10-26T20:28:57-04:00,Perry County Illinois official elections results county clerk,observed_link_candidate
+us:md:census-county:24035,MD,2026-10-26T20:28:57-04:00,Queen Anne's County Maryland official elections results archive,observed_link_candidate
+us:nc:census-county:37105,NC,2026-10-26T20:28:57-04:00,Lee County North Carolina official election results county board | Lee County NC official historical election results elections office,completed_no_new_urls
+us:ne:census-county:31103,NE,2026-10-26T20:28:57-04:00,Keya Paha County Nebraska official election results county clerk,observed_link_candidate
+us:oh:county:meigs,OH,2026-10-26T20:28:57-04:00,Meigs County Ohio official election results archive board elections,observed_link_candidate
+us:pa:county:philadelphia,PA,2026-10-26T20:28:57-04:00,Philadelphia official election results previous elections export,observed_link_candidate
+us:ri:priority-roster:hopkinton,RI,2026-10-26T20:28:57-04:00,Hopkinton Rhode Island official election results town clerk archive,observed_link_candidate
+us:sd:census-county:46103,SD,2026-10-26T20:28:57-04:00,Pennington County South Dakota official election results history auditor,observed_link_candidate
+us:tn:census-county:47101,TN,2026-10-26T20:28:57-04:00,Lewis County Tennessee official election results election commission | Lewis County TN unofficial results archive,observed_link_candidate
+us:tx:census-county:48099,TX,2026-10-26T20:28:57-04:00,Coryell County Texas official election results previous elections,observed_link_candidate
+us:wv:census-county:54099,WV,2026-10-26T20:28:57-04:00,Wayne County West Virginia official election results county clerk | Wayne County WV county clerk elections official,completed_no_new_urls
+us:co:census-county:08019,CO,2026-10-26T20:28:57-04:00,Clear Creek County Colorado official election results clerk recorder,observed_link_candidate
+us:fl:census-county:12017,FL,2026-10-26T20:28:57-04:00,Citrus County Florida official election results archive supervisor elections,observed_link_candidate
+us:id:census-county:16047,ID,2026-10-26T20:28:57-04:00,Gooding County Idaho official election results archive clerk,completed_no_new_urls
+us:in:census-county:18145,IN,2026-10-26T20:28:57-04:00,Shelby County Indiana official election results county clerk | Shelby County Indiana official election board,observed_link_candidate
+us:ks:census-county:20143,KS,2026-10-26T20:28:57-04:00,Ottawa County Kansas official election results clerk | Ottawa County KS historical election results official,completed_no_new_urls
+us:ky:census-county:21139,KY,2026-10-26T20:28:57-04:00,Livingston County Kentucky official election results county clerk,observed_link_candidate
+us:la:census-county:22013,LA,2026-10-26T20:28:57-04:00,Bienville Parish Louisiana official election results clerk | Bienville Parish registrar voters official elections,completed_no_new_urls
+us:ma:priority-roster:conway,MA,2026-10-26T20:28:57-04:00,Conway Massachusetts official election results town clerk | Conway MA municipal elections official,observed_link_candidate
+us:me:municipality:castine,ME,2026-10-26T20:28:57-04:00,Castine Maine official election results town clerk | Castine ME voter registration elections official,completed_no_new_urls
