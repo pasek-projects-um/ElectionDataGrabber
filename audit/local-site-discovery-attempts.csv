@@ -3027,6 +3027,6 @@ us:id:census-county:16047,ID,2026-10-26T20:28:57-04:00,Gooding County Idaho offi
 us:in:census-county:18145,IN,2026-10-26T20:28:57-04:00,Shelby County Indiana official election results county clerk | Shelby County Indiana official election board,observed_link_candidate
 us:ks:census-county:20143,KS,2026-10-26T20:28:57-04:00,Ottawa County Kansas official election results clerk | Ottawa County KS historical election results official,completed_no_new_urls
 us:ky:census-county:21139,KY,2026-10-26T20:28:57-04:00,Livingston County Kentucky official election results county clerk,observed_link_candidate
-us:la:census-county:22013,LA,2026-10-26T20:28:57-04:00,Bienville Parish Louisiana official election results clerk | Bienville Parish registrar voters official elections,completed_no_new_urls
+us:la:census-county:22013,LA,2026-10-26T20:28:57-04:00,Bienville Parish Louisiana official election results clerk | Bienville Parish registrar voters official elections,blocked_access
 us:ma:priority-roster:conway,MA,2026-10-26T20:28:57-04:00,Conway Massachusetts official election results town clerk | Conway MA municipal elections official,observed_link_candidate
 us:me:municipality:castine,ME,2026-10-26T20:28:57-04:00,Castine Maine official election results town clerk | Castine ME voter registration elections official,completed_no_new_urls
