@@ -3030,3 +3030,23 @@ us:ky:census-county:21139,KY,2026-10-26T20:28:57-04:00,Livingston County Kentuck
 us:la:census-county:22013,LA,2026-10-26T20:28:57-04:00,Bienville Parish Louisiana official election results clerk | Bienville Parish registrar voters official elections,blocked_access
 us:ma:priority-roster:conway,MA,2026-10-26T20:28:57-04:00,Conway Massachusetts official election results town clerk | Conway MA municipal elections official,observed_link_candidate
 us:me:municipality:castine,ME,2026-10-26T20:28:57-04:00,Castine Maine official election results town clerk | Castine ME voter registration elections official,completed_no_new_urls
+us:mi:county:oceana,MI,2026-10-26T21:21:12-04:00,Oceana County Michigan official election results archive,observed_link_candidate
+us:mn:census-county:27121,MN,2026-10-26T21:21:12-04:00,Pope County Minnesota official election results auditor archive,observed_link_candidate
+us:mo:census-county:29117,MO,2026-10-26T21:21:12-04:00,Livingston County Missouri official election results clerk archive,observed_link_candidate
+us:ms:census-county:28115,MS,2026-10-26T21:21:12-04:00,Pontotoc County Mississippi official election results circuit clerk archive,observed_link_candidate
+us:mt:census-county:30107,MT,2026-10-26T21:21:12-04:00,Wheatland County Montana official election results clerk recorder archive,observed_link_candidate
+us:nd:census-county:38003,ND,2026-10-26T21:21:12-04:00,Barnes County North Dakota official election results auditor | Barnes County North Dakota official historical election results archive county auditor,completed_no_new_urls
+us:ok:census-county:40105,OK,2026-10-26T21:21:12-04:00,Nowata County Oklahoma official election board results archive,observed_link_candidate
+us:or:census-county:41035,OR,2026-10-26T21:21:12-04:00,Klamath County Oregon official election results archive clerk,observed_link_candidate
+us:vt:priority-roster:craftsbury,VT,2026-10-26T21:21:12-04:00,Craftsbury Vermont official town election results archive,observed_link_candidate
+us:wa:census-county:53023,WA,2026-10-26T21:21:12-04:00,Garfield County Washington official election results archive auditor,observed_link_candidate
+us:wy:census-county:56009,WY,2026-10-26T21:21:12-04:00,Converse County Wyoming official election results archive county clerk alternative,observed_link_candidate
+us:al:census-county:01023,AL,2026-10-26T21:21:12-04:00,Choctaw County Alabama official election results archive probate judge,observed_link_candidate
+us:ar:census-county:05007,AR,2026-10-26T21:21:12-04:00,Benton County Arkansas official election commission results archive,observed_link_candidate
+us:az:census-county:04017,AZ,2026-10-26T21:21:12-04:00,Navajo County Arizona official election results archive vendor dashboard,observed_link_candidate
+us:ca:census-county:06033,CA,2026-10-26T21:21:12-04:00,Lake County California official election results registrar archive,observed_link_candidate
+us:ct:municipality:lyme,CT,2026-10-26T21:21:12-04:00,Lyme Connecticut official election results registrar town clerk,observed_link_candidate
+us:de:census-county:10005,DE,2026-10-26T21:21:12-04:00,Sussex County Delaware official Board of Elections results archive | Sussex County Delaware official local municipal election results county archive,observed_link_candidate
+us:ga:census-county:13155,GA,2026-10-26T21:21:12-04:00,Irwin County Georgia official elections results board registration,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-26T21:21:12-04:00,Honolulu Hawaii official election results archive county clerk | City and County of Honolulu official elections results archive clerk Hawaii alternative,completed_no_new_urls
+us:ia:census-county:19143,IA,2026-10-26T21:21:12-04:00,Osceola County Iowa official election results auditor archive,observed_link_candidate
