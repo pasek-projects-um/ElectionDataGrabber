@@ -3110,3 +3110,23 @@ us:hi:census-county:15001,HI,2026-10-27T07:55:00+00:00,Hawaii County official el
 us:ia:census-county:19145,IA,2026-10-27T07:55:00+00:00,Page County Iowa official election results archive,observed_link_candidate
 us:id:census-county:16049,ID,2026-10-27T07:55:00+00:00,Idaho County Idaho official election results archive,observed_link_candidate
 us:me:municipality:chebeague-island,ME,2026-10-27T07:55:00+00:00,Chebeague Island Maine official election results archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-27T12:32:03.785293+00:00,District of Columbia Board of Elections official results archive alternative current 2026,completed_no_new_urls
+us:fl:census-county:12021,FL,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:il:census-county:17149,IL,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:in:census-county:18149,IN,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ks:census-county:20147,KS,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ky:census-county:21143,KY,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:la:census-county:22017,LA,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ma:priority-roster:dalton,MA,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:md:census-county:24039,MD,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:nc:census-county:37109,NC,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:nd:census-county:38005,ND,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ne:census-county:31107,NE,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ny:census-county:36105,NY,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ok:census-county:40107,OK,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:pa:county:pike,PA,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:ri:priority-roster:jamestown,RI,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:sd:census-county:46105,SD,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:tn:census-county:47103,TN,2026-10-27T12:32:03.785293+00:00,Lincoln County Tennessee official election results archive current historical,completed_no_new_urls
+us:vt:priority-roster:danby,VT,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
+us:wa:census-county:53025,WA,2026-10-27T12:32:03.785293+00:00,official local election results alternative archive authority site,observed_link_candidate
