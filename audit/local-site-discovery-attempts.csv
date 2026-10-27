@@ -3170,3 +3170,23 @@ us:ma:priority-roster:danvers,MA,2026-10-27T17:42:01.905+00:00,Danvers Massachus
 us:md:census-county:24001,MD,2026-10-27T17:42:01.905+00:00,Allegany County Maryland official election results archive | site:elections.maryland.gov 2026 Allegany County election results Maryland official,observed_link_candidate
 us:nc:census-county:37111,NC,2026-10-27T17:42:01.905+00:00,McDowell County North Carolina official election results board archive,observed_link_candidate
 us:nd:census-county:38007,ND,2026-10-27T17:42:01.905+00:00,Billings County North Dakota official election results auditor archive,observed_link_candidate
+us:ne:census-county:31109,NE,2026-10-27T18:19:32.301Z,Lancaster County Nebraska official election results archive 2026,observed_link_candidate
+us:ny:census-county:36107,NY,2026-10-27T18:19:32.301Z,Tioga County New York official election results archive 2026,observed_link_candidate
+us:ok:census-county:40109,OK,2026-10-27T18:19:32.301Z,Oklahoma County Oklahoma official election results archive 2026,observed_link_candidate
+us:pa:county:potter,PA,2026-10-27T18:19:32.301Z,Potter County Pennsylvania official election results archive 2026,observed_link_candidate
+us:ri:priority-roster:johnston,RI,2026-10-27T18:19:32.301Z,Johnston Rhode Island official election results archive 2026,observed_link_candidate
+us:sd:census-county:46107,SD,2026-10-27T18:19:32.301Z,Potter County South Dakota official election results archive 2026,observed_link_candidate
+us:tn:census-county:47105,TN,2026-10-27T18:19:32.301Z,Loudon County Tennessee official election results archive 2026,observed_link_candidate
+us:vt:priority-roster:danville,VT,2026-10-27T18:19:32.301Z,Danville Vermont official election results archive 2026,observed_link_candidate
+us:wa:census-county:53027,WA,2026-10-27T18:19:32.301Z,Grays Harbor County Washington official election results archive 2026,observed_link_candidate
+us:al:census-county:01029,AL,2026-10-27T18:19:32.301Z,Cleburne County Alabama official election results archive 2026,observed_link_candidate
+us:ar:census-county:05013,AR,2026-10-27T18:19:32.301Z,Calhoun County Arkansas official election results archive 2026,observed_link_candidate
+us:az:census-county:04023,AZ,2026-10-27T18:19:32.301Z,Santa Cruz County Arizona official election results archive 2026,completed_no_new_urls
+us:ca:census-county:06039,CA,2026-10-27T18:19:32.301Z,Madera County California official election results archive 2026,observed_link_candidate
+us:co:census-county:08025,CO,2026-10-27T18:19:32.301Z,Crowley County Colorado official election results archive 2026,observed_link_candidate
+us:ct:municipality:mansfield,CT,2026-10-27T18:19:32.301Z,Mansfield Connecticut official election results archive 2026,observed_link_candidate
+us:de:census-county:10003,DE,2026-10-27T18:19:32.301Z,New Castle County Delaware official election results archive 2026,observed_link_candidate
+us:ga:census-county:13161,GA,2026-10-27T18:19:32.301Z,Jeff Davis County Georgia official election results archive 2026,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-27T18:19:32.301Z,Honolulu County Hawaii official election results archive 2026,observed_link_candidate
+us:ia:census-county:19149,IA,2026-10-27T18:19:32.301Z,Plymouth County Iowa official election results archive 2026,observed_link_candidate
+us:nh:priority-roster:derry,NH,2026-10-27T18:19:32.301Z,Derry New Hampshire official election results archive 2026,observed_link_candidate
