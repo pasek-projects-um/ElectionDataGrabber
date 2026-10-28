@@ -3370,3 +3370,23 @@ us:la:census-county:22029,LA,2026-10-28T20:13:51.949Z,Concordia Parish Louisiana
 us:ma:priority-roster:dighton,MA,2026-10-28T20:13:51.949Z,Dighton Massachusetts official election results archive town clerk | Dighton MA 2026 2025 election results official,observed_link_candidate
 us:md:census-county:24510,MD,2026-10-28T20:13:51.949Z,Baltimore City Maryland official election results archive board elections | Baltimore City MD 2026 election results official dashboard,observed_link_candidate
 us:mi:county:ottawa,MI,2026-10-28T20:13:51.949Z,Ottawa County Michigan official election results archive county clerk | Ottawa County MI 2026 election results official dashboard,observed_link_candidate
+us:nj:census-county:34025,NJ,2026-10-28T23:27:10+00:00,Monmouth County New Jersey official election results archive; Monmouth County NJ 2026 election results official,observed_link_candidate
+us:nm:census-county:35043,NM,2026-10-28T23:27:10+00:00,Sandoval County New Mexico official election results archive; Sandoval County NM 2026 election results official,observed_link_candidate
+us:nv:census-county:32013,NV,2026-10-28T23:27:10+00:00,Humboldt County Nevada official election results archive; Humboldt County NV 2026 election results official,observed_link_candidate
+us:oh:county:morrow,OH,2026-10-28T23:27:10+00:00,Morrow Ohio official election results archive; Morrow OH 2026 election results official,observed_link_candidate
+us:sc:census-county:45021,SC,2026-10-28T23:27:10+00:00,Cherokee County South Carolina official election results archive; Cherokee County SC 2026 election results official,observed_link_candidate
+us:tx:census-county:48111,TX,2026-10-28T23:27:10+00:00,Dallam County Texas official election results archive; Dallam County TX 2026 election results official,observed_link_candidate
+us:ut:census-county:49051,UT,2026-10-28T23:27:10+00:00,Wasatch County Utah official election results archive; Wasatch County UT 2026 election results official,observed_link_candidate
+us:va:census-county:51115,VA,2026-10-28T23:27:10+00:00,Mathews County Virginia official election results archive; Mathews County VA 2026 election results official,observed_link_candidate
+us:wi:ltsb2026:augusta-7270463c97241d4a,WI,2026-10-28T23:27:10+00:00,City of Augusta Wisconsin official election results archive; City of Augusta WI 2026 election results official,observed_link_candidate
+us:al:census-county:01039,AL,2026-10-28T23:27:10+00:00,Covington County Alabama official election results archive; Covington County AL 2026 election results official,observed_link_candidate
+us:ar:census-county:05023,AR,2026-10-28T23:27:10+00:00,Cleburne County Arkansas official election results archive; Cleburne County AR 2026 election results official,observed_link_candidate
+us:az:census-county:04005,AZ,2026-10-28T23:27:10+00:00,Coconino County Arizona official election results archive; Coconino County AZ 2026 election results official,observed_link_candidate
+us:ca:census-county:06049,CA,2026-10-28T23:27:10+00:00,Modoc County California official election results archive; Modoc County CA 2026 election results official,observed_link_candidate
+us:co:census-county:08035,CO,2026-10-28T23:27:10+00:00,Douglas County Colorado official election results archive; Douglas County CO 2026 election results official,observed_link_candidate
+us:ct:municipality:middletown,CT,2026-10-28T23:27:10+00:00,Middletown Connecticut official election results archive; Middletown CT 2026 election results official,observed_link_candidate
+us:ga:census-county:13171,GA,2026-10-28T23:27:10+00:00,Lamar County Georgia official election results archive; Lamar County GA 2026 election results official,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-28T23:27:10+00:00,Maui County Hawaii official election results archive; Maui County HI 2026 election results official,observed_link_candidate
+us:me:municipality:columbia,ME,2026-10-28T23:27:10+00:00,Columbia Maine official election results archive; Columbia ME 2026 election results official,blocked_access
+us:mn:census-county:27133,MN,2026-10-28T23:27:10+00:00,Rock County Minnesota official election results archive; Rock County MN 2026 election results official,observed_link_candidate
+us:mo:census-county:29129,MO,2026-10-28T23:27:10+00:00,Mercer County Missouri official election results archive; Mercer County MO 2026 election results official,observed_link_candidate
