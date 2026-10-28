@@ -3230,23 +3230,23 @@ us:ct:municipality:marlborough,CT,2026-10-28T08:49:01.176Z,Marlborough Connectic
 us:de:census-county:10001,DE,2026-10-28T08:49:01.176Z,Kent County Delaware official election results archive 2026,completed_no_new_urls
 us:ga:census-county:13163,GA,2026-10-28T08:49:01.176Z,Jefferson County Georgia official election results archive 2026 | site:jeffersoncountyga.gov election results Jefferson County Georgia official archive,observed_link_candidate
 us:hi:census-county:15009,HI,2026-10-28T08:49:01.176Z,Maui County Hawaii official election results archive 2026,completed_no_new_urls
-us:ia:census-county:19151,IA,2026-10-28T09:28:14.871Z,Pocahontas County Iowa official election results archive auditor | site:pocahontascounty.iowa.gov auditor election results Pocahontas,observed_link_candidate
-us:ne:census-county:31111,NE,2026-10-28T09:28:14.871Z,Lincoln County Nebraska official election results clerk current historical,observed_link_candidate
-us:nh:priority-roster:dorchester,NH,2026-10-28T09:28:14.871Z,Dorchester New Hampshire official election results town clerk | site:townofdorchester.org election results Dorchester NH PDF,observed_link_candidate
-us:ny:census-county:36109,NY,2026-10-28T09:28:14.871Z,Tompkins County New York official election results board elections archive,observed_link_candidate
-us:ok:census-county:40111,OK,2026-10-28T09:28:14.871Z,Okmulgee County Oklahoma official election results archive county election board | site:oklahoma.gov/elections Okmulgee County 2026 results,observed_link_candidate
-us:pa:county:schuylkill,PA,2026-10-28T09:28:14.871Z,Schuylkill County Pennsylvania official election results archive 2026 | site:co.schuylkill.pa.us election results Schuylkill County official,observed_link_candidate
-us:ri:priority-roster:lincoln,RI,2026-10-28T09:28:14.871Z,Lincoln Rhode Island official election results town clerk archive,observed_link_candidate
-us:sd:census-county:46109,SD,2026-10-28T09:28:14.871Z,Roberts County South Dakota official election results auditor archive,observed_link_candidate
-us:tn:census-county:47107,TN,2026-10-28T09:28:14.871Z,McMinn County Tennessee official election results commission archive | site:mcminnelections.com results election McMinn County,observed_link_candidate
-us:vt:priority-roster:derby,VT,2026-10-28T09:28:14.871Z,Derby Vermont official election results town clerk 2026 archive | site:derbyvt.org election results Derby Vermont,observed_link_candidate
-us:wa:census-county:53029,WA,2026-10-28T09:28:14.871Z,Island County Washington official election results auditor archive,observed_link_candidate
-us:fl:census-county:12029,FL,2026-10-28T09:28:14.871Z,Dixie County Florida official election results supervisor elections archive,observed_link_candidate
-us:id:census-county:16055,ID,2026-10-28T09:28:14.871Z,Kootenai County Idaho official election results clerk archive 2026,observed_link_candidate
-us:il:census-county:17155,IL,2026-10-28T09:28:14.871Z,Putnam County Illinois official election results county clerk archive,observed_link_candidate
-us:in:census-county:18155,IN,2026-10-28T09:28:14.871Z,Switzerland County Indiana official election results clerk archive,observed_link_candidate
-us:ks:census-county:20153,KS,2026-10-28T09:28:14.871Z,Rawlins County Kansas official election results clerk archive | site:rawlinscounty.org OR site:rawlinscountyks.gov election results Rawlins County Kansas,observed_link_candidate
-us:ky:census-county:21149,KY,2026-10-28T09:28:14.871Z,McLean County Kentucky official election results county clerk archive,observed_link_candidate
-us:la:census-county:22023,LA,2026-10-28T09:28:14.871Z,Cameron Parish Louisiana official election results clerk archive,observed_link_candidate
-us:ma:priority-roster:dedham,MA,2026-10-28T09:28:14.871Z,Dedham Massachusetts official election results town clerk archive 2026 | site:dedhamma.gov election results archive Dedham,observed_link_candidate
-us:md:census-county:24043,MD,2026-10-28T09:28:14.871Z,Washington County Maryland official election results board elections archive,observed_link_candidate
+"us:nj:census-county:34023",NJ,2026-10-28T13:41:32.706Z,"Middlesex County New Jersey official election results archive","observed_link_candidate"
+"us:nm:census-county:35039",NM,2026-10-28T13:41:32.706Z,"Rio Arriba County New Mexico official election results archive","observed_link_candidate"
+"us:nv:census-county:32009",NV,2026-10-28T13:41:32.706Z,"Esmeralda County Nevada official election results archive | site:esmeraldacountynv.org election results","completed_no_new_urls"
+"us:oh:county:montgomery",OH,2026-10-28T13:41:32.706Z,"Montgomery County Ohio official election results archive","observed_link_candidate"
+"us:sc:census-county:45017",SC,2026-10-28T13:41:32.706Z,"Calhoun County South Carolina official election results archive","observed_link_candidate"
+"us:tx:census-county:48107",TX,2026-10-28T13:41:32.706Z,"Crosby County Texas official election results archive","observed_link_candidate"
+"us:ut:census-county:49047",UT,2026-10-28T13:41:32.706Z,"Uintah County Utah official election results archive","observed_link_candidate"
+"us:va:census-county:51111",VA,2026-10-28T13:41:32.706Z,"Lunenburg County Virginia official election results archive | site:lunenburgva.gov election results registrar","observed_link_candidate"
+"us:wi:ltsb2026:athens-a7d40dbecab30b47",WI,2026-10-28T13:41:32.706Z,"Village of Athens Wisconsin official election results archive | Village of Athens Wisconsin election results Marathon County","observed_link_candidate"
+"us:al:census-county:01033",AL,2026-10-28T13:41:32.706Z,"Colbert County Alabama official election results archive | site:colbertcounty.org election results Alabama","completed_no_new_urls"
+"us:ar:census-county:05017",AR,2026-10-28T13:41:32.706Z,"Chicot County Arkansas official election results archive","observed_link_candidate"
+"us:az:census-county:04027",AZ,2026-10-28T13:41:32.706Z,"Yuma County Arizona official election results archive","completed_no_new_urls"
+"us:ca:census-county:06043",CA,2026-10-28T13:41:32.706Z,"Mariposa County California official election results archive","observed_link_candidate"
+"us:co:census-county:08029",CO,2026-10-28T13:41:32.706Z,"Delta County Colorado official election results archive","observed_link_candidate"
+"us:ct:municipality:meriden",CT,2026-10-28T13:41:32.706Z,"Meriden Connecticut official election results archive","observed_link_candidate"
+"us:de:census-county:10005",DE,2026-10-28T13:41:32.706Z,"Sussex County Delaware official election results archive","completed_no_new_urls"
+"us:ga:census-county:13165",GA,2026-10-28T13:41:32.706Z,"Jenkins County Georgia official election results archive","observed_link_candidate"
+"us:hi:census-county:15001",HI,2026-10-28T13:41:32.706Z,"Hawaii County Hawaii official election results archive","completed_no_new_urls"
+"us:me:municipality:chesterville",ME,2026-10-28T13:41:32.706Z,"Chesterville Maine official election results archive | site:chestervillemaine.org election results voting","completed_no_new_urls"
+"us:mi:county:oscoda",MI,2026-10-28T13:41:32.706Z,"Oscoda County Michigan official election results archive",blocked_access
