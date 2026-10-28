@@ -3190,3 +3190,23 @@ us:ga:census-county:13161,GA,2026-10-27T18:19:32.301Z,Jeff Davis County Georgia 
 us:hi:census-county:15003,HI,2026-10-27T18:19:32.301Z,Honolulu County Hawaii official election results archive 2026,observed_link_candidate
 us:ia:census-county:19149,IA,2026-10-27T18:19:32.301Z,Plymouth County Iowa official election results archive 2026,observed_link_candidate
 us:nh:priority-roster:derry,NH,2026-10-27T18:19:32.301Z,Derry New Hampshire official election results archive 2026,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-28T07:18:08.322Z,Alaska official election results 2026 archive,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-10-28T07:18:08.322Z,District of Columbia official election results archive 2026,completed_no_new_urls
+us:nj:census-county:34021,NJ,2026-10-28T07:18:08.322Z,Mercer County New Jersey official election results 2026 archive,completed_no_new_urls
+us:nm:census-county:35037,NM,2026-10-28T07:18:08.322Z,Quay County New Mexico official election results 2026 archive,completed_no_new_urls
+us:nv:census-county:32007,NV,2026-10-28T07:18:08.322Z,Elko County Nevada official election results 2026 archive,completed_no_new_urls
+us:oh:county:monroe,OH,2026-10-28T07:18:08.322Z,Monroe County Ohio official election results archive 2026,observed_link_candidate
+us:sc:census-county:45015,SC,2026-10-28T07:18:08.322Z,Berkeley County South Carolina official election results 2026 archive,completed_no_new_urls
+us:tx:census-county:48105,TX,2026-10-28T07:18:08.322Z,Crockett County Texas official election results 2026 archive,observed_link_candidate
+us:ut:census-county:49045,UT,2026-10-28T07:18:08.322Z,Tooele County Utah official election results 2026 archive,observed_link_candidate
+us:va:census-county:51109,VA,2026-10-28T07:18:08.322Z,Louisa County Virginia official election results 2026 archive,completed_no_new_urls
+us:wi:ltsb2026:ashwaubenon-a928e412ccf53432,WI,2026-10-28T07:18:08.322Z,Ashwaubenon Wisconsin official election results 2026 archive,observed_link_candidate
+us:fl:census-county:12027,FL,2026-10-28T07:18:08.322Z,DeSoto County Florida official election results 2026 archive,completed_no_new_urls
+us:id:census-county:16053,ID,2026-10-28T07:18:08.322Z,Jerome County Idaho official election results 2026 archive,completed_no_new_urls
+us:il:census-county:17153,IL,2026-10-28T07:18:08.322Z,Pulaski County Illinois official election results 2026 archive,observed_link_candidate
+us:in:census-county:18153,IN,2026-10-28T07:18:08.322Z,Sullivan County Indiana official election results 2026 archive,completed_no_new_urls
+us:ks:census-county:20151,KS,2026-10-28T07:18:08.322Z,Pratt County Kansas official election results 2026 archive,observed_link_candidate
+us:ky:census-county:21147,KY,2026-10-28T07:18:08.322Z,McCreary County Kentucky official election results 2026 archive,completed_no_new_urls
+us:la:census-county:22021,LA,2026-10-28T07:18:08.322Z,Caldwell Parish Louisiana official election results 2026 archive,completed_no_new_urls
+us:ma:priority-roster:dartmouth,MA,2026-10-28T07:18:08.322Z,Dartmouth Massachusetts official election results archive 2026,observed_link_candidate
+us:md:census-county:24041,MD,2026-10-28T07:18:08.322Z,Talbot County Maryland official election results 2026 archive,completed_no_new_urls
