@@ -3490,3 +3490,23 @@ us:ma:priority-roster:dracut,MA,2026-10-29T06:18:14.122Z,Dracut Massachusetts of
 us:md:census-county:24009,MD,2026-10-29T06:18:14.122Z,Calvert County Maryland official election results archive | site:calvertcountymd.gov election results,observed_link_candidate
 us:mi:county:saginaw,MI,2026-10-29T06:18:14.122Z,Saginaw County Michigan official election results archive | site:saginawcounty.com election results,observed_link_candidate
 us:nj:census-county:34029,NJ,2026-10-29T06:18:14.122Z,Ocean County New Jersey official election results archive | site:co.ocean.nj.us election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-10-29T07:59:17.355Z,Alaska Division of Elections official election results archive | site:elections.alaska.gov election results 2026 historical,completed_no_new_urls
+us:de:census-county:10003,DE,2026-10-29T07:59:17.355Z,New Castle County Delaware official election results archive | site:elections.delaware.gov New Castle County election results,completed_no_new_urls
+us:nm:census-county:35047,NM,2026-10-29T07:59:17.355Z,San Miguel County New Mexico official election results archive | site:co.sanmiguel.nm.us elections results,completed_no_new_urls
+us:nv:census-county:32017,NV,2026-10-29T07:59:17.355Z,Lincoln County Nevada official election results archive | site:lincolncountynv.org election results,completed_no_new_urls
+us:oh:county:noble,OH,2026-10-29T07:59:17.355Z,Noble County Ohio official election results archive | site:noblecountyohio.gov election results,observed_link_candidate
+us:sc:census-county:45025,SC,2026-10-29T07:59:17.355Z,Chesterfield County South Carolina official election results archive | site:chesterfieldcountysc.com election results,observed_link_candidate
+us:tx:census-county:48115,TX,2026-10-29T07:59:17.355Z,Dawson County Texas official election results archive | site:co.dawson.tx.us election results,observed_link_candidate
+us:ut:census-county:49055,UT,2026-10-29T07:59:17.355Z,Wayne County Utah official election results archive | site:waynecountyutah.gov election results,completed_no_new_urls
+us:va:census-county:51119,VA,2026-10-29T07:59:17.355Z,Middlesex County Virginia official election results archive | site:co.middlesex.va.us election results,observed_link_candidate
+us:wi:ltsb2026:bagley-1886589b4b7bcd0c,WI,2026-10-29T07:59:17.355Z,Village of Bagley Wisconsin official election results archive | site:bagleywi.gov election results,observed_link_candidate
+us:al:census-county:01045,AL,2026-10-29T07:59:17.355Z,Dale County Alabama official election results archive | site:dalecountyal.gov election results,observed_link_candidate
+us:ar:census-county:05029,AR,2026-10-29T07:59:17.355Z,Conway County Arkansas official election results archive | site:conwaycountyar.com election results,observed_link_candidate
+us:az:census-county:04011,AZ,2026-10-29T07:59:17.355Z,Greenlee County Arizona official election results archive | site:greenlee.az.gov election results,observed_link_candidate
+us:ca:census-county:06055,CA,2026-10-29T07:59:17.355Z,Napa County California official election results archive | site:napacounty.gov election results 2026,observed_link_candidate
+us:co:census-county:08041,CO,2026-10-29T07:59:17.355Z,El Paso County Colorado official election results archive | site:clerkandrecorder.elpasoco.com election results,observed_link_candidate
+us:ct:municipality:montville,CT,2026-10-29T07:59:17.355Z,Montville Connecticut official election results archive | site:montville-ct.org election results,observed_link_candidate
+us:ga:census-county:13177,GA,2026-10-29T07:59:17.355Z,Lee County Georgia official election results archive | site:lee.ga.us election results,observed_link_candidate
+us:hi:census-county:15009,HI,2026-10-29T07:59:17.355Z,Maui County Hawaii official election results archive | site:mauicountyvotes.gov election results,completed_no_new_urls
+us:me:municipality:cranberry-isles,ME,2026-10-29T07:59:17.355Z,Cranberry Isles Maine official election results archive | site:cranberryisles-me.gov election results,observed_link_candidate
+us:mn:census-county:27139,MN,2026-10-29T07:59:17.355Z,Scott County Minnesota official election results archive | site:scottcountymn.gov election results,observed_link_candidate
