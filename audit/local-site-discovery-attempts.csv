@@ -3610,3 +3610,23 @@ us:oh:county:paulding,OH,2026-10-29T12:31:18+00:00,Paulding County Ohio official
 us:tx:census-county:48119,TX,2026-10-29T12:31:18+00:00,Delta County Texas official election results archive | site:deltacountytx.com election results,observed_link_candidate
 us:va:census-county:51125,VA,2026-10-29T12:31:18+00:00,Nelson County Virginia official election results archive | site:nelsoncounty-va.gov election results,observed_link_candidate
 us:wi:ltsb2026:balsam-lake-3376a807ba1f2038,WI,2026-10-29T12:31:18+00:00,Balsam Lake Wisconsin official election results archive | site:balsamlakewi.com election results,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-10-29T16:09:35+00:00,District of Columbia Board of Elections official results archive | site:dcboe.org election results archive,completed_no_new_urls
+us:la:census-county:22041,LA,2026-10-29T16:09:35+00:00,Franklin Parish Louisiana official election results archive | site:franklinparishclerkofcourt.com election results,observed_link_candidate
+us:sc:census-county:45029,SC,2026-10-29T16:09:35+00:00,Colleton County South Carolina official election results archive | site:colletoncounty.org election results,observed_link_candidate
+us:fl:census-county:12047,FL,2026-10-29T16:09:35+00:00,Hamilton County Florida official election results archive | site:hamiltonvotes.com election results,observed_link_candidate
+us:id:census-county:16073,ID,2026-10-29T16:09:35+00:00,Owyhee County Idaho official election results archive | site:owyheecounty.net election results,observed_link_candidate
+us:nm:census-county:35051,NM,2026-10-29T16:09:35+00:00,Sierra County New Mexico official election results archive | site:sierracountynm.gov election results,observed_link_candidate
+us:ut:census-county:49003,UT,2026-10-29T16:09:35+00:00,Box Elder County Utah official election results archive | site:boxeldercounty.org election results,observed_link_candidate
+us:md:census-county:24015,MD,2026-10-29T16:09:35+00:00,Cecil County Maryland official election results archive | site:ccgov.org election results,observed_link_candidate
+us:nv:census-county:32021,NV,2026-10-29T16:09:35+00:00,Mineral County Nevada official election results archive | site:minerallcountynv.us election results,observed_link_candidate
+us:ct:municipality:new-britain,CT,2026-10-29T16:09:35+00:00,New Britain Connecticut official election results archive town clerk | site:newbritainct.gov election results,observed_link_candidate
+us:ga:census-county:13183,GA,2026-10-29T16:09:35+00:00,Long County Georgia official election results archive election board | site:longcountyga.gov election results,observed_link_candidate
+us:me:municipality:cutler,ME,2026-10-29T16:09:35+00:00,Cutler Maine official election results archive town clerk | site:cutlermaine.net election results,observed_link_candidate
+us:mi:county:shiawassee,MI,2026-10-29T16:09:35+00:00,Shiawassee County Michigan official election results archive | site:shiawassee.net election results,observed_link_candidate
+us:mn:census-county:27145,MN,2026-10-29T16:09:35+00:00,Stearns County Minnesota official election results archive | site:stearnscountymn.gov election results,observed_link_candidate
+us:nc:census-county:37127,NC,2026-10-29T16:09:35+00:00,Nash County North Carolina official election results archive | site:nashcountync.gov election results,observed_link_candidate
+us:ne:census-county:31125,NE,2026-10-29T16:09:35+00:00,Nance County Nebraska official election results archive | site:nancecountyne.gov election results,observed_link_candidate
+us:nh:priority-roster:easton,NH,2026-10-29T16:09:35+00:00,Easton New Hampshire official election results archive town clerk | site:easton-nh.org election results,observed_link_candidate
+us:wv:census-county:54009,WV,2026-10-29T16:09:35+00:00,Brooke County West Virginia official election results archive clerk | site:brookecountywv.org election results,observed_link_candidate
+us:mt:census-county:30015,MT,2026-10-29T16:09:35+00:00,Chouteau County Montana official election results archive clerk | site:chouteaucountymt.gov election results,observed_link_candidate
+us:nd:census-county:38023,ND,2026-10-29T16:09:35+00:00,Divide County North Dakota official election results archive auditor | site:dividecountynd.org election results,observed_link_candidate
