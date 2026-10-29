@@ -3530,3 +3530,23 @@ us:ky:census-county:21163,KY,2026-10-29T08:31:05.971Z,Meade County Kentucky offi
 us:la:census-county:22037,LA,2026-10-29T08:31:05.971Z,East Feliciana Parish Louisiana official election results archive | site:eastfelicianaclerk.org election results,observed_link_candidate
 us:ma:priority-roster:dudley,MA,2026-10-29T08:31:05.971Z,Dudley Massachusetts official election results archive | site:dudleyma.gov election results,observed_link_candidate
 us:md:census-county:24011,MD,2026-10-29T08:31:05.971Z,Caroline County Maryland official election results alternative archive | site:carolinemd.org election results,observed_link_candidate
+us:mi:county:sanilac,MI,2026-10-29T09:51:54.826Z,Sanilac County Michigan official election results archive | site:sanilaccounty.net election results,observed_link_candidate
+us:nj:census-county:34031,NJ,2026-10-29T09:51:54.826Z,Passaic County New Jersey official election results alternative archive | site:passaiccountynj.org election results,observed_link_candidate
+us:ny:census-county:36003,NY,2026-10-29T09:51:54.826Z,Allegany County New York official election results archive | site:alleganyco.gov election results,observed_link_candidate
+us:ok:census-county:40121,OK,2026-10-29T09:51:54.826Z,Pittsburg County Oklahoma official election results archive | site:pittsburg.okcounties.org election results,observed_link_candidate
+us:pa:county:tioga,PA,2026-10-29T09:51:54.826Z,Tioga County Pennsylvania official election results archive | site:tiogacountypa.us election results,observed_link_candidate
+us:ri:priority-roster:newport,RI,2026-10-29T09:51:54.826Z,Newport Rhode Island official election results archive | site:cityofnewport.com election results,observed_link_candidate
+us:sd:census-county:46121,SD,2026-10-29T09:51:54.826Z,Todd County South Dakota official election results archive | site:todd.sdcounties.org election results,observed_link_candidate
+us:tn:census-county:47117,TN,2026-10-29T09:51:54.826Z,Marshall County Tennessee official election results archive | site:marshallcountytn.com election results,observed_link_candidate
+us:vt:priority-roster:east-haven,VT,2026-10-29T09:51:54.826Z,East Haven Vermont official election results archive | site:easthavenvt.org election results,observed_link_candidate
+us:wa:census-county:53039,WA,2026-10-29T09:51:54.826Z,Klickitat County Washington official election results alternative archive | site:klickitatcounty.gov election results,observed_link_candidate
+us:al:census-county:01047,AL,2026-10-29T09:51:54.826Z,Dallas County Alabama official election results archive | site:dallascounty-al.org election results,observed_link_candidate
+us:ar:census-county:05031,AR,2026-10-29T09:51:54.826Z,Craighead County Arkansas official election results alternative archive | site:craigheadcountyar.gov election results,observed_link_candidate
+us:az:census-county:04013,AZ,2026-10-29T09:51:54.826Z,Maricopa County Arizona official election results alternative archive | site:elections.maricopa.gov results 2026 archive,observed_link_candidate
+us:ca:census-county:06057,CA,2026-10-29T09:51:54.826Z,Nevada County California official election results alternative archive | site:nevadacountyca.gov election results 2026,observed_link_candidate
+us:co:census-county:08043,CO,2026-10-29T09:51:54.826Z,Fremont County Colorado official election results alternative archive | site:fremontcountyelectionsco.gov results,observed_link_candidate
+us:ct:municipality:morris,CT,2026-10-29T09:51:54.826Z,Morris Connecticut official election results archive | site:townofmorrisct.com election results,observed_link_candidate
+us:de:census-county:10001,DE,2026-10-29T09:51:54.826Z,Kent County Delaware official election results alternative archive | site:elections.delaware.gov Kent County results,completed_no_new_urls
+us:ga:census-county:13179,GA,2026-10-29T09:51:54.826Z,Liberty County Georgia official election results archive | site:libertycountyga.com election results,observed_link_candidate
+us:me:municipality:cumberland,ME,2026-10-29T09:51:54.826Z,Cumberland Maine official election results archive | site:cumberlandmaine.com election results,observed_link_candidate
+us:mn:census-county:27141,MN,2026-10-29T09:51:54.826Z,Sherburne County Minnesota official election results archive | site:co.sherburne.mn.us election results,observed_link_candidate
