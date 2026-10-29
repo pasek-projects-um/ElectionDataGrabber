@@ -3430,3 +3430,23 @@ us:hi:census-county:15007,HI,2026-10-29T01:11:19.891Z,Kauai County Hawaii offici
 us:me:municipality:columbia-falls,ME,2026-10-29T01:11:19.891Z,Columbia Falls Maine official election results town clerk | Columbia Falls ME town meeting election archive,observed_link_candidate
 us:mn:census-county:27135,MN,2026-10-29T01:11:19.891Z,Roseau County Minnesota official election results archive | Roseau County MN current election results dashboard,observed_link_candidate
 us:mo:census-county:29131,MO,2026-10-29T01:11:19.891Z,Miller County Missouri official election results archive | Miller County MO current election results dashboard,observed_link_candidate
+us:nj:census-county:34027,NJ,2026-10-29T02:47:46.691Z,Morris County New Jersey official election results archive | site:nj.gov elections Morris County results 2026,observed_link_candidate
+us:nm:census-county:35045,NM,2026-10-29T02:47:46.691Z,San Juan County New Mexico official election results archive | site:sos.nm.gov San Juan County election results,observed_link_candidate
+us:nv:census-county:32015,NV,2026-10-29T02:47:46.691Z,Lander County Nevada official election results archive | site:nvsos.gov Lander County election results,observed_link_candidate
+us:oh:county:muskingum,OH,2026-10-29T02:47:46.691Z,Muskingum County Ohio official election results archive | site:ohiosos.gov Muskingum County election results,observed_link_candidate
+us:sc:census-county:45023,SC,2026-10-29T02:47:46.691Z,Chester County South Carolina official election results archive | site:scvotes.gov Chester County results,observed_link_candidate
+us:tx:census-county:48113,TX,2026-10-29T02:47:46.691Z,Dallas County Texas official election results archive | site:sos.state.tx.us Dallas County election results,observed_link_candidate
+us:ut:census-county:49053,UT,2026-10-29T02:47:46.691Z,Washington County Utah official election results archive | site:elections.utah.gov Washington County results,observed_link_candidate
+us:va:census-county:51117,VA,2026-10-29T02:47:46.691Z,Mecklenburg County Virginia official election results archive | site:elections.virginia.gov Mecklenburg County results,observed_link_candidate
+us:wi:ltsb2026:avoca-7018a486f0596523,WI,2026-10-29T02:47:46.691Z,Village of Avoca Wisconsin official election results | site:iowacountywi.gov Avoca election results,observed_link_candidate
+us:fl:census-county:12039,FL,2026-10-29T02:47:46.691Z,Gadsden County Florida official election results archive | site:votegadsdenfl.gov 2026 election results,observed_link_candidate
+us:ia:census-county:19161,IA,2026-10-29T02:47:46.691Z,Sac County Iowa official election results archive | site:sos.iowa.gov Sac County election results,observed_link_candidate
+us:id:census-county:16065,ID,2026-10-29T02:47:46.691Z,Madison County Idaho official election results archive | site:voteidaho.gov Madison County 2026 results,observed_link_candidate
+us:il:census-county:17165,IL,2026-10-29T02:47:46.691Z,Saline County Illinois official election results archive | site:salinecounty.illinois.gov election results,observed_link_candidate
+us:in:census-county:18165,IN,2026-10-29T02:47:46.691Z,Vermillion County Indiana official election results archive | site:indianavoters.in.gov Vermillion County results,observed_link_candidate
+us:ks:census-county:20163,KS,2026-10-29T02:47:46.691Z,Rooks County Kansas official election results archive | site:sos.ks.gov Rooks County results,observed_link_candidate
+us:ky:census-county:21159,KY,2026-10-29T02:47:46.691Z,Martin County Kentucky official election results archive | site:elect.ky.gov Martin County results,observed_link_candidate
+us:la:census-county:22033,LA,2026-10-29T02:47:46.691Z,East Baton Rouge Parish Louisiana official election results archive | site:sos.la.gov East Baton Rouge election results,observed_link_candidate
+us:ma:priority-roster:dover,MA,2026-10-29T02:47:46.691Z,Dover Massachusetts official election results archive | site:doverma.gov election results 2026,observed_link_candidate
+us:md:census-county:24005,MD,2026-10-29T02:47:46.691Z,Baltimore County Maryland official election results archive | site:elections.maryland.gov Baltimore County 2026 results,observed_link_candidate
+us:mi:county:roscommon,MI,2026-10-29T02:47:46.691Z,Roscommon County Michigan official election results archive | site:michigan.gov Roscommon County election results,observed_link_candidate
