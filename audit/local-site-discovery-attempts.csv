@@ -3570,3 +3570,23 @@ us:ma:priority-roster:dunstable,MA,2026-10-29T10:33:32.770Z,Dunstable Massachuse
 us:md:census-county:24013,MD,2026-10-29T10:33:32.770Z,Carroll County Maryland elections official results archive | Carroll County Maryland election results board official,observed_link_candidate
 us:mo:census-county:29137,MO,2026-10-29T10:33:32.770Z,Monroe County Missouri elections official results archive | Monroe County Missouri election results county clerk,observed_link_candidate
 us:ms:census-county:28133,MS,2026-10-29T10:33:32.770Z,Sunflower County Mississippi elections official results archive | Sunflower County Mississippi election results circuit clerk,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-29T11:17:40+00:00,Honolulu County Hawaii official election results archive alternatives | Honolulu County official election results vendor dashboard,completed_no_new_urls
+us:mt:census-county:30013,MT,2026-10-29T11:17:40+00:00,Cascade County Montana official election results archive | Cascade County official results vendor dashboard,observed_link_candidate
+us:nc:census-county:37125,NC,2026-10-29T11:17:40+00:00,Moore County North Carolina official election results archive | Moore County official board of elections results,observed_link_candidate
+us:nd:census-county:38021,ND,2026-10-29T11:17:40+00:00,Dickey County North Dakota official election results archive | Dickey County auditor election results,observed_link_candidate
+us:ne:census-county:31123,NE,2026-10-29T11:17:40+00:00,Morrill County Nebraska official election results archive | site:morrillcountyne.gov election results,observed_link_candidate
+us:nh:priority-roster:east-kingston,NH,2026-10-29T11:17:40+00:00,East Kingston New Hampshire official election results archive | site:eastkingstonnh.gov election results,observed_link_candidate
+us:or:census-county:41053,OR,2026-10-29T11:17:40+00:00,Polk County Oregon official election results archive | site:co.polk.or.us elections results,observed_link_candidate
+us:wv:census-county:54007,WV,2026-10-29T11:17:40+00:00,Braxton County West Virginia official election results archive | site:braxtonwv.org election results,completed_no_new_urls
+us:wy:census-county:56025,WY,2026-10-29T11:17:40+00:00,Natrona County Wyoming official election results archive | site:natronacounty-wy.gov elections results,observed_link_candidate
+us:al:census-county:01049,AL,2026-10-29T11:17:40+00:00,DeKalb County Alabama official election results archive probate | site:dekalbcountyal.us election results,completed_no_new_urls
+us:ar:census-county:05033,AR,2026-10-29T11:17:40+00:00,Crawford County Arkansas official election results archive clerk | site:crawford-county.org elections results,completed_no_new_urls
+us:az:census-county:04015,AZ,2026-10-29T11:17:40+00:00,Mohave County Arizona official election results archive | site:mohave.gov elections results,completed_no_new_urls
+us:ca:census-county:06059,CA,2026-10-29T11:17:40+00:00,Orange County California official election results archive registrar | site:ocvote.gov results archive,observed_link_candidate
+us:co:census-county:08045,CO,2026-10-29T11:17:40+00:00,Garfield County Colorado official election results archive clerk | site:garfield-county.com elections results,observed_link_candidate
+us:ct:municipality:naugatuck,CT,2026-10-29T11:17:40+00:00,Naugatuck Connecticut official election results archive town clerk | site:naugatuck-ct.gov election results,observed_link_candidate
+us:ga:census-county:13181,GA,2026-10-29T11:17:40+00:00,Lincoln County Georgia official election results election board | site:lincolncountyga.gov election results,completed_no_new_urls
+us:me:municipality:cushing,ME,2026-10-29T11:17:40+00:00,Cushing Maine official election results archive town clerk | site:cushing.maine.gov election results,incomplete_page_inspection
+us:mi:county:schoolcraft,MI,2026-10-29T11:17:40+00:00,Schoolcraft County Michigan official election results archive clerk | site:schoolcraftcounty.net election results,observed_link_candidate
+us:mn:census-county:27143,MN,2026-10-29T11:17:40+00:00,Sibley County Minnesota official election results archive auditor | site:sibleycounty.gov election results,observed_link_candidate
+us:nj:census-county:34033,NJ,2026-10-29T11:17:40+00:00,Salem County New Jersey official election results archive clerk | site:salemcountynj.gov election results,observed_link_candidate
