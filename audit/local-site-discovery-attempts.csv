@@ -3470,3 +3470,23 @@ us:hi:census-county:15003,HI,2026-10-29T05:10:49.572Z,Honolulu County Hawaii off
 us:me:municipality:cornish,ME,2026-10-29T05:10:49.572Z,Cornish Maine official election results archive | site:cornishme.com election results,observed_link_candidate
 us:mn:census-county:27137,MN,2026-10-29T05:10:49.572Z,St. Louis County Minnesota official election results archive | site:stlouiscountymn.gov election results,observed_link_candidate
 us:mo:census-county:29133,MO,2026-10-29T05:10:49.572Z,Mississippi County Missouri official election results archive | site:misscomo.net election results,observed_link_candidate
+us:ny:census-county:36001,NY,2026-10-29T06:18:14.122Z,Albany County New York official election results archive | site:albanycountyny.gov election results,observed_link_candidate
+us:ok:census-county:40119,OK,2026-10-29T06:18:14.122Z,Payne County Oklahoma official election results archive | site:paynecounty.org election results,observed_link_candidate
+us:pa:county:susquehanna,PA,2026-10-29T06:18:14.122Z,Susquehanna County Pennsylvania official election results archive | site:susqco.com election results,observed_link_candidate
+us:ri:priority-roster:new-shoreham,RI,2026-10-29T06:18:14.122Z,New Shoreham Rhode Island official election results archive | site:newshorehamri.gov election results,observed_link_candidate
+us:sd:census-county:46119,SD,2026-10-29T06:18:14.122Z,Sully County South Dakota official election results archive | site:sullycounty.net election results,observed_link_candidate
+us:tn:census-county:47115,TN,2026-10-29T06:18:14.122Z,Marion County Tennessee official election results archive | site:marionvotes.com election results,observed_link_candidate
+us:vt:priority-roster:duxbury,VT,2026-10-29T06:18:14.122Z,Duxbury Vermont official election results archive | site:duxburyvermont.org election results,observed_link_candidate
+us:wa:census-county:53037,WA,2026-10-29T06:18:14.122Z,Kittitas County Washington official election results archive | site:co.kittitas.wa.us election results,observed_link_candidate
+us:fl:census-county:12041,FL,2026-10-29T06:18:14.122Z,Gilchrist County Florida official election results archive | site:votegilchrist.com election results,observed_link_candidate
+us:ia:census-county:19163,IA,2026-10-29T06:18:14.122Z,Scott County Iowa official election results archive | site:scottcountyiowa.gov election results,observed_link_candidate
+us:id:census-county:16067,ID,2026-10-29T06:18:14.122Z,Minidoka County Idaho official election results archive | site:minidokacounty.id.gov election results 2026,completed_no_new_urls
+us:il:census-county:17167,IL,2026-10-29T06:18:14.122Z,Sangamon County Illinois official election results archive | site:sangamoncountyclerk.com election results,observed_link_candidate
+us:in:census-county:18167,IN,2026-10-29T06:18:14.122Z,Vigo County Indiana official election results archive | site:vigocounty.in.gov election results,completed_no_new_urls
+us:ks:census-county:20165,KS,2026-10-29T06:18:14.122Z,Rush County Kansas official election results archive | site:rushcountykansas.org election results,completed_no_new_urls
+us:ky:census-county:21161,KY,2026-10-29T06:18:14.122Z,Mason County Kentucky official election results archive | site:masoncountyclerkky.com election results,observed_link_candidate
+us:la:census-county:22035,LA,2026-10-29T06:18:14.122Z,East Carroll Parish Louisiana official election results archive | site:ecpclerkofcourt.com election results,observed_link_candidate
+us:ma:priority-roster:dracut,MA,2026-10-29T06:18:14.122Z,Dracut Massachusetts official election results archive | site:dracutma.gov election results,observed_link_candidate
+us:md:census-county:24009,MD,2026-10-29T06:18:14.122Z,Calvert County Maryland official election results archive | site:calvertcountymd.gov election results,observed_link_candidate
+us:mi:county:saginaw,MI,2026-10-29T06:18:14.122Z,Saginaw County Michigan official election results archive | site:saginawcounty.com election results,observed_link_candidate
+us:nj:census-county:34029,NJ,2026-10-29T06:18:14.122Z,Ocean County New Jersey official election results archive | site:co.ocean.nj.us election results,observed_link_candidate
