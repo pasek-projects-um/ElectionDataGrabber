@@ -3450,3 +3450,23 @@ us:la:census-county:22033,LA,2026-10-29T02:47:46.691Z,East Baton Rouge Parish Lo
 us:ma:priority-roster:dover,MA,2026-10-29T02:47:46.691Z,Dover Massachusetts official election results archive | site:doverma.gov election results 2026,observed_link_candidate
 us:md:census-county:24005,MD,2026-10-29T02:47:46.691Z,Baltimore County Maryland official election results archive | site:elections.maryland.gov Baltimore County 2026 results,observed_link_candidate
 us:mi:county:roscommon,MI,2026-10-29T02:47:46.691Z,Roscommon County Michigan official election results archive | site:michigan.gov Roscommon County election results,observed_link_candidate
+us:ms:census-county:28129,MS,2026-10-29T05:10:49.572Z,Smith County Mississippi official election results archive | site:smithcountyms.gov election results Smith County,observed_link_candidate
+us:mt:census-county:30009,MT,2026-10-29T05:10:49.572Z,Carbon County Montana official election results archive | site:carbonmt.gov elections results archive,observed_link_candidate
+us:nc:census-county:37121,NC,2026-10-29T05:10:49.572Z,Mitchell County North Carolina official election results archive | site:mitchellcountync.gov elections results,observed_link_candidate
+us:nd:census-county:38017,ND,2026-10-29T05:10:49.572Z,Cass County North Dakota official election results archive | site:casscountynd.gov election results archive,observed_link_candidate
+us:ne:census-county:31119,NE,2026-10-29T05:10:49.572Z,Madison County Nebraska official election results archive | site:madisoncountyne.gov election results,observed_link_candidate
+us:nh:priority-roster:dunbarton,NH,2026-10-29T05:10:49.572Z,Dunbarton New Hampshire official election results archive | site:dunbartonnh.org election results,observed_link_candidate
+us:or:census-county:41049,OR,2026-10-29T05:10:49.572Z,Morrow County Oregon official election results archive | site:co.morrow.or.us election results 2026,observed_link_candidate
+us:wv:census-county:54003,WV,2026-10-29T05:10:49.572Z,Berkeley County West Virginia official election results archive | site:berkeleywv.org elections results,observed_link_candidate
+us:wy:census-county:56001,WY,2026-10-29T05:10:49.572Z,Albany County Wyoming official election results archive | site:albanycountywy.gov election results,observed_link_candidate
+us:al:census-county:01043,AL,2026-10-29T05:10:49.572Z,Cullman County Alabama official election results archive | site:cullmancourts.org election results Cullman,observed_link_candidate
+us:ar:census-county:05027,AR,2026-10-29T05:10:49.572Z,Columbia County Arkansas official election results archive | site:columbiacountyar.com election results,observed_link_candidate
+us:az:census-county:04009,AZ,2026-10-29T05:10:49.572Z,Graham County Arizona official election results archive | site:graham.az.gov election results 2026,observed_link_candidate
+us:ca:census-county:06053,CA,2026-10-29T05:10:49.572Z,Monterey County California official election results archive | site:countyofmonterey.gov elections results 2026,observed_link_candidate
+us:co:census-county:08039,CO,2026-10-29T05:10:49.572Z,Elbert County Colorado official election results archive | site:elbertcounty-co.gov election results 2026,observed_link_candidate
+us:ct:municipality:monroe,CT,2026-10-29T05:10:49.572Z,Monroe Connecticut official election results archive | site:monroect.gov election results,observed_link_candidate
+us:ga:census-county:13175,GA,2026-10-29T05:10:49.572Z,Laurens County Georgia official election results archive | site:laurenscoga.org election results,observed_link_candidate
+us:hi:census-county:15003,HI,2026-10-29T05:10:49.572Z,Honolulu County Hawaii official election results archive | site:honolulu.gov elections results archive,completed_no_new_urls
+us:me:municipality:cornish,ME,2026-10-29T05:10:49.572Z,Cornish Maine official election results archive | site:cornishme.com election results,observed_link_candidate
+us:mn:census-county:27137,MN,2026-10-29T05:10:49.572Z,St. Louis County Minnesota official election results archive | site:stlouiscountymn.gov election results,observed_link_candidate
+us:mo:census-county:29133,MO,2026-10-29T05:10:49.572Z,Mississippi County Missouri official election results archive | site:misscomo.net election results,observed_link_candidate
