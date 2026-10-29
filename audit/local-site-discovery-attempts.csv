@@ -3590,3 +3590,23 @@ us:me:municipality:cushing,ME,2026-10-29T11:17:40+00:00,Cushing Maine official e
 us:mi:county:schoolcraft,MI,2026-10-29T11:17:40+00:00,Schoolcraft County Michigan official election results archive clerk | site:schoolcraftcounty.net election results,observed_link_candidate
 us:mn:census-county:27143,MN,2026-10-29T11:17:40+00:00,Sibley County Minnesota official election results archive auditor | site:sibleycounty.gov election results,observed_link_candidate
 us:nj:census-county:34033,NJ,2026-10-29T11:17:40+00:00,Salem County New Jersey official election results archive clerk | site:salemcountynj.gov election results,observed_link_candidate
+us:ok:census-county:40123,OK,2026-10-29T12:31:18+00:00,Pontotoc County Oklahoma official election results archive | site:pontotoc.okcounties.org election results,observed_link_candidate
+us:pa:county:union,PA,2026-10-29T12:31:18+00:00,Union County Pennsylvania official election results archive | site:unioncountypa.org election results,observed_link_candidate
+us:sd:census-county:46123,SD,2026-10-29T12:31:18+00:00,Tripp County South Dakota official election results archive | site:trippcounty.us election results,observed_link_candidate
+us:tn:census-county:47119,TN,2026-10-29T12:31:18+00:00,Maury County Tennessee official election results archive | site:maurycounty-tn.gov election results,observed_link_candidate
+us:vt:priority-roster:east-montpelier,VT,2026-10-29T12:31:18+00:00,East Montpelier Vermont official election results archive | site:eastmontpeliervt.org election results,observed_link_candidate
+us:ny:census-county:36005,NY,2026-10-29T12:31:18+00:00,Bronx County New York official election results archive | site:vote.nyc election results Bronx,observed_link_candidate
+us:ri:priority-roster:north-kingstown,RI,2026-10-29T12:31:18+00:00,North Kingstown Rhode Island official election results archive | site:northkingstownri.gov election results,observed_link_candidate
+us:wa:census-county:53041,WA,2026-10-29T12:31:18+00:00,Lewis County Washington official election results archive | site:elections.lewiscountywa.gov results,observed_link_candidate
+us:ia:census-county:19169,IA,2026-10-29T12:31:18+00:00,Story County Iowa official election results archive | site:storycountyiowa.gov election results,observed_link_candidate
+us:il:census-county:17173,IL,2026-10-29T12:31:18+00:00,Shelby County Illinois official election results archive | site:shelbycounty-il.gov election results,observed_link_candidate
+us:in:census-county:18173,IN,2026-10-29T12:31:18+00:00,Warrick County Indiana official election results archive | site:warrickcounty.gov election results,observed_link_candidate
+us:ks:census-county:20171,KS,2026-10-29T12:31:18+00:00,Scott County Kansas official election results archive | site:scottcountyks.com election results,observed_link_candidate
+us:ky:census-county:21167,KY,2026-10-29T12:31:18+00:00,Mercer County Kentucky official election results archive | site:mercercounty.ky.gov election results,observed_link_candidate
+us:ma:priority-roster:duxbury,MA,2026-10-29T12:31:18+00:00,Duxbury Massachusetts official election results archive | site:town.duxbury.ma.us election results,observed_link_candidate
+us:mo:census-county:29139,MO,2026-10-29T12:31:18+00:00,Montgomery County Missouri official election results archive | site:mcmo.us election results,observed_link_candidate
+us:ms:census-county:28135,MS,2026-10-29T12:31:18+00:00,Tallahatchie County Mississippi official election results archive | site:tallahatchiecountyms.com election results,observed_link_candidate
+us:oh:county:paulding,OH,2026-10-29T12:31:18+00:00,Paulding County Ohio official election results archive | site:pauldingcountyoh.com election results,observed_link_candidate
+us:tx:census-county:48119,TX,2026-10-29T12:31:18+00:00,Delta County Texas official election results archive | site:deltacountytx.com election results,observed_link_candidate
+us:va:census-county:51125,VA,2026-10-29T12:31:18+00:00,Nelson County Virginia official election results archive | site:nelsoncounty-va.gov election results,observed_link_candidate
+us:wi:ltsb2026:balsam-lake-3376a807ba1f2038,WI,2026-10-29T12:31:18+00:00,Balsam Lake Wisconsin official election results archive | site:balsamlakewi.com election results,observed_link_candidate
