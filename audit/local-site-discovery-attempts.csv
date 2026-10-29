@@ -3510,3 +3510,23 @@ us:ga:census-county:13177,GA,2026-10-29T07:59:17.355Z,Lee County Georgia officia
 us:hi:census-county:15009,HI,2026-10-29T07:59:17.355Z,Maui County Hawaii official election results archive | site:mauicountyvotes.gov election results,completed_no_new_urls
 us:me:municipality:cranberry-isles,ME,2026-10-29T07:59:17.355Z,Cranberry Isles Maine official election results archive | site:cranberryisles-me.gov election results,observed_link_candidate
 us:mn:census-county:27139,MN,2026-10-29T07:59:17.355Z,Scott County Minnesota official election results archive | site:scottcountymn.gov election results,observed_link_candidate
+us:mo:census-county:29135,MO,2026-10-29T08:31:05.971Z,Moniteau County Missouri official election results archive | site:moniteaucounty.org election results,observed_link_candidate
+us:ms:census-county:28131,MS,2026-10-29T08:31:05.971Z,Stone County Mississippi official election results archive | site:stonecountyms.gov election results,observed_link_candidate
+us:mt:census-county:30011,MT,2026-10-29T08:31:05.971Z,Carter County Montana official election results archive | site:cartercountymt.gov election results,observed_link_candidate
+us:nc:census-county:37123,NC,2026-10-29T08:31:05.971Z,Montgomery County North Carolina official election results archive | site:montgomerycountync.com election results,observed_link_candidate
+us:nd:census-county:38019,ND,2026-10-29T08:31:05.971Z,Cavalier County North Dakota official election results archive | site:cavaliercounty.us election results,observed_link_candidate
+us:ne:census-county:31121,NE,2026-10-29T08:31:05.971Z,Merrick County Nebraska official election results archive | site:merrickcountyne.gov election results,observed_link_candidate
+us:nh:priority-roster:durham,NH,2026-10-29T08:31:05.971Z,Durham New Hampshire official election results archive | site:ci.durham.nh.us election results,observed_link_candidate
+us:or:census-county:41051,OR,2026-10-29T08:31:05.971Z,Multnomah County Oregon official election results alternative archive | site:multco.us elections results 2026 archive,observed_link_candidate
+us:wv:census-county:54005,WV,2026-10-29T08:31:05.971Z,Boone County West Virginia official election results archive | site:boonecountyclerkwv.com election results,observed_link_candidate
+us:wy:census-county:56023,WY,2026-10-29T08:31:05.971Z,Lincoln County Wyoming official election results archive | site:lincolncountywy.gov election results,observed_link_candidate
+us:fl:census-county:12043,FL,2026-10-29T08:31:05.971Z,Glades County Florida official election results archive | site:voteglades.gov election results,observed_link_candidate
+us:ia:census-county:19165,IA,2026-10-29T08:31:05.971Z,Shelby County Iowa official election results archive | site:shelbycounty.iowa.gov election results,observed_link_candidate
+us:id:census-county:16069,ID,2026-10-29T08:31:05.971Z,Nez Perce County Idaho official election results alternative archive | site:nezpercecountyelections.gov results,completed_no_new_urls
+us:il:census-county:17169,IL,2026-10-29T08:31:05.971Z,Schuyler County Illinois official election results archive | site:schuylercountyillinois.com election results,observed_link_candidate
+us:in:census-county:18169,IN,2026-10-29T08:31:05.971Z,Wabash County Indiana official election results archive | site:wabashcounty.in.gov election results,observed_link_candidate
+us:ks:census-county:20167,KS,2026-10-29T08:31:05.971Z,Russell County Kansas official election results archive | site:russellcountyks.org election results,observed_link_candidate
+us:ky:census-county:21163,KY,2026-10-29T08:31:05.971Z,Meade County Kentucky official election results archive | site:meadecountyclerk.com election results,observed_link_candidate
+us:la:census-county:22037,LA,2026-10-29T08:31:05.971Z,East Feliciana Parish Louisiana official election results archive | site:eastfelicianaclerk.org election results,observed_link_candidate
+us:ma:priority-roster:dudley,MA,2026-10-29T08:31:05.971Z,Dudley Massachusetts official election results archive | site:dudleyma.gov election results,observed_link_candidate
+us:md:census-county:24011,MD,2026-10-29T08:31:05.971Z,Caroline County Maryland official election results alternative archive | site:carolinemd.org election results,observed_link_candidate
