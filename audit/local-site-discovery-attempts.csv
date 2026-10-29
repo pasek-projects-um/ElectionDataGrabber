@@ -3550,3 +3550,23 @@ us:de:census-county:10001,DE,2026-10-29T09:51:54.826Z,Kent County Delaware offic
 us:ga:census-county:13179,GA,2026-10-29T09:51:54.826Z,Liberty County Georgia official election results archive | site:libertycountyga.com election results,observed_link_candidate
 us:me:municipality:cumberland,ME,2026-10-29T09:51:54.826Z,Cumberland Maine official election results archive | site:cumberlandmaine.com election results,observed_link_candidate
 us:mn:census-county:27141,MN,2026-10-29T09:51:54.826Z,Sherburne County Minnesota official election results archive | site:co.sherburne.mn.us election results,observed_link_candidate
+us:nm:census-county:35049,NM,2026-10-29T10:33:32.770Z,Santa Fe County New Mexico elections official results archive | Santa Fe County election results clerk site:.gov,observed_link_candidate
+us:nv:census-county:32019,NV,2026-10-29T10:33:32.770Z,Lyon County Nevada elections official results archive | Lyon County Nevada election results vendor dashboard,completed_no_new_urls
+us:oh:county:ottawa,OH,2026-10-29T10:33:32.770Z,Ottawa County Ohio elections official results archive | Ottawa County Board of Elections results Ohio,observed_link_candidate
+us:sc:census-county:45027,SC,2026-10-29T10:33:32.770Z,Clarendon County South Carolina election results official archive | Clarendon County elections SC official results,observed_link_candidate
+us:tx:census-county:48117,TX,2026-10-29T10:33:32.770Z,Deaf Smith County Texas elections official results archive | Deaf Smith County election results county clerk,observed_link_candidate
+us:ut:census-county:49057,UT,2026-10-29T10:33:32.770Z,Weber County Utah election results official archive | Weber County election results vendor dashboard,observed_link_candidate
+us:va:census-county:51121,VA,2026-10-29T10:33:32.770Z,Montgomery County Virginia elections official results archive | Montgomery County VA election results registrar official,observed_link_candidate
+us:wi:ltsb2026:baldwin-4087fc5379d908dc,WI,2026-10-29T10:33:32.770Z,Village of Baldwin Wisconsin election results official | Baldwin Wisconsin elections results municipal clerk,observed_link_candidate
+us:fl:census-county:12045,FL,2026-10-29T10:33:32.770Z,Gulf County Florida election results official archive supervisor | Gulf County election results vendor dashboard votegulf,observed_link_candidate
+us:ia:census-county:19167,IA,2026-10-29T10:33:32.770Z,Sioux County Iowa elections official results archive | Sioux County Iowa election results county auditor,observed_link_candidate
+us:id:census-county:16071,ID,2026-10-29T10:33:32.770Z,Oneida County Idaho elections official results archive | Oneida County Idaho election results clerk official,observed_link_candidate
+us:il:census-county:17171,IL,2026-10-29T10:33:32.770Z,Scott County Illinois elections official results archive | Scott County Illinois election results county clerk,observed_link_candidate
+us:in:census-county:18171,IN,2026-10-29T10:33:32.770Z,Warren County Indiana elections official results archive | Warren County Indiana election results clerk official,observed_link_candidate
+us:ks:census-county:20169,KS,2026-10-29T10:33:32.770Z,Saline County Kansas elections official results archive | Saline County Kansas election results county clerk,observed_link_candidate
+us:ky:census-county:21165,KY,2026-10-29T10:33:32.770Z,Menifee County Kentucky elections official results archive | Menifee County Kentucky election results county clerk,observed_link_candidate
+us:la:census-county:22039,LA,2026-10-29T10:33:32.770Z,Evangeline Parish Louisiana elections official results archive | Evangeline Parish election results clerk official,observed_link_candidate
+us:ma:priority-roster:dunstable,MA,2026-10-29T10:33:32.770Z,Dunstable Massachusetts elections official results archive | Town of Dunstable election results official,observed_link_candidate
+us:md:census-county:24013,MD,2026-10-29T10:33:32.770Z,Carroll County Maryland elections official results archive | Carroll County Maryland election results board official,observed_link_candidate
+us:mo:census-county:29137,MO,2026-10-29T10:33:32.770Z,Monroe County Missouri elections official results archive | Monroe County Missouri election results county clerk,observed_link_candidate
+us:ms:census-county:28133,MS,2026-10-29T10:33:32.770Z,Sunflower County Mississippi elections official results archive | Sunflower County Mississippi election results circuit clerk,observed_link_candidate
