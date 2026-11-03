@@ -12,19 +12,19 @@ from urllib.parse import urlsplit
 
 
 FIELDS = ("jurisdiction_id","state","jurisdiction_level","jurisdiction_name","page_role",
-          "url","evidence_registry","verification_status")
+          "url","evidence_registry","verification_status","discovered_from","evidence_excerpt","observed_at")
 
 
 def build(root: Path):
     records = {}
     jurisdictions = {}
 
-    def add(jid, state, level, name, role, url, source, status="candidate"):
+    def add(jid, state, level, name, role, url, source, status="candidate",\n            discovered_from="", evidence_excerpt="", observed_at=""):
         url = url.strip()
         if not url or urlsplit(url).scheme not in ("http","https") or not urlsplit(url).hostname:
             return
         key = (jid, role, url)
-        records[key] = dict(zip(FIELDS, (jid,state,level,name,role,url,source,status)))
+        records[key] = dict(zip(FIELDS, (jid,state,level,name,role,url,source,status,\n                                         discovered_from,evidence_excerpt,observed_at)))
 
     def read(filename, optional=False):
         if optional and not (root / filename).exists():
@@ -74,6 +74,24 @@ def build(root: Path):
         for field,role in (("authority_url","local_election_authority"),("results_url","results_lead")):
             for url in row.get(field,"").split("|"):
                 add(jid,state,level,name,role,url,"us_local_reporting_sources.csv",row.get("status","candidate"))
+    # Include the evidence-first local discovery ledger in the reusable target index.
+    # These links are observed candidates, not verified live feeds or service areas.
+    # Reject unknown jurisdiction IDs and mismatched states rather than creating
+    # apparently authoritative associations from malformed ledger rows.
+    for row in read("local_site_discovery_leads.csv", optional=True):
+        jid = row.get("jurisdiction_id", "")
+        unit = jurisdictions.get(jid)
+        if not unit or row.get("state") != unit[0]:
+            continue
+        if row.get("evidence_status") != "observed_link_candidate":
+            continue
+        if not row.get("discovered_from") or not row.get("evidence_excerpt") or not row.get("observed_at"):
+            continue
+        add(jid, unit[0], unit[1], unit[2], "observed_local_results_lead",
+            row.get("url", ""), "local_site_discovery_leads.csv",
+            "observed_link_candidate", row["discovered_from"],
+            row["evidence_excerpt"], row["observed_at"])
+
     # Every locality must have a crawl entry point, even when its own office
     # has not yet been identified. State authorities are explicit fallbacks,
     # never mislabeled as verified locality sites.
