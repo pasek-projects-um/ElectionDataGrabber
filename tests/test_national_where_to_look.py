@@ -38,16 +38,16 @@ def test_state_surfaces_are_candidate_scoped_leads():
 
 def test_discovery_leads_are_included_with_evidence_and_not_marked_verified(tmp_path: Path):
     (tmp_path / "us_primary_election_localities.csv").write_text(
-        "jurisdiction_id,state,jurisdiction_level,canonical_name,final_evidence_url,election_night_evidence_url,assessment_status\\n"
-        "us:mi:county:alpha,MI,county,Alpha,,,pending\\n"
-        "us:mi:county:beta,MI,county,Beta,,,pending\\n")
+        "jurisdiction_id,state,jurisdiction_level,canonical_name,final_evidence_url,election_night_evidence_url,assessment_status\n"
+        "us:mi:county:alpha,MI,county,Alpha,,,pending\n"
+        "us:mi:county:beta,MI,county,Beta,,,pending\n")
     (tmp_path / "us_state_central_authority_sources.csv").write_text(
-        "state,central_authority_url,status\\nMI,https://state.example/elections,candidate\\n")
+        "state,central_authority_url,status\nMI,https://state.example/elections,candidate\n")
     (tmp_path / "local_site_discovery_leads.csv").write_text(
-        "jurisdiction_id,state,url,discovered_from,evidence_excerpt,observed_at,evidence_status\\n"
-        "us:mi:county:alpha,MI,https://alpha.example/results,https://alpha.example/elections,2026 results archive,2026-11-03T10:00:00+00:00,observed_link_candidate\\n"
-        "us:mi:county:alpha,OH,https://bad.example/results,https://bad.example/elections,Wrong state,2026-11-03T10:00:00+00:00,observed_link_candidate\\n"
-        "us:mi:county:missing,MI,https://bad.example/missing,https://bad.example/elections,Unknown unit,2026-11-03T10:00:00+00:00,observed_link_candidate\\n")
+        "jurisdiction_id,state,url,discovered_from,evidence_excerpt,observed_at,evidence_status\n"
+        "us:mi:county:alpha,MI,https://alpha.example/results,https://alpha.example/elections,2026 results archive,2026-11-03T10:00:00+00:00,observed_link_candidate\n"
+        "us:mi:county:alpha,OH,https://bad.example/results,https://bad.example/elections,Wrong state,2026-11-03T10:00:00+00:00,observed_link_candidate\n"
+        "us:mi:county:missing,MI,https://bad.example/missing,https://bad.example/elections,Unknown unit,2026-11-03T10:00:00+00:00,observed_link_candidate\n")
     for name, header in (
         ("mi_county_authorities.csv", "county,authority_url"),
         ("oh_county_authorities.csv", "county,authority_url"),
@@ -55,7 +55,7 @@ def test_discovery_leads_are_included_with_evidence_and_not_marked_verified(tmp_
         ("sources.csv", "source_id,jurisdiction,state,url,official"),
         ("us_local_reporting_sources.csv", "state,locality_type,locality_name,authority_url,results_url,status"),
     ):
-        (tmp_path / name).write_text(header + "\\n")
+        (tmp_path / name).write_text(header + "\n")
     rows, gaps, _ = build(tmp_path)
     matches = [r for r in rows if r["evidence_registry"] == "local_site_discovery_leads.csv"]
     assert len(matches) == 1
