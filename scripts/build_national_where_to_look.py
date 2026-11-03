@@ -19,12 +19,14 @@ def build(root: Path):
     records = {}
     jurisdictions = {}
 
-    def add(jid, state, level, name, role, url, source, status="candidate",\n            discovered_from="", evidence_excerpt="", observed_at=""):
+    def add(jid, state, level, name, role, url, source, status="candidate",
+            discovered_from="", evidence_excerpt="", observed_at=""):
         url = url.strip()
         if not url or urlsplit(url).scheme not in ("http","https") or not urlsplit(url).hostname:
             return
         key = (jid, role, url)
-        records[key] = dict(zip(FIELDS, (jid,state,level,name,role,url,source,status,\n                                         discovered_from,evidence_excerpt,observed_at)))
+        records[key] = dict(zip(FIELDS, (jid,state,level,name,role,url,source,status,
+                                         discovered_from,evidence_excerpt,observed_at)))
 
     def read(filename, optional=False):
         if optional and not (root / filename).exists():
