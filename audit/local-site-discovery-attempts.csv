@@ -3756,3 +3756,23 @@ us:mo:census-county:29145,MO,2026-11-04T14:20:52.257043+00:00,official current e
 us:ms:census-county:28141,MS,2026-11-04T14:20:52.257043+00:00,official current election results vendor dashboard historical archive alternative local reporting,observed_link_candidate
 us:nj:census-county:34039,NJ,2026-11-04T14:20:52.257043+00:00,official current election results vendor dashboard historical archive alternative local reporting,observed_link_candidate
 us:ny:census-county:36011,NY,2026-11-04T14:20:52.257043+00:00,official current election results vendor dashboard historical archive alternative local reporting,observed_link_candidate
+us:oh:county:pike,OH,2026-11-04T12:37:14-05:00,Pike County Ohio official election results archive | current results dashboard,observed_link_candidate
+us:ok:census-county:40129,OK,2026-11-04T12:37:14-05:00,Roger Mills County Oklahoma official election results archive | current results dashboard,observed_link_candidate
+us:or:census-county:41059,OR,2026-11-04T12:37:14-05:00,Umatilla County Oregon official election results archive | current results dashboard,observed_link_candidate
+us:wy:census-county:56031,WY,2026-11-04T12:37:14-05:00,Platte County Wyoming official election results archive | current results dashboard,observed_link_candidate
+us:pa:county:washington,PA,2026-11-04T12:37:14-05:00,Washington County Pennsylvania official election results archive | current results dashboard,observed_link_candidate
+us:sd:census-county:46129,SD,2026-11-04T12:37:14-05:00,Walworth County South Dakota official election results archive | current results dashboard,observed_link_candidate
+us:tn:census-county:47125,TN,2026-11-04T12:37:14-05:00,Montgomery County Tennessee official election results archive | current results dashboard,observed_link_candidate
+us:tx:census-county:48125,TX,2026-11-04T12:37:14-05:00,Dickens County Texas official election results archive | current results dashboard,observed_link_candidate
+us:va:census-county:51133,VA,2026-11-04T12:37:14-05:00,Northumberland County Virginia official election results archive | current results dashboard,observed_link_candidate
+us:wi:ltsb2026:barneveld-498383dd0171b657,WI,2026-11-04T12:37:14-05:00,Village of Barneveld Wisconsin official election results archive | current results dashboard,observed_link_candidate
+us:al:census-county:01057,AL,2026-11-04T12:37:14-05:00,Fayette County Alabama official election results archive | current results dashboard,observed_link_candidate
+us:ar:census-county:05041,AR,2026-11-04T12:37:14-05:00,Desha County Arkansas official election results archive | current results dashboard,observed_link_candidate
+us:az:census-county:04021,AZ,2026-11-04T12:37:14-05:00,Pinal County Arizona official election results archive | current results dashboard,observed_link_candidate
+us:ca:census-county:06067,CA,2026-11-04T12:37:14-05:00,Sacramento County California official election results archive | current results dashboard,observed_link_candidate
+us:co:census-county:08053,CO,2026-11-04T12:37:14-05:00,Hinsdale County Colorado official election results archive | current results dashboard,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-11-04T12:37:14-05:00,Honolulu County Hawaii official election results archive | current results dashboard,completed_no_new_urls
+us:ia:census-county:19177,IA,2026-11-04T12:37:14-05:00,Van Buren County Iowa official election results archive | current results dashboard,observed_link_candidate
+us:il:census-county:17181,IL,2026-11-04T12:37:14-05:00,Union County Illinois official election results archive | current results dashboard,observed_link_candidate
+us:mn:census-county:27151,MN,2026-11-04T12:37:14-05:00,Swift County Minnesota official election results archive | current results dashboard,observed_link_candidate
+us:mt:census-county:30021,MT,2026-11-04T12:37:14-05:00,Dawson County Montana official election results archive | current results dashboard,observed_link_candidate
