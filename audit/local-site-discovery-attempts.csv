@@ -3776,3 +3776,23 @@ us:ia:census-county:19177,IA,2026-11-04T12:37:14-05:00,Van Buren County Iowa off
 us:il:census-county:17181,IL,2026-11-04T12:37:14-05:00,Union County Illinois official election results archive | current results dashboard,observed_link_candidate
 us:mn:census-county:27151,MN,2026-11-04T12:37:14-05:00,Swift County Minnesota official election results archive | current results dashboard,observed_link_candidate
 us:mt:census-county:30021,MT,2026-11-04T12:37:14-05:00,Dawson County Montana official election results archive | current results dashboard,observed_link_candidate
+us:nc:census-county:37133,NC,2026-11-04T17:45:06.215754+00:00,Onslow County North Carolina official election results archive | current results dashboard,observed_link_candidate
+us:nd:census-county:38029,ND,2026-11-04T17:45:06.215754+00:00,Emmons County North Dakota official election results archive | current results dashboard,observed_link_candidate
+us:ne:census-county:31131,NE,2026-11-04T17:45:06.215754+00:00,Otoe County Nebraska official election results archive | current results dashboard,observed_link_candidate
+us:nh:priority-roster:ellsworth,NH,2026-11-04T17:45:06.215754+00:00,Ellsworth New Hampshire official election results archive | current results dashboard,observed_link_candidate
+us:nm:census-county:35057,NM,2026-11-04T17:45:06.215754+00:00,Torrance County New Mexico official election results archive | current results dashboard,completed_no_new_urls
+us:ri:priority-roster:pawtucket,RI,2026-11-04T17:45:06.215754+00:00,Pawtucket Rhode Island official election results archive | current results dashboard,observed_link_candidate
+us:vt:priority-roster:enosburgh,VT,2026-11-04T17:45:06.215754+00:00,Enosburgh Vermont official election results archive | current results dashboard,observed_link_candidate
+us:wa:census-county:53047,WA,2026-11-04T17:45:06.215754+00:00,Okanogan County Washington official election results archive | current results dashboard,observed_link_candidate
+us:ct:municipality:new-haven,CT,2026-11-04T17:45:06.215754+00:00,New Haven Connecticut official election results archive | current results dashboard,observed_link_candidate
+us:fl:census-county:12055,FL,2026-11-04T17:45:06.215754+00:00,Highlands County Florida official election results archive | current results dashboard,observed_link_candidate
+us:ga:census-county:13191,GA,2026-11-04T17:45:06.215754+00:00,McIntosh County Georgia official election results archive | current results dashboard,observed_link_candidate
+us:id:census-county:16081,ID,2026-11-04T17:45:06.215754+00:00,Teton County Idaho official election results archive | current results dashboard,observed_link_candidate
+us:in:census-county:18181,IN,2026-11-04T17:45:06.215754+00:00,White County Indiana official election results archive | current results dashboard,observed_link_candidate
+us:ks:census-county:20179,KS,2026-11-04T17:45:06.215754+00:00,Sheridan County Kansas official election results archive | current results dashboard,observed_link_candidate
+us:ky:census-county:21175,KY,2026-11-04T17:45:06.215754+00:00,Morgan County Kentucky official election results archive | current results dashboard,observed_link_candidate
+us:la:census-county:22049,LA,2026-11-04T17:45:06.215754+00:00,Jackson Parish Louisiana official election results archive | current results dashboard,observed_link_candidate
+us:ma:priority-roster:eastham,MA,2026-11-04T17:45:06.215754+00:00,Eastham Massachusetts official election results archive | current results dashboard,observed_link_candidate
+us:md:census-county:24023,MD,2026-11-04T17:45:06.215754+00:00,Garrett County Maryland official election results archive | current results dashboard,observed_link_candidate
+us:me:municipality:dedham,ME,2026-11-04T17:45:06.215754+00:00,Dedham Maine official election results archive | current results dashboard,completed_no_new_urls
+us:mi:county:van-buren,MI,2026-11-04T17:45:06.215754+00:00,Van Buren County Michigan official election results archive | current results dashboard,observed_link_candidate
