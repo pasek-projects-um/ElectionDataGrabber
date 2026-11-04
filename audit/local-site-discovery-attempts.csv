@@ -3690,3 +3690,23 @@ us:de:census-county:10003,DE,2026-11-04T08:30:46.458546+00:00,New Castle County 
 us:hi:census-county:15007,HI,2026-11-04T08:30:46.458546+00:00,Kauai County Hawaii election results official ; Kauai County Hawaii elections archive,completed_no_new_urls
 us:ia:census-county:19173,IA,2026-11-04T08:30:46.458546+00:00,Taylor County Iowa election results official ; Taylor County Iowa elections archive,observed_link_candidate
 us:il:census-county:17177,IL,2026-11-04T08:30:46.458546+00:00,Stephenson County Illinois election results official ; Stephenson County Illinois elections archive,observed_link_candidate
+us:in:census-county:18177,IN,2026-11-04T12:28:38.007535+00:00,Wayne County Indiana official election results ; Wayne County Indiana elections results archive,observed_link_candidate
+us:ks:census-county:20175,KS,2026-11-04T12:28:38.007535+00:00,Seward County Kansas official election results ; Seward County Kansas elections archive,observed_link_candidate
+us:ky:census-county:21171,KY,2026-11-04T12:28:38.007535+00:00,Monroe County Kentucky official election results ; Monroe County Kentucky elections archive,observed_link_candidate
+us:ma:priority-roster:east-brookfield,MA,2026-11-04T12:28:38.007535+00:00,East Brookfield Massachusetts official election results ; East Brookfield MA election results archive,completed_no_new_urls
+us:mo:census-county:29143,MO,2026-11-04T12:28:38.007535+00:00,New Madrid County Missouri official election results ; New Madrid County Missouri elections archive,observed_link_candidate
+us:ms:census-county:28139,MS,2026-11-04T12:28:38.007535+00:00,Tippah County Mississippi official election results ; Tippah County Mississippi elections archive,observed_link_candidate
+us:nj:census-county:34037,NJ,2026-11-04T12:28:38.007535+00:00,Sussex County New Jersey official election results ; Sussex County NJ elections results archive,observed_link_candidate
+us:ny:census-county:36009,NY,2026-11-04T12:28:38.007535+00:00,Cattaraugus County New York official election results ; Cattaraugus County NY elections archive,observed_link_candidate
+us:or:census-county:41057,OR,2026-11-04T12:28:38.007535+00:00,Tillamook County Oregon official election results ; Tillamook County Oregon elections archive,observed_link_candidate
+us:wy:census-county:56029,WY,2026-11-04T12:28:38.007535+00:00,Park County Wyoming official election results ; Park County Wyoming elections archive,observed_link_candidate
+us:ct:municipality:new-fairfield,CT,2026-11-04T12:28:38.007535+00:00,New Fairfield Connecticut official election results ; New Fairfield CT election results archive,observed_link_candidate
+us:fl:census-county:12051,FL,2026-11-04T12:28:38.007535+00:00,Hendry County Florida official election results ; Hendry County Florida elections archive,observed_link_candidate
+us:ga:census-county:13187,GA,2026-11-04T12:28:38.007535+00:00,Lumpkin County Georgia official election results ; Lumpkin County Georgia elections archive,observed_link_candidate
+us:id:census-county:16077,ID,2026-11-04T12:28:38.007535+00:00,Power County Idaho official election results ; Power County Idaho elections archive,observed_link_candidate
+us:la:census-county:22045,LA,2026-11-04T12:28:38.007535+00:00,Iberia Parish Louisiana official election results ; Iberia Parish Louisiana elections archive,observed_link_candidate
+us:md:census-county:24019,MD,2026-11-04T12:28:38.007535+00:00,Dorchester County Maryland official election results ; Dorchester County Maryland elections archive,observed_link_candidate
+us:me:municipality:danforth,ME,2026-11-04T12:28:38.007535+00:00,Danforth Maine official election results town ; Danforth Maine election results archive town,observed_link_candidate
+us:mi:county:st-joseph,MI,2026-11-04T12:28:38.007535+00:00,St. Joseph County Michigan official election results ; St. Joseph County Michigan elections archive,observed_link_candidate
+us:oh:county:pickaway,OH,2026-11-04T12:28:38.007535+00:00,Pickaway County Ohio official election results ; Pickaway County Ohio elections archive,observed_link_candidate
+us:ok:census-county:40127,OK,2026-11-04T12:28:38.007535+00:00,Pushmataha County Oklahoma official election results ; Pushmataha County Oklahoma elections archive,observed_link_candidate
