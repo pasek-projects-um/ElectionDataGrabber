@@ -3670,3 +3670,23 @@ us:la:census-county:22043,LA,2026-11-04T07:27:17+00:00,Grant Parish Louisiana of
 us:md:census-county:24017,MD,2026-11-04T07:27:17+00:00,Charles County Maryland official election results ; Charles County Maryland election results archive,completed_no_new_urls
 us:me:municipality:damariscotta,ME,2026-11-04T07:27:17+00:00,Damariscotta Maine official election results ; Damariscotta Maine election results archive town,observed_link_candidate
 us:mi:county:st-clair,MI,2026-11-04T07:27:17+00:00,St. Clair County Michigan official election results ; St. Clair County Michigan election results archive,observed_link_candidate
+us:mn:census-county:27147,MN,2026-11-04T08:30:46.458546+00:00,Steele County Minnesota election results official ; Steele County Minnesota elections historical results official,observed_link_candidate
+us:mt:census-county:30017,MT,2026-11-04T08:30:46.458546+00:00,Custer County Montana election results official ; Custer County Montana elections archive,observed_link_candidate
+us:nc:census-county:37129,NC,2026-11-04T08:30:46.458546+00:00,New Hanover County North Carolina election results official ; New Hanover County NC elections historical results,observed_link_candidate
+us:nd:census-county:38025,ND,2026-11-04T08:30:46.458546+00:00,Dunn County North Dakota election results official ; Dunn County North Dakota elections archive,observed_link_candidate
+us:ne:census-county:31127,NE,2026-11-04T08:30:46.458546+00:00,Nemaha County Nebraska election results official ; Nemaha County Nebraska historical election results,observed_link_candidate
+us:nh:priority-roster:eaton,NH,2026-11-04T08:30:46.458546+00:00,Eaton New Hampshire election results official town ; Eaton NH town election results archive,completed_no_new_urls
+us:nm:census-county:35053,NM,2026-11-04T08:30:46.458546+00:00,Socorro County New Mexico election results official ; Socorro County New Mexico elections archive,observed_link_candidate
+us:nv:census-county:32023,NV,2026-11-04T08:30:46.458546+00:00,Nye County Nevada election results official ; Nye County Nevada election results archive,observed_link_candidate
+us:sc:census-county:45031,SC,2026-11-04T08:30:46.458546+00:00,Darlington County South Carolina election results official ; Darlington County SC historical election results,observed_link_candidate
+us:ut:census-county:49005,UT,2026-11-04T08:30:46.458546+00:00,Cache County Utah election results official ; Cache County Utah elections archive,completed_no_new_urls
+us:wv:census-county:54011,WV,2026-11-04T08:30:46.458546+00:00,Cabell County West Virginia election results official ; Cabell County WV elections archive,observed_link_candidate
+us:al:census-county:01053,AL,2026-11-04T08:30:46.458546+00:00,Escambia County Alabama election results official ; Escambia County Alabama elections archive,observed_link_candidate
+us:ar:census-county:05037,AR,2026-11-04T08:30:46.458546+00:00,Cross County Arkansas election results official ; Cross County Arkansas elections archive,observed_link_candidate
+us:az:census-county:04012,AZ,2026-11-04T08:30:46.458546+00:00,La Paz County Arizona election results official ; La Paz County Arizona elections archive,observed_link_candidate
+us:ca:census-county:06063,CA,2026-11-04T08:30:46.458546+00:00,Plumas County California election results official ; Plumas County California elections archive,observed_link_candidate
+us:co:census-county:08049,CO,2026-11-04T08:30:46.458546+00:00,Grand County Colorado election results official ; Grand County Colorado elections archive,observed_link_candidate
+us:de:census-county:10003,DE,2026-11-04T08:30:46.458546+00:00,New Castle County Delaware election results official ; New Castle County Delaware elections archive,completed_no_new_urls
+us:hi:census-county:15007,HI,2026-11-04T08:30:46.458546+00:00,Kauai County Hawaii election results official ; Kauai County Hawaii elections archive,completed_no_new_urls
+us:ia:census-county:19173,IA,2026-11-04T08:30:46.458546+00:00,Taylor County Iowa election results official ; Taylor County Iowa elections archive,observed_link_candidate
+us:il:census-county:17177,IL,2026-11-04T08:30:46.458546+00:00,Stephenson County Illinois election results official ; Stephenson County Illinois elections archive,observed_link_candidate
