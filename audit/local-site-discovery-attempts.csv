@@ -3710,3 +3710,9 @@ us:me:municipality:danforth,ME,2026-11-04T12:28:38.007535+00:00,Danforth Maine o
 us:mi:county:st-joseph,MI,2026-11-04T12:28:38.007535+00:00,St. Joseph County Michigan official election results ; St. Joseph County Michigan elections archive,observed_link_candidate
 us:oh:county:pickaway,OH,2026-11-04T12:28:38.007535+00:00,Pickaway County Ohio official election results ; Pickaway County Ohio elections archive,observed_link_candidate
 us:ok:census-county:40127,OK,2026-11-04T12:28:38.007535+00:00,Pushmataha County Oklahoma official election results ; Pushmataha County Oklahoma elections archive,observed_link_candidate
+us:pa:county:warren,PA,2026-11-04T13:05:27+00:00,Warren County Pennsylvania 2026 general election results official county,observed_link_candidate
+us:sd:census-county:46127,SD,2026-11-04T13:05:27+00:00,Union County South Dakota 2026 election results official,observed_link_candidate
+us:tx:census-county:48123,TX,2026-11-04T13:05:27+00:00,DeWitt County Texas 2026 election results official county,observed_link_candidate
+us:tn:census-county:47123,TN,2026-11-04T13:05:27+00:00,Monroe County Tennessee 2026 election results election commission,incomplete_search
+us:va:census-county:51131,VA,2026-11-04T13:05:27+00:00,Northampton County Virginia 2026 general election results official,incomplete_search
+us:wi:ltsb2026:baraboo-30f0fe9d8daadfec,WI,2026-11-04T13:05:27+00:00,City of Baraboo Wisconsin 2026 election results official,incomplete_search
