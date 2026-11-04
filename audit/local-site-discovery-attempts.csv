@@ -3630,3 +3630,23 @@ us:nh:priority-roster:easton,NH,2026-10-29T16:09:35+00:00,Easton New Hampshire o
 us:wv:census-county:54009,WV,2026-10-29T16:09:35+00:00,Brooke County West Virginia official election results archive clerk | site:brookecountywv.org election results,observed_link_candidate
 us:mt:census-county:30015,MT,2026-10-29T16:09:35+00:00,Chouteau County Montana official election results archive clerk | site:chouteaucountymt.gov election results,observed_link_candidate
 us:nd:census-county:38023,ND,2026-10-29T16:09:35+00:00,Divide County North Dakota official election results archive auditor | site:dividecountynd.org election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-11-04T07:06:20+00:00,Alaska Division of Elections official election results ; Alaska Division of Elections results archive current 2026,completed_no_new_urls
+us:de:census-county:10005,DE,2026-11-04T07:06:20+00:00,Sussex County Delaware official election results ; Sussex County Delaware election results archive vendor,completed_no_new_urls
+us:al:census-county:01051,AL,2026-11-04T07:06:20+00:00,Elmore County AL official election results ; Elmore County AL election results archive vendor,completed_no_new_urls
+us:ar:census-county:05035,AR,2026-11-04T07:06:20+00:00,Crittenden County AR official election results ; Crittenden County AR election results archive vendor,completed_no_new_urls
+us:az:census-county:04017,AZ,2026-11-04T07:06:20+00:00,Navajo County AZ official election results ; Navajo County AZ election results archive vendor,observed_link_candidate
+us:ca:census-county:06061,CA,2026-11-04T07:06:20+00:00,Placer County CA official election results ; Placer County CA election results archive vendor,completed_no_new_urls
+us:co:census-county:08047,CO,2026-11-04T07:06:20+00:00,Gilpin County CO official election results ; Gilpin County CO election results archive vendor,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-11-04T07:06:20+00:00,Hawaii County HI official election results ; Hawaii County HI election results archive vendor,completed_no_new_urls
+us:nj:census-county:34035,NJ,2026-11-04T07:06:20+00:00,Somerset County NJ official election results ; Somerset County NJ election results archive vendor,completed_no_new_urls
+us:or:census-county:41055,OR,2026-11-04T07:06:20+00:00,Sherman County OR official election results ; Sherman County OR election results archive vendor,observed_link_candidate
+us:wy:census-county:56027,WY,2026-11-04T07:06:20+00:00,Niobrara County WY official election results ; Niobrara County WY election results archive vendor,observed_link_candidate
+us:ia:census-county:19171,IA,2026-11-04T07:06:20+00:00,Tama County IA official election results ; Tama County IA election results archive vendor,observed_link_candidate
+us:il:census-county:17175,IL,2026-11-04T07:06:20+00:00,Stark County IL official election results ; Stark County IL election results archive vendor,observed_link_candidate
+us:in:census-county:18175,IN,2026-11-04T07:06:20+00:00,Washington County IN official election results ; Washington County IN election results archive vendor,observed_link_candidate
+us:ks:census-county:20173,KS,2026-11-04T07:06:20+00:00,Sedgwick County KS official election results ; Sedgwick County KS election results archive vendor,completed_no_new_urls
+us:ky:census-county:21169,KY,2026-11-04T07:06:20+00:00,Metcalfe County KY official election results ; Metcalfe County KY election results archive vendor,observed_link_candidate
+us:ma:priority-roster:east-bridgewater,MA,2026-11-04T07:06:20+00:00,East Bridgewater MA official election results ; East Bridgewater MA election results archive vendor,observed_link_candidate
+us:mo:census-county:29141,MO,2026-11-04T07:06:20+00:00,Morgan County MO official election results ; Morgan County MO election results archive vendor,observed_link_candidate
+us:ms:census-county:28137,MS,2026-11-04T07:06:20+00:00,Tate County MS official election results ; Tate County MS election results archive vendor,observed_link_candidate
+us:ny:census-county:36007,NY,2026-11-04T07:06:20+00:00,Broome County NY official election results ; Broome County NY election results archive vendor,observed_link_candidate
