@@ -3650,3 +3650,23 @@ us:ma:priority-roster:east-bridgewater,MA,2026-11-04T07:06:20+00:00,East Bridgew
 us:mo:census-county:29141,MO,2026-11-04T07:06:20+00:00,Morgan County MO official election results ; Morgan County MO election results archive vendor,observed_link_candidate
 us:ms:census-county:28137,MS,2026-11-04T07:06:20+00:00,Tate County MS official election results ; Tate County MS election results archive vendor,observed_link_candidate
 us:ny:census-county:36007,NY,2026-11-04T07:06:20+00:00,Broome County NY official election results ; Broome County NY election results archive vendor,observed_link_candidate
+us:oh:county:perry,OH,2026-11-04T07:27:17+00:00,Perry County Ohio official election results ; Perry County Ohio election results archive official vendor,observed_link_candidate
+us:ok:census-county:40125,OK,2026-11-04T07:27:17+00:00,Pottawatomie County Oklahoma official election results ; Pottawatomie County Oklahoma election results archive vendor,observed_link_candidate
+us:pa:county:venango,PA,2026-11-04T07:27:17+00:00,Venango County Pennsylvania official election results ; Venango County Pennsylvania election results archive vendor,observed_link_candidate
+us:ri:priority-roster:north-providence,RI,2026-11-04T07:27:17+00:00,North Providence Rhode Island official election results ; North Providence Rhode Island election results archive,observed_link_candidate
+us:sd:census-county:46125,SD,2026-11-04T07:27:17+00:00,Turner County South Dakota official election results ; Turner County South Dakota election results archive,observed_link_candidate
+us:tn:census-county:47121,TN,2026-11-04T07:27:17+00:00,Meigs County Tennessee official election results ; Meigs County Tennessee election results archive vendor,completed_no_new_urls
+us:tx:census-county:48121,TX,2026-11-04T07:27:17+00:00,Denton County Texas official election results ; Denton County Texas election results archive vendor,observed_link_candidate
+us:va:census-county:51127,VA,2026-11-04T07:27:17+00:00,New Kent County Virginia official election results ; New Kent County Virginia election results archive,completed_no_new_urls
+us:vt:priority-roster:eden,VT,2026-11-04T07:27:17+00:00,Eden Vermont official election results ; Eden Vermont election results archive town,observed_link_candidate
+us:wa:census-county:53043,WA,2026-11-04T07:27:17+00:00,Lincoln County Washington official election results ; Lincoln County Washington election results archive,observed_link_candidate
+us:wi:ltsb2026:bangor-a44f46839a79f4ed,WI,2026-11-04T07:27:17+00:00,Village of Bangor Wisconsin official election results ; Bangor Wisconsin election results archive La Crosse County,completed_no_new_urls
+us:ct:municipality:new-canaan,CT,2026-11-04T07:27:17+00:00,New Canaan Connecticut official election results ; New Canaan Connecticut election results archive,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-11-04T07:27:17+00:00,District of Columbia Board of Elections official election results 2026 ; DC election results archive official,completed_no_new_urls
+us:fl:census-county:12049,FL,2026-11-04T07:27:17+00:00,Hardee County Florida official election results ; Hardee County Florida election results archive vendor,completed_no_new_urls
+us:ga:census-county:13185,GA,2026-11-04T07:27:17+00:00,Lowndes County Georgia official election results ; Lowndes County Georgia election results archive vendor,observed_link_candidate
+us:id:census-county:16075,ID,2026-11-04T07:27:17+00:00,Payette County Idaho official election results ; Payette County Idaho election results archive,observed_link_candidate
+us:la:census-county:22043,LA,2026-11-04T07:27:17+00:00,Grant Parish Louisiana official election results ; Grant Parish Louisiana election results archive,completed_no_new_urls
+us:md:census-county:24017,MD,2026-11-04T07:27:17+00:00,Charles County Maryland official election results ; Charles County Maryland election results archive,completed_no_new_urls
+us:me:municipality:damariscotta,ME,2026-11-04T07:27:17+00:00,Damariscotta Maine official election results ; Damariscotta Maine election results archive town,observed_link_candidate
+us:mi:county:st-clair,MI,2026-11-04T07:27:17+00:00,St. Clair County Michigan official election results ; St. Clair County Michigan election results archive,observed_link_candidate
