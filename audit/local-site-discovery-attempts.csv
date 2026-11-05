@@ -4056,3 +4056,23 @@ us:il:census-county:17195,IL,2026-11-05T19:37:25+00:00,Whiteside County Illinois
 us:ma:priority-roster:essex,MA,2026-11-05T19:37:25+00:00,Town of Essex Massachusetts official election results | site:essexma.org election results archive,observed_link_candidate
 us:md:census-county:24035,MD,2026-11-05T19:37:25+00:00,Queen Anne's County Maryland official election results | site:qac.org election results archive,observed_link_candidate
 us:me:municipality:dover-foxcroft,ME,2026-11-05T19:37:25+00:00,Dover-Foxcroft Maine official election results | site:dover-foxcroft.org election results archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-05T23:49:24+00:00,District of Columbia Board of Elections official election results archive | site:dcboe.org election results 2026,completed_no_new_urls
+us:mt:census-county:30033,MT,2026-11-05T23:49:24+00:00,Garfield County Montana official election results | site:garfieldcountymt.gov election results archive,completed_no_new_urls
+us:nc:census-county:37143,NC,2026-11-05T23:49:24+00:00,Perquimans County North Carolina official election results | site:perquimanscountync.gov election results archive,observed_link_candidate
+us:pa:county:adams,PA,2026-11-05T23:49:24+00:00,Adams County Pennsylvania official election results | site:adamscountypa.gov election results archive,observed_link_candidate
+us:sd:census-county:46007,SD,2026-11-05T23:49:24+00:00,Bennett County South Dakota official election results | site:bennettcounty.org election results archive,completed_no_new_urls
+us:tn:census-county:47135,TN,2026-11-05T23:49:24+00:00,Perry County Tennessee official election results | site:perrycountytn.gov election results archive,observed_link_candidate
+us:tx:census-county:48135,TX,2026-11-05T23:49:24+00:00,Ector County Texas official election results | site:ectorcountytx.gov election results archive,observed_link_candidate
+us:va:census-county:51143,VA,2026-11-05T23:49:24+00:00,Pittsylvania County Virginia official election results | site:pittgov.org election results archive,observed_link_candidate
+us:wi:ltsb2026:barron-bear-lake-9757c9a06a2158af,WI,2026-11-05T23:49:24+00:00,Town of Bear Lake Barron County Wisconsin official election results | site:townofbearlake.com election results archive,observed_link_candidate
+us:wy:census-county:56041,WY,2026-11-05T23:49:24+00:00,Uinta County Wyoming official election results | site:uintacounty.com election results archive,completed_no_new_urls
+us:ct:municipality:north-canaan,CT,2026-11-05T23:49:24+00:00,North Canaan Connecticut official election results | site:northcanaan.org election results archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-05T23:49:24+00:00,Sussex County Delaware official election results | site:elections.delaware.gov Sussex County results archive,observed_link_candidate
+us:fl:census-county:12069,FL,2026-11-05T23:49:24+00:00,Lake County Florida official election results | site:lakevotes.gov election results archive,observed_link_candidate
+us:ga:census-county:13207,GA,2026-11-05T23:49:24+00:00,Monroe County Georgia official election results | site:monroecountyga.gov election results archive,observed_link_candidate
+us:ks:census-county:20193,KS,2026-11-05T23:49:24+00:00,Thomas County Kansas official election results | site:thomascountyks.gov election results archive,observed_link_candidate
+us:ky:census-county:21189,KY,2026-11-05T23:49:24+00:00,Owsley County Kentucky official election results | site:sos.ky.gov Owsley County election results archive,observed_link_candidate
+us:mi:county:allegan,MI,2026-11-05T23:49:24+00:00,Allegan County Michigan official election results | site:allegancounty.org election results archive,completed_no_new_urls
+us:mn:census-county:27165,MN,2026-11-05T23:49:24+00:00,Watonwan County Minnesota official election results | site:co.watonwan.mn.us election results archive,observed_link_candidate
+us:mo:census-county:29159,MO,2026-11-05T23:49:24+00:00,Pettis County Missouri official election results | site:pettiscounty.org election results archive,observed_link_candidate
+us:ms:census-county:28155,MS,2026-11-05T23:49:24+00:00,Webster County Mississippi official election results | site:webstercountyms.org election results archive,blocked_page_fetch
