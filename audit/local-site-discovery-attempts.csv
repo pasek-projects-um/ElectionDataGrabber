@@ -3956,3 +3956,23 @@ us:in:census-county:18005,IN,2026-11-05T10:24:40+00:00,Bartholomew County Indian
 us:ks:census-county:20187,KS,2026-11-05T10:24:40+00:00,Stanton County Kansas official election results archive | site:stantoncountyks.com election results,observed_link_candidate
 us:ky:census-county:21183,KY,2026-11-05T10:24:40+00:00,Ohio County Kentucky official election results archive | site:ohiocountyky.com election results,observed_link_candidate
 us:la:census-county:22057,LA,2026-11-05T10:24:40+00:00,Lafourche Parish Louisiana official election results archive | site:lafourchegov.org election results,observed_link_candidate
+us:ma:priority-roster:egremont,MA,2026-11-05T11:10:42+00:00,Egremont Massachusetts official election results archive | site:egremont-ma.gov election results,observed_link_candidate
+us:md:census-county:24031,MD,2026-11-05T11:10:42+00:00,Montgomery County Maryland official election results archive | site:montgomerycountymd.gov elections results,observed_link_candidate
+us:me:municipality:dexter,ME,2026-11-05T11:10:42+00:00,Dexter Maine official election results town clerk | site:dextermaine.org election results,observed_link_candidate
+us:nd:census-county:38035,ND,2026-11-05T11:10:42+00:00,Grand Forks County North Dakota official election results archive | site:gfcounty.nd.gov election results,observed_link_candidate
+us:ne:census-county:31137,NE,2026-11-05T11:10:42+00:00,Phelps County Nebraska official election results archive | site:phelpscounty.ne.gov election results,observed_link_candidate
+us:nh:priority-roster:epsom,NH,2026-11-05T11:10:42+00:00,Epsom New Hampshire official election results archive | site:epsomnh.org election results,observed_link_candidate
+us:nj:census-county:34007,NJ,2026-11-05T11:10:42+00:00,Camden County New Jersey official election results archive | site:camdencounty.com elections results,observed_link_candidate
+us:nm:census-county:35001,NM,2026-11-05T11:10:42+00:00,Bernalillo County New Mexico official election results archive | site:bernco.gov election results,observed_link_candidate
+us:ri:priority-roster:richmond,RI,2026-11-05T11:10:42+00:00,Richmond Rhode Island official election results archive | site:richmondri.com election results,observed_link_candidate
+us:vt:priority-roster:fair-haven,VT,2026-11-05T11:10:42+00:00,Fair Haven Vermont official election results archive | site:fairhavenvt.org election results,observed_link_candidate
+us:wa:census-county:53053,WA,2026-11-05T11:10:42+00:00,Pierce County Washington official election results archive | site:piercecountywa.gov election results,observed_link_candidate
+us:al:census-county:01067,AL,2026-11-05T11:10:42+00:00,Henry County Alabama official election results archive | site:henrycountyal.gov election results,completed_no_new_urls
+us:ar:census-county:05051,AR,2026-11-05T11:10:42+00:00,Garland County Arkansas official election results archive | site:garlandcounty.org election results,observed_link_candidate
+us:az:census-county:04001,AZ,2026-11-05T11:10:42+00:00,Apache County Arizona alternate official election results archive | site:apachecountyaz.gov election results,completed_no_new_urls
+us:ca:census-county:06077,CA,2026-11-05T11:10:42+00:00,San Joaquin County California official election results archive | site:sjgov.org election results,observed_link_candidate
+us:co:census-county:08063,CO,2026-11-05T11:10:42+00:00,Kit Carson County Colorado official election results archive | site:kitcarsoncounty.colorado.gov election results,observed_link_candidate
+us:ia:census-county:19187,IA,2026-11-05T11:10:42+00:00,Webster County Iowa official election results archive | site:webstercountyia.gov elections results,observed_link_candidate
+us:il:census-county:17191,IL,2026-11-05T11:10:42+00:00,Wayne County Illinois official election results archive | site:waynecountyil.gov election results,observed_link_candidate
+us:mi:county:alcona,MI,2026-11-05T11:10:42+00:00,Alcona County Michigan alternate official election results archive | site:alconacountymi.com election results,observed_link_candidate
+us:mn:census-county:27161,MN,2026-11-05T11:10:42+00:00,Waseca County Minnesota official election results archive | site:wasecacounty.gov election results,observed_link_candidate
