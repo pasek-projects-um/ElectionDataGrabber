@@ -3936,3 +3936,23 @@ us:mi:county:wexford,MI,2026-11-05T06:38:00+00:00,Wexford County Michigan offici
 us:mn:census-county:27159,MN,2026-11-05T06:38:00+00:00,Wadena County Minnesota official election results archive | site:wadena-county.com election results,observed_link_candidate
 us:mo:census-county:29153,MO,2026-11-05T06:38:00+00:00,Ozark County Missouri official election results archive | site:ozarkcountymo.gov election results,observed_link_candidate
 us:ms:census-county:28149,MS,2026-11-05T06:38:00+00:00,Warren County Mississippi official election results archive | site:warrencountyms.com election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-11-05T10:24:40+00:00,Alaska Division of Elections official election results archive current 2026 | site:elections.alaska.gov results archive dashboard,completed_no_new_urls
+us:de:census-county:10005,DE,2026-11-05T10:24:40+00:00,Sussex County Delaware official election results archive | site:elections.delaware.gov Sussex results,completed_no_new_urls
+us:mt:census-county:30029,MT,2026-11-05T10:24:40+00:00,Flathead County Montana official election results archive | site:flathead.mt.gov election results,observed_link_candidate
+us:nc:census-county:37139,NC,2026-11-05T10:24:40+00:00,Pasquotank County North Carolina official election results archive | site:pasquotankcountync.org elections results,observed_link_candidate
+us:pa:county:wyoming,PA,2026-11-05T10:24:40+00:00,Wyoming County Pennsylvania official election results archive | site:wyomingcountypa.gov elections results,observed_link_candidate
+us:sd:census-county:46003,SD,2026-11-05T10:24:40+00:00,Aurora County South Dakota official election results archive | site:auroracountysd.com election results,observed_link_candidate
+us:tn:census-county:47131,TN,2026-11-05T10:24:40+00:00,Obion County Tennessee official election results archive | site:obioncountytn.gov election results,observed_link_candidate
+us:tx:census-county:48131,TX,2026-11-05T10:24:40+00:00,Duval County Texas official election results archive | site:co.duval.tx.us election results,observed_link_candidate
+us:va:census-county:51139,VA,2026-11-05T10:24:40+00:00,Page County Virginia official election results archive | site:pagecounty.virginia.gov elections results,observed_link_candidate
+us:wi:ltsb2026:barron-arland-3bc1b08814fe503d,WI,2026-11-05T10:24:40+00:00,Town of Arland Barron County Wisconsin official election results | site:barroncountywi.gov Arland election results,observed_link_candidate
+us:wy:census-county:56037,WY,2026-11-05T10:24:40+00:00,Sweetwater County Wyoming official election results archive | site:sweetwatercountywy.gov election results,completed_no_new_urls
+us:ct:municipality:newtown,CT,2026-11-05T10:24:40+00:00,Newtown Connecticut official election results archive | site:newtown-ct.gov election results,observed_link_candidate
+us:fl:census-county:12063,FL,2026-11-05T10:24:40+00:00,Jackson County Florida official election results archive | site:jacksoncountyfl.gov elections results,observed_link_candidate
+us:ga:census-county:13199,GA,2026-11-05T10:24:40+00:00,Meriwether County Georgia official election results archive | site:meriwethercountyga.gov election results,observed_link_candidate
+us:hi:census-county:15007,HI,2026-11-05T10:24:40+00:00,Kauai County Hawaii official election results archive | site:kauai.gov election results,completed_no_new_urls
+us:id:census-county:16003,ID,2026-11-05T10:24:40+00:00,Adams County Idaho official election results archive | site:co.adams.id.us election results,observed_link_candidate
+us:in:census-county:18005,IN,2026-11-05T10:24:40+00:00,Bartholomew County Indiana official election results archive | site:bartholomew.in.gov election results,completed_no_new_urls
+us:ks:census-county:20187,KS,2026-11-05T10:24:40+00:00,Stanton County Kansas official election results archive | site:stantoncountyks.com election results,observed_link_candidate
+us:ky:census-county:21183,KY,2026-11-05T10:24:40+00:00,Ohio County Kentucky official election results archive | site:ohiocountyky.com election results,observed_link_candidate
+us:la:census-county:22057,LA,2026-11-05T10:24:40+00:00,Lafourche Parish Louisiana official election results archive | site:lafourchegov.org election results,observed_link_candidate
