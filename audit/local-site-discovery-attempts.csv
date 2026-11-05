@@ -3984,3 +3984,15 @@ us:ct:municipality:norfolk,CT,2026-11-05T13:20:04+00:00,Norfolk Connecticut 2026
 us:ga:census-county:13201,GA,2026-11-05T13:20:04+00:00,Miller County Georgia 2026 election results official,incomplete_search
 us:ks:census-county:20189,KS,2026-11-05T13:20:04+00:00,Stevens County Kansas 2026 election results official,observed_link_candidate
 us:ky:census-county:21185,KY,2026-11-05T13:20:04+00:00,Oldham County Kentucky November 2026 election results clerk,observed_link_candidate
+us:nv:census-county:32510,NV,2026-11-05T15:55:11+00:00,Carson City Nevada alternate official election results archive | site:nvsos.gov 2026 election results,observed_link_candidate
+us:ny:census-county:36019,NY,2026-11-05T15:55:11+00:00,Clinton County New York alternate official election results archive | site:elections.ny.gov Clinton results,observed_link_candidate
+us:or:census-county:41067,OR,2026-11-05T15:55:11+00:00,Washington County Oregon alternate official current election results | site:oregonvotes.gov Washington County results,observed_link_candidate
+us:sc:census-county:45041,SC,2026-11-05T15:55:11+00:00,Florence County South Carolina alternate official election results | site:scvotes.gov Florence 2026 results,observed_link_candidate
+us:ut:census-county:49013,UT,2026-11-05T15:55:11+00:00,Duchesne County Utah alternate official election website | site:duchesne.utah.gov elections clerk auditor,observed_link_candidate
+us:wv:census-county:54021,WV,2026-11-05T15:55:11+00:00,Gilmer County West Virginia alternate official election results archive | site:sos.wv.gov Gilmer results,observed_link_candidate
+us:de:census-county:10003,DE,2026-11-05T15:55:11+00:00,New Castle County Delaware alternate current official 2026 results | site:elections.delaware.gov GE2026,observed_link_candidate
+us:fl:census-county:12065,FL,2026-11-05T15:55:11+00:00,Jefferson County Florida alternate official election archive | site:dos.fl.gov Jefferson results archive,observed_link_candidate
+us:hi:census-county:15003,HI,2026-11-05T15:55:11+00:00,Honolulu County Hawaii alternate official election results archive | site:elections.hawaii.gov general election,observed_link_candidate
+us:id:census-county:16005,ID,2026-11-05T15:55:11+00:00,Bannock County Idaho alternate official election results | site:bannockcounty.gov 2026 election,observed_link_candidate
+us:in:census-county:18007,IN,2026-11-05T15:55:11+00:00,Benton County Indiana alternate official election results | site:indianavoters.in.gov Benton results,observed_link_candidate
+us:la:census-county:22059,LA,2026-11-05T15:55:11+00:00,LaSalle Parish Louisiana alternate official election results | site:sos.la.gov election results archive,observed_link_candidate
