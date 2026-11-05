@@ -4036,3 +4036,23 @@ us:oh:county:ross,OH,2026-11-05T19:01:51+00:00,Ross County Ohio official electio
 us:ok:census-county:40139,OK,2026-11-05T19:01:51+00:00,Texas County Oklahoma official election results | site:texascountyok.gov election results archive,completed_no_new_urls
 us:de:census-county:10001,DE,2026-11-05T19:01:51+00:00,Kent County Delaware official election results | site:delaware.gov Kent County election results archive,completed_no_new_urls
 us:fl:census-county:12067,FL,2026-11-05T19:01:51+00:00,Lafayette County Florida official election results | site:lafayettevotes.com election results archive,completed_no_new_urls
+us:hi:census-county:15009,HI,2026-11-05T19:37:25+00:00,Maui County Hawaii official election results | site:elections.hawaii.gov Maui County results archive,completed_no_new_urls
+us:id:census-county:16001,ID,2026-11-05T19:37:25+00:00,Ada County Idaho official election results | site:adacounty.id.gov elections results archive,observed_link_candidate
+us:in:census-county:18009,IN,2026-11-05T19:37:25+00:00,Blackford County Indiana official election results | site:blackfordcounty.in.gov election results archive,observed_link_candidate
+us:la:census-county:22061,LA,2026-11-05T19:37:25+00:00,Lincoln Parish Louisiana official election results | site:lincolnparish.org elections results archive,completed_no_new_urls
+us:nv:census-county:32001,NV,2026-11-05T19:37:25+00:00,Churchill County Nevada official election results | site:churchillcountynv.gov election results archive,completed_no_new_urls
+us:ny:census-county:36021,NY,2026-11-05T19:37:25+00:00,Columbia County New York official election results | site:columbiacountyny.com election results archive,observed_link_candidate
+us:or:census-county:41069,OR,2026-11-05T19:37:25+00:00,Wheeler County Oregon official election results | site:wheelercountyoregon.com election results archive,observed_link_candidate
+us:sc:census-county:45043,SC,2026-11-05T19:37:25+00:00,Georgetown County South Carolina official election results | site:georgetowncountysc.org election results archive,completed_no_new_urls
+us:ut:census-county:49015,UT,2026-11-05T19:37:25+00:00,Emery County Utah official election results | site:emerycounty.com elections results archive,observed_link_candidate
+us:wv:census-county:54023,WV,2026-11-05T19:37:25+00:00,Grant County West Virginia official election results | site:grantcountywv.org election results archive,observed_link_candidate
+us:al:census-county:01071,AL,2026-11-05T19:37:25+00:00,Jackson County Alabama official election results | site:jacksoncountyal.gov election results archive,observed_link_candidate
+us:ar:census-county:05055,AR,2026-11-05T19:37:25+00:00,Greene County Arkansas official election results | site:greenecounty.arkansas.gov election results archive,completed_no_new_urls
+us:az:census-county:04007,AZ,2026-11-05T19:37:25+00:00,Gila County Arizona official election results | site:gilacountyaz.gov election results archive,completed_no_new_urls
+us:ca:census-county:06081,CA,2026-11-05T19:37:25+00:00,San Mateo County California official election results | site:smcacre.gov election results archive,observed_link_candidate
+us:co:census-county:08067,CO,2026-11-05T19:37:25+00:00,La Plata County Colorado official election results | site:laplata.gov election results archive,completed_no_new_urls
+us:ia:census-county:19191,IA,2026-11-05T19:37:25+00:00,Winneshiek County Iowa official election results | site:winneshiekcounty.iowa.gov election results archive,observed_link_candidate
+us:il:census-county:17195,IL,2026-11-05T19:37:25+00:00,Whiteside County Illinois official election results | site:whitesidecountyil.gov election results archive,observed_link_candidate
+us:ma:priority-roster:essex,MA,2026-11-05T19:37:25+00:00,Town of Essex Massachusetts official election results | site:essexma.org election results archive,observed_link_candidate
+us:md:census-county:24035,MD,2026-11-05T19:37:25+00:00,Queen Anne's County Maryland official election results | site:qac.org election results archive,observed_link_candidate
+us:me:municipality:dover-foxcroft,ME,2026-11-05T19:37:25+00:00,Dover-Foxcroft Maine official election results | site:dover-foxcroft.org election results archive,observed_link_candidate
