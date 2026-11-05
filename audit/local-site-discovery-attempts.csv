@@ -3896,3 +3896,23 @@ us:mn:census-county:27157,MN,2026-11-05T02:41:51.954394+00:00,Wabasha County Min
 us:mo:census-county:29151,MO,2026-11-05T02:41:51.954394+00:00,Osage County Missouri official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
 us:ms:census-county:28147,MS,2026-11-05T02:41:51.954394+00:00,Walthall County Mississippi official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
 us:mt:census-county:30027,MT,2026-11-05T02:41:51.954394+00:00,Fergus County Montana official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:hi:census-county:15001,HI,2026-11-05T00:40:02-05:00,Hawaii County Hawaii official election results archive | Hawaii County Hawaii elections results vendor dashboard,observed_link_candidate
+us:nd:census-county:38033,ND,2026-11-05T00:40:02-05:00,Golden Valley County North Dakota official election results | Golden Valley County ND elections archive,observed_link_candidate
+us:ne:census-county:31135,NE,2026-11-05T00:40:02-05:00,Perkins County Nebraska official election results archive | Perkins County NE elections results vendor dashboard,observed_link_candidate
+us:nh:priority-roster:epping,NH,2026-11-05T00:40:02-05:00,Epping New Hampshire official election results town clerk | Epping NH elections results archive,observed_link_candidate
+us:nm:census-county:35061,NM,2026-11-05T00:40:02-05:00,Valencia County New Mexico official election results archive | Valencia County NM election results vendor dashboard 2026,observed_link_candidate
+us:ri:priority-roster:providence,RI,2026-11-05T00:40:02-05:00,Providence Rhode Island official election results archive | City of Providence RI elections results official,observed_link_candidate
+us:vt:priority-roster:essex-junction,VT,2026-11-05T00:40:02-05:00,Essex Junction Vermont official election results archive | City of Essex Junction VT election results 2026,observed_link_candidate
+us:wa:census-county:53051,WA,2026-11-05T00:40:02-05:00,Pend Oreille County Washington official election results archive | Pend Oreille County WA current election results dashboard,observed_link_candidate
+us:ct:municipality:newington,CT,2026-11-05T00:40:02-05:00,Newington Connecticut official election results town clerk | Newington CT election results archive 2026,observed_link_candidate
+us:fl:census-county:12061,FL,2026-11-05T00:40:02-05:00,Indian River County Florida official election results archive | Indian River County FL current election results dashboard 2026,observed_link_candidate
+us:ga:census-county:13197,GA,2026-11-05T00:40:02-05:00,Marion County Georgia official election results archive | Marion County GA election results 2026 official,observed_link_candidate
+us:id:census-county:16087,ID,2026-11-05T00:40:02-05:00,Washington County Idaho official election results archive | Washington County Idaho current election results dashboard 2026,observed_link_candidate
+us:in:census-county:18003,IN,2026-11-05T00:40:02-05:00,Allen County Indiana official election results archive | Allen County IN current election results dashboard 2026,observed_link_candidate
+us:ks:census-county:20185,KS,2026-11-05T00:40:02-05:00,Stafford County Kansas official election results archive | Stafford County KS election results 2026 official,observed_link_candidate
+us:ky:census-county:21181,KY,2026-11-05T00:40:02-05:00,Nicholas County Kentucky official election results archive | Nicholas County KY current election results dashboard 2026,observed_link_candidate
+us:la:census-county:22055,LA,2026-11-05T00:40:02-05:00,Lafayette Parish Louisiana official election results archive | Lafayette Parish LA 2026 election results official,observed_link_candidate
+us:ma:priority-roster:edgartown,MA,2026-11-05T00:40:02-05:00,Edgartown Massachusetts official election results archive | Edgartown MA 2026 election results town clerk,observed_link_candidate
+us:md:census-county:24029,MD,2026-11-05T00:40:02-05:00,Kent County Maryland official election results archive | Kent County MD current election results dashboard 2026,observed_link_candidate
+us:me:municipality:dennysville,ME,2026-11-05T00:40:02-05:00,Dennysville Maine official election results town clerk | Dennysville ME election results archive,observed_link_candidate
+us:nj:census-county:34005,NJ,2026-11-05T00:40:02-05:00,Burlington County New Jersey official election results archive | Burlington County NJ current election results dashboard 2026,observed_link_candidate
