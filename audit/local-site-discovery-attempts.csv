@@ -3976,3 +3976,11 @@ us:ia:census-county:19187,IA,2026-11-05T11:10:42+00:00,Webster County Iowa offic
 us:il:census-county:17191,IL,2026-11-05T11:10:42+00:00,Wayne County Illinois official election results archive | site:waynecountyil.gov election results,observed_link_candidate
 us:mi:county:alcona,MI,2026-11-05T11:10:42+00:00,Alcona County Michigan alternate official election results archive | site:alconacountymi.com election results,observed_link_candidate
 us:mn:census-county:27161,MN,2026-11-05T11:10:42+00:00,Waseca County Minnesota official election results archive | site:wasecacounty.gov election results,observed_link_candidate
+us:mo:census-county:29155,MO,2026-11-05T13:20:04+00:00,Pemiscot County Missouri November 2026 election results official county,observed_link_candidate
+us:ms:census-county:28151,MS,2026-11-05T13:20:04+00:00,Washington County Mississippi November 2026 election results official election commission,incomplete_search
+us:oh:county:richland,OH,2026-11-05T13:20:04+00:00,Richland County Ohio 2026 general election results board of elections,observed_link_candidate
+us:ok:census-county:40137,OK,2026-11-05T13:20:04+00:00,Stephens County Oklahoma November 2026 election results county election board,observed_link_candidate
+us:ct:municipality:norfolk,CT,2026-11-05T13:20:04+00:00,Norfolk Connecticut 2026 election results town clerk official,observed_link_candidate
+us:ga:census-county:13201,GA,2026-11-05T13:20:04+00:00,Miller County Georgia 2026 election results official,incomplete_search
+us:ks:census-county:20189,KS,2026-11-05T13:20:04+00:00,Stevens County Kansas 2026 election results official,observed_link_candidate
+us:ky:census-county:21185,KY,2026-11-05T13:20:04+00:00,Oldham County Kentucky November 2026 election results clerk,observed_link_candidate
