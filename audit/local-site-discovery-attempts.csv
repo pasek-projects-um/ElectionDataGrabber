@@ -3996,3 +3996,23 @@ us:hi:census-county:15003,HI,2026-11-05T15:55:11+00:00,Honolulu County Hawaii al
 us:id:census-county:16005,ID,2026-11-05T15:55:11+00:00,Bannock County Idaho alternate official election results | site:bannockcounty.gov 2026 election,observed_link_candidate
 us:in:census-county:18007,IN,2026-11-05T15:55:11+00:00,Benton County Indiana alternate official election results | site:indianavoters.in.gov Benton results,observed_link_candidate
 us:la:census-county:22059,LA,2026-11-05T15:55:11+00:00,LaSalle Parish Louisiana alternate official election results | site:sos.la.gov election results archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-05T17:33:32+00:00,District of Columbia Board of Elections alternative official results | site:dcboe.org election results archive,completed_no_new_urls
+us:mt:census-county:30031,MT,2026-11-05T17:33:32+00:00,Gallatin County Montana alternative official election results | site:sosmt.gov election results archive,observed_link_candidate
+us:nc:census-county:37141,NC,2026-11-05T17:33:32+00:00,Pender County North Carolina official election results | site:ncsbe.gov Pender historical results,observed_link_candidate
+us:pa:county:york,PA,2026-11-05T17:33:32+00:00,York County Pennsylvania official election results | site:pa.gov York historical election data,observed_link_candidate
+us:sd:census-county:46005,SD,2026-11-05T17:33:32+00:00,Beadle County South Dakota alternative official election results | site:sdsos.gov election history Beadle,observed_link_candidate
+us:tn:census-county:47133,TN,2026-11-05T17:33:32+00:00,Overton County Tennessee official election results | site:tnsos.gov Overton election results archive,completed_no_new_urls
+us:tx:census-county:48133,TX,2026-11-05T17:33:32+00:00,Eastland County Texas official election results | site:eastlandcounty.gov election results archive,observed_link_candidate
+us:va:census-county:51141,VA,2026-11-05T17:33:32+00:00,Patrick County Virginia official election results | site:elections.virginia.gov Patrick historical results,observed_link_candidate
+us:wi:ltsb2026:barron-barron-6941106683465125,WI,2026-11-05T17:33:32+00:00,Town of Barron Wisconsin official election results | site:barroncountywi.gov election results archive,observed_link_candidate
+us:wy:census-county:56039,WY,2026-11-05T17:33:32+00:00,Teton County Wyoming alternative official election results | site:sos.wyo.gov Teton election results archive,observed_link_candidate
+us:al:census-county:01069,AL,2026-11-05T17:33:32+00:00,Houston County Alabama alternative official election results | site:alabamavotes.gov Houston results archive,observed_link_candidate
+us:ar:census-county:05053,AR,2026-11-05T17:33:32+00:00,Grant County Arkansas alternative official election results | site:sos.arkansas.gov Grant election archive,observed_link_candidate
+us:az:census-county:04005,AZ,2026-11-05T17:33:32+00:00,Coconino County Arizona alternative official election results | site:azcleanelections.gov Coconino results,observed_link_candidate
+us:ca:census-county:06079,CA,2026-11-05T17:33:32+00:00,San Luis Obispo County California alternative official election results | site:sos.ca.gov local election results archive,observed_link_candidate
+us:co:census-county:08065,CO,2026-11-05T17:33:32+00:00,Lake County Colorado alternative official election results | site:lakecountyco.gov election results archive,completed_no_new_urls
+us:ia:census-county:19189,IA,2026-11-05T17:33:32+00:00,Winnebago County Iowa official election results | site:sos.iowa.gov Winnebago election results archive,observed_link_candidate
+us:il:census-county:17193,IL,2026-11-05T17:33:32+00:00,White County Illinois official election results | site:elections.il.gov White County results,observed_link_candidate
+us:ma:priority-roster:erving,MA,2026-11-05T17:33:32+00:00,Erving Massachusetts official election results | site:sec.state.ma.us Erving election results,observed_link_candidate
+us:md:census-county:24033,MD,2026-11-05T17:33:32+00:00,Prince George's County Maryland alternative official election results | site:results.elections.maryland.gov Prince George's archive,observed_link_candidate
+us:me:municipality:dixfield,ME,2026-11-05T17:33:32+00:00,Dixfield Maine official election results | site:maine.gov Dixfield municipal election results,observed_link_candidate
