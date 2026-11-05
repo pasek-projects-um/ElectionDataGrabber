@@ -3916,3 +3916,23 @@ us:ma:priority-roster:edgartown,MA,2026-11-05T00:40:02-05:00,Edgartown Massachus
 us:md:census-county:24029,MD,2026-11-05T00:40:02-05:00,Kent County Maryland official election results archive | Kent County MD current election results dashboard 2026,observed_link_candidate
 us:me:municipality:dennysville,ME,2026-11-05T00:40:02-05:00,Dennysville Maine official election results town clerk | Dennysville ME election results archive,observed_link_candidate
 us:nj:census-county:34005,NJ,2026-11-05T00:40:02-05:00,Burlington County New Jersey official election results archive | Burlington County NJ current election results dashboard 2026,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-05T06:38:00+00:00,District of Columbia Board of Elections official election results archive 2026 | site:dcboe.org election results archives dashboard,observed_link_candidate
+us:nv:census-county:32033,NV,2026-11-05T06:38:00+00:00,White Pine County Nevada official election results archive | site:whitepinecounty.net elections results,incomplete_page_fetch
+us:ny:census-county:36017,NY,2026-11-05T06:38:00+00:00,Chenango County New York official election results archive | site:chenangocountyny.gov elections results,observed_link_candidate
+us:oh:county:putnam,OH,2026-11-05T06:38:00+00:00,Putnam County Ohio official election results archive | site:putnamcountyohio.gov election results,observed_link_candidate
+us:ok:census-county:40135,OK,2026-11-05T06:38:00+00:00,Sequoyah County Oklahoma official election results archive | site:ok.gov Sequoyah County election results,observed_link_candidate
+us:or:census-county:41065,OR,2026-11-05T06:38:00+00:00,Wasco County Oregon official election results archive | site:co.wasco.or.us elections results,observed_link_candidate
+us:sc:census-county:45039,SC,2026-11-05T06:38:00+00:00,Fairfield County South Carolina official election results archive | site:scvotes.gov Fairfield County election results,completed_no_new_urls
+us:ut:census-county:49011,UT,2026-11-05T06:38:00+00:00,Davis County Utah official election results archive | site:daviscountyutah.gov election results,observed_link_candidate
+us:wv:census-county:54019,WV,2026-11-05T06:38:00+00:00,Fayette County West Virginia official election results archive | site:fayettecounty.wv.gov election results,observed_link_candidate
+us:al:census-county:01065,AL,2026-11-05T06:38:00+00:00,Hale County Alabama official election results archive | site:haleal.com election results,observed_link_candidate
+us:ar:census-county:05049,AR,2026-11-05T06:38:00+00:00,Fulton County Arkansas official election results archive | site:fultoncounty.arkansas.gov election results,observed_link_candidate
+us:az:census-county:04003,AZ,2026-11-05T06:38:00+00:00,Cochise County Arizona official election results archive | site:cochise.az.gov elections results,observed_link_candidate
+us:ca:census-county:06075,CA,2026-11-05T06:38:00+00:00,San Francisco County California official election results archive | site:sfelections.org results archive,observed_link_candidate
+us:co:census-county:08061,CO,2026-11-05T06:38:00+00:00,Kiowa County Colorado official election results archive | site:kiowacounty.colorado.gov election results,completed_no_new_urls
+us:ia:census-county:19185,IA,2026-11-05T06:38:00+00:00,Wayne County Iowa official election results archive | site:waynecounty.iowa.gov elections results,observed_link_candidate
+us:il:census-county:17189,IL,2026-11-05T06:38:00+00:00,Washington County Illinois official election results archive | site:washingtonco.illinois.gov election results,observed_link_candidate
+us:mi:county:wexford,MI,2026-11-05T06:38:00+00:00,Wexford County Michigan official election results archive | site:wexfordcounty.org election results,observed_link_candidate
+us:mn:census-county:27159,MN,2026-11-05T06:38:00+00:00,Wadena County Minnesota official election results archive | site:wadena-county.com election results,observed_link_candidate
+us:mo:census-county:29153,MO,2026-11-05T06:38:00+00:00,Ozark County Missouri official election results archive | site:ozarkcountymo.gov election results,observed_link_candidate
+us:ms:census-county:28149,MS,2026-11-05T06:38:00+00:00,Warren County Mississippi official election results archive | site:warrencountyms.com election results,observed_link_candidate
