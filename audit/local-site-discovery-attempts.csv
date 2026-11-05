@@ -4016,3 +4016,23 @@ us:il:census-county:17193,IL,2026-11-05T17:33:32+00:00,White County Illinois off
 us:ma:priority-roster:erving,MA,2026-11-05T17:33:32+00:00,Erving Massachusetts official election results | site:sec.state.ma.us Erving election results,observed_link_candidate
 us:md:census-county:24033,MD,2026-11-05T17:33:32+00:00,Prince George's County Maryland alternative official election results | site:results.elections.maryland.gov Prince George's archive,observed_link_candidate
 us:me:municipality:dixfield,ME,2026-11-05T17:33:32+00:00,Dixfield Maine official election results | site:maine.gov Dixfield municipal election results,observed_link_candidate
+us:mi:county:alger,MI,2026-11-05T19:01:51+00:00,Alger County Michigan official election results | site:algercounty.gov elections results archive,observed_link_candidate
+us:mn:census-county:27163,MN,2026-11-05T19:01:51+00:00,Washington County Minnesota official election results | site:washingtoncountymn.gov election results archive,observed_link_candidate
+us:nd:census-county:38037,ND,2026-11-05T19:01:51+00:00,Grant County North Dakota official election results | site:grantcountynd.com election results archive,observed_link_candidate
+us:ne:census-county:31139,NE,2026-11-05T19:01:51+00:00,Pierce County Nebraska official election results | site:piercecountyne.gov election results archive,observed_link_candidate
+us:nh:priority-roster:errol,NH,2026-11-05T19:01:51+00:00,Errol New Hampshire official election results | site:errolnh.org elections results archive,observed_link_candidate
+us:nj:census-county:34009,NJ,2026-11-05T19:01:51+00:00,Cape May County New Jersey official election results | site:capemaycountynj.gov election results archive,observed_link_candidate
+us:nm:census-county:35003,NM,2026-11-05T19:01:51+00:00,Catron County New Mexico official election results | site:catroncountynm.gov election results archive,completed_no_new_urls
+us:ri:priority-roster:scituate,RI,2026-11-05T19:01:51+00:00,Scituate Rhode Island official election results | site:scituateri.gov election results archive,observed_link_candidate
+us:vt:priority-roster:fairfax,VT,2026-11-05T19:01:51+00:00,Fairfax Vermont official election results | site:fairfax-vt.gov election results archive,observed_link_candidate
+us:wa:census-county:53055,WA,2026-11-05T19:01:51+00:00,San Juan County Washington official election results | site:sanjuancountywa.gov election results archive,completed_no_new_urls
+us:ct:municipality:north-branford,CT,2026-11-05T19:01:51+00:00,North Branford Connecticut official election results | site:townofnorthbranfordct.com election results archive,observed_link_candidate
+us:ga:census-county:13205,GA,2026-11-05T19:01:51+00:00,Mitchell County Georgia official election results | site:mitchellcountyga.net election results archive,observed_link_candidate
+us:ks:census-county:20191,KS,2026-11-05T19:01:51+00:00,Sumner County Kansas official election results | site:co.sumner.ks.us election results archive,observed_link_candidate
+us:ky:census-county:21187,KY,2026-11-05T19:01:51+00:00,Owen County Kentucky official election results | site:owencountyky.us election results archive,observed_link_candidate
+us:mo:census-county:29157,MO,2026-11-05T19:01:51+00:00,Perry County Missouri official election results | site:perrycountymo.us election results archive,observed_link_candidate
+us:ms:census-county:28153,MS,2026-11-05T19:01:51+00:00,Wayne County Mississippi official election results | site:waynecountyms.gov election results archive,observed_link_candidate
+us:oh:county:ross,OH,2026-11-05T19:01:51+00:00,Ross County Ohio official election results | site:boe.rosscountyohio.gov election results archive,completed_no_new_urls
+us:ok:census-county:40139,OK,2026-11-05T19:01:51+00:00,Texas County Oklahoma official election results | site:texascountyok.gov election results archive,completed_no_new_urls
+us:de:census-county:10001,DE,2026-11-05T19:01:51+00:00,Kent County Delaware official election results | site:delaware.gov Kent County election results archive,completed_no_new_urls
+us:fl:census-county:12067,FL,2026-11-05T19:01:51+00:00,Lafayette County Florida official election results | site:lafayettevotes.com election results archive,completed_no_new_urls
