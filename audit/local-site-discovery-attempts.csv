@@ -3856,3 +3856,23 @@ us:mn:census-county:27155,MN,2026-11-05T00:26:15.550070+00:00,Traverse County Mi
 us:mo:census-county:29149,MO,2026-11-05T00:26:15.550070+00:00,Oregon County Missouri official election results archive | current results dashboard,observed_link_candidate
 us:ms:census-county:28145,MS,2026-11-05T00:26:15.550070+00:00,Union County Mississippi official election results archive | current results dashboard,observed_link_candidate
 us:mt:census-county:30025,MT,2026-11-05T00:26:15.550070+00:00,Fallon County Montana official election results archive | current results dashboard,observed_link_candidate
+us:nj:census-county:34003,NJ,2026-11-05T01:53:50.055063+00:00,Bergen County New Jersey official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:nv:census-county:32031,NV,2026-11-05T01:53:50.055063+00:00,Washoe County Nevada official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ny:census-county:36015,NY,2026-11-05T01:53:50.055063+00:00,Chemung County New York official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:oh:county:preble,OH,2026-11-05T01:53:50.055063+00:00,Preble County Ohio official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ok:census-county:40133,OK,2026-11-05T01:53:50.055063+00:00,Seminole County Oklahoma official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:or:census-county:41063,OR,2026-11-05T01:53:50.055063+00:00,Wallowa County Oregon official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:sc:census-county:45037,SC,2026-11-05T01:53:50.055063+00:00,Edgefield County South Carolina official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ut:census-county:49009,UT,2026-11-05T01:53:50.055063+00:00,Daggett County Utah official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:wv:census-county:54017,WV,2026-11-05T01:53:50.055063+00:00,Doddridge County West Virginia official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ct:municipality:new-milford,CT,2026-11-05T01:53:50.055063+00:00,New Milford Connecticut official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:fl:census-county:12059,FL,2026-11-05T01:53:50.055063+00:00,Holmes County Florida official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ga:census-county:13195,GA,2026-11-05T01:53:50.055063+00:00,Madison County Georgia official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:id:census-county:16085,ID,2026-11-05T01:53:50.055063+00:00,Valley County Idaho official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:in:census-county:18001,IN,2026-11-05T01:53:50.055063+00:00,Adams County Indiana official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ks:census-county:20183,KS,2026-11-05T01:53:50.055063+00:00,Smith County Kansas official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ky:census-county:21179,KY,2026-11-05T01:53:50.055063+00:00,Nelson County Kentucky official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:la:census-county:22053,LA,2026-11-05T01:53:50.055063+00:00,Jefferson Davis Parish Louisiana official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:ma:priority-roster:easton,MA,2026-11-05T01:53:50.055063+00:00,Easton Massachusetts official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:md:census-county:24027,MD,2026-11-05T01:53:50.055063+00:00,Howard County Maryland official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
+us:me:municipality:denmark,ME,2026-11-05T01:53:50.055063+00:00,Denmark Maine official current results dashboard | historical election archive alternative reporting tier,observed_link_candidate
