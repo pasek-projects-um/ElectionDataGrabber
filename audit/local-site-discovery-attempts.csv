@@ -4116,3 +4116,23 @@ us:mi:county:alpena,MI,2026-11-06T05:07:43+00:00,Alpena County Michigan official
 us:mn:census-county:27167,MN,2026-11-06T05:07:43+00:00,Wilkin County Minnesota official election results | Wilkin County Minnesota election results archive county auditor,observed_link_candidate
 us:mo:census-county:29161,MO,2026-11-06T05:07:43+00:00,Phelps County Missouri official election results | Phelps County Missouri election results archive county clerk,observed_link_candidate
 us:ms:census-county:28157,MS,2026-11-06T05:07:43+00:00,Wilkinson County Mississippi official election results | Wilkinson County Mississippi election results archive election commission,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-06T06:23:28+00:00,District of Columbia official election results 2026 | DC election results archive alternative site,completed_no_new_urls
+us:mt:census-county:30035,MT,2026-11-06T06:23:28+00:00,Glacier County Montana official election results | Glacier County Montana election results archive county clerk,observed_link_candidate
+us:nc:census-county:37145,NC,2026-11-06T06:23:28+00:00,Person County North Carolina official election results | Person County North Carolina election results archive county board,observed_link_candidate
+us:pa:county:allegheny,PA,2026-11-06T06:23:28+00:00,Allegheny County Pennsylvania official election results | Allegheny County Pennsylvania election results archive vendor,observed_link_candidate
+us:sd:census-county:46009,SD,2026-11-06T06:23:28+00:00,Bon Homme County South Dakota official election results | Bon Homme County South Dakota election results archive county auditor,observed_link_candidate
+us:tn:census-county:47137,TN,2026-11-06T06:23:28+00:00,Pickett County Tennessee official election results | Pickett County Tennessee election results archive election commission,observed_link_candidate
+us:tx:census-county:48137,TX,2026-11-06T06:23:28+00:00,Edwards County Texas official election results | Edwards County Texas election results archive county clerk,observed_link_candidate
+us:va:census-county:51145,VA,2026-11-06T06:23:28+00:00,Powhatan County Virginia official election results | Powhatan County Virginia election results archive registrar,observed_link_candidate
+us:wi:ltsb2026:barron-cedar-lake-56a8058303154c9d,WI,2026-11-06T06:23:28+00:00,Town of Cedar Lake Barron County Wisconsin official election results | Cedar Lake Wisconsin election results archive town clerk,observed_link_candidate
+us:wy:census-county:56043,WY,2026-11-06T06:23:28+00:00,Washakie County Wyoming official election results | Washakie County Wyoming election results archive county clerk,completed_no_new_urls
+us:al:census-county:01075,AL,2026-11-06T06:23:28+00:00,Lamar County Alabama official election results | Lamar County Alabama election results archive probate judge,observed_link_candidate
+us:ar:census-county:05059,AR,2026-11-06T06:23:28+00:00,Hot Spring County Arkansas official election results | Hot Spring County Arkansas election results archive county clerk,observed_link_candidate
+us:az:census-county:04011,AZ,2026-11-06T06:23:28+00:00,Greenlee County Arizona official election results | Greenlee County Arizona election results archive county recorder,completed_no_new_urls
+us:ca:census-county:06085,CA,2026-11-06T06:23:28+00:00,Santa Clara County California official election results | Santa Clara County California election results archive registrar,observed_link_candidate
+us:co:census-county:08071,CO,2026-11-06T06:23:28+00:00,Las Animas County Colorado official election results | Las Animas County Colorado election results archive county clerk,observed_link_candidate
+us:hi:census-county:15007,HI,2026-11-06T06:23:28+00:00,Kauai County Hawaii official election results | Kauai County Hawaii election results archive county clerk,completed_no_new_urls
+us:ia:census-county:19195,IA,2026-11-06T06:23:28+00:00,Worth County Iowa official election results | Worth County Iowa election results archive vendor,observed_link_candidate
+us:id:census-county:16009,ID,2026-11-06T06:23:28+00:00,Benewah County Idaho official election results | Benewah County Idaho election results archive vendor,observed_link_candidate
+us:il:census-county:17199,IL,2026-11-06T06:23:28+00:00,Williamson County Illinois official election results | Williamson County Illinois election results archive vendor,observed_link_candidate
+us:in:census-county:18013,IN,2026-11-06T06:23:28+00:00,Brown County Indiana official election results | Brown County Indiana election results archive vendor,observed_link_candidate
