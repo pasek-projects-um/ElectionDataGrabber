@@ -4176,3 +4176,23 @@ us:hi:census-county:15003,HI,2026-11-06T11:15:20+00:00,Honolulu County Hawaii of
 us:ia:census-county:19197,IA,2026-11-06T11:15:20+00:00,Wright County Iowa official election results 2026 | Wright County IA auditor election results archive,observed_link_candidate
 us:id:census-county:16011,ID,2026-11-06T11:15:20+00:00,Bingham County Idaho official election results 2026 | Bingham County ID elections results archive official,observed_link_candidate
 us:il:census-county:17201,IL,2026-11-06T11:15:20+00:00,Winnebago County Illinois official election results 2026 | Winnebago County IL election results archive dashboard official,observed_link_candidate
+us:in:census-county:18015,IN,2026-11-06T12:55:00+00:00,Carroll County Indiana official election results 2026 archive | site:in.gov/counties/carroll election results clerk,observed_link_candidate
+us:mt:census-county:30037,MT,2026-11-06T12:55:00+00:00,Golden Valley County Montana official election results archive | site:goldenvalleycountymt.org election results,observed_link_candidate
+us:nc:census-county:37147,NC,2026-11-06T12:55:00+00:00,Pitt County North Carolina official election results 2026 archive | site:pittcountync.gov elections results,observed_link_candidate
+us:pa:county:armstrong,PA,2026-11-06T12:55:00+00:00,Armstrong County Pennsylvania official election results 2026 archive | site:co.armstrong.pa.us election results,observed_link_candidate
+us:sd:census-county:46011,SD,2026-11-06T12:55:00+00:00,Brookings County South Dakota official election results 2026 archive | site:brookingscountysd.gov election results,observed_link_candidate
+us:tn:census-county:47139,TN,2026-11-06T12:55:00+00:00,Polk County Tennessee official election results election commission | site:polkelections.com results elections,incomplete_page_inspection
+us:tx:census-county:48139,TX,2026-11-06T12:55:00+00:00,Ellis County Texas official election results 2026 archive | site:co.ellis.tx.us elections results,incomplete_page_inspection
+us:va:census-county:51147,VA,2026-11-06T12:55:00+00:00,Prince Edward County Virginia official election results registrar | site:co.prince-edward.va.us election results,incomplete_page_fetch
+us:wi:ltsb2026:barron-chetek-ccb7d57cdce4ad4d,WI,2026-11-06T12:55:00+00:00,Town of Chetek Barron County Wisconsin official election results | site:townofchetekwi.gov election results OR site:barroncountywi.gov Chetek election results,incomplete_page_inspection
+us:wy:census-county:56045,WY,2026-11-06T12:55:00+00:00,Weston County Wyoming official election results archive 2026 | site:westongov.com election results,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-11-06T12:55:00+00:00,Alaska Division of Elections official 2026 results local results archive | site:elections.alaska.gov results 2026 election,observed_link_candidate
+us:ct:municipality:norwalk,CT,2026-11-06T12:55:00+00:00,Norwalk Connecticut official election results 2026 archive | site:norwalkct.gov election results,incomplete_page_inspection
+us:de:census-county:10005,DE,2026-11-06T12:55:00+00:00,Sussex County Delaware official election results municipal 2026 archive | site:sussexcountyde.gov election results voting,observed_link_candidate
+us:fl:census-county:12075,FL,2026-11-06T12:55:00+00:00,Levy County Florida official election results 2026 archive | site:votelevy.gov election results,observed_link_candidate
+us:ga:census-county:13213,GA,2026-11-06T12:55:00+00:00,Murray County Georgia official election results 2026 archive | site:murraycountyga.org election results,incomplete_page_inspection
+us:ks:census-county:20199,KS,2026-11-06T12:55:00+00:00,Wallace County Kansas official election results county clerk archive | site:wallacecountyks.gov election results,incomplete_page_inspection
+us:ky:census-county:21195,KY,2026-11-06T12:55:00+00:00,Pike County Kentucky official election results 2026 archive | site:pikecountyky.gov election results,observed_link_candidate
+us:la:census-county:22067,LA,2026-11-06T12:55:00+00:00,Morehouse Parish Louisiana official election results archive | site:morehouseclerkofcourt.com election results,observed_link_candidate
+us:ma:priority-roster:fall-river,MA,2026-11-06T12:55:00+00:00,Fall River Massachusetts official election results 2026 archive | site:fallriverma.gov election results,observed_link_candidate
+us:md:census-county:24001,MD,2026-11-06T12:55:00+00:00,Allegany County Maryland official election results 2026 archive | site:alleganygov.org election results,observed_link_candidate
