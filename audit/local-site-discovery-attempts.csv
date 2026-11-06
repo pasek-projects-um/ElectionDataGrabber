@@ -4200,3 +4200,23 @@ us:ne:census-county:31145,NE,2026-11-06T08:25:00-05:00,Red Willow County Nebrask
 us:oh:county:seneca,OH,2026-11-06T08:25:00-05:00,Seneca County Ohio 2026 cumulative precinct results,observed_link_candidate
 us:il:census-county:17203,IL,2026-11-06T08:25:00-05:00,Woodford County Illinois 2026 unofficial election results,observed_link_candidate
 us:ok:census-county:40145,OK,2026-11-06T08:25:00-05:00,Wagoner County Oklahoma election board official results,observed_link_candidate
+us:nd:census-county:38043,ND,2026-11-06T11:29:02-05:00,Kidder County North Dakota election results official | Kidder County North Dakota elections archive county official,observed_link_candidate
+us:nh:priority-roster:fitzwilliam,NH,2026-11-06T11:29:02-05:00,Fitzwilliam New Hampshire election results official | Fitzwilliam NH town clerk election results archive,observed_link_candidate
+us:nj:census-county:34015,NJ,2026-11-06T11:29:02-05:00,Gloucester County New Jersey election results official | Gloucester County NJ election results archive official,observed_link_candidate
+us:nm:census-county:35007,NM,2026-11-06T11:29:02-05:00,Colfax County New Mexico election results official | Colfax County New Mexico county clerk election results archive,observed_link_candidate
+us:ri:priority-roster:tiverton,RI,2026-11-06T11:29:02-05:00,Tiverton Rhode Island election results official | Tiverton RI election results archive town official,observed_link_candidate
+us:vt:priority-roster:fayston,VT,2026-11-06T11:29:02-05:00,Fayston Vermont election results official | Fayston VT town clerk election results archive,completed_no_new_urls
+us:wa:census-county:53061,WA,2026-11-06T11:29:02-05:00,Snohomish County Washington election results official | Snohomish County WA election results archive official,observed_link_candidate
+us:al:census-county:01079,AL,2026-11-06T11:29:02-05:00,Lawrence County Alabama election results official | Lawrence County AL probate election results archive,observed_link_candidate
+us:ar:census-county:05063,AR,2026-11-06T11:29:02-05:00,Independence County Arkansas election results official | Independence County Arkansas county clerk election results archive,completed_no_new_urls
+us:az:census-county:04015,AZ,2026-11-06T11:29:02-05:00,Mohave County Arizona election results official | Mohave County Arizona election results archive official,observed_link_candidate
+us:ca:census-county:06089,CA,2026-11-06T11:29:02-05:00,Shasta County California election results official | Shasta County California election results archive official,observed_link_candidate
+us:co:census-county:08075,CO,2026-11-06T11:29:02-05:00,Logan County Colorado election results official | Logan County Colorado election results archive official,observed_link_candidate
+us:hi:census-county:15009,HI,2026-11-06T11:29:02-05:00,Maui County Hawaii election results official | Maui County Hawaii election results archive official,completed_no_new_urls
+us:ia:census-county:19001,IA,2026-11-06T11:29:02-05:00,Adair County Iowa election results official | Adair County Iowa election results archive official,observed_link_candidate
+us:id:census-county:16013,ID,2026-11-06T11:29:02-05:00,Blaine County Idaho election results official | Blaine County Idaho election results archive official,observed_link_candidate
+us:me:municipality:dyer-brook,ME,2026-11-06T11:29:02-05:00,Dyer Brook Maine election results official | Dyer Brook Maine town election results archive,completed_no_new_urls
+us:mi:county:arenac,MI,2026-11-06T11:29:02-05:00,Arenac County Michigan election results official | Arenac County Michigan election results current official,observed_link_candidate
+us:mn:census-county:27171,MN,2026-11-06T11:29:02-05:00,Wright County Minnesota election results official | Wright County Minnesota election results archive official,observed_link_candidate
+us:mo:census-county:29165,MO,2026-11-06T11:29:02-05:00,Platte County Missouri election results official | Platte County Missouri election results archive official,observed_link_candidate
+us:ms:census-county:28161,MS,2026-11-06T11:29:02-05:00,Yalobusha County Mississippi election results official county | Yalobusha County Mississippi election results official county archive,observed_link_candidate
