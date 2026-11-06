@@ -4076,3 +4076,23 @@ us:mi:county:allegan,MI,2026-11-05T23:49:24+00:00,Allegan County Michigan offici
 us:mn:census-county:27165,MN,2026-11-05T23:49:24+00:00,Watonwan County Minnesota official election results | site:co.watonwan.mn.us election results archive,observed_link_candidate
 us:mo:census-county:29159,MO,2026-11-05T23:49:24+00:00,Pettis County Missouri official election results | site:pettiscounty.org election results archive,observed_link_candidate
 us:ms:census-county:28155,MS,2026-11-05T23:49:24+00:00,Webster County Mississippi official election results | site:webstercountyms.org election results archive,blocked_page_fetch
+us:nd:census-county:38039,ND,2026-11-06T04:45:01+00:00,Griggs County North Dakota official election results | Griggs County North Dakota election results archive vendor,observed_link_candidate
+us:ne:census-county:31141,NE,2026-11-06T04:45:01+00:00,Platte County Nebraska official election results | Platte County Nebraska election results archive vendor,observed_link_candidate
+us:nh:priority-roster:exeter,NH,2026-11-06T04:45:01+00:00,Exeter New Hampshire official election results | Exeter New Hampshire election results archive town clerk,observed_link_candidate
+us:nj:census-county:34011,NJ,2026-11-06T04:45:01+00:00,Cumberland County New Jersey official election results | Cumberland County New Jersey election results archive vendor,observed_link_candidate
+us:nm:census-county:35005,NM,2026-11-06T04:45:01+00:00,Chaves County New Mexico official election results | Chaves County New Mexico election results archive vendor,observed_link_candidate
+us:oh:county:sandusky,OH,2026-11-06T04:45:01+00:00,Sandusky County Ohio official election results | Sandusky County Ohio election results archive vendor,observed_link_candidate
+us:ok:census-county:40141,OK,2026-11-06T04:45:01+00:00,Tillman County Oklahoma official election results | Tillman County Oklahoma election results archive county election board,observed_link_candidate
+us:ri:priority-roster:smithfield,RI,2026-11-06T04:45:01+00:00,Smithfield Rhode Island official election results | Smithfield Rhode Island election results archive town clerk,observed_link_candidate
+us:vt:priority-roster:fairfield,VT,2026-11-06T04:45:01+00:00,Fairfield Vermont official election results | Fairfield Vermont election results archive town clerk,observed_link_candidate
+us:wa:census-county:53057,WA,2026-11-06T04:45:01+00:00,Skagit County Washington official election results | Skagit County Washington election results archive vendor,observed_link_candidate
+us:al:census-county:01073,AL,2026-11-06T04:45:01+00:00,Jefferson County Alabama official election results | Jefferson County Alabama election results archive vendor,observed_link_candidate
+us:ar:census-county:05057,AR,2026-11-06T04:45:01+00:00,Hempstead County Arkansas official election results | Hempstead County Arkansas election results archive county clerk,completed_no_new_urls
+us:az:census-county:04009,AZ,2026-11-06T04:45:01+00:00,Graham County Arizona official election results | Graham County Arizona election results archive vendor,observed_link_candidate
+us:ca:census-county:06083,CA,2026-11-06T04:45:01+00:00,Santa Barbara County California official election results | Santa Barbara County California election results archive vendor,observed_link_candidate
+us:co:census-county:08069,CO,2026-11-06T04:45:01+00:00,Larimer County Colorado official election results | Larimer County Colorado election results archive vendor,observed_link_candidate
+us:hi:census-county:15001,HI,2026-11-06T04:45:01+00:00,Hawaii County Hawaii official election results | Hawaii County Hawaii election results archive county clerk,completed_no_new_urls
+us:ia:census-county:19193,IA,2026-11-06T04:45:01+00:00,Woodbury County Iowa official election results | Woodbury County Iowa election results archive vendor,observed_link_candidate
+us:id:census-county:16007,ID,2026-11-06T04:45:01+00:00,Bear Lake County Idaho official election results | Bear Lake County Idaho election results archive county clerk,observed_link_candidate
+us:il:census-county:17197,IL,2026-11-06T04:45:01+00:00,Will County Illinois official election results | Will County Illinois election results archive vendor,observed_link_candidate
+us:in:census-county:18011,IN,2026-11-06T04:45:01+00:00,Boone County Indiana official election results | Boone County Indiana election results archive vendor,observed_link_candidate
