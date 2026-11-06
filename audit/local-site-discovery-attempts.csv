@@ -4196,3 +4196,7 @@ us:ky:census-county:21195,KY,2026-11-06T12:55:00+00:00,Pike County Kentucky offi
 us:la:census-county:22067,LA,2026-11-06T12:55:00+00:00,Morehouse Parish Louisiana official election results archive | site:morehouseclerkofcourt.com election results,observed_link_candidate
 us:ma:priority-roster:fall-river,MA,2026-11-06T12:55:00+00:00,Fall River Massachusetts official election results 2026 archive | site:fallriverma.gov election results,observed_link_candidate
 us:md:census-county:24001,MD,2026-11-06T12:55:00+00:00,Allegany County Maryland official election results 2026 archive | site:alleganygov.org election results,observed_link_candidate
+us:ne:census-county:31145,NE,2026-11-06T08:25:00-05:00,Red Willow County Nebraska 2026 official local election results,observed_link_candidate
+us:oh:county:seneca,OH,2026-11-06T08:25:00-05:00,Seneca County Ohio 2026 cumulative precinct results,observed_link_candidate
+us:il:census-county:17203,IL,2026-11-06T08:25:00-05:00,Woodford County Illinois 2026 unofficial election results,observed_link_candidate
+us:ok:census-county:40145,OK,2026-11-06T08:25:00-05:00,Wagoner County Oklahoma election board official results,observed_link_candidate
