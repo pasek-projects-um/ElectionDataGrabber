@@ -4136,3 +4136,23 @@ us:ia:census-county:19195,IA,2026-11-06T06:23:28+00:00,Worth County Iowa officia
 us:id:census-county:16009,ID,2026-11-06T06:23:28+00:00,Benewah County Idaho official election results | Benewah County Idaho election results archive vendor,observed_link_candidate
 us:il:census-county:17199,IL,2026-11-06T06:23:28+00:00,Williamson County Illinois official election results | Williamson County Illinois election results archive vendor,observed_link_candidate
 us:in:census-county:18013,IN,2026-11-06T06:23:28+00:00,Brown County Indiana official election results | Brown County Indiana election results archive vendor,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-11-06T10:52:02+00:00,Alaska official election results archive alternative site | Alaska local election results official archive vendor,observed_link_candidate
+us:nd:census-county:38041,ND,2026-11-06T10:52:02+00:00,Hettinger County North Dakota official election results | Hettinger County ND election archive vendor dashboard,completed_no_new_urls
+us:ne:census-county:31143,NE,2026-11-06T10:52:02+00:00,Polk County Nebraska official election results | Polk County NE current results archive vendor dashboard,observed_link_candidate
+us:nh:priority-roster:farmington,NH,2026-11-06T10:52:02+00:00,Farmington New Hampshire official election results | Farmington NH current results archive town clerk,observed_link_candidate
+us:nj:census-county:34013,NJ,2026-11-06T10:52:02+00:00,Essex County New Jersey official election results | Essex County NJ current 2026 results dashboard archive,observed_link_candidate
+us:nm:census-county:35006,NM,2026-11-06T10:52:02+00:00,Cibola County New Mexico official election results | Cibola County NM current results archive dashboard,observed_link_candidate
+us:oh:county:scioto,OH,2026-11-06T10:52:02+00:00,Scioto County Ohio official election results | Scioto County OH current results archive board of elections,observed_link_candidate
+us:ok:census-county:40143,OK,2026-11-06T10:52:02+00:00,Tulsa County Oklahoma official election results | Tulsa County OK current 2026 results dashboard archive,observed_link_candidate
+us:ri:priority-roster:south-kingstown,RI,2026-11-06T10:52:02+00:00,South Kingstown Rhode Island official election results | South Kingstown RI current results dashboard archive,observed_link_candidate
+us:vt:priority-roster:fairlee,VT,2026-11-06T10:52:02+00:00,Fairlee Vermont official election results | Fairlee VT current results archive town clerk,observed_link_candidate
+us:wa:census-county:53059,WA,2026-11-06T10:52:02+00:00,Skamania County Washington official election results | Skamania County WA current results archive dashboard,observed_link_candidate
+us:ct:municipality:north-stonington,CT,2026-11-06T10:52:02+00:00,North Stonington Connecticut official election results | North Stonington CT current results archive town clerk,observed_link_candidate
+us:de:census-county:10001,DE,2026-11-06T10:52:02+00:00,Kent County Delaware official election results | Kent County DE current 2026 results archive,completed_no_new_urls
+us:fl:census-county:12073,FL,2026-11-06T10:52:02+00:00,Leon County Florida official election results | Leon County FL current 2026 results archive dashboard,observed_link_candidate
+us:ga:census-county:13211,GA,2026-11-06T10:52:02+00:00,Morgan County Georgia official election results | Morgan County GA current results archive board of elections,observed_link_candidate
+us:ks:census-county:20197,KS,2026-11-06T10:52:02+00:00,Wabaunsee County Kansas official election results | Wabaunsee County KS current results archive dashboard,observed_link_candidate
+us:ky:census-county:21193,KY,2026-11-06T10:52:02+00:00,Perry County Kentucky official election results | Perry County KY current results archive county clerk,observed_link_candidate
+us:la:census-county:22065,LA,2026-11-06T10:52:02+00:00,Madison Parish Louisiana official election results | Madison Parish LA current results archive clerk dashboard,completed_no_new_urls
+us:ma:priority-roster:fairhaven,MA,2026-11-06T10:52:02+00:00,Fairhaven Massachusetts official election results | Fairhaven MA current results archive town clerk,observed_link_candidate
+us:md:census-county:24039,MD,2026-11-06T10:52:02+00:00,Somerset County Maryland official election results | Somerset County MD current 2026 results archive dashboard,observed_link_candidate
