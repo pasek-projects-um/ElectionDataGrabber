@@ -4220,3 +4220,23 @@ us:mi:county:arenac,MI,2026-11-06T11:29:02-05:00,Arenac County Michigan election
 us:mn:census-county:27171,MN,2026-11-06T11:29:02-05:00,Wright County Minnesota election results official | Wright County Minnesota election results archive official,observed_link_candidate
 us:mo:census-county:29165,MO,2026-11-06T11:29:02-05:00,Platte County Missouri election results official | Platte County Missouri election results archive official,observed_link_candidate
 us:ms:census-county:28161,MS,2026-11-06T11:29:02-05:00,Yalobusha County Mississippi election results official county | Yalobusha County Mississippi election results official county archive,observed_link_candidate
+us:nv:census-county:32007,NV,2026-11-06T12:34:43-05:00,Elko County Nevada election results official | Elko County NV election results archive official,completed_no_new_urls
+us:ny:census-county:36027,NY,2026-11-06T12:34:43-05:00,Dutchess County New York election results official | Dutchess County NY elections archive official,observed_link_candidate
+us:or:census-county:41003,OR,2026-11-06T12:34:43-05:00,Benton County Oregon election results official | Benton County Oregon elections archive official,observed_link_candidate
+us:sc:census-county:45049,SC,2026-11-06T12:34:43-05:00,Hampton County South Carolina election results official | Hampton County SC election results archive,observed_link_candidate
+us:ut:census-county:49021,UT,2026-11-06T12:34:43-05:00,Iron County Utah election results official | Iron County Utah elections archive official,observed_link_candidate
+us:wv:census-county:54029,WV,2026-11-06T12:34:43-05:00,Hancock County West Virginia election results official | Hancock County WV election results archive official,completed_no_new_urls
+us:ct:municipality:norwich,CT,2026-11-06T12:34:43-05:00,Norwich Connecticut election results official | Norwich CT town clerk election results archive,observed_link_candidate
+us:de:census-county:10003,DE,2026-11-06T12:34:43-05:00,New Castle County Delaware election results official | New Castle County Delaware election results archive official,completed_no_new_urls
+us:fl:census-county:12077,FL,2026-11-06T12:34:43-05:00,Liberty County Florida election results official | Liberty County Florida election results archive official,observed_link_candidate
+us:ga:census-county:13215,GA,2026-11-06T12:34:43-05:00,Muscogee County Georgia election results official | Muscogee County Georgia elections archive official,completed_no_new_urls
+us:in:census-county:18017,IN,2026-11-06T12:34:43-05:00,Cass County Indiana election results official | Cass County Indiana election results archive official,completed_no_new_urls
+us:ks:census-county:20201,KS,2026-11-06T12:34:43-05:00,Washington County Kansas election results official | Washington County Kansas election results archive official,observed_link_candidate
+us:ky:census-county:21197,KY,2026-11-06T12:34:43-05:00,Powell County Kentucky election results official | Powell County Kentucky election results archive official,completed_no_new_urls
+us:la:census-county:22069,LA,2026-11-06T12:34:43-05:00,Natchitoches Parish Louisiana election results official | Natchitoches Parish Louisiana election results archive official,completed_no_new_urls
+us:ma:priority-roster:falmouth,MA,2026-11-06T12:34:43-05:00,Falmouth Massachusetts election results official | Falmouth Massachusetts town election results archive,observed_link_candidate
+us:md:census-county:24041,MD,2026-11-06T12:34:43-05:00,Talbot County Maryland election results official | Talbot County Maryland election results archive official,observed_link_candidate
+us:mt:census-county:30039,MT,2026-11-06T12:34:43-05:00,Granite County Montana election results official | Granite County Montana election results archive official,completed_no_new_urls
+us:nc:census-county:37149,NC,2026-11-06T12:34:43-05:00,Polk County North Carolina election results official | Polk County North Carolina election results archive official,completed_no_new_urls
+us:pa:county:beaver,PA,2026-11-06T12:34:43-05:00,Beaver County Pennsylvania election results official | Beaver County Pennsylvania election results archive official,observed_link_candidate
+us:sd:census-county:46013,SD,2026-11-06T12:34:43-05:00,Brown County South Dakota election results official | Brown County South Dakota election results archive official,completed_no_new_urls
