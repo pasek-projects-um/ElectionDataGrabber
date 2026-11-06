@@ -4096,3 +4096,23 @@ us:ia:census-county:19193,IA,2026-11-06T04:45:01+00:00,Woodbury County Iowa offi
 us:id:census-county:16007,ID,2026-11-06T04:45:01+00:00,Bear Lake County Idaho official election results | Bear Lake County Idaho election results archive county clerk,observed_link_candidate
 us:il:census-county:17197,IL,2026-11-06T04:45:01+00:00,Will County Illinois official election results | Will County Illinois election results archive vendor,observed_link_candidate
 us:in:census-county:18011,IN,2026-11-06T04:45:01+00:00,Boone County Indiana official election results | Boone County Indiana election results archive vendor,observed_link_candidate
+us:la:census-county:22063,LA,2026-11-06T05:07:43+00:00,Livingston Parish Louisiana official election results | Livingston Parish Louisiana election results archive vendor,observed_link_candidate
+us:ma:priority-roster:everett,MA,2026-11-06T05:07:43+00:00,Everett Massachusetts official election results | Everett Massachusetts election results archive city clerk,observed_link_candidate
+us:md:census-county:24037,MD,2026-11-06T05:07:43+00:00,St. Mary's County Maryland official election results | St. Mary's County Maryland election results archive vendor,completed_no_new_urls
+us:me:municipality:dresden,ME,2026-11-06T05:07:43+00:00,Dresden Maine official election results | Dresden Maine election results archive town clerk,observed_link_candidate
+us:nv:census-county:32003,NV,2026-11-06T05:07:43+00:00,Clark County Nevada official election results | Clark County Nevada election results archive vendor,observed_link_candidate
+us:ny:census-county:36023,NY,2026-11-06T05:07:43+00:00,Cortland County New York official election results | Cortland County New York election results archive vendor,observed_link_candidate
+us:or:census-county:41071,OR,2026-11-06T05:07:43+00:00,Yamhill County Oregon official election results | Yamhill County Oregon election results archive vendor,observed_link_candidate
+us:sc:census-county:45045,SC,2026-11-06T05:07:43+00:00,Greenville County South Carolina official election results | Greenville County South Carolina election results archive vendor,observed_link_candidate
+us:ut:census-county:49017,UT,2026-11-06T05:07:43+00:00,Garfield County Utah official election results | Garfield County Utah election results archive county clerk,observed_link_candidate
+us:wv:census-county:54025,WV,2026-11-06T05:07:43+00:00,Greenbrier County West Virginia official election results | Greenbrier County West Virginia election results archive county clerk,incomplete_page_fetch
+us:ct:municipality:north-haven,CT,2026-11-06T05:07:43+00:00,North Haven Connecticut official election results | North Haven Connecticut election results archive town clerk,observed_link_candidate
+us:de:census-county:10003,DE,2026-11-06T05:07:43+00:00,New Castle County Delaware official election results | New Castle County Delaware election results archive vendor,completed_no_new_urls
+us:fl:census-county:12071,FL,2026-11-06T05:07:43+00:00,Lee County Florida official election results | Lee County Florida election results archive vendor,observed_link_candidate
+us:ga:census-county:13209,GA,2026-11-06T05:07:43+00:00,Montgomery County Georgia official election results | Montgomery County Georgia election results archive county election office,observed_link_candidate
+us:ks:census-county:20195,KS,2026-11-06T05:07:43+00:00,Trego County Kansas official election results | Trego County Kansas election results archive county clerk,observed_link_candidate
+us:ky:census-county:21191,KY,2026-11-06T05:07:43+00:00,Pendleton County Kentucky official election results | Pendleton County Kentucky election results archive county clerk,observed_link_candidate
+us:mi:county:alpena,MI,2026-11-06T05:07:43+00:00,Alpena County Michigan official election results | Alpena County Michigan election results archive county clerk,observed_link_candidate
+us:mn:census-county:27167,MN,2026-11-06T05:07:43+00:00,Wilkin County Minnesota official election results | Wilkin County Minnesota election results archive county auditor,observed_link_candidate
+us:mo:census-county:29161,MO,2026-11-06T05:07:43+00:00,Phelps County Missouri official election results | Phelps County Missouri election results archive county clerk,observed_link_candidate
+us:ms:census-county:28157,MS,2026-11-06T05:07:43+00:00,Wilkinson County Mississippi official election results | Wilkinson County Mississippi election results archive election commission,observed_link_candidate
