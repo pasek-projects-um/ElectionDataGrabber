@@ -4240,3 +4240,23 @@ us:mt:census-county:30039,MT,2026-11-06T12:34:43-05:00,Granite County Montana el
 us:nc:census-county:37149,NC,2026-11-06T12:34:43-05:00,Polk County North Carolina election results official | Polk County North Carolina election results archive official,completed_no_new_urls
 us:pa:county:beaver,PA,2026-11-06T12:34:43-05:00,Beaver County Pennsylvania election results official | Beaver County Pennsylvania election results archive official,observed_link_candidate
 us:sd:census-county:46013,SD,2026-11-06T12:34:43-05:00,Brown County South Dakota election results official | Brown County South Dakota election results archive official,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-11-06T17:34:49-05:00,Alaska Division of Elections 2026 general results alternative archive | site:elections.alaska.gov 2026 election results archive,completed_no_new_urls
+us:tn:census-county:47141,TN,2026-11-06T17:34:49-05:00,Putnam County Tennessee election results official | Putnam County Tennessee election results archive official,observed_link_candidate
+us:tx:census-county:48141,TX,2026-11-06T17:34:49-05:00,El Paso County Texas election results official | El Paso County Texas election results archive official,observed_link_candidate
+us:va:census-county:51149,VA,2026-11-06T17:34:49-05:00,Prince George County Virginia election results official | Prince George County Virginia election results archive official,completed_no_new_urls
+us:wi:ltsb2026:barron-clinton-3695d45ae5ff903a,WI,2026-11-06T17:34:49-05:00,Town of Clinton Barron County Wisconsin election results official | Town of Clinton Barron County Wisconsin election results archive official,observed_link_candidate
+us:wy:census-county:56003,WY,2026-11-06T17:34:49-05:00,Big Horn County Wyoming election results official | Big Horn County Wyoming 2026 general election results official,observed_link_candidate
+us:il:priority-roster:bloomington,IL,2026-11-06T17:34:49-05:00,Bloomington Illinois election results official | Bloomington Illinois election results archive official 2026,observed_link_candidate
+us:ne:census-county:31147,NE,2026-11-06T17:34:49-05:00,Richardson County Nebraska election results official | Richardson County Nebraska election results archive official,observed_link_candidate
+us:oh:county:shelby,OH,2026-11-06T17:34:49-05:00,Shelby County Ohio election results official | Shelby County Ohio election results archive official 2026,observed_link_candidate
+us:ok:census-county:40147,OK,2026-11-06T17:34:49-05:00,Washington County Oklahoma election results official | Washington County Oklahoma election results archive official,observed_link_candidate
+us:al:census-county:01081,AL,2026-11-06T17:34:49-05:00,Lee County Alabama election results official | Lee County Alabama election results archive official,observed_link_candidate
+us:ar:census-county:05065,AR,2026-11-06T17:34:49-05:00,Izard County Arkansas election results official | Izard County Arkansas election results archive official,completed_no_new_urls
+us:az:census-county:04017,AZ,2026-11-06T17:34:49-05:00,Navajo County Arizona election results official | Navajo County Arizona election results archive official,observed_link_candidate
+us:ca:census-county:06091,CA,2026-11-06T17:34:49-05:00,Sierra County California election results official | Sierra County California election results archive official,observed_link_candidate
+us:co:census-county:08077,CO,2026-11-06T17:34:49-05:00,Mesa County Colorado election results official | Mesa County Colorado 2026 election results archive official,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-11-06T17:34:49-05:00,Hawaii County Hawaii election results official | Hawaii County Hawaii general election results archive official,completed_no_new_urls
+us:ia:census-county:19003,IA,2026-11-06T17:34:49-05:00,Adams County Iowa election results official | Adams County Iowa election results archive official,observed_link_candidate
+us:id:census-county:16017,ID,2026-11-06T17:34:49-05:00,Bonner County Idaho election results official | Bonner County Idaho current election results archive official,observed_link_candidate
+us:me:municipality:eagle-lake,ME,2026-11-06T17:34:49-05:00,Eagle Lake Maine election results official town clerk | Eagle Lake Maine municipal election results archive,completed_no_new_urls
+us:mi:county:baraga,MI,2026-11-06T17:34:49-05:00,Baraga County Michigan election results official | Baraga County Michigan election results archive official,observed_link_candidate
