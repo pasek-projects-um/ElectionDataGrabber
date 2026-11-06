@@ -4156,3 +4156,23 @@ us:ky:census-county:21193,KY,2026-11-06T10:52:02+00:00,Perry County Kentucky off
 us:la:census-county:22065,LA,2026-11-06T10:52:02+00:00,Madison Parish Louisiana official election results | Madison Parish LA current results archive clerk dashboard,completed_no_new_urls
 us:ma:priority-roster:fairhaven,MA,2026-11-06T10:52:02+00:00,Fairhaven Massachusetts official election results | Fairhaven MA current results archive town clerk,observed_link_candidate
 us:md:census-county:24039,MD,2026-11-06T10:52:02+00:00,Somerset County Maryland official election results | Somerset County MD current 2026 results archive dashboard,observed_link_candidate
+us:me:municipality:durham,ME,2026-11-06T11:15:20+00:00,Durham Maine official election results town clerk archive | Durham ME 2026 election results official municipal,observed_link_candidate
+us:mi:county:antrim,MI,2026-11-06T11:15:20+00:00,Antrim County Michigan official election results 2026 | Antrim County MI election results archive dashboard official,observed_link_candidate
+us:mn:census-county:27169,MN,2026-11-06T11:15:20+00:00,Winona County Minnesota official election results 2026 | Winona County MN election results archive dashboard official,observed_link_candidate
+us:mo:census-county:29163,MO,2026-11-06T11:15:20+00:00,Pike County Missouri official election results 2026 | Pike County MO county clerk election results archive,observed_link_candidate
+us:ms:census-county:28159,MS,2026-11-06T11:15:20+00:00,Winston County Mississippi official election results 2026 | Winston County MS circuit clerk election results archive,observed_link_candidate
+us:nv:census-county:32005,NV,2026-11-06T11:15:20+00:00,Douglas County Nevada official election results 2026 | Douglas County NV election results dashboard archive official,observed_link_candidate
+us:ny:census-county:36025,NY,2026-11-06T11:15:20+00:00,Delaware County New York official election results 2026 | Delaware County NY board elections results archive dashboard,observed_link_candidate
+us:or:census-county:41001,OR,2026-11-06T11:15:20+00:00,Baker County Oregon official election results 2026 | Baker County OR clerk election results archive,observed_link_candidate
+us:sc:census-county:45047,SC,2026-11-06T11:15:20+00:00,Greenwood County South Carolina official election results 2026 | Greenwood County SC voter registration election results dashboard,observed_link_candidate
+us:ut:census-county:49019,UT,2026-11-06T11:15:20+00:00,Grand County Utah official election results 2026 | Grand County UT clerk election results archive,observed_link_candidate
+us:wv:census-county:54027,WV,2026-11-06T11:15:20+00:00,Hampshire County West Virginia official election results 2026 | Hampshire County WV clerk election results archive,observed_link_candidate
+us:al:census-county:01077,AL,2026-11-06T11:15:20+00:00,Lauderdale County Alabama official election results 2026 | Lauderdale County AL current election results archive,observed_link_candidate
+us:ar:census-county:05061,AR,2026-11-06T11:15:20+00:00,Howard County Arkansas official election results 2026 | Howard County AR county clerk election results archive,completed_no_new_urls
+us:az:census-county:04013,AZ,2026-11-06T11:15:20+00:00,Maricopa County Arizona official election results 2026 | Maricopa County AZ current results dashboard archive official,observed_link_candidate
+us:ca:census-county:06087,CA,2026-11-06T11:15:20+00:00,Santa Cruz County California official election results 2026 | Santa Cruz County CA elections results archive dashboard,observed_link_candidate
+us:co:census-county:08073,CO,2026-11-06T11:15:20+00:00,Lincoln County Colorado official election results 2026 | Lincoln County CO clerk election results archive,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-11-06T11:15:20+00:00,Honolulu County Hawaii official 2026 general election results | Honolulu HI election results archive official,completed_no_new_urls
+us:ia:census-county:19197,IA,2026-11-06T11:15:20+00:00,Wright County Iowa official election results 2026 | Wright County IA auditor election results archive,observed_link_candidate
+us:id:census-county:16011,ID,2026-11-06T11:15:20+00:00,Bingham County Idaho official election results 2026 | Bingham County ID elections results archive official,observed_link_candidate
+us:il:census-county:17201,IL,2026-11-06T11:15:20+00:00,Winnebago County Illinois official election results 2026 | Winnebago County IL election results archive dashboard official,observed_link_candidate
