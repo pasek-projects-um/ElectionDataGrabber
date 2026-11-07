@@ -4280,3 +4280,13 @@ us:ky:census-county:21199,KY,2026-11-06T18:26:55-05:00,Pulaski County Kentucky o
 us:la:census-county:22071,LA,2026-11-06T18:26:55-05:00,Orleans Parish Louisiana official election results | Orleans Parish Louisiana election results archive official,observed_link_candidate
 us:ma:priority-roster:fitchburg,MA,2026-11-06T18:26:55-05:00,Fitchburg Massachusetts official election results | Fitchburg Massachusetts election results archive official,observed_link_candidate
 us:md:census-county:24043,MD,2026-11-06T18:26:55-05:00,Washington County Maryland official election results | Washington County Maryland election results archive official,observed_link_candidate
+us:ga:census-county:13219,GA,2026-11-07T13:11:15+00:00,Oconee County Georgia November 2026 election results official,observed_link_candidate
+us:ks:census-county:20205,KS,2026-11-07T13:11:15+00:00,Wilson County Kansas 2026 general election results official,observed_link_candidate
+us:ky:census-county:21201,KY,2026-11-07T13:11:15+00:00,Robertson County Kentucky 2026 election results county clerk,observed_link_candidate
+us:ne:census-county:31149,NE,2026-11-07T13:11:15+00:00,Rock County Nebraska November 2026 election results official,incomplete_no_confirmed_local_result_url
+us:nc:census-county:37151,NC,2026-11-07T13:11:15+00:00,Randolph County North Carolina 2026 election results official,observed_link_candidate
+us:ok:census-county:40149,OK,2026-11-07T13:11:15+00:00,Washita County Oklahoma election results November 2026 official,incomplete_no_confirmed_local_result_url
+us:tn:census-county:47143,TN,2026-11-07T13:11:15+00:00,Rhea County Tennessee November 2026 election results official,observed_link_candidate
+us:tx:census-county:48143,TX,2026-11-07T13:11:15+00:00,Erath County Texas 2026 election results official,observed_link_candidate
+us:va:census-county:51153,VA,2026-11-07T13:11:15+00:00,Prince William County Virginia 2026 election results official,observed_link_candidate
+us:mo:census-county:29169,MO,2026-11-07T13:11:15+00:00,Pulaski County Missouri 2026 election results official,observed_link_candidate
