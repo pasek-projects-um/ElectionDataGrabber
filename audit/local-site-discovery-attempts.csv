@@ -4334,3 +4334,23 @@ us:wa:census-county:53065,WA,2026-11-12T18:13:35+00:00,Stevens County Washington
 us:ga:census-county:13221,GA,2026-11-12T18:13:35+00:00,Oglethorpe County Georgia official election results 2026 archive | site:oglethorpecountyga.gov election results archive,observed_link_candidate
 us:ks:census-county:20207,KS,2026-11-12T18:13:35+00:00,Woodson County Kansas official election results 2026 archive | site:woodson-county.cichosting.com election results,observed_link_candidate
 us:ky:census-county:21203,KY,2026-11-12T18:13:35+00:00,Rockcastle County Kentucky official election results 2026 archive | site:rockcastlecountyclerk.com election results,observed_link_candidate
+us:mo:census-county:29171,MO,2026-11-12T19:49:33+00:00,Putnam County Missouri official election results 2026 archive | site:sos.mo.gov Putnam County election results,observed_link_candidate
+us:nc:census-county:37153,NC,2026-11-12T19:49:33+00:00,Richmond County North Carolina official election results 2026 archive | site:richmondnc.com election results,observed_link_candidate
+us:ne:census-county:31151,NE,2026-11-12T19:49:33+00:00,Saline County Nebraska official election results 2026 archive | site:salinecountyne.gov election results,observed_link_candidate
+us:ok:census-county:40151,OK,2026-11-12T19:49:33+00:00,Woods County Oklahoma official election results 2026 archive | site:oklahoma.gov Woods County election results,observed_link_candidate
+us:tn:census-county:47145,TN,2026-11-12T19:49:33+00:00,Roane County Tennessee official election results 2026 archive | site:roanecountytn.gov election results,observed_link_candidate
+us:tx:census-county:48145,TX,2026-11-12T19:49:33+00:00,Falls County Texas official election results 2026 archive | site:co.falls.tx.us election results,observed_link_candidate
+us:va:census-county:51155,VA,2026-11-12T19:49:33+00:00,Pulaski County Virginia official election results 2026 archive | site:pulaskicounty.org registrar election results,observed_link_candidate
+us:mt:census-county:30043,MT,2026-11-12T19:49:33+00:00,Jefferson County Montana official election results 2026 archive | site:jeffersoncounty-mt.gov election results,observed_link_candidate
+us:ny:census-county:36031,NY,2026-11-12T19:49:33+00:00,Essex County New York official election results 2026 archive | site:essexcountyny.gov election results,observed_link_candidate
+us:or:census-county:41007,OR,2026-11-12T19:49:33+00:00,Clatsop County Oregon official election results 2026 archive | site:clatsopcounty.gov election results,observed_link_candidate
+us:ut:census-county:49025,UT,2026-11-12T19:49:33+00:00,Kane County Utah official election results 2026 archive | site:kane.utah.gov election results,observed_link_candidate
+us:al:census-county:01085,AL,2026-11-12T19:49:33+00:00,Lowndes County Alabama official election results 2026 archive | site:sos.alabama.gov Lowndes County election results,observed_link_candidate
+us:ar:census-county:05069,AR,2026-11-12T19:49:33+00:00,Jefferson County Arkansas official election results 2026 archive | site:jeffersoncountyclerk.com election results,completed_no_new_urls
+us:az:census-county:04019,AZ,2026-11-12T19:49:33+00:00,Pima County Arizona official election results 2026 archive | site:pima.gov election results reporting system,observed_link_candidate
+us:ca:census-county:06095,CA,2026-11-12T19:49:33+00:00,Solano County California official election results 2026 archive | site:solanocounty.gov election results,observed_link_candidate
+us:co:census-county:08081,CO,2026-11-12T19:49:33+00:00,Moffat County Colorado official election results 2026 archive | site:moffatcounty.colorado.gov election results,observed_link_candidate
+us:hi:census-county:15003,HI,2026-11-12T19:49:33+00:00,Honolulu County Hawaii official election results 2026 archive | site:elections.hawaii.gov Honolulu results,completed_no_new_urls
+us:ia:census-county:19007,IA,2026-11-12T19:49:33+00:00,Appanoose County Iowa official election results 2026 archive | site:appanoosecounty.iowa.gov election results,observed_link_candidate
+us:id:census-county:16021,ID,2026-11-12T19:49:33+00:00,Boundary County Idaho official election results 2026 archive | site:boundarycountyid.org election results,observed_link_candidate
+us:il:priority-roster:danville,IL,2026-11-12T19:49:33+00:00,Danville Illinois official election results 2026 archive | site:vercounty.org Danville election results,observed_link_candidate
