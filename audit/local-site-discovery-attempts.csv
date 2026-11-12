@@ -4294,3 +4294,23 @@ us:mt:census-county:30041,MT,2026-11-08T13:48:36+00:00,Hill County Montana 2026 
 us:or:census-county:41005,OR,2026-11-08T13:48:36+00:00,Clackamas County Oregon November 2026 election results official,observed_link_candidate
 us:ut:census-county:49023,UT,2026-11-08T13:48:36+00:00,Juab County Utah 2026 general election results county clerk,observed_link_candidate
 us:ny:census-county:36029,NY,2026-11-08T13:48:36+00:00,Erie County New York 2026 general election results board elections,incomplete
+us:dc:priority-roster:central,DC,2026-11-12T17:25:27+00:00,District of Columbia Board of Elections official results 2026 current dashboard | District of Columbia election results archive official historical,completed_no_new_urls
+us:nv:census-county:32009,NV,2026-11-12T17:25:27+00:00,Esmeralda County Nevada official election results 2026 current | Esmeralda County Nevada election results archive official,completed_no_new_urls
+us:pa:county:bedford,PA,2026-11-12T17:25:27+00:00,Bedford County Pennsylvania official election results 2026 current archive | site:bedfordcountypa.org election results archive,observed_link_candidate
+us:sc:census-county:45051,SC,2026-11-12T17:25:27+00:00,Horry County South Carolina official election results 2026 current | Horry County South Carolina election results archive official,observed_link_candidate
+us:sd:census-county:46015,SD,2026-11-12T17:25:27+00:00,Brule County South Dakota official election results 2026 | Brule County South Dakota election results archive official,observed_link_candidate
+us:wv:census-county:54031,WV,2026-11-12T17:25:27+00:00,Hardy County West Virginia official election results 2026 | Hardy County West Virginia election results archive official,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-11-12T17:25:27+00:00,Alaska official 2026 general election results current dashboard | Alaska official historical election results archive,completed_no_new_urls
+us:al:census-county:01083,AL,2026-11-12T17:25:27+00:00,Limestone County Alabama official election results 2026 | Limestone County Alabama election results archive official,observed_link_candidate
+us:ar:census-county:05067,AR,2026-11-12T17:25:27+00:00,Jackson County Arkansas official election results 2026 | Jackson County Arkansas election results archive official,completed_no_new_urls
+us:az:census-county:04012,AZ,2026-11-12T17:25:27+00:00,La Paz County Arizona official election results 2026 | La Paz County Arizona election results archive official,observed_link_candidate
+us:ca:census-county:06093,CA,2026-11-12T17:25:27+00:00,Siskiyou County California official election results 2026 | Siskiyou County California election results archive official,observed_link_candidate
+us:co:census-county:08079,CO,2026-11-12T17:25:27+00:00,Mineral County Colorado official election results 2026 | Mineral County Colorado election results archive official,completed_no_new_urls
+us:hi:census-county:15007,HI,2026-11-12T17:25:27+00:00,Kauai County Hawaii official election results 2026 current | Kauai County Hawaii election results archive official,completed_no_new_urls
+us:ia:census-county:19005,IA,2026-11-12T17:25:27+00:00,Allamakee County Iowa official election results 2026 | Allamakee County Iowa election results archive official,observed_link_candidate
+us:id:census-county:16019,ID,2026-11-12T17:25:27+00:00,Bonneville County Idaho official election results 2026 current | Bonneville County Idaho election results archive official,observed_link_candidate
+us:il:priority-roster:chicago,IL,2026-11-12T17:25:27+00:00,Chicago Board of Election Commissioners official results 2026 | Chicago election results archive official,observed_link_candidate
+us:me:municipality:east-machias,ME,2026-11-12T17:25:27+00:00,East Machias Maine official election results 2026 | East Machias Maine historical election results official,observed_link_candidate
+us:mi:county:barry,MI,2026-11-12T17:25:27+00:00,Barry County Michigan official election results 2026 | Barry County Michigan election results archive official,observed_link_candidate
+us:oh:county:stark,OH,2026-11-12T17:25:27+00:00,Stark County Ohio official election results 2026 | Stark County Ohio election results archive official,observed_link_candidate
+us:wi:ltsb2026:barron-crystal-lake-4431ab0205947c86,WI,2026-11-12T17:25:27+00:00,Town of Crystal Lake Barron County Wisconsin official election results 2026 | Barron County Wisconsin election results archive official,observed_link_candidate
