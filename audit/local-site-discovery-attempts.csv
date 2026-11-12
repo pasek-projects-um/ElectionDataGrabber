@@ -4314,3 +4314,23 @@ us:me:municipality:east-machias,ME,2026-11-12T17:25:27+00:00,East Machias Maine 
 us:mi:county:barry,MI,2026-11-12T17:25:27+00:00,Barry County Michigan official election results 2026 | Barry County Michigan election results archive official,observed_link_candidate
 us:oh:county:stark,OH,2026-11-12T17:25:27+00:00,Stark County Ohio official election results 2026 | Stark County Ohio election results archive official,observed_link_candidate
 us:wi:ltsb2026:barron-crystal-lake-4431ab0205947c86,WI,2026-11-12T17:25:27+00:00,Town of Crystal Lake Barron County Wisconsin official election results 2026 | Barron County Wisconsin election results archive official,observed_link_candidate
+us:wy:census-county:56005,WY,2026-11-12T18:13:35+00:00,Campbell County Wyoming official election results 2026 | Campbell County Wyoming election results archive official,observed_link_candidate
+us:ct:municipality:old-saybrook,CT,2026-11-12T18:13:35+00:00,Old Saybrook Connecticut official election results 2026 current | Old Saybrook Connecticut election results archive official,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-12T18:13:35+00:00,Sussex County Delaware official election results 2026 current | Sussex County Delaware election results archive official,completed_no_new_urls
+us:fl:census-county:12081,FL,2026-11-12T18:13:35+00:00,Manatee County Florida official election results 2026 current | Manatee County Florida election results archive official,observed_link_candidate
+us:in:census-county:18021,IN,2026-11-12T18:13:35+00:00,Clay County Indiana official election results 2026 current | Clay County Indiana election results archive official,observed_link_candidate
+us:la:census-county:22073,LA,2026-11-12T18:13:35+00:00,Ouachita Parish Louisiana official election results 2026 current | Ouachita Parish Louisiana election results archive official,observed_link_candidate
+us:ma:priority-roster:florida,MA,2026-11-12T18:13:35+00:00,Town of Florida Massachusetts official election results 2026 | Florida Massachusetts election results archive town clerk,completed_no_new_urls
+us:md:census-county:24045,MD,2026-11-12T18:13:35+00:00,Wicomico County Maryland official election results 2026 current | Wicomico County Maryland election results archive official,observed_link_candidate
+us:mn:census-county:27001,MN,2026-11-12T18:13:35+00:00,Aitkin County Minnesota official election results 2026 current | Aitkin County Minnesota election results archive official,observed_link_candidate
+us:ms:census-county:28001,MS,2026-11-12T18:13:35+00:00,Adams County Mississippi official election results 2026 current | Adams County Mississippi election results archive official,observed_link_candidate
+us:nd:census-county:38047,ND,2026-11-12T18:13:35+00:00,Logan County North Dakota official election results 2026 current | Logan County North Dakota election results archive official,observed_link_candidate
+us:nh:priority-roster:franconia,NH,2026-11-12T18:13:35+00:00,Franconia New Hampshire official election results 2026 | Franconia New Hampshire election results archive town clerk,observed_link_candidate
+us:nj:census-county:34019,NJ,2026-11-12T18:13:35+00:00,Hunterdon County New Jersey official election results 2026 current | Hunterdon County New Jersey election results archive official,observed_link_candidate
+us:nm:census-county:35011,NM,2026-11-12T18:13:35+00:00,De Baca County New Mexico official election results 2026 current | De Baca County New Mexico election results archive official,observed_link_candidate
+us:ri:priority-roster:warwick,RI,2026-11-12T18:13:35+00:00,Warwick Rhode Island official election results 2026 current | Warwick Rhode Island election results archive official,observed_link_candidate
+us:vt:priority-roster:fletcher,VT,2026-11-12T18:13:35+00:00,Fletcher Vermont official election results 2026 | Fletcher Vermont election results archive town clerk,completed_no_new_urls
+us:wa:census-county:53065,WA,2026-11-12T18:13:35+00:00,Stevens County Washington official election results 2026 archive | site:stevenscountywa.gov November 3 2026 election results,observed_link_candidate
+us:ga:census-county:13221,GA,2026-11-12T18:13:35+00:00,Oglethorpe County Georgia official election results 2026 archive | site:oglethorpecountyga.gov election results archive,observed_link_candidate
+us:ks:census-county:20207,KS,2026-11-12T18:13:35+00:00,Woodson County Kansas official election results 2026 archive | site:woodson-county.cichosting.com election results,observed_link_candidate
+us:ky:census-county:21203,KY,2026-11-12T18:13:35+00:00,Rockcastle County Kentucky official election results 2026 archive | site:rockcastlecountyclerk.com election results,observed_link_candidate
