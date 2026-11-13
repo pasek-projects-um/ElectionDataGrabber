@@ -4474,3 +4474,23 @@ us:hi:census-county:15007,HI,2026-11-13T10:37:41+00:00,Kauai County Hawaii elect
 us:ia:census-county:19013,IA,2026-11-13T10:37:41+00:00,Black Hawk County Iowa election results official | site:blackhawkcountyelections.iowa.gov election results archive,observed_link_candidate
 us:id:census-county:16027,ID,2026-11-13T10:37:41+00:00,Canyon County Idaho election results official | site:elections.canyoncounty.id.gov results 2026,observed_link_candidate
 us:il:priority-roster:rockford,IL,2026-11-13T10:37:41+00:00,Rockford Illinois Board Election Commissioners results official | site:voterockfordil.gov election results archive,observed_link_candidate
+us:md:census-county:24003,MD,2026-11-13T11:28:21+00:00,Anne Arundel County Maryland election results official | site:aacounty.org elections results archive,observed_link_candidate
+us:me:municipality:easton,ME,2026-11-13T11:28:21+00:00,Easton Maine election results official | site:eastonme.com election results official,observed_link_candidate
+us:mi:county:berrien,MI,2026-11-13T11:28:21+00:00,Berrien County Michigan election results official | site:berriencountymi.gov election results 2026,observed_link_candidate
+us:mn:census-county:27007,MN,2026-11-13T11:28:21+00:00,Beltrami County Minnesota election results official | site:beltramicountymn.gov election results 2026,completed_no_new_urls
+us:nv:census-county:32015,NV,2026-11-13T11:28:21+00:00,Lander County Nevada election results official | site:landercountynv.org election results archive,completed_no_new_urls
+us:oh:county:tuscarawas,OH,2026-11-13T11:28:21+00:00,Tuscarawas County Ohio election results official | site:boe.ohio.gov/tuscarawas election results archive,observed_link_candidate
+us:pa:county:bradford,PA,2026-11-13T11:28:21+00:00,Bradford County Pennsylvania election results official | site:bradfordcountypa.gov election results archive,completed_no_new_urls
+us:sc:census-county:45057,SC,2026-11-13T11:28:21+00:00,Lancaster County South Carolina election results official | site:lancastercountysc.gov election results 2026,completed_no_new_urls
+us:sd:census-county:46021,SD,2026-11-13T11:28:21+00:00,Campbell County South Dakota election results official | site:sd.gov Campbell County election results 2026,completed_no_new_urls
+us:wi:ltsb2026:barron-dovre-f6696c47106d34c9,WI,2026-11-13T11:28:21+00:00,Town of Dovre Wisconsin election results official | Town of Dovre Barron County election results official clerk,completed_no_new_urls
+us:wv:census-county:54037,WV,2026-11-13T11:28:21+00:00,Jefferson County West Virginia election results official | site:jeffersoncountywv.org election results archive,completed_no_new_urls
+us:ct:municipality:plainville,CT,2026-11-13T11:28:21+00:00,Plainville Connecticut election results official | site:plainvillect.com election results town clerk,completed_no_new_urls
+us:de:census-county:10001,DE,2026-11-13T11:28:21+00:00,Kent County Delaware election results official | site:elections.delaware.gov results Kent County 2026,completed_no_new_urls
+us:fl:census-county:12087,FL,2026-11-13T11:28:21+00:00,Monroe County Florida election results official | site:votemonroeflkeys.gov election results 2026,completed_no_new_urls
+us:ga:census-county:13229,GA,2026-11-13T11:28:21+00:00,Pierce County Georgia election results official | site:piercecountyga.gov election results 2026,observed_link_candidate
+us:in:census-county:18029,IN,2026-11-13T11:28:21+00:00,Dearborn County Indiana election results official | site:dearborncounty.org election results 2026,completed_no_new_urls
+us:ks:census-county:20005,KS,2026-11-13T11:28:21+00:00,Atchison County Kansas election results official | site:atchisoncountyks.org 2026 election results canvass,observed_link_candidate
+us:ky:census-county:21211,KY,2026-11-13T11:28:21+00:00,Shelby County Kentucky election results official | site:shelbycountyclerk.ky.gov election results archive,observed_link_candidate
+us:la:census-county:22081,LA,2026-11-13T11:28:21+00:00,Red River Parish Louisiana election results official | site:sos.la.gov election results Red River Parish 2026,completed_no_new_urls
+us:ma:priority-roster:freetown,MA,2026-11-13T11:28:21+00:00,Freetown Massachusetts election results official | site:freetownma.gov 2026 election results,observed_link_candidate
