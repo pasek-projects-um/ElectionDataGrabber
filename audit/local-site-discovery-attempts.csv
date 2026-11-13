@@ -4534,3 +4534,23 @@ us:ma:priority-roster:gardner,MA,2026-11-13T16:36:26+00:00,Gardner Massachusetts
 us:md:census-county:24005,MD,2026-11-13T16:36:26+00:00,Baltimore County Maryland election results official | site:baltimorecountymd.gov election results,observed_link_candidate
 us:me:municipality:eastport,ME,2026-11-13T16:36:26+00:00,Eastport Maine election results official | site:eastport-me.gov election results,observed_link_candidate
 us:mi:county:branch,MI,2026-11-13T16:36:26+00:00,Branch County Michigan election results official | site:branchcounty.us election results archive,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-11-13T17:20:15+00:00,Alaska Division of Elections official results historical archive 2026 | site:elections.alaska.gov election results archive dashboard,completed_no_new_urls
+us:de:census-county:10005,DE,2026-11-13T17:20:15+00:00,Sussex County Delaware official election results municipal school archive | site:sussexcountyde.gov election results voting archive,observed_link_candidate
+us:mn:census-county:27009,MN,2026-11-13T17:20:15+00:00,Benton County Minnesota official election results archive vendor dashboard | site:co.benton.mn.us elections results historical,observed_link_candidate
+us:nv:census-county:32017,NV,2026-11-13T17:20:15+00:00,Lincoln County Nevada official election results archive clerk | site:lincolncountynv.gov election results,observed_link_candidate
+us:oh:county:union,OH,2026-11-13T17:20:15+00:00,Union County Ohio official election results archive board elections | site:unioncountyohio.gov election results,observed_link_candidate
+us:pa:county:bucks,PA,2026-11-13T17:20:15+00:00,Bucks County Pennsylvania official election results archive current results | site:buckscounty.gov election results archive,observed_link_candidate
+us:sc:census-county:45059,SC,2026-11-13T17:20:15+00:00,Laurens County South Carolina official election results archive | site:laurenscountysc.gov election results,observed_link_candidate
+us:sd:census-county:46023,SD,2026-11-13T17:20:15+00:00,Charles Mix County South Dakota official election results archive | site:charlesmix.sdcounties.org election results,observed_link_candidate
+us:wi:ltsb2026:barron-doyle-2f45d29ad2b9450a,WI,2026-11-13T17:20:15+00:00,Town of Doyle Barron County Wisconsin official election results website | site:townofdoyle.com election results Barron,observed_link_candidate
+us:wv:census-county:54039,WV,2026-11-13T17:20:15+00:00,Kanawha County West Virginia official election results archive | site:kanawha.us election results archive,observed_link_candidate
+us:al:census-county:01095,AL,2026-11-13T17:20:15+00:00,Marshall County Alabama official election results archive probate | site:marshallco.org OR site:marshallco.us election results,observed_link_candidate
+us:ar:census-county:05079,AR,2026-11-13T17:20:15+00:00,Lincoln County Arkansas official election results archive clerk | site:lincolncountyar.org election results,observed_link_candidate
+us:az:census-county:04003,AZ,2026-11-13T17:20:15+00:00,Cochise County Arizona official election results audit archive dashboard | site:cochise.az.gov election results audit canvass,completed_no_new_urls
+us:ca:census-county:06105,CA,2026-11-13T17:20:15+00:00,Trinity County California official election results archive current results | site:trinitycounty.org OR site:trinitycounty.ca.gov election results,observed_link_candidate
+us:co:census-county:08091,CO,2026-11-13T17:20:15+00:00,Ouray County Colorado official election results current archive | site:ouraycountyco.gov election results audit,observed_link_candidate
+us:ia:census-county:19017,IA,2026-11-13T17:20:15+00:00,Bremer County Iowa official election results archive current | site:bremercountyelections.iowa.gov elections results,observed_link_candidate
+us:id:census-county:16031,ID,2026-11-13T17:20:15+00:00,Cassia County Idaho official election results archive current | site:cassia.gov election results,observed_link_candidate
+us:il:census-county:17003,IL,2026-11-13T17:20:15+00:00,Alexander County Illinois official election results archive county clerk | site:alexandercountyil.org OR site:alexandercounty.illinois.gov election results,completed_no_new_urls
+us:mo:census-county:29179,MO,2026-11-13T17:20:15+00:00,Reynolds County Missouri official election results archive county clerk | site:reynoldscountymo.gov election results,observed_link_candidate
+us:ms:census-county:28009,MS,2026-11-13T17:20:15+00:00,Benton County Mississippi official election results county election commission archive | site:bentoncountyms.gov election results,observed_link_candidate
