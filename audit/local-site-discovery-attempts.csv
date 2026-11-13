@@ -4354,3 +4354,23 @@ us:hi:census-county:15003,HI,2026-11-12T19:49:33+00:00,Honolulu County Hawaii of
 us:ia:census-county:19007,IA,2026-11-12T19:49:33+00:00,Appanoose County Iowa official election results 2026 archive | site:appanoosecounty.iowa.gov election results,observed_link_candidate
 us:id:census-county:16021,ID,2026-11-12T19:49:33+00:00,Boundary County Idaho official election results 2026 archive | site:boundarycountyid.org election results,observed_link_candidate
 us:il:priority-roster:danville,IL,2026-11-12T19:49:33+00:00,Danville Illinois official election results 2026 archive | site:vercounty.org Danville election results,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-11-13T00:43:37+00:00,Alaska Division of Elections 2026 election results official archive | site:elections.alaska.gov 2026 general election results export,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-13T00:43:37+00:00,District of Columbia Board of Elections 2026 general election results official | site:dcboe.org election results data download archive,completed_no_new_urls
+us:me:municipality:east-millinocket,ME,2026-11-13T00:43:37+00:00,East Millinocket Maine official election results 2026 | site:eastmillinocket.org election results town clerk,observed_link_candidate
+us:mi:county:bay,MI,2026-11-13T00:43:37+00:00,Bay County Michigan election results 2026 official | site:baycountymi.gov election results archive clerk,observed_link_candidate
+us:nv:census-county:32011,NV,2026-11-13T00:43:37+00:00,Eureka County Nevada election results 2026 official archive | site:eurekacountynv.gov election results clerk recorder,observed_link_candidate
+us:oh:county:summit,OH,2026-11-13T00:43:37+00:00,Summit County Ohio election results 2026 official | site:summitcountyboe.gov election results archive,observed_link_candidate
+us:pa:county:berks,PA,2026-11-13T00:43:37+00:00,Berks County Pennsylvania election results 2026 official | site:berkspa.gov election results archive,observed_link_candidate
+us:sc:census-county:45053,SC,2026-11-13T00:43:37+00:00,Jasper County South Carolina election results 2026 official | site:jaspercountysc.gov election results archive,observed_link_candidate
+us:sd:census-county:46017,SD,2026-11-13T00:43:37+00:00,Buffalo County South Dakota election results 2026 official | site:buffalocountysd.com election results auditor,observed_link_candidate
+us:wi:ltsb2026:barron-cumberland-3f126f0905496c40,WI,2026-11-13T00:43:37+00:00,Town of Cumberland Barron County Wisconsin election results 2026 official | site:townofcumberland.com election results clerk Wisconsin,observed_link_candidate
+us:wv:census-county:54033,WV,2026-11-13T00:43:37+00:00,Harrison County West Virginia election results 2026 official | site:harrisoncountywv.com election results county clerk archive,observed_link_candidate
+us:ct:municipality:orange,CT,2026-11-13T00:43:37+00:00,Orange Connecticut election results 2026 official | site:orange-ct.gov election results town clerk,observed_link_candidate
+us:de:census-county:10003,DE,2026-11-13T00:43:37+00:00,New Castle County Delaware election results 2026 official alternative | site:elections.delaware.gov New Castle County 2026 general results,completed_no_new_urls
+us:fl:census-county:12083,FL,2026-11-13T00:43:37+00:00,Marion County Florida election results 2026 official | site:votemarion.gov 2026 election results archive,completed_no_new_urls
+us:ga:census-county:13223,GA,2026-11-13T00:43:37+00:00,Paulding County Georgia election results 2026 official | site:paulding.gov elections results archive Paulding County,observed_link_candidate
+us:in:census-county:18023,IN,2026-11-13T00:43:37+00:00,Clinton County Indiana election results 2026 official | site:clintonco.com elections results archive Clinton County Indiana,observed_link_candidate
+us:ks:census-county:20209,KS,2026-11-13T00:43:37+00:00,Wyandotte County Kansas election results 2026 official | site:wycokck.org election results archive Wyandotte County,observed_link_candidate
+us:ky:census-county:21205,KY,2026-11-13T00:43:37+00:00,Rowan County Kentucky election results 2026 official | site:rowancountyclerk.com election results archive Rowan County Kentucky,observed_link_candidate
+us:la:census-county:22075,LA,2026-11-13T00:43:37+00:00,Plaquemines Parish Louisiana election results 2026 official | site:plaqueminesparish.com election results archive registrar voters,completed_no_new_urls
+us:ma:priority-roster:foxborough,MA,2026-11-13T00:43:37+00:00,Foxborough Massachusetts election results 2026 official | site:foxboroughma.gov election results archive town clerk,observed_link_candidate
