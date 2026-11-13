@@ -4494,3 +4494,23 @@ us:ks:census-county:20005,KS,2026-11-13T11:28:21+00:00,Atchison County Kansas el
 us:ky:census-county:21211,KY,2026-11-13T11:28:21+00:00,Shelby County Kentucky election results official | site:shelbycountyclerk.ky.gov election results archive,observed_link_candidate
 us:la:census-county:22081,LA,2026-11-13T11:28:21+00:00,Red River Parish Louisiana election results official | site:sos.la.gov election results Red River Parish 2026,completed_no_new_urls
 us:ma:priority-roster:freetown,MA,2026-11-13T11:28:21+00:00,Freetown Massachusetts election results official | site:freetownma.gov 2026 election results,observed_link_candidate
+us:ms:census-county:28007,MS,2026-11-13T12:49:43+00:00,Attala County Mississippi election results official | site:sos.ms.gov Attala County 2026 election results,completed_no_new_urls
+us:nd:census-county:38053,ND,2026-11-13T12:49:43+00:00,McKenzie County North Dakota election results official | site:nd.gov McKenzie County 2026 election results official,completed_no_new_urls
+us:nh:priority-roster:fremont,NH,2026-11-13T12:49:43+00:00,Fremont New Hampshire election results official | site:fremont.nh.gov election results 2026,observed_link_candidate
+us:nj:census-county:34001,NJ,2026-11-13T12:49:43+00:00,Atlantic County New Jersey election results official | site:atlanticcountyclerk.org election results archive,observed_link_candidate
+us:nm:census-county:35017,NM,2026-11-13T12:49:43+00:00,Grant County New Mexico election results official | site:grantcountynm.gov election results archive,observed_link_candidate
+us:ri:priority-roster:westerly,RI,2026-11-13T12:49:43+00:00,Westerly Rhode Island election results official | site:westerlyri.gov election results 2026,observed_link_candidate
+us:vt:priority-roster:glover,VT,2026-11-13T12:49:43+00:00,Glover Vermont election results official | site:glovervt.org election results,completed_no_new_urls
+us:wa:census-county:53071,WA,2026-11-13T12:49:43+00:00,Walla Walla County Washington election results official | site:co.walla-walla.wa.us election results archive,completed_no_new_urls
+us:wy:census-county:56011,WY,2026-11-13T12:49:43+00:00,Crook County Wyoming election results official | site:crookcounty.wy.gov election results 2026,completed_no_new_urls
+us:al:census-county:01093,AL,2026-11-13T12:49:43+00:00,Marion County Alabama election results official | site:marioncountyal.com election results,completed_no_new_urls
+us:ar:census-county:05077,AR,2026-11-13T12:49:43+00:00,Lee County Arkansas election results official | site:leecounty.arkansas.gov election results,completed_no_new_urls
+us:az:census-county:04027,AZ,2026-11-13T12:49:43+00:00,Yuma County Arizona election results official | site:yumacountyaz.gov election results 2026,completed_no_new_urls
+us:ca:census-county:06103,CA,2026-11-13T12:49:43+00:00,Tehama County California election results official | site:tehama.gov election results 2026,observed_link_candidate
+us:co:census-county:08089,CO,2026-11-13T12:49:43+00:00,Otero County Colorado election results official | site:oterocounty.colorado.gov election results,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-11-13T12:49:43+00:00,Honolulu County Hawaii election results official | site:honolulu.gov elections results 2026,completed_no_new_urls
+us:ia:census-county:19015,IA,2026-11-13T12:49:43+00:00,Boone County Iowa election results official | site:boonecounty.iowa.gov election results archive,observed_link_candidate
+us:id:census-county:16029,ID,2026-11-13T12:49:43+00:00,Caribou County Idaho election results official | site:results.voteidaho.gov caribou county 2026,observed_link_candidate
+us:il:census-county:17001,IL,2026-11-13T12:49:43+00:00,Adams County Illinois election results official | site:adamscountyil.gov election results archive,observed_link_candidate
+us:mo:census-county:29177,MO,2026-11-13T12:49:43+00:00,Ray County Missouri election results official | site:raycountymo.com election results 2026,observed_link_candidate
+us:mt:census-county:30049,MT,2026-11-13T12:49:43+00:00,Lewis and Clark County Montana election results official | site:lccountymt.gov election results 2026,observed_link_candidate
