@@ -4382,7 +4382,7 @@ us:nh:priority-roster:franklin,NH,2026-11-13T02:02:50+00:00,Franklin New Hampshi
 us:nj:census-county:34021,NJ,2026-11-13T02:02:50+00:00,Mercer County New Jersey official election results 2026 | site:mercercounty.org election results archive clerk,observed_link_candidate
 us:nm:census-county:35013,NM,2026-11-13T02:02:50+00:00,Dona Ana County New Mexico official election results 2026 | site:donaanacounty.org election results archive clerk,completed_no_new_urls
 us:ri:priority-roster:west-greenwich,RI,2026-11-13T02:02:50+00:00,West Greenwich Rhode Island official election results 2026 | site:westgreenwichri.org election results town clerk archive,completed_no_new_urls
-us:vt:priority-roster:franklin,VT,2026-11-13T02:02:50+00:00,Franklin County Vermont official election results 2026 | site:vermont.gov Franklin County election results archive town clerk,observed_link_candidate
+us:vt:priority-roster:franklin,VT,2026-11-13T02:02:50+00:00,Franklin County Vermont official election results 2026 | site:vermont.gov Franklin County election results archive town clerk,completed_no_new_urls
 us:wa:census-county:53067,WA,2026-11-13T02:02:50+00:00,Thurston County Washington official election results 2026 | site:thurstoncountywa.gov elections results archive,observed_link_candidate
 us:wy:census-county:56007,WY,2026-11-13T02:02:50+00:00,Carbon County Wyoming official election results 2026 | site:carbonwy.com election results archive clerk,observed_link_candidate
 us:al:census-county:01087,AL,2026-11-13T02:02:50+00:00,Macon County Alabama official election results 2026 | site:maconalabama.com election results archive probate,completed_no_new_urls
