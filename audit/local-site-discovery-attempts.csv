@@ -4514,3 +4514,23 @@ us:id:census-county:16029,ID,2026-11-13T12:49:43+00:00,Caribou County Idaho elec
 us:il:census-county:17001,IL,2026-11-13T12:49:43+00:00,Adams County Illinois election results official | site:adamscountyil.gov election results archive,observed_link_candidate
 us:mo:census-county:29177,MO,2026-11-13T12:49:43+00:00,Ray County Missouri election results official | site:raycountymo.com election results 2026,observed_link_candidate
 us:mt:census-county:30049,MT,2026-11-13T12:49:43+00:00,Lewis and Clark County Montana election results official | site:lccountymt.gov election results 2026,observed_link_candidate
+us:nc:census-county:37159,NC,2026-11-13T16:36:26+00:00,Rowan County North Carolina election results official | site:rowancountync.gov election results archive,observed_link_candidate
+us:ne:census-county:31157,NE,2026-11-13T16:36:26+00:00,Scotts Bluff County Nebraska election results official | site:scottsbluffcounty.org election results,observed_link_candidate
+us:ny:census-county:36037,NY,2026-11-13T16:36:26+00:00,Genesee County New York election results official | site:co.genesee.ny.us election results archive,completed_no_new_urls
+us:ok:census-county:40003,OK,2026-11-13T16:36:26+00:00,Alfalfa County Oklahoma election results official | site:alfalfa.okcounties.org election results,completed_no_new_urls
+us:or:census-county:41013,OR,2026-11-13T16:36:26+00:00,Crook County Oregon election results official | site:co.crook.or.us election results archive,completed_no_new_urls
+us:tn:census-county:47151,TN,2026-11-13T16:36:26+00:00,Scott County Tennessee election results official | site:scottcountytn.gov election results,observed_link_candidate
+us:tx:census-county:48151,TX,2026-11-13T16:36:26+00:00,Fisher County Texas election results official | site:co.fisher.tx.us election results,completed_no_new_urls
+us:ut:census-county:49031,UT,2026-11-13T16:36:26+00:00,Piute County Utah election results official | site:piute.utah.gov election results,completed_no_new_urls
+us:va:census-county:51161,VA,2026-11-13T16:36:26+00:00,Roanoke County Virginia election results official | site:roanokecountyva.gov election results,observed_link_candidate
+us:ct:municipality:plymouth,CT,2026-11-13T16:36:26+00:00,Plymouth Connecticut election results official | site:plymouthct.us election results,observed_link_candidate
+us:fl:census-county:12089,FL,2026-11-13T16:36:26+00:00,Nassau County Florida election results official | site:votenassaufl.gov election results archive,observed_link_candidate
+us:ga:census-county:13231,GA,2026-11-13T16:36:26+00:00,Pike County Georgia election results official | site:pikecountyga.gov election results,observed_link_candidate
+us:in:census-county:18031,IN,2026-11-13T16:36:26+00:00,Decatur County Indiana election results official | site:decaturcounty.in.gov election results archive,observed_link_candidate
+us:ks:census-county:20007,KS,2026-11-13T16:36:26+00:00,Barber County Kansas election results official | site:barbercounty.net election results,completed_no_new_urls
+us:ky:census-county:21213,KY,2026-11-13T16:36:26+00:00,Simpson County Kentucky election results official | site:simpsoncountyclerk.com election results,completed_no_new_urls
+us:la:census-county:22083,LA,2026-11-13T16:36:26+00:00,Richland Parish Louisiana election results official | site:geauxvote.com Richland Parish election results,completed_no_new_urls
+us:ma:priority-roster:gardner,MA,2026-11-13T16:36:26+00:00,Gardner Massachusetts election results official | site:gardner-ma.gov election results archive,observed_link_candidate
+us:md:census-county:24005,MD,2026-11-13T16:36:26+00:00,Baltimore County Maryland election results official | site:baltimorecountymd.gov election results,observed_link_candidate
+us:me:municipality:eastport,ME,2026-11-13T16:36:26+00:00,Eastport Maine election results official | site:eastport-me.gov election results,observed_link_candidate
+us:mi:county:branch,MI,2026-11-13T16:36:26+00:00,Branch County Michigan election results official | site:branchcounty.us election results archive,completed_no_new_urls
