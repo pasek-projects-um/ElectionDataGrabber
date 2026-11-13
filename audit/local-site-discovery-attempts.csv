@@ -4454,3 +4454,23 @@ us:ks:census-county:20003,KS,2026-11-13T07:58:17+00:00,Anderson County Kansas of
 us:ky:census-county:21209,KY,2026-11-13T07:58:17+00:00,Scott County Kentucky official 2026 election results county clerk archive | Scott County Kentucky 2026 election results county clerk official,observed_link_candidate
 us:la:census-county:22079,LA,2026-11-13T07:58:17+00:00,Rapides Parish Louisiana official 2026 election results clerk current | Rapides Parish 2026 election results GeauxVote official clerk,observed_link_candidate
 us:ma:priority-roster:franklin,MA,2026-11-13T07:58:17+00:00,Franklin Massachusetts official town election results 2026 clerk archive | Franklin Massachusetts election results archive town clerk official site:franklinma.gov,observed_link_candidate
+us:mo:census-county:29175,MO,2026-11-13T10:37:41+00:00,Randolph County Missouri election results official | site:randolphcountyclerkmo.com election results archive,observed_link_candidate
+us:mt:census-county:30047,MT,2026-11-13T10:37:41+00:00,Lake County Montana election results official | site:lakemt.gov election results 2026 Lake County,completed_no_new_urls
+us:nc:census-county:37157,NC,2026-11-13T10:37:41+00:00,Rockingham County North Carolina election results official | site:rockinghamcountync.gov Board Elections results archive,completed_no_new_urls
+us:ne:census-county:31155,NE,2026-11-13T10:37:41+00:00,Saunders County Nebraska election results official | site:saunderscounty.ne.gov election results archive,observed_link_candidate
+us:ny:census-county:36035,NY,2026-11-13T10:37:41+00:00,Fulton County New York election results official | site:fultoncountyny.gov election results archive,completed_no_new_urls
+us:ok:census-county:40001,OK,2026-11-13T10:37:41+00:00,Adair County Oklahoma election results official | site:oklahoma.gov elections Adair County results,completed_no_new_urls
+us:or:census-county:41011,OR,2026-11-13T10:37:41+00:00,Coos County Oregon election results official | site:cooscountyor.gov election results archive,completed_no_new_urls
+us:tn:census-county:47149,TN,2026-11-13T10:37:41+00:00,Rutherford County Tennessee election results official | site:rutherfordcountytn.gov election results archive,observed_link_candidate
+us:tx:census-county:48149,TX,2026-11-13T10:37:41+00:00,Fayette County Texas election results official | site:co.fayette.tx.us elections results,completed_no_new_urls
+us:ut:census-county:49029,UT,2026-11-13T10:37:41+00:00,Morgan County Utah election results official | site:morgancountyutah.gov election results 2026,completed_no_new_urls
+us:va:census-county:51159,VA,2026-11-13T10:37:41+00:00,Richmond County Virginia election results official | site:co.richmond.va.us election results,completed_no_new_urls
+us:al:census-county:01091,AL,2026-11-13T10:37:41+00:00,Marengo County Alabama election results official | site:marengocountyal.com election results,completed_no_new_urls
+us:ar:census-county:05075,AR,2026-11-13T10:37:41+00:00,Lawrence County Arkansas election results official | site:lawrencecountyar.com election results,completed_no_new_urls
+us:az:census-county:04025,AZ,2026-11-13T10:37:41+00:00,Yavapai County Arizona election results official | site:yavapaivotes.gov election results 2026,completed_no_new_urls
+us:ca:census-county:06101,CA,2026-11-13T10:37:41+00:00,Sutter County California election results official | site:sutter.gov elections 2026 results,completed_no_new_urls
+us:co:census-county:08087,CO,2026-11-13T10:37:41+00:00,Morgan County Colorado election results official | site:morgancounty.colorado.gov election results 2026,completed_no_new_urls
+us:hi:census-county:15007,HI,2026-11-13T10:37:41+00:00,Kauai County Hawaii election results official | site:kauai.gov elections results archive,completed_no_new_urls
+us:ia:census-county:19013,IA,2026-11-13T10:37:41+00:00,Black Hawk County Iowa election results official | site:blackhawkcountyelections.iowa.gov election results archive,observed_link_candidate
+us:id:census-county:16027,ID,2026-11-13T10:37:41+00:00,Canyon County Idaho election results official | site:elections.canyoncounty.id.gov results 2026,observed_link_candidate
+us:il:priority-roster:rockford,IL,2026-11-13T10:37:41+00:00,Rockford Illinois Board Election Commissioners results official | site:voterockfordil.gov election results archive,observed_link_candidate
