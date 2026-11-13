@@ -4554,3 +4554,23 @@ us:id:census-county:16031,ID,2026-11-13T17:20:15+00:00,Cassia County Idaho offic
 us:il:census-county:17003,IL,2026-11-13T17:20:15+00:00,Alexander County Illinois official election results archive county clerk | site:alexandercountyil.org OR site:alexandercounty.illinois.gov election results,completed_no_new_urls
 us:mo:census-county:29179,MO,2026-11-13T17:20:15+00:00,Reynolds County Missouri official election results archive county clerk | site:reynoldscountymo.gov election results,observed_link_candidate
 us:ms:census-county:28009,MS,2026-11-13T17:20:15+00:00,Benton County Mississippi official election results county election commission archive | site:bentoncountyms.gov election results,observed_link_candidate
+us:hi:census-county:15009,HI,2026-11-13T18:12:37+00:00,Maui County Hawaii election results official | Maui County elections historical results vendor dashboard,completed_no_new_urls
+us:mt:census-county:30051,MT,2026-11-13T18:12:37+00:00,Liberty County Montana election results official | Liberty County Montana elections archive,completed_no_new_urls
+us:nd:census-county:38055,ND,2026-11-13T18:12:37+00:00,McLean County North Dakota election results official | McLean County North Dakota elections historical results,completed_no_new_urls
+us:nh:priority-roster:gilford,NH,2026-11-13T18:12:37+00:00,Gilford New Hampshire election results official | Gilford NH elections archive town clerk,observed_link_candidate
+us:nj:census-county:34025,NJ,2026-11-13T18:12:37+00:00,Monmouth County New Jersey election results official | Monmouth County NJ elections historical results vendor,observed_link_candidate
+us:nm:census-county:35019,NM,2026-11-13T18:12:37+00:00,Guadalupe County New Mexico election results official | Guadalupe County New Mexico elections archive,completed_no_new_urls
+us:ri:priority-roster:woonsocket,RI,2026-11-13T18:12:37+00:00,Woonsocket Rhode Island election results official | Woonsocket RI elections historical results archive,observed_link_candidate
+us:vt:priority-roster:goshen,VT,2026-11-13T18:12:37+00:00,Goshen Vermont election results official | Goshen VT town meeting election results archive,observed_link_candidate
+us:wa:census-county:53073,WA,2026-11-13T18:12:37+00:00,Whatcom County Washington election results official | Whatcom County elections historical results archive,observed_link_candidate
+us:wy:census-county:56013,WY,2026-11-13T18:12:37+00:00,Fremont County Wyoming election results official | Fremont County Wyoming elections archive results,completed_no_new_urls
+us:ct:municipality:pomfret,CT,2026-11-13T18:12:37+00:00,Pomfret Connecticut election results official | Pomfret CT elections historical results town clerk,observed_link_candidate
+us:fl:census-county:12091,FL,2026-11-13T18:12:37+00:00,Okaloosa County Florida election results official | Okaloosa County elections historical results archive,completed_no_new_urls
+us:ga:census-county:13233,GA,2026-11-13T18:12:37+00:00,Polk County Georgia election results official | Polk County Georgia elections historical results archive,completed_no_new_urls
+us:in:census-county:18033,IN,2026-11-13T18:12:37+00:00,DeKalb County Indiana election results official | DeKalb County Indiana elections historical results archive,completed_no_new_urls
+us:ks:census-county:20009,KS,2026-11-13T18:12:37+00:00,Barton County Kansas election results official | Barton County Kansas elections historical results archive,completed_no_new_urls
+us:ky:census-county:21215,KY,2026-11-13T18:12:37+00:00,Spencer County Kentucky election results official | Spencer County Kentucky elections historical results archive,observed_link_candidate
+us:la:census-county:22085,LA,2026-11-13T18:12:37+00:00,Sabine Parish Louisiana election results official | Sabine Parish elections historical results archive,completed_no_new_urls
+us:ma:priority-roster:georgetown,MA,2026-11-13T18:12:37+00:00,Georgetown Massachusetts election results official town clerk | Georgetown MA elections historical results archive,observed_link_candidate
+us:md:census-county:24009,MD,2026-11-13T18:12:37+00:00,Calvert County Maryland election results official | Calvert County Maryland elections historical results archive,observed_link_candidate
+us:me:municipality:eddington,ME,2026-11-13T18:12:37+00:00,Eddington Maine election results official town clerk | Eddington Maine elections historical results archive,observed_link_candidate
