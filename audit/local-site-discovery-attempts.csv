@@ -5058,3 +5058,23 @@ us:ia:census-county:19041,IA,2026-11-20T18:12:00Z,Clay County Iowa official 2026
 us:id:census-county:16053,ID,2026-11-20T18:12:00Z,Jerome County Idaho official county election results page alternative,observed_link_candidate
 us:il:census-county:17027,IL,2026-11-20T18:12:00Z,Clinton County Illinois official current election and latest results pages,observed_link_candidate
 us:md:census-county:24029,MD,2026-11-20T18:12:00Z,Kent County Maryland official 2026 results dashboard archive alternatives,completed_no_new_urls
+us:ak:priority-roster:central,AK,2026-11-20T19:23:00Z,Alaska Division of Elections official 2026 results archive alternative dashboard review,completed_no_new_urls
+us:me:municipality:franklin,ME,2026-11-20T19:23:00Z,Franklin Maine official town election clerk and annual report archive,observed_link_candidate
+us:ms:census-county:28027,MS,2026-11-20T19:23:00Z,Coahoma County Mississippi official 2026 county precinct results,observed_link_candidate
+us:mt:census-county:30069,MT,2026-11-20T19:23:00Z,Petroleum County Montana official 2026 current results list and notice,observed_link_candidate
+us:nc:census-county:37177,NC,2026-11-20T19:23:00Z,Tyrrell County North Carolina official current and historical results tiers,observed_link_candidate
+us:nd:census-county:38073,ND,2026-11-20T19:23:00Z,Ransom County North Dakota official 2026 certification update evidence,observed_link_candidate
+us:ne:census-county:31175,NE,2026-11-20T19:23:00Z,Valley County Nebraska official election office and county results dashboard,observed_link_candidate
+us:nh:priority-roster:greenland,NH,2026-11-20T19:23:00Z,Greenland New Hampshire official town and state 2026 result tiers,observed_link_candidate
+us:nj:census-county:34003,NJ,2026-11-20T19:23:00Z,Bergen County New Jersey official 2026 results audit and clerk alternatives,observed_link_candidate
+us:nv:census-county:32001,NV,2026-11-20T19:23:00Z,Churchill County Nevada official 2026 local notice and state results tier,observed_link_candidate
+us:oh:county:adams,OH,2026-11-20T19:23:00Z,Adams County Ohio official current archive and state data results tiers,observed_link_candidate
+us:al:census-county:01121,AL,2026-11-20T19:23:00Z,Talladega County Alabama official 2026 general results notice,observed_link_candidate
+us:ar:census-county:05105,AR,2026-11-20T19:23:00Z,Perry County Arkansas official current and historical results research tiers,observed_link_candidate
+us:de:census-county:10001,DE,2026-11-20T19:23:00Z,Kent County Delaware official 2026 results archive alternative review,completed_no_new_urls
+us:hi:census-county:15009,HI,2026-11-20T19:23:00Z,Maui County Hawaii official 2026 results and county voting alternatives,completed_no_new_urls
+us:in:census-county:18055,IN,2026-11-20T19:23:00Z,Greene County Indiana official 2026 results clerk archive alternatives,completed_no_new_urls
+us:ks:census-county:20031,KS,2026-11-20T19:23:00Z,Coffey County Kansas official election document archive alternative,observed_link_candidate
+us:ky:census-county:21237,KY,2026-11-20T19:23:00Z,Wolfe County Kentucky official clerk 2026 current and archive results tiers,observed_link_candidate
+us:la:census-county:22107,LA,2026-11-20T19:23:00Z,Tensas Parish Louisiana official results portal and post-election guidance,observed_link_candidate
+us:ma:priority-roster:groveland,MA,2026-11-20T19:23:00Z,Groveland Massachusetts official 2026 town clerk results archive alternatives,completed_no_new_urls
