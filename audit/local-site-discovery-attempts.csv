@@ -5118,3 +5118,23 @@ us:la:census-county:22109,LA,2026-11-20T22:00:34+00:00,Terrebonne Parish Louisia
 us:ma:priority-roster:hadley,MA,2026-11-20T22:00:34+00:00,Hadley Massachusetts election results official town archive; site:hadleyma.org election results town clerk,observed_link_candidate
 us:me:municipality:freedom,ME,2026-11-20T22:00:34+00:00,Freedom Maine election results official town archive; site:freedommaine.com OR site:freedomme.org election results town clerk,completed_no_new_urls
 us:ms:census-county:28029,MS,2026-11-20T22:00:34+00:00,Copiah County Mississippi election results official archive; site:sos.ms.gov/elections/electionresults Copiah County 2026,completed_no_new_urls
+us:mt:census-county:30071,MT,2026-11-20T22:07:56+00:00,Phillips County Montana official election results archive,completed_no_new_urls
+us:nc:census-county:37179,NC,2026-11-20T22:07:56+00:00,Union County North Carolina official election results archive,observed_link_candidate
+us:nd:census-county:38075,ND,2026-11-20T22:07:56+00:00,Renville County North Dakota official election results archive,completed_no_new_urls
+us:ne:census-county:31177,NE,2026-11-20T22:07:56+00:00,Washington County Nebraska official election results archive,observed_link_candidate
+us:nh:priority-roster:greenville,NH,2026-11-20T22:07:56+00:00,Greenville New Hampshire official election results archive; site:greenvillenh.org election results town clerk,observed_link_candidate
+us:nj:census-county:34005,NJ,2026-11-20T22:07:56+00:00,Burlington County New Jersey official election results archive,completed_no_new_urls
+us:nv:census-county:32003,NV,2026-11-20T22:07:56+00:00,Clark County Nevada official election results archive,completed_no_new_urls
+us:oh:county:allen,OH,2026-11-20T22:07:56+00:00,Allen County Ohio official election results archive,observed_link_candidate
+us:az:census-county:04027,AZ,2026-11-20T22:07:56+00:00,Yuma County Arizona official election results archive,completed_no_new_urls
+us:ca:census-county:06019,CA,2026-11-20T22:07:56+00:00,Fresno County California official election results archive,observed_link_candidate
+us:co:census-county:08121,CO,2026-11-20T22:07:56+00:00,Washington County Colorado official election results archive,completed_no_new_urls
+us:ct:municipality:sharon,CT,2026-11-20T22:07:56+00:00,Sharon Connecticut official election results archive; site:sharonct.gov election results registrar archive,observed_link_candidate
+us:fl:census-county:12117,FL,2026-11-20T22:07:56+00:00,Seminole County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13259,GA,2026-11-20T22:07:56+00:00,Stewart County Georgia official election results archive; site:stewartcountyga.gov election results elections,observed_link_candidate
+us:ia:census-county:19045,IA,2026-11-20T22:07:56+00:00,Clinton County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16057,ID,2026-11-20T22:07:56+00:00,Latah County Idaho official election results archive,observed_link_candidate
+us:il:census-county:17031,IL,2026-11-20T22:07:56+00:00,Cook County Illinois official election results archive; site:elections.il.gov Cook County 2026 official results,completed_no_new_urls
+us:md:census-county:24033,MD,2026-11-20T22:07:56+00:00,Prince George's County Maryland official election results archive,observed_link_candidate
+us:mi:county:genesee,MI,2026-11-20T22:07:56+00:00,Genesee County Michigan official election results archive,completed_no_new_urls
+us:nm:census-county:35037,NM,2026-11-20T22:07:56+00:00,Quay County New Mexico official election results archive; site:electionresults.sos.nm.gov Quay County 2026,observed_link_candidate
