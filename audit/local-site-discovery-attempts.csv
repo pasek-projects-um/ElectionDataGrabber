@@ -4798,3 +4798,23 @@ us:ma:priority-roster:gosnold,MA,2026-11-20T03:05:02+00:00,Gosnold Massachusetts
 us:md:census-county:24017,MD,2026-11-20T03:05:02+00:00,Charles County Maryland official results | county current-year data and archive alternatives,observed_link_candidate
 us:me:municipality:fairfield,ME,2026-11-20T03:05:02+00:00,Fairfield Maine official results | town state and municipal-directory alternatives,observed_link_candidate
 us:nm:census-county:35027,NM,2026-11-20T03:05:02+00:00,Lincoln County New Mexico official results | state current-year dashboard and export alternatives,observed_link_candidate
+us:pa:county:carbon,PA,2026-11-20T04:48:58+00:00,Carbon County Pennsylvania official results | county state audit and historical alternatives,completed_no_new_urls
+us:ri:priority-roster:charlestown,RI,2026-11-20T04:48:58+00:00,Charlestown Rhode Island official results | town state special-election and referendum archive alternatives,observed_link_candidate
+us:sc:census-county:45067,SC,2026-11-20T04:48:58+00:00,Marion County South Carolina official results | county state municipal and archive alternatives,completed_no_new_urls
+us:sd:census-county:46031,SD,2026-11-20T04:48:58+00:00,Corson County South Dakota official results | county state current-year and historical alternatives,completed_no_new_urls
+us:vt:priority-roster:granville,VT,2026-11-20T04:48:58+00:00,Granville Vermont official results | town clerk state and archive alternatives,completed_no_new_urls
+us:wa:census-county:53005,WA,2026-11-20T04:48:58+00:00,Benton County Washington official results | county vendor current-year and archive alternatives,completed_no_new_urls
+us:wi:ltsb2026:barron-oak-grove-68234d8f621840b9,WI,2026-11-20T04:48:58+00:00,Town of Oak Grove Barron County Wisconsin official results | town county and archive alternatives,completed_no_new_urls
+us:wv:census-county:54047,WV,2026-11-20T04:48:58+00:00,McDowell County West Virginia official results | county state current-year and archive alternatives,completed_no_new_urls
+us:wy:census-county:56021,WY,2026-11-20T04:48:58+00:00,Laramie County Wyoming official results | county state vendor and archive alternatives,completed_no_new_urls
+us:az:census-county:04013,AZ,2026-11-20T04:48:58+00:00,Maricopa County Arizona official results | county recorder vendor and archive alternatives,completed_no_new_urls
+us:ca:census-county:06003,CA,2026-11-20T04:48:58+00:00,Alpine County California official results | county state and historical alternatives,completed_no_new_urls
+us:co:census-county:08103,CO,2026-11-20T04:48:58+00:00,Rio Blanco County Colorado official results | county state and archive alternatives,completed_no_new_urls
+us:ct:municipality:redding,CT,2026-11-20T04:48:58+00:00,Redding Connecticut official results | town clerk referendum state and archive alternatives,completed_no_new_urls
+us:de:census-county:10001,DE,2026-11-20T04:48:58+00:00,Kent County Delaware official results | county state vendor and archive alternatives,completed_no_new_urls
+us:fl:census-county:12101,FL,2026-11-20T04:48:58+00:00,Pasco County Florida official results | county vendor current-year and archive alternatives,completed_no_new_urls
+us:ga:census-county:13243,GA,2026-11-20T04:48:58+00:00,Randolph County Georgia official results | county state and archive alternatives,completed_no_new_urls
+us:ia:census-county:19029,IA,2026-11-20T04:48:58+00:00,Cass County Iowa official results | county primary canvass audit and archive alternatives,completed_no_new_urls
+us:id:census-county:16043,ID,2026-11-20T04:48:58+00:00,Fremont County Idaho official results | county archive state and current-year alternatives,completed_no_new_urls
+us:il:census-county:17015,IL,2026-11-20T04:48:58+00:00,Carroll County Illinois official results | county state precinct and archive alternatives,completed_no_new_urls
+us:mi:county:clare,MI,2026-11-20T04:48:58+00:00,Clare County Michigan official results | clerk state dashboard vendor and archive alternatives,observed_link_candidate
