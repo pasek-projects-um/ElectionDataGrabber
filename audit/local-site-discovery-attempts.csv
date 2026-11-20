@@ -4818,3 +4818,23 @@ us:ia:census-county:19029,IA,2026-11-20T04:48:58+00:00,Cass County Iowa official
 us:id:census-county:16043,ID,2026-11-20T04:48:58+00:00,Fremont County Idaho official results | county archive state and current-year alternatives,completed_no_new_urls
 us:il:census-county:17015,IL,2026-11-20T04:48:58+00:00,Carroll County Illinois official results | county state precinct and archive alternatives,completed_no_new_urls
 us:mi:county:clare,MI,2026-11-20T04:48:58+00:00,Clare County Michigan official results | clerk state dashboard vendor and archive alternatives,observed_link_candidate
+us:mn:census-county:27019,MN,2026-11-20T05:24:41+00:00,Carver County Minnesota official results | county state current-year and archive alternatives,completed_no_new_urls
+us:mo:census-county:29187,MO,2026-11-20T05:24:41+00:00,St. Francois County Missouri official results | county current-year post and historical archive alternatives,observed_link_candidate
+us:ms:census-county:28019,MS,2026-11-20T05:24:41+00:00,Choctaw County Mississippi official results | county state current-year and archive alternatives,completed_no_new_urls
+us:mt:census-county:30061,MT,2026-11-20T05:24:41+00:00,Mineral County Montana official results | county state dashboard export and archive alternatives,completed_no_new_urls
+us:nc:census-county:37169,NC,2026-11-20T05:24:41+00:00,Stokes County North Carolina official results | county state current-year and certified archive alternatives,completed_no_new_urls
+us:nd:census-county:38065,ND,2026-11-20T05:24:41+00:00,Oliver County North Dakota official results | county auditor state current-year and archive alternatives,completed_no_new_urls
+us:ne:census-county:31167,NE,2026-11-20T05:24:41+00:00,Stanton County Nebraska official results | commissioner precinct current-year and historical alternatives,observed_link_candidate
+us:nv:census-county:32029,NV,2026-11-20T05:24:41+00:00,Storey County Nevada official results | county state current-year canvass and archive alternatives,completed_no_new_urls
+us:oh:county:wayne,OH,2026-11-20T05:24:41+00:00,Wayne County Ohio official results | board current-year certification and historical archive alternatives,observed_link_candidate
+us:al:census-county:01109,AL,2026-11-20T05:24:41+00:00,Pike County Alabama official results | county state current-year and archive alternatives,completed_no_new_urls
+us:ar:census-county:05093,AR,2026-11-20T05:24:41+00:00,Mississippi County Arkansas official results | county state current-year and archive alternatives,completed_no_new_urls
+us:hi:census-county:15007,HI,2026-11-20T05:24:41+00:00,Kauai County Hawaii official results | county clerk state current-year and archive alternatives,completed_no_new_urls
+us:in:census-county:18043,IN,2026-11-20T05:24:41+00:00,Floyd County Indiana official results | clerk current-year precinct and historical archive alternatives,completed_no_new_urls
+us:ks:census-county:20019,KS,2026-11-20T05:24:41+00:00,Chautauqua County Kansas official results | county state current-year and archive alternatives,completed_no_new_urls
+us:ky:census-county:21225,KY,2026-11-20T05:24:41+00:00,Union County Kentucky official results | county clerk state current-year and archive alternatives,observed_link_candidate
+us:la:census-county:22095,LA,2026-11-20T05:24:41+00:00,St. John the Baptist Parish Louisiana official results | parish clerk state current-year and archive alternatives,completed_no_new_urls
+us:ma:priority-roster:grafton,MA,2026-11-20T05:24:41+00:00,Grafton Massachusetts official results | town clerk current-year local and historical alternatives,observed_link_candidate
+us:md:census-county:24019,MD,2026-11-20T05:24:41+00:00,Dorchester County Maryland official results | state current-year county page and historical archive alternatives,observed_link_candidate
+us:me:municipality:falmouth,ME,2026-11-20T05:24:41+00:00,Falmouth Maine official results | town current-year state and municipal alternatives,observed_link_candidate
+us:nh:priority-roster:goshen,NH,2026-11-20T05:24:41+00:00,Goshen New Hampshire official results | town state current-year and municipal alternatives,observed_link_candidate
