@@ -4938,3 +4938,23 @@ us:ia:census-county:19035,IA,2026-11-20T12:20:00Z,site:cherokeecounty.iowa.gov e
 us:id:census-county:16015,ID,2026-11-20T12:20:00Z,site:boisecounty.us election results archive | Boise County Idaho official election results dashboard historical,completed_no_new_urls
 us:il:census-county:17021,IL,2026-11-20T12:20:00Z,site:christiancountyil.gov election results archive | Christian County Illinois official election results dashboard historical,completed_no_new_urls
 us:mi:county:delta,MI,2026-11-20T12:20:00Z,site:deltacountymi.gov election results archive | Delta County Michigan official election results dashboard historical,observed_link_candidate
+us:mn:census-county:27023,MN,2026-11-20T13:20:00Z,Chippewa County Minnesota official election results archive | Chippewa County Minnesota election results vendor dashboard,observed_link_candidate
+us:mo:census-county:29195,MO,2026-11-20T13:20:00Z,Saline County Missouri official election results archive | Saline County Missouri election results vendor dashboard,completed_no_new_urls
+us:ms:census-county:28023,MS,2026-11-20T13:20:00Z,Clarke County Mississippi official election results archive | Clarke County Mississippi election results vendor dashboard,observed_link_candidate
+us:mt:census-county:30065,MT,2026-11-20T13:20:00Z,Musselshell County Montana official election results archive | Musselshell County Montana election results vendor dashboard,completed_no_new_urls
+us:nc:census-county:37173,NC,2026-11-20T13:20:00Z,Swain County North Carolina official election results archive | Swain County North Carolina election results vendor dashboard,completed_no_new_urls
+us:nd:census-county:38069,ND,2026-11-20T13:20:00Z,Pierce County North Dakota official election results archive | Pierce County North Dakota election results vendor dashboard,completed_no_new_urls
+us:ne:census-county:31171,NE,2026-11-20T13:20:00Z,Thomas County Nebraska official election results archive | Thomas County Nebraska election results vendor dashboard,completed_no_new_urls
+us:nh:priority-roster:grantham,NH,2026-11-20T13:20:00Z,Grantham New Hampshire official election results archive | Grantham New Hampshire election results vendor dashboard,completed_no_new_urls
+us:nv:census-county:32033,NV,2026-11-20T13:20:00Z,White Pine County Nevada official election results archive | White Pine County Nevada election results vendor dashboard,completed_no_new_urls
+us:oh:county:wood,OH,2026-11-20T13:20:00Z,Wood County Ohio official election results archive | Wood County Ohio election results vendor dashboard,observed_link_candidate
+us:al:census-county:01115,AL,2026-11-20T13:20:00Z,St. Clair County Alabama official election results archive | St. Clair County Alabama election results vendor dashboard,observed_link_candidate
+us:ar:census-county:05099,AR,2026-11-20T13:20:00Z,Nevada County Arkansas official election results archive | Nevada County Arkansas election results vendor dashboard,completed_no_new_urls
+us:de:census-county:10001,DE,2026-11-20T13:20:00Z,Kent County Delaware official election results archive | Kent County Delaware election results vendor dashboard,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-11-20T13:20:00Z,Hawaii County Hawaii official election results archive | Hawaii County Hawaii election results vendor dashboard,completed_no_new_urls
+us:in:census-county:18049,IN,2026-11-20T13:20:00Z,Fulton County Indiana official election results archive | Fulton County Indiana election results vendor dashboard,completed_no_new_urls
+us:ks:census-county:20025,KS,2026-11-20T13:20:00Z,Clark County Kansas official election results archive | Clark County Kansas election results vendor dashboard,completed_no_new_urls
+us:ky:census-county:21231,KY,2026-11-20T13:20:00Z,Wayne County Kentucky official election results archive | Wayne County Kentucky election results vendor dashboard,completed_no_new_urls
+us:la:census-county:22101,LA,2026-11-20T13:20:00Z,St. Mary Parish Louisiana official election results archive | St. Mary Parish Louisiana election results vendor dashboard,completed_no_new_urls
+us:ma:priority-roster:great-barrington,MA,2026-11-20T13:20:00Z,Great Barrington Massachusetts official election results archive | Great Barrington Massachusetts election results vendor dashboard,completed_no_new_urls
+us:nj:census-county:34039,NJ,2026-11-20T13:20:00Z,Union County New Jersey official election results archive | Union County New Jersey election results vendor dashboard,completed_no_new_urls
