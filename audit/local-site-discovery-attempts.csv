@@ -4978,3 +4978,23 @@ us:id:census-county:16049,ID,2026-11-20T14:50:00Z,Idaho County Idaho official el
 us:il:census-county:17023,IL,2026-11-20T14:50:00Z,Clark County Illinois official election results archive,observed_link_candidate
 us:md:census-county:24025,MD,2026-11-20T14:50:00Z,Harford County Maryland official election results archive,completed_no_new_urls
 us:me:municipality:fort-kent,ME,2026-11-20T14:50:00Z,Fort Kent Maine official election results archive,observed_link_candidate
+us:mi:county:dickinson,MI,2026-11-20T15:48:00Z,Dickinson County Michigan official election results archive,completed_no_new_urls
+us:ri:priority-roster:cumberland,RI,2026-11-20T15:48:00Z,Cumberland Rhode Island official election results archive,completed_no_new_urls
+us:sc:census-county:45073,SC,2026-11-20T15:48:00Z,Oconee County South Carolina official election results archive,completed_no_new_urls
+us:sd:census-county:46037,SD,2026-11-20T15:48:00Z,Day County South Dakota official election results archive,completed_no_new_urls
+us:vt:priority-roster:guildhall,VT,2026-11-20T15:48:00Z,Guildhall Vermont official election results archive,observed_link_candidate
+us:wa:census-county:53011,WA,2026-11-20T15:48:00Z,Clark County Washington official election results archive,observed_link_candidate
+us:wi:ltsb2026:barron-rice-lake-cc59251c5f4efe2f,WI,2026-11-20T15:48:00Z,Town of Rice Lake Barron County Wisconsin official election results,observed_link_candidate
+us:wv:census-county:54053,WV,2026-11-20T15:48:00Z,Mason County West Virginia official election results archive,completed_no_new_urls
+us:wy:census-county:56025,WY,2026-11-20T15:48:00Z,Natrona County Wyoming official election results archive,observed_link_candidate
+us:al:census-county:01117,AL,2026-11-20T15:48:00Z,Shelby County Alabama official election results archive,completed_no_new_urls
+us:ar:census-county:05101,AR,2026-11-20T15:48:00Z,Newton County Arkansas official election results archive,completed_no_new_urls
+us:de:census-county:10003,DE,2026-11-20T15:48:00Z,New Castle County Delaware official election results archive,completed_no_new_urls
+us:hi:census-county:15007,HI,2026-11-20T15:48:00Z,Kauai County Hawaii official election results archive,completed_no_new_urls
+us:in:census-county:18051,IN,2026-11-20T15:48:00Z,Gibson County Indiana official election results archive,completed_no_new_urls
+us:ks:census-county:20027,KS,2026-11-20T15:48:00Z,Clay County Kansas official election results archive,completed_no_new_urls
+us:ky:census-county:21233,KY,2026-11-20T15:48:00Z,Webster County Kentucky official election results archive,observed_link_candidate
+us:la:census-county:22103,LA,2026-11-20T15:48:00Z,St Tammany Parish Louisiana official election results archive,completed_no_new_urls
+us:ma:priority-roster:greenfield,MA,2026-11-20T15:48:00Z,Greenfield Massachusetts official election results archive,completed_no_new_urls
+us:mn:census-county:27025,MN,2026-11-20T15:48:00Z,Chisago County Minnesota official election results archive,observed_link_candidate
+us:mo:census-county:29197,MO,2026-11-20T15:48:00Z,Schuyler County Missouri official election results archive,completed_no_new_urls
