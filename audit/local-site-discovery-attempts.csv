@@ -4998,3 +4998,23 @@ us:la:census-county:22103,LA,2026-11-20T15:48:00Z,St Tammany Parish Louisiana of
 us:ma:priority-roster:greenfield,MA,2026-11-20T15:48:00Z,Greenfield Massachusetts official election results archive,completed_no_new_urls
 us:mn:census-county:27025,MN,2026-11-20T15:48:00Z,Chisago County Minnesota official election results archive,observed_link_candidate
 us:mo:census-county:29197,MO,2026-11-20T15:48:00Z,Schuyler County Missouri official election results archive,completed_no_new_urls
+us:ms:census-county:28025,MS,2026-11-20T16:16:00Z,Clay County Mississippi official election results archive county clerk,observed_link_candidate
+us:mt:census-county:30067,MT,2026-11-20T16:16:00Z,Park County Montana official election results 2026 archive,observed_link_candidate
+us:nc:census-county:37175,NC,2026-11-20T16:16:00Z,Transylvania County North Carolina official election results county board elections,observed_link_candidate
+us:nd:census-county:38071,ND,2026-11-20T16:16:00Z,Ramsey County North Dakota official election results archive dashboard,completed_no_new_urls
+us:ne:census-county:31173,NE,2026-11-20T16:16:00Z,Thurston County Nebraska official election results archive clerk,observed_link_candidate
+us:nh:priority-roster:greenfield,NH,2026-11-20T16:16:00Z,Greenfield New Hampshire official election results town clerk archive,observed_link_candidate
+us:nj:census-county:34041,NJ,2026-11-20T16:16:00Z,Warren County New Jersey official 2026 election results dashboard county clerk,observed_link_candidate
+us:nv:census-county:32510,NV,2026-11-20T16:16:00Z,Carson City Nevada official 2026 election results dashboard archive,observed_link_candidate
+us:oh:county:wyandot,OH,2026-11-20T16:16:00Z,Wyandot County Ohio official election results archive board elections 2026,observed_link_candidate
+us:az:census-county:04021,AZ,2026-11-20T16:16:00Z,Pinal County Arizona official 2026 election results dashboard archive,observed_link_candidate
+us:ca:census-county:06013,CA,2026-11-20T16:16:00Z,Contra Costa County California official 2026 election results dashboard archive,observed_link_candidate
+us:co:census-county:08115,CO,2026-11-20T16:16:00Z,Sedgwick County Colorado official election results archive clerk,observed_link_candidate
+us:ct:municipality:salisbury,CT,2026-11-20T16:16:00Z,Salisbury Connecticut official election results archive town clerk,observed_link_candidate
+us:fl:census-county:12111,FL,2026-11-20T16:16:00Z,St Lucie County Florida official 2026 election results dashboard archive,blocked_page_inspection
+us:ga:census-county:13253,GA,2026-11-20T16:16:00Z,Seminole County Georgia official election results archive elections office,observed_link_candidate
+us:ia:census-county:19039,IA,2026-11-20T16:16:00Z,Clarke County Iowa official 2026 election results dashboard archive,observed_link_candidate
+us:id:census-county:16051,ID,2026-11-20T16:16:00Z,Jefferson County Idaho official 2026 election results archive clerk,observed_link_candidate
+us:il:census-county:17025,IL,2026-11-20T16:16:00Z,Clay County Illinois official election results archive county clerk 2026,observed_link_candidate
+us:md:census-county:24027,MD,2026-11-20T16:16:00Z,Howard County Maryland official 2026 election results dashboard archive,observed_link_candidate
+us:me:municipality:frankfort,ME,2026-11-20T16:16:00Z,Frankfort Maine official election results town clerk archive,observed_link_candidate
