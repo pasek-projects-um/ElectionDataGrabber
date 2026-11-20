@@ -5018,3 +5018,23 @@ us:id:census-county:16051,ID,2026-11-20T16:16:00Z,Jefferson County Idaho officia
 us:il:census-county:17025,IL,2026-11-20T16:16:00Z,Clay County Illinois official election results archive county clerk 2026,observed_link_candidate
 us:md:census-county:24027,MD,2026-11-20T16:16:00Z,Howard County Maryland official 2026 election results dashboard archive,observed_link_candidate
 us:me:municipality:frankfort,ME,2026-11-20T16:16:00Z,Frankfort Maine official election results town clerk archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-20T17:46:00Z,District of Columbia Board of Elections official results alternative root archive,observed_link_candidate
+us:nm:census-county:35033,NM,2026-11-20T17:46:00Z,Mora County New Mexico official election results dashboard archive,blocked_page_inspection
+us:ny:census-county:36053,NY,2026-11-20T17:46:00Z,Madison County New York official 2026 election results vendor dashboard,observed_link_candidate
+us:ok:census-county:40019,OK,2026-11-20T17:46:00Z,Carter County Oklahoma official election results alternative county archive,completed_no_new_urls
+us:or:census-county:41029,OR,2026-11-20T17:46:00Z,Jackson County Oregon official current results county exports archive,observed_link_candidate
+us:pa:county:clearfield,PA,2026-11-20T17:46:00Z,Clearfield County Pennsylvania official election data current historical returns,observed_link_candidate
+us:tn:census-county:47167,TN,2026-11-20T17:46:00Z,Tipton County Tennessee official election commission current results archive,observed_link_candidate
+us:tx:census-county:48167,TX,2026-11-20T17:46:00Z,Galveston County Texas official election results service directory archive,blocked_page_inspection
+us:ut:census-county:49047,UT,2026-11-20T17:46:00Z,Uintah County Utah official current election information alternative tier,observed_link_candidate
+us:va:census-county:51177,VA,2026-11-20T17:46:00Z,Spotsylvania County Virginia official county archive historical election database,observed_link_candidate
+us:al:census-county:01119,AL,2026-11-20T17:46:00Z,Sumter County Alabama official 2026 general election results notice,observed_link_candidate
+us:ar:census-county:05103,AR,2026-11-20T17:46:00Z,Ouachita County Arkansas official current historical election results hub,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-20T17:46:00Z,Sussex County Delaware official 2026 and historical election archive,observed_link_candidate
+us:hi:census-county:15003,HI,2026-11-20T17:46:00Z,Honolulu County Hawaii official election results archive alternative page,blocked_page_inspection
+us:in:census-county:18053,IN,2026-11-20T17:46:00Z,Grant County Indiana official clerk election results alternative root,blocked_page_inspection
+us:ks:census-county:20029,KS,2026-11-20T17:46:00Z,Cloud County Kansas official voting information alternative page,observed_link_candidate
+us:ky:census-county:21235,KY,2026-11-20T17:46:00Z,Whitley County Kentucky official elections post-election audit,observed_link_candidate
+us:la:census-county:22105,LA,2026-11-20T17:46:00Z,Tangipahoa Parish Louisiana official current election news alternative page,observed_link_candidate
+us:ma:priority-roster:groton,MA,2026-11-20T17:46:00Z,Groton Massachusetts official 2026 primary and general election results,observed_link_candidate
+us:mi:county:eaton,MI,2026-11-20T17:46:00Z,Eaton County Michigan official results hub historical vendor dashboard,observed_link_candidate
