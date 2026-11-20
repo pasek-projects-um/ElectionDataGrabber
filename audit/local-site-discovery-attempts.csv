@@ -4738,3 +4738,23 @@ us:ga:census-county:13239,GA,2026-11-20T00:53:21Z,Quitman County Georgia officia
 us:ia:census-county:19025,IA,2026-11-20T00:53:21Z,Calhoun County Iowa official election results 2026 auditor archive | site:calhouncounty.iowa.gov election results OR site:calhouncountyiowa.com election results,observed_link_candidate
 us:id:census-county:16039,ID,2026-11-20T00:53:21Z,Elmore County Idaho official election results 2026 clerk archive | site:elmorecounty.org election results 2026 OR site:voteidaho.gov Elmore,observed_link_candidate
 us:il:census-county:17011,IL,2026-11-20T00:53:21Z,Bureau County Illinois official election results 2026 county clerk archive | site:bureaucountyclerk.com election results 2026 OR site:il-bureau.pollresults.net,observed_link_candidate
+us:nm:census-county:35025,NM,2026-11-20T01:44:08+00:00,Lea County NM official results archive | county and state official-domain alternatives,observed_link_candidate
+us:pa:county:cameron,PA,2026-11-20T01:44:08+00:00,Cameron County PA official results archive | county and state official-domain alternatives,observed_link_candidate
+us:ri:priority-roster:central-falls,RI,2026-11-20T01:44:08+00:00,Central Falls RI official results | city and state official-domain alternatives,observed_link_candidate
+us:sc:census-county:45065,SC,2026-11-20T01:44:08+00:00,McCormick County SC official results archive | county and state official-domain alternatives,observed_link_candidate
+us:sd:census-county:46029,SD,2026-11-20T01:44:08+00:00,Codington County SD official results archive | county and state official-domain alternatives,observed_link_candidate
+us:vt:priority-roster:grand-isle,VT,2026-11-20T01:44:08+00:00,Grand Isle VT official results | town and state official-domain alternatives,observed_link_candidate
+us:wa:census-county:53003,WA,2026-11-20T01:44:08+00:00,Asotin County WA official results archive | county and state official-domain alternatives,observed_link_candidate
+us:wi:ltsb2026:barron-maple-plain-46d86165f2474405,WI,2026-11-20T01:44:08+00:00,Town of Maple Plain WI official results | town county and state official-domain alternatives,observed_link_candidate
+us:wv:census-county:54045,WV,2026-11-20T01:44:08+00:00,Logan County WV official results archive | county and state official-domain alternatives,observed_link_candidate
+us:wy:census-county:56019,WY,2026-11-20T01:44:08+00:00,Johnson County WY official results archive | county and state official-domain alternatives,observed_link_candidate
+us:al:census-county:01105,AL,2026-11-20T01:44:08+00:00,Perry County AL official results archive | county and state official-domain alternatives,observed_link_candidate
+us:ar:census-county:05089,AR,2026-11-20T01:44:08+00:00,Marion County AR official results archive | county and state official-domain alternatives,observed_link_candidate
+us:hi:census-county:15009,HI,2026-11-20T01:44:08+00:00,Maui County HI official results archive | county and state official-domain alternatives,completed_no_new_urls
+us:in:census-county:18039,IN,2026-11-20T01:44:08+00:00,Elkhart County IN official results archive | county and state official-domain alternatives,observed_link_candidate
+us:ks:census-county:20015,KS,2026-11-20T01:44:08+00:00,Butler County KS official results archive | county state and vendor alternatives,observed_link_candidate
+us:ky:census-county:21221,KY,2026-11-20T01:44:08+00:00,Trigg County KY official results archive | county and state official-domain alternatives,observed_link_candidate
+us:la:census-county:22091,LA,2026-11-20T01:44:08+00:00,St Helena Parish LA official results archive | parish and state official-domain alternatives,observed_link_candidate
+us:ma:priority-roster:goshen,MA,2026-11-20T01:44:08+00:00,Goshen MA official results | town and state official-domain alternatives,observed_link_candidate
+us:md:census-county:24015,MD,2026-11-20T01:44:08+00:00,Cecil County MD official results archive | county state and archive alternatives,observed_link_candidate
+us:me:municipality:eustis,ME,2026-11-20T01:44:08+00:00,Eustis ME official results | town and state official-domain alternatives,observed_link_candidate
