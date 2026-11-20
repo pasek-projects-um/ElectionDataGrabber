@@ -4858,3 +4858,23 @@ us:id:census-county:16045,ID,2026-11-20T06:19:02+00:00,Gem County Idaho official
 us:il:census-county:17017,IL,2026-11-20T06:19:02+00:00,Cass County Illinois official archive | GBS vendor dashboard and county clerk alternatives,observed_link_candidate
 us:mi:county:clinton,MI,2026-11-20T06:19:02+00:00,Clinton County Michigan official archive | current canvass and county historical alternatives,observed_link_candidate
 us:pa:county:centre,PA,2026-11-20T06:19:02+00:00,Centre County Pennsylvania official archive | current county page ArcGIS dashboard and historical alternatives,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-20T07:37:23+00:00,District of Columbia Board of Elections 2026 results archive official | site:dcboe.org 2026 general election results statistics report,observed_link_candidate
+us:de:census-county:10003,DE,2026-11-20T07:37:23+00:00,New Castle County Delaware municipal school election results official | site:elections.delaware.gov New Castle municipal election archive results,completed_no_new_urls
+us:ri:priority-roster:coventry,RI,2026-11-20T07:37:23+00:00,Coventry Rhode Island board canvassers election results official | site:coventryri.gov election results archive minutes canvassers,completed_no_new_urls
+us:sc:census-county:45069,SC,2026-11-20T07:37:23+00:00,Marlboro County South Carolina election results official | site:scvotes.gov Marlboro County official results 2026,observed_link_candidate
+us:sd:census-county:46033,SD,2026-11-20T07:37:23+00:00,Custer County South Dakota election results auditor official | site:custercountysd.com election results archive Custer County,completed_no_new_urls
+us:vt:priority-roster:greensboro,VT,2026-11-20T07:37:23+00:00,Greensboro Vermont election results town clerk official | site:greensborovt.org election results town meeting vote results,observed_link_candidate
+us:wa:census-county:53007,WA,2026-11-20T07:37:23+00:00,Chelan County Washington election results archive official | site:chelancountywa.gov 2026 results county elections,completed_no_new_urls
+us:wi:ltsb2026:barron-prairie-farm-a7bd9f680ed43a8a,WI,2026-11-20T07:37:23+00:00,Town of Prairie Farm Barron County Wisconsin election results official | Prairie Farm Wisconsin clerk election results Barron County official,observed_link_candidate
+us:wv:census-county:54049,WV,2026-11-20T07:37:23+00:00,Marion County West Virginia election results county clerk official | site:marioncountywv.com election results clerk archive,completed_no_new_urls
+us:wy:census-county:56001,WY,2026-11-20T07:37:23+00:00,Albany County Wyoming election results clerk official | site:albanycountywy.gov election results 2026 archive,completed_no_new_urls
+us:al:census-county:01111,AL,2026-11-20T07:37:23+00:00,Randolph County Alabama election results probate official | site:randolphcountyal.gov election results probate 2026,completed_no_new_urls
+us:ar:census-county:05095,AR,2026-11-20T07:37:23+00:00,Monroe County Arkansas election results county clerk official | site:monroecountyar.com election results clerk OR site:monroecounty.arkansas.gov elections,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-11-20T07:37:23+00:00,Honolulu County Hawaii election results official archive | site:honolulu.gov elections results archive 2026,completed_no_new_urls
+us:in:census-county:18045,IN,2026-11-20T07:37:23+00:00,Fountain County Indiana election results clerk official | site:fountaincounty.net election results clerk OR site:in.gov Fountain County results,completed_no_new_urls
+us:ks:census-county:20021,KS,2026-11-20T07:37:23+00:00,Cherokee County Kansas election results clerk official | site:cherokeecountyks.gov election results 2026 archive,completed_no_new_urls
+us:ky:census-county:21227,KY,2026-11-20T07:37:23+00:00,Warren County Kentucky election results county clerk official | site:warrencountyclerkky.com election results archive 2026,observed_link_candidate
+us:la:census-county:22097,LA,2026-11-20T07:37:23+00:00,St Landry Parish Louisiana election results clerk official | site:stlandry.org election results archive 2026 official,completed_no_new_urls
+us:ma:priority-roster:granby,MA,2026-11-20T07:37:23+00:00,Granby Massachusetts election results town clerk official | site:granby-ma.gov election results 2026 town clerk,observed_link_candidate
+us:md:census-county:24021,MD,2026-11-20T07:37:23+00:00,Frederick County Maryland election results board official | site:frederickcountymd.gov election results archive canvass 2026,observed_link_candidate
+us:me:municipality:farmingdale,ME,2026-11-20T07:37:23+00:00,Farmingdale Maine election results town clerk official | site:farmingdalemaine.org election results 2026 archive,observed_link_candidate
