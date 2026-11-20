@@ -4918,3 +4918,23 @@ us:ks:census-county:20023,KS,2026-11-20T11:21:28Z,Cheyenne County Kansas officia
 us:ky:census-county:21229,KY,2026-11-20T11:21:28Z,Washington County Kentucky official election results clerk 2026 | site:washingtoncountyclerk.ky.gov elections results 2026 OR site:vrsws.sos.ky.gov Washington County,observed_link_candidate
 us:la:census-county:22099,LA,2026-11-20T11:21:28Z,St. Martin Parish Louisiana official election results clerk 2026 | site:smpcoc2.com election results archive St Martin Parish 2026,completed_no_new_urls
 us:ma:priority-roster:granville,MA,2026-11-20T11:21:28Z,Granville Massachusetts official election results town clerk 2026 archive | site:granville-ma.gov OR site:townofgranville.net election results 2026 town clerk,observed_link_candidate
+us:md:census-county:24023,MD,2026-11-20T12:20:00Z,site:garrettcountymd.gov election results Garrett County archive | Garrett County Maryland official election results dashboard archive,completed_no_new_urls
+us:me:municipality:farmington,ME,2026-11-20T12:20:00Z,site:farmington-maine.org elections results Farmington Maine | Farmington Maine official election results town clerk archive,observed_link_candidate
+us:ri:priority-roster:cranston,RI,2026-11-20T12:20:00Z,site:cranstonri.gov election results Cranston archive | Cranston Rhode Island official election results dashboard historical,completed_no_new_urls
+us:sc:census-county:45071,SC,2026-11-20T12:20:00Z,site:newberrycounty.net election results Newberry County archive | Newberry County South Carolina official election results dashboard,completed_no_new_urls
+us:sd:census-county:46035,SD,2026-11-20T12:20:00Z,site:davisoncounty.org election results Davison County South Dakota archive | Davison County South Dakota official election results dashboard historical,completed_no_new_urls
+us:vt:priority-roster:groton,VT,2026-11-20T12:20:00Z,site:grotonvt.com election results Groton Vermont town | Groton Vermont official town election results archive,observed_link_candidate
+us:wa:census-county:53009,WA,2026-11-20T12:20:00Z,site:clallamcountywa.gov election results archive auditor | Clallam County Washington official election results dashboard historical,observed_link_candidate
+us:wi:ltsb2026:barron-prairie-lake-c5e4900b0dc96f1d,WI,2026-11-20T12:20:00Z,Town of Prairie Lake Barron County Wisconsin official election results | site:townofprairielake.com election results,observed_link_candidate
+us:wv:census-county:54051,WV,2026-11-20T12:20:00Z,site:marshallcountywv.gov election results archive | Marshall County West Virginia official election results dashboard historical,completed_no_new_urls
+us:wy:census-county:56023,WY,2026-11-20T12:20:00Z,site:lincolncountywy.gov election results archive | Lincoln County Wyoming official election results dashboard,completed_no_new_urls
+us:az:census-county:04012,AZ,2026-11-20T12:20:00Z,site:lapaz.gov election results La Paz County archive | La Paz County Arizona official election results dashboard historical,completed_no_new_urls
+us:ca:census-county:06009,CA,2026-11-20T12:20:00Z,site:elections.calaverasgov.us election results archive | Calaveras County official election results dashboard historical,completed_no_new_urls
+us:co:census-county:08109,CO,2026-11-20T12:20:00Z,site:saguachecounty.colorado.gov election results archive | Saguache County Colorado official election results dashboard historical,completed_no_new_urls
+us:ct:municipality:roxbury,CT,2026-11-20T12:20:00Z,site:roxburyct.com election results Roxbury Connecticut | Roxbury Connecticut official municipal election results archive,observed_link_candidate
+us:fl:census-county:12107,FL,2026-11-20T12:20:00Z,site:soe.putnam-fl.com election results archive | Putnam County Florida official election results dashboard historical,completed_no_new_urls
+us:ga:census-county:13249,GA,2026-11-20T12:20:00Z,site:schleycountyga.us election results | Schley County Georgia official election results archive,observed_link_candidate
+us:ia:census-county:19035,IA,2026-11-20T12:20:00Z,site:cherokeecounty.iowa.gov election results archive | Cherokee County Iowa official election results dashboard historical,completed_no_new_urls
+us:id:census-county:16015,ID,2026-11-20T12:20:00Z,site:boisecounty.us election results archive | Boise County Idaho official election results dashboard historical,completed_no_new_urls
+us:il:census-county:17021,IL,2026-11-20T12:20:00Z,site:christiancountyil.gov election results archive | Christian County Illinois official election results dashboard historical,completed_no_new_urls
+us:mi:county:delta,MI,2026-11-20T12:20:00Z,site:deltacountymi.gov election results archive | Delta County Michigan official election results dashboard historical,observed_link_candidate
