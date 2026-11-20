@@ -5138,3 +5138,23 @@ us:il:census-county:17031,IL,2026-11-20T22:07:56+00:00,Cook County Illinois offi
 us:md:census-county:24033,MD,2026-11-20T22:07:56+00:00,Prince George's County Maryland official election results archive,observed_link_candidate
 us:mi:county:genesee,MI,2026-11-20T22:07:56+00:00,Genesee County Michigan official election results archive,completed_no_new_urls
 us:nm:census-county:35037,NM,2026-11-20T22:07:56+00:00,Quay County New Mexico official election results archive; site:electionresults.sos.nm.gov Quay County 2026,observed_link_candidate
+us:ny:census-county:36057,NY,2026-11-20T23:23:12+00:00,Montgomery County New York official election results archive; site:montgomerycountyny.gov/documents/boe/electionresults 2026 General Election Montgomery County,completed_no_new_urls
+us:ok:census-county:40023,OK,2026-11-20T23:23:12+00:00,Choctaw County Oklahoma official election results archive election board,observed_link_candidate
+us:or:census-county:41033,OR,2026-11-20T23:23:12+00:00,Josephine County Oregon official election results archive elections,observed_link_candidate
+us:pa:county:columbia,PA,2026-11-20T23:23:12+00:00,Columbia County Pennsylvania official election results archive; site:columbiapa.org/voter 2026 general election certified results,observed_link_candidate
+us:tn:census-county:47171,TN,2026-11-20T23:23:12+00:00,Unicoi County Tennessee official election results archive election commission,observed_link_candidate
+us:tx:census-county:48171,TX,2026-11-20T23:23:12+00:00,Gillespie County Texas official election results archive elections,observed_link_candidate
+us:ut:census-county:49051,UT,2026-11-20T23:23:12+00:00,Wasatch County Utah official election results archive clerk,completed_no_new_urls
+us:va:census-county:51181,VA,2026-11-20T23:23:12+00:00,Surry County Virginia official election results archive registrar,observed_link_candidate
+us:al:census-county:01125,AL,2026-11-20T23:23:12+00:00,Tuscaloosa County Alabama official election results archive probate judge; site:tuscco.com/probate/elections 2026 election results,observed_link_candidate
+us:ar:census-county:05109,AR,2026-11-20T23:23:12+00:00,Pike County Arkansas official election results archive county clerk,completed_no_new_urls
+us:in:census-county:18059,IN,2026-11-20T23:23:12+00:00,Hancock County Indiana official election results archive election office,completed_no_new_urls
+us:ks:census-county:20035,KS,2026-11-20T23:23:12+00:00,Cowley County Kansas official election results archive county clerk,observed_link_candidate
+us:ky:census-county:21001,KY,2026-11-20T23:23:12+00:00,Adair County Kentucky official election results archive county clerk; site:adaircoclerkky.gov election results,observed_link_candidate
+us:la:census-county:22111,LA,2026-11-20T23:23:12+00:00,Union Parish Louisiana official election results archive clerk court,completed_no_new_urls
+us:ma:priority-roster:halifax,MA,2026-11-20T23:23:12+00:00,Halifax Massachusetts official election results archive town clerk,observed_link_candidate
+us:me:municipality:freeport,ME,2026-11-20T23:23:12+00:00,Freeport Maine official election results archive town clerk,observed_link_candidate
+us:mn:census-county:27031,MN,2026-11-20T23:23:12+00:00,Cook County Minnesota official election results archive auditor; site:co.cook.mn.us elections results auditor,completed_no_new_urls
+us:mo:census-county:29203,MO,2026-11-20T23:23:12+00:00,Shannon County Missouri official election results archive clerk; site:shannoncounty.gov election results,observed_link_candidate
+us:ms:census-county:28031,MS,2026-11-20T23:23:12+00:00,Covington County Mississippi official election results archive circuit clerk; site:covingtoncountyms.gov election results,observed_link_candidate
+us:ri:priority-roster:exeter,RI,2026-11-20T23:23:12+00:00,Exeter Rhode Island official election results archive town clerk; site:exeterri.gov election results,completed_no_new_urls
