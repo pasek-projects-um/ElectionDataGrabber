@@ -4778,3 +4778,23 @@ us:ia:census-county:19027,IA,2026-11-20T02:13:14+00:00,Carroll County Iowa offic
 us:id:census-county:16041,ID,2026-11-20T02:13:14+00:00,Franklin County Idaho official results | county vendor state and archive alternatives,observed_link_candidate
 us:il:census-county:17013,IL,2026-11-20T02:13:14+00:00,Calhoun County Illinois official results | county and state alternatives,observed_link_candidate
 us:co:census-county:08101,CO,2026-11-20T02:13:14+00:00,Pueblo County Colorado official results | county vendor and archive alternatives,observed_link_candidate
+us:nh:priority-roster:gorham,NH,2026-11-20T03:05:02+00:00,Gorham New Hampshire official results | town and state alternatives,observed_link_candidate
+us:nj:census-county:34033,NJ,2026-11-20T03:05:02+00:00,Salem County New Jersey official results | county state and archive alternatives,observed_link_candidate
+us:ny:census-county:36045,NY,2026-11-20T03:05:02+00:00,Jefferson County New York official results | county state and database alternatives,observed_link_candidate
+us:ok:census-county:40011,OK,2026-11-20T03:05:02+00:00,Blaine County Oklahoma official results | current-year and archive alternatives,observed_link_candidate
+us:or:census-county:41021,OR,2026-11-20T03:05:02+00:00,Gilliam County Oregon official results | state list dashboard and export alternatives,observed_link_candidate
+us:tn:census-county:47159,TN,2026-11-20T03:05:02+00:00,Smith County Tennessee official results | commission current and archive alternatives,observed_link_candidate
+us:tx:census-county:48159,TX,2026-11-20T03:05:02+00:00,Franklin County Texas official results | county and state alternative searches,completed_no_new_urls
+us:ut:census-county:49039,UT,2026-11-20T03:05:02+00:00,Sanpete County Utah official results | county general and primary alternatives,observed_link_candidate
+us:va:census-county:51169,VA,2026-11-20T03:05:02+00:00,Scott County Virginia official results | state current and reporting alternatives,observed_link_candidate
+us:al:census-county:01107,AL,2026-11-20T03:05:02+00:00,Pickens County Alabama official results | county and state alternative searches,observed_link_candidate
+us:ar:census-county:05091,AR,2026-11-20T03:05:02+00:00,Miller County Arkansas official results | county and state archive alternatives,observed_link_candidate
+us:hi:census-county:15001,HI,2026-11-20T03:05:02+00:00,Hawaii County Hawaii official results | county and state alternative searches,completed_no_new_urls
+us:in:census-county:18041,IN,2026-11-20T03:05:02+00:00,Fayette County Indiana official results | county state and reporting alternatives,observed_link_candidate
+us:ks:census-county:20017,KS,2026-11-20T03:05:02+00:00,Chase County Kansas official results | county state and audit alternatives,observed_link_candidate
+us:ky:census-county:21223,KY,2026-11-20T03:05:02+00:00,Trimble County Kentucky official results | county state and dashboard alternatives,observed_link_candidate
+us:la:census-county:22093,LA,2026-11-20T03:05:02+00:00,St James Parish Louisiana official results | parish statistics and state alternatives,observed_link_candidate
+us:ma:priority-roster:gosnold,MA,2026-11-20T03:05:02+00:00,Gosnold Massachusetts official results | municipal directory and state alternatives,observed_link_candidate
+us:md:census-county:24017,MD,2026-11-20T03:05:02+00:00,Charles County Maryland official results | county current-year data and archive alternatives,observed_link_candidate
+us:me:municipality:fairfield,ME,2026-11-20T03:05:02+00:00,Fairfield Maine official results | town state and municipal-directory alternatives,observed_link_candidate
+us:nm:census-county:35027,NM,2026-11-20T03:05:02+00:00,Lincoln County New Mexico official results | state current-year dashboard and export alternatives,observed_link_candidate
