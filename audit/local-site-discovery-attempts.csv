@@ -4958,3 +4958,23 @@ us:ky:census-county:21231,KY,2026-11-20T13:20:00Z,Wayne County Kentucky official
 us:la:census-county:22101,LA,2026-11-20T13:20:00Z,St. Mary Parish Louisiana official election results archive | St. Mary Parish Louisiana election results vendor dashboard,completed_no_new_urls
 us:ma:priority-roster:great-barrington,MA,2026-11-20T13:20:00Z,Great Barrington Massachusetts official election results archive | Great Barrington Massachusetts election results vendor dashboard,completed_no_new_urls
 us:nj:census-county:34039,NJ,2026-11-20T13:20:00Z,Union County New Jersey official election results archive | Union County New Jersey election results vendor dashboard,completed_no_new_urls
+us:nm:census-county:35031,NM,2026-11-20T14:50:00Z,McKinley County New Mexico official election results archive,completed_no_new_urls
+us:ny:census-county:36051,NY,2026-11-20T14:50:00Z,Livingston County New York official election results archive,observed_link_candidate
+us:ok:census-county:40017,OK,2026-11-20T14:50:00Z,Canadian County Oklahoma official election results archive,completed_no_new_urls
+us:or:census-county:41027,OR,2026-11-20T14:50:00Z,Hood River County Oregon official election results archive,completed_no_new_urls
+us:pa:county:clarion,PA,2026-11-20T14:50:00Z,Clarion County Pennsylvania official election results archive,completed_no_new_urls
+us:tn:census-county:47165,TN,2026-11-20T14:50:00Z,Sumner County Tennessee official election results archive,observed_link_candidate
+us:tx:census-county:48165,TX,2026-11-20T14:50:00Z,Gaines County Texas official election results archive,observed_link_candidate
+us:ut:census-county:49045,UT,2026-11-20T14:50:00Z,Tooele County Utah official election results archive,completed_no_new_urls
+us:va:census-county:51175,VA,2026-11-20T14:50:00Z,Southampton County Virginia official election results archive,completed_no_new_urls
+us:az:census-county:04019,AZ,2026-11-20T14:50:00Z,Pima County Arizona official election results archive,completed_no_new_urls
+us:ca:census-county:06011,CA,2026-11-20T14:50:00Z,Colusa County California official election results archive,observed_link_candidate
+us:co:census-county:08111,CO,2026-11-20T14:50:00Z,San Juan County Colorado official election results archive,observed_link_candidate
+us:ct:municipality:salem,CT,2026-11-20T14:50:00Z,Salem Connecticut official election results archive,completed_no_new_urls
+us:fl:census-county:12109,FL,2026-11-20T14:50:00Z,St Johns County Florida official election results archive,observed_link_candidate
+us:ga:census-county:13251,GA,2026-11-20T14:50:00Z,Screven County Georgia official election results archive,observed_link_candidate
+us:ia:census-county:19037,IA,2026-11-20T14:50:00Z,Chickasaw County Iowa official election results archive,observed_link_candidate
+us:id:census-county:16049,ID,2026-11-20T14:50:00Z,Idaho County Idaho official election results archive,completed_no_new_urls
+us:il:census-county:17023,IL,2026-11-20T14:50:00Z,Clark County Illinois official election results archive,observed_link_candidate
+us:md:census-county:24025,MD,2026-11-20T14:50:00Z,Harford County Maryland official election results archive,completed_no_new_urls
+us:me:municipality:fort-kent,ME,2026-11-20T14:50:00Z,Fort Kent Maine official election results archive,observed_link_candidate
