@@ -5098,3 +5098,23 @@ us:ia:census-county:19043,IA,2026-11-20T19:31:20+00:00,Clayton County Iowa offic
 us:id:census-county:16055,ID,2026-11-20T19:31:20+00:00,Kootenai County Idaho official election results archive elections; site:kcgov.us 2026 election results Kootenai County official,completed_no_new_urls
 us:il:census-county:17029,IL,2026-11-20T19:31:20+00:00,Coles County Illinois official election results archive county clerk,observed_link_candidate
 us:md:census-county:24031,MD,2026-11-20T19:31:20+00:00,Montgomery County Maryland official election results archive board elections; site:elections.maryland.gov 2026 Montgomery County general results county 16,observed_link_candidate
+us:mn:census-county:27029,MN,2026-11-20T22:00:34+00:00,Clearwater County Minnesota election results official archive,observed_link_candidate
+us:mo:census-county:29201,MO,2026-11-20T22:00:34+00:00,Scott County Missouri election results official county archive,observed_link_candidate
+us:ri:priority-roster:east-providence,RI,2026-11-20T22:00:34+00:00,East Providence Rhode Island election results official archive,completed_no_new_urls
+us:sc:census-county:45077,SC,2026-11-20T22:00:34+00:00,Pickens County South Carolina election results official archive; site:scvotes.gov Pickens County 2026 official results,completed_no_new_urls
+us:sd:census-county:46041,SD,2026-11-20T22:00:34+00:00,Dewey County South Dakota election results official,completed_no_new_urls
+us:vt:priority-roster:halifax,VT,2026-11-20T22:00:34+00:00,Halifax Vermont election results official town archive,observed_link_candidate
+us:wa:census-county:53015,WA,2026-11-20T22:00:34+00:00,Cowlitz County Washington election results official archive,observed_link_candidate
+us:wi:ltsb2026:barron-stanfold-c85464e9cae44e25,WI,2026-11-20T22:00:34+00:00,Town of Stanfold Barron County Wisconsin election results official,completed_no_new_urls
+us:wv:census-county:54057,WV,2026-11-20T22:00:34+00:00,Mineral County West Virginia election results official archive; site:apps.sos.wv.gov/elections/results Mineral County 2026 election results,completed_no_new_urls
+us:wy:census-county:56029,WY,2026-11-20T22:00:34+00:00,Park County Wyoming election results official archive,completed_no_new_urls
+us:al:census-county:01123,AL,2026-11-20T22:00:34+00:00,Tallapoosa County Alabama election results official; site:tallaco.com elections results Tallapoosa County,observed_link_candidate
+us:ar:census-county:05107,AR,2026-11-20T22:00:34+00:00,Phillips County Arkansas election results official archive; site:sos.arkansas.gov Phillips County 2026 election results,completed_no_new_urls
+us:de:census-county:10003,DE,2026-11-20T22:00:34+00:00,New Castle County Delaware election results official archive,completed_no_new_urls
+us:in:census-county:18057,IN,2026-11-20T22:00:34+00:00,Hamilton County Indiana election results official archive,observed_link_candidate
+us:ks:census-county:20033,KS,2026-11-20T22:00:34+00:00,Comanche County Kansas election results official,completed_no_new_urls
+us:ky:census-county:21239,KY,2026-11-20T22:00:34+00:00,Woodford County Kentucky election results official archive,observed_link_candidate
+us:la:census-county:22109,LA,2026-11-20T22:00:34+00:00,Terrebonne Parish Louisiana election results official archive; site:sos.la.gov Terrebonne Parish 2026 election results,completed_no_new_urls
+us:ma:priority-roster:hadley,MA,2026-11-20T22:00:34+00:00,Hadley Massachusetts election results official town archive; site:hadleyma.org election results town clerk,observed_link_candidate
+us:me:municipality:freedom,ME,2026-11-20T22:00:34+00:00,Freedom Maine election results official town archive; site:freedommaine.com OR site:freedomme.org election results town clerk,completed_no_new_urls
+us:ms:census-county:28029,MS,2026-11-20T22:00:34+00:00,Copiah County Mississippi election results official archive; site:sos.ms.gov/elections/electionresults Copiah County 2026,completed_no_new_urls
