@@ -5038,3 +5038,23 @@ us:ky:census-county:21235,KY,2026-11-20T17:46:00Z,Whitley County Kentucky offici
 us:la:census-county:22105,LA,2026-11-20T17:46:00Z,Tangipahoa Parish Louisiana official current election news alternative page,observed_link_candidate
 us:ma:priority-roster:groton,MA,2026-11-20T17:46:00Z,Groton Massachusetts official 2026 primary and general election results,observed_link_candidate
 us:mi:county:eaton,MI,2026-11-20T17:46:00Z,Eaton County Michigan official results hub historical vendor dashboard,observed_link_candidate
+us:mn:census-county:27027,MN,2026-11-20T18:12:00Z,Clay County Minnesota official local county election results alternative tier,observed_link_candidate
+us:mo:census-county:29199,MO,2026-11-20T18:12:00Z,Scotland County Missouri official current results county archive state dashboard,observed_link_candidate
+us:ri:priority-roster:east-greenwich,RI,2026-11-20T18:12:00Z,East Greenwich Rhode Island official 2026 general election results endpoint,observed_link_candidate
+us:sc:census-county:45075,SC,2026-11-20T18:12:00Z,Orangeburg County South Carolina official 2026 general election results,observed_link_candidate
+us:sd:census-county:46039,SD,2026-11-20T18:12:00Z,Deuel County South Dakota official 2026 county results list,observed_link_candidate
+us:vt:priority-roster:guilford,VT,2026-11-20T18:12:00Z,Guilford Vermont official 2026 town primary and historical results,observed_link_candidate
+us:wa:census-county:53013,WA,2026-11-20T18:12:00Z,Columbia County Washington official current results vendor alternatives,completed_no_new_urls
+us:wi:ltsb2026:barron-sioux-creek-d098d417c07f5e0e,WI,2026-11-20T18:12:00Z,Town of Sioux Creek Barron County Wisconsin official election results associations,completed_no_new_urls
+us:wv:census-county:54055,WV,2026-11-20T18:12:00Z,Mercer County West Virginia official historical state results service,observed_link_candidate
+us:wy:census-county:56027,WY,2026-11-20T18:12:00Z,Niobrara County Wyoming official 2026 primary general results,observed_link_candidate
+us:az:census-county:04023,AZ,2026-11-20T18:12:00Z,Santa Cruz County Arizona official general results county links canvass,observed_link_candidate
+us:ca:census-county:06015,CA,2026-11-20T18:12:00Z,Del Norte County California official local election results archive,observed_link_candidate
+us:co:census-county:08117,CO,2026-11-20T18:12:00Z,Summit County Colorado official historical election database alternative,observed_link_candidate
+us:ct:municipality:scotland,CT,2026-11-20T18:12:00Z,Scotland Connecticut official town results reporting endpoint historical archive,observed_link_candidate
+us:fl:census-county:12113,FL,2026-11-20T18:12:00Z,Santa Rosa County Florida official results archive alternative state data page,blocked_page_inspection
+us:ga:census-county:13255,GA,2026-11-20T18:12:00Z,Spalding County Georgia official 2026 results vendor dashboard audit notices,observed_link_candidate
+us:ia:census-county:19041,IA,2026-11-20T18:12:00Z,Clay County Iowa official 2026 canvass precinct results audit tier,observed_link_candidate
+us:id:census-county:16053,ID,2026-11-20T18:12:00Z,Jerome County Idaho official county election results page alternative,observed_link_candidate
+us:il:census-county:17027,IL,2026-11-20T18:12:00Z,Clinton County Illinois official current election and latest results pages,observed_link_candidate
+us:md:census-county:24029,MD,2026-11-20T18:12:00Z,Kent County Maryland official 2026 results dashboard archive alternatives,completed_no_new_urls
