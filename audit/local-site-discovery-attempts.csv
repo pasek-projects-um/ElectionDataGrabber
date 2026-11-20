@@ -4838,3 +4838,23 @@ us:ma:priority-roster:grafton,MA,2026-11-20T05:24:41+00:00,Grafton Massachusetts
 us:md:census-county:24019,MD,2026-11-20T05:24:41+00:00,Dorchester County Maryland official results | state current-year county page and historical archive alternatives,observed_link_candidate
 us:me:municipality:falmouth,ME,2026-11-20T05:24:41+00:00,Falmouth Maine official results | town current-year state and municipal alternatives,observed_link_candidate
 us:nh:priority-roster:goshen,NH,2026-11-20T05:24:41+00:00,Goshen New Hampshire official results | town state current-year and municipal alternatives,observed_link_candidate
+us:nj:census-county:34035,NJ,2026-11-20T06:19:02+00:00,Somerset County New Jersey official archive | current Clarity dashboard and state county-directory alternatives,observed_link_candidate
+us:nm:census-county:35028,NM,2026-11-20T06:19:02+00:00,Los Alamos County New Mexico official archive | current state county results and county-site alternatives,observed_link_candidate
+us:ny:census-county:36047,NY,2026-11-20T06:19:02+00:00,Kings County New York official archive | NYC board current results and state certification alternatives,completed_no_new_urls
+us:ok:census-county:40013,OK,2026-11-20T06:19:02+00:00,Bryan County Oklahoma official archive | state 2026 results and county election-board alternatives,observed_link_candidate
+us:or:census-county:41023,OR,2026-11-20T06:19:02+00:00,Grant County Oregon official archive | current state county results and county historical alternatives,observed_link_candidate
+us:tn:census-county:47161,TN,2026-11-20T06:19:02+00:00,Stewart County Tennessee official archive | commission current-year and historical result alternatives,observed_link_candidate
+us:tx:census-county:48161,TX,2026-11-20T06:19:02+00:00,Freestone County Texas official archive | county local-tier reports and statewide reporting alternatives,observed_link_candidate
+us:ut:census-county:49041,UT,2026-11-20T06:19:02+00:00,Sevier County Utah official archive | current state results and county clerk alternatives,observed_link_candidate
+us:va:census-county:51171,VA,2026-11-20T06:19:02+00:00,Shenandoah County Virginia official archive | county registrar and state current-results alternatives,observed_link_candidate
+us:az:census-county:04015,AZ,2026-11-20T06:19:02+00:00,Mohave County Arizona official archive | county canvass and Enhanced Voting alternatives,completed_no_new_urls
+us:ca:census-county:06005,CA,2026-11-20T06:19:02+00:00,Amador County California official archive | current general page and certified-result alternatives,completed_no_new_urls
+us:co:census-county:08105,CO,2026-11-20T06:19:02+00:00,Rio Grande County Colorado official archive | county dashboard and state current-results alternatives,completed_no_new_urls
+us:ct:municipality:ridgefield,CT,2026-11-20T06:19:02+00:00,Ridgefield Connecticut official archive | town clerk and statewide historical database alternatives,observed_link_candidate
+us:fl:census-county:12103,FL,2026-11-20T06:19:02+00:00,Pinellas County Florida official archive | current general and prior municipal-result alternatives,observed_link_candidate
+us:ga:census-county:13245,GA,2026-11-20T06:19:02+00:00,Richmond County Georgia official archive | Augusta current application and historical alternatives,observed_link_candidate
+us:ia:census-county:19031,IA,2026-11-20T06:19:02+00:00,Cedar County Iowa official archive | current summary and precinct-report alternatives,completed_no_new_urls
+us:id:census-county:16045,ID,2026-11-20T06:19:02+00:00,Gem County Idaho official archive | state current results and county historical alternatives,observed_link_candidate
+us:il:census-county:17017,IL,2026-11-20T06:19:02+00:00,Cass County Illinois official archive | GBS vendor dashboard and county clerk alternatives,observed_link_candidate
+us:mi:county:clinton,MI,2026-11-20T06:19:02+00:00,Clinton County Michigan official archive | current canvass and county historical alternatives,observed_link_candidate
+us:pa:county:centre,PA,2026-11-20T06:19:02+00:00,Centre County Pennsylvania official archive | current county page ArcGIS dashboard and historical alternatives,observed_link_candidate
