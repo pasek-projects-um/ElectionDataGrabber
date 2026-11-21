@@ -5178,3 +5178,23 @@ us:ia:census-county:19047,IA,2026-11-21T00:35:27+00:00,Crawford County Iowa offi
 us:id:census-county:16059,ID,2026-11-21T00:35:27+00:00,Lemhi County Idaho official election results archive,observed_link_candidate
 us:il:census-county:17033,IL,2026-11-21T00:35:27+00:00,Crawford County Illinois official election results county clerk,observed_link_candidate
 us:md:census-county:24035,MD,2026-11-21T00:35:27+00:00,Queen Anne's County Maryland official election results archive,observed_link_candidate
+us:mi:county:gladwin,MI,2026-11-21T03:23:16+00:00,Gladwin County Michigan official election results dashboard archive,completed_no_new_urls
+us:mt:census-county:30073,MT,2026-11-21T03:23:16+00:00,Pondera County Montana official election results dashboard archive,observed_link_candidate
+us:nc:census-county:37181,NC,2026-11-21T03:23:16+00:00,Vance County North Carolina official election results county board,observed_link_candidate
+us:nd:census-county:38077,ND,2026-11-21T03:23:16+00:00,Richland County North Dakota official election results archive,observed_link_candidate
+us:ne:census-county:31179,NE,2026-11-21T03:23:16+00:00,Wayne County Nebraska official election results commissioner,observed_link_candidate
+us:nh:priority-roster:groton,NH,2026-11-21T03:23:16+00:00,Groton New Hampshire official election results town clerk,observed_link_candidate
+us:nj:census-county:34007,NJ,2026-11-21T03:23:16+00:00,Camden County New Jersey official election results dashboard archive,completed_no_new_urls
+us:nm:census-county:35039,NM,2026-11-21T03:23:16+00:00,Rio Arriba County New Mexico official election results clerk,observed_link_candidate
+us:nv:census-county:32005,NV,2026-11-21T03:23:16+00:00,Douglas County Nevada official election results dashboard archive,completed_no_new_urls
+us:oh:county:ashland,OH,2026-11-21T03:23:16+00:00,Ashland County Ohio official election results board archive,completed_no_new_urls
+us:al:census-county:01127,AL,2026-11-21T03:23:16+00:00,Walker County Alabama official election results probate archive,completed_no_new_urls
+us:ar:census-county:05111,AR,2026-11-21T03:23:16+00:00,Poinsett County Arkansas official election results clerk archive,observed_link_candidate
+us:in:census-county:18061,IN,2026-11-21T03:23:16+00:00,Harrison County Indiana official election results archive dashboard,completed_no_new_urls
+us:ks:census-county:20037,KS,2026-11-21T03:23:16+00:00,Crawford County Kansas official election results election office,completed_no_new_urls
+us:ky:census-county:21003,KY,2026-11-21T03:23:16+00:00,Allen County Kentucky official election results clerk dashboard,completed_no_new_urls
+us:la:census-county:22113,LA,2026-11-21T03:23:16+00:00,Vermilion Parish Louisiana official election results clerk archive,completed_no_new_urls
+us:ma:priority-roster:hamilton,MA,2026-11-21T03:23:16+00:00,Hamilton Massachusetts official election results town clerk archive,observed_link_candidate
+us:me:municipality:frenchboro,ME,2026-11-21T03:23:16+00:00,Frenchboro Maine official election results town clerk archive,incomplete_page_inspection
+us:mn:census-county:27033,MN,2026-11-21T03:23:16+00:00,Cottonwood County Minnesota official election results dashboard archive,observed_link_candidate
+us:mo:census-county:29205,MO,2026-11-21T03:23:16+00:00,Shelby County Missouri official election results dashboard archive,observed_link_candidate
