@@ -5198,3 +5198,23 @@ us:ma:priority-roster:hamilton,MA,2026-11-21T03:23:16+00:00,Hamilton Massachuset
 us:me:municipality:frenchboro,ME,2026-11-21T03:23:16+00:00,Frenchboro Maine official election results town clerk archive,incomplete_page_inspection
 us:mn:census-county:27033,MN,2026-11-21T03:23:16+00:00,Cottonwood County Minnesota official election results dashboard archive,observed_link_candidate
 us:mo:census-county:29205,MO,2026-11-21T03:23:16+00:00,Shelby County Missouri official election results dashboard archive,observed_link_candidate
+us:ms:census-county:28033,MS,2026-11-21T04:56:37+00:00,DeSoto County Mississippi official election results archive clerk,observed_link_candidate
+us:ny:census-county:36059,NY,2026-11-21T04:56:37+00:00,Nassau County New York official election results board elections archive,observed_link_candidate
+us:ok:census-county:40025,OK,2026-11-21T04:56:37+00:00,Cimarron County Oklahoma official election results county board,completed_no_new_urls
+us:or:census-county:41035,OR,2026-11-21T04:56:37+00:00,Klamath County Oregon official election results archive clerk,observed_link_candidate
+us:pa:county:crawford,PA,2026-11-21T04:56:37+00:00,Crawford County Pennsylvania official election results voter services archive,observed_link_candidate
+us:ri:priority-roster:foster,RI,2026-11-21T04:56:37+00:00,Foster Rhode Island official election results town clerk archive,observed_link_candidate
+us:tn:census-county:47173,TN,2026-11-21T04:56:37+00:00,Union County Tennessee official election results election commission archive,observed_link_candidate
+us:tx:census-county:48173,TX,2026-11-21T04:56:37+00:00,Glasscock County Texas official election results county clerk,observed_link_candidate
+us:ut:census-county:49053,UT,2026-11-21T04:56:37+00:00,Washington County Utah official election results dashboard archive,observed_link_candidate
+us:va:census-county:51183,VA,2026-11-21T04:56:37+00:00,Sussex County Virginia official election results registrar archive,observed_link_candidate
+us:az:census-county:04001,AZ,2026-11-21T04:56:37+00:00,Apache County Arizona official election results dashboard archive,completed_no_new_urls
+us:ca:census-county:06023,CA,2026-11-21T04:56:37+00:00,Humboldt County California official election results registrar archive,observed_link_candidate
+us:co:census-county:08125,CO,2026-11-21T04:56:37+00:00,Yuma County Colorado official election results clerk archive,observed_link_candidate
+us:ct:municipality:sherman,CT,2026-11-21T04:56:37+00:00,Sherman Connecticut official election results town clerk registrar,observed_link_candidate
+us:fl:census-county:12121,FL,2026-11-21T04:56:37+00:00,Suwannee County Florida official election results supervisor archive,observed_link_candidate
+us:ga:census-county:13263,GA,2026-11-21T04:56:37+00:00,Talbot County Georgia official election results board registrar,observed_link_candidate
+us:ia:census-county:19049,IA,2026-11-21T04:56:37+00:00,Dallas County Iowa official election results auditor archive,observed_link_candidate
+us:id:census-county:16061,ID,2026-11-21T04:56:37+00:00,Lewis County Idaho official election results clerk archive,completed_no_new_urls
+us:il:census-county:17035,IL,2026-11-21T04:56:37+00:00,Cumberland County Illinois official election results county clerk vendor,completed_no_new_urls
+us:md:census-county:24037,MD,2026-11-21T04:56:37+00:00,St. Mary's County Maryland official election results board archive,observed_link_candidate
