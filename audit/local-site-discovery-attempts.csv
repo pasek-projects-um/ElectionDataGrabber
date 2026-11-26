@@ -5298,3 +5298,23 @@ us:fl:census-county:12125,FL,2026-11-26T20:41:02+00:00,Union County Florida offi
 us:ga:census-county:13267,GA,2026-11-26T20:41:02+00:00,Tattnall County Georgia official election results county board state archive,observed_link_candidate
 us:hi:census-county:15007,HI,2026-11-26T20:41:02+00:00,Kauai County Hawaii official election results county state archive,completed_no_new_urls
 us:ia:census-county:19053,IA,2026-11-26T20:41:02+00:00,Decatur County Iowa official election results auditor archive,completed_no_new_urls
+us:id:census-county:16065,ID,2026-11-26T21:24:03+00:00,Madison County Idaho official election results county state archive,completed_no_new_urls
+us:il:census-county:17039,IL,2026-11-26T21:24:03+00:00,De Witt County Illinois official election results clerk archive,observed_link_candidate
+us:nd:census-county:38083,ND,2026-11-26T21:24:03+00:00,Sheridan County North Dakota official election results auditor archive,observed_link_candidate
+us:ne:census-county:31183,NE,2026-11-26T21:24:03+00:00,Wheeler County Nebraska official election results clerk directory,observed_link_candidate
+us:nh:priority-roster:hampton,NH,2026-11-26T21:24:03+00:00,Hampton New Hampshire official town election results archive,observed_link_candidate
+us:nj:census-county:34011,NJ,2026-11-26T21:24:03+00:00,Cumberland County New Jersey official election results clerk archive,observed_link_candidate
+us:nm:census-county:35043,NM,2026-11-26T21:24:03+00:00,Sandoval County New Mexico official election results clerk state archive,completed_no_new_urls
+us:nv:census-county:32009,NV,2026-11-26T21:24:03+00:00,Esmeralda County Nevada official clerk election results archive,incomplete_result_review
+us:oh:county:athens,OH,2026-11-26T21:24:03+00:00,Athens County Ohio official election results board state archive,observed_link_candidate
+us:al:census-county:01133,AL,2026-11-26T21:24:03+00:00,Winston County Alabama official election results probate state archive,completed_no_new_urls
+us:ar:census-county:05117,AR,2026-11-26T21:24:03+00:00,Prairie County Arkansas official county clerk election results,incomplete_result_review
+us:in:census-county:18067,IN,2026-11-26T21:24:03+00:00,Howard County Indiana official election results clerk state archive,completed_no_new_urls
+us:ks:census-county:20043,KS,2026-11-26T21:24:03+00:00,Doniphan County Kansas official election results clerk archive,observed_link_candidate
+us:ky:census-county:21009,KY,2026-11-26T21:24:03+00:00,Barren County Kentucky official election results clerk state archive,observed_link_candidate
+us:la:census-county:22119,LA,2026-11-26T21:24:03+00:00,Webster Parish Louisiana official election results clerk state archive,completed_no_new_urls
+us:ma:priority-roster:hanover,MA,2026-11-26T21:24:03+00:00,Hanover Massachusetts official town clerk election results state archive,observed_link_candidate
+us:md:census-county:24001,MD,2026-11-26T21:24:03+00:00,Allegany County Maryland official election results board state archive,completed_no_new_urls
+us:me:municipality:frye-island,ME,2026-11-26T21:24:03+00:00,Frye Island Maine official town clerk election results archive,incomplete_result_review
+us:mi:county:gratiot,MI,2026-11-26T21:24:03+00:00,Gratiot County Michigan official election results clerk state archive,completed_no_new_urls
+us:ms:census-county:28037,MS,2026-11-26T21:24:03+00:00,Franklin County Mississippi official election results commissioners state archive,completed_no_new_urls
