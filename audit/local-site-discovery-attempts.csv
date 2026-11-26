@@ -5218,3 +5218,43 @@ us:ia:census-county:19049,IA,2026-11-21T04:56:37+00:00,Dallas County Iowa offici
 us:id:census-county:16061,ID,2026-11-21T04:56:37+00:00,Lewis County Idaho official election results clerk archive,completed_no_new_urls
 us:il:census-county:17035,IL,2026-11-21T04:56:37+00:00,Cumberland County Illinois official election results county clerk vendor,completed_no_new_urls
 us:md:census-county:24037,MD,2026-11-21T04:56:37+00:00,St. Mary's County Maryland official election results board archive,observed_link_candidate
+us:sc:census-county:45081,SC,2026-11-21T05:35:00+00:00,Saluda County South Carolina official election results county office archive,observed_link_candidate
+us:sd:census-county:46045,SD,2026-11-21T05:35:00+00:00,Edmunds County South Dakota official election results auditor archive audit,observed_link_candidate
+us:vt:priority-roster:hardwick,VT,2026-11-21T05:35:00+00:00,Hardwick Vermont official election results town clerk archive,observed_link_candidate
+us:wa:census-county:53019,WA,2026-11-21T05:35:00+00:00,Ferry County Washington official election results archive vendor,observed_link_candidate
+us:wi:ltsb2026:barron-sumner-2d920a1c04483aa9,WI,2026-11-21T05:35:00+00:00,Town of Sumner Barron Wisconsin official election results county municipal,observed_link_candidate
+us:wv:census-county:54061,WV,2026-11-21T05:35:00+00:00,Monongalia County West Virginia official election results clerk state archive,observed_link_candidate
+us:wy:census-county:56033,WY,2026-11-21T05:35:00+00:00,Sheridan County Wyoming official election results current primary general,observed_link_candidate
+us:al:census-county:01129,AL,2026-11-21T05:35:00+00:00,Washington County Alabama official election results probate office,observed_link_candidate
+us:ar:census-county:05113,AR,2026-11-21T05:35:00+00:00,Polk County Arkansas official election results archive research,observed_link_candidate
+us:in:census-county:18063,IN,2026-11-21T05:35:00+00:00,Hendricks County Indiana official election results archive state division,observed_link_candidate
+us:ks:census-county:20039,KS,2026-11-21T05:35:00+00:00,Decatur County Kansas official election results county clerk state archive,observed_link_candidate
+us:ky:census-county:21005,KY,2026-11-21T05:35:00+00:00,Anderson County Kentucky official election results clerk state archive,observed_link_candidate
+us:la:census-county:22115,LA,2026-11-21T05:35:00+00:00,Vernon Parish Louisiana official election results clerk state archive,observed_link_candidate
+us:ma:priority-roster:hampden,MA,2026-11-21T05:35:00+00:00,Hampden Massachusetts official election results town clerk archive,observed_link_candidate
+us:me:municipality:frenchville,ME,2026-11-21T05:35:00+00:00,Frenchville Maine official election results town clerk municipal archive,completed_no_new_urls
+us:mi:county:gogebic,MI,2026-11-21T05:35:00+00:00,Gogebic County Michigan official election results municipal canvass dashboard,observed_link_candidate
+us:mn:census-county:27035,MN,2026-11-21T05:35:00+00:00,Crow Wing County Minnesota official election results county archive,observed_link_candidate
+us:mo:census-county:29207,MO,2026-11-21T05:35:00+00:00,Stoddard County Missouri official election results county clerk state,observed_link_candidate
+us:mt:census-county:30075,MT,2026-11-21T05:35:00+00:00,Powder River County Montana official election results state archive,observed_link_candidate
+us:nc:census-county:37183,NC,2026-11-21T05:35:00+00:00,Wake County North Carolina official election results board archive viewer,observed_link_candidate
+us:ak:priority-roster:central,AK,2026-11-26T18:19:40+00:00,Alaska Division of Elections official results archive county vendor,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-11-26T18:19:40+00:00,District of Columbia Board Elections official election results archive,completed_no_new_urls
+us:de:census-county:10001,DE,2026-11-26T18:19:40+00:00,Kent County Delaware official election results department archive,completed_no_new_urls
+us:hi:census-county:15001,HI,2026-11-26T18:19:40+00:00,Hawaii County official election results clerk archive,completed_no_new_urls
+us:nd:census-county:38079,ND,2026-11-26T18:19:40+00:00,Rolette County North Dakota official election results auditor archive,observed_link_candidate
+us:ne:census-county:31181,NE,2026-11-26T18:19:40+00:00,Webster County Nebraska official election results clerk archive,observed_link_candidate
+us:nh:priority-roster:hampstead,NH,2026-11-26T18:19:40+00:00,Hampstead New Hampshire official election results town clerk,observed_link_candidate
+us:nj:census-county:34009,NJ,2026-11-26T18:19:40+00:00,Cape May County New Jersey official election results clerk archive,observed_link_candidate
+us:nm:census-county:35041,NM,2026-11-26T18:19:40+00:00,Roosevelt County New Mexico official election results clerk archive,observed_link_candidate
+us:nv:census-county:32007,NV,2026-11-26T18:19:40+00:00,Elko County Nevada official election results clerk archive,completed_no_new_urls
+us:oh:county:ashtabula,OH,2026-11-26T18:19:40+00:00,Ashtabula County Ohio official election results board archive,observed_link_candidate
+us:az:census-county:04005,AZ,2026-11-26T18:19:40+00:00,Coconino County Arizona official election results recorder archive,completed_no_new_urls
+us:ca:census-county:06025,CA,2026-11-26T18:19:40+00:00,Imperial County California official election results registrar archive,observed_link_candidate
+us:co:census-county:08001,CO,2026-11-26T18:19:40+00:00,Adams County Colorado official election results clerk archive,completed_no_new_urls
+us:ct:municipality:simsbury,CT,2026-11-26T18:19:40+00:00,Simsbury Connecticut official election results town clerk,observed_link_candidate
+us:fl:census-county:12123,FL,2026-11-26T18:19:40+00:00,Taylor County Florida official election results supervisor archive,observed_link_candidate
+us:ga:census-county:13265,GA,2026-11-26T18:19:40+00:00,Taliaferro County Georgia official election results registrar archive,observed_link_candidate
+us:ia:census-county:19051,IA,2026-11-26T18:19:40+00:00,Davis County Iowa official election results auditor archive,completed_no_new_urls
+us:id:census-county:16063,ID,2026-11-26T18:19:40+00:00,Lincoln County Idaho official election results clerk archive,completed_no_new_urls
+us:il:census-county:17037,IL,2026-11-26T18:19:40+00:00,DeKalb County Illinois official election results clerk archive,completed_no_new_urls
