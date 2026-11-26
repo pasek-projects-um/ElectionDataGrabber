@@ -5258,3 +5258,22 @@ us:ga:census-county:13265,GA,2026-11-26T18:19:40+00:00,Taliaferro County Georgia
 us:ia:census-county:19051,IA,2026-11-26T18:19:40+00:00,Davis County Iowa official election results auditor archive,completed_no_new_urls
 us:id:census-county:16063,ID,2026-11-26T18:19:40+00:00,Lincoln County Idaho official election results clerk archive,completed_no_new_urls
 us:il:census-county:17037,IL,2026-11-26T18:19:40+00:00,DeKalb County Illinois official election results clerk archive,completed_no_new_urls
+us:md:census-county:24039,MD,2026-11-26T19:54:41+00:00,Somerset County Maryland official election results local board archive,completed_no_new_urls
+us:ms:census-county:28035,MS,2026-11-26T19:54:41+00:00,Forrest County Mississippi official election results county precinct archive,observed_link_candidate
+us:ny:census-county:36061,NY,2026-11-26T19:54:41+00:00,New York County official election results borough city archive,completed_no_new_urls
+us:ok:census-county:40027,OK,2026-11-26T19:54:41+00:00,Cleveland County Oklahoma official election results county board archive,completed_no_new_urls
+us:or:census-county:41037,OR,2026-11-26T19:54:41+00:00,Lake County Oregon official election results county state historical archive,observed_link_candidate
+us:pa:county:cumberland,PA,2026-11-26T19:54:41+00:00,Cumberland Pennsylvania official election results county statewide data archive,observed_link_candidate
+us:ri:priority-roster:glocester,RI,2026-11-26T19:54:41+00:00,Glocester Rhode Island official election results local board statewide dashboard,observed_link_candidate
+us:tn:census-county:47175,TN,2026-11-26T19:54:41+00:00,Van Buren County Tennessee official election commission results archive,observed_link_candidate
+us:tx:census-county:48175,TX,2026-11-26T19:54:41+00:00,Goliad County Texas official election results county state archive,observed_link_candidate
+us:ut:census-county:49055,UT,2026-11-26T19:54:41+00:00,Wayne County Utah official election results clerk state archive,completed_no_new_urls
+us:va:census-county:51185,VA,2026-11-26T19:54:41+00:00,Tazewell County Virginia official election authority current historical results,observed_link_candidate
+us:al:census-county:01131,AL,2026-11-26T19:54:41+00:00,Wilcox County Alabama official election results probate state archive,completed_no_new_urls
+us:ar:census-county:05115,AR,2026-11-26T19:54:41+00:00,Pope County Arkansas official election results county state archive,completed_no_new_urls
+us:in:census-county:18065,IN,2026-11-26T19:54:41+00:00,Henry County Indiana official election results clerk state archive,observed_link_candidate
+us:ks:census-county:20041,KS,2026-11-26T19:54:41+00:00,Dickinson County Kansas official election results county state archive,completed_no_new_urls
+us:ky:census-county:21007,KY,2026-11-26T19:54:41+00:00,Ballard County Kentucky official election results clerk state archive,observed_link_candidate
+us:la:census-county:22117,LA,2026-11-26T19:54:41+00:00,Washington Parish Louisiana official election results clerk state archive,completed_no_new_urls
+us:ma:priority-roster:hancock,MA,2026-11-26T19:54:41+00:00,Hancock Massachusetts official election results town clerk state certification,observed_link_candidate
+us:me:municipality:friendship,ME,2026-11-26T19:54:41+00:00,Friendship Maine official election results town meeting state archive,observed_link_candidate
