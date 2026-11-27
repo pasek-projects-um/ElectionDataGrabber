@@ -5478,3 +5478,23 @@ us:la:census-county:22127,LA,2026-11-27T08:11:34+00:00,Winn Parish Louisiana off
 us:ma:priority-roster:harwich,MA,2026-11-27T08:11:34+00:00,Harwich Massachusetts official municipal results current-year pages and historical archive,observed_link_candidate
 us:md:census-county:24047,MD,2026-11-27T08:11:34+00:00,Worcester County Maryland official county current results municipal tier and historical archive,observed_link_candidate
 us:ms:census-county:28043,MS,2026-11-27T08:11:34+00:00,Grenada County Mississippi official current county reports and historical election archives,observed_link_candidate
+us:nd:census-county:38089,ND,2026-11-27T09:43:27+00:00,Stark County North Dakota official county result pages current dashboard and historical archive,observed_link_candidate
+us:ne:census-county:31003,NE,2026-11-27T09:43:27+00:00,Antelope County Nebraska official current county reports statewide dashboard and prior results,observed_link_candidate
+us:nh:priority-roster:hanover,NH,2026-11-27T09:43:27+00:00,Hanover New Hampshire official town results current notices and historical archive,observed_link_candidate
+us:nj:census-county:34017,NJ,2026-11-27T09:43:27+00:00,Hudson County New Jersey official county dashboard state index and historical archive,completed_no_new_urls
+us:nm:census-county:35049,NM,2026-11-27T09:43:27+00:00,Santa Fe County New Mexico official current dashboard local results and historical archive,observed_link_candidate
+us:nv:census-county:32015,NV,2026-11-27T09:43:27+00:00,Lander County Nevada official county results state current reporting and historical archive,completed_no_new_urls
+us:oh:county:brown,OH,2026-11-27T09:43:27+00:00,Brown County Ohio official board current results archive and state data portal,observed_link_candidate
+us:az:census-county:04017,AZ,2026-11-27T09:43:27+00:00,Navajo County Arizona official county results department archive and vendor endpoints,observed_link_candidate
+us:ca:census-county:06035,CA,2026-11-27T09:43:27+00:00,Lassen County California official county current results past elections and state results,completed_no_new_urls
+us:co:census-county:08013,CO,2026-11-27T09:43:27+00:00,Boulder County Colorado official current dashboard 2026 index and historical archive,observed_link_candidate
+us:ct:municipality:stafford,CT,2026-11-27T09:43:27+00:00,Stafford Connecticut official state municipal results and historical election database,observed_link_candidate
+us:fl:census-county:12001,FL,2026-11-27T09:43:27+00:00,Alachua County Florida official county results statewide current reporting and historical archive,observed_link_candidate
+us:ga:census-county:13277,GA,2026-11-27T09:43:27+00:00,Tift County Georgia official current statewide results data hub and historical archive,observed_link_candidate
+us:ia:census-county:19063,IA,2026-11-27T09:43:27+00:00,Emmet County Iowa official county election information state current results and archive,completed_no_new_urls
+us:me:municipality:gilead,ME,2026-11-27T09:43:27+00:00,Gilead Maine official municipal clerk association current state results and historical archive,observed_link_candidate
+us:mi:county:ingham,MI,2026-11-27T09:43:27+00:00,Ingham County Michigan official county current vendor results state data and historical interfaces,observed_link_candidate
+us:mn:census-county:27047,MN,2026-11-27T09:43:27+00:00,Freeborn County Minnesota official current results county root and historical archive,observed_link_candidate
+us:mo:census-county:29219,MO,2026-11-27T09:43:27+00:00,Warren County Missouri official county archive current state reporting and election authority,observed_link_candidate
+us:ny:census-county:36069,NY,2026-11-27T09:43:27+00:00,Ontario County New York official 2026 county page vendor results and historical archive,observed_link_candidate
+us:ok:census-county:40035,OK,2026-11-27T09:43:27+00:00,Craig County Oklahoma official 2026 results statewide exports and historical archive,observed_link_candidate
