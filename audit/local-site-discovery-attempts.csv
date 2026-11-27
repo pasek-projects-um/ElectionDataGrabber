@@ -5418,3 +5418,23 @@ us:me:municipality:gardiner,ME,2026-11-27T04:49:52+00:00,Gardiner Maine official
 us:mi:county:houghton,MI,2026-11-27T04:49:52+00:00,Houghton County Michigan official election results current county clerk vendor and historical archive,completed_no_new_urls
 us:mn:census-county:27043,MN,2026-11-27T04:49:52+00:00,Faribault County Minnesota official election results current county vendor and historical archive,observed_link_candidate
 us:mo:census-county:29215,MO,2026-11-27T04:49:52+00:00,Texas County Missouri official election results current county vendor and historical archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-27T06:34:47+00:00,Sussex County Delaware official election results current county vendor and historical archive,observed_link_candidate
+us:hi:census-county:15009,HI,2026-11-27T06:34:47+00:00,Maui County Hawaii official election results current county vendor and historical archive,observed_link_candidate
+us:ms:census-county:28041,MS,2026-11-27T06:34:47+00:00,Greene County Mississippi official election results current county vendor and historical archive,completed_no_new_urls
+us:nd:census-county:38087,ND,2026-11-27T06:34:47+00:00,Slope County North Dakota official election results current county vendor and historical archive,completed_no_new_urls
+us:ne:census-county:31001,NE,2026-11-27T06:34:47+00:00,Adams County Nebraska official election results current county vendor and historical archive,completed_no_new_urls
+us:nh:priority-roster:hancock,NH,2026-11-27T06:34:47+00:00,Hancock New Hampshire official election results town clerk municipal archive,completed_no_new_urls
+us:nj:census-county:34015,NJ,2026-11-27T06:34:47+00:00,Gloucester County New Jersey official election results current county vendor and historical archive,completed_no_new_urls
+us:nm:census-county:35047,NM,2026-11-27T06:34:47+00:00,San Miguel County New Mexico official election results current county vendor and historical archive,completed_no_new_urls
+us:nv:census-county:32013,NV,2026-11-27T06:34:47+00:00,Humboldt County Nevada official election results current county vendor and historical archive,completed_no_new_urls
+us:oh:county:belmont,OH,2026-11-27T06:34:47+00:00,Belmont County Ohio official election results current county vendor and historical archive,observed_link_candidate
+us:al:census-county:01005,AL,2026-11-27T06:34:47+00:00,Barbour County Alabama official election results current county vendor and historical archive,completed_no_new_urls
+us:ar:census-county:05123,AR,2026-11-27T06:34:47+00:00,St. Francis County Arkansas official election results current county vendor and historical archive,observed_link_candidate
+us:id:census-county:16071,ID,2026-11-27T06:34:47+00:00,Oneida County Idaho official election results current county vendor and historical archive,observed_link_candidate
+us:il:census-county:17045,IL,2026-11-27T06:34:47+00:00,Edgar County Illinois official election results current county vendor and historical archive,completed_no_new_urls
+us:in:census-county:18073,IN,2026-11-27T06:34:47+00:00,Jasper County Indiana official election results current county vendor and historical archive,completed_no_new_urls
+us:ks:census-county:20047,KS,2026-11-27T06:34:47+00:00,Edwards County Kansas official election results current county vendor and historical archive,completed_no_new_urls
+us:ky:census-county:21015,KY,2026-11-27T06:34:47+00:00,Boone County Kentucky official election results current county vendor and historical archive,completed_no_new_urls
+us:la:census-county:22125,LA,2026-11-27T06:34:47+00:00,West Feliciana Parish Louisiana official election results current parish vendor and historical archive,completed_no_new_urls
+us:ma:priority-roster:harvard,MA,2026-11-27T06:34:47+00:00,Harvard Massachusetts official election results town clerk municipal archive,completed_no_new_urls
+us:md:census-county:24045,MD,2026-11-27T06:34:47+00:00,Wicomico County Maryland official election results current county vendor and historical archive,observed_link_candidate
