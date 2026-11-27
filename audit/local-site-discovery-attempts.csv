@@ -5518,3 +5518,23 @@ us:ma:priority-roster:hatfield,MA,2026-11-27T11:58:35+00:00,Hatfield Massachuset
 us:md:census-county:24510,MD,2026-11-27T11:58:35+00:00,Baltimore City Maryland official 2026 county results election data municipal tier and archives,completed_no_new_urls
 us:ms:census-county:28045,MS,2026-11-27T11:58:35+00:00,Hancock County Mississippi official county election root 2026 recapitulation index and state results,observed_link_candidate
 us:mt:census-county:30085,MT,2026-11-27T11:58:35+00:00,Roosevelt County Montana official election administration current state dashboard and historical archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-27T13:50:23+00:00,Sussex County Delaware official current results county reporting state archive and alternative local tiers,completed_no_new_urls
+us:hi:census-county:15009,HI,2026-11-27T13:50:23+00:00,Maui County Hawaii official current county totals state results and historical archive,observed_link_candidate
+us:nc:census-county:37193,NC,2026-11-27T13:50:23+00:00,Wilkes County North Carolina official county election roots current state dashboard and historical data,observed_link_candidate
+us:sc:census-county:45091,SC,2026-11-27T13:50:23+00:00,York County South Carolina official county current results state reporting and historical database,observed_link_candidate
+us:sd:census-county:46055,SD,2026-11-27T13:50:23+00:00,Haakon County South Dakota official current dashboard election history and official returns,observed_link_candidate
+us:vt:priority-roster:holland,VT,2026-11-27T13:50:23+00:00,Holland Vermont official current result application state results data and historical database,observed_link_candidate
+us:wa:census-county:53027,WA,2026-11-27T13:50:23+00:00,Grays Harbor County Washington official current county results and state historical archive,observed_link_candidate
+us:wi:ltsb2026:bayfield-barksdale-4c8f69369032dc3e,WI,2026-11-27T13:50:23+00:00,Town of Barksdale Wisconsin official Bayfield County 2026 elections county archive and state results,observed_link_candidate
+us:wv:census-county:54071,WV,2026-11-27T13:50:23+00:00,Pendleton County West Virginia official state current result alternatives and historical archive,observed_link_candidate
+us:wy:census-county:56043,WY,2026-11-27T13:50:23+00:00,Washakie County Wyoming official county election root 2026 state results and historical archive,observed_link_candidate
+us:az:census-county:04012,AZ,2026-11-27T13:50:23+00:00,La Paz County Arizona official county results current vendor endpoint state reporting and archive,completed_no_new_urls
+us:ca:census-county:06037,CA,2026-11-27T13:50:23+00:00,Los Angeles County California official live results index current application and historical archive,observed_link_candidate
+us:co:census-county:08014,CO,2026-11-27T13:50:23+00:00,Broomfield County Colorado official current election information results records and historical archive,observed_link_candidate
+us:ct:municipality:stamford,CT,2026-11-27T13:50:23+00:00,Stamford Connecticut official municipal election root current state results and historical database,observed_link_candidate
+us:fl:census-county:12003,FL,2026-11-27T13:50:23+00:00,Baker County Florida official county root current 2026 results reporting and historical archive,observed_link_candidate
+us:ga:census-county:13279,GA,2026-11-27T13:50:23+00:00,Toombs County Georgia official county election board current vendor results state reporting and archive,observed_link_candidate
+us:ia:census-county:19065,IA,2026-11-27T13:50:23+00:00,Fayette County Iowa official county election root 2026 reporting endpoint and state historical alternatives,observed_link_candidate
+us:me:municipality:glenburn,ME,2026-11-27T13:50:23+00:00,Glenburn Maine official municipal voting root state results and historical alternatives,observed_link_candidate
+us:mi:county:ionia,MI,2026-11-27T13:50:23+00:00,Ionia County Michigan official county current results reports state data and municipal alternatives,completed_no_new_urls
+us:mn:census-county:27049,MN,2026-11-27T13:50:23+00:00,Goodhue County Minnesota official county election root current state reporting and historical archive,observed_link_candidate
