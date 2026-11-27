@@ -5378,3 +5378,23 @@ us:hi:census-county:15009,HI,2026-11-26T22:55:30+00:00,Maui County Hawaii offici
 us:ia:census-county:19055,IA,2026-11-26T22:55:30+00:00,Delaware County Iowa official election results auditor historical archive,observed_link_candidate
 us:mn:census-county:27039,MN,2026-11-26T22:55:30+00:00,Dodge County Minnesota official election results auditor state dashboard,observed_link_candidate
 us:mo:census-county:29211,MO,2026-11-26T22:55:30+00:00,Sullivan County Missouri official election results clerk state dashboard,observed_link_candidate
+us:ny:census-county:36065,NY,2026-11-27T03:55:05+00:00,Oneida County New York official election results current vendor and historical archive,observed_link_candidate
+us:ok:census-county:40031,OK,2026-11-27T03:55:05+00:00,Comanche County Oklahoma official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:or:census-county:41041,OR,2026-11-27T03:55:05+00:00,Lincoln County Oregon official election results current county clerk vendor and historical archive,observed_link_candidate
+us:pa:county:delaware,PA,2026-11-27T03:55:05+00:00,Delaware County Pennsylvania official election results current county vendor and historical archive,observed_link_candidate
+us:ri:priority-roster:bristol,RI,2026-11-27T03:55:05+00:00,Bristol Rhode Island official election results current municipal vendor and historical archive,completed_no_new_urls
+us:tn:census-county:47179,TN,2026-11-27T03:55:05+00:00,Washington County Tennessee official election results current county vendor and historical archive,completed_no_new_urls
+us:tx:census-county:48179,TX,2026-11-27T03:55:05+00:00,Gray County Texas official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:ut:census-county:49003,UT,2026-11-27T03:55:05+00:00,Box Elder County Utah official election results current county vendor and historical archive,observed_link_candidate
+us:va:census-county:51191,VA,2026-11-27T03:55:05+00:00,Washington County Virginia official election results current county vendor and historical archive,completed_no_new_urls
+us:al:census-county:01003,AL,2026-11-27T03:55:05+00:00,Baldwin County Alabama official election results current county probate vendor and historical archive,completed_no_new_urls
+us:ar:census-county:05121,AR,2026-11-27T03:55:05+00:00,Randolph County Arkansas official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:dc:priority-roster:central,DC,2026-11-27T03:55:05+00:00,District of Columbia Board of Elections official current results vendor and historical archive,completed_no_new_urls
+us:id:census-county:16069,ID,2026-11-27T03:55:05+00:00,Nez Perce County Idaho official election results current county vendor and historical archive,observed_link_candidate
+us:il:census-county:17043,IL,2026-11-27T03:55:05+00:00,DuPage County Illinois official election results current county vendor and historical archive,completed_no_new_urls
+us:in:census-county:18071,IN,2026-11-27T03:55:05+00:00,Jackson County Indiana official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:ks:census-county:20063,KS,2026-11-27T03:55:05+00:00,Edwards County Kansas official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:ky:census-county:21013,KY,2026-11-27T03:55:05+00:00,Bell County Kentucky official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:la:census-county:22123,LA,2026-11-27T03:55:05+00:00,West Carroll Parish Louisiana official election results current parish clerk vendor and historical archive,completed_no_new_urls
+us:ma:priority-roster:hardwick,MA,2026-11-27T03:55:05+00:00,Hardwick Massachusetts official election results current town clerk vendor and historical archive,completed_no_new_urls
+us:md:census-county:24043,MD,2026-11-27T03:55:05+00:00,Washington County Maryland official election results current county vendor and historical archive,completed_no_new_urls
