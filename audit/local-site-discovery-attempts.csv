@@ -1,4 +1,24 @@
 jurisdiction_id,state,attempted_at,query,outcome
+us:dc:priority-roster:central,DC,2026-11-27T01:35:04+00:00,District of Columbia official current results historical archive alternative reporting sites,observed_link_candidate
+us:mt:census-county:30079,MT,2026-11-27T01:35:04+00:00,Prairie County Montana official election results county clerk current historical vendor,observed_link_candidate
+us:nc:census-county:37187,NC,2026-11-27T01:35:04+00:00,Washington County North Carolina official election results board current historical dashboard,observed_link_candidate
+us:sc:census-county:45085,SC,2026-11-27T01:35:04+00:00,Sumter County South Carolina official election results county office current historical vendor,completed_no_new_urls
+us:sd:census-county:46049,SD,2026-11-27T01:35:04+00:00,Faulk County South Dakota official election results auditor current historical export,observed_link_candidate
+us:vt:priority-roster:hartland,VT,2026-11-27T01:35:04+00:00,Hartland Vermont official election results town clerk current historical archive,observed_link_candidate
+us:wa:census-county:53023,WA,2026-11-27T01:35:04+00:00,Garfield County Washington official election results auditor current vendor archive,observed_link_candidate
+us:wi:ltsb2026:barron-vance-creek-d4142cfe02678024,WI,2026-11-27T01:35:04+00:00,Town of Vance Creek Barron County Wisconsin official election results clerk current archive,observed_link_candidate
+us:wv:census-county:54065,WV,2026-11-27T01:35:04+00:00,Morgan County West Virginia official election results clerk current historical archive,observed_link_candidate
+us:wy:census-county:56037,WY,2026-11-27T01:35:04+00:00,Sweetwater County Wyoming official election results clerk current certified archive,observed_link_candidate
+us:al:census-county:01001,AL,2026-11-27T01:35:04+00:00,Autauga County Alabama official election results probate current historical data,observed_link_candidate
+us:ar:census-county:05119,AR,2026-11-27T01:35:04+00:00,Pulaski County Arkansas official election results clerk current historical archive,observed_link_candidate
+us:id:census-county:16067,ID,2026-11-27T01:35:04+00:00,Minidoka County Idaho official election results clerk current vendor historical archive,observed_link_candidate
+us:il:census-county:17041,IL,2026-11-27T01:35:04+00:00,Douglas County Illinois official election results county clerk state current historical,observed_link_candidate
+us:in:census-county:18069,IN,2026-11-27T01:35:04+00:00,Huntington County Indiana official election results clerk current historical vendor,completed_no_new_urls
+us:ks:census-county:20045,KS,2026-11-27T01:35:04+00:00,Douglas County Kansas official election results county clerk current vendor archive,observed_link_candidate
+us:ky:census-county:21011,KY,2026-11-27T01:35:04+00:00,Bath County Kentucky official election results county clerk current historical dashboard,observed_link_candidate
+us:la:census-county:22121,LA,2026-11-27T01:35:04+00:00,West Baton Rouge Parish Louisiana official election results clerk current historical alternative site,completed_no_new_urls
+us:ma:priority-roster:hanson,MA,2026-11-27T01:35:04+00:00,Hanson Massachusetts official election results town clerk current historical archive,observed_link_candidate
+us:md:census-county:24041,MD,2026-11-27T01:35:04+00:00,Talbot County Maryland official election results board current historical data,observed_link_candidate
 us:al:census-county:01001,AL,2026-10-16T02:10:41.753379+00:00,Autauga County Alabama official election results,observed_link_candidate
 us:az:census-county:04001,AZ,2026-10-16T02:10:41.753379+00:00,Apache County Arizona official elections results,observed_link_candidate
 us:co:census-county:08001,CO,2026-10-16T02:10:41.753379+00:00,Adams County Colorado official election results,observed_link_candidate
