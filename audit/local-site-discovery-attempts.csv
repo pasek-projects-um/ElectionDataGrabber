@@ -5498,3 +5498,23 @@ us:mn:census-county:27047,MN,2026-11-27T09:43:27+00:00,Freeborn County Minnesota
 us:mo:census-county:29219,MO,2026-11-27T09:43:27+00:00,Warren County Missouri official county archive current state reporting and election authority,observed_link_candidate
 us:ny:census-county:36069,NY,2026-11-27T09:43:27+00:00,Ontario County New York official 2026 county page vendor results and historical archive,observed_link_candidate
 us:ok:census-county:40035,OK,2026-11-27T09:43:27+00:00,Craig County Oklahoma official 2026 results statewide exports and historical archive,observed_link_candidate
+us:dc:priority-roster:central,DC,2026-11-27T11:58:35+00:00,District of Columbia official current results election archives and alternative Board of Elections roots,completed_no_new_urls
+us:or:census-county:41045,OR,2026-11-27T11:58:35+00:00,Malheur County Oregon official county current results state dashboard and historical archive,observed_link_candidate
+us:pa:county:erie,PA,2026-11-27T11:58:35+00:00,Erie County Pennsylvania official county reporting endpoint department root and state historical data,observed_link_candidate
+us:ri:priority-roster:johnston,RI,2026-11-27T11:58:35+00:00,Johnston Rhode Island official current state results municipal tier and previous-results archive,observed_link_candidate
+us:tn:census-county:47183,TN,2026-11-27T11:58:35+00:00,Weakley County Tennessee official election commission current information and historical results alternatives,observed_link_candidate
+us:tx:census-county:48183,TX,2026-11-27T11:58:35+00:00,Gregg County Texas official state results interface historical archive and county reporting alternatives,observed_link_candidate
+us:ut:census-county:49007,UT,2026-11-27T11:58:35+00:00,Carbon County Utah official county current results state dashboard and historical reports,observed_link_candidate
+us:va:census-county:51195,VA,2026-11-27T11:58:35+00:00,Wise County Virginia official registrar root state results and historical alternatives,observed_link_candidate
+us:al:census-county:01009,AL,2026-11-27T11:58:35+00:00,Blount County Alabama official county election root current county selector and state data archive,completed_no_new_urls
+us:ar:census-county:05127,AR,2026-11-27T11:58:35+00:00,Scott County Arkansas official current results research index and historical Secretary of State reports,observed_link_candidate
+us:id:census-county:16075,ID,2026-11-27T11:58:35+00:00,Payette County Idaho official county and vendor results current state reporting and historical archive,observed_link_candidate
+us:il:census-county:17049,IL,2026-11-27T11:58:35+00:00,Effingham County Illinois official county current results election office and state reporting alternatives,completed_no_new_urls
+us:in:census-county:18077,IN,2026-11-27T11:58:35+00:00,Jefferson County Indiana official county archive state historical results and voter registration root,observed_link_candidate
+us:ks:census-county:20051,KS,2026-11-27T11:58:35+00:00,Ellis County Kansas official county current results 2026 pages and state archive alternatives,completed_no_new_urls
+us:ky:census-county:21019,KY,2026-11-27T11:58:35+00:00,Boyd County Kentucky official county live results state 2026 index and historical alternatives,observed_link_candidate
+us:la:census-county:22001,LA,2026-11-27T11:58:35+00:00,Acadia Parish Louisiana official clerk results voter portal and historical alternatives,completed_no_new_urls
+us:ma:priority-roster:hatfield,MA,2026-11-27T11:58:35+00:00,Hatfield Massachusetts official municipal and state result navigation and historical alternatives,observed_link_candidate
+us:md:census-county:24510,MD,2026-11-27T11:58:35+00:00,Baltimore City Maryland official 2026 county results election data municipal tier and archives,completed_no_new_urls
+us:ms:census-county:28045,MS,2026-11-27T11:58:35+00:00,Hancock County Mississippi official county election root 2026 recapitulation index and state results,observed_link_candidate
+us:mt:census-county:30085,MT,2026-11-27T11:58:35+00:00,Roosevelt County Montana official election administration current state dashboard and historical archive,observed_link_candidate
