@@ -1,4 +1,24 @@
 jurisdiction_id,state,attempted_at,query,outcome
+us:me:municipality:fryeburg,ME,2026-11-27T02:38:28+00:00,Fryeburg Maine official election results town clerk municipal archive,observed_link_candidate
+us:mi:county:hillsdale,MI,2026-11-27T02:38:28+00:00,Hillsdale County Michigan official election results archive state county directory,observed_link_candidate
+us:ms:census-county:28039,MS,2026-11-27T02:38:28+00:00,George County Mississippi official election results circuit clerk current recapitulation,observed_link_candidate
+us:nd:census-county:38085,ND,2026-11-27T02:38:28+00:00,Sioux County North Dakota official election results county auditor certification,observed_link_candidate
+us:ne:census-county:31185,NE,2026-11-27T02:38:28+00:00,York County Nebraska official election results clerk current archive,completed_no_new_urls
+us:nh:priority-roster:hampton-falls,NH,2026-11-27T02:38:28+00:00,Hampton Falls New Hampshire official election results town clerk archive,completed_no_new_urls
+us:nj:census-county:34013,NJ,2026-11-27T02:38:28+00:00,Essex County New Jersey official election results clerk current historical alternatives,completed_no_new_urls
+us:nm:census-county:35045,NM,2026-11-27T02:38:28+00:00,San Juan County New Mexico official election results county clerk dashboard archive,observed_link_candidate
+us:nv:census-county:32011,NV,2026-11-27T02:38:28+00:00,Eureka County Nevada official election results clerk current historical alternatives,completed_no_new_urls
+us:oh:county:auglaize,OH,2026-11-27T02:38:28+00:00,Auglaize County Ohio official election results board current archive reports,completed_no_new_urls
+us:az:census-county:04011,AZ,2026-11-27T02:38:28+00:00,Greenlee County Arizona official election results county recorder current archive,completed_no_new_urls
+us:ca:census-county:06031,CA,2026-11-27T02:38:28+00:00,Kings County California official election results current historical alternatives,completed_no_new_urls
+us:co:census-county:08007,CO,2026-11-27T02:38:28+00:00,Archuleta County Colorado official election results current vendor historical,observed_link_candidate
+us:ct:municipality:southbury,CT,2026-11-27T02:38:28+00:00,Southbury Connecticut official election results town clerk archive,completed_no_new_urls
+us:fl:census-county:12129,FL,2026-11-27T02:38:28+00:00,Wakulla County Florida official election results supervisor current archive,observed_link_candidate
+us:ga:census-county:13271,GA,2026-11-27T02:38:28+00:00,Telfair County Georgia official election results probate court state reporting,completed_no_new_urls
+us:hi:census-county:15003,HI,2026-11-27T02:38:28+00:00,Honolulu County Hawaii official election results archive alternative local tiers,completed_no_new_urls
+us:ia:census-county:19057,IA,2026-11-27T02:38:28+00:00,Des Moines County Iowa official election results auditor current archive,completed_no_new_urls
+us:mn:census-county:27041,MN,2026-11-27T02:38:28+00:00,Douglas County Minnesota official election results auditor county route archive,observed_link_candidate
+us:mo:census-county:29213,MO,2026-11-27T02:38:28+00:00,Taney County Missouri official election results clerk current archive,observed_link_candidate
 us:dc:priority-roster:central,DC,2026-11-27T01:35:04+00:00,District of Columbia official current results historical archive alternative reporting sites,observed_link_candidate
 us:mt:census-county:30079,MT,2026-11-27T01:35:04+00:00,Prairie County Montana official election results county clerk current historical vendor,observed_link_candidate
 us:nc:census-county:37187,NC,2026-11-27T01:35:04+00:00,Washington County North Carolina official election results board current historical dashboard,observed_link_candidate
