@@ -5538,3 +5538,23 @@ us:ia:census-county:19065,IA,2026-11-27T13:50:23+00:00,Fayette County Iowa offic
 us:me:municipality:glenburn,ME,2026-11-27T13:50:23+00:00,Glenburn Maine official municipal voting root state results and historical alternatives,observed_link_candidate
 us:mi:county:ionia,MI,2026-11-27T13:50:23+00:00,Ionia County Michigan official county current results reports state data and municipal alternatives,completed_no_new_urls
 us:mn:census-county:27049,MN,2026-11-27T13:50:23+00:00,Goodhue County Minnesota official county election root current state reporting and historical archive,observed_link_candidate
+us:mo:census-county:29221,MO,2026-11-27T09:21:49-05:00,Washington County Missouri official election results current historical archive | county clerk and state ENR alternatives,observed_link_candidate
+us:nd:census-county:38091,ND,2026-11-27T09:21:49-05:00,Steele County North Dakota official election results current historical archive | county auditor and state result alternatives,completed_no_new_urls
+us:ne:census-county:31005,NE,2026-11-27T09:21:49-05:00,Arthur County Nebraska official election results current historical archive | county site and Nebraska county reporting alternatives,observed_link_candidate
+us:nh:priority-roster:harrisville,NH,2026-11-27T09:21:49-05:00,Harrisville New Hampshire official election results town clerk municipal archive | town site and Secretary of State alternatives,completed_no_new_urls
+us:nj:census-county:34019,NJ,2026-11-27T09:21:49-05:00,Hunterdon County New Jersey official election results current historical archive | county reports and state-linked alternatives,observed_link_candidate
+us:nm:census-county:35051,NM,2026-11-27T09:21:49-05:00,Sierra County New Mexico official election results current historical archive | county clerk and Secretary of State alternatives,completed_no_new_urls
+us:nv:census-county:32017,NV,2026-11-27T09:21:49-05:00,Lincoln County Nevada official election results current historical archive | county clerk Silver State and vendor alternatives,completed_no_new_urls
+us:ny:census-county:36071,NY,2026-11-27T09:21:49-05:00,Orange County New York official election results current historical archive | county certification state archive and vendor dashboard alternatives,observed_link_candidate
+us:oh:county:butler,OH,2026-11-27T09:21:49-05:00,Butler County Ohio official election results current historical archive | county ENR and state data portal alternatives,observed_link_candidate
+us:ok:census-county:40037,OK,2026-11-27T09:21:49-05:00,Creek County Oklahoma official election results current historical archive | county board and state 2026 result alternatives,observed_link_candidate
+us:al:census-county:01011,AL,2026-11-27T09:21:49-05:00,Bullock County Alabama official election results current historical archive | probate and Alabama Votes alternatives,completed_no_new_urls
+us:ar:census-county:05129,AR,2026-11-27T09:21:49-05:00,Searcy County Arkansas official election results current historical archive | county and Secretary of State alternatives,completed_no_new_urls
+us:id:census-county:16077,ID,2026-11-27T09:21:49-05:00,Power County Idaho official election results current historical archive | county state reporting and canvass database alternatives,observed_link_candidate
+us:il:census-county:17051,IL,2026-11-27T09:21:49-05:00,Fayette County Illinois official election results current historical archive | county clerk and state reporting alternatives,completed_no_new_urls
+us:in:census-county:18079,IN,2026-11-27T09:21:49-05:00,Jennings County Indiana official election results current historical archive | county clerk and state ENR alternatives,observed_link_candidate
+us:ks:census-county:20053,KS,2026-11-27T09:21:49-05:00,Ellsworth County Kansas official election results current historical archive | county election office and Secretary of State alternatives,completed_no_new_urls
+us:ky:census-county:21021,KY,2026-11-27T09:21:49-05:00,Boyle County Kentucky official election results current historical archive | county clerk state ENR and archive alternatives,observed_link_candidate
+us:la:census-county:22003,LA,2026-11-27T09:21:49-05:00,Allen Parish Louisiana official election results current historical archive | parish clerk voter portal and state alternatives,completed_no_new_urls
+us:ma:priority-roster:haverhill,MA,2026-11-27T09:21:49-05:00,Haverhill Massachusetts official election results current historical archive | city results and state archive alternatives,observed_link_candidate
+us:md:census-county:24003,MD,2026-11-27T09:21:49-05:00,Anne Arundel County Maryland official election results current historical archive | county board state results and Maryland Manual alternatives,observed_link_candidate
