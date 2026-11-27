@@ -5398,3 +5398,23 @@ us:ky:census-county:21013,KY,2026-11-27T03:55:05+00:00,Bell County Kentucky offi
 us:la:census-county:22123,LA,2026-11-27T03:55:05+00:00,West Carroll Parish Louisiana official election results current parish clerk vendor and historical archive,completed_no_new_urls
 us:ma:priority-roster:hardwick,MA,2026-11-27T03:55:05+00:00,Hardwick Massachusetts official election results current town clerk vendor and historical archive,completed_no_new_urls
 us:md:census-county:24043,MD,2026-11-27T03:55:05+00:00,Washington County Maryland official election results current county vendor and historical archive,completed_no_new_urls
+us:mt:census-county:30081,MT,2026-11-27T04:49:52+00:00,Ravalli County Montana official election results current county vendor and historical archive,observed_link_candidate
+us:nc:census-county:37189,NC,2026-11-27T04:49:52+00:00,Watauga County North Carolina official election results current county vendor and historical archive,observed_link_candidate
+us:sc:census-county:45087,SC,2026-11-27T04:49:52+00:00,Union County South Carolina official election results current county vendor and historical archive,completed_no_new_urls
+us:sd:census-county:46051,SD,2026-11-27T04:49:52+00:00,Grant County South Dakota official election results current county vendor and historical archive,observed_link_candidate
+us:vt:priority-roster:highgate,VT,2026-11-27T04:49:52+00:00,Highgate Vermont official election results current town clerk vendor and historical archive,completed_no_new_urls
+us:wa:census-county:53077,WA,2026-11-27T04:49:52+00:00,Yakima County Washington official election results current county vendor and historical archive,observed_link_candidate
+us:wi:ltsb2026:bay-city-be7d65f24202ef69,WI,2026-11-27T04:49:52+00:00,Village of Bay City Wisconsin official election results municipal clerk vendor and historical archive,observed_link_candidate
+us:wv:census-county:54067,WV,2026-11-27T04:49:52+00:00,Nicholas County West Virginia official election results current county vendor and historical archive,observed_link_candidate
+us:wy:census-county:56039,WY,2026-11-27T04:49:52+00:00,Teton County Wyoming official election results current county vendor and historical archive,observed_link_candidate
+us:az:census-county:04013,AZ,2026-11-27T04:49:52+00:00,Maricopa County Arizona official election results current county vendor and historical archive,observed_link_candidate
+us:ca:census-county:06033,CA,2026-11-27T04:49:52+00:00,Lake County California official election results current county vendor and historical archive,observed_link_candidate
+us:co:census-county:08009,CO,2026-11-27T04:49:52+00:00,Baca County Colorado official election results current county vendor and historical archive,observed_link_candidate
+us:ct:municipality:southington,CT,2026-11-27T04:49:52+00:00,Southington Connecticut official election results current town clerk vendor and historical archive,completed_no_new_urls
+us:fl:census-county:12131,FL,2026-11-27T04:49:52+00:00,Walton County Florida official election results current county vendor and historical archive,observed_link_candidate
+us:ga:census-county:13273,GA,2026-11-27T04:49:52+00:00,Terrell County Georgia official election results current county vendor and historical archive,completed_no_new_urls
+us:ia:census-county:19059,IA,2026-11-27T04:49:52+00:00,Dickinson County Iowa official election results current county vendor and historical archive,completed_no_new_urls
+us:me:municipality:gardiner,ME,2026-11-27T04:49:52+00:00,Gardiner Maine official election results current municipal clerk vendor and historical archive,completed_no_new_urls
+us:mi:county:houghton,MI,2026-11-27T04:49:52+00:00,Houghton County Michigan official election results current county clerk vendor and historical archive,completed_no_new_urls
+us:mn:census-county:27043,MN,2026-11-27T04:49:52+00:00,Faribault County Minnesota official election results current county vendor and historical archive,observed_link_candidate
+us:mo:census-county:29215,MO,2026-11-27T04:49:52+00:00,Texas County Missouri official election results current county vendor and historical archive,observed_link_candidate
