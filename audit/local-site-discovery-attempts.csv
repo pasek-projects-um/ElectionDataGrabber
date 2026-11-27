@@ -5318,3 +5318,23 @@ us:md:census-county:24001,MD,2026-11-26T21:24:03+00:00,Allegany County Maryland 
 us:me:municipality:frye-island,ME,2026-11-26T21:24:03+00:00,Frye Island Maine official town clerk election results archive,incomplete_result_review
 us:mi:county:gratiot,MI,2026-11-26T21:24:03+00:00,Gratiot County Michigan official election results clerk state archive,completed_no_new_urls
 us:ms:census-county:28037,MS,2026-11-26T21:24:03+00:00,Franklin County Mississippi official election results commissioners state archive,completed_no_new_urls
+us:ny:census-county:36063,NY,2026-11-26T22:55:30+00:00,Niagara County New York official election results board state historical archive,observed_link_candidate
+us:ok:census-county:40029,OK,2026-11-26T22:55:30+00:00,Coal County Oklahoma official election results county board state archive,observed_link_candidate
+us:or:census-county:41039,OR,2026-11-26T22:55:30+00:00,Lane County Oregon official election results clerk historical archive,observed_link_candidate
+us:pa:county:dauphin,PA,2026-11-26T22:55:30+00:00,Dauphin County Pennsylvania official election results county state archive,observed_link_candidate
+us:ri:priority-roster:hopkinton,RI,2026-11-26T22:55:30+00:00,Hopkinton Rhode Island official election results town state archive,observed_link_candidate
+us:tn:census-county:47177,TN,2026-11-26T22:55:30+00:00,Warren County Tennessee official election results commission state directory,observed_link_candidate
+us:tx:census-county:48177,TX,2026-11-26T22:55:30+00:00,Gonzales County Texas official election results administrator state archive,observed_link_candidate
+us:ut:census-county:49057,UT,2026-11-26T22:55:30+00:00,Weber County Utah official election results clerk state canvass archive,observed_link_candidate
+us:va:census-county:51187,VA,2026-11-26T22:55:30+00:00,Warren County Virginia official election results registrar state archive,observed_link_candidate
+us:az:census-county:04009,AZ,2026-11-26T22:55:30+00:00,Graham County Arizona official election results county state archive,completed_no_new_urls
+us:ca:census-county:06029,CA,2026-11-26T22:55:30+00:00,Kern County California official election results division historical archive,observed_link_candidate
+us:co:census-county:08005,CO,2026-11-26T22:55:30+00:00,Arapahoe County Colorado official election results dashboard archive,observed_link_candidate
+us:ct:municipality:south-windsor,CT,2026-11-26T22:55:30+00:00,South Windsor Connecticut official election results town clerk archive,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-26T22:55:30+00:00,Sussex County Delaware official election results state archive,completed_no_new_urls
+us:fl:census-county:12127,FL,2026-11-26T22:55:30+00:00,Volusia County Florida official election results supervisor historical archive,observed_link_candidate
+us:ga:census-county:13269,GA,2026-11-26T22:55:30+00:00,Taylor County Georgia official election results board elections archive,observed_link_candidate
+us:hi:census-county:15009,HI,2026-11-26T22:55:30+00:00,Maui County Hawaii official election results county state archive,completed_no_new_urls
+us:ia:census-county:19055,IA,2026-11-26T22:55:30+00:00,Delaware County Iowa official election results auditor historical archive,observed_link_candidate
+us:mn:census-county:27039,MN,2026-11-26T22:55:30+00:00,Dodge County Minnesota official election results auditor state dashboard,observed_link_candidate
+us:mo:census-county:29211,MO,2026-11-26T22:55:30+00:00,Sullivan County Missouri official election results clerk state dashboard,observed_link_candidate
