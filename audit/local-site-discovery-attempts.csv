@@ -5438,3 +5438,23 @@ us:ky:census-county:21015,KY,2026-11-27T06:34:47+00:00,Boone County Kentucky off
 us:la:census-county:22125,LA,2026-11-27T06:34:47+00:00,West Feliciana Parish Louisiana official election results current parish vendor and historical archive,completed_no_new_urls
 us:ma:priority-roster:harvard,MA,2026-11-27T06:34:47+00:00,Harvard Massachusetts official election results town clerk municipal archive,completed_no_new_urls
 us:md:census-county:24045,MD,2026-11-27T06:34:47+00:00,Wicomico County Maryland official election results current county vendor and historical archive,observed_link_candidate
+us:ny:census-county:36067,NY,2026-11-27T07:19:21+00:00,Onondaga County New York official election results current county vendor and historical archive,observed_link_candidate
+us:ok:census-county:40033,OK,2026-11-27T07:19:21+00:00,Cotton County Oklahoma official election results current county vendor and historical archive,observed_link_candidate
+us:or:census-county:41043,OR,2026-11-27T07:19:21+00:00,Linn County Oregon official election results current county vendor and historical archive,observed_link_candidate
+us:pa:county:elk,PA,2026-11-27T07:19:21+00:00,Elk County Pennsylvania official election results current county vendor and historical archive,observed_link_candidate
+us:ri:priority-roster:jamestown,RI,2026-11-27T07:19:21+00:00,Jamestown Rhode Island official election results town clerk vendor and historical archive,observed_link_candidate
+us:tn:census-county:47181,TN,2026-11-27T07:19:21+00:00,Wayne County Tennessee official election results current county vendor and historical archive,observed_link_candidate
+us:tx:census-county:48181,TX,2026-11-27T07:19:21+00:00,Grayson County Texas official election results current county vendor and historical archive,observed_link_candidate
+us:ut:census-county:49005,UT,2026-11-27T07:19:21+00:00,Cache County Utah official election results current county vendor and historical archive,observed_link_candidate
+us:va:census-county:51193,VA,2026-11-27T07:19:21+00:00,Westmoreland County Virginia official election results registrar vendor and historical archive,observed_link_candidate
+us:az:census-county:04015,AZ,2026-11-27T07:19:21+00:00,Mohave County Arizona official election results current county vendor and historical archive,observed_link_candidate
+us:ca:census-county:06113,CA,2026-11-27T07:19:21+00:00,Yolo County California official election results current county vendor and historical archive,completed_no_new_urls
+us:co:census-county:08011,CO,2026-11-27T07:19:21+00:00,Bent County Colorado official election results current county vendor and historical archive,observed_link_candidate
+us:ct:municipality:sprague,CT,2026-11-27T07:19:21+00:00,Sprague Connecticut official election results town clerk municipal archive,observed_link_candidate
+us:fl:census-county:12133,FL,2026-11-27T07:19:21+00:00,Washington County Florida official election results current county vendor and historical archive,observed_link_candidate
+us:ga:census-county:13275,GA,2026-11-27T07:19:21+00:00,Thomas County Georgia official election results current county vendor and historical archive,observed_link_candidate
+us:ia:census-county:19061,IA,2026-11-27T07:19:21+00:00,Dubuque County Iowa official election results current county vendor and historical archive,observed_link_candidate
+us:me:municipality:georgetown,ME,2026-11-27T07:19:21+00:00,Georgetown Maine official election results town clerk municipal archive,observed_link_candidate
+us:mi:county:huron,MI,2026-11-27T07:19:21+00:00,Huron County Michigan official election results current county clerk vendor and historical archive,observed_link_candidate
+us:mn:census-county:27045,MN,2026-11-27T07:19:21+00:00,Fillmore County Minnesota official election results current county vendor and historical archive,observed_link_candidate
+us:mo:census-county:29217,MO,2026-11-27T07:19:21+00:00,Vernon County Missouri official election results current county vendor and historical archive,observed_link_candidate
