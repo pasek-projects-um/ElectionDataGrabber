@@ -5738,3 +5738,23 @@ us:md:census-county:24013,MD,2026-11-27T21:20:33-05:00,Carroll County official e
 us:mo:census-county:29229,MO,2026-11-27T21:20:33-05:00,Wright County official election results alternatives | local authority current reporting and historical archives,observed_link_candidate
 us:mt:census-county:30093,MT,2026-11-27T21:20:33-05:00,Silver Bow County official election results alternatives | local authority current reporting and historical archives,observed_link_candidate
 us:nc:census-county:37001,NC,2026-11-27T21:20:33-05:00,Alamance County official election results alternatives | local authority current reporting and historical archives,observed_link_candidate
+us:de:census-county:10005,DE,2026-11-27T22:41:00-05:00,Sussex County Delaware official election results archive municipality | Sussex County Delaware 2026 election results dashboard official,observed_link_candidate
+us:hi:census-county:15003,HI,2026-11-27T22:41:00-05:00,Honolulu County Hawaii official election results archives | site:honolulu.gov elections results 2026 Honolulu,completed_no_new_urls
+us:or:census-county:41053,OR,2026-11-27T22:41:00-05:00,Polk County Oregon official election results archive dashboard | site:polkcountyor.gov elections results 2026,observed_link_candidate
+us:pa:county:fulton,PA,2026-11-27T22:41:00-05:00,Fulton County Pennsylvania official election results archive dashboard | site:co.fulton.pa.us elections results 2026,completed_no_new_urls
+us:ri:priority-roster:narragansett,RI,2026-11-27T22:41:00-05:00,Narragansett Rhode Island official election results town clerk archive | site:narragansettri.gov election results referendum,completed_no_new_urls
+us:tn:census-county:47001,TN,2026-11-27T22:41:00-05:00,Anderson County Tennessee official election results archive dashboard | site:acelection.com election results 2026,observed_link_candidate
+us:tx:census-county:48191,TX,2026-11-27T22:41:00-05:00,Hall County Texas official elections results county clerk archive | site:hallcountytexas.us election results,observed_link_candidate
+us:ut:census-county:49013,UT,2026-11-27T22:41:00-05:00,Duchesne County Utah official election results archive 2026 | site:duchesne.utah.gov elections results canvass,observed_link_candidate
+us:va:census-county:51520,VA,2026-11-27T22:41:00-05:00,Bristol Virginia official election results registrar archive | site:bristolva.org election results 2026,observed_link_candidate
+us:al:census-county:01021,AL,2026-11-27T22:41:00-05:00,Chilton County Alabama official election results probate archive | site:chiltoncounty.org election results,observed_link_candidate
+us:ar:census-county:05139,AR,2026-11-27T22:41:00-05:00,Union County Arkansas official election results county clerk archive | site:unioncountyar.com election results,observed_link_candidate
+us:id:census-county:16087,ID,2026-11-27T22:41:00-05:00,Washington County Idaho official election results archive dashboard | site:co.washington.id.us elections results 2026,observed_link_candidate
+us:il:census-county:17061,IL,2026-11-27T22:41:00-05:00,Greene County Illinois official election results county clerk archive | site:greenecountyil.org election results,observed_link_candidate
+us:in:census-county:18089,IN,2026-11-27T22:41:00-05:00,Lake County Indiana official election results archive dashboard | site:lakecountyin.gov election results 2026,observed_link_candidate
+us:ks:census-county:20065,KS,2026-11-27T22:41:00-05:00,Graham County Kansas official election results archive county clerk | site:grahamcountyks.com election results 2026,completed_no_new_urls
+us:ky:census-county:21031,KY,2026-11-27T22:41:00-05:00,Butler County Kentucky official election results county clerk archive | site:butlercountyclerk.ky.gov election results,observed_link_candidate
+us:la:census-county:22013,LA,2026-11-27T22:41:00-05:00,Bienville Parish Louisiana official election results registrar archive | site:bienvilleparish.org election results,completed_no_new_urls
+us:ma:priority-roster:holbrook,MA,2026-11-27T22:41:00-05:00,Holbrook Massachusetts official election results town clerk archive | site:holbrookma.gov election results,observed_link_candidate
+us:me:municipality:great-pond,ME,2026-11-27T22:41:00-05:00,Great Pond Maine official election results town clerk archive | site:greatpondme.com election results,observed_link_candidate
+us:mi:county:kalamazoo,MI,2026-11-27T22:41:00-05:00,Kalamazoo County Michigan official election results archive dashboard | site:kalcounty.gov elections results 2026,observed_link_candidate
